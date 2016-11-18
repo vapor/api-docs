@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pivot Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Pivot" class="dashAnchor"></a>
+    <a title="Pivot Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Fluent Docs</a> (40% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Fluent Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Pivot Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Children.html">Children</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Database.html">Database</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeneralSQLSerializer.html">GeneralSQLSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MemoryDriver.html">MemoryDriver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MemoryDriver/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Parent.html">Parent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pivot.html">Pivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Query.html">Query</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Siblings.html">Siblings</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Action.html">Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EntityError.html">EntityError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PreparationError.html">PreparationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RelationError.html">RelationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SQL.html">SQL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SQL/TableAction.html">– TableAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Schema.html">Schema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Schema/Creator.html">– Creator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Schema/Field.html">– Field</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Schema/Modifier.html">– Modifier</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F6Fluentoi2peFTRGSaO4Node4Node_S1__T_">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F6Fluentoi2peFTRGSaSS_SS_T_">+=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Driver.html">Driver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Entity.html">Entity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Preparation.html">Preparation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/QueryRepresentable.html">QueryRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SQLSerializer.html">SQLSerializer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Filter.html">Filter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Filter/Relation.html">– Relation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Filter/Method.html">– Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Filter/Comparison.html">– Comparison</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Filter/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Limit.html">Limit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Sort.html">Sort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Sort/Direction.html">– Direction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:V6Fluent5Union">Union</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Pivot</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP6Fluent6Entity6existsSb"></a>
+                    <a name="//apple_ref/swift/Property/exists" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP6Fluent6Entity6existsSb">exists</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">exists</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvP6Fluent6Entity6entitySS"></a>
+                    <a name="//apple_ref/swift/Variable/entity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvP6Fluent6Entity6entitySS">entity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">entity</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvP6Fluent6Entity4nameSS"></a>
+                    <a name="//apple_ref/swift/Variable/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvP6Fluent6Entity4nameSS">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC6Fluent5Pivot4leftPMPS_6Entity_"></a>
+                    <a name="//apple_ref/swift/Variable/left" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC6Fluent5Pivot4leftPMPS_6Entity_">left</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC6Fluent5Pivot5rightPMPS_6Entity_"></a>
+                    <a name="//apple_ref/swift/Variable/right" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC6Fluent5Pivot5rightPMPS_6Entity_">right</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP6Fluent6Entity2idGSqO4Node4Node_"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP6Fluent6Entity2idGSqO4Node4Node_">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Node</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Fluent5Pivot6leftIdGSqO4Node4Node_"></a>
+                    <a name="//apple_ref/swift/Property/leftId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Fluent5Pivot6leftIdGSqO4Node4Node_">leftId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Fluent5Pivot7rightIdGSqO4Node4Node_"></a>
+                    <a name="//apple_ref/swift/Property/rightId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Fluent5Pivot7rightIdGSqO4Node4Node_">rightId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Fluent5PivotcFTPS_6Entity_PS1___GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/init(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Fluent5PivotcFTPS_6Entity_PS1___GS0_xq__">init(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP4Node17NodeInitializablecFzT4nodeOS_4Node2inPS_7Context__x"></a>
+                    <a name="//apple_ref/swift/Method/init(node:in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Node17NodeInitializablecFzT4nodeOS_4Node2inPS_7Context__x">init(node:in:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">node</span><span class="p">:</span> <span class="kt">Node</span><span class="p">,</span> <span class="k">in</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP4Node17NodeRepresentable8makeNodeFzT7contextPS_7Context__OS_4Node"></a>
+                    <a name="//apple_ref/swift/Method/makeNode(context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Node17NodeRepresentable8makeNodeFzT7contextPS_7Context__OS_4Node">makeNode(context:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeNode</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span> <span class="o">=</span> <span class="kt">EmptyNode</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Node</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a node if possible</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP6Fluent11Preparation7prepareFzCS_8DatabaseT_"></a>
+                    <a name="//apple_ref/swift/Method/prepare(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP6Fluent11Preparation7prepareFzCS_8DatabaseT_">prepare(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="n">_</span> <span class="nv">database</span><span class="p">:</span> <span class="kt"><a href="../Classes/Database.html">Database</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP6Fluent11Preparation6revertFzCS_8DatabaseT_"></a>
+                    <a name="//apple_ref/swift/Method/revert(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP6Fluent11Preparation6revertFzCS_8DatabaseT_">revert(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">revert</span><span class="p">(</span><span class="n">_</span> <span class="nv">database</span><span class="p">:</span> <span class="kt"><a href="../Classes/Database.html">Database</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

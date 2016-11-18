@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ClientProtocol Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/ClientProtocol" class="dashAnchor"></a>
+    <a title="ClientProtocol Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HTTP Docs</a> (9% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HTTP Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ClientProtocol Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ChunkStream.html">ChunkStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FoundationClient.html">FoundationClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Parser.html">Parser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request/Handler.html">– Handler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Serializer.html">Serializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Server.html">Server</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Body.html">Body</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClientError.html">ClientError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClientProtocolError.html">ClientProtocolError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MessageError.html">MessageError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NotSupported.html">NotSupported</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ParserError.html">ParserError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ServerError.html">ServerError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Status.html">Status</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Swift.html">Swift</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URI.html">URI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URI/ConversionError.html">– ConversionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2neFTVS_7VersionS0__Sb">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi1lFTVS_7VersionS0__Sb">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2leFTVS_7VersionS0__Sb">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2eeFTOS_6MethodS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2eeFTOS_6StatusS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2eeFTVS_7VersionS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2eeFTVS_9HeaderKeyS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi1gFTVS_7VersionS0__Sb">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2geFTVS_7VersionS0__Sb">&gt;=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BodyRepresentable.html">BodyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ClientProtocol.html">ClientProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P4HTTP13KeyAccessible">KeyAccessible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Middleware.html">Middleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ParserProtocol.html">ParserProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Program.html">Program</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Responder.html">Responder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResponseRepresentable.html">ResponseRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SerializerProtocol.html">SerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ServerProtocol.html">ServerProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/HeaderKey.html">HeaderKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PeerAddress.html">PeerAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ClientProtocol</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP4HTTP14ClientProtocol6schemeSS"></a>
+                    <a name="//apple_ref/swift/Property/scheme" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP4HTTP14ClientProtocol6schemeSS">scheme</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP4HTTP14ClientProtocol6streamP9Transport6Stream_"></a>
+                    <a name="//apple_ref/swift/Property/stream" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP4HTTP14ClientProtocol6streamP9Transport6Stream_">stream</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP4HTTP14ClientProtocolcFzT6schemeSS4hostSS4portSi13securityLayerO9Transport13SecurityLayer10middlewareGSaPS_10Middleware___x"></a>
+                    <a name="//apple_ref/swift/Method/init(scheme:host:port:securityLayer:middleware:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4HTTP14ClientProtocolcFzT6schemeSS4hostSS4portSi13securityLayerO9Transport13SecurityLayer10middlewareGSaPS_10Middleware___x">init(scheme:host:port:securityLayer:middleware:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE4HTTPPS_14ClientProtocolcFzT4hostSS4portSi13securityLayerO9Transport13SecurityLayer10middlewareGSaPS_10Middleware___x"></a>
+                    <a name="//apple_ref/swift/Method/init(host:port:securityLayer:middleware:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE4HTTPPS_14ClientProtocolcFzT4hostSS4portSi13securityLayerO9Transport13SecurityLayer10middlewareGSaPS_10Middleware___x">init(host:port:securityLayer:middleware:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE4HTTPPS_14ClientProtocol7requestFzTOS_6Method4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS2_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/request(_:path:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE4HTTPPS_14ClientProtocol7requestFzTOS_6Method4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS2_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">request(_:path:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE4HTTPPS_14ClientProtocol3getFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/get(path:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE4HTTPPS_14ClientProtocol3getFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">get(path:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE4HTTPPS_14ClientProtocol4postFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyOS_4Body_CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/post(path:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE4HTTPPS_14ClientProtocol4postFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyOS_4Body_CS_8Response">post(path:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE4HTTPPS_14ClientProtocol3putFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/put(path:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE4HTTPPS_14ClientProtocol3putFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">put(path:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE4HTTPPS_14ClientProtocol5patchFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/patch(path:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE4HTTPPS_14ClientProtocol5patchFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">patch(path:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE4HTTPPS_14ClientProtocol6deleteFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/delete(path:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE4HTTPPS_14ClientProtocol6deleteFzT4pathSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">delete(path:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE4HTTPPS_14ClientProtocol7respondFzT2toCS_7Request_CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/respond(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE4HTTPPS_14ClientProtocol7respondFzT2toCS_7Request_CS_8Response">respond(to:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE4HTTPPS_14ClientProtocol4makeFzT6schemeGSqSS_4hostSS4portGSqSi_10middlewareGSaPS_10Middleware___PS0__"></a>
+                    <a name="//apple_ref/swift/Method/make(scheme:host:port:middleware:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE4HTTPPS_14ClientProtocol4makeFzT6schemeGSqSS_4hostSS4portGSqSi_10middlewareGSaPS_10Middleware___PS0__">make(scheme:host:port:middleware:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE4HTTPPS_14ClientProtocol7requestFzTOS_6MethodSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS2_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/request(_:_:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE4HTTPPS_14ClientProtocol7requestFzTOS_6MethodSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS2_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">request(_:_:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE4HTTPPS_14ClientProtocol3getFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/get(_:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE4HTTPPS_14ClientProtocol3getFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">get(_:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE4HTTPPS_14ClientProtocol4postFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/post(_:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE4HTTPPS_14ClientProtocol4postFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">post(_:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE4HTTPPS_14ClientProtocol3putFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/put(_:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE4HTTPPS_14ClientProtocol3putFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">put(_:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE4HTTPPS_14ClientProtocol5patchFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/patch(_:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE4HTTPPS_14ClientProtocol5patchFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">patch(_:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE4HTTPPS_14ClientProtocol6deleteFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response"></a>
+                    <a name="//apple_ref/swift/Method/delete(_:headers:query:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE4HTTPPS_14ClientProtocol6deleteFzTSS7headersGVs10DictionaryVS_9HeaderKeySS_5queryGS1_SSPs23CustomStringConvertible__4bodyPS_17BodyRepresentable__CS_8Response">delete(_:headers:query:body:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

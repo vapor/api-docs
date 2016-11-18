@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QueryRepresentable Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/QueryRepresentable" class="dashAnchor"></a>
+    <a title="QueryRepresentable Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Fluent Docs</a> (40% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Fluent Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        QueryRepresentable Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Children.html">Children</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Database.html">Database</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeneralSQLSerializer.html">GeneralSQLSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MemoryDriver.html">MemoryDriver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MemoryDriver/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Parent.html">Parent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pivot.html">Pivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Query.html">Query</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Siblings.html">Siblings</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Action.html">Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EntityError.html">EntityError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PreparationError.html">PreparationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RelationError.html">RelationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SQL.html">SQL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SQL/TableAction.html">– TableAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Schema.html">Schema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Schema/Creator.html">– Creator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Schema/Field.html">– Field</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Schema/Modifier.html">– Modifier</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F6Fluentoi2peFTRGSaO4Node4Node_S1__T_">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F6Fluentoi2peFTRGSaSS_SS_T_">+=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Driver.html">Driver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Entity.html">Entity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Preparation.html">Preparation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/QueryRepresentable.html">QueryRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SQLSerializer.html">SQLSerializer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Filter.html">Filter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Filter/Relation.html">– Relation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Filter/Method.html">– Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Filter/Comparison.html">– Comparison</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Filter/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Limit.html">Limit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Sort.html">Sort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Sort/Direction.html">– Direction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:V6Fluent5Union">Union</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>QueryRepresentable</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP6Fluent18QueryRepresentable9makeQueryFzT_GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/makeQuery()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP6Fluent18QueryRepresentable9makeQueryFzT_GCS_5Querywx1T_">makeQuery()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6filteruRd__S_6EntityrFzTMqd__SSOVS_6Filter10ComparisonP4Node17NodeRepresentable__GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6filteruRd__S_6EntityrFzTMqd__SSOVS_6Filter10ComparisonP4Node17NodeRepresentable__GCS_5Querywx1T_">filter(_:_:_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6filteruRd__S_6EntityrFzTMqd__SSOVS_6Filter5ScopeGSaP4Node17NodeRepresentable___GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6filteruRd__S_6EntityrFzTMqd__SSOVS_6Filter5ScopeGSaP4Node17NodeRepresentable___GCS_5Querywx1T_">filter(_:_:_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6filteruRd__S_6EntityrFzTMqd__SSP4Node17NodeRepresentable__GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6filteruRd__S_6EntityrFzTMqd__SSP4Node17NodeRepresentable__GCS_5Querywx1T_">filter(_:_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Filter"></a>
+                <a name="//apple_ref/swift/Section/Filter" class="dashAnchor"></a>
+                <a href="#/Filter">
+                  <h3 class="section-name">Filter</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6filterFzTSSOVS_6Filter10ComparisonP4Node17NodeRepresentable__GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6filterFzTSSOVS_6Filter10ComparisonP4Node17NodeRepresentable__GCS_5Querywx1T_">filter(_:_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a <code>.compare</code> filter to the query&rsquo;s
+filters.</p>
+
+<p>Used for filtering results based on how
+a result&rsquo;s value compares to the supplied value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">comparison</span><span class="p">:</span> <span class="kt"><a href="../Structs/Filter.html">Filter</a></span><span class="o">.</span><span class="kt">Comparison</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NodeRepresentable</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Query.html">Query</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">.</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6filterFzTSSOVS_6Filter5ScopeGSaP4Node17NodeRepresentable___GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6filterFzTSSOVS_6Filter5ScopeGSaP4Node17NodeRepresentable___GCS_5Querywx1T_">filter(_:_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a <code>.subset</code> filter to the query&rsquo;s
+filters.</p>
+
+<p>Used for filtering results based on whether
+a result&rsquo;s value is or is not in a set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">scope</span><span class="p">:</span> <span class="kt"><a href="../Structs/Filter.html">Filter</a></span><span class="o">.</span><span class="kt">Scope</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="p">[</span><span class="kt">NodeRepresentable</span><span class="p">]</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Query.html">Query</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">.</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6filterFzTSSP4Node17NodeRepresentable__GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6filterFzTSSP4Node17NodeRepresentable__GCS_5Querywx1T_">filter(_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shortcut for creating a <code>.equals</code> filter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NodeRepresentable</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Query.html">Query</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">.</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6filterFzTSS8containsP4Node17NodeRepresentable__GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:contains:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6filterFzTSS8containsP4Node17NodeRepresentable__GCS_5Querywx1T_">filter(_:contains:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable3andFzFzGCS_5Querywx1T_T_GS1_wxS2__"></a>
+                    <a name="//apple_ref/swift/Method/and(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable3andFzFzGCS_5Querywx1T_T_GS1_wxS2__">and(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable2orFzFzGCS_5Querywx1T_T_GS1_wxS2__"></a>
+                    <a name="//apple_ref/swift/Method/or(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable2orFzFzGCS_5Querywx1T_T_GS1_wxS2__">or(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable5groupFzTOVS_6Filter8RelationFzGCS_5Querywx1T_T__GS3_wxS4__"></a>
+                    <a name="//apple_ref/swift/Method/group(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable5groupFzTOVS_6Filter8RelationFzGCS_5Querywx1T_T__GS3_wxS4__">group(_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable5unionuRd__S_6EntityrFzMqd__GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/union(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable5unionuRd__S_6EntityrFzMqd__GCS_5Querywx1T_">union(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable5unionuRd__S_6EntityrFzTMqd__10foreignKeySS_GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/union(_:foreignKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable5unionuRd__S_6EntityrFzTMqd__10foreignKeySS_GCS_5Querywx1T_">union(_:foreignKey:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable5unionuRd__S_6EntityrFzTMqd__8localKeySS_GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/union(_:localKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable5unionuRd__S_6EntityrFzTMqd__8localKeySS_GCS_5Querywx1T_">union(_:localKey:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable5unionuRd__S_6EntityrFzTMqd__8localKeySS10foreignKeySS_GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/union(_:localKey:foreignKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable5unionuRd__S_6EntityrFzTMqd__8localKeySS10foreignKeySS_GCS_5Querywx1T_">union(_:localKey:foreignKey:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable5firstFzT_GSqwx1T_"></a>
+                    <a name="//apple_ref/swift/Method/first()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable5firstFzT_GSqwx1T_">first()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the first entity retreived
+by the query.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">first</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable3allFzT_GSawx1T_"></a>
+                    <a name="//apple_ref/swift/Method/all()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable3allFzT_GSawx1T_">all()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns all entities retreived
+by the query.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">all</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Create"></a>
+                <a name="//apple_ref/swift/Section/Create" class="dashAnchor"></a>
+                <a href="#/Create">
+                  <h3 class="section-name">Create</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6createFzGSqO4Node4Node_S2_"></a>
+                    <a name="//apple_ref/swift/Method/create(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6createFzGSqO4Node4Node_S2_">create(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts the create action for the supplied
+serialized data.</p>
+
+<p>Returns the new entity&rsquo;s identifier.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="n">_</span> <span class="nv">serialized</span><span class="p">:</span> <span class="kt">Node</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Node</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable4saveFzRwx1TT_"></a>
+                    <a name="//apple_ref/swift/Method/save(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable4saveFzRwx1TT_">save(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to save a supplied entity
+and updates its identifier if successful.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">save</span><span class="p">(</span><span class="n">_</span> <span class="nv">model</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">T</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Delete"></a>
+                <a name="//apple_ref/swift/Section/Delete" class="dashAnchor"></a>
+                <a href="#/Delete">
+                  <h3 class="section-name">Delete</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6deleteFzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/delete()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6deleteFzT_T_">delete()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to delete all entities
+in the model&rsquo;s collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6deleteFzwx1TT_"></a>
+                    <a name="//apple_ref/swift/Method/delete(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6deleteFzwx1TT_">delete(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to delete the supplied entity
+if its identifier is set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">_</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Update"></a>
+                <a name="//apple_ref/swift/Section/Update" class="dashAnchor"></a>
+                <a href="#/Update">
+                  <h3 class="section-name">Update</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable6modifyFzGSqO4Node4Node_T_"></a>
+                    <a name="//apple_ref/swift/Method/modify(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable6modifyFzGSqO4Node4Node_T_">modify(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to modify model&rsquo;s collection with
+the supplied serialized data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">modify</span><span class="p">(</span><span class="n">_</span> <span class="nv">serialized</span><span class="p">:</span> <span class="kt">Node</span><span class="p">?)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE6FluentPS_18QueryRepresentable4sortFzTSSOVS_4Sort9Direction_GCS_5Querywx1T_"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE6FluentPS_18QueryRepresentable4sortFzTSSOVS_4Sort9Direction_GCS_5Querywx1T_">sort(_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

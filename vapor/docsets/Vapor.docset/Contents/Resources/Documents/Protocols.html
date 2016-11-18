@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Protocols  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Vapor Docs</a> (50% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Vapor Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Protocols  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AbortMiddleware.html">AbortMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ConsoleLogger.html">ConsoleLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Content.html">Content</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CryptoCipher.html">CryptoCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CryptoCipher/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CryptoHasher.html">CryptoHasher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CryptoHasher/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DateMiddleware.html">DateMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Droplet.html">Droplet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Email.html">Email</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Event.html">Event</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FileMiddleware.html">FileMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LeafRenderer.html">LeafRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Localization.html">Localization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Resource.html">Resource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Serve.html">Serve</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:C5Vapor12Subscription">Subscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TypeSafeErrorMiddleware.html">TypeSafeErrorMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ValidationError.html">ValidationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ValidationMiddleware.html">ValidationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/VersionCommand.html">VersionCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v5Vapor7VERSIONSS">VERSION</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/Abort.html">Abort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/CipherEncoding.html">CipherEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/CommandError.html">CommandError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Compare.html">Compare</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Count.html">Count</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/HashEncoding.html">HashEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LogLevel.html">LogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Multipart.html">Multipart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Multipart/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Multipart/File.html">– File</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MultipartSerializationError.html">MultipartSerializationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PolymorphicInitializableError.html">PolymorphicInitializableError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ProvidableError.html">ProvidableError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Body.html">Body</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Extractable.html">Extractable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/FloatingPoint.html">FloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Integer.html">Integer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/JSON.html">JSON</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Node.html">Node</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Polymorphic.html">Polymorphic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/RouteBuilder.html">RouteBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Sequence.html">Sequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions/!(_:).html">!(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions/!(_:).html">!(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions/&amp;&amp;(_:_:).html">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions/&amp;&amp;(_:_:).html">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions/&amp;&amp;(_:_:).html">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions/&amp;&amp;(_:_:).html">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F5Vaporoi2peurFTRGSax_x_T_">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F5Vaporoi2eeFTOS_11EnvironmentS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F5Vaporoi2eeFTOS_8LogLevelS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions/||(_:_:).html">||(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions/||(_:_:).html">||(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions/||(_:_:).html">||(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions/||(_:_:).html">||(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/CipherProtocol.html">CipherProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ConfigInitializable.html">ConfigInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Countable.html">Countable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/DropletInitializable.html">DropletInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/EmptyInitializable.html">EmptyInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/HashProtocol.html">HashProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/LogProtocol.html">LogProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PolymorphicInitializable.html">PolymorphicInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Provider.html">Provider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:P5Vapor23RequestContentSubscript">RequestContentSubscript</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RequestInitializable.html">RequestInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ResourceRepresentable.html">ResourceRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Validatable.html">Validatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ValidationErrorProtocol.html">ValidationErrorProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ValidationSuite.html">ValidationSuite</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Validator.html">Validator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ViewRenderer.html">ViewRenderer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Accept.html">Accept</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Both.html">Both</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Contains.html">Contains</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Either.html">Either</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/In.html">In</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Matches.html">Matches</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Not.html">Not</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/OnlyAlphanumeric.html">OnlyAlphanumeric</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Prepare.html">Prepare</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Providable.html">Providable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Unique.html">Unique</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Valid.html">Valid</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor14CipherProtocol"></a>
+                    <a name="//apple_ref/swift/Protocol/CipherProtocol" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor14CipherProtocol">CipherProtocol</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Objects conforming to this protocol can be
+used as ciphers for encrypting and decrypting information.</p>
+
+                        <a href="Protocols/CipherProtocol.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">CipherProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor19ConfigInitializable"></a>
+                    <a name="//apple_ref/swift/Protocol/ConfigInitializable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor19ConfigInitializable">ConfigInitializable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows types to be instantiated from
+data contained in the Config directories.</p>
+
+<p>This is especially useful for types like Provider
+that often need configuration values to
+initialize. These values can be stored in
+the Config directories instead of the source code.</p>
+
+                        <a href="Protocols/ConfigInitializable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ConfigInitializable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor23RequestContentSubscript"></a>
+                    <a name="//apple_ref/swift/Protocol/RequestContentSubscript" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor23RequestContentSubscript">RequestContentSubscript</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor5Model"></a>
+                    <a name="//apple_ref/swift/Protocol/Model" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor5Model">Model</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/Model.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor12HashProtocol"></a>
+                    <a name="//apple_ref/swift/Protocol/HashProtocol" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor12HashProtocol">HashProtocol</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hash strings using the static methods on this class.</p>
+
+                        <a href="Protocols/HashProtocol.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HashProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor20RequestInitializable"></a>
+                    <a name="//apple_ref/swift/Protocol/RequestInitializable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor20RequestInitializable">RequestInitializable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Objects that conform to RequestInitializable
+can be easily created from an incoming request.</p>
+
+<p>This is useful for encapsulating request data
+parsing into models or types.</p>
+
+<pre class="highlight plaintext"><code>ex: LoginRequest, PostSubmissionRequest
+</code></pre>
+
+                        <a href="Protocols/RequestInitializable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">RequestInitializable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor11LogProtocol"></a>
+                    <a name="//apple_ref/swift/Protocol/LogProtocol" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor11LogProtocol">LogProtocol</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logger protocol. Custom loggers must conform
+to this protocol</p>
+
+                        <a href="Protocols/LogProtocol.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">LogProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor24PolymorphicInitializable"></a>
+                    <a name="//apple_ref/swift/Protocol/PolymorphicInitializable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor24PolymorphicInitializable">PolymorphicInitializable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes an object from a 
+Polymorphic type.</p>
+
+                        <a href="Protocols/PolymorphicInitializable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PolymorphicInitializable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor8Provider"></a>
+                    <a name="//apple_ref/swift/Protocol/Provider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor8Provider">Provider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Providers allow external projects to be easily
+integrated into a Vapor droplet.</p>
+
+<p>Simply append a dependencies provider to the Droplet&rsquo;s
+<code>providers</code> array.</p>
+
+<p>The Provider should take care of setting up any
+necessary configurations on itself and the Droplet.</p>
+
+                        <a href="Protocols/Provider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Provider</span><span class="p">:</span> <span class="kt"><a href="Protocols/ConfigInitializable.html">ConfigInitializable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor21ResourceRepresentable"></a>
+                    <a name="//apple_ref/swift/Protocol/ResourceRepresentable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor21ResourceRepresentable">ResourceRepresentable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/ResourceRepresentable.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor18EmptyInitializable"></a>
+                    <a name="//apple_ref/swift/Protocol/EmptyInitializable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor18EmptyInitializable">EmptyInitializable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/EmptyInitializable.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor20DropletInitializable"></a>
+                    <a name="//apple_ref/swift/Protocol/DropletInitializable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor20DropletInitializable">DropletInitializable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/DropletInitializable.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor23ValidationErrorProtocol"></a>
+                    <a name="//apple_ref/swift/Protocol/ValidationErrorProtocol" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor23ValidationErrorProtocol">ValidationErrorProtocol</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Used to indicate when validation of some value fails. </p>
+
+<p>Will be caught automatically by ValidationMiddleware</p>
+
+                        <a href="Protocols/ValidationErrorProtocol.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ValidationErrorProtocol</span><span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor9Validator"></a>
+                    <a name="//apple_ref/swift/Protocol/Validator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor9Validator">Validator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The core validator, used for validations that require
+parameters. For example, a string length validator that
+uses a dynamic value to evaluate by.</p>
+
+<p>public enum StringLength: Validator {
+     case min(Int)
+     case max(Int)
+     case containedIn(Range<Int>)</p>
+
+<pre class="highlight plaintext"><code> public func validate(input value: String) throws {
+     let length = value.characters.count
+     switch self {
+        case .min(let m) where length &gt;= m:
+            break
+        case .max(let m) where length &lt;= m:
+            break
+        case .containedIn(let range) where range ~= length:
+            break
+        default:
+            throw error(with: value)
+     }
+ }
+</code></pre>
+
+<p>}</p>
+
+<p>And used like:</p>
+
+<pre class="highlight plaintext"><code>let validated = try "string".validated(by: StringLength.min(4))
+</code></pre>
+
+                        <a href="Protocols/Validator.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Validator</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor15ValidationSuite"></a>
+                    <a name="//apple_ref/swift/Protocol/ValidationSuite" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor15ValidationSuite">ValidationSuite</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/ValidationSuite.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor11Validatable"></a>
+                    <a name="//apple_ref/swift/Protocol/Validatable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor11Validatable">Validatable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Validatable struct is used to indicate that a value can be validated.
+It requires no special attributes or conformance.</p>
+
+<p>It&rsquo;s purpose is largely based on convenient code share and by
+conforming an object inherits a great deal of syntax to more 
+conveniently work with validators.</p>
+
+<p>Naming Conventions</p>
+
+<ul>
+<li>tested throws -&gt; Self</li>
+<li>passed -&gt; Bool</li>
+<li>validated throws -&gt; Valid<Validator></li>
+</ul>
+
+                        <a href="Protocols/Validatable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Validatable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor12ViewRenderer"></a>
+                    <a name="//apple_ref/swift/Protocol/ViewRenderer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor12ViewRenderer">ViewRenderer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>View renderers power the Droplet&rsquo;s
+<code>.view</code> property. </p>
+
+<p>View renderers are responsible for loading
+the files paths given and caching if needed.</p>
+
+<p>View renderers are also responsible for 
+accepting a Node for templated responses.</p>
+
+                        <a href="Protocols/ViewRenderer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ViewRenderer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/TODO:%20Evaluate%20Countable%20name,%20also%20considered%20Length.%20W/%20count,%20"></a>
+                <a name="//apple_ref/swift/Section/TODO: Evaluate Countable name, also considered Length. W/ count, " class="dashAnchor"></a>
+                <a href="#/TODO:%20Evaluate%20Countable%20name,%20also%20considered%20Length.%20W/%20count,%20">
+                  <h3 class="section-name">TODO: Evaluate Countable name, also considered Length. W/ count, </h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P5Vapor9Countable"></a>
+                    <a name="//apple_ref/swift/Protocol/Countable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P5Vapor9Countable">Countable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates that a particular type can be validated by count or length</p>
+
+                        <a href="Protocols/Countable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Countable</span><span class="p">:</span> <span class="kt"><a href="Protocols/Validatable.html">Validatable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Response Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Response" class="dashAnchor"></a>
+    <a title="Response Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HTTP Docs</a> (9% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HTTP Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Response Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ChunkStream.html">ChunkStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FoundationClient.html">FoundationClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Parser.html">Parser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request/Handler.html">– Handler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Serializer.html">Serializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Server.html">Server</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Body.html">Body</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClientError.html">ClientError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClientProtocolError.html">ClientProtocolError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MessageError.html">MessageError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NotSupported.html">NotSupported</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ParserError.html">ParserError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ServerError.html">ServerError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Status.html">Status</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Swift.html">Swift</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URI.html">URI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URI/ConversionError.html">– ConversionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2neFTVS_7VersionS0__Sb">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi1lFTVS_7VersionS0__Sb">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2leFTVS_7VersionS0__Sb">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2eeFTOS_6MethodS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2eeFTOS_6StatusS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2eeFTVS_7VersionS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2eeFTVS_9HeaderKeyS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi1gFTVS_7VersionS0__Sb">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4HTTPoi2geFTVS_7VersionS0__Sb">&gt;=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BodyRepresentable.html">BodyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ClientProtocol.html">ClientProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P4HTTP13KeyAccessible">KeyAccessible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Middleware.html">Middleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ParserProtocol.html">ParserProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Program.html">Program</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Responder.html">Responder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResponseRepresentable.html">ResponseRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SerializerProtocol.html">SerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ServerProtocol.html">ServerProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/HeaderKey.html">HeaderKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PeerAddress.html">PeerAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Response</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4HTTP8Response7versionVS_7Version"></a>
+                    <a name="//apple_ref/swift/Property/version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4HTTP8Response7versionVS_7Version">version</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4HTTP8Response6statusOS_6Status"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4HTTP8Response6statusOS_6Status">status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Post%20Serialization"></a>
+                <a name="//apple_ref/swift/Section/Post Serialization" class="dashAnchor"></a>
+                <a href="#/Post%20Serialization">
+                  <h3 class="section-name">Post Serialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4HTTP8Response10onCompleteGSqFzP9Transport6Stream_T__"></a>
+                    <a name="//apple_ref/swift/Property/onComplete" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4HTTP8Response10onCompleteGSqFzP9Transport6Stream_T__">onComplete</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4HTTP8ResponsecFT7versionVS_7Version6statusOS_6Status7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body11peerAddressGSqVS_11PeerAddress__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(version:status:headers:body:peerAddress:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4HTTP8ResponsecFT7versionVS_7Version6statusOS_6Status7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body11peerAddressGSqVS_11PeerAddress__S0_">init(version:status:headers:body:peerAddress:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4HTTP8ResponsecFzT19startLineComponentsTGVs10ArraySliceVs5UInt8_GS1_S2__GS1_S2___7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body11peerAddressGSqVS_11PeerAddress__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(startLineComponents:headers:body:peerAddress:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4HTTP8ResponsecFzT19startLineComponentsTGVs10ArraySliceVs5UInt8_GS1_S2__GS1_S2___7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body11peerAddressGSqVS_11PeerAddress__S0_">init(startLineComponents:headers:body:peerAddress:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4HTTP8Response5asyncFzT7timeoutSdFzGC4Core6PortalPS_21ResponseRepresentable__T__PS3__"></a>
+                    <a name="//apple_ref/swift/Method/async(timeout:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4HTTP8Response5asyncFzT7timeoutSdFzGC4Core6PortalPS_21ResponseRepresentable__T__PS3__">async(timeout:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sometimes, asynchronicity is required within Vapor&rsquo;s synchronous environment. 
+Use this function to enter an async context in which the &lsquo;promise&rsquo; object can
+be passed to multiple threads and called when appropriate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">async</span><span class="p">(</span>
+        <span class="nv">timeout</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">999_999_999</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Portal</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/ResponseRepresentable.html">ResponseRepresentable</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ResponseRepresentable.html">ResponseRepresentable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4HTTP8ResponsecFT6statusOS_6Status7headersGVs10DictionaryVS_9HeaderKeySS_7chunkedFzCS_11ChunkStreamT__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(status:headers:chunked:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4HTTP8ResponsecFT6statusOS_6Status7headersGVs10DictionaryVS_9HeaderKeySS_7chunkedFzCS_11ChunkStreamT__S0_">init(status:headers:chunked:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send chunked data with the
+<code>Transfer-Encoding: Chunked</code> header.</p>
+
+<p>Chunked uses the Transfer-Encoding HTTP header in
+place of the Content-Length header.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">https://en.wikipedia.org/wiki/Chunked_transfer_encoding</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../Enums/Status.html">Status</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">ok</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/HeaderKey.html">HeaderKey</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="n">chunked</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Classes/ChunkStream.html">ChunkStream</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4HTTP8ResponsecFT7headersGVs10DictionaryVS_9HeaderKeySS_8redirectSS11permanentlySb_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(headers:redirect:permanently:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4HTTP8ResponsecFT7headersGVs10DictionaryVS_9HeaderKeySS_8redirectSS11permanentlySb_S0_">init(headers:redirect:permanently:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a redirect response.</p>
+
+<p>Set permanently to &lsquo;true&rsquo; to allow caching to automatically redirect from browsers.
+Defaulting to non-permanent to prevent unexpected caching.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/HeaderKey.html">HeaderKey</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="n">redirect</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">permanently</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4HTTP8ResponsecuRxs8SequenceWx8Iterator7Element_zVs5UInt8rFT7versionVS_7Version6statusOS_6Status7headersGVs10DictionaryVS_9HeaderKeySS_4bodyx_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(version:status:headers:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4HTTP8ResponsecuRxs8SequenceWx8Iterator7Element_zVs5UInt8rFT7versionVS_7Version6statusOS_6Status7headersGVs10DictionaryVS_9HeaderKeySS_4bodyx_S0_">init(version:status:headers:body:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a Response with a body of Bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span>
+        <span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">Sequence</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">version</span><span class="p">:</span> <span class="kt"><a href="../Structs/Version.html">Version</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/Version.html">Version</a></span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../Enums/Status.html">Status</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">ok</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/HeaderKey.html">HeaderKey</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span>
+        <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Byte</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4HTTP8ResponsecFT7versionVS_7Version6statusOS_6Status7headersGVs10DictionaryVS_9HeaderKeySS_4bodyPS_17BodyRepresentable__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(version:status:headers:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4HTTP8ResponsecFT7versionVS_7Version6statusOS_6Status7headersGVs10DictionaryVS_9HeaderKeySS_4bodyPS_17BodyRepresentable__S0_">init(version:status:headers:body:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a Response with a BodyRepresentable Body</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span>
+        <span class="nv">version</span><span class="p">:</span> <span class="kt"><a href="../Structs/Version.html">Version</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/Version.html">Version</a></span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../Enums/Status.html">Status</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">ok</span><span class="p">,</span>
+        <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/HeaderKey.html">HeaderKey</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span>
+        <span class="nv">body</span><span class="p">:</span> <span class="kt"><a href="../Protocols/BodyRepresentable.html">BodyRepresentable</a></span>
+    <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4HTTP8Response12makeResponseFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/makeResponse()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4HTTP8Response12makeResponseFT_S0_">makeResponse()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
