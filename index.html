@@ -81,7 +81,7 @@
 <script>
 	$('.nav a').on('click', function() {
 		var link = $(this);
-		$('iframe').attr('src', '/' + link.text() + '/');
+		$('iframe').attr('src', '/' + link.text().toLowerCase() + '/');
 	});
 </script>
 
