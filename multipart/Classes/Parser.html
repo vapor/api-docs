@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Parser Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Parser" class="dashAnchor"></a>
+    <a title="Parser Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Multipart Docs</a> (83% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Multipart Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Parser Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Parser.html">Parser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Parser/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Serializer.html">Serializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Serializer/Error.html">– Error</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Part.html">Part</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Parser</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Parser</span></code></pre>
+
+                </div>
+              </div>
+            <p>Parses preamble, Parts, and epilogue from a Multipart
+formatted sequence of bytes likely from an HTTP request or response.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Multipart6Parser8boundaryGSaVs5UInt8_"></a>
+                    <a name="//apple_ref/swift/Property/boundary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Multipart6Parser8boundaryGSaVs5UInt8_">boundary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The multipart boundary being used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">boundary</span><span class="p">:</span> <span class="kt">Bytes</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C9Multipart6Parser12PartCallback"></a>
+                    <a name="//apple_ref/swift/Alias/PartCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Multipart6Parser12PartCallback">PartCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A callback type for handling parsed Part structs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">PartCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Structs/Part.html">Part</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Multipart6Parser6onPartGSqFVS_4PartT__"></a>
+                    <a name="//apple_ref/swift/Property/onPart" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Multipart6Parser6onPartGSqFVS_4PartT__">onPart</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called whenever a complete Part has been parsed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onPart</span><span class="p">:</span> <span class="kt"><a href="../Classes/Parser.html#/s:C9Multipart6Parser12PartCallback">PartCallback</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C9Multipart6Parser16PreambleCallback"></a>
+                    <a name="//apple_ref/swift/Alias/PreambleCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Multipart6Parser16PreambleCallback">PreambleCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A callback type for handling the parsed preamble.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">PreambleCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Multipart6Parser10onPreambleGSqFGSaVs5UInt8_T__"></a>
+                    <a name="//apple_ref/swift/Property/onPreamble" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Multipart6Parser10onPreambleGSqFGSaVs5UInt8_T__">onPreamble</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called once after the preamble has been parsed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onPreamble</span><span class="p">:</span> <span class="kt"><a href="../Classes/Parser.html#/s:C9Multipart6Parser16PreambleCallback">PreambleCallback</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C9Multipart6Parser16EpilogueCallback"></a>
+                    <a name="//apple_ref/swift/Alias/EpilogueCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Multipart6Parser16EpilogueCallback">EpilogueCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A callback type for handling the parsed epilogue.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">EpilogueCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Multipart6Parser10onEpilogueGSqFGSaVs5UInt8_T__"></a>
+                    <a name="//apple_ref/swift/Property/onEpilogue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Multipart6Parser10onEpilogueGSqFGSaVs5UInt8_T__">onEpilogue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>CAlled once after the epilogue has been parsed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onEpilogue</span><span class="p">:</span> <span class="kt"><a href="../Classes/Parser.html#/s:C9Multipart6Parser16EpilogueCallback">EpilogueCallback</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC9Multipart6Parser5Error"></a>
+                    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC9Multipart6Parser5Error">Error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Possible errors that may be encountered while parsing.</p>
+
+                        <a href="../Classes/Parser/Error.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Error</span><span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Multipart6ParsercFT8boundaryGSaVs5UInt8__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(boundary:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Multipart6ParsercFT8boundaryGSaVs5UInt8__S0_">init(boundary:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new multipart parser.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">boundary</span><span class="p">:</span> <span class="kt">Bytes</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC9Multipart6Parser15extractBoundaryFzT11contentTypeP4Bits16BytesConvertible__GSaVs5UInt8_"></a>
+                    <a name="//apple_ref/swift/Method/extractBoundary(contentType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC9Multipart6Parser15extractBoundaryFzT11contentTypeP4Bits16BytesConvertible__GSaVs5UInt8_">extractBoundary(contentType:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Extracts the boundary from a multipart Content-Type header</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">extractBoundary</span><span class="p">(</span><span class="nv">contentType</span><span class="p">:</span> <span class="kt">BytesConvertible</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bytes</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Multipart6ParsercFzT11contentTypeP4Bits16BytesConvertible__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(contentType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Multipart6ParsercFzT11contentTypeP4Bits16BytesConvertible__S0_">init(contentType:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new multipart parser from a 
+Content-Type header value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">contentType</span><span class="p">:</span> <span class="kt">BytesConvertible</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Multipart6Parser5parseFzGSaVs5UInt8_T_"></a>
+                    <a name="//apple_ref/swift/Method/parse(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Multipart6Parser5parseFzGSaVs5UInt8_T_">parse(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The main method for passing bytes into the parser.</p>
+
+<p>A copy is performed to move the bytes passed into
+the parser&rsquo;s internal memory. The bytes are then
+iterated over one by one.</p>
+
+<p>Callbacks will be made as the preamble, Parts, and
+epilogue are discovered.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parse</span><span class="p">(</span><span class="n">_</span> <span class="nv">bytes</span><span class="p">:</span> <span class="kt">Bytes</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Multipart6Parser6finishFzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/finish()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Multipart6Parser6finishFzT_T_">finish()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Call this method when there are no bytes
+left to parse.</p>
+
+<p>This will trigger any parsed epilogue bytes
+to be returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">finish</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Multipart6Parser5parseFzP4Bits16BytesConvertible_T_"></a>
+                    <a name="//apple_ref/swift/Method/parse(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Multipart6Parser5parseFzP4Bits16BytesConvertible_T_">parse(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>@see parse(_ bytes: Bytes)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parse</span><span class="p">(</span><span class="n">_</span> <span class="nv">bytes</span><span class="p">:</span> <span class="kt">BytesConvertible</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Multipart6ParsercFzT8boundaryP4Bits16BytesConvertible__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(boundary:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Multipart6ParsercFzT8boundaryP4Bits16BytesConvertible__S0_">init(boundary:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>@see init(boundary: Bytes)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">boundary</span><span class="p">:</span> <span class="kt">BytesConvertible</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

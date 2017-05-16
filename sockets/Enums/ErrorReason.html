@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ErrorReason Enum Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/ErrorReason" class="dashAnchor"></a>
+    <a title="ErrorReason Enum Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Sockets Docs</a> (8% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Sockets Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ErrorReason Enum Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ResolvedInternetAddress.html">ResolvedInternetAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPEstablishedSocket.html">TCPEstablishedSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPInternetSocket.html">TCPInternetSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UDPInternetSocket.html">UDPInternetSocket</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v7Sockets14BufferCapacitySi">BufferCapacity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AddressFamily.html">AddressFamily</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorReason.html">ErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Protocol.html">Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ProtocolFamily.html">ProtocolFamily</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SocketType.html">SocketType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/timeval.html">timeval</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7Socketsoi2eeFTCS_23ResolvedInternetAddressS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7Socketsoi2eeFTVSC7timevalS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7Sockets6selectFzT5readsGSaVs5Int32_6writesGSaS0__6errorsGSaS0__7timeoutGSqVSC7timeval__T5readsGSaS0__6writesGSaS0__6errorsGSaS0___">select(reads:writes:errors:timeout:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DescriptorRepresentable.html">DescriptorRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InternetSocket.html">InternetSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Pipeable.html">Pipeable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RawSocket.html">RawSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Socket.html">Socket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TCPReadableSocket.html">TCPReadableSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P7Sockets9TCPSocket">TCPSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TCPWriteableSocket.html">TCPWriteableSocket</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Config.html">Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Descriptor.html">Descriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/InternetAddress.html">InternetAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SocketsError.html">SocketsError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ErrorReason</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason18createSocketFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/createSocketFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason18createSocketFailedFMS0_S0_">createSocketFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason15optionSetFailedFMS0_FT5levelVs5Int324nameS1_5valueSS_S0_"></a>
+                    <a name="//apple_ref/swift/Element/optionSetFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason15optionSetFailedFMS0_FT5levelVs5Int324nameS1_5valueSS_S0_">optionSetFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason15optionGetFailedFMS0_FT5levelVs5Int324nameS1_4typeSS_S0_"></a>
+                    <a name="//apple_ref/swift/Element/optionGetFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason15optionGetFailedFMS0_FT5levelVs5Int324nameS1_4typeSS_S0_">optionGetFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason17closeSocketFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/closeSocketFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason17closeSocketFailedFMS0_S0_">closeSocketFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason18pipeCreationFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/pipeCreationFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason18pipeCreationFailedFMS0_S0_">pipeCreationFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason12selectFailedFMS0_FT5readsGSaVs5Int32_6writesGSaS1__6errorsGSaS1___S0_"></a>
+                    <a name="//apple_ref/swift/Element/selectFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason12selectFailedFMS0_FT5readsGSaVs5Int32_6writesGSaS1__6errorsGSaS1___S0_">selectFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason28localAddressResolutionFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/localAddressResolutionFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason28localAddressResolutionFailedFMS0_S0_">localAddressResolutionFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason29remoteAddressResolutionFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/remoteAddressResolutionFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason29remoteAddressResolutionFailedFMS0_S0_">remoteAddressResolutionFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason25ipAddressResolutionFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/ipAddressResolutionFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason25ipAddressResolutionFailedFMS0_S0_">ipAddressResolutionFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason25ipAddressValidationFailedFMS0_FSSS0_"></a>
+                    <a name="//apple_ref/swift/Element/ipAddressValidationFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason25ipAddressValidationFailedFMS0_FSSS0_">ipAddressValidationFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason25failedToGetIPFromHostnameFMS0_FSSS0_"></a>
+                    <a name="//apple_ref/swift/Element/failedToGetIPFromHostname" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason25failedToGetIPFromHostnameFMS0_FSSS0_">failedToGetIPFromHostname</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason15unparsableBytesFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/unparsableBytes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason15unparsableBytesFMS0_S0_">unparsableBytes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason13connectFailedFMS0_FT6schemeSS8hostnameSS4portVs6UInt16_S0_"></a>
+                    <a name="//apple_ref/swift/Element/connectFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason13connectFailedFMS0_FT6schemeSS8hostnameSS4portVs6UInt16_S0_">connectFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason15connectTimedOutFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/connectTimedOut" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason15connectTimedOutFMS0_S0_">connectTimedOut</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason10readFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/readFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason10readFailedFMS0_S0_">readFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason10bindFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/bindFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason10bindFailedFMS0_S0_">bindFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason12listenFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/listenFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason12listenFailedFMS0_S0_">listenFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason12acceptFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/acceptFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason12acceptFailedFMS0_S0_">acceptFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason11writeFailedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/writeFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason11writeFailedFMS0_S0_">writeFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason30unsupportedSocketAddressFamilyFMS0_FVs5Int32S0_"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedSocketAddressFamily" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason30unsupportedSocketAddressFamilyFMS0_FVs5Int32S0_">unsupportedSocketAddressFamily</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason35concreteSocketAddressFamilyRequiredFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/concreteSocketAddressFamilyRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason35concreteSocketAddressFamilyRequiredFMS0_S0_">concreteSocketAddressFamilyRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason14socketIsClosedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/socketIsClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason14socketIsClosedFMS0_S0_">socketIsClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO7Sockets11ErrorReason7genericFMS0_FSSS0_"></a>
+                    <a name="//apple_ref/swift/Element/generic" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7Sockets11ErrorReason7genericFMS0_FSSS0_">generic</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

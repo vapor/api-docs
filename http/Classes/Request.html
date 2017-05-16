@@ -14,7 +14,7 @@
     <a title="Request Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">HTTP Docs</a> (9% documented)</p>
+        <p><a href="../index.html">HTTP Docs</a> (11% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -31,34 +31,48 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/ChunkStream.html">ChunkStream</a>
+                <a href="../Classes/AsyncServer.html">AsyncServer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Client.html">Client</a>
+                <a href="../Classes/BasicClient.html">BasicClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BasicServer.html">BasicServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChunkStream.html">ChunkStream</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/FoundationClient.html">FoundationClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Message.html">Message</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/Parser.html">Parser</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Request/Handler.html">– Handler</a>
+                <a href="../Classes/RequestParser.html">RequestParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestSerializer.html">RequestSerializer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Serializer.html">Serializer</a>
+                <a href="../Classes/ResponseParser.html">ResponseParser</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Server.html">Server</a>
+                <a href="../Classes/ResponseSerializer.html">ResponseSerializer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4HTTP20defaultServerTimeoutSd">defaultServerTimeout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4HTTP9userAgentSS">userAgent</a>
               </li>
             </ul>
           </li>
@@ -72,19 +86,13 @@
                 <a href="../Enums/ClientError.html">ClientError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ClientProtocolError.html">ClientProtocolError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/MessageError.html">MessageError</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/Method.html">Method</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/NotSupported.html">NotSupported</a>
+                <a href="../Enums/ParserError.html">ParserError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ParserError.html">ParserError</a>
+                <a href="../Enums/SerializerError.html">SerializerError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ServerError.html">ServerError</a>
@@ -136,9 +144,6 @@
                 <a href="../Functions.html#/s:F4HTTPoi2eeFTVS_7VersionS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4HTTPoi2eeFTVS_9HeaderKeyS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Functions.html#/s:F4HTTPoi1gFTVS_7VersionS0__Sb">&gt;(_:_:)</a>
               </li>
               <li class="nav-group-task">
@@ -150,22 +155,25 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/AsyncResponder.html">AsyncResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AsyncResponseWriter.html">AsyncResponseWriter</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/BodyRepresentable.html">BodyRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ClientProtocol.html">ClientProtocol</a>
+                <a href="../Protocols.html#/s:P4HTTP6Client">Client</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:P4HTTP13KeyAccessible">KeyAccessible</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/Middleware.html">Middleware</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ParserProtocol.html">ParserProtocol</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/Program.html">Program</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Responder.html">Responder</a>
@@ -174,10 +182,7 @@
                 <a href="../Protocols/ResponseRepresentable.html">ResponseRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SerializerProtocol.html">SerializerProtocol</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ServerProtocol.html">ServerProtocol</a>
+                <a href="../Protocols/Server.html">Server</a>
               </li>
             </ul>
           </li>
@@ -185,10 +190,19 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/HeaderKey.html">HeaderKey</a>
+                <a href="../Structs/BasicAsyncResponder.html">BasicAsyncResponder</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PeerAddress.html">PeerAddress</a>
+                <a href="../Structs/BasicAsyncResponseWriter.html">BasicAsyncResponseWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BasicResponder.html">BasicResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Forwarded.html">Forwarded</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HeaderKey.html">HeaderKey</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Version.html">Version</a>
@@ -206,13 +220,6 @@
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/TODO:%20public%20set%20for%20head%20request%20in%20application,%20serializer%20should%20change%20it,%20avoid%20exposing%20to%20end%20user"></a>
-                <a name="//apple_ref/swift/Section/TODO: public set for head request in application, serializer should change it, avoid exposing to end user" class="dashAnchor"></a>
-                <a href="#/TODO:%20public%20set%20for%20head%20request%20in%20application,%20serializer%20should%20change%20it,%20avoid%20exposing%20to%20end%20user">
-                  <h3 class="section-name">TODO: public set for head request in application, serializer should change it, avoid exposing to end user</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -274,47 +281,66 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC4HTTP7RequestcFzT6methodOS_6Method3uriSS7versionVS_7Version7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body_S0_"></a>
+                    <a name="/s:vC4HTTP7Request7headersGVs10DictionaryVS_9HeaderKeySS_"></a>
+                    <a name="//apple_ref/swift/Property/headers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4HTTP7Request7headersGVs10DictionaryVS_9HeaderKeySS_">headers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4HTTP7Request4bodyOS_4Body"></a>
+                    <a name="//apple_ref/swift/Property/body" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4HTTP7Request4bodyOS_4Body">body</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4HTTP7Request7storageGVs10DictionarySSP__"></a>
+                    <a name="//apple_ref/swift/Property/storage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4HTTP7Request7storageGVs10DictionarySSP__">storage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4HTTP7RequestcFT6methodOS_6Method3uriV3URI3URI7versionVS_7Version7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body_S0_"></a>
                     <a name="//apple_ref/swift/Method/init(method:uri:version:headers:body:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4HTTP7RequestcFzT6methodOS_6Method3uriSS7versionVS_7Version7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body_S0_">init(method:uri:version:headers:body:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC4HTTP7RequestcFzT6methodOS_6Method3uriV3URI3URI7versionVS_7Version7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body11peerAddressGSqVS_11PeerAddress__S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(method:uri:version:headers:body:peerAddress:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4HTTP7RequestcFzT6methodOS_6Method3uriV3URI3URI7versionVS_7Version7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body11peerAddressGSqVS_11PeerAddress__S0_">init(method:uri:version:headers:body:peerAddress:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC4HTTP7RequestcFzT19startLineComponentsTGVs10ArraySliceVs5UInt8_GS1_S2__GS1_S2___7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body11peerAddressGSqVS_11PeerAddress__S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(startLineComponents:headers:body:peerAddress:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4HTTP7RequestcFzT19startLineComponentsTGVs10ArraySliceVs5UInt8_GS1_S2__GS1_S2___7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body11peerAddressGSqVS_11PeerAddress__S0_">init(startLineComponents:headers:body:peerAddress:)</a>
+                    <a class="token" href="#/s:FC4HTTP7RequestcFT6methodOS_6Method3uriV3URI3URI7versionVS_7Version7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body_S0_">init(method:uri:version:headers:body:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -335,9 +361,39 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:VC4HTTP7Request7Handler"></a>
-                    <a name="//apple_ref/swift/Struct/Handler" class="dashAnchor"></a>
-                    <a class="token" href="#/s:VC4HTTP7Request7Handler">Handler</a>
+                    <a name="/s:vPs23CustomStringConvertible11descriptionSS"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vPs23CustomStringConvertible11descriptionSS">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4HTTP7RequestcFT6methodOS_6Method3uriSS7versionVS_7Version7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(method:uri:version:headers:body:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4HTTP7RequestcFT6methodOS_6Method3uriSS7versionVS_7Version7headersGVs10DictionaryVS_9HeaderKeySS_4bodyOS_4Body_S0_">init(method:uri:version:headers:body:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -347,7 +403,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Classes/Request/Handler.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
@@ -357,8 +412,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

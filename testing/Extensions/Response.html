@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Response Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/Response" class="dashAnchor"></a>
+    <a title="Response Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Testing Docs</a> (58% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Testing Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Response Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v7Testing6onFailFTSSVs12StaticStringSu_T_">onFail</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Responder.html">Responder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Response.html">Response</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Response</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7TestingC4HTTP8Response10assertBodyFzT8containsP4Bits16BytesConvertible_GSqSS_4fileVs12StaticString4lineSu_S1_"></a>
+                    <a name="//apple_ref/swift/Method/assertBody(contains:_:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7TestingC4HTTP8Response10assertBodyFzT8containsP4Bits16BytesConvertible_GSqSS_4fileVs12StaticString4lineSu_S1_">assertBody(contains:_:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asserts the response body contains a
+desired byte array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">assertBody</span><span class="p">(</span>
+        <span class="n">contains</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">BytesConvertible</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+        <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Response</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7TestingC4HTTP8Response10assertJSONFzTSS4fileVs12StaticString4lineSu11errorReasonSS6passesFV4JSON4JSONSb_S1_"></a>
+                    <a name="//apple_ref/swift/Method/assertJSON(_:file:line:errorReason:passes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7TestingC4HTTP8Response10assertJSONFzTSS4fileVs12StaticString4lineSu11errorReasonSS6passesFV4JSON4JSONSb_S1_">assertJSON(_:file:line:errorReason:passes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asserts the response body contains a
+desired byte array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">assertJSON</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+        <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span>
+        <span class="nv">errorReason</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"does not pass test"</span><span class="p">,</span>
+        <span class="nv">passes</span><span class="p">:</span> <span class="p">(</span><span class="kt">JSON</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">)</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Response</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7TestingC4HTTP8Response10assertJSONFzTSS6equalsGSqP4Node17NodeRepresentable__4fileVs12StaticString4lineSu_S1_"></a>
+                    <a name="//apple_ref/swift/Method/assertJSON(_:equals:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7TestingC4HTTP8Response10assertJSONFzTSS6equalsGSqP4Node17NodeRepresentable__4fileVs12StaticString4lineSu_S1_">assertJSON(_:equals:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asserts the response body contains a
+desired byte array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">assertJSON</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="n">equals</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NodeRepresentable</span><span class="p">?,</span>
+        <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+        <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Response</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7TestingC4HTTP8Response10assertJSONFzTSS11fuzzyEqualsGSqP4Node17NodeRepresentable__4fileVs12StaticString4lineSu_S1_"></a>
+                    <a name="//apple_ref/swift/Method/assertJSON(_:fuzzyEquals:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7TestingC4HTTP8Response10assertJSONFzTSS11fuzzyEqualsGSqP4Node17NodeRepresentable__4fileVs12StaticString4lineSu_S1_">assertJSON(_:fuzzyEquals:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asserts the response body contains a
+desired byte array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">assertJSON</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="n">fuzzyEquals</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NodeRepresentable</span><span class="p">?,</span>
+        <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+        <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Response</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7TestingC4HTTP8Response10assertJSONFzTSS8containsP4Node17NodeRepresentable_4fileVs12StaticString4lineSu_S1_"></a>
+                    <a name="//apple_ref/swift/Method/assertJSON(_:contains:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7TestingC4HTTP8Response10assertJSONFzTSS8containsP4Node17NodeRepresentable_4fileVs12StaticString4lineSu_S1_">assertJSON(_:contains:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asserts the response body contains a
+desired byte array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">assertJSON</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="n">contains</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NodeRepresentable</span><span class="p">,</span>
+        <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+        <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Response</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7TestingC4HTTP8Response12assertStatusFT2isOS0_6StatusGSqSS_4fileVs12StaticString4lineSu_S1_"></a>
+                    <a name="//apple_ref/swift/Method/assertStatus(is:_:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7TestingC4HTTP8Response12assertStatusFT2isOS0_6StatusGSqSS_4fileVs12StaticString4lineSu_S1_">assertStatus(is:_:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asserts the response status code equals
+a desired status code</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">assertStatus</span><span class="p">(</span>
+        <span class="k">is</span> <span class="nv">desired</span><span class="p">:</span> <span class="kt">HTTP</span><span class="o">.</span><span class="kt">Status</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+        <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Response</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7TestingC4HTTP8Response12assertHeaderFTVS0_9HeaderKey8containsSSGSqSS_4fileVs12StaticString4lineSu_S1_"></a>
+                    <a name="//apple_ref/swift/Method/assertHeader(_:contains:_:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7TestingC4HTTP8Response12assertHeaderFTVS0_9HeaderKey8containsSSGSqSS_4fileVs12StaticString4lineSu_S1_">assertHeader(_:contains:_:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asserts a response header at a given key
+contains a desired string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">assertHeader</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">HeaderKey</span><span class="p">,</span>
+        <span class="n">contains</span> <span class="nv">desired</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+        <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Response</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7TestingC4HTTP8Response8testBodyFzT4fileVs12StaticString4lineSu_GSaVs5UInt8_"></a>
+                    <a name="//apple_ref/swift/Method/testBody(file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7TestingC4HTTP8Response8testBodyFzT4fileVs12StaticString4lineSu_GSaVs5UInt8_">testBody(file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -14,7 +14,7 @@
     <a title="HeaderKey Struct Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">HTTP Docs</a> (9% documented)</p>
+        <p><a href="../index.html">HTTP Docs</a> (11% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -31,34 +31,48 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/ChunkStream.html">ChunkStream</a>
+                <a href="../Classes/AsyncServer.html">AsyncServer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Client.html">Client</a>
+                <a href="../Classes/BasicClient.html">BasicClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BasicServer.html">BasicServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChunkStream.html">ChunkStream</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/FoundationClient.html">FoundationClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Message.html">Message</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/Parser.html">Parser</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Request/Handler.html">– Handler</a>
+                <a href="../Classes/RequestParser.html">RequestParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestSerializer.html">RequestSerializer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Serializer.html">Serializer</a>
+                <a href="../Classes/ResponseParser.html">ResponseParser</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Server.html">Server</a>
+                <a href="../Classes/ResponseSerializer.html">ResponseSerializer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4HTTP20defaultServerTimeoutSd">defaultServerTimeout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4HTTP9userAgentSS">userAgent</a>
               </li>
             </ul>
           </li>
@@ -72,19 +86,13 @@
                 <a href="../Enums/ClientError.html">ClientError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ClientProtocolError.html">ClientProtocolError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/MessageError.html">MessageError</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/Method.html">Method</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/NotSupported.html">NotSupported</a>
+                <a href="../Enums/ParserError.html">ParserError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ParserError.html">ParserError</a>
+                <a href="../Enums/SerializerError.html">SerializerError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ServerError.html">ServerError</a>
@@ -136,9 +144,6 @@
                 <a href="../Functions.html#/s:F4HTTPoi2eeFTVS_7VersionS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4HTTPoi2eeFTVS_9HeaderKeyS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Functions.html#/s:F4HTTPoi1gFTVS_7VersionS0__Sb">&gt;(_:_:)</a>
               </li>
               <li class="nav-group-task">
@@ -150,22 +155,25 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/AsyncResponder.html">AsyncResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AsyncResponseWriter.html">AsyncResponseWriter</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/BodyRepresentable.html">BodyRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ClientProtocol.html">ClientProtocol</a>
+                <a href="../Protocols.html#/s:P4HTTP6Client">Client</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:P4HTTP13KeyAccessible">KeyAccessible</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/Middleware.html">Middleware</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ParserProtocol.html">ParserProtocol</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/Program.html">Program</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Responder.html">Responder</a>
@@ -174,10 +182,7 @@
                 <a href="../Protocols/ResponseRepresentable.html">ResponseRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SerializerProtocol.html">SerializerProtocol</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ServerProtocol.html">ServerProtocol</a>
+                <a href="../Protocols/Server.html">Server</a>
               </li>
             </ul>
           </li>
@@ -185,10 +190,19 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/HeaderKey.html">HeaderKey</a>
+                <a href="../Structs/BasicAsyncResponder.html">BasicAsyncResponder</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PeerAddress.html">PeerAddress</a>
+                <a href="../Structs/BasicAsyncResponseWriter.html">BasicAsyncResponseWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BasicResponder.html">BasicResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Forwarded.html">Forwarded</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HeaderKey.html">HeaderKey</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Version.html">Version</a>
@@ -305,6 +319,1150 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFPs9Equatableoi2eeFTxx_Sb"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFPs9Equatableoi2eeFTxx_Sb">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">public</span> <span class="kd">func</span> <span class="o">==</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">HeaderKey</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">HeaderKey</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey6acceptS0_"></a>
+                    <a name="//apple_ref/swift/Variable/accept" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey6acceptS0_">accept</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey13acceptCharsetS0_"></a>
+                    <a name="//apple_ref/swift/Variable/acceptCharset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey13acceptCharsetS0_">acceptCharset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey14acceptEncodingS0_"></a>
+                    <a name="//apple_ref/swift/Variable/acceptEncoding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey14acceptEncodingS0_">acceptEncoding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey14acceptLanguageS0_"></a>
+                    <a name="//apple_ref/swift/Variable/acceptLanguage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey14acceptLanguageS0_">acceptLanguage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey13authorizationS0_"></a>
+                    <a name="//apple_ref/swift/Variable/authorization" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey13authorizationS0_">authorization</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey12cacheControlS0_"></a>
+                    <a name="//apple_ref/swift/Variable/cacheControl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey12cacheControlS0_">cacheControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey10connectionS0_"></a>
+                    <a name="//apple_ref/swift/Variable/connection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey10connectionS0_">connection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey6cookieS0_"></a>
+                    <a name="//apple_ref/swift/Variable/cookie" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey6cookieS0_">cookie</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey13contentLengthS0_"></a>
+                    <a name="//apple_ref/swift/Variable/contentLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey13contentLengthS0_">contentLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey11contentTypeS0_"></a>
+                    <a name="//apple_ref/swift/Variable/contentType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey11contentTypeS0_">contentType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey4dateS0_"></a>
+                    <a name="//apple_ref/swift/Variable/date" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey4dateS0_">date</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey6expectS0_"></a>
+                    <a name="//apple_ref/swift/Variable/expect" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey6expectS0_">expect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey9forwardedS0_"></a>
+                    <a name="//apple_ref/swift/Variable/forwarded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey9forwardedS0_">forwarded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey4fromS0_"></a>
+                    <a name="//apple_ref/swift/Variable/from" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey4fromS0_">from</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey4hostS0_"></a>
+                    <a name="//apple_ref/swift/Variable/host" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey4hostS0_">host</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey7ifMatchS0_"></a>
+                    <a name="//apple_ref/swift/Variable/ifMatch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey7ifMatchS0_">ifMatch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey15ifModifiedSinceS0_"></a>
+                    <a name="//apple_ref/swift/Variable/ifModifiedSince" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey15ifModifiedSinceS0_">ifModifiedSince</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey11ifNoneMatchS0_"></a>
+                    <a name="//apple_ref/swift/Variable/ifNoneMatch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey11ifNoneMatchS0_">ifNoneMatch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey7ifRangeS0_"></a>
+                    <a name="//apple_ref/swift/Variable/ifRange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey7ifRangeS0_">ifRange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey17ifUnmodifiedSinceS0_"></a>
+                    <a name="//apple_ref/swift/Variable/ifUnmodifiedSince" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey17ifUnmodifiedSinceS0_">ifUnmodifiedSince</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey11maxForwardsS0_"></a>
+                    <a name="//apple_ref/swift/Variable/maxForwards" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey11maxForwardsS0_">maxForwards</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey6originS0_"></a>
+                    <a name="//apple_ref/swift/Variable/origin" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey6originS0_">origin</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey6pragmaS0_"></a>
+                    <a name="//apple_ref/swift/Variable/pragma" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey6pragmaS0_">pragma</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey18proxyAuthorizationS0_"></a>
+                    <a name="//apple_ref/swift/Variable/proxyAuthorization" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey18proxyAuthorizationS0_">proxyAuthorization</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey5rangeS0_"></a>
+                    <a name="//apple_ref/swift/Variable/range" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey5rangeS0_">range</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey8referrerS0_"></a>
+                    <a name="//apple_ref/swift/Variable/referrer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey8referrerS0_">referrer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey24transferCodingExceptionsS0_"></a>
+                    <a name="//apple_ref/swift/Variable/transferCodingExceptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey24transferCodingExceptionsS0_">transferCodingExceptions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey9userAgentS0_"></a>
+                    <a name="//apple_ref/swift/Variable/userAgent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey9userAgentS0_">userAgent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey7upgradeS0_"></a>
+                    <a name="//apple_ref/swift/Variable/upgrade" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey7upgradeS0_">upgrade</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey3viaS0_"></a>
+                    <a name="//apple_ref/swift/Variable/via" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey3viaS0_">via</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey7warningS0_"></a>
+                    <a name="//apple_ref/swift/Variable/warning" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey7warningS0_">warning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey11acceptPatchS0_"></a>
+                    <a name="//apple_ref/swift/Variable/acceptPatch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey11acceptPatchS0_">acceptPatch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey12acceptRangesS0_"></a>
+                    <a name="//apple_ref/swift/Variable/acceptRanges" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey12acceptRangesS0_">acceptRanges</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey3ageS0_"></a>
+                    <a name="//apple_ref/swift/Variable/age" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey3ageS0_">age</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey5allowS0_"></a>
+                    <a name="//apple_ref/swift/Variable/allow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey5allowS0_">allow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey19alternativeServicesS0_"></a>
+                    <a name="//apple_ref/swift/Variable/alternativeServices" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey19alternativeServicesS0_">alternativeServices</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey18contentDispositionS0_"></a>
+                    <a name="//apple_ref/swift/Variable/contentDisposition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey18contentDispositionS0_">contentDisposition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey15contentEncodingS0_"></a>
+                    <a name="//apple_ref/swift/Variable/contentEncoding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey15contentEncodingS0_">contentEncoding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey15contentLanguageS0_"></a>
+                    <a name="//apple_ref/swift/Variable/contentLanguage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey15contentLanguageS0_">contentLanguage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey15contentLocationS0_"></a>
+                    <a name="//apple_ref/swift/Variable/contentLocation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey15contentLocationS0_">contentLocation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey12contentRangeS0_"></a>
+                    <a name="//apple_ref/swift/Variable/contentRange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey12contentRangeS0_">contentRange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey4etagS0_"></a>
+                    <a name="//apple_ref/swift/Variable/etag" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey4etagS0_">etag</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey7expiresS0_"></a>
+                    <a name="//apple_ref/swift/Variable/expires" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey7expiresS0_">expires</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey12lastModifiedS0_"></a>
+                    <a name="//apple_ref/swift/Variable/lastModified" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey12lastModifiedS0_">lastModified</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey4linkS0_"></a>
+                    <a name="//apple_ref/swift/Variable/link" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey4linkS0_">link</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey8locationS0_"></a>
+                    <a name="//apple_ref/swift/Variable/location" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey8locationS0_">location</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey17proxyAuthenticateS0_"></a>
+                    <a name="//apple_ref/swift/Variable/proxyAuthenticate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey17proxyAuthenticateS0_">proxyAuthenticate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey13publicKeyPinsS0_"></a>
+                    <a name="//apple_ref/swift/Variable/publicKeyPins" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey13publicKeyPinsS0_">publicKeyPins</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey10retryAfterS0_"></a>
+                    <a name="//apple_ref/swift/Variable/retryAfter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey10retryAfterS0_">retryAfter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey6serverS0_"></a>
+                    <a name="//apple_ref/swift/Variable/server" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey6serverS0_">server</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey9setCookieS0_"></a>
+                    <a name="//apple_ref/swift/Variable/setCookie" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey9setCookieS0_">setCookie</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey23strictTransportSecurityS0_"></a>
+                    <a name="//apple_ref/swift/Variable/strictTransportSecurity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey23strictTransportSecurityS0_">strictTransportSecurity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey7trailerS0_"></a>
+                    <a name="//apple_ref/swift/Variable/trailer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey7trailerS0_">trailer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey16transferEncodingS0_"></a>
+                    <a name="//apple_ref/swift/Variable/transferEncoding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey16transferEncodingS0_">transferEncoding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey19trackingStatusValueS0_"></a>
+                    <a name="//apple_ref/swift/Variable/trackingStatusValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey19trackingStatusValueS0_">trackingStatusValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey4varyS0_"></a>
+                    <a name="//apple_ref/swift/Variable/vary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey4varyS0_">vary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV4HTTP9HeaderKey15wwwAuthenticateS0_"></a>
+                    <a name="//apple_ref/swift/Variable/wwwAuthenticate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV4HTTP9HeaderKey15wwwAuthenticateS0_">wwwAuthenticate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -332,6 +1490,25 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -357,6 +1534,25 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">extendedGraphemeClusterLiteral</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -384,6 +1580,25 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -392,8 +1607,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

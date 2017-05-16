@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Base64Encoder Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Base64Encoder" class="dashAnchor"></a>
+    <a title="Base64Encoder Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Bits Docs</a> (84% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Bits Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Base64Encoder Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Base64Encoder.html">Base64Encoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HexEncoder.html">HexEncoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Byte.html">Byte</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Sequence.html">Sequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UnsignedInteger.html">UnsignedInteger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2peFTRGSaVs5UInt8_GVs10ArraySliceS0___T_">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2peFTRGSaVs5UInt8_S0__T_">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2teFTGSaVs5UInt8_GSaS0___Sb">~=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2teFTGSaVs5UInt8_GVs10ArraySliceS0___Sb">~=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2teFTGSaVs5UInt8_S0__Sb">~=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2teFTGVs10ArraySliceVs5UInt8_GS0_S1___Sb">~=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2teFTGVs10ArraySliceVs5UInt8_GSaS1___Sb">~=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2teFTGVs10ArraySliceVs5UInt8_S1__Sb">~=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2teFTVs5UInt8GSaS0___Sb">~=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2teFTVs5UInt8GVs10ArraySliceS0___Sb">~=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Bitsoi2teFTVs5UInt8S0__Sb">~=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P4Bits16BytesConvertible">BytesConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BytesInitializable.html">BytesInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BytesRepresentable.html">BytesRepresentable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Bits4Byte">Byte</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Bits5Bytes">Bytes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Bits10BytesSlice">BytesSlice</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Base64Encoder</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Base64Encoder</span></code></pre>
+
+                </div>
+              </div>
+            <p>Encodes and decodes bytes using the 
+Base64 encoding</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Base64">https://en.wikipedia.org/wiki/Base64</a></p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC4Bits13Base64Encoder6sharedS0_"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC4Bits13Base64Encoder6sharedS0_">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Static shared instance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span> <span class="o">=</span> <span class="kt">Base64Encoder</span><span class="o">.</span><span class="n"><a href="../Classes/Base64Encoder.html#/s:ZvC4Bits13Base64Encoder7regularS0_">regular</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC4Bits13Base64Encoder7regularS0_"></a>
+                    <a name="//apple_ref/swift/Variable/regular" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC4Bits13Base64Encoder7regularS0_">regular</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Standard Base64Encoder</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">regular</span><span class="p">:</span> <span class="kt">Base64Encoder</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC4Bits13Base64Encoder3urlS0_"></a>
+                    <a name="//apple_ref/swift/Variable/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC4Bits13Base64Encoder3urlS0_">url</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Base64Encoder</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C4Bits13Base64Encoder7ByteMap"></a>
+                    <a name="//apple_ref/swift/Alias/ByteMap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C4Bits13Base64Encoder7ByteMap">ByteMap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Typealias for optionally mapping a byte</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ByteMap</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Typealiases.html#/s:4Bits4Byte">Byte</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:4Bits4Byte">Byte</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4Bits13Base64Encoder7paddingGSqVs5UInt8_"></a>
+                    <a name="//apple_ref/swift/Property/padding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4Bits13Base64Encoder7paddingGSqVs5UInt8_">padding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Byte to use for padding base64
+if nil, no padding will be used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">padding</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:4Bits4Byte">Byte</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4Bits13Base64Encoder9encodeMapGSqFVs5UInt8GSqS1___"></a>
+                    <a name="//apple_ref/swift/Property/encodeMap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4Bits13Base64Encoder9encodeMapGSqFVs5UInt8GSqS1___">encodeMap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set, bytes returned will have priority
+over the encoding table. Encoding table
+will be used as a fallback</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encodeMap</span><span class="p">:</span> <span class="kt"><a href="../Classes/Base64Encoder.html#/s:C4Bits13Base64Encoder7ByteMap">ByteMap</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4Bits13Base64Encoder9decodeMapGSqFVs5UInt8GSqS1___"></a>
+                    <a name="//apple_ref/swift/Property/decodeMap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4Bits13Base64Encoder9decodeMapGSqFVs5UInt8GSqS1___">decodeMap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set, bytes returned will have priority
+over the decoding table. Decoding table
+will be used as a fallback</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">decodeMap</span><span class="p">:</span> <span class="kt"><a href="../Classes/Base64Encoder.html#/s:C4Bits13Base64Encoder7ByteMap">ByteMap</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Bits13Base64EncodercFT7paddingGSqVs5UInt8_9encodeMapGSqFS1_GSqS1___9decodeMapGSqFS1_GSqS1____S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(padding:encodeMap:decodeMap:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Bits13Base64EncodercFT7paddingGSqVs5UInt8_9encodeMapGSqFS1_GSqS1___9decodeMapGSqFS1_GSqS1____S0_">init(padding:encodeMap:decodeMap:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new Base64 encoder</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+        <span class="nv">padding</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:4Bits4Byte">Byte</a></span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="n">equals</span><span class="p">,</span>
+        <span class="nv">encodeMap</span><span class="p">:</span> <span class="kt"><a href="../Classes/Base64Encoder.html#/s:C4Bits13Base64Encoder7ByteMap">ByteMap</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">decodeMap</span><span class="p">:</span> <span class="kt"><a href="../Classes/Base64Encoder.html#/s:C4Bits13Base64Encoder7ByteMap">ByteMap</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+    <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Bits13Base64Encoder6encodeFGSaVs5UInt8_GSaS1__"></a>
+                    <a name="//apple_ref/swift/Method/encode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Bits13Base64Encoder6encodeFGSaVs5UInt8_GSaS1__">encode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes bytes into Base64 format</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">_</span> <span class="nv">bytes</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:4Bits5Bytes">Bytes</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:4Bits5Bytes">Bytes</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Bits13Base64Encoder6decodeFGSaVs5UInt8_GSaS1__"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Bits13Base64Encoder6decodeFGSaVs5UInt8_GSaS1__">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes bytes into binary format</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:4Bits5Bytes">Bytes</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:4Bits5Bytes">Bytes</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

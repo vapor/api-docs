@@ -14,7 +14,7 @@
     <a title="StreamError Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Transport Docs</a> (19% documented)</p>
+        <p><a href="../index.html">Transport Docs</a> (27% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -36,40 +36,11 @@
               <li class="nav-group-task">
                 <a href="../Classes/FoundationStream/Error.html">– Error</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Classes/StreamBuffer.html">StreamBuffer</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/TCPClientStream.html">TCPClientStream</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/TCPProgramStream.html">TCPProgramStream</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/TCPServerStream.html">TCPServerStream</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Global Variables.html">Global Variables</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v9Transport19defaultClientConfigFzT_C3TLS6Config">defaultClientConfig</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v9Transport19defaultServerConfigFzT_C3TLS6Config">defaultServerConfig</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Enums/ProgramStreamError.html">ProgramStreamError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/SecurityLayer.html">SecurityLayer</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Enums/StreamError.html">StreamError</a>
               </li>
@@ -79,13 +50,7 @@
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/String.html">String</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/TCPInternetSocket.html">TCPInternetSocket</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/TLS.html">TLS</a>
+                <a href="../Extensions/Int.html">Int</a>
               </li>
             </ul>
           </li>
@@ -96,7 +61,10 @@
                 <a href="../Protocols/ClientStream.html">ClientStream</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ProgramStream.html">ProgramStream</a>
+                <a href="../Protocols/InternetStream.html">InternetStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReadableStream.html">ReadableStream</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServerStream.html">ServerStream</a>
@@ -105,16 +73,7 @@
                 <a href="../Protocols/Stream.html">Stream</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:P9Transport15TransferMessage">TransferMessage</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/TransferParser.html">TransferParser</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/TransferSerializer.html">TransferSerializer</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/Watchable.html">Watchable</a>
+                <a href="../Protocols/WriteableStream.html">WriteableStream</a>
               </li>
             </ul>
           </li>
@@ -124,7 +83,14 @@
         <section>
           <section class="section">
             <h1>StreamError</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">StreamError</span></code></pre>
+
+                </div>
+              </div>
+            <p>Errors that may be thrown when interacting
+with streams.</p>
 
           </section>
           <section class="section task-group-section">
@@ -133,9 +99,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9Transport11StreamError11unsupportedFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/unsupported" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9Transport11StreamError11unsupportedFMS0_S0_">unsupported</a>
+                    <a name="/s:FO9Transport11StreamError6closedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/closed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO9Transport11StreamError6closedFMS0_S0_">closed</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -145,6 +111,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">StreamError</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -156,9 +130,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9Transport11StreamError4sendFMS0_FTSSPs5Error__S0_"></a>
-                    <a name="//apple_ref/swift/Element/send" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9Transport11StreamError4sendFMS0_FTSSPs5Error__S0_">send</a>
+                    <a name="/s:vP9Debugging10Debuggable6reasonSS"></a>
+                    <a name="//apple_ref/swift/Property/reason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP9Debugging10Debuggable6reasonSS">reason</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -166,22 +140,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">reason</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
+                        </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9Transport11StreamError7receiveFMS0_FTSSPs5Error__S0_"></a>
-                    <a name="//apple_ref/swift/Element/receive" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9Transport11StreamError7receiveFMS0_FTSSPs5Error__S0_">receive</a>
+                    <a name="/s:vP9Debugging10Debuggable10identifierSS"></a>
+                    <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP9Debugging10Debuggable10identifierSS">identifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -189,22 +166,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
+                        </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9Transport11StreamError6customFMS0_FSSS0_"></a>
-                    <a name="//apple_ref/swift/Element/custom" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9Transport11StreamError6customFMS0_FSSS0_">custom</a>
+                    <a name="/s:vP9Debugging10Debuggable14possibleCausesGSaSS_"></a>
+                    <a name="//apple_ref/swift/Property/possibleCauses" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP9Debugging10Debuggable14possibleCausesGSaSS_">possibleCauses</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -212,8 +192,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">possibleCauses</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
 
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP9Debugging10Debuggable14suggestedFixesGSaSS_"></a>
+                    <a name="//apple_ref/swift/Property/suggestedFixes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP9Debugging10Debuggable14suggestedFixesGSaSS_">suggestedFixes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">suggestedFixes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -223,8 +236,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

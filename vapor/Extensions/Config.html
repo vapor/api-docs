@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Config Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/Config" class="dashAnchor"></a>
+    <a title="Config Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Vapor Docs</a> (54% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Vapor Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Config Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BCryptHasher.html">BCryptHasher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CORSMiddleware.html">CORSMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ClientFactory.html">ClientFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Content.html">Content</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CryptoCipher.html">CryptoCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CryptoHasher.html">CryptoHasher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CryptoHasher/Method.html">– Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DateMiddleware.html">DateMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Droplet.html">Droplet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DumpConfig.html">DumpConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EngineClient.html">EngineClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EngineServer.html">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorMiddleware.html">ErrorMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Event.html">Event</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileMiddleware.html">FileMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FoundationClient.html">FoundationClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mailgun.html">Mailgun</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProviderInstall.html">ProviderInstall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Resource.html">Resource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RouteList.html">RouteList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SMTPMailer.html">SMTPMailer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Serve.html">Serve</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ServerFactory.html">ServerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StaticViewRenderer.html">StaticViewRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C5Vapor12Subscription">Subscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VersionCommand.html">VersionCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/View.html">View</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WebSocketFactory.html">WebSocketFactory</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5Vapor7VERSIONSS">VERSION</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AllowOriginSetting.html">AllowOriginSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CORSConfigurationError.html">CORSConfigurationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CommandError.html">CommandError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CryptoEncoding.html">CryptoEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LogLevel.html">LogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SecurityLayer.html">SecurityLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Body.html">Body</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CacheSessions.html">CacheSessions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Config.html">Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/FormData.html">FormData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/HMAC.html">HMAC</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/HTTP.html">HTTP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Hash.html">Hash</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/JSON.html">JSON</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MemoryCache.html">MemoryCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MemorySessions.html">MemorySessions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Node.html">Node</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Responder.html">Responder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RouteBuilder.html">RouteBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RouterError.html">RouterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Sequence.html">Sequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Session.html">Session</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SessionsMiddleware.html">SessionsMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Terminal.html">Terminal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URI.html">URI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UnimplementedMailer.html">UnimplementedMailer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5Vaporoi2eeFTOS_8LogLevelS0__Sb">==(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AbortError.html">AbortError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CipherProtocol.html">CipherProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ClientFactoryProtocol.html">ClientFactoryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ClientProtocol.html">ClientProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DropletInitializable.html">DropletInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HashProtocol.html">HashProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LogProtocol.html">LogProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MailProtocol.html">MailProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Provider.html">Provider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P5Vapor23RequestContentSubscript">RequestContentSubscript</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RequestInitializable.html">RequestInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResourceRepresentable.html">ResourceRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RouteCollection.html">RouteCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ServerFactoryProtocol.html">ServerFactoryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ServerProtocol.html">ServerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/StringInitializable.html">StringInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ViewRenderer.html">ViewRenderer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Abort.html">Abort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Accept.html">Accept</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AcceptLanguage.html">AcceptLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CORSConfiguration.html">CORSConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:V5Vapor5Proxy">Proxy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ServerConfig.html">ServerConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ViewContext.html">ViewContext</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Config</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRx5Cache13CacheProtocolrFT5cacheFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(cache:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRx5Cache13CacheProtocolrFT5cacheFzS1_x4nameSS_T_">addConfigurable(cache:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">Cache</span><span class="p">:</span> <span class="kt">CacheProtocol</span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">cache</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">Cache</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config12resolveCacheFzT_P5Cache13CacheProtocol_"></a>
+                    <a name="//apple_ref/swift/Method/resolveCache()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config12resolveCacheFzT_P5Cache13CacheProtocol_">resolveCache()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured Cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveCache</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">CacheProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRxS_14CipherProtocolrFT6cipherFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(cipher:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRxS_14CipherProtocolrFT6cipherFzS1_x4nameSS_T_">addConfigurable(cipher:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Cipher.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">Cipher</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CipherProtocol.html">CipherProtocol</a></span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">cipher</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">Cipher</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config13resolveCipherFzT_PS_14CipherProtocol_"></a>
+                    <a name="//apple_ref/swift/Method/resolveCipher()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config13resolveCipherFzT_PS_14CipherProtocol_">resolveCipher()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured Cipher.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveCipher</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/CipherProtocol.html">CipherProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRx7Console7CommandrFT7commandFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(command:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRx7Console7CommandrFT7commandFzS1_x4nameSS_T_">addConfigurable(command:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Command.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">C</span><span class="p">:</span> <span class="kt">Command</span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">command</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15resolveCommandsFzT_GSaP7Console7Command__"></a>
+                    <a name="//apple_ref/swift/Method/resolveCommands()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15resolveCommandsFzT_GSaP7Console7Command__">resolveCommands()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured Command.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveCommands</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Command</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRx7Console15ConsoleProtocolrFT7consoleFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(console:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRx7Console15ConsoleProtocolrFT7consoleFzS1_x4nameSS_T_">addConfigurable(console:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Console.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">Console</span><span class="p">:</span> <span class="kt">ConsoleProtocol</span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">console</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">Console</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config14resolveConsoleFzT_P7Console15ConsoleProtocol_"></a>
+                    <a name="//apple_ref/swift/Method/resolveConsole()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config14resolveConsoleFzT_P7Console15ConsoleProtocol_">resolveConsole()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured Console.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveConsole</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">ConsoleProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config21customAddConfigurableurFT7closureFzS1_x6uniqueSS4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/customAddConfigurable(closure:unique:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config21customAddConfigurableurFT7closureFzS1_x6uniqueSS4nameSS_T_">customAddConfigurable(closure:unique:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable class according to the information supplied.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">customAddConfigurable</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="nv">unique</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Directories"></a>
+                <a name="//apple_ref/swift/Section/Directories" class="dashAnchor"></a>
+                <a href="#/Directories">
+                  <h3 class="section-name">Directories</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE5VaporC7Configs6Config7workDirSS"></a>
+                    <a name="//apple_ref/swift/Property/workDir" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE5VaporC7Configs6Config7workDirSS">workDir</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The work directory of your droplet is
+the directory in which your Resources, Public, etc
+folders are stored. This is normally <code>./</code> if
+you are running Vapor using <code>.build/xxx/app</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">workDir</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE5VaporC7Configs6Config12resourcesDirSS"></a>
+                    <a name="//apple_ref/swift/Property/resourcesDir" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE5VaporC7Configs6Config12resourcesDirSS">resourcesDir</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resources directory relative to workDir</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">resourcesDir</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE5VaporC7Configs6Config8viewsDirSS"></a>
+                    <a name="//apple_ref/swift/Property/viewsDir" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE5VaporC7Configs6Config8viewsDirSS">viewsDir</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Views directory relative to the
+resources directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">viewsDir</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE5VaporC7Configs6Config9publicDirSS"></a>
+                    <a name="//apple_ref/swift/Property/publicDir" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE5VaporC7Configs6Config9publicDirSS">publicDir</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Public directory relative to the
+working directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">publicDir</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config13customResolveurFzT6uniqueSS4fileSS7keyPathGSaSS_2asMx7defaultFzS1_x_x"></a>
+                    <a name="//apple_ref/swift/Method/customResolve(unique:file:keyPath:as:default:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config13customResolveurFzT6uniqueSS4fileSS7keyPathGSaSS_2asMx7defaultFzS1_x_x">customResolve(unique:file:keyPath:as:default:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves a single instance with the supplied information
+from the configurable items.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">customResolve</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="nv">unique</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">keyPath</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
+        <span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+        <span class="k">default</span> <span class="nv">d</span><span class="p">:</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">C</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config18customResolveArrayurFzT6uniqueSS4fileSS7keyPathGSaSS_2asMx7defaultFzS1_GSax__GSax_"></a>
+                    <a name="//apple_ref/swift/Method/customResolveArray(unique:file:keyPath:as:default:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config18customResolveArrayurFzT6uniqueSS4fileSS7keyPathGSaSS_2asMx7defaultFzS1_GSax__GSax_">customResolveArray(unique:file:keyPath:as:default:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves an array of instances with the supplied information
+from the configurable items.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">customResolveArray</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="nv">unique</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">keyPath</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
+        <span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+        <span class="k">default</span> <span class="nv">d</span><span class="p">:</span> <span class="p">(</span><span class="kt">Config</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">C</span><span class="p">]</span>
+    <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">C</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRxS_12HashProtocolrFT4hashFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(hash:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRxS_12HashProtocolrFT4hashFzS1_x4nameSS_T_">addConfigurable(hash:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Hash.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">Hash</span><span class="p">:</span> <span class="kt"><a href="../Protocols/HashProtocol.html">HashProtocol</a></span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">hash</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">Hash</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config11resolveHashFzT_PS_12HashProtocol_"></a>
+                    <a name="//apple_ref/swift/Method/resolveHash()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config11resolveHashFzT_PS_12HashProtocol_">resolveHash()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured Hash.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveHash</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/HashProtocol.html">HashProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRxS_11LogProtocolrFT3logFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(log:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRxS_11LogProtocolrFT3logFzS1_x4nameSS_T_">addConfigurable(log:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Log.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">Log</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LogProtocol.html">LogProtocol</a></span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">log</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">Log</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config10resolveLogFzT_PS_11LogProtocol_"></a>
+                    <a name="//apple_ref/swift/Method/resolveLog()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config10resolveLogFzT_PS_11LogProtocol_">resolveLog()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured Log.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveLog</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/LogProtocol.html">LogProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRxS_12MailProtocolrFT4mailFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(mail:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRxS_12MailProtocolrFT4mailFzS1_x4nameSS_T_">addConfigurable(mail:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Mail.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">Mail</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MailProtocol.html">MailProtocol</a></span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">mail</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">Mail</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config11resolveMailFzT_PS_12MailProtocol_"></a>
+                    <a name="//apple_ref/swift/Method/resolveMail()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config11resolveMailFzT_PS_12MailProtocol_">resolveMail()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured Mail.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveMail</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/MailProtocol.html">MailProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRx4HTTP10MiddlewarerFT10middlewareFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(middleware:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRx4HTTP10MiddlewarerFT10middlewareFzS1_x4nameSS_T_">addConfigurable(middleware:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable M instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">M</span><span class="p">:</span> <span class="kt">Middleware</span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">middleware</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRx4HTTP10MiddlewarerFT10middlewarex4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(middleware:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRx4HTTP10MiddlewarerFT10middlewarex4nameSS_T_">addConfigurable(middleware:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable M instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">M</span><span class="p">:</span> <span class="kt">Middleware</span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">middleware</span><span class="p">:</span> <span class="kt">M</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config17resolveMiddlewareFzT_GSaP4HTTP10Middleware__"></a>
+                    <a name="//apple_ref/swift/Method/resolveMiddleware()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config17resolveMiddlewareFzT_GSaP4HTTP10Middleware__">resolveMiddleware()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured M.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveMiddleware</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Middleware</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE5VaporC7Configs6Config9providersGSaPS_8Provider__"></a>
+                    <a name="//apple_ref/swift/Property/providers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE5VaporC7Configs6Config9providersGSaPS_8Provider__">providers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config11addProvideruRxS_8ProviderrFzxT_"></a>
+                    <a name="//apple_ref/swift/Method/addProvider(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config11addProvideruRxS_8ProviderrFzxT_">addProvider(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config11addProvideruRxS_8ProviderrFzMxT_"></a>
+                    <a name="//apple_ref/swift/Method/addProvider(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config11addProvideruRxS_8ProviderrFzMxT_">addProvider(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a provider type, initializing it first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addProvider</span><span class="o">&lt;</span><span class="kt">P</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Provider.html">Provider</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">provider</span><span class="p">:</span> <span class="kt">P</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRx8Sessions16SessionsProtocolrFT8sessionsFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(sessions:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRx8Sessions16SessionsProtocolrFT8sessionsFzS1_x4nameSS_T_">addConfigurable(sessions:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Sessions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">Sessions</span><span class="p">:</span> <span class="kt">SessionsProtocol</span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">sessions</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt">Sessions</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15resolveSessionsFzT_P8Sessions16SessionsProtocol_"></a>
+                    <a name="//apple_ref/swift/Method/resolveSessions()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15resolveSessionsFzT_P8Sessions16SessionsProtocol_">resolveSessions()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured Sessions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveSessions</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">SessionsProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRxS_12ViewRendererrFT4viewFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(view:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRxS_12ViewRendererrFT4viewFzS1_x4nameSS_T_">addConfigurable(view:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable View.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt"><a href="../Classes/View.html">View</a></span><span class="p">:</span> <span class="kt"><a href="../Protocols/ViewRenderer.html">ViewRenderer</a></span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/View.html">View</a></span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config11resolveViewFzT_PS_12ViewRenderer_"></a>
+                    <a name="//apple_ref/swift/Method/resolveView()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config11resolveViewFzT_PS_12ViewRenderer_">resolveView()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured View.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveView</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ViewRenderer.html">ViewRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRxS_14ClientProtocolrFT6clientMx4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(client:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRxS_14ClientProtocolrFT6clientMx4nameSS_T_">addConfigurable(client:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Client class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">Client</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ClientProtocol.html">ClientProtocol</a></span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">client</span><span class="p">:</span> <span class="kt">Client</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRxS_21ClientFactoryProtocolrFT6clientFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(client:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRxS_21ClientFactoryProtocolrFT6clientFzS1_x4nameSS_T_">addConfigurable(client:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Client Factory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt"><a href="../Classes/ClientFactory.html">ClientFactory</a></span><span class="p">:</span> <span class="kt"><a href="../Protocols/ClientFactoryProtocol.html">ClientFactoryProtocol</a></span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">client</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/ClientFactory.html">ClientFactory</a></span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config13resolveClientFzT_PS_21ClientFactoryProtocol_"></a>
+                    <a name="//apple_ref/swift/Method/resolveClient()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config13resolveClientFzT_PS_21ClientFactoryProtocol_">resolveClient()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured ClientFactory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveClient</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ClientFactoryProtocol.html">ClientFactoryProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRxS_14ServerProtocolrFT6serverMx4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(server:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRxS_14ServerProtocolrFT6serverMx4nameSS_T_">addConfigurable(server:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Server class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt">Server</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ServerProtocol.html">ServerProtocol</a></span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">server</span><span class="p">:</span> <span class="kt">Server</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config15addConfigurableuRxS_21ServerFactoryProtocolrFT6serverFzS1_x4nameSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/addConfigurable(server:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config15addConfigurableuRxS_21ServerFactoryProtocolrFT6serverFzS1_x4nameSS_T_">addConfigurable(server:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a configurable Server Factory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addConfigurable</span><span class="o">&lt;</span>
+        <span class="kt"><a href="../Classes/ServerFactory.html">ServerFactory</a></span><span class="p">:</span> <span class="kt"><a href="../Protocols/ServerFactoryProtocol.html">ServerFactoryProtocol</a></span>
+    <span class="o">&gt;</span><span class="p">(</span><span class="nv">server</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Config</span><span class="o">.</span><span class="kt">Lazy</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/ServerFactory.html">ServerFactory</a></span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5VaporC7Configs6Config13resolveServerFzT_PS_21ServerFactoryProtocol_"></a>
+                    <a name="//apple_ref/swift/Method/resolveServer()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5VaporC7Configs6Config13resolveServerFzT_PS_21ServerFactoryProtocol_">resolveServer()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resolves the configured ServerFactory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveServer</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ServerFactoryProtocol.html">ServerFactoryProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

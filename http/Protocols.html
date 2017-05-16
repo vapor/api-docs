@@ -13,7 +13,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">HTTP Docs</a> (9% documented)</p>
+        <p><a href="index.html">HTTP Docs</a> (11% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -30,34 +30,48 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/ChunkStream.html">ChunkStream</a>
+                <a href="Classes/AsyncServer.html">AsyncServer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Client.html">Client</a>
+                <a href="Classes/BasicClient.html">BasicClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BasicServer.html">BasicServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ChunkStream.html">ChunkStream</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/FoundationClient.html">FoundationClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Message.html">Message</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/Parser.html">Parser</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Request/Handler.html">– Handler</a>
+                <a href="Classes/RequestParser.html">RequestParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RequestSerializer.html">RequestSerializer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Response.html">Response</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Serializer.html">Serializer</a>
+                <a href="Classes/ResponseParser.html">ResponseParser</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Server.html">Server</a>
+                <a href="Classes/ResponseSerializer.html">ResponseSerializer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v4HTTP20defaultServerTimeoutSd">defaultServerTimeout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v4HTTP9userAgentSS">userAgent</a>
               </li>
             </ul>
           </li>
@@ -71,19 +85,13 @@
                 <a href="Enums/ClientError.html">ClientError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ClientProtocolError.html">ClientProtocolError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/MessageError.html">MessageError</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/Method.html">Method</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/NotSupported.html">NotSupported</a>
+                <a href="Enums/ParserError.html">ParserError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ParserError.html">ParserError</a>
+                <a href="Enums/SerializerError.html">SerializerError</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ServerError.html">ServerError</a>
@@ -135,9 +143,6 @@
                 <a href="Functions.html#/s:F4HTTPoi2eeFTVS_7VersionS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F4HTTPoi2eeFTVS_9HeaderKeyS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Functions.html#/s:F4HTTPoi1gFTVS_7VersionS0__Sb">&gt;(_:_:)</a>
               </li>
               <li class="nav-group-task">
@@ -149,22 +154,25 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Protocols/AsyncResponder.html">AsyncResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AsyncResponseWriter.html">AsyncResponseWriter</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/BodyRepresentable.html">BodyRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/ClientProtocol.html">ClientProtocol</a>
+                <a href="Protocols.html#/s:P4HTTP6Client">Client</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols.html#/s:P4HTTP13KeyAccessible">KeyAccessible</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/Middleware.html">Middleware</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ParserProtocol.html">ParserProtocol</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/Program.html">Program</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/Responder.html">Responder</a>
@@ -173,10 +181,7 @@
                 <a href="Protocols/ResponseRepresentable.html">ResponseRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/SerializerProtocol.html">SerializerProtocol</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ServerProtocol.html">ServerProtocol</a>
+                <a href="Protocols/Server.html">Server</a>
               </li>
             </ul>
           </li>
@@ -184,10 +189,19 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/HeaderKey.html">HeaderKey</a>
+                <a href="Structs/BasicAsyncResponder.html">BasicAsyncResponder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/PeerAddress.html">PeerAddress</a>
+                <a href="Structs/BasicAsyncResponseWriter.html">BasicAsyncResponseWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BasicResponder.html">BasicResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Forwarded.html">Forwarded</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HeaderKey.html">HeaderKey</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/Version.html">Version</a>
@@ -209,9 +223,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P4HTTP14ClientProtocol"></a>
-                    <a name="//apple_ref/swift/Protocol/ClientProtocol" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4HTTP14ClientProtocol">ClientProtocol</a>
+                    <a name="/s:P4HTTP17BodyRepresentable"></a>
+                    <a name="//apple_ref/swift/Protocol/BodyRepresentable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4HTTP17BodyRepresentable">BodyRepresentable</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -221,7 +235,84 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="Protocols/ClientProtocol.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/BodyRepresentable.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P4HTTP6Client"></a>
+                    <a name="//apple_ref/swift/Protocol/Client" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4HTTP6Client">Client</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/TODO:%20=%3E%20Core"></a>
+                <a name="//apple_ref/swift/Section/TODO: =&gt; Core" class="dashAnchor"></a>
+                <a href="#/TODO:%20=%3E%20Core">
+                  <h3 class="section-name">TODO: =&gt; Core</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P4HTTP13KeyAccessible"></a>
+                    <a name="//apple_ref/swift/Protocol/KeyAccessible" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4HTTP13KeyAccessible">KeyAccessible</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P4HTTP7Message"></a>
+                    <a name="//apple_ref/swift/Protocol/Message" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4HTTP7Message">Message</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/Message.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
@@ -257,9 +348,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P4HTTP14ParserProtocol"></a>
-                    <a name="//apple_ref/swift/Protocol/ParserProtocol" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4HTTP14ParserProtocol">ParserProtocol</a>
+                    <a name="/s:P4HTTP14AsyncResponder"></a>
+                    <a name="//apple_ref/swift/Protocol/AsyncResponder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4HTTP14AsyncResponder">AsyncResponder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -269,21 +360,17 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="Protocols/ParserProtocol.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/AsyncResponder.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P4HTTP7Program"></a>
-                    <a name="//apple_ref/swift/Protocol/Program" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4HTTP7Program">Program</a>
+                    <a name="/s:P4HTTP19AsyncResponseWriter"></a>
+                    <a name="//apple_ref/swift/Protocol/AsyncResponseWriter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4HTTP19AsyncResponseWriter">AsyncResponseWriter</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -293,109 +380,7 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="Protocols/Program.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:P4HTTP18SerializerProtocol"></a>
-                    <a name="//apple_ref/swift/Protocol/SerializerProtocol" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4HTTP18SerializerProtocol">SerializerProtocol</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Protocols/SerializerProtocol.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:P4HTTP14ServerProtocol"></a>
-                    <a name="//apple_ref/swift/Protocol/ServerProtocol" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4HTTP14ServerProtocol">ServerProtocol</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Protocols/ServerProtocol.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:P4HTTP17BodyRepresentable"></a>
-                    <a name="//apple_ref/swift/Protocol/BodyRepresentable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4HTTP17BodyRepresentable">BodyRepresentable</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Protocols/BodyRepresentable.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/TODO:%20=%3E%20Core"></a>
-                <a name="//apple_ref/swift/Section/TODO: =&gt; Core" class="dashAnchor"></a>
-                <a href="#/TODO:%20=%3E%20Core">
-                  <h3 class="section-name">TODO: =&gt; Core</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:P4HTTP13KeyAccessible"></a>
-                    <a name="//apple_ref/swift/Protocol/KeyAccessible" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4HTTP13KeyAccessible">KeyAccessible</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
+                        <a href="Protocols/AsyncResponseWriter.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
@@ -463,11 +448,35 @@ can be returned to generic Vapor closures or route handlers.</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P4HTTP6Server"></a>
+                    <a name="//apple_ref/swift/Protocol/Server" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4HTTP6Server">Server</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/Server.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

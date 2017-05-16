@@ -27,63 +27,79 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			height: 36px;
-			width: 100%;
+			bottom: 0;
+			height: 100%;
+			width: 150px;
+			padding-left: 20px;
+			overflow-y: scroll;
+		}
+		.nav h2 {
+			font-size: 12px;
+			font-weight: bold;
+			color: white;
 		}
 		.nav a {
 			font-size: 12px;
 			color: white;
+			display: block;
 			width: 10%;
-			display: inline-block;
 			text-align: center;
 			text-decoration: none;
-			line-height: 36px;
+			margin-bottom: 8px;
+			color: #ddd;
 		}
-		.content {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			padding-top: 36px;
+		.nav a.active {
+			color: white;
+			font-weight: bold;
 		}
 		iframe {
 			border: 0;
 			width: 100%;
+			padding-left: 150px;
 			height: 100%;
-		}
-		.wrapper {
-			width: 980px;
-			margin: 0 auto;
 		}
 	</style>
 </head>
 <body>
-
-<div class="content">
 	<div class="nav">
-		<div class="wrapper">
-			<a href="#">Auth</a>
-			<a href="#">Cache</a>
-			<a href="#">Cookies</a>
-			<a href="#">HTTP</a>
-			<a href="#">Sessions</a>
-			<a href="#">SMTP</a>
-			<a href="#">Transport</a>
-			<a href="#">Vapor</a>
-			<a href="#">WebSockets</a>
-		</div>
+		<h2>Modules</h2>
+		<a href="#">BCrypt</a>
+		<a href="#">Bits</a>
+		<a href="#">Branches</a>
+		<a href="#">Cache</a>
+		<a href="#">Configs</a>
+		<a href="#">Core</a>
+		<a href="#">Crypto</a>
+		<a href="#">Debugging</a>
+		<a href="#">Fluent</a>
+		<a href="#">FormData</a>
+		<a href="#">HTTP</a>
+		<a href="#">JSON</a>
+		<a href="#">Multipart</a>
+		<a href="#">Node</a>
+		<a href="#">PathIndexable</a>
+		<a href="#">Routing</a>
+		<a href="#">Sessions</a>
+		<a href="#">SMTP</a>
+		<a href="#">Sockets</a>
+		<a href="#">Testing</a>
+		<a href="#">Transport</a>
+		<a href="#">URI</a>
+		<a class="active" href="#">Vapor</a>
+		<a href="#">WebSockets</a>
 	</div>
-	<iframe src="/http/"></iframe>
-</div>
+	<iframe src="/vapor/"></iframe>
 
-<script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
-<script>
-	$('.nav a').on('click', function() {
-		var link = $(this);
-		$('iframe').attr('src', '/' + link.text().toLowerCase() + '/');
-	});
-</script>
+	<script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script>
+		var links = $('.nav a');
+		links.on('click', function() {
+			links.removeClass('active');
+			var link = $(this);
+			link.addClass('active');
+			$('iframe').attr('src', '/' + link.text().toLowerCase() + '/');
+		});
+	</script>
 
 </body>
 </html>

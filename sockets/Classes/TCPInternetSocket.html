@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TCPInternetSocket Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/TCPInternetSocket" class="dashAnchor"></a>
+    <a title="TCPInternetSocket Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Sockets Docs</a> (8% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Sockets Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TCPInternetSocket Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ResolvedInternetAddress.html">ResolvedInternetAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPEstablishedSocket.html">TCPEstablishedSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPInternetSocket.html">TCPInternetSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UDPInternetSocket.html">UDPInternetSocket</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v7Sockets14BufferCapacitySi">BufferCapacity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AddressFamily.html">AddressFamily</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorReason.html">ErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Protocol.html">Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ProtocolFamily.html">ProtocolFamily</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SocketType.html">SocketType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/timeval.html">timeval</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7Socketsoi2eeFTCS_23ResolvedInternetAddressS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7Socketsoi2eeFTVSC7timevalS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7Sockets6selectFzT5readsGSaVs5Int32_6writesGSaS0__6errorsGSaS0__7timeoutGSqVSC7timeval__T5readsGSaS0__6writesGSaS0__6errorsGSaS0___">select(reads:writes:errors:timeout:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DescriptorRepresentable.html">DescriptorRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InternetSocket.html">InternetSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Pipeable.html">Pipeable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RawSocket.html">RawSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Socket.html">Socket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TCPReadableSocket.html">TCPReadableSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P7Sockets9TCPSocket">TCPSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TCPWriteableSocket.html">TCPWriteableSocket</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Config.html">Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Descriptor.html">Descriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/InternetAddress.html">InternetAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SocketsError.html">SocketsError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TCPInternetSocket</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7Sockets17TCPInternetSocket6schemeSS"></a>
+                    <a name="//apple_ref/swift/Property/scheme" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7Sockets17TCPInternetSocket6schemeSS">scheme</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7Sockets17TCPInternetSocket8hostnameSS"></a>
+                    <a name="//apple_ref/swift/Property/hostname" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7Sockets17TCPInternetSocket8hostnameSS">hostname</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7Sockets17TCPInternetSocket4portVs6UInt16"></a>
+                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7Sockets17TCPInternetSocket4portVs6UInt16">port</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7Sockets17TCPInternetSocket7addressCS_23ResolvedInternetAddress"></a>
+                    <a name="//apple_ref/swift/Property/address" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7Sockets17TCPInternetSocket7addressCS_23ResolvedInternetAddress">address</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7Sockets17TCPInternetSocket10descriptorVS_10Descriptor"></a>
+                    <a name="//apple_ref/swift/Property/descriptor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7Sockets17TCPInternetSocket10descriptorVS_10Descriptor">descriptor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7Sockets17TCPInternetSocket6configVS_6Config"></a>
+                    <a name="//apple_ref/swift/Property/config" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7Sockets17TCPInternetSocket6configVS_6Config">config</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7Sockets17TCPInternetSocket8isClosedSb"></a>
+                    <a name="//apple_ref/swift/Property/isClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7Sockets17TCPInternetSocket8isClosedSb">isClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Init"></a>
+                <a name="//apple_ref/swift/Section/Init" class="dashAnchor"></a>
+                <a href="#/Init">
+                  <h3 class="section-name">Init</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7Sockets17TCPInternetSocketcFzT6schemeSS8hostnameSS4portVs6UInt16_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(scheme:hostname:port:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7Sockets17TCPInternetSocketcFzT6schemeSS8hostnameSS4portVs6UInt16_S0_">init(scheme:hostname:port:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7Sockets17TCPInternetSocketcFzTVS_15InternetAddress6schemeSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(_:scheme:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7Sockets17TCPInternetSocketcFzTVS_15InternetAddress6schemeSS_S0_">init(_:scheme:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7Sockets17TCPInternetSocketcFzTVS_10DescriptorVS_6ConfigCS_23ResolvedInternetAddress6schemeSS8hostnameSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(_:_:_:scheme:hostname:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7Sockets17TCPInternetSocketcFzTVS_10DescriptorVS_6ConfigCS_23ResolvedInternetAddress6schemeSS8hostnameSS_S0_">init(_:_:_:scheme:hostname:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Client"></a>
+                <a name="//apple_ref/swift/Section/Client" class="dashAnchor"></a>
+                <a href="#/Client">
+                  <h3 class="section-name">Client</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7Sockets17TCPInternetSocket7connectFzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/connect()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7Sockets17TCPInternetSocket7connectFzT_T_">connect()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Server"></a>
+                <a name="//apple_ref/swift/Section/Server" class="dashAnchor"></a>
+                <a href="#/Server">
+                  <h3 class="section-name">Server</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7Sockets17TCPInternetSocket6listenFzT3maxSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/listen(max:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7Sockets17TCPInternetSocket6listenFzT3maxSi_T_">listen(max:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7Sockets17TCPInternetSocket6acceptFzT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/accept()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7Sockets17TCPInternetSocket6acceptFzT_S0_">accept()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Close"></a>
+                <a name="//apple_ref/swift/Section/Close" class="dashAnchor"></a>
+                <a href="#/Close">
+                  <h3 class="section-name">Close</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7Sockets17TCPInternetSocket5closeFzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/close()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7Sockets17TCPInternetSocket5closeFzT_T_">close()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7Sockets17TCPInternetSocket14makeDescriptorFT_VS_10Descriptor"></a>
+                    <a name="//apple_ref/swift/Method/makeDescriptor()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7Sockets17TCPInternetSocket14makeDescriptorFT_VS_10Descriptor">makeDescriptor()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-05-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
