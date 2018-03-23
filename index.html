@@ -7,7 +7,6 @@
 	 	* {
 	 		box-sizing: border-box;
 	 	}
-
 		html {
 			height: 100%;
 			margin: 0;
@@ -31,7 +30,7 @@
 			height: 100%;
 			width: 150px;
 			padding-left: 20px;
-			overflow-y: scroll;
+			overflow-y: none;
 		}
 		.nav h2 {
 			font-size: 12px;
@@ -63,41 +62,21 @@
 <body>
 	<div class="nav">
 		<h2>Modules</h2>
-		<a href="#">BCrypt</a>
-		<a href="#">Bits</a>
-		<a href="#">Branches</a>
-		<a href="#">Cache</a>
-		<a href="#">Configs</a>
-		<a href="#">Core</a>
-		<a href="#">Crypto</a>
-		<a href="#">Debugging</a>
-		<a href="#">Fluent</a>
-		<a href="#">FormData</a>
-		<a href="#">HTTP</a>
-		<a href="#">JSON</a>
-		<a href="#">Multipart</a>
-		<a href="#">Node</a>
-		<a href="#">PathIndexable</a>
-		<a href="#">Routing</a>
-		<a href="#">Sessions</a>
-		<a href="#">SMTP</a>
-		<a href="#">Sockets</a>
-		<a href="#">Testing</a>
-		<a href="#">Transport</a>
-		<a href="#">URI</a>
-		<a class="active" href="#">Vapor</a>
-		<a href="#">WebSockets</a>
+		<a href="crypto/3.0.0-rc.2">Crypto</a>
+		<a class="active" href="vapor/3.0.0-rc.2">Vapor</a>
+
 	</div>
-	<iframe src="/vapor/"></iframe>
+	<iframe src="/crypto/3.0.0-rc.2/index.html"></iframe>
 
 	<script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
 	<script>
 		var links = $('.nav a');
-		links.on('click', function() {
+		links.on('click', function(e) {
+			e.preventDefault();
 			links.removeClass('active');
 			var link = $(this);
 			link.addClass('active');
-			$('iframe').attr('src', '/' + link.text().toLowerCase() + '/');
+			$('iframe').attr('src', '/' + link.attr('href') + '/index.html');
 		});
 	</script>
 
