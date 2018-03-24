@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FormURLDecoder Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/FormURLDecoder" class="dashAnchor"></a>
+    <a title="FormURLDecoder Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">FormURLEncoded Docs</a> (93% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/engine"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fengine%2F3%2E0%2E0%2Drc%2E2%2E1%2FFormURLEncoded%2Fdocsets%2FFormURLEncoded%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">FormURLEncoded Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        FormURLDecoder Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FormURLDecoder.html">FormURLDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FormURLEncoder.html">FormURLEncoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DecodingError.html">DecodingError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/FormURLError.html">FormURLError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FormURLDecoder</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FormURLDecoder</span><span class="p">:</span> <span class="kt">DataDecoder</span><span class="p">,</span> <span class="kt">HTTPBodyDecoder</span></code></pre>
+
+                </div>
+              </div>
+            <p>Decodes instances of <code>Decodable</code> types from <code>Data</code>.</p>
+<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">/// Data</span>
+<span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">FormURLDecoder</span><span class="p">()</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">User</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="c1">/// User</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14FormURLEncoded0A10URLDecoderC15omitEmptyValuesSbv"></a>
+                    <a name="//apple_ref/swift/Property/omitEmptyValues" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14FormURLEncoded0A10URLDecoderC15omitEmptyValuesSbv">omitEmptyValues</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, empty values will be omitted. Empty values are URL-Encoded keys with no value following the <code>=</code> sign.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">omitEmptyValues</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/FormURLEncoded/FormURLDecoder.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14FormURLEncoded0A10URLDecoderC9omitFlagsSbv"></a>
+                    <a name="//apple_ref/swift/Property/omitFlags" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14FormURLEncoded0A10URLDecoderC9omitFlagsSbv">omitFlags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, flags will be omitted. Flags are URL-encoded keys with no following <code>=</code> sign.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">omitFlags</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/FormURLEncoded/FormURLDecoder.swift#L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14FormURLEncoded0A10URLDecoderCACSb15omitEmptyValues_Sb0D5Flagstcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(omitEmptyValues:omitFlags:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14FormURLEncoded0A10URLDecoderCACSb15omitEmptyValues_Sb0D5Flagstcfc">init(omitEmptyValues:omitFlags:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new <code>FormURLDecoder</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">omitEmptyValues</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">omitFlags</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>omitEmptyValues</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code>, empty values will be omitted.
+               Empty values are URL-Encoded keys with no value following the <code>=</code> sign.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>omitFlags</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code>, flags will be omitted.
+         Flags are URL-encoded keys with no following <code>=</code> sign.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/FormURLEncoded/FormURLDecoder.swift#L27-L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14FormURLEncoded0A10URLDecoderC6decodeXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14FormURLEncoded0A10URLDecoderC6decodeXeXeF">decode(_:from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes an instance of the supplied <code>Decodable</code> type from <code>Data</code>.</p>
+<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">/// Data</span>
+<span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">FormURLDecoder</span><span class="p">()</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">User</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="c1">/// User</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Any error that may occur while attempting to decode the specified type.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">decode</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">decodable</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decodable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Generic <code>Decodable</code> type (<code>D</code>) to decode.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Data</code> to decode a <code>D</code> from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of the <code>Decodable</code> type (<code>D</code>).</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/FormURLEncoded/FormURLDecoder.swift#L44-L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14FormURLEncoded0A10URLDecoderC6decodeXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:from:maxSize:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14FormURLEncoded0A10URLDecoderC6decodeXeXeF">decode(_:from:maxSize:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes the supplied <code>Decodable</code> type from an <code>HTTPBody</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">BodyDecoder</span> <span class="o">=</span> <span class="kt">FormURLDecoder</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="k">try</span> <span class="n">decoder</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">HTTPBody</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"hello"</span><span class="p">),</span> <span class="nv">on</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="c1">/// "hello" from the HTTP body</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Any errors that may have occured while decoding the <code>HTTPBody</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">decode</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">from</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">HTTPBody</span><span class="p">,</span> <span class="nv">maxSize</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">D</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decodable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Decodable</code> type to decode from the <code>HTTPBody</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>HTTPBody</code> to decode the <code>Decodable</code> type from. This <code>HTTPBody</code> may be static or streaming.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maxSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum size in bytes for streaming bodies.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>on</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Worker</code> to perform asynchronous tasks on.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>Future</code> containing the decoded type.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/FormURLEncoded/FormURLDecoder.swift#L63-L67">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

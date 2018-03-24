@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTTPBodyEncoder Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/HTTPBodyEncoder" class="dashAnchor"></a>
+    <a title="HTTPBodyEncoder Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HTTP Docs</a> (92% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/engine"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fengine%2F3%2E0%2E0%2Drc%2E2%2E1%2FHTTP%2Fdocsets%2FHTTP%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HTTP Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HTTPBodyEncoder Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPChunkedStream.html">HTTPChunkedStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPServer.html">HTTPServer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HTTPSameSitePolicy.html">HTTPSameSitePolicy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/HTTPHeaders.html">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/JSONDecoder.html">JSONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/JSONEncoder.html">JSONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPBodyDecoder.html">HTTPBodyDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPBodyEncoder.html">HTTPBodyEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPBodyRepresentable.html">HTTPBodyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPCookieValueInitializable.html">HTTPCookieValueInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPCookieValueRepresentable.html">HTTPCookieValueRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPMessage.html">HTTPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPResponder.html">HTTPResponder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPBody.html">HTTPBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPCookie.html">HTTPCookie</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPCookieValue.html">HTTPCookieValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPCookies.html">HTTPCookies</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPHeaderName.html">HTTPHeaderName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:4HTTP13HTTPOnUpgradeV">HTTPOnUpgrade</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:4HTTP17HTTPRunningServerV">HTTPRunningServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MediaType.html">MediaType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HTTPBodyEncoder</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPBodyEncoder</span></code></pre>
+
+                </div>
+              </div>
+            <p>Capable of encoding an <code>Encodable</code> type to an <code><a href="../Structs/HTTPBody.html">HTTPBody</a></code>.</p>
+
+<p><code>HTTPBodyEncoder</code>s may encode data into an <code><a href="../Structs/HTTPBody.html">HTTPBody</a></code> using any of the available
+cases (streaming, static, or other).</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">jsonEncoder</span><span class="p">:</span> <span class="kt">BodyEncoder</span> <span class="o">=</span> <span class="kt">JSONEncoder</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">body</span> <span class="o">=</span> <span class="k">try</span> <span class="n">jsonEncoder</span><span class="o">.</span><span class="nf">encodeBody</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"hello"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">body</span><span class="p">)</span> <span class="c1">/// HTTPBody containing the string "hello"</span>
+</code></pre>
+
+<p>The <code>HTTPBodyEncoder</code> protocol is what powers the <code>ContentContainer</code>s on <code>Request</code> and <code>Response</code>.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="n">res</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="s">"hello"</span><span class="p">,</span> <span class="nv">as</span><span class="p">:</span> <span class="o">.</span><span class="n">plaintext</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">mediaType</span><span class="p">)</span> <span class="c1">// .plaintext</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">body</span><span class="p">)</span> <span class="c1">// "hello"</span>
+</code></pre>
+
+<p><code>HTTPBodyEncoder</code>s can be registered with <code>ContentConfig</code> during the application config phase.
+The encoders are associated with a <code><a href="../Structs/MediaType.html">MediaType</a></code> when registered. When encoding content, the <code>Content</code>&rsquo;s
+default <code><a href="../Structs/MediaType.html">MediaType</a></code> is used to lookup an appropriate coder. You can also choose to override the
+<code><a href="../Structs/MediaType.html">MediaType</a></code> when encoding.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">contentConfig</span> <span class="o">=</span> <span class="kt">ContentConfig</span><span class="o">.</span><span class="nf">default</span><span class="p">()</span>
+<span class="n">contentConfig</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="nv">encoder</span><span class="p">:</span> <span class="kt">JSONEncoder</span><span class="p">(),</span> <span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="n">contentConfig</span><span class="p">)</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP15HTTPBodyEncoderP10encodeBodyAA0B0Vqd__4from_tKs9EncodableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/encodeBody(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP15HTTPBodyEncoderP10encodeBodyAA0B0Vqd__4from_tKs9EncodableRd__lF">encodeBody(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes the supplied <code>Encodable</code> object to an <code><a href="../Structs/HTTPBody.html">HTTPBody</a></code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">jsonEncoder</span><span class="p">:</span> <span class="kt">HTTPBodyEncoder</span> <span class="o">=</span> <span class="kt">JSONEncoder</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">body</span> <span class="o">=</span> <span class="k">try</span> <span class="n">jsonEncoder</span><span class="o">.</span><span class="nf">encodeBody</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"hello"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">body</span><span class="p">)</span> <span class="c1">/// HTTPBody containing the string "hello"</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Any errors that may occur while encoding the object.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">encodeBody</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">from</span> <span class="nv">encodable</span><span class="p">:</span> <span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/HTTPBody.html">HTTPBody</a></span> <span class="k">where</span> <span class="kt">E</span><span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Encodable</code> object that will be encoded to the <code><a href="../Structs/HTTPBody.html">HTTPBody</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Encoded HTTP body.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPBodyDecoder.swift#L78">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
