@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SchemaSupporting Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/SchemaSupporting" class="dashAnchor"></a>
+    <a title="SchemaSupporting Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Fluent Docs</a> (91% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/fluent"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2F3%2E0%2E0%2Drc%2E2%2E3%2FFluent%2Fdocsets%2FFluent%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Fluent Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SchemaSupporting Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FluentCache.html">FluentCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FluentCacheEntry.html">FluentCacheEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FluentProvider.html">FluentProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryBuilder.html">QueryBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RevertCommand.html">RevertCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SchemaCreator.html">SchemaCreator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SchemaUpdater.html">SchemaUpdater</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6Fluent18pivotNameConnectorSSv">pivotNameConnector</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ModelEvent.html">ModelEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QueryAction.html">QueryAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QueryAggregateMethod.html">QueryAggregateMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QueryFilterItem.html">QueryFilterItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QueryGroupRelation.html">QueryGroupRelation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QueryJoinMethod.html">QueryJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QuerySortDirection.html">QuerySortDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReferentialAction.html">ReferentialAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SchemaAction.html">SchemaAction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CommandConfig.html">CommandConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/DatabaseConnection.html">DatabaseConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Future.html">Future</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/KeyPath.html">KeyPath</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2neoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2neoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2ntoiAA11ModelFilterVyxGs7KeyPathCyxq_G_Sayq_GtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">!~(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent1loiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0B0RzAA15QuerySupporting8DatabaseRpzr0_lF">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent1loiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0B0RzAA15QuerySupporting8DatabaseRpzr0_lF">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2leoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2leoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2eeoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2eeoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent1goiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0B0RzAA15QuerySupporting8DatabaseRpzr0_lF">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent1goiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0B0RzAA15QuerySupporting8DatabaseRpzr0_lF">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2geoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2geoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6Fluent2ttoiAA11ModelFilterVyxGs7KeyPathCyxq_G_Sayq_GtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">~~(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AnyModel.html">AnyModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AnySoftDeletable.html">AnySoftDeletable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AnyTimestampable.html">AnyTimestampable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FluentData.html">FluentData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Fluent2IDP">ID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Fluent15IndexSupportingP">IndexSupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Fluent14JoinSupportingP">JoinSupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Migration.html">Migration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ModifiablePivot.html">ModifiablePivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Pivot.html">Pivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/QuerySupporting.html">QuerySupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReferenceSupporting.html">ReferenceSupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SchemaBuilder.html">SchemaBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SchemaSupporting.html">SchemaSupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SoftDeletable.html">SoftDeletable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Timestampable.html">Timestampable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TransactionSupporting.html">TransactionSupporting</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Children.html">Children</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseQuery.html">DatabaseQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseSchema.html">DatabaseSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseTransaction.html">DatabaseTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FluentError.html">FluentError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MigrationConfig.html">MigrationConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ModelFilter.html">ModelFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Parent.html">Parent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryAggregate.html">QueryAggregate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryField.html">QueryField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryFieldDecodingContainer.html">QueryFieldDecodingContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryFieldEncodingContainer.html">QueryFieldEncodingContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryFilter.html">QueryFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryFilterType.html">QueryFilterType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryFilterValue.html">QueryFilterValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryGroupBy.html">QueryGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryJoin.html">QueryJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryRange.html">QueryRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QuerySort.html">QuerySort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ReferentialActions.html">ReferentialActions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SchemaField.html">SchemaField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SchemaIndex.html">SchemaIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SchemaReference.html">SchemaReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Siblings.html">Siblings</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SchemaSupporting</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SchemaSupporting</span><span class="p">:</span> <span class="kt">Database</span></code></pre>
+
+                </div>
+              </div>
+            <p>Capable of executing a database schema query.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent16SchemaSupportingP9FieldType"></a>
+                    <a name="//apple_ref/swift/Alias/FieldType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent16SchemaSupportingP9FieldType">FieldType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See SchemaFieldType</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">FieldType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Schema/SchemaSupporting.swift#L9">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent16SchemaSupportingP9fieldType05FieldE0QzypXp3for_tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/fieldType(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent16SchemaSupportingP9fieldType05FieldE0QzypXp3for_tKFZ">fieldType(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default schema field types Fluent must know
+how to make for migrations and tests.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">fieldType</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/SchemaSupporting.html#/s:6Fluent16SchemaSupportingP9FieldType">FieldType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Schema/SchemaSupporting.swift#L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent16SchemaSupportingP7executeXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/execute(schema:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent16SchemaSupportingP7executeXeXeFZ">execute(schema:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Executes the supplied schema on the database connection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="nv">schema</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseSchema.html">DatabaseSchema</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Schema/SchemaSupporting.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent16SchemaSupportingPAAE13CreateClosurea"></a>
+                    <a name="//apple_ref/swift/Alias/CreateClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent16SchemaSupportingPAAE13CreateClosurea">CreateClosure</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closure for accepting a schema creator.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CreateClosure</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/SchemaCreator.html">SchemaCreator</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Schema/SchemaSupporting.swift#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent16SchemaSupportingPAAE6createXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/create(_:on:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent16SchemaSupportingPAAE6createXeXeFZ">create(_:on:closure:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience for creating a closure that accepts a schema creator
+for the supplied model type on this schema executor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">create</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Protocols/SchemaSupporting.html#/s:6Fluent16SchemaSupportingPAAE13CreateClosurea">CreateClosure</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">.</span><span class="kt">Database</span> <span class="o">==</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Schema/SchemaSupporting.swift#L28-L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent16SchemaSupportingPAAE13UpdateClosurea"></a>
+                    <a name="//apple_ref/swift/Alias/UpdateClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent16SchemaSupportingPAAE13UpdateClosurea">UpdateClosure</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closure for accepting a schema updater.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">UpdateClosure</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/SchemaUpdater.html">SchemaUpdater</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Schema/SchemaSupporting.swift#L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent16SchemaSupportingPAAE6updateXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/update(_:on:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent16SchemaSupportingPAAE6updateXeXeFZ">update(_:on:closure:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience for creating a closure that accepts a schema updater
+for the supplied model type on this schema executor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">update</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Protocols/SchemaSupporting.html#/s:6Fluent16SchemaSupportingPAAE13UpdateClosurea">UpdateClosure</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">.</span><span class="kt">Database</span> <span class="o">==</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Schema/SchemaSupporting.swift#L44-L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent16SchemaSupportingPAAE6deleteXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/delete(_:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent16SchemaSupportingPAAE6deleteXeXeFZ">delete(_:on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience for deleting the schema for the supplied model type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">delete</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">:</span> <span class="kt">Fluent</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">.</span><span class="kt">Database</span> <span class="o">==</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Schema/SchemaSupporting.swift#L55-L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
