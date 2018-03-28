@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ReflectionCodable Protocol Reference</title>
+    <title>ReflectionDecodable Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/ReflectionCodable" class="dashAnchor"></a>
-    <a title="ReflectionCodable Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/ReflectionDecodable" class="dashAnchor"></a>
+    <a title="ReflectionDecodable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Core Docs</a> (91% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Core Reference</a>
         <img id="carat" src="../img/carat.png" />
-        ReflectionCodable Protocol Reference
+        ReflectionDecodable Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -86,7 +86,7 @@
                 <a href="../Protocols/AnyOptionalType.html">AnyOptionalType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/AnyReflectionCodable.html">AnyReflectionCodable</a>
+                <a href="../Protocols/AnyReflectionDecodable.html">AnyReflectionDecodable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/BasicKeyRepresentable.html">BasicKeyRepresentable</a>
@@ -113,7 +113,7 @@
                 <a href="../Protocols/Reflectable.html">Reflectable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ReflectionCodable.html">ReflectionCodable</a>
+                <a href="../Protocols/ReflectionDecodable.html">ReflectionDecodable</a>
               </li>
             </ul>
           </li>
@@ -139,41 +139,41 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ReflectionCodable</h1>
+            <h1>ReflectionDecodable</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ReflectionCodable</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AnyReflectionCodable.html">AnyReflectionCodable</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ReflectionDecodable</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AnyReflectionDecodable.html">AnyReflectionDecodable</a></span></code></pre>
 
                 </div>
               </div>
             <p>Types conforming to this protocol can be created dynamically for use in reflecting the structure of a <code>Decodable</code> type.</p>
 
-<p><code>ReflectionCodable</code> requires that a type declare two <em>distinct</em> representations of itself. It also requires that the type
+<p><code>ReflectionDecodable</code> requires that a type declare two <em>distinct</em> representations of itself. It also requires that the type
 declare a method for comparing those two representations. If the conforming type is already equatable, this method will
 not be required.</p>
 
-<p>A <code>Bool</code> is a simple type that is capable of conforming to <code>ReflectionCodable</code>:</p>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Bool</span><span class="p">:</span> <span class="kt">ReflectionCodable</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectCodable</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span> <span class="nf">return</span> <span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="p">}</span>
+<p>A <code>Bool</code> is a simple type that is capable of conforming to <code>ReflectionDecodable</code>:</p>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Bool</span><span class="p">:</span> <span class="kt">ReflectionDecodable</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectDecoded</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span> <span class="nf">return</span> <span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 
-<p>For some types, like an <code>enum</code> with only one case, it is impossible to conform to <code>ReflectionCodable</code>. In these situations
+<p>For some types, like an <code>enum</code> with only one case, it is impossible to conform to <code>ReflectionDecodable</code>. In these situations
 you must expand the type to have at least two distinct cases, or use a different method of reflection.</p>
 <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Pet</span> <span class="p">{</span> <span class="k">case</span> <span class="n">cat</span> <span class="p">}</span> <span class="c1">// unable to conform</span>
 </code></pre>
 
 <p>Enums with two or more cases can conform.</p>
 <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Pet</span> <span class="p">{</span> <span class="k">case</span> <span class="n">cat</span><span class="p">,</span> <span class="n">dog</span> <span class="p">}</span>
-<span class="kd">extension</span> <span class="kt">Pet</span><span class="p">:</span> <span class="kt">ReflectionCodable</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectCodable</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Pet</span><span class="p">,</span> <span class="kt">Pet</span><span class="p">)</span> <span class="p">{</span> <span class="nf">return</span> <span class="p">(</span><span class="o">.</span><span class="n">cat</span><span class="p">,</span> <span class="o">.</span><span class="n">dog</span><span class="p">)</span> <span class="p">}</span>
+<span class="kd">extension</span> <span class="kt">Pet</span><span class="p">:</span> <span class="kt">ReflectionDecodable</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectDecoded</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Pet</span><span class="p">,</span> <span class="kt">Pet</span><span class="p">)</span> <span class="p">{</span> <span class="nf">return</span> <span class="p">(</span><span class="o">.</span><span class="n">cat</span><span class="p">,</span> <span class="o">.</span><span class="n">dog</span><span class="p">)</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 
-<p>Many types already conform to <code>ReflectionCodable</code> such as <code>String</code>, <code>Int</code>, <code>Double</code>, <code>UUID</code>, <code>Array</code>, <code>Dictionary</code>, and <code>Optional</code>.</p>
+<p>Many types already conform to <code>ReflectionDecodable</code> such as <code>String</code>, <code>Int</code>, <code>Double</code>, <code>UUID</code>, <code>Array</code>, <code>Dictionary</code>, and <code>Optional</code>.</p>
 
 <p>Other types will have free implementation provided when conformance is added, like <code>RawRepresentable</code> types.</p>
-<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Direction</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="kt">ReflectionCodable</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Direction</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="kt">ReflectionDecodable</span> <span class="p">{</span>
     <span class="k">case</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
 <span class="p">}</span>
 </code></pre>
@@ -185,9 +185,9 @@ you must expand the type to have at least two distinct cases, or use a different
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core17ReflectionCodableP07reflectC0x_xtyKFZ"></a>
-                    <a name="//apple_ref/swift/Method/reflectCodable()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core17ReflectionCodableP07reflectC0x_xtyKFZ">reflectCodable()</a>
+                    <a name="/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ"></a>
+                    <a name="//apple_ref/swift/Method/reflectDecoded()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ">reflectDecoded()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -196,8 +196,8 @@ you must expand the type to have at least two distinct cases, or use a different
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a tuple containing two <em>distinct</em> instances for this type.</p>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Bool</span><span class="p">:</span> <span class="kt">ReflectionCodable</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectCodable</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span> <span class="nf">return</span> <span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="p">}</span>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Bool</span><span class="p">:</span> <span class="kt">ReflectionDecodable</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectDecoded</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span> <span class="nf">return</span> <span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 <div class="aside aside-throws">
@@ -211,7 +211,7 @@ you must expand the type to have at least two distinct cases, or use a different
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectCodable</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="k">Self</span><span class="p">,</span> <span class="k">Self</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectDecoded</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="k">Self</span><span class="p">,</span> <span class="k">Self</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -220,7 +220,7 @@ you must expand the type to have at least two distinct cases, or use a different
                         <p>Two distinct instances of this type.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Core/CodableReflection/ReflectionCodable.swift#L42">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Core/CodableReflection/ReflectionDecodable.swift#L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -228,9 +228,9 @@ you must expand the type to have at least two distinct cases, or use a different
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core17ReflectionCodableP07reflectC6IsLeftSbxKFZ"></a>
-                    <a name="//apple_ref/swift/Method/reflectCodableIsLeft(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core17ReflectionCodableP07reflectC6IsLeftSbxKFZ">reflectCodableIsLeft(_:)</a>
+                    <a name="/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftSbxKFZ"></a>
+                    <a name="//apple_ref/swift/Method/reflectDecodedIsLeft(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftSbxKFZ">reflectDecodedIsLeft(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -242,9 +242,9 @@ you must expand the type to have at least two distinct cases, or use a different
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns <code>true</code> if the supplied instance of this type is equal to the <em>left</em> instance returned
-by <code><a href="../Protocols/ReflectionCodable.html#/s:4Core17ReflectionCodableP07reflectC0x_xtyKFZ">reflectCodable()</a></code>.</p>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Pet</span><span class="p">:</span> <span class="kt">ReflectionCodable</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectCodable</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Pet</span><span class="p">,</span> <span class="kt">Pet</span><span class="p">)</span> <span class="p">{</span> <span class="nf">return</span> <span class="p">(</span><span class="n">cat</span><span class="p">,</span> <span class="n">dog</span><span class="p">)</span> <span class="p">}</span>
+by <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ">reflectDecoded()</a></code>.</p>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Pet</span><span class="p">:</span> <span class="kt">ReflectionDecodable</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectDecoded</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Pet</span><span class="p">,</span> <span class="kt">Pet</span><span class="p">)</span> <span class="p">{</span> <span class="nf">return</span> <span class="p">(</span><span class="n">cat</span><span class="p">,</span> <span class="n">dog</span><span class="p">)</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -259,25 +259,25 @@ This method is automatically implemented for types that conform to `Equatable.</
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Default implememntation for <code>ReflectionCodable</code> that are also <code>Equatable</code>.</p>
+                        <p>Default implememntation for <code>ReflectionDecodable</code> that are also <code>Equatable</code>.</p>
 
-<p>See <code>ReflectionCodable.reflectCodableIsLeft(_:)</code> for more information.</p>
+<p>See <code>ReflectionDecodable.reflectDecodedIsLeft(_:)</code> for more information.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectCodableIsLeft</span><span class="p">(</span><span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectDecodedIsLeft</span><span class="p">(</span><span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>true</code> if supplied instance equals left side of <code><a href="../Protocols/ReflectionCodable.html#/s:4Core17ReflectionCodableP07reflectC0x_xtyKFZ">reflectCodable()</a></code>.</p>
+                        <p><code>true</code> if supplied instance equals left side of <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ">reflectDecoded()</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Core/CodableReflection/ReflectionCodable.swift#L56">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Core/CodableReflection/ReflectionDecodable.swift#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -289,9 +289,9 @@ This method is automatically implemented for types that conform to `Equatable.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core17ReflectionCodablePAAE010anyReflectC0yp_yptyKFZ"></a>
-                    <a name="//apple_ref/swift/Method/anyReflectCodable()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core17ReflectionCodablePAAE010anyReflectC0yp_yptyKFZ">anyReflectCodable()</a>
+                    <a name="/s:4Core19ReflectionDecodablePAAE17anyReflectDecodedyp_yptyKFZ"></a>
+                    <a name="//apple_ref/swift/Method/anyReflectDecoded()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Core19ReflectionDecodablePAAE17anyReflectDecodedyp_yptyKFZ">anyReflectDecoded()</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -302,21 +302,21 @@ This method is automatically implemented for types that conform to `Equatable.</
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Type-erased version of <code><a href="../Protocols/ReflectionCodable.html#/s:4Core17ReflectionCodableP07reflectC0x_xtyKFZ">ReflectionCodable.reflectCodable()</a></code>.</p>
+                        <p>Type-erased version of <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ">ReflectionDecodable.reflectDecoded()</a></code>.</p>
 
-<p>See <code><a href="../Protocols/ReflectionCodable.html#/s:4Core17ReflectionCodableP07reflectC0x_xtyKFZ">ReflectionCodable.reflectCodable()</a></code> for more information.</p>
+<p>See <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ">ReflectionDecodable.reflectDecoded()</a></code> for more information.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">anyReflectCodable</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Any</span><span class="p">,</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">anyReflectDecoded</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Any</span><span class="p">,</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Core/CodableReflection/ReflectionCodable.swift#L204-L207">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Core/CodableReflection/ReflectionDecodable.swift#L204-L207">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -324,9 +324,9 @@ This method is automatically implemented for types that conform to `Equatable.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core17ReflectionCodablePAAE010anyReflectC6IsLeftSbypKFZ"></a>
-                    <a name="//apple_ref/swift/Method/anyReflectCodableIsLeft(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core17ReflectionCodablePAAE010anyReflectC6IsLeftSbypKFZ">anyReflectCodableIsLeft(_:)</a>
+                    <a name="/s:4Core19ReflectionDecodablePAAE23anyReflectDecodedIsLeftSbypKFZ"></a>
+                    <a name="//apple_ref/swift/Method/anyReflectDecodedIsLeft(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Core19ReflectionDecodablePAAE23anyReflectDecodedIsLeftSbypKFZ">anyReflectDecodedIsLeft(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -337,21 +337,21 @@ This method is automatically implemented for types that conform to `Equatable.</
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Type-erased version of <code><a href="../Protocols/ReflectionCodable.html#/s:4Core17ReflectionCodableP07reflectC6IsLeftSbxKFZ">ReflectionCodable.reflectCodableIsLeft(_:)</a></code>.</p>
+                        <p>Type-erased version of <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftSbxKFZ">ReflectionDecodable.reflectDecodedIsLeft(_:)</a></code>.</p>
 
-<p>See <code><a href="../Protocols/ReflectionCodable.html#/s:4Core17ReflectionCodableP07reflectC6IsLeftSbxKFZ">ReflectionCodable.reflectCodableIsLeft(_:)</a></code> for more information.</p>
+<p>See <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftSbxKFZ">ReflectionDecodable.reflectDecodedIsLeft(_:)</a></code> for more information.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">anyReflectCodableIsLeft</span><span class="p">(</span><span class="n">_</span> <span class="nv">any</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">anyReflectDecodedIsLeft</span><span class="p">(</span><span class="n">_</span> <span class="nv">any</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Core/CodableReflection/ReflectionCodable.swift#L212-L214">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Core/CodableReflection/ReflectionDecodable.swift#L212-L214">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
