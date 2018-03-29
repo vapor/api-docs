@@ -5,7 +5,7 @@ function generate_docs() {
 
 	# create the unique docs path
 	DOCS_PATH=$REPO_NAME/$VERSION/$MODULE
-	LATEST_PATH=$REPO_NAME/latest/$MODULE
+	LATEST_PATH=$REPO_NAME/latest
 
 	echo "💧  Generating docs for $DOCS_PATH"
 
@@ -35,7 +35,7 @@ function generate_docs() {
 	cd ../../
 	rm -rf code
 	rm -rf $LATEST_PATH
-	mkdir -p $LATEST_PATH
+	mkdir $LATEST_PATH
 	cp -R $DOCS_PATH $LATEST_PATH
 }
 
