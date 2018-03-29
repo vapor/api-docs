@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Database Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/Database" class="dashAnchor"></a>
+    <a title="Database Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">DatabaseKit Docs</a> (91% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/database-kit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2Drc%2E2%2E2%2E1%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">DatabaseKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Database Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DatabaseKitProvider.html">DatabaseKitProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DatabaseLogger.html">DatabaseLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MemoryKeyedCache.html">MemoryKeyedCache</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Container.html">Container</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SubContainer.html">SubContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Database.html">Database</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DatabaseConnectable.html">DatabaseConnectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DatabaseConnection.html">DatabaseConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyedCache.html">KeyedCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LogSupporting.html">LogSupporting</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseConfig.html">DatabaseConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseConnectionPoolConfig.html">DatabaseConnectionPoolConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseIdentifier.html">DatabaseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseKitError.html">DatabaseKitError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseLog.html">DatabaseLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Databases.html">Databases</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Database</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Database</span></code></pre>
+
+                </div>
+              </div>
+            <p>Types conforming to this protocol can be used as
+a database for Fluent connections and connection pools.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11DatabaseKit0A0P10Connection"></a>
+                    <a name="//apple_ref/swift/Alias/Connection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11DatabaseKit0A0P10Connection">Connection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This database&rsquo;s connection type.
+The connection should also know which
+type of database it belongs to.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Connection</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DatabaseConnection.html">DatabaseConnection</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/Database/Database.swift#L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11DatabaseKit0A0P14makeConnectionXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/makeConnection(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11DatabaseKit0A0P14makeConnectionXeXeF">makeConnection(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new database connection that will
+execute callbacks on the supplied dispatch queue.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">makeConnection</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Database.html#/s:11DatabaseKit0A0P10Connection">Connection</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/Database/Database.swift#L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11DatabaseKit0A0PAAE18makeConnectionPoolXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/makeConnectionPool(max:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11DatabaseKit0A0PAAE18makeConnectionPoolXeXeF">makeConnectionPool(max:on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a fluent connection pool for this database.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeConnectionPool</span><span class="p">(</span><span class="nv">max</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/Database/Database.swift#L19-L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
