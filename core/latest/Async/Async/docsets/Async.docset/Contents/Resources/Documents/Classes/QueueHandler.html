@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QueueHandler Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/QueueHandler" class="dashAnchor"></a>
+    <a title="QueueHandler Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Async Docs</a> (74% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/core"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E0%2Drc%2E2%2E5%2E2%2FAsync%2Fdocsets%2FAsync%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Async Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        QueueHandler Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/QueueHandler.html">QueueHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FutureResult.html">FutureResult</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ByteBuffer.html">ByteBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/EventLoop.html">EventLoop</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/EventLoopFuture.html">EventLoopFuture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Future.html">Future</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Promise.html">Promise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Worker.html">Worker</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:5Async2qqoiXeXeF">??(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:5Async7flatMapXeXeF">flatMap(to:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:5Async7flatMapXeXeF">flatMap(to:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:5Async3mapXeXeF">map(to:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:5Async3mapXeXeF">map(to:_:_:_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BasicWorker.html">BasicWorker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FutureType.html">FutureType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async20FutureResultCallbacka">FutureResultCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async10LazyFuturea">LazyFuture</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>QueueHandler</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">QueueHandler</span><span class="o">&lt;</span><span class="kt">In</span><span class="p">,</span> <span class="kt">Out</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">ChannelInboundHandler</span></code></pre>
+
+                </div>
+              </div>
+            <p>Controls a Swift NIO pipeline of <code>[In]</code> -&gt; <code>[Out]</code>.</p>
+
+<p>One or more <code>Out</code> can be enqueued to the handler at a time. When enqueuing output,
+you must specify an input callback <code>(In) throws -&gt; (Bool)</code>. This callback will be used to
+provide <q>responses</q> to your output. When the callback returns <code>true</code> (or an error is thrown),
+the future returned when enqueuing data will be completed.</p>
+
+<p>This handler is useful for implementing clients. Requests can be enqueued to the handler and one
+or more responses can be received. This handler works great with client protocols that support pipelining.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async12QueueHandlerC9InboundIna"></a>
+                    <a name="//apple_ref/swift/Alias/InboundIn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async12QueueHandlerC9InboundIna">InboundIn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>ChannelInboundHandler.InboundIn</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">InboundIn</span> <span class="o">=</span> <span class="kt">In</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async12QueueHandlerC11OutboundOuta"></a>
+                    <a name="//apple_ref/swift/Alias/OutboundOut" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async12QueueHandlerC11OutboundOuta">OutboundOut</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>ChannelInboundHandler.OutboundOut</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">OutboundOut</span> <span class="o">=</span> <span class="kt">Out</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async12QueueHandlerCXeXecfc"></a>
+                    <a name="//apple_ref/swift/Method/init(on:onError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async12QueueHandlerCXeXecfc">init(on:onError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new <code>QueueHandler</code> on the supplied worker.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">,</span> <span class="nv">onError</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L36-L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async12QueueHandlerC7enqueueXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/enqueue(_:onInput:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async12QueueHandlerC7enqueueXeXeF">enqueue(_:onInput:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enqueue new output to the handler.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">_</span> <span class="nv">output</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/QueueHandler.html#/s:5Async12QueueHandlerC11OutboundOuta">OutboundOut</a></span><span class="p">],</span> <span class="nv">onInput</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/QueueHandler.html#/s:5Async12QueueHandlerC9InboundIna">InboundIn</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>output</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of output (can be <code>0</code>) that you wish to send.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onInput</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A callback that will accept new input (usually responses to the output you enqueued)
+       The callback will continue to be called until you return <code>true</code> or an error is thrown.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future signal. Will be completed when <code>onInput</code> returns <code>true</code> or throws an error.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L51-L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async12QueueHandlerC11channelReadXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/channelRead(ctx:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async12QueueHandlerC11channelReadXeXeF">channelRead(ctx:data:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MARK: ChannelInboundHandler conformance
+See <code>ChannelInboundHandler.channelRead(ctx:data:)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">channelRead</span><span class="p">(</span><span class="nv">ctx</span><span class="p">:</span> <span class="kt">ChannelHandlerContext</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">NIOAny</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L82-L102">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async12QueueHandlerC13channelActiveXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/channelActive(ctx:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async12QueueHandlerC13channelActiveXeXeF">channelActive(ctx:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>ChannelInboundHandler.channelActive(ctx:)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">channelActive</span><span class="p">(</span><span class="nv">ctx</span><span class="p">:</span> <span class="kt">ChannelHandlerContext</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L105-L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async12QueueHandlerC11errorCaughtXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/errorCaught(ctx:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async12QueueHandlerC11errorCaughtXeXeF">errorCaught(ctx:error:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>ChannelInboundHandler.errorCaught(error:)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">errorCaught</span><span class="p">(</span><span class="nv">ctx</span><span class="p">:</span> <span class="kt">ChannelHandlerContext</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L111-L118">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

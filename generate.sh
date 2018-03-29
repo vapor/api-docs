@@ -35,6 +35,7 @@ function generate_docs() {
 	cd ../../
 	rm -rf code
 	rm -rf $LATEST_PATH
+	mkdir -p $LATEST_PATH
 	cp -R $DOCS_PATH $LATEST_PATH
 }
 
