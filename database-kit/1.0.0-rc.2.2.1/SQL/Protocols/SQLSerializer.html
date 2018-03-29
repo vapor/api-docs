@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SQLSerializer Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/SQLSerializer" class="dashAnchor"></a>
+    <a title="SQLSerializer Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SQL Docs</a> (77% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/database-kit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2Drc%2E2%2E2%2E1%2FSQL%2Fdocsets%2FSQL%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SQL Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SQLSerializer Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/GeneralSQLSerializer.html">GeneralSQLSerializer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DataGroupBy.html">DataGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataJoinMethod.html">DataJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataOrderByDirection.html">DataOrderByDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataPredicateComparison.html">DataPredicateComparison</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataPredicateGroupRelation.html">DataPredicateGroupRelation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataPredicateItem.html">DataPredicateItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataPredicateValue.html">DataPredicateValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataStatement.html">DataStatement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SchemaForeignKeyAction.html">SchemaForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SchemaStatement.html">SchemaStatement</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SQLSerializer.html">SQLSerializer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DataColumn.html">DataColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataComputed.html">DataComputed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataJoin.html">DataJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataOrderBy.html">DataOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataPredicate.html">DataPredicate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataPredicateGroup.html">DataPredicateGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataQuery.html">DataQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SchemaColumn.html">SchemaColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SchemaForeignKey.html">SchemaForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SchemaQuery.html">SchemaQuery</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SQLSerializer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SQLSerializer</span></code></pre>
+
+                </div>
+              </div>
+            <p>Capable of serializing SQL queries into strings.
+This protocol has free implementations for most of the requirements
+and tries to conform to general (flavor-agnostic) SQL.</p>
+
+<p>You are expected to implement only the methods that require
+different serialization logic for your given SQL flavor.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Data"></a>
+                <a name="//apple_ref/swift/Section/Data" class="dashAnchor"></a>
+                <a href="#/Data">
+                  <h3 class="section-name">Data</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA9DataQueryV4data_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA9DataQueryV4data_tF">serialize(data:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Structs/DataQuery.html">DataQuery</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="kt">SELECT</span> <span class="p">`</span><span class="nv">users</span><span class="p">`</span><span class="o">.*</span> <span class="kt">FROM</span> <span class="p">`</span><span class="nv">users</span><span class="p">`</span>
+</code></pre>
+
+<p>Note: Avoid overriding this method if possible
+as it is the most complex. Much of what this method
+serializes can be modified by overriding other methods.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(data:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">data</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataQuery.html">DataQuery</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA10DataColumnV6column_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(column:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA10DataColumnV6column_tF">serialize(column:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Structs/DataColumn.html">DataColumn</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="p">`</span><span class="nv">foo</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">id</span><span class="p">`</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(column:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">column</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataColumn.html">DataColumn</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA12DataComputedV8computed_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(computed:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA12DataComputedV8computed_tF">serialize(computed:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Structs/DataComputed.html">DataComputed</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="nf">average</span><span class="p">(`</span><span class="nv">users</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">age</span><span class="p">`)</span> <span class="k">as</span> <span class="p">`</span><span class="nv">averageAge</span><span class="p">`</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(computed:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">computed</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataComputed.html">DataComputed</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L29">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSSayAA8DataJoinVG5joins_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(joins:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSSayAA8DataJoinVG5joins_tF">serialize(joins:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes multiple SQL <code><a href="../Structs/DataJoin.html">DataJoin</a></code>s to a string.</p>
+<pre class="highlight swift"><code><span class="kt">JOIN</span> <span class="p">`</span><span class="nv">bar</span><span class="p">`</span> <span class="kt">ON</span> <span class="p">`</span><span class="nv">foo</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">bar_id</span><span class="p">`</span> <span class="o">=</span> <span class="p">`</span><span class="nv">bar</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">id</span><span class="p">`</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(joins:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">joins</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/DataJoin.html">DataJoin</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA8DataJoinV4join_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(join:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA8DataJoinV4join_tF">serialize(join:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a single SQL <code><a href="../Structs/DataJoin.html">DataJoin</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="kt">JOIN</span> <span class="p">`</span><span class="nv">bar</span><span class="p">`</span> <span class="kt">ON</span> <span class="p">`</span><span class="nv">foo</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">bar_id</span><span class="p">`</span> <span class="o">=</span> <span class="p">`</span><span class="nv">bar</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">id</span><span class="p">`</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(join:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">join</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataJoin.html">DataJoin</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSSayAA11DataOrderByVG8orderBys_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(orderBys:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSSayAA11DataOrderByVG8orderBys_tF">serialize(orderBys:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes multiple SQL <code><a href="../Structs/DataOrderBy.html">DataOrderBy</a></code>s to a string.</p>
+<pre class="highlight swift"><code><span class="kt">ORDER</span> <span class="kt">BY</span> <span class="p">`</span><span class="nv">users</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">age</span><span class="p">`</span> <span class="kt">DESC</span><span class="p">,</span> <span class="p">`</span><span class="nv">foo</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">bar</span><span class="p">`</span> <span class="kt">ASC</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(orderBys:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">orderBys</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/DataOrderBy.html">DataOrderBy</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA11DataOrderByV05orderF0_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(orderBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA11DataOrderByV05orderF0_tF">serialize(orderBy:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a single SQL <code><a href="../Structs/DataOrderBy.html">DataOrderBy</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="p">`</span><span class="nv">users</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">age</span><span class="p">`</span> <span class="kt">DESC</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(orderBy:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">orderBy</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataOrderBy.html">DataOrderBy</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSSayAA11DataGroupByOG8groupBys_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(groupBys:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSSayAA11DataGroupByOG8groupBys_tF">serialize(groupBys:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes multiple SQL <code><a href="../Enums/DataGroupBy.html">DataGroupBy</a></code>s to a string.</p>
+<pre class="highlight swift"><code><span class="kt">GROUP</span> <span class="kt">BY</span> <span class="kt">YEAR</span><span class="p">(`</span><span class="nv">users</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">born</span><span class="p">`),</span> <span class="p">`</span><span class="nv">users</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">sex</span><span class="p">`</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(groupBys:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">groupBys</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/DataGroupBy.html">DataGroupBy</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA20DataOrderByDirectionO05orderfG0_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(orderByDirection:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA20DataOrderByDirectionO05orderfG0_tF">serialize(orderByDirection:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code>OrderByDirection</code> to a string.</p>
+<pre class="highlight swift"><code><span class="kt">DESC</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(orderByDirection:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">orderByDirection</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataOrderByDirection.html">DataOrderByDirection</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA18DataPredicateGroupV09predicateF0_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(predicateGroup:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA18DataPredicateGroupV09predicateF0_tF">serialize(predicateGroup:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Structs/DataPredicateGroup.html">DataPredicateGroup</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="p">(`</span><span class="nv">id</span><span class="p">`</span> <span class="o">=</span> <span class="p">?</span> <span class="kt">AND</span> <span class="p">`</span><span class="nv">age</span><span class="p">`</span> <span class="o">=</span> <span class="p">?)</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(predicateGroup:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">predicateGroup</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataPredicateGroup.html">DataPredicateGroup</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA26DataPredicateGroupRelationO09predicatefG0_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(predicateGroupRelation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA26DataPredicateGroupRelationO09predicatefG0_tF">serialize(predicateGroupRelation:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Enums/DataPredicateGroupRelation.html">DataPredicateGroupRelation</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="kt">AND</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(predicateGroupRelation:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">predicateGroupRelation</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataPredicateGroupRelation.html">DataPredicateGroupRelation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L77">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA13DataPredicateV9predicate_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(predicate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA13DataPredicateV9predicate_tF">serialize(predicate:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Structs/DataPredicate.html">DataPredicate</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="p">`</span><span class="nv">user</span><span class="p">`</span><span class="o">.</span><span class="p">`</span><span class="nv">id</span><span class="p">`</span> <span class="o">=</span> <span class="p">?</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(predicate:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataPredicate.html">DataPredicate</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP15makePlaceholderSSAA13DataPredicateV9predicate_tF"></a>
+                    <a name="//apple_ref/swift/Method/makePlaceholder(predicate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP15makePlaceholderSSAA13DataPredicateV9predicate_tF">makePlaceholder(predicate:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a placeholder for the supplied predicate.</p>
+<pre class="highlight swift"><code><span class="p">?</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.makePlaceholder(predicate:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">makePlaceholder</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataPredicate.html">DataPredicate</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA23DataPredicateComparisonO10comparison_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(comparison:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA23DataPredicateComparisonO10comparison_tF">serialize(comparison:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Enums/DataPredicateComparison.html">DataPredicateComparison</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="o">=</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(comparison:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">comparison</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataPredicateComparison.html">DataPredicateComparison</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L95">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Schema"></a>
+                <a name="//apple_ref/swift/Section/Schema" class="dashAnchor"></a>
+                <a href="#/Schema">
+                  <h3 class="section-name">Schema</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA11SchemaQueryV6schema_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(schema:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA11SchemaQueryV6schema_tF">serialize(schema:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Structs/SchemaQuery.html">SchemaQuery</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="kt">CREATE</span> <span class="kt">TABLE</span> <span class="p">`</span><span class="nv">foo</span><span class="p">`</span> <span class="p">(`</span><span class="nv">id</span><span class="p">`</span> <span class="kt">INT</span> <span class="kt">PRIMARY</span> <span class="kt">KEY</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(schema:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">schema</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Structs/SchemaQuery.html">SchemaQuery</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L103">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA12SchemaColumnV6column_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(column:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA12SchemaColumnV6column_tF">serialize(column:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Structs/SchemaColumn.html">SchemaColumn</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="p">`</span><span class="nv">id</span><span class="p">`</span> <span class="kt">INT</span> <span class="kt">PRIMARY</span> <span class="kt">KEY</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">column</span><span class="p">:</span> <span class="kt"><a href="../Structs/SchemaColumn.html">SchemaColumn</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L109">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA16SchemaForeignKeyV07foreignF0_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(foreignKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA16SchemaForeignKeyV07foreignF0_tF">serialize(foreignKey:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Structs/SchemaColumn.html">SchemaColumn</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="kt">FOREIGN</span> <span class="kt">KEY</span> <span class="p">(`</span><span class="nv">trackartist</span><span class="p">`)</span> <span class="kt">REFERENCES</span> <span class="p">`</span><span class="nv">artist</span><span class="p">`(`</span><span class="nv">artistid</span><span class="p">`)</span> <span class="kt">ON</span> <span class="kt">UPDATE</span> <span class="kt">RESTRICT</span> <span class="kt">ON</span> <span class="kt">DELETE</span> <span class="kt">RESTRICT</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(foreignKey:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">foreignKey</span><span class="p">:</span> <span class="kt"><a href="../Structs/SchemaForeignKey.html">SchemaForeignKey</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L115">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP9serializeSSAA22SchemaForeignKeyActionO07foreignfG0_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(foreignKeyAction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP9serializeSSAA22SchemaForeignKeyActionO07foreignfG0_tF">serialize(foreignKeyAction:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a SQL <code><a href="../Enums/SchemaForeignKeyAction.html">SchemaForeignKeyAction</a></code> to a string.</p>
+<pre class="highlight swift"><code><span class="kt">ON</span> <span class="kt">UPDATE</span> <span class="kt">RESTRICT</span> <span class="kt">ON</span> <span class="kt">DELETE</span> <span class="kt">RESTRICT</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.serialize(foreignKeyAction:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">foreignKeyAction</span><span class="p">:</span> <span class="kt"><a href="../Enums/SchemaForeignKeyAction.html">SchemaForeignKeyAction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L121">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Utility"></a>
+                <a name="//apple_ref/swift/Section/Utility" class="dashAnchor"></a>
+                <a href="#/Utility">
+                  <h3 class="section-name">Utility</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP15makePlaceholderS2S4name_tF"></a>
+                    <a name="//apple_ref/swift/Method/makePlaceholder(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP15makePlaceholderS2S4name_tF">makePlaceholder(name:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a placeholder for the supplied column name.</p>
+<pre class="highlight swift"><code><span class="p">?</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.makePlaceholder(name:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">makePlaceholder</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L129">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerP17makeEscapedStringS2S4from_tF"></a>
+                    <a name="//apple_ref/swift/Method/makeEscapedString(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerP17makeEscapedStringS2S4from_tF">makeEscapedString(from:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Escapes the supplied string.</p>
+
+<p>Important: This is not guaranteed to be injection safe and
+should <em>not</em> be relied upon to prevent injection.</p>
+
+<p>This method should be used for ensuring table, column,
+and key names are not mistaken for SQL syntax.</p>
+<pre class="highlight swift"><code><span class="p">`</span><span class="nv">foo</span><span class="p">`</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See SQLSerializer.makeEscapedString(from:)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">makeEscapedString</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer.swift#L141">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL13SQLSerializerPAAE9serializeSSAA17DataPredicateItemO09predicateF0_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(predicateItem:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL13SQLSerializerPAAE9serializeSSAA17DataPredicateItemO09predicateF0_tF">serialize(predicateItem:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Depending on the predicate item case, calls either:
+    - <code><a href="../Protocols/SQLSerializer.html#/s:3SQL13SQLSerializerP9serializeSSAA18DataPredicateGroupV09predicateF0_tF">serialize(predicateGroup:)</a></code>
+    - <code><a href="../Protocols/SQLSerializer.html#/s:3SQL13SQLSerializerP9serializeSSAA13DataPredicateV9predicate_tF">serialize(predicate:)</a></code>
+This should likely not need to be overridden.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">predicateItem</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataPredicateItem.html">DataPredicateItem</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/SQL/Serialization/SQLSerializer+Predicate.swift#L22-L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
