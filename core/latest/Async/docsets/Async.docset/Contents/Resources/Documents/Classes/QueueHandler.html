@@ -14,9 +14,9 @@
     <a title="QueueHandler Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Async Docs</a> (74% documented)</p>
+        <p><a href="../index.html">Async Docs</a> (88% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/core"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E0%2Drc%2E2%2E5%2E2%2FAsync%2Fdocsets%2FAsync%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E0%2FAsync%2Fdocsets%2FAsync%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -52,13 +52,7 @@
                 <a href="../Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/ByteBuffer.html">ByteBuffer</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Data.html">Data</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/EventLoop.html">EventLoop</a>
@@ -80,9 +74,6 @@
           <li class="nav-group-name">
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:5Async2qqoiXeXeF">??(_:_:)</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:5Async7flatMapXeXeF">flatMap(to:_:_:_:)</a>
               </li>
@@ -109,21 +100,22 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async6Futurea">Future</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:5Async20FutureResultCallbacka">FutureResultCallback</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:5Async10LazyFuturea">LazyFuture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async7Promisea">Promise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async6Workera">Worker</a>
               </li>
             </ul>
           </li>
@@ -178,7 +170,7 @@ or more responses can be received. This handler works great with client protocol
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/QueueHandler.swift#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -208,7 +200,7 @@ or more responses can be received. This handler works great with client protocol
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L18">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/QueueHandler.swift#L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -233,12 +225,12 @@ or more responses can be received. This handler works great with client protocol
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">,</span> <span class="nv">onError</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span> <span class="nv">onError</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L36-L42">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/QueueHandler.swift#L36-L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -263,7 +255,7 @@ or more responses can be received. This handler works great with client protocol
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">_</span> <span class="nv">output</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/QueueHandler.html#/s:5Async12QueueHandlerC11OutboundOuta">OutboundOut</a></span><span class="p">],</span> <span class="nv">onInput</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/QueueHandler.html#/s:5Async12QueueHandlerC9InboundIna">InboundIn</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">_</span> <span class="nv">output</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/QueueHandler.html#/s:5Async12QueueHandlerC11OutboundOuta">OutboundOut</a></span><span class="p">],</span> <span class="nv">onInput</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/QueueHandler.html#/s:5Async12QueueHandlerC9InboundIna">InboundIn</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -304,7 +296,7 @@ or more responses can be received. This handler works great with client protocol
                         <p>A future signal. Will be completed when <code>onInput</code> returns <code>true</code> or throws an error.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L51-L63">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/QueueHandler.swift#L51-L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -335,7 +327,7 @@ See <code>ChannelInboundHandler.channelRead(ctx:data:)</code></p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L82-L102">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/QueueHandler.swift#L82-L102">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -365,7 +357,7 @@ See <code>ChannelInboundHandler.channelRead(ctx:data:)</code></p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L105-L108">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/QueueHandler.swift#L105-L108">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -395,7 +387,7 @@ See <code>ChannelInboundHandler.channelRead(ctx:data:)</code></p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/QueueHandler.swift#L111-L118">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/QueueHandler.swift#L111-L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

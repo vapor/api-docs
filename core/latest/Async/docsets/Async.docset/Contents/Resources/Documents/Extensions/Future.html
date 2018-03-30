@@ -14,9 +14,9 @@
     <a title="Future Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Async Docs</a> (74% documented)</p>
+        <p><a href="../index.html">Async Docs</a> (88% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/core"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E0%2Drc%2E2%2E5%2E2%2FAsync%2Fdocsets%2FAsync%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E0%2FAsync%2Fdocsets%2FAsync%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -52,13 +52,7 @@
                 <a href="../Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/ByteBuffer.html">ByteBuffer</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Data.html">Data</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/EventLoop.html">EventLoop</a>
@@ -80,9 +74,6 @@
           <li class="nav-group-name">
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:5Async2qqoiXeXeF">??(_:_:)</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:5Async7flatMapXeXeF">flatMap(to:_:_:_:)</a>
               </li>
@@ -109,21 +100,22 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async6Futurea">Future</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:5Async20FutureResultCallbacka">FutureResultCallback</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:5Async10LazyFuturea">LazyFuture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async7Promisea">Promise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async6Workera">Worker</a>
               </li>
             </ul>
           </li>
@@ -141,6 +133,40 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:5Async5chainXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/chain(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async5chainXeXeF">chain(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">chain</span><span class="p">(</span><span class="n">to</span> <span class="nv">promise</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async7Promisea">Promise</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Deprecated.swift#L65-L67">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:5Async2doXeXeF"></a>
                     <a name="//apple_ref/swift/Method/do(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:5Async2doXeXeF">do(_:)</a>
@@ -151,24 +177,30 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds a handler to be asynchronously executed on
-completion of this future.</p>
+                        <p>Adds a callback for handling this <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code>&rsquo;s result when it becomes available.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Don&rsquo;t forget to use <code>catch</code> to handle the error case.</p>
 
-<p>Will <em>not</em> be executed if an error occurrs</p>
+<p>futureString.do { string in
+    print(string)
+}.catch { error in
+    print(<q>oops: \(error)</q>)
+}</p>
 
-<p><a href="https://docs.vapor.codes/3.0/async/promise-future-introduction/#on-future-completion">Learn More →</a></p>
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">do</span><span class="p">`(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">do</span><span class="p">`(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+DoCatch.swift#L8-L11">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+DoCatch.swift#L11-L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -186,25 +218,30 @@ completion of this future.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds a handler to be asynchronously executed on
- completion of this future.</p>
+                        <p>Adds a callback for handling this <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code>&rsquo;s result if an error occurs.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Will <em>only</em> be executed if an error occurs. Successful results will not call this handler.</p>
 
-<p>Will <em>only</em> be executed if an error occurred.
-/ Successful results will not call this handler.</p>
+<p>futureString.do { string in
+    print(string)
+}.catch { error in
+    print(<q>oops: \(error)</q>)
+}</p>
 
-<p><a href="https://docs.vapor.codes/3.0/async/promise-future-introduction/#on-future-completion">Learn More →</a></p>
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">catch</span><span class="p">`(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">catch</span><span class="p">`(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+DoCatch.swift#L21-L24">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+DoCatch.swift#L26-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -222,20 +259,32 @@ completion of this future.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get called back whenever the future is complete,
-ignoring the result.</p>
+                        <p>Adds a handler to be asynchronously executed on completion of this future.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Will be executed on both success and failure, but will not receive any input.</p>
+
+<p>futureString.do { string in
+    print(string)
+}.catch { error in
+    print(<q>oops: \(error)</q>)
+}.always {
+    print(<q>done</q>)
+}</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">always</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">always</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+DoCatch.swift#L29-L32">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+DoCatch.swift#L43-L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -244,40 +293,6 @@ ignoring the result.</p>
             </div>
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5Async7flatMapXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/flatMap(on:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Async7flatMapXeXeFZ">flatMap(on:_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Globally available initializer for mimicking behavior of calling <code>return future.flatMao</code>
-where no starting future is available.</p>
-
-<p>This allows you to convert any non-throwing, future-return method into a
-closure that accepts throwing and returns a future.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flatMap</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+Global.swift#L8-L25">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -291,23 +306,61 @@ closure that accepts throwing and returns a future.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Globally available initializer for mimicking behavior of calling <code>return future.flatMao</code>
-where no starting future is available.</p>
+                        <p>Statically available method for mimicking behavior of calling <code>return future.map</code> where no starting future is available.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">map</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">try</span> <span class="nf">someThrowingThing</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
 
-<p>This allows you to convert any non-throwing, future-return method into a
-closure that accepts throwing and returns a future.</p>
+<p>This allows you to convert any non-throwing, future-return method into a closure that accepts throwing and returns a future.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">map</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Expectation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">map</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Expectation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+Global.swift#L32-L42">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Global.swift#L9-L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async7flatMapXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/flatMap(on:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async7flatMapXeXeFZ">flatMap(on:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Statically available method for mimicking behavior of calling <code>return future.flatMap</code> where no starting future is available.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">flatMap</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">try</span> <span class="nf">someAsyncThrowingThing</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>This allows you to convert any non-throwing, future-return method into a closure that accepts throwing and returns a future.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flatMap</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Global.swift#L28-L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -329,22 +382,33 @@ closure that accepts throwing and returns a future.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Maps a future to a future of a different type.
-The result returned within should be non-future type.</p>
+                        <p>Maps a <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> to a <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> of a different type.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The result returned within should be non-<code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> type.</p>
 
-<p><a href="https://docs.vapor.codes/3.0/async/promise-future-introduction/#mapping-results">Learn More →</a></p>
+<p>print(futureString) // Future<String>
+let futureInt = futureString.map(to: Int.self) { string in
+    print(string) // The actual String
+    return Int(string) ?? 0
+}
+print(futureInt) // Future<Int></p>
+
+</div>
+
+<p>See <code><a href="../Extensions/Future.html#/s:5Async7flatMapXeXeF">flatMap(to:_:)</a></code> for mapping <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> results to other <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> types.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Expectation</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Expectation</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+Map.swift#L6-L21">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Map.swift#L14-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -362,31 +426,37 @@ The result returned within should be non-future type.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Maps a future to a future of a different type.
-The result returned within should be a future.</p>
+                        <p>Maps a <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> to a <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> of a different type.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The result returned within the closure should be another <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code>.</p>
+
+<p>print(futureURL) // Future<URL>
+let futureRes = futureURL.flatMap(to: Response.self) { url in
+    print(url) // The actual URL
+    return client.get(url: url) // Returns Future<Response>
+}
+print(futureRes) // Future<Response></p>
+
+</div>
+
+<p>See <code><a href="../Extensions/Future.html#/s:5Async3mapXeXeF">map(to:_:)</a></code> for mapping <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> results to non-<code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> types.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span><span class="p">(</span>
-    <span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Wrapped</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-    <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Expectation</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Wrapped</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Expectation</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+Map.swift#L25-L43">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Map.swift#L43-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -412,12 +482,12 @@ or to re-throw or throw a different error.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">catchMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Expectation</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">catchMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Expectation</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+Map.swift#L158-L172">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Map.swift#L66-L80">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -457,12 +527,12 @@ or to re-throw or throw a different error.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">catchFlatMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">catchFlatMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+Map.swift#L192-L206">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Map.swift#L100-L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -485,20 +555,20 @@ or to re-throw or throw a different error.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Maps the current future to contain the new type. Errors are carried over, successful (expected) results are transformed into the given instance.</p>
-
-<p><a href="https://docs.vapor.codes/3.0/async/promise-future-introduction/#mapping-results">Learn More →</a></p>
+<pre class="highlight swift"><code><span class="n">user</span><span class="o">.</span><span class="nf">save</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="nf">transform</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt">HTTPStatus</span><span class="o">.</span><span class="n">created</span><span class="p">)</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">transform</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">instance</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">transform</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">instance</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future+Transform.swift#L5-L9">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Transform.swift#L6-L10">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -510,9 +580,9 @@ or to re-throw or throw a different error.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Async5awaitXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/await(on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Async5awaitXeXeF">await(on:)</a>
+                    <a name="/s:5Async3mapXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/map(_:_:to:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async3mapXeXeFZ">map(_:_:to:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -520,19 +590,28 @@ or to re-throw or throw a different error.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Calls the supplied callback when both futures have completed.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">map</span><span class="p">(</span><span class="n">futureA</span><span class="p">,</span> <span class="n">futureB</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="k">in</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">await</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">futureA</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureB</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Result</span><span class="p">)</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future.swift#L70-L72">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Variadic.swift#L8-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -541,8 +620,8 @@ or to re-throw or throw a different error.</p>
                   <div>
                     <code>
                     <a name="/s:5Async7flatMapXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/flatMap(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Async7flatMapXeXeFZ">flatMap(_:)</a>
+                    <a name="//apple_ref/swift/Method/flatMap(_:_:to:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async7flatMapXeXeFZ">flatMap(_:_:to:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -550,19 +629,28 @@ or to re-throw or throw a different error.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Calls the supplied callback when both futures have completed.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">flatMap</span><span class="p">(</span><span class="n">futureA</span><span class="p">,</span> <span class="n">futureB</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="k">in</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flatMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">futureA</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureB</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future.swift#L75-L77">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Variadic.swift#L27-L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -571,8 +659,8 @@ or to re-throw or throw a different error.</p>
                   <div>
                     <code>
                     <a name="/s:5Async3mapXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/map(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Async3mapXeXeFZ">map(_:)</a>
+                    <a name="//apple_ref/swift/Method/map(_:_:_:to:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async3mapXeXeFZ">map(_:_:_:to:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -580,19 +668,235 @@ or to re-throw or throw a different error.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Calls the supplied callback when all three futures have completed.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">map</span><span class="p">(</span><span class="n">futureA</span><span class="p">,</span> <span class="n">futureB</span><span class="p">,</span> <span class="n">futureC</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="k">in</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">map</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Expectation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">futureA</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureB</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureC</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Result</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future.swift#L80-L82">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Variadic.swift#L46-L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async7flatMapXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/flatMap(_:_:_:to:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async7flatMapXeXeFZ">flatMap(_:_:_:to:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls the supplied callback when all three futures have completed.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">flatMap</span><span class="p">(</span><span class="n">futureA</span><span class="p">,</span> <span class="n">futureB</span><span class="p">,</span> <span class="n">futureC</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="k">in</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">futureA</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureB</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureC</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Variadic.swift#L68-L82">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async3mapXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/map(_:_:_:_:to:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async3mapXeXeFZ">map(_:_:_:_:to:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls the supplied callback when all four futures have completed.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">map</span><span class="p">(</span><span class="n">futureA</span><span class="p">,</span> <span class="n">futureB</span><span class="p">,</span> <span class="n">futureC</span><span class="p">,</span> <span class="n">futureD</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="k">in</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">futureA</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureB</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureC</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureD</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Result</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Variadic.swift#L90-L107">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async7flatMapXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/flatMap(_:_:_:_:to:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async7flatMapXeXeFZ">flatMap(_:_:_:_:to:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls the supplied callback when all four futures have completed.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">flatMap</span><span class="p">(</span><span class="n">futureA</span><span class="p">,</span> <span class="n">futureB</span><span class="p">,</span> <span class="n">futureC</span><span class="p">,</span> <span class="n">futureD</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="k">in</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">futureA</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureB</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureC</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureD</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Variadic.swift#L115-L132">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async3mapXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/map(_:_:_:_:_:to:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async3mapXeXeFZ">map(_:_:_:_:_:to:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls the supplied callback when all five futures have completed.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">map</span><span class="p">(</span><span class="n">futureA</span><span class="p">,</span> <span class="n">futureB</span><span class="p">,</span> <span class="n">futureC</span><span class="p">,</span> <span class="n">futureD</span><span class="p">,</span> <span class="n">futureE</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span> <span class="k">in</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">E</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">futureA</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureB</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureC</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureD</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureE</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Result</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Variadic.swift#L140-L160">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async7flatMapXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/flatMap(_:_:_:_:_:to:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async7flatMapXeXeFZ">flatMap(_:_:_:_:_:to:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls the supplied callback when all five futures have completed.</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="kt">Future</span><span class="o">.</span><span class="nf">flatMap</span><span class="p">(</span><span class="n">futureA</span><span class="p">,</span> <span class="n">futureB</span><span class="p">,</span> <span class="n">futureC</span><span class="p">,</span> <span class="n">futureD</span><span class="p">,</span> <span class="n">futureE</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span> <span class="k">in</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">E</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">futureA</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureB</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureC</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureD</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">futureE</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Variadic.swift#L168-L188">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -614,53 +918,19 @@ or to re-throw or throw a different error.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A pre-completed <code><a href="../Typealiases.html#/s:5Async6Futurea">Future&lt;Void&gt;</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">done</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">done</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/Future.swift#L96-L100">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5Async5chainXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/chain(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Async5chainXeXeF">chain(to:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Chains a future to a promise of the same type.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">chain</span><span class="p">(</span><span class="n">to</span> <span class="nv">promise</span><span class="p">:</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/FutureType.swift#L55-L61">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Void.swift#L10-L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

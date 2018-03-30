@@ -14,9 +14,9 @@
     <a title="FutureType Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Async Docs</a> (74% documented)</p>
+        <p><a href="../index.html">Async Docs</a> (88% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/core"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E0%2Drc%2E2%2E5%2E2%2FAsync%2Fdocsets%2FAsync%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E0%2FAsync%2Fdocsets%2FAsync%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -52,13 +52,7 @@
                 <a href="../Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/ByteBuffer.html">ByteBuffer</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Data.html">Data</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/EventLoop.html">EventLoop</a>
@@ -80,9 +74,6 @@
           <li class="nav-group-name">
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:5Async2qqoiXeXeF">??(_:_:)</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:5Async7flatMapXeXeF">flatMap(to:_:_:_:)</a>
               </li>
@@ -109,21 +100,22 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async6Futurea">Future</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:5Async20FutureResultCallbacka">FutureResultCallback</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:5Async10LazyFuturea">LazyFuture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async7Promisea">Promise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:5Async6Workera">Worker</a>
               </li>
             </ul>
           </li>
@@ -140,12 +132,42 @@
                 </div>
               </div>
             <p>A future result type.
-Concretely implemented by <code>Future&lt;T&gt;</code></p>
+Concretely implemented by <code><a href="../Typealiases.html#/s:5Async6Futurea">Future&lt;T&gt;</a></code></p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Async10FutureTypeP11Expectation"></a>
+                    <a name="//apple_ref/swift/Alias/Expectation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Async10FutureTypeP11Expectation">Expectation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This future&rsquo;s expectation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Expectation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/FutureType.swift#L8">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -166,12 +188,12 @@ Concretely implemented by <code>Future&lt;T&gt;</code></p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Result</span> <span class="o">=</span> <span class="kt"><a href="../Enums/FutureResult.html">FutureResult</a></span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Result</span> <span class="o">=</span> <span class="kt"><a href="../Enums/FutureResult.html">FutureResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/FutureType.html#/s:5Async10FutureTypeP11Expectation">Expectation</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/FutureType.swift#L10">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/FutureType.swift#L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -189,19 +211,19 @@ Concretely implemented by <code>Future&lt;T&gt;</code></p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Adds a new awaiter to this <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code> that will be called when the result is ready.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addAwaiter</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:5Async20FutureResultCallbacka">FutureResultCallback</a></span><span class="o">&lt;</span><span class="kt">Expectation</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addAwaiter</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:5Async20FutureResultCallbacka">FutureResultCallback</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/FutureType.html#/s:5Async10FutureTypeP11Expectation">Expectation</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0-rc.2.5.2/Sources/Async/FutureType.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/FutureType.swift#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
