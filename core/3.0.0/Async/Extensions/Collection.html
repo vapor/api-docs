@@ -286,15 +286,15 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds a callback for handling this <code>[Future]</code>&rsquo;s result when it becomes available.</p>
+<pre class="highlight swift"><code><span class="n">futureStrings</span><span class="o">.</span><span class="k">do</span> <span class="p">{</span> <span class="n">strings</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"oops: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Don&rsquo;t forget to use <code>catch</code> to handle the error case.</p>
-
-<p>futureStrings.do { strings in
-    print(strings)
-}.catch { error in
-    print(<q>oops: \(error)</q>)
-}</p>
+    Don&rsquo;t forget to use <code>catch</code> to handle the error case.
 
 </div>
 
@@ -308,7 +308,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+DoCatch.swift#L59-L61">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+DoCatch.swift#L61-L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -327,15 +327,15 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds a callback for handling this <code>[Future]</code>&rsquo;s result if an error occurs.</p>
+<pre class="highlight swift"><code><span class="n">futureStrings</span><span class="o">.</span><span class="k">do</span> <span class="p">{</span> <span class="n">strings</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"oops: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>Will <em>only</em> be executed if an error occurs. Successful results will not call this handler.</p>
-
-<p>futureStrings.do { strings in
-    print(strings)
-}.catch { error in
-    print(<q>oops: \(error)</q>)
-}</p>
+    Will <em>only</em> be executed if an error occurs. Successful results will not call this handler.
 
 </div>
 
@@ -349,7 +349,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+DoCatch.swift#L73-L75">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+DoCatch.swift#L75-L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -368,17 +368,17 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds a handler to be asynchronously executed on completion of these futures.</p>
+<pre class="highlight swift"><code><span class="n">futureStrings</span><span class="o">.</span><span class="k">do</span> <span class="p">{</span> <span class="n">strings</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"oops: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="n">always</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"done"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>Will be executed on both success and failure, but will not receive any input.</p>
-
-<p>futureStrings.do { strings in
-    print(strings)
-}.catch { error in
-    print(<q>oops: \(error)</q>)
-}.always {
-    print(<q>done</q>)
-}</p>
+    Will be executed on both success and failure, but will not receive any input.
 
 </div>
 
@@ -392,7 +392,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+DoCatch.swift#L90-L92">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+DoCatch.swift#L92-L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -431,7 +431,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Flatten.swift#L7-L30">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Flatten.swift#L9-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -470,7 +470,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Flatten.swift#L36-L62">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Flatten.swift#L38-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -504,7 +504,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Flatten.swift#L67-L70">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Async/Future+Flatten.swift#L69-L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
