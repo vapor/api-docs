@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTTPCookies Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/HTTPCookies" class="dashAnchor"></a>
+    <a title="HTTPCookies Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HTTP Docs</a> (92% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/engine"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fengine%2F3%2E0%2E0%2Drc%2E2%2E1%2FHTTP%2Fdocsets%2FHTTP%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HTTP Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HTTPCookies Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPChunkedStream.html">HTTPChunkedStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPServer.html">HTTPServer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HTTPSameSitePolicy.html">HTTPSameSitePolicy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/HTTPHeaders.html">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/JSONDecoder.html">JSONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/JSONEncoder.html">JSONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPBodyDecoder.html">HTTPBodyDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPBodyEncoder.html">HTTPBodyEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPBodyRepresentable.html">HTTPBodyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPCookieValueInitializable.html">HTTPCookieValueInitializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPCookieValueRepresentable.html">HTTPCookieValueRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPMessage.html">HTTPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPResponder.html">HTTPResponder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPBody.html">HTTPBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPCookie.html">HTTPCookie</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPCookieValue.html">HTTPCookieValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPCookies.html">HTTPCookies</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPHeaderName.html">HTTPHeaderName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:4HTTP13HTTPOnUpgradeV">HTTPOnUpgrade</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:4HTTP17HTTPRunningServerV">HTTPRunningServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MediaType.html">MediaType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HTTPCookies</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HTTPCookies</span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>Cookie</code> Array</p>
+
+<p><a href="https://docs.vapor.codes/3.0/http/cookies/#multiple-cookies">Learn More →</a></p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesV7cookiesSayAA10HTTPCookieVGv"></a>
+                    <a name="//apple_ref/swift/Property/cookies" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesV7cookiesSayAA10HTTPCookieVGv">cookies</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All <code>Cookie</code>s contained</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cookies</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/HTTPCookie.html">HTTPCookie</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L6">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesVACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesVACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an empty <code>Cookies</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L9-L11">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesVACx7cookies_tcs8SequenceRzAA10HTTPCookieV7ElementRtzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(cookies:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesVACx7cookies_tcs8SequenceRzAA10HTTPCookieV7ElementRtzlufc">init(cookies:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>Cookies</code> from the contents of a <code>Cookie</code> Sequence</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">cookies</span><span class="p">:</span> <span class="kt">C</span><span class="p">)</span> <span class="k">where</span> <span class="kt">C</span><span class="o">.</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt"><a href="../Structs/HTTPCookie.html">HTTPCookie</a></span><span class="p">,</span> <span class="kt">C</span><span class="p">:</span> <span class="kt">Sequence</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L14-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesV9subscriptAA15HTTPCookieValueVSgSSci"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesV9subscriptAA15HTTPCookieValueVSgSSci">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Access a <code>Cookie</code> by name</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/HTTPCookieValue.html">HTTPCookieValue</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesVACSayAA10HTTPCookieVG12arrayLiterald_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(arrayLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesVACSayAA10HTTPCookieVG12arrayLiterald_tcfc">init(arrayLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>Cookies</code> from an array of cookies</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">arrayLiteral</span> <span class="nv">elements</span><span class="p">:</span> <span class="kt"><a href="../Structs/HTTPCookie.html">HTTPCookie</a></span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L47-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesVACSaySS_AA15HTTPCookieValueVtG17dictionaryLiterald_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dictionaryLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesVACSaySS_AA15HTTPCookieValueVtG17dictionaryLiterald_tcfc">init(dictionaryLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>Cookies</code> from an array of names and cookie values</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">dictionaryLiteral</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Structs/HTTPCookieValue.html">HTTPCookieValue</a></span><span class="p">)</span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L52-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesV12makeIterators08IndexingD0VySayAA10HTTPCookieVGGyF"></a>
+                    <a name="//apple_ref/swift/Method/makeIterator()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesV12makeIterators08IndexingD0VySayAA10HTTPCookieVGGyF">makeIterator()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Iterates over all <code>Cookie</code>s</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeIterator</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">IndexingIterator</span><span class="o">&lt;</span><span class="p">[</span><span class="kt"><a href="../Structs/HTTPCookie.html">HTTPCookie</a></span><span class="p">]</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L62-L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesVACSgSS12cookieHeader_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cookieHeader:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesVACSgSS12cookieHeader_tcfc">init(cookieHeader:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parses a <code>Request</code> cookie</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">cookieHeader</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L101-L117">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesVACSgSaySSG16setCookieHeaders_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(setCookieHeaders:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesVACSgSaySSG16setCookieHeaders_tcfc">init(setCookieHeaders:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parses a <code>Response</code> cookie</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">setCookieHeaders</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L120-L133">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesV9serializeyAA11HTTPRequestVz4into_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(into:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesV9serializeyAA11HTTPRequestVz4into_tF">serialize(into:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Seriaizes the <code>Cookies</code> for a <code>Request</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">into</span> <span class="nv">request</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../Structs/HTTPRequest.html">HTTPRequest</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L140-L151">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPCookiesV9serializeyAA12HTTPResponseVz4into_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(into:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPCookiesV9serializeyAA12HTTPResponseVz4into_tF">serialize(into:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Seriaizes the <code>Cookies</code> for a <code>Response</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">into</span> <span class="nv">response</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../Structs/HTTPResponse.html">HTTPResponse</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/engine/tree/3.0.0-rc.2.1/Sources/HTTP/HTTPCookies.swift#L154-L163">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,1 +1,86 @@
-<h1>Directory Listing</h1>console/<ul><li>3.0.0-rc.2.1/<ul><li><a href="/console/3.0.0-rc.2.1/Command/index.html">Command/</a><br></li><li><a href="/console/3.0.0-rc.2.1/Console/index.html">Console/</a><br></li></ul></li><li>3.0.0-rc.2.2/<ul><li><a href="/console/3.0.0-rc.2.2/Command/index.html">Command/</a><br></li></ul></li></ul>core/<ul><li>3.0.0-rc.2.2/<ul><li><a href="/core/3.0.0-rc.2.2/Core/index.html">Core/</a><br></li></ul></li><li>3.0.0-rc.2.3/<ul><li><a href="/core/3.0.0-rc.2.3/Core/index.html">Core/</a><br></li></ul></li><li>3.0.0-rc.2.5.2/<ul><li><a href="/core/3.0.0-rc.2.5.2/Async/index.html">Async/</a><br></li><li><a href="/core/3.0.0-rc.2.5.2/Core/index.html">Core/</a><br></li></ul></li><li>3.0.0/<ul><li><a href="/core/3.0.0/Async/index.html">Async/</a><br></li><li><a href="/core/3.0.0/Bits/index.html">Bits/</a><br></li><li><a href="/core/3.0.0/Core/index.html">Core/</a><br></li><li><a href="/core/3.0.0/Debugging/index.html">Debugging/</a><br></li></ul></li><li>latest/<ul><li><a href="/core/latest/Async/index.html">Async/</a><br></li><li><a href="/core/latest/Bits/index.html">Bits/</a><br></li><li><a href="/core/latest/Core/index.html">Core/</a><br></li><li><a href="/core/latest/Debugging/index.html">Debugging/</a><br></li></ul></li></ul>crypto/<ul><li>3.0.0-rc.2/<ul><li><a href="/crypto/3.0.0-rc.2/Crypto/index.html">Crypto/</a><br></li></ul></li><li>3.0.0-rc.3/<ul><li><a href="/crypto/3.0.0-rc.3/Crypto/index.html">Crypto/</a><br></li></ul></li></ul>database-kit/<ul><li>1.0.0-rc.2.2.1/<ul><li><a href="/database-kit/1.0.0-rc.2.2.1/DatabaseKit/index.html">DatabaseKit/</a><br></li><li><a href="/database-kit/1.0.0-rc.2.2.1/SQL/index.html">SQL/</a><br></li></ul></li></ul>engine/<ul><li>3.0.0-rc.2.1/<ul><li><a href="/engine/3.0.0-rc.2.1/FormURLEncoded/index.html">FormURLEncoded/</a><br></li><li><a href="/engine/3.0.0-rc.2.1/HTTP/index.html">HTTP/</a><br></li><li><a href="/engine/3.0.0-rc.2.1/Multipart/index.html">Multipart/</a><br></li><li><a href="/engine/3.0.0-rc.2.1/WebSocket/index.html">WebSocket/</a><br></li></ul></li></ul>fluent-sqlite/<ul><li>3.0.0-rc.2.1/<ul><li><a href="/fluent-sqlite/3.0.0-rc.2.1/FluentSQLite/index.html">FluentSQLite/</a><br></li></ul></li></ul>fluent/<ul><li>3.0.0-rc.2.2/<ul><li><a href="/fluent/3.0.0-rc.2.2/Fluent/index.html">Fluent/</a><br></li><li><a href="/fluent/3.0.0-rc.2.2/FluentSQL/index.html">FluentSQL/</a><br></li></ul></li><li>3.0.0-rc.2.3/<ul><li><a href="/fluent/3.0.0-rc.2.3/Fluent/index.html">Fluent/</a><br></li></ul></li></ul>jwt/<ul><li>3.0.0-rc.2.1/<ul><li><a href="/jwt/3.0.0-rc.2.1/JWT/index.html">JWT/</a><br></li></ul></li></ul>postgresql/<ul><li>1.0.0-rc.2.0.2/<ul><li><a href="/postgresql/1.0.0-rc.2.0.2/PostgreSQL/index.html">PostgreSQL/</a><br></li></ul></li></ul>service/<ul><li>1.0.0-rc.2.2/<ul><li><a href="/service/1.0.0-rc.2.2/Service/index.html">Service/</a><br></li></ul></li></ul>vapor/<ul><li>2.4.4/<ul><li><a href="/vapor/2.4.4/Vapor/index.html">Vapor/</a><br></li></ul></li><li>3.0.0-rc.2.0.2/<ul><li><a href="/vapor/3.0.0-rc.2.0.2/Vapor/index.html">Vapor/</a><br></li></ul></li><li>3.0.0-rc.2.1/<ul><li><a href="/vapor/3.0.0-rc.2.1/Vapor/index.html">Vapor/</a><br></li></ul></li><li>3.0.0-rc.2.2/<ul><li><a href="/vapor/3.0.0-rc.2.2/Vapor/index.html">Vapor/</a><br></li></ul></li></ul>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vapor API Docs</title>
+    <style>
+        html, body {
+            height: 100%;
+            padding:; 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main {
+            margin-top: -50px;
+        }
+
+        .title {
+            background-image: url(/images/api-docs.png);
+            width: 300px;
+            height: 74px;
+            background-size: 300px auto;
+            text-indent: -9999px;
+            margin-bottom: 0;
+        }
+
+        .nav {
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <h1 class="title">Vapor API Docs</h1>
+            <br>
+            <select class="nav">
+                <option>Choose module...</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var nav = $(".nav");
+        var tmp = $("<div>");
+
+        nav.on("change", function(e) {
+            var option = $(this).find("option:selected");
+            $(this).prop('selectedIndex',0);
+            window.location.href =  option.attr("href");
+        });
+
+        tmp.load("manifest.json", function() {
+            var modules = {};
+            var manifest = $.parseJSON(tmp.text());
+            $.each(manifest, function(i, val) {
+                if (modules[val.module] == null) {
+                    modules[val.module] = [];
+                }
+                modules[val.module].push({
+                    version: val.version,
+                    href: "/" + val.repo + "/" + val.version + "/" + val.module + "/index.html"
+                });
+            });
+            console.log(modules);
+            $.each(modules, function(module, versions){
+                var group = $("<optgroup>");
+                group.attr("label", module);
+                $.each(versions.reverse(), function(i, doc) {
+                    var opt = $("<option>");
+                    opt.text(doc.version);
+                    opt.attr("href", doc.href);
+                    group.append(opt);
+                })
+                nav.append(group);
+            });
+        });
+    </script>
+</body>
+</html>

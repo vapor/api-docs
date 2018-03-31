@@ -1,33 +1,26 @@
-O="<h1>Directory Listing</h1>"
-
+O="[\n"
 for REPO in */
 do
 	cd $REPO
-	O="$O$REPO"
-	O="$O<ul>"
 	for VERSION in */
 	do
 		cd $VERSION
-		O="$O<li>"
-		O="$O$VERSION"
-		O="$O<ul>"
 			for MODULE in */
 			do
 				cd $MODULE
-				O="$O<li>"
-				O="$O<a href=\"/$REPO$VERSION${MODULE}index.html\">$MODULE</a><br>"
-				O="$O</li>"
+				O+="    {\"repo\": \"${REPO%?}\", \"version\": \"${VERSION%?}\", \"module\": \"${MODULE%?}\"},\n"
 				cd ..
 			done
-		O="$O</ul>"
-		O="$O</li>"
 		cd ..
 	done
-	O="$O</ul>"
 	cd ..
 done
+O=${O%?}
+O=${O%?}
+O=${O%?}
+O+="\n]\n"
 
-echo -e $O > index.html;
+echo -e $O > manifest.json;
 
 git add .
 git commit -am "build"

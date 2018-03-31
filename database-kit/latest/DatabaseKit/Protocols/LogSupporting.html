@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LogSupporting Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/LogSupporting" class="dashAnchor"></a>
+    <a title="LogSupporting Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">DatabaseKit Docs</a> (91% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/database-kit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2Drc%2E2%2E2%2E1%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">DatabaseKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        LogSupporting Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DatabaseKitProvider.html">DatabaseKitProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DatabaseLogger.html">DatabaseLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MemoryKeyedCache.html">MemoryKeyedCache</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Container.html">Container</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SubContainer.html">SubContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Database.html">Database</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DatabaseConnectable.html">DatabaseConnectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DatabaseConnection.html">DatabaseConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyedCache.html">KeyedCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LogSupporting.html">LogSupporting</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseConfig.html">DatabaseConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseConnectionPoolConfig.html">DatabaseConnectionPoolConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseIdentifier.html">DatabaseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseKitError.html">DatabaseKitError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DatabaseLog.html">DatabaseLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Databases.html">Databases</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>LogSupporting</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">LogSupporting</span></code></pre>
+
+                </div>
+              </div>
+            <p>Capable of logging queries through a supplied DatabaseLogger.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11DatabaseKit13LogSupportingP13enableLoggingyAA0A6LoggerC5using_tF"></a>
+                    <a name="//apple_ref/swift/Method/enableLogging(using:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11DatabaseKit13LogSupportingP13enableLoggingyAA0A6LoggerC5using_tF">enableLogging(using:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enables query logging to the supplied logger.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">enableLogging</span><span class="p">(</span><span class="n">using</span> <span class="nv">logger</span><span class="p">:</span> <span class="kt"><a href="../Classes/DatabaseLogger.html">DatabaseLogger</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/Log/DatabaseLog.swift#L6">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
