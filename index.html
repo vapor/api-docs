@@ -68,7 +68,7 @@
                     href: "/" + val.repo + "/" + val.version + "/" + val.module + "/index.html"
                 });
             });
-            console.log(modules);
+
             $.each(modules, function(module, versions){
                 var group = $("<optgroup>");
                 group.attr("label", module);
@@ -80,6 +80,13 @@
                 })
                 nav.append(group);
             });
+
+            var items = nav.children("optgroup").sort(function(a, b) {
+                console.log($(a));
+                return $(a).attr("label").localeCompare($(b).attr("label"));
+            });
+            nav.children("optgroup").remove();
+            nav.append(items);
         });
     </script>
 </body>
