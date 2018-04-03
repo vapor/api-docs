@@ -13,9 +13,9 @@
     <a title="Global Variables  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Crypto Docs</a> (68% documented)</p>
+        <p><a href="index.html">Crypto Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/crypto"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E0%2E0%2Drc%2E3%2FCrypto%2Fdocsets%2FCrypto%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E0%2E0%2FCrypto%2Fdocsets%2FCrypto%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,13 +32,13 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/BCrypt.html">BCrypt</a>
+                <a href="Classes/BCryptDigest.html">BCryptDigest</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/BCrypt/Error.html">– Error</a>
+                <a href="Classes/Cipher.html">Cipher</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/BCrypt/Salt.html">– Salt</a>
+                <a href="Classes/CipherAlgorithm.html">CipherAlgorithm</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CryptoRandom.html">CryptoRandom</a>
@@ -52,11 +52,23 @@
               <li class="nav-group-task">
                 <a href="Classes/HMAC.html">HMAC</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/RSA.html">RSA</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:6Crypto6AES128AA6CipherCv">AES128</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:6Crypto6AES256AA6CipherCv">AES256</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:6Crypto6BCryptAA0B6DigestCv">BCrypt</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Global Variables.html#/s:6Crypto3MD4AA6DigestCv">MD4</a>
               </li>
@@ -84,24 +96,13 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/CipherMode.html">CipherMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/RSAInputFormat.html">RSAInputFormat</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/RSAKeyType.html">RSAKeyType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/RSAPaddingScheme.html">RSAPaddingScheme</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Extensions/Swift.html">Swift</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Swift/Collection.html">– Collection</a>
               </li>
             </ul>
           </li>
@@ -110,9 +111,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Structs/CryptoError.html">CryptoError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/RSA.html">RSA</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/RSAKey.html">RSAKey</a>
@@ -130,6 +128,146 @@
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/BCrypt"></a>
+                <a name="//apple_ref/swift/Section/BCrypt" class="dashAnchor"></a>
+                <a href="#/BCrypt">
+                  <h3 class="section-name">BCrypt</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto6BCryptAA0B6DigestCv"></a>
+                    <a name="//apple_ref/swift/Global/BCrypt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto6BCryptAA0B6DigestCv">BCrypt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates and verifies BCrypt hashes.</p>
+
+<p>Use BCrypt to create hashes for sensitive information like passwords.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="kt">BCrypt</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">cost</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
+</code></pre>
+
+<p>BCrypt uses a random salt each time it creates a hash. To verify hashes, use the <code>verify(_:matches)</code> method.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">hash</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">BCrypt</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">cost</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
+<span class="k">try</span> <span class="kt">BCrypt</span><span class="o">.</span><span class="nf">verify</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">created</span><span class="p">:</span> <span class="n">hash</span><span class="p">)</span> <span class="c1">// true</span>
+</code></pre>
+
+<p><a href="https://en.wikipedia.org/wiki/Bcrypt">https://en.wikipedia.org/wiki/Bcrypt</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">BCrypt</span><span class="p">:</span> <span class="kt"><a href="Classes/BCryptDigest.html">BCryptDigest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/BCrypt/BCryptDigest.swift#L70-L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Ciphers"></a>
+                <a name="//apple_ref/swift/Section/Ciphers" class="dashAnchor"></a>
+                <a href="#/Ciphers">
+                  <h3 class="section-name">Ciphers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto6AES128AA6CipherCv"></a>
+                    <a name="//apple_ref/swift/Global/AES128" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto6AES128AA6CipherCv">AES128</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>AES-128 ECB Cipher.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Data</span> <span class="c1">// 16-bytes</span>
+<span class="k">let</span> <span class="nv">ciphertext</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">AES128</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">)</span> <span class="c1">// Encrypted Data</span>
+<span class="kt">AES128</span><span class="o">.</span><span class="nf">decrypt</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">)</span><span class="o">.</span><span class="nf">convert</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="c1">// "vapor"</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">AES128</span><span class="p">:</span> <span class="kt"><a href="Classes/Cipher.html">Cipher</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Cipher/Cipher.swift#L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto6AES256AA6CipherCv"></a>
+                    <a name="//apple_ref/swift/Global/AES256" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto6AES256AA6CipherCv">AES256</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>AES-256 ECB Cipher.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Data</span> <span class="c1">// 32-bytes</span>
+<span class="k">let</span> <span class="nv">ciphertext</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">AES256</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">)</span> <span class="c1">// Encrypted Data</span>
+<span class="kt">AES256</span><span class="o">.</span><span class="nf">decrypt</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">)</span><span class="o">.</span><span class="nf">convert</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="c1">// "vapor"</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">AES256</span><span class="p">:</span> <span class="kt"><a href="Classes/Cipher.html">Cipher</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Cipher/Cipher.swift#L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Digests"></a>
+                <a name="//apple_ref/swift/Section/Digests" class="dashAnchor"></a>
+                <a href="#/Digests">
+                  <h3 class="section-name">Digests</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -144,8 +282,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>MARK: Implementations
-MD4 digest.</p>
+                        <p>MD4 digest.</p>
 
 <p><a href="https://en.wikipedia.org/wiki/MD4">https://en.wikipedia.org/wiki/MD4</a></p>
 
@@ -159,7 +296,7 @@ MD4 digest.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/Hash/Digest.swift#L109">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Digest/Digest.swift#L9">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -191,7 +328,7 @@ MD4 digest.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/Hash/Digest.swift#L114">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Digest/Digest.swift#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -223,7 +360,7 @@ MD4 digest.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/Hash/Digest.swift#L119">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Digest/Digest.swift#L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -255,7 +392,7 @@ MD4 digest.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/Hash/Digest.swift#L124">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Digest/Digest.swift#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,7 +424,7 @@ MD4 digest.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/Hash/Digest.swift#L129">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Digest/Digest.swift#L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -319,7 +456,7 @@ MD4 digest.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/Hash/Digest.swift#L134">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Digest/Digest.swift#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -351,7 +488,7 @@ MD4 digest.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/Hash/Digest.swift#L139">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Digest/Digest.swift#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -361,7 +498,7 @@ MD4 digest.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-23)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

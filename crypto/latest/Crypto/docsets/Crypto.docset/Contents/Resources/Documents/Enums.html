@@ -13,9 +13,9 @@
     <a title="Enumerations  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Crypto Docs</a> (68% documented)</p>
+        <p><a href="index.html">Crypto Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/crypto"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E0%2E0%2Drc%2E3%2FCrypto%2Fdocsets%2FCrypto%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E0%2E0%2FCrypto%2Fdocsets%2FCrypto%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,13 +32,13 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/BCrypt.html">BCrypt</a>
+                <a href="Classes/BCryptDigest.html">BCryptDigest</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/BCrypt/Error.html">– Error</a>
+                <a href="Classes/Cipher.html">Cipher</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/BCrypt/Salt.html">– Salt</a>
+                <a href="Classes/CipherAlgorithm.html">CipherAlgorithm</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CryptoRandom.html">CryptoRandom</a>
@@ -52,11 +52,23 @@
               <li class="nav-group-task">
                 <a href="Classes/HMAC.html">HMAC</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/RSA.html">RSA</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:6Crypto6AES128AA6CipherCv">AES128</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:6Crypto6AES256AA6CipherCv">AES256</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:6Crypto6BCryptAA0B6DigestCv">BCrypt</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Global Variables.html#/s:6Crypto3MD4AA6DigestCv">MD4</a>
               </li>
@@ -84,24 +96,13 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/CipherMode.html">CipherMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/RSAInputFormat.html">RSAInputFormat</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/RSAKeyType.html">RSAKeyType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/RSAPaddingScheme.html">RSAPaddingScheme</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Extensions/Swift.html">Swift</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Swift/Collection.html">– Collection</a>
               </li>
             </ul>
           </li>
@@ -110,9 +111,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Structs/CryptoError.html">CryptoError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/RSA.html">RSA</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/RSAKey.html">RSAKey</a>
@@ -129,6 +127,50 @@
 
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Ciphers"></a>
+                <a name="//apple_ref/swift/Section/Ciphers" class="dashAnchor"></a>
+                <a href="#/Ciphers">
+                  <h3 class="section-name">Ciphers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto10CipherModeO"></a>
+                    <a name="//apple_ref/swift/Enum/CipherMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto10CipherModeO">CipherMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Available cipher modes. Either <code>encrypt</code> or <code>decrypt</code>.</p>
+
+<p>Used when calling <code>reset</code> on a <code><a href="Classes/Cipher.html">Cipher</a></code>.</p>
+
+                        <a href="Enums/CipherMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CipherMode</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/Cipher/Cipher.swift#L206-L212">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <ul>
                 <li class="item">
@@ -157,38 +199,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/RSA/RSA.swift#L98-L103">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Crypto16RSAPaddingSchemeO"></a>
-                    <a name="//apple_ref/swift/Enum/RSAPaddingScheme" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Crypto16RSAPaddingSchemeO">RSAPaddingScheme</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Supported RSA padding type.</p>
-
-                        <a href="Enums/RSAPaddingScheme.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RSAPaddingScheme</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/RSA/RSA.swift#L106-L111">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/RSA/RSA.swift#L132-L137">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -223,7 +234,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0-rc.3/Sources/Crypto/RSA/RSAKey.swift#L39-L44">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/RSA/RSAKey.swift#L45-L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -233,7 +244,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-23)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
