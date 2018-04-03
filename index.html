@@ -57,7 +57,7 @@
             window.location.href =  option.attr("href");
         });
 
-        tmp.load("manifest.json", function() {
+        tmp.load("/manifest.json", function() {
             var modules = {};
             var manifest = $.parseJSON(tmp.text());
             $.each(manifest, function(i, val) {
