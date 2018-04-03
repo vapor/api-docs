@@ -14,9 +14,9 @@
     <a title="Extendable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Service Docs</a> (82% documented)</p>
+        <p><a href="../index.html">Service Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/service"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2Drc%2E2%2E2%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -39,9 +39,6 @@
                 <a href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/EphemeralWorkerConfig.html">EphemeralWorkerConfig</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/ServiceCache.html">ServiceCache</a>
               </li>
             </ul>
@@ -53,10 +50,7 @@
                 <a href="../Protocols/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ContainerFindable.html">ContainerFindable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/EphemeralContainer.html">EphemeralContainer</a>
+                <a href="../Protocols/ContainerAlias.html">ContainerAlias</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Extendable.html">Extendable</a>
@@ -66,9 +60,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:7ServiceAAP">Service</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ServiceCacheable.html">ServiceCacheable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServiceFactory.html">ServiceFactory</a>
@@ -102,9 +93,6 @@
               <li class="nav-group-task">
                 <a href="../Structs/Services.html">Services</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TypeServiceFactory.html">TypeServiceFactory</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -119,9 +107,15 @@
 
                 </div>
               </div>
-            <p>Types conforming to extendable can have stored
-properties added in extension by using the
-provided dictionary.</p>
+            <p>Types conforming to <code>Extendable</code> can have stored properties added in extension by using the <code><a href="../Structs/Extend.html">Extend</a></code> struct.</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="n">cass</span> <span class="kt">MyType</span><span class="p">:</span> <span class="kt">Extendable</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+<span class="kd">extension</span> <span class="kt">MyType</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">foo</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">extend</span><span class="o">.</span><span class="nf">get</span><span class="p">(\</span><span class="kt">MyType</span><span class="o">.</span><span class="n">foo</span><span class="p">,</span> <span class="k">default</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+        <span class="k">set</span> <span class="p">{</span> <span class="n">extend</span><span class="o">.</span><span class="nf">set</span><span class="p">(\</span><span class="kt">MyType</span><span class="o">.</span><span class="n">foo</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">newValue</span><span class="p">)</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 
           </section>
           <section class="section task-group-section">
@@ -140,7 +134,7 @@ provided dictionary.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Arbitrary property storage. See <code><a href="../Structs/Extend.html">Extend</a></code> and <code>Extendable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -152,7 +146,7 @@ provided dictionary.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L13">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -162,7 +156,7 @@ provided dictionary.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

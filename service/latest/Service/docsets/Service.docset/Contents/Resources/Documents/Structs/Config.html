@@ -14,9 +14,9 @@
     <a title="Config Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Service Docs</a> (82% documented)</p>
+        <p><a href="../index.html">Service Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/service"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2Drc%2E2%2E2%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -39,9 +39,6 @@
                 <a href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/EphemeralWorkerConfig.html">EphemeralWorkerConfig</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/ServiceCache.html">ServiceCache</a>
               </li>
             </ul>
@@ -53,10 +50,7 @@
                 <a href="../Protocols/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ContainerFindable.html">ContainerFindable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/EphemeralContainer.html">EphemeralContainer</a>
+                <a href="../Protocols/ContainerAlias.html">ContainerAlias</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Extendable.html">Extendable</a>
@@ -66,9 +60,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:7ServiceAAP">Service</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ServiceCacheable.html">ServiceCacheable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServiceFactory.html">ServiceFactory</a>
@@ -102,9 +93,6 @@
               <li class="nav-group-task">
                 <a href="../Structs/Services.html">Services</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TypeServiceFactory.html">TypeServiceFactory</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -115,18 +103,54 @@
             <h1>Config</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Config</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Config</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                 </div>
               </div>
-            <p>Types conforming to this protocol can be used by
-the service container to disambiguate situations where
-multiple services are available for a given <code>.make()</code> request.</p>
+            <p>The service <code>Config</code> is used to disambigute which concrete service should be used if multiple are
+available for a given protocol</p>
+<pre class="highlight swift"><code><span class="n">config</span><span class="o">.</span><span class="nf">prefer</span><span class="p">(</span><span class="kt">RedisCache</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Cache</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
+
+<p>Service <code>Config</code> can also be used to set concrete service requirements to ensure a specific concrete
+services are being used. This can be helpful if you want to ensure non-dev dependencies are being used in production.</p>
+<pre class="highlight swift"><code><span class="n">config</span><span class="o">.</span><span class="nf">require</span><span class="p">(</span><span class="kt">ProductionLogger</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Logger</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Service6ConfigV11descriptionSSv"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service6ConfigV11descriptionSSv">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>CustomStringConvertible</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Config/Config.swift#L19-L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -152,7 +176,7 @@ multiple services are available for a given <code>.make()</code> request.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Config.swift#L9-L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Config/Config.swift#L39-L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -170,22 +194,52 @@ multiple services are available for a given <code>.make()</code> request.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use this method to disambiguate multiple available implementations for a given interface.</p>
+                        <p>Use this method to disambiguate multiple available service implementations for a given interface.</p>
+<pre class="highlight swift"><code><span class="n">config</span><span class="o">.</span><span class="nf">prefer</span><span class="p">(</span><span class="kt">RedisCache</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Cache</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">prefer</span><span class="p">(</span>
-    <span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-    <span class="k">for</span> <span class="nv">interface</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span>
-<span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">prefer</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="k">for</span> <span class="nv">interface</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Concrete service type to prefer. This should not be a protocol.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interface</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The interface to prefer this concrete service for. This must be a protocol that the service conforms to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Config.swift#L15-L22">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Config/Config.swift#L51-L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -204,21 +258,51 @@ multiple services are available for a given <code>.make()</code> request.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Use this method to require a given implementation for an interface.</p>
+<pre class="highlight swift"><code><span class="n">config</span><span class="o">.</span><span class="nf">require</span><span class="p">(</span><span class="kt">ProductionLogger</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Logger</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">require</span><span class="p">(</span>
-    <span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-    <span class="k">for</span> <span class="nv">interface</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span>
-<span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">require</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="k">for</span> <span class="nv">interface</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span> <span class="p">)</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Concrete service type to require. This should not be a protocol.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interface</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The interface to require this concrete service for. This must be a protocol that the service conforms to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Config.swift#L25-L32">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Config/Config.swift#L62-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -228,7 +312,7 @@ multiple services are available for a given <code>.make()</code> request.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

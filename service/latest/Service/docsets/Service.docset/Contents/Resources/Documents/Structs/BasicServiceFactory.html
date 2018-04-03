@@ -14,9 +14,9 @@
     <a title="BasicServiceFactory Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Service Docs</a> (82% documented)</p>
+        <p><a href="../index.html">Service Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/service"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2Drc%2E2%2E2%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -39,9 +39,6 @@
                 <a href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/EphemeralWorkerConfig.html">EphemeralWorkerConfig</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/ServiceCache.html">ServiceCache</a>
               </li>
             </ul>
@@ -53,10 +50,7 @@
                 <a href="../Protocols/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ContainerFindable.html">ContainerFindable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/EphemeralContainer.html">EphemeralContainer</a>
+                <a href="../Protocols/ContainerAlias.html">ContainerAlias</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Extendable.html">Extendable</a>
@@ -66,9 +60,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:7ServiceAAP">Service</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ServiceCacheable.html">ServiceCacheable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServiceFactory.html">ServiceFactory</a>
@@ -102,9 +93,6 @@
               <li class="nav-group-task">
                 <a href="../Structs/Services.html">Services</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TypeServiceFactory.html">TypeServiceFactory</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -119,7 +107,11 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Basic, closure-based <code><a href="../Protocols/ServiceFactory.html">ServiceFactory</a></code> implementation.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">factory</span> <span class="o">=</span> <span class="kt">BasicServiceFactory</span><span class="p">(</span><span class="kt">MyFoo</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">suppports</span><span class="p">:</span> <span class="p">[</span><span class="kt">Foo</span><span class="o">.</span><span class="k">self</span><span class="p">])</span> <span class="p">{</span> <span class="n">container</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="kt">MyFoo</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
 
           </section>
           <section class="section task-group-section">
@@ -138,7 +130,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See ServiceFactory.serviceType</p>
+                        <p>See <code><a href="../Protocols/ServiceFactory.html">ServiceFactory</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -150,7 +142,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/BasicServiceFactory.swift#L5">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Services/BasicServiceFactory.swift#L9">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -168,7 +160,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See ServiceFactory.serviceSupports</p>
+                        <p>See <code><a href="../Protocols/ServiceFactory.html">ServiceFactory</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -180,38 +172,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/BasicServiceFactory.swift#L8">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service05BasicA7FactoryV0aC7Closurea"></a>
-                    <a name="//apple_ref/swift/Alias/ServiceFactoryClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service05BasicA7FactoryV0aC7Closurea">ServiceFactoryClosure</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Accepts a container and worker, returning an
-initialized service.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ServiceFactoryClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Any</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/BasicServiceFactory.swift#L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Services/BasicServiceFactory.swift#L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -229,19 +190,19 @@ initialized service.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Closure that constructs the service</p>
+                        <p>Accepts a <code><a href="../Protocols/Container.html">Container</a></code>, returning an initialized service.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">closure</span><span class="p">:</span> <span class="kt"><a href="../Structs/BasicServiceFactory.html#/s:7Service05BasicA7FactoryV0aC7Closurea">ServiceFactoryClosure</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Any</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/BasicServiceFactory.swift#L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Services/BasicServiceFactory.swift#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -259,7 +220,7 @@ initialized service.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create a new basic service factoryl.</p>
+                        <p>Create a new <code>BasicServiceFactory</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -269,13 +230,56 @@ initialized service.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
     <span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
     <span class="n">supports</span> <span class="nv">interfaces</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">],</span>
-    <span class="n">factory</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Structs/BasicServiceFactory.html#/s:7Service05BasicA7FactoryV0aC7Closurea">ServiceFactoryClosure</a></span>
+    <span class="n">factory</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Any</span>
 <span class="p">)</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Protocols/ServiceFactory.html">ServiceFactory</a></code> service type. This is the type that should be returned by the factory closure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interfaces</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of protocols that the service supports. Empty array if the service does not support any protocols.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>factory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that accepts a container and returns an initialized service.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/BasicServiceFactory.swift#L18-L26">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Services/BasicServiceFactory.swift#L23-L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -293,7 +297,7 @@ initialized service.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See ServiceFactory.makeService</p>
+                        <p>See <code><a href="../Protocols/ServiceFactory.html">ServiceFactory</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -305,7 +309,7 @@ initialized service.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/BasicServiceFactory.swift#L29-L31">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Services/BasicServiceFactory.swift#L34-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -315,7 +319,7 @@ initialized service.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -13,9 +13,9 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Service Docs</a> (82% documented)</p>
+        <p><a href="index.html">Service Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/service"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2Drc%2E2%2E2%2FService%2Fdocsets%2FService%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -38,9 +38,6 @@
                 <a href="Classes/BasicSubContainer.html">BasicSubContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/EphemeralWorkerConfig.html">EphemeralWorkerConfig</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/ServiceCache.html">ServiceCache</a>
               </li>
             </ul>
@@ -52,10 +49,7 @@
                 <a href="Protocols/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/ContainerFindable.html">ContainerFindable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/EphemeralContainer.html">EphemeralContainer</a>
+                <a href="Protocols/ContainerAlias.html">ContainerAlias</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/Extendable.html">Extendable</a>
@@ -65,9 +59,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Protocols.html#/s:7ServiceAAP">Service</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ServiceCacheable.html">ServiceCacheable</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/ServiceFactory.html">ServiceFactory</a>
@@ -101,9 +92,6 @@
               <li class="nav-group-task">
                 <a href="Structs/Services.html">Services</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Structs/TypeServiceFactory.html">TypeServiceFactory</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -131,7 +119,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A basic container</p>
+                        <p>A basic <code><a href="Protocols/Container.html">Container</a></code> implementation.</p>
+
+<p>This does not boot any providers and is mostly used for testing.</p>
 
                         <a href="Classes/BasicContainer.html" class="slightly-smaller">See more</a>
                       </div>
@@ -144,77 +134,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Container.swift#L14-L38">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service21EphemeralWorkerConfigC"></a>
-                    <a name="//apple_ref/swift/Class/EphemeralWorkerConfig" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service21EphemeralWorkerConfigC">EphemeralWorkerConfig</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Configures ephemeral workers.</p>
-
-                        <a href="Classes/EphemeralWorkerConfig.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">EphemeralWorkerConfig</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/EphemeralContainer.swift#L54-L98">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service0A5CacheC"></a>
-                    <a name="//apple_ref/swift/Class/ServiceCache" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service0A5CacheC">ServiceCache</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Classes/ServiceCache.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ServiceCache</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/ServiceCacheable.swift#L7-L32">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Container/BasicContainer.swift#L4-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -236,7 +156,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A basic container</p>
+                        <p>A basic <code><a href="Protocols/SubContainer.html">SubContainer</a></code> implementation.</p>
 
                         <a href="Classes/BasicSubContainer.html" class="slightly-smaller">See more</a>
                       </div>
@@ -249,7 +169,42 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/SubContainer.swift#L38-L66">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Container/BasicSubContainer.swift#L2-L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Service0A5CacheC"></a>
+                    <a name="//apple_ref/swift/Class/ServiceCache" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service0A5CacheC">ServiceCache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Caches services. All API besides creating a new <code>ServiceCache</code> are internal.</p>
+
+                        <a href="Classes/ServiceCache.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ServiceCache</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Services/ServiceCache.swift#L2-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -259,7 +214,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

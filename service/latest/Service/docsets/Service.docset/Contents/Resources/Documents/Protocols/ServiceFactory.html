@@ -14,9 +14,9 @@
     <a title="ServiceFactory Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Service Docs</a> (82% documented)</p>
+        <p><a href="../index.html">Service Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/service"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2Drc%2E2%2E2%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -39,9 +39,6 @@
                 <a href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/EphemeralWorkerConfig.html">EphemeralWorkerConfig</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/ServiceCache.html">ServiceCache</a>
               </li>
             </ul>
@@ -53,10 +50,7 @@
                 <a href="../Protocols/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ContainerFindable.html">ContainerFindable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/EphemeralContainer.html">EphemeralContainer</a>
+                <a href="../Protocols/ContainerAlias.html">ContainerAlias</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Extendable.html">Extendable</a>
@@ -66,9 +60,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:7ServiceAAP">Service</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ServiceCacheable.html">ServiceCacheable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServiceFactory.html">ServiceFactory</a>
@@ -102,9 +93,6 @@
               <li class="nav-group-task">
                 <a href="../Structs/Services.html">Services</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TypeServiceFactory.html">TypeServiceFactory</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -119,7 +107,9 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Base protocol for all service factories. This is how the <code><a href="../Structs/Services.html">Services</a></code> struct stores its registered services.</p>
+
+<p>You will usually not use this protocol directly. See <code><a href="../Protocols/ServiceType.html">ServiceType</a></code> protocol and the <code><a href="../Structs/Services.html">Services</a></code> struct instead.</p>
 
           </section>
           <section class="section task-group-section">
@@ -138,8 +128,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This services type. Used for looking up
-the service.</p>
+                        <p>This service&rsquo;s actual type. Used for looking up the service uniquely.</p>
 
                       </div>
                       <div class="declaration">
@@ -151,7 +140,7 @@ the service.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/ServiceFactory.swift#L6">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Services/ServiceFactory.swift#L6">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -169,9 +158,12 @@ the service.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An array of protocols that this service supports.
-Note: this service <em>must</em> be force-castable to all
-interfaces provided in this array.</p>
+                        <p>An array of protocols (or interfaces) that this service supports.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This service <em>must</em> be force-castable to all interfaces provided in this array.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -183,7 +175,7 @@ interfaces provided in this array.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/ServiceFactory.swift#L11">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Services/ServiceFactory.swift#L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -201,8 +193,7 @@ interfaces provided in this array.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates an instance of the service for the supplied
-container and worker</p>
+                        <p>Creates an instance of the service for the supplied <code><a href="../Protocols/Container.html">Container</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -214,7 +205,7 @@ container and worker</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/ServiceFactory.swift#L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Services/ServiceFactory.swift#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -224,7 +215,7 @@ container and worker</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,9 +14,9 @@
     <a title="Provider Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Service Docs</a> (82% documented)</p>
+        <p><a href="../index.html">Service Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/service"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2Drc%2E2%2E2%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -39,9 +39,6 @@
                 <a href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/EphemeralWorkerConfig.html">EphemeralWorkerConfig</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/ServiceCache.html">ServiceCache</a>
               </li>
             </ul>
@@ -53,10 +50,7 @@
                 <a href="../Protocols/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ContainerFindable.html">ContainerFindable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/EphemeralContainer.html">EphemeralContainer</a>
+                <a href="../Protocols/ContainerAlias.html">ContainerAlias</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Extendable.html">Extendable</a>
@@ -66,9 +60,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:7ServiceAAP">Service</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ServiceCacheable.html">ServiceCacheable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServiceFactory.html">ServiceFactory</a>
@@ -102,9 +93,6 @@
               <li class="nav-group-task">
                 <a href="../Structs/Services.html">Services</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TypeServiceFactory.html">TypeServiceFactory</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -119,193 +107,39 @@
 
                 </div>
               </div>
-            <p>Providers allow external projects to be easily
- integrated into an application&rsquo;s service container.</p>
+            <p><code>Provider</code>s allow third-party services to be easily integrated into a service <code><a href="../Protocols/Container.html">Container</a></code>.</p>
 
-<p>Simply add the provider using services.register(Provider.self)</p>
+<p>Simply register the <code>Provider</code> like any other service and it will take care of setting up any necessary
+configurations on itself and the container.</p>
+<pre class="highlight swift"><code><span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="kt">RedisProvider</span><span class="p">())</span>
+</code></pre>
+<h1 id='lifecycle' class='heading'>Lifecycle</h1>
 
-<p>The Provider should take care of setting up any
-necessary configurations on itself and the container.</p>
+<p><code>Provider</code>s have two phases:</p>
+
+<ul>
+<li>Registration</li>
+<li>Boot</li>
+</ul>
+<h2 id='registration' class='heading'>Registration</h2>
+
+<p>During the registration phase, the <code>Provider</code> is supplied with a mutable <code><a href="../Structs/Services.html">Services</a></code> struct. The <code>Provider</code>
+is expected to register all services it would like to expose to the <code><a href="../Protocols/Container.html">Container</a></code> during this phase.</p>
+<pre class="highlight swift"><code><span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="kt">RedisCache</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
+<h2 id='boot' class='heading'>Boot</h2>
+
+<p>There are two parts of the boot phase: <code>willBoot(_:)</code> and <code>didBoot(_:)</code>. Both of these methods supply
+the <code>Provider</code> with access to the initialized <code><a href="../Protocols/Container.html">Container</a></code> and allow asynchronous work to be done.</p>
+
+<p>The <code>didBoot(_:)</code> method is guaranteed to be called after all providers have run <code>willBoot(_:)</code>. Most providers should
+try to do their work in the <code>didBoot(_:)</code> method, resorting to the <code>willBoot(_:)</code> method if they want to pre-empt work
+done by other providers.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service8ProviderP14repositoryNameSSvZ"></a>
-                    <a name="//apple_ref/swift/Variable/repositoryName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service8ProviderP14repositoryNameSSvZ">repositoryName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This should be the name of the actual repository
-that contains the Provider.</p>
-
-<p>this will be used for things like providing 
-resources</p>
-
-<p>this will default to stripped camel casing, 
-for example MyProvider will become <code>my-provider</code>
-if your Provider is providing resources
-it is HIGHLY recommended to provide a static let
-for performance considerations</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">repositoryName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Provider.swift#L22">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service8ProviderP9publicDirSSvZ"></a>
-                    <a name="//apple_ref/swift/Variable/publicDir" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service8ProviderP9publicDirSSvZ">publicDir</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The location of the public directory
-<em>relative</em> to the root of the provider package.</p>
-
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        <p>By default, the <code>Public</code> folder will be used as all <code>Provider</code>&rsquo;s public dir.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">publicDir</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Provider.swift#L26">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service8ProviderP8viewsDirSSvZ"></a>
-                    <a name="//apple_ref/swift/Variable/viewsDir" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service8ProviderP8viewsDirSSvZ">viewsDir</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The location of the views directory
-<em>relative</em> to the root of the provider package.</p>
-
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        <p>By default, the <code>Resources/Views</code> folder will be used for all <code>Provider</code>&rsquo;s views dir.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">viewsDir</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Provider.swift#L30">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service8ProviderP6detectyAA11EnvironmentVzKF"></a>
-                    <a name="//apple_ref/swift/Method/detect(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service8ProviderP6detectyAA11EnvironmentVzKF">detect(_:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Gives the provider a chance to detect information from the <code><a href="../Structs/Environment.html">Environment</a></code>.</p>
-
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        <p>By default, all providers will ignore the <code>Environment</code> during <code>detect(_:)</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">detect</span><span class="p">(</span><span class="n">_</span> <span class="nv">env</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../Structs/Environment.html">Environment</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>env</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Mutable <code><a href="../Structs/Environment.html">Environment</a></code>. This can be used to parse command line flags, fetch env variables, and more.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Provider.swift#L35">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -319,7 +153,9 @@ for performance considerations</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Register all services provided by the provider here.</p>
+                        <p>Register all services you would like to provide the <code><a href="../Protocols/Container.html">Container</a></code> here.</p>
+<pre class="highlight swift"><code><span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="kt">RedisCache</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
@@ -331,7 +167,7 @@ for performance considerations</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Provider.swift#L38">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Provider/Provider.swift#L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -357,19 +193,19 @@ for performance considerations</p>
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Called before the container has fully initialized.</p>
+                        <p>See <code>Provider</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willBoot</span><span class="p">(</span><span class="n">_</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willBoot</span><span class="p">(</span><span class="n">_</span> <span class="nv">container</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Provider.swift#L41">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Provider/Provider.swift#L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -387,19 +223,19 @@ for performance considerations</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called after the container has fully initialized.</p>
+                        <p>Called after the container has fully initialized and after <code><a href="../Protocols/Provider.html#/s:7Service8ProviderP8willBootXeXeF">willBoot(_:)</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didBoot</span><span class="p">(</span><span class="n">_</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didBoot</span><span class="p">(</span><span class="n">_</span> <span class="nv">container</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Provider.swift#L44">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Provider/Provider.swift#L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -409,7 +245,7 @@ for performance considerations</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

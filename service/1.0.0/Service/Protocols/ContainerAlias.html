@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ServiceError Structure Reference</title>
+    <title>ContainerAlias Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/ServiceError" class="dashAnchor"></a>
-    <a title="ServiceError Structure Reference"></a>
+    <a name="//apple_ref/swift/Protocol/ContainerAlias" class="dashAnchor"></a>
+    <a title="ContainerAlias Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Service Docs</a> (100% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Service Reference</a>
         <img id="carat" src="../img/carat.png" />
-        ServiceError Structure Reference
+        ContainerAlias Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -100,14 +100,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ServiceError</h1>
+            <h1>ContainerAlias</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ServiceError</span><span class="p">:</span> <span class="kt">Debuggable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ContainerAlias</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span></code></pre>
 
                 </div>
               </div>
-            <p>An error using Services.</p>
+            <p>An alias for another <code><a href="../Protocols/Container.html">Container</a></code>. All <code><a href="../Protocols/Container.html">Container</a></code> protocol requirements
+are redirected to the aliased container.</p>
 
           </section>
           <section class="section task-group-section">
@@ -116,9 +117,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service0A5ErrorV12readableNameSSvZ"></a>
-                    <a name="//apple_ref/swift/Variable/readableName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service0A5ErrorV12readableNameSSvZ">readableName</a>
+                    <a name="/s:7Service14ContainerAliasP07aliasedB0s7KeyPathCyxAA0B0_pGvZ"></a>
+                    <a name="//apple_ref/swift/Variable/aliasedContainer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service14ContainerAliasP07aliasedB0s7KeyPathCyxAA0B0_pGvZ">aliasedContainer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -126,19 +127,56 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>Debuggable</code>.</p>
+                        <p><code>KeyPath</code> to the aliased container.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">readableName</span> <span class="o">=</span> <span class="s">"Service Error"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">aliasedContainer</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/ServiceError.swift#L6">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Container/ContainerAlias.swift#L5">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Service14ContainerAliasPAAE6configAA6ConfigVv"></a>
+                    <a name="//apple_ref/swift/Property/config" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE6configAA6ConfigVv">config</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/Container.html">Container</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/Config.html">Config</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Container/ContainerAlias.swift#L10-L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -146,29 +184,32 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service0A5ErrorV10identifierSSv"></a>
-                    <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service0A5ErrorV10identifierSSv">identifier</a>
+                    <a name="/s:7Service14ContainerAliasPAAE11environmentAA11EnvironmentVv"></a>
+                    <a name="//apple_ref/swift/Property/environment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE11environmentAA11EnvironmentVv">environment</a>
                     </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>Debuggable</code>.</p>
+                        <p>See <code><a href="../Protocols/Container.html">Container</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">environment</span><span class="p">:</span> <span class="kt"><a href="../Structs/Environment.html">Environment</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/ServiceError.swift#L9">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Container/ContainerAlias.swift#L15-L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -176,29 +217,32 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service0A5ErrorV6reasonSSv"></a>
-                    <a name="//apple_ref/swift/Property/reason" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service0A5ErrorV6reasonSSv">reason</a>
+                    <a name="/s:7Service14ContainerAliasPAAE8servicesAA8ServicesVv"></a>
+                    <a name="//apple_ref/swift/Property/services" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE8servicesAA8ServicesVv">services</a>
                     </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>Debuggable</code>.</p>
+                        <p>See <code><a href="../Protocols/Container.html">Container</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">reason</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">services</span><span class="p">:</span> <span class="kt"><a href="../Structs/Services.html">Services</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/ServiceError.swift#L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Container/ContainerAlias.swift#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -206,29 +250,32 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service0A5ErrorV14sourceLocationXev"></a>
-                    <a name="//apple_ref/swift/Property/sourceLocation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service0A5ErrorV14sourceLocationXev">sourceLocation</a>
+                    <a name="/s:7Service14ContainerAliasPAAE12serviceCacheAA0aE0Cv"></a>
+                    <a name="//apple_ref/swift/Property/serviceCache" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE12serviceCacheAA0aE0Cv">serviceCache</a>
                     </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>Debuggable</code>.</p>
+                        <p>See <code><a href="../Protocols/Container.html">Container</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sourceLocation</span><span class="p">:</span> <span class="kt">SourceLocation</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">serviceCache</span><span class="p">:</span> <span class="kt"><a href="../Classes/ServiceCache.html">ServiceCache</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/ServiceError.swift#L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Container/ContainerAlias.swift#L25-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -236,128 +283,32 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service0A5ErrorV10stackTraceSaySSGv"></a>
-                    <a name="//apple_ref/swift/Property/stackTrace" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service0A5ErrorV10stackTraceSaySSGv">stackTrace</a>
+                    <a name="/s:7Service14ContainerAliasPAAE9eventLoopXev"></a>
+                    <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE9eventLoopXev">eventLoop</a>
                     </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>Debuggable</code>.</p>
+                        <p>See <code><a href="../Protocols/Container.html">Container</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">stackTrace</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/ServiceError.swift#L18">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service0A5ErrorV14possibleCausesSaySSGv"></a>
-                    <a name="//apple_ref/swift/Property/possibleCauses" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service0A5ErrorV14possibleCausesSaySSGv">possibleCauses</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See <code>Debuggable</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">possibleCauses</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/ServiceError.swift#L21">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service0A5ErrorV14suggestedFixesSaySSGv"></a>
-                    <a name="//apple_ref/swift/Property/suggestedFixes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service0A5ErrorV14suggestedFixesSaySSGv">suggestedFixes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See <code>Debuggable</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">suggestedFixes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/ServiceError.swift#L24">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service0A5ErrorVACSS10identifier_SS6reasonSaySSG14possibleCausesAF14suggestedFixesSS4fileSS8functionSu4lineSu6columntcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(identifier:reason:possibleCauses:suggestedFixes:file:function:line:column:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service0A5ErrorVACSS10identifier_SS6reasonSaySSG14possibleCausesAF14suggestedFixesSS4fileSS8functionSu4lineSu6columntcfc">init(identifier:reason:possibleCauses:suggestedFixes:file:function:line:column:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates anew <code>ServiceError</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
-    <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-    <span class="nv">reason</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-    <span class="nv">possibleCauses</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
-    <span class="nv">suggestedFixes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
-    <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span>
-    <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
-    <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span>
-    <span class="nv">column</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#column</span>
-<span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/ServiceError.swift#L27-L43">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Container/ContainerAlias.swift#L30-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -14,9 +14,9 @@
     <a title="Extend Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Service Docs</a> (82% documented)</p>
+        <p><a href="../index.html">Service Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/service"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2Drc%2E2%2E2%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -39,9 +39,6 @@
                 <a href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/EphemeralWorkerConfig.html">EphemeralWorkerConfig</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/ServiceCache.html">ServiceCache</a>
               </li>
             </ul>
@@ -53,10 +50,7 @@
                 <a href="../Protocols/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ContainerFindable.html">ContainerFindable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/EphemeralContainer.html">EphemeralContainer</a>
+                <a href="../Protocols/ContainerAlias.html">ContainerAlias</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Extendable.html">Extendable</a>
@@ -66,9 +60,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:7ServiceAAP">Service</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ServiceCacheable.html">ServiceCacheable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServiceFactory.html">ServiceFactory</a>
@@ -102,9 +93,6 @@
               <li class="nav-group-task">
                 <a href="../Structs/Services.html">Services</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TypeServiceFactory.html">TypeServiceFactory</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -115,18 +103,25 @@
             <h1>Extend</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Extend</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Extend</span><span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">ExpressibleByDictionaryLiteral</span></code></pre>
 
                 </div>
               </div>
-            <p>A wrapper around a simple [String: Any]
-storage dictionary.</p>
+            <p>A wrapper around a simple [String: Any] storage dictionary used to implement <code><a href="../Protocols/Extendable.html">Extendable</a></code>.</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="n">cass</span> <span class="kt">MyType</span><span class="p">:</span> <span class="kt">Extendable</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+<span class="kd">extension</span> <span class="kt">MyType</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">foo</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">extend</span><span class="o">.</span><span class="nf">get</span><span class="p">(\</span><span class="kt">MyType</span><span class="o">.</span><span class="n">foo</span><span class="p">,</span> <span class="k">default</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+        <span class="k">set</span> <span class="p">{</span> <span class="n">extend</span><span class="o">.</span><span class="nf">set</span><span class="p">(\</span><span class="kt">MyType</span><span class="o">.</span><span class="n">foo</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">newValue</span><span class="p">)</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <code>Extend</code> conforms to Codable, but will yield an empty dictionary.
+    Extensions are used for convenience and should not be encoded or decoded.
 
-<p>This wrapper is required to conform to
-Codable.</p>
-
-<p>Extensions are used for convenience and should
-not be encoded or decoded.</p>
+</div>
 
           </section>
           <section class="section task-group-section">
@@ -157,7 +152,7 @@ not be encoded or decoded.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L18">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -187,7 +182,7 @@ not be encoded or decoded.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L21-L23">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L33-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -205,7 +200,7 @@ not be encoded or decoded.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Simply ignore this while encoding.</p>
+                        <p>See <code>Codable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -217,7 +212,7 @@ not be encoded or decoded.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L26-L28">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L38-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -235,7 +230,7 @@ not be encoded or decoded.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Decode as an empty object.</p>
+                        <p>See <code>Codable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -247,7 +242,7 @@ not be encoded or decoded.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L31-L34">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L43-L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -255,9 +250,9 @@ not be encoded or decoded.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service6ExtendV9subscriptypSgSSci"></a>
-                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service6ExtendV9subscriptypSgSSci">subscript(_:)</a>
+                    <a name="/s:7Service6ExtendVACSaySS_yptG17dictionaryLiterald_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dictionaryLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service6ExtendVACSaySS_yptG17dictionaryLiterald_tcfc">init(dictionaryLiteral:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -265,79 +260,19 @@ not be encoded or decoded.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Allow subscripting</p>
+                        <p>See <code>ExpressibleByDictionaryLiteral</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">dictionaryLiteral</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="kt">Any</span><span class="p">)</span><span class="o">...</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L37">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service6ExtendV3getxSS_x7defaulttlF"></a>
-                    <a name="//apple_ref/swift/Method/get(_:default:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service6ExtendV3getxSS_x7defaulttlF">get(_:default:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get with default.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="p">`</span><span class="nv">default</span><span class="p">`</span> <span class="nv">d</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L43-L45">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Service6ExtendV3setySS_x2totlF"></a>
-                    <a name="//apple_ref/swift/Method/set(_:to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service6ExtendV3setySS_x2totlF">set(_:to:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="k">set</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">to</span> <span class="nv">newValue</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L48-L50">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L49-L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -355,7 +290,12 @@ not be encoded or decoded.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get with default.</p>
+                        <p>Gets a value from the <code>Extend</code> storage falling back to the default value if it does not exist
+or cannot be casted to <code>T</code>.</p>
+
+<p><code>KeyPath</code>-based alternative to <code>get(_:default:)</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">foo</span><span class="p">:</span> <span class="kt">Foo</span> <span class="o">=</span> <span class="n">extend</span><span class="o">.</span><span class="nf">get</span><span class="p">(\</span><span class="kt">MyType</span><span class="o">.</span><span class="kt">Foo</span><span class="p">,</span> <span class="k">default</span><span class="p">:</span> <span class="n">defaultFoo</span><span class="p">)</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
@@ -367,7 +307,7 @@ not be encoded or decoded.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L53-L55">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L63-L65">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -385,7 +325,11 @@ not be encoded or decoded.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Set.</p>
+                        <p>Set a value to the <code>Extend</code> storage.</p>
+
+<p><code>KeyPath</code>-based alternative to <code>set(_:to:)</code>.</p>
+<pre class="highlight swift"><code><span class="n">extend</span><span class="o">.</span><span class="nf">set</span><span class="p">(\</span><span class="kt">MyType</span><span class="o">.</span><span class="kt">Foo</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">foo</span><span class="p">)</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
@@ -397,40 +341,7 @@ not be encoded or decoded.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L58-L60">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:s30ExpressibleByDictionaryLiteralP3Key"></a>
-                    <a name="//apple_ref/swift/Alias/Key" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s30ExpressibleByDictionaryLiteralP3Key">Key</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Key</span> <span class="o">=</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L73-L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -438,9 +349,9 @@ not be encoded or decoded.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s30ExpressibleByDictionaryLiteralPxSay3KeyQz_5ValueQztG010dictionaryD0d_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(dictionaryLiteral:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s30ExpressibleByDictionaryLiteralPxSay3KeyQz_5ValueQztG010dictionaryD0d_tcfc">init(dictionaryLiteral:)</a>
+                    <a name="/s:7Service6ExtendV3getxSS_x7defaulttlF"></a>
+                    <a name="//apple_ref/swift/Method/get(_:default:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service6ExtendV3getxSS_x7defaulttlF">get(_:default:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -448,18 +359,87 @@ not be encoded or decoded.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Gets a value from the <code>Extend</code> storage falling back to the default value if it does not exist
+or cannot be casted to <code>T</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">foo</span><span class="p">:</span> <span class="kt">Foo</span> <span class="o">=</span> <span class="n">extend</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"foo"</span><span class="p">,</span> <span class="k">default</span><span class="p">:</span> <span class="n">defaultFoo</span><span class="p">)</span>
+</code></pre>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">dictionaryLiteral</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="kt">Any</span><span class="p">)</span><span class="o">...</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="p">`</span><span class="nv">default</span><span class="p">`</span> <span class="nv">d</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/service/tree/1.0.0-rc.2.2/Sources/Service/Extendable.swift#L68-L73">Show on GitHub</a>
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L82-L84">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Service6ExtendV3setySS_x2totlF"></a>
+                    <a name="//apple_ref/swift/Method/set(_:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service6ExtendV3setySS_x2totlF">set(_:to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set a value to the <code>Extend</code> storage.</p>
+<pre class="highlight swift"><code><span class="n">extend</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="s">"foo"</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">foo</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="k">set</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">to</span> <span class="nv">newValue</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L90-L92">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Service6ExtendV9subscriptypSgSSci"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Service6ExtendV9subscriptypSgSSci">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allow subscripting by <code>String</code> key. This is a type-erased alternative to
+the <code><a href="../Structs/Extend.html#/s:7Service6ExtendV3getxs10AnyKeyPathC_x7defaulttlF">get(_:default:)</a></code> and <code>set(:to:)</code> methods.</p>
+<pre class="highlight swift"><code><span class="n">extend</span><span class="p">[</span><span class="s">"foo"</span><span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/service/tree/1.0.0/Sources/Service/Utilities/Extendable.swift#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -469,7 +449,7 @@ not be encoded or decoded.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-24)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
