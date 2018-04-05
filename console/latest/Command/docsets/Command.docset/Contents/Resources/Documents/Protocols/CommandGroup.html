@@ -14,9 +14,9 @@
     <a title="CommandGroup Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Command Docs</a> (92% documented)</p>
+        <p><a href="../index.html">Command Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/console"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2F3%2E0%2E0%2Drc%2E2%2E2%2FCommand%2Fdocsets%2FCommand%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2F3%2E0%2E0%2FCommand%2Fdocsets%2FCommand%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -48,9 +48,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Environment.html">Environment</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/OutputConsole.html">OutputConsole</a>
               </li>
             </ul>
           </li>
@@ -90,7 +87,7 @@
                 <a href="../Structs/CommandOption.html">CommandOption</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/ConfiguredCommands.html">ConfiguredCommands</a>
+                <a href="../Structs/Commands.html">Commands</a>
               </li>
             </ul>
           </li>
@@ -106,7 +103,18 @@
 
                 </div>
               </div>
-            <p>A command that can be run through a console.</p>
+            <p>A group of named commands that can be run through a <code>Console</code>.</p>
+
+<p>Usually you will use <code><a href="../Structs/CommandConfig.html">CommandConfig</a></code> to register commands and create a group.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">env</span> <span class="o">=</span> <span class="kt">Environment</span><span class="o">.</span><span class="n">testing</span>
+<span class="k">let</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span> <span class="o">=</span> <span class="o">...</span>
+<span class="k">var</span> <span class="nv">config</span> <span class="o">=</span> <span class="kt">CommandConfig</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="kt">CowsayCommand</span><span class="p">(),</span> <span class="nv">as</span><span class="p">:</span> <span class="s">"cowsay"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">group</span> <span class="o">=</span> <span class="k">try</span> <span class="n">config</span><span class="o">.</span><span class="nf">resolve</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span><span class="o">.</span><span class="nf">group</span><span class="p">()</span>
+<span class="k">try</span> <span class="n">console</span><span class="o">.</span><span class="nf">run</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="nv">input</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">env</span><span class="o">.</span><span class="n">commandInput</span><span class="p">,</span> <span class="nv">on</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+</code></pre>
+
+<p>You can create your own <code>CommandGroup</code> if you want to support custom <code>CommandOptions</code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -115,39 +123,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Command0A5GroupP8Commandsa"></a>
-                    <a name="//apple_ref/swift/Alias/Commands" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Command0A5GroupP8Commandsa">Commands</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A dictionary of runnable commands.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Commands</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CommandRunnable.html">CommandRunnable</a></span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/console/tree/3.0.0-rc.2.2/Sources/Command/CommandGroup.swift#L4">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Command0A5GroupP8commandss10DictionaryVySSAA0A8Runnable_pGv"></a>
+                    <a name="/s:7Command0A5GroupP8commandsAA8CommandsVv"></a>
                     <a name="//apple_ref/swift/Property/commands" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Command0A5GroupP8commandss10DictionaryVySSAA0A8Runnable_pGv">commands</a>
+                    <a class="token" href="#/s:7Command0A5GroupP8commandsAA8CommandsVv">commands</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -162,12 +140,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">commands</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CommandGroup.html#/s:7Command0A5GroupP8Commandsa">Commands</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">commands</span><span class="p">:</span> <span class="kt"><a href="../Structs/Commands.html">Commands</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/console/tree/3.0.0-rc.2.2/Sources/Command/CommandGroup.swift#L7">Show on GitHub</a>
+                        <a href="https://github.com/vapor/console/tree/3.0.0/Sources/Command/Group/CommandGroup.swift#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -192,7 +170,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See CommandRunnable.type</p>
+                        <p>See <code><a href="../Protocols/CommandRunnable.html">CommandRunnable</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -204,7 +182,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/console/tree/3.0.0-rc.2.2/Sources/Command/CommandGroup.swift#L12-L14">Show on GitHub</a>
+                        <a href="https://github.com/vapor/console/tree/3.0.0/Sources/Command/Group/CommandGroup.swift#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -214,7 +192,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-27)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

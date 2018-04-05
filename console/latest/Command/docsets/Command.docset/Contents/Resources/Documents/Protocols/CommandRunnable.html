@@ -14,9 +14,9 @@
     <a title="CommandRunnable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Command Docs</a> (92% documented)</p>
+        <p><a href="../index.html">Command Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/console"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2F3%2E0%2E0%2Drc%2E2%2E2%2FCommand%2Fdocsets%2FCommand%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2F3%2E0%2E0%2FCommand%2Fdocsets%2FCommand%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -48,9 +48,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Environment.html">Environment</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/OutputConsole.html">OutputConsole</a>
               </li>
             </ul>
           </li>
@@ -90,7 +87,7 @@
                 <a href="../Structs/CommandOption.html">CommandOption</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/ConfiguredCommands.html">ConfiguredCommands</a>
+                <a href="../Structs/Commands.html">Commands</a>
               </li>
             </ul>
           </li>
@@ -106,9 +103,12 @@
 
                 </div>
               </div>
-            <p>Capable of being run on a console.
-Note: this base protocol should not be used directly.
-Conform to Command or Group instead.</p>
+            <p>Capable of being run on a <code>Console</code> using <code><a href="../Extensions/Console.html#/s:7Command3runXeXeF">Console.run(...)</a></code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This base protocol should not be used directly. Conform to <code><a href="../Protocols/Command.html">Command</a></code> or <code><a href="../Protocols/CommandGroup.html">CommandGroup</a></code> instead.
+
+</div>
 
           </section>
           <section class="section task-group-section">
@@ -139,7 +139,7 @@ Conform to Command or Group instead.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/console/tree/3.0.0-rc.2.2/Sources/Command/CommandRunnable.swift#L9">Show on GitHub</a>
+                        <a href="https://github.com/vapor/console/tree/3.0.0/Sources/Command/Base/CommandRunnable.swift#L5">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -169,7 +169,7 @@ Conform to Command or Group instead.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/console/tree/3.0.0-rc.2.2/Sources/Command/CommandRunnable.swift#L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/console/tree/3.0.0/Sources/Command/Base/CommandRunnable.swift#L8">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -199,7 +199,7 @@ Conform to Command or Group instead.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/console/tree/3.0.0-rc.2.2/Sources/Command/CommandRunnable.swift#L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/console/tree/3.0.0/Sources/Command/Base/CommandRunnable.swift#L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -229,7 +229,7 @@ Conform to Command or Group instead.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/console/tree/3.0.0-rc.2.2/Sources/Command/CommandRunnable.swift#L18">Show on GitHub</a>
+                        <a href="https://github.com/vapor/console/tree/3.0.0/Sources/Command/Base/CommandRunnable.swift#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -239,7 +239,7 @@ Conform to Command or Group instead.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-27)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,9 +14,9 @@
     <a title="Console Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Command Docs</a> (92% documented)</p>
+        <p><a href="../index.html">Command Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/console"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2F3%2E0%2E0%2Drc%2E2%2E2%2FCommand%2Fdocsets%2FCommand%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2F3%2E0%2E0%2FCommand%2Fdocsets%2FCommand%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -48,9 +48,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Environment.html">Environment</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/OutputConsole.html">OutputConsole</a>
               </li>
             </ul>
           </li>
@@ -90,7 +87,7 @@
                 <a href="../Structs/CommandOption.html">CommandOption</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/ConfiguredCommands.html">ConfiguredCommands</a>
+                <a href="../Structs/Commands.html">Commands</a>
               </li>
             </ul>
           </li>
@@ -100,7 +97,8 @@
         <section>
           <section class="section">
             <h1>Console</h1>
-            
+            <p>Adds the ability to run <code><a href="../Protocols/Command.html">Command</a></code>s on a <code>Console</code>.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -118,20 +116,71 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Runs a command or group of commands on this console using
-the supplied arguments.</p>
+                        <p>Runs a <code><a href="../Protocols/CommandRunnable.html">CommandRunnable</a></code> (<code><a href="../Protocols/CommandGroup.html">CommandGroup</a></code> or <code><a href="../Protocols/Command.html">Command</a></code>) of commands on this <code>Console</code> using the supplied <code><a href="../Structs/CommandInput.html">CommandInput</a></code>.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="n">console</span><span class="o">.</span><span class="nf">run</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="nv">input</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">env</span><span class="o">.</span><span class="n">commandInput</span><span class="p">,</span> <span class="nv">on</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+</code></pre>
+
+<p>The <code><a href="../Structs/CommandInput.html">CommandInput</a></code> will be mutated, removing any used <code><a href="../Structs/CommandOption.html">CommandOption</a></code>s and <code><a href="../Structs/CommandArgument.html">CommandArgument</a></code>s. If any excess input is left
+over after checking the command&rsquo;s signature, an error will be thrown.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">_</span> <span class="nv">runnable</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CommandRunnable.html">CommandRunnable</a></span><span class="p">,</span> <span class="nv">input</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../Structs/CommandInput.html">CommandInput</a></span><span class="p">,</span> <span class="n">on</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">_</span> <span class="nv">runnable</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CommandRunnable.html">CommandRunnable</a></span><span class="p">,</span> <span class="nv">input</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../Structs/CommandInput.html">CommandInput</a></span><span class="p">,</span> <span class="n">on</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>runnable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/CommandGroup.html">CommandGroup</a></code> or <code><a href="../Protocols/Command.html">Command</a></code> to run.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>input</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Mutable <code><a href="../Structs/CommandInput.html">CommandInput</a></code> to parse <code><a href="../Structs/CommandOption.html">CommandOption</a></code>s and <code><a href="../Structs/CommandArgument.html">CommandArgument</a></code>s from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>container</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Container</code> to provide <code>EventLoop</code> access and services.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Future</code> that will complete when the command finishes.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/console/tree/3.0.0-rc.2.2/Sources/Command/Console+Run.swift#L8-L47">Show on GitHub</a>
+                        <a href="https://github.com/vapor/console/tree/3.0.0/Sources/Command/Run/Console+Run.swift#L15-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -141,7 +190,7 @@ the supplied arguments.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-27)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
