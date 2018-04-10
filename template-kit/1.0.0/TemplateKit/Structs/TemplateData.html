@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TemplateData Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/TemplateData" class="dashAnchor"></a>
+    <a title="TemplateData Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TemplateKit Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/template-kit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ftemplate%2Dkit%2F1%2E0%2E0%2FTemplateKit%2Fdocsets%2FTemplateKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TemplateKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TemplateData Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Capitalize.html">Capitalize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Comment.html">Comment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Contains.html">Contains</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Count.html">Count</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DateFormat.html">DateFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Lowercase.html">Lowercase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PlaintextRenderer.html">PlaintextRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Print.html">Print</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Raw.html">Raw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TagContext.html">TagContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateByteScanner.html">TemplateByteScanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateConditional.html">TemplateConditional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateDataContext.html">TemplateDataContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateDataEncoder.html">TemplateDataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateSerializer.html">TemplateSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Uppercase.html">Uppercase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Var.html">Var</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:11TemplateKit11defaultTagss10DictionaryVySSAA11TagRenderer_pGv">defaultTags</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateConstant.html">TemplateConstant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateExpression.html">TemplateExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateExpression/InfixOperator.html">– InfixOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateExpression/PrefixOperator.html">– PrefixOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateExpression/PostfixOperator.html">– PostfixOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateSyntaxType.html">TemplateSyntaxType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OptionalType.html">OptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/TagRenderer.html">TagRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TemplateDataRepresentable.html">TemplateDataRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TemplateParser.html">TemplateParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TemplateRenderer.html">TemplateRenderer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ASTCache.html">ASTCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateCustom.html">TemplateCustom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateData.html">TemplateData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateEmbed.html">TemplateEmbed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateIdentifier.html">TemplateIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateIterator.html">TemplateIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateKitError.html">TemplateKitError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateRaw.html">TemplateRaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateSource.html">TemplateSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateSourceStart.html">TemplateSourceStart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateSyntax.html">TemplateSyntax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateTag.html">TemplateTag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TemplateData</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TemplateData</span><span class="p">:</span> <span class="kt">NestedData</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt"><a href="../Protocols/TemplateDataRepresentable.html">TemplateDataRepresentable</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>TemplateKit&rsquo;s supported serializable data types.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This is different from types supported in the AST.
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Equatable"></a>
+                <a name="//apple_ref/swift/Section/Equatable" class="dashAnchor"></a>
+                <a href="#/Equatable">
+                  <h3 class="section-name">Equatable</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV2eeoiSbAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV2eeoiSbAC_ACtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Equatable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">TemplateData</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">TemplateData</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L7-L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Static"></a>
+                <a name="//apple_ref/swift/Section/Static" class="dashAnchor"></a>
+                <a href="#/Static">
+                  <h3 class="section-name">Static</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV4boolACSbFZ"></a>
+                    <a name="//apple_ref/swift/Method/bool(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV4boolACSbFZ">bool(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>TemplateData</code> from a <code>Bool</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">bool</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L44-L46">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV6stringACSSFZ"></a>
+                    <a name="//apple_ref/swift/Method/string(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV6stringACSSFZ">string(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>TemplateData</code> from a <code>String</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">string</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L49-L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV3intACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/int(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV3intACSiFZ">int(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>TemplateData</code> from am <code>Int</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">int</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L54-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV6doubleACSdFZ"></a>
+                    <a name="//apple_ref/swift/Method/double(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV6doubleACSdFZ">double(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>TemplateData</code> from a <code>Double</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">double</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L59-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV4dataXeXeFZ"></a>
+                    <a name="//apple_ref/swift/Method/data(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV4dataXeXeFZ">data(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>TemplateData</code> from <code>Data</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">data</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L64-L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV10dictionaryACs10DictionaryVySSACGFZ"></a>
+                    <a name="//apple_ref/swift/Method/dictionary(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV10dictionaryACs10DictionaryVySSACGFZ">dictionary(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>TemplateData</code> from <code>[String: TemplateData]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">dictionary</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">TemplateData</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L69-L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV5arrayACSayACGFZ"></a>
+                    <a name="//apple_ref/swift/Method/array(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV5arrayACSayACGFZ">array(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>TemplateData</code> from <code>[TemplateData]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">array</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="p">[</span><span class="kt">TemplateData</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L74-L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV4lazyA2CycFZ"></a>
+                    <a name="//apple_ref/swift/Method/lazy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV4lazyA2CycFZ">lazy(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>TemplateData</code> from <code>() -&gt; TemplateData</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lazy</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L79-L81">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV4nullACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/null" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV4nullACvZ">null</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new null <code>TemplateData</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">null</span><span class="p">:</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L84-L86">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Fuzzy"></a>
+                <a name="//apple_ref/swift/Section/Fuzzy" class="dashAnchor"></a>
+                <a href="#/Fuzzy">
+                  <h3 class="section-name">Fuzzy</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV4boolSbSgv"></a>
+                    <a name="//apple_ref/swift/Property/bool" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV4boolSbSgv">bool</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to convert to <code>Bool</code> or returns <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bool</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L91-L120">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV6stringSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/string" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV6stringSSSgv">string</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to convert to <code>String</code> or returns <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L123-L140">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV3intSiSgv"></a>
+                    <a name="//apple_ref/swift/Property/int" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV3intSiSgv">int</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to convert to <code>Int</code> or returns <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">int</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L143-L154">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV6doubleSdSgv"></a>
+                    <a name="//apple_ref/swift/Property/double" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV6doubleSdSgv">double</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to convert to <code>Double</code> or returns <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">double</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L157-L170">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV4dataXev"></a>
+                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV4dataXev">data</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to convert to <code>Data</code> or returns <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L173-L202">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV10dictionarys10DictionaryVySSACGSgv"></a>
+                    <a name="//apple_ref/swift/Property/dictionary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV10dictionarys10DictionaryVySSACGSgv">dictionary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to convert to <code>[String: TemplateData]</code> or returns <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dictionary</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">TemplateData</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L205-L212">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV5arraySayACGSgv"></a>
+                    <a name="//apple_ref/swift/Property/array" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV5arraySayACGSgv">array</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to convert to <code>[TemplateData]</code> or returns <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">TemplateData</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L215-L222">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV6isNullSbv"></a>
+                    <a name="//apple_ref/swift/Property/isNull" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV6isNullSbv">isNull</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the data is <code><a href="../Structs/TemplateData.html#/s:11TemplateKit0A4DataV4nullACvZ">null</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isNull</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L225-L230">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Convertible"></a>
+                <a name="//apple_ref/swift/Section/Convertible" class="dashAnchor"></a>
+                <a href="#/Convertible">
+                  <h3 class="section-name">Convertible</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A4DataV09convertToaC0ACyKF"></a>
+                    <a name="//apple_ref/swift/Method/convertToTemplateData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A4DataV09convertToaC0ACyKF">convertToTemplateData()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/TemplateDataRepresentable.html">TemplateDataRepresentable</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">convertToTemplateData</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">TemplateData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Data/TemplateData.swift#L235-L237">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

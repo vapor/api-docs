@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TemplateByteScanner Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/TemplateByteScanner" class="dashAnchor"></a>
+    <a title="TemplateByteScanner Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TemplateKit Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/template-kit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ftemplate%2Dkit%2F1%2E0%2E0%2FTemplateKit%2Fdocsets%2FTemplateKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TemplateKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TemplateByteScanner Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Capitalize.html">Capitalize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Comment.html">Comment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Contains.html">Contains</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Count.html">Count</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DateFormat.html">DateFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Lowercase.html">Lowercase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PlaintextRenderer.html">PlaintextRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Print.html">Print</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Raw.html">Raw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TagContext.html">TagContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateByteScanner.html">TemplateByteScanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateConditional.html">TemplateConditional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateDataContext.html">TemplateDataContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateDataEncoder.html">TemplateDataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TemplateSerializer.html">TemplateSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Uppercase.html">Uppercase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Var.html">Var</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:11TemplateKit11defaultTagss10DictionaryVySSAA11TagRenderer_pGv">defaultTags</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateConstant.html">TemplateConstant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateExpression.html">TemplateExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateExpression/InfixOperator.html">– InfixOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateExpression/PrefixOperator.html">– PrefixOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateExpression/PostfixOperator.html">– PostfixOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemplateSyntaxType.html">TemplateSyntaxType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OptionalType.html">OptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/TagRenderer.html">TagRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TemplateDataRepresentable.html">TemplateDataRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TemplateParser.html">TemplateParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TemplateRenderer.html">TemplateRenderer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ASTCache.html">ASTCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateCustom.html">TemplateCustom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateData.html">TemplateData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateEmbed.html">TemplateEmbed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateIdentifier.html">TemplateIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateIterator.html">TemplateIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateKitError.html">TemplateKitError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateRaw.html">TemplateRaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateSource.html">TemplateSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateSourceStart.html">TemplateSourceStart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateSyntax.html">TemplateSyntax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplateTag.html">TemplateTag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TemplateByteScanner</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TemplateByteScanner</span></code></pre>
+
+                </div>
+              </div>
+            <p>Used to facilitate parsing byte arrays.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC4fileSSv"></a>
+                    <a name="//apple_ref/swift/Property/file" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4fileSSv">file</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Path to file being parsed currently. If the bytes being parsed are not from a file on disk,
+instead use any string describing where the bytes came from.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L7">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC6offsetSiv"></a>
+                    <a name="//apple_ref/swift/Property/offset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC6offsetSiv">offset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current byte offset into the file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC4lineSiv"></a>
+                    <a name="//apple_ref/swift/Property/line" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4lineSiv">line</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current line offset into the file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC6columnSiv"></a>
+                    <a name="//apple_ref/swift/Property/column" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC6columnSiv">column</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current column offset into the current line.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC4dataXev"></a>
+                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4dataXev">data</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>Data</code> being scanned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerCXeXecfc"></a>
+                    <a name="//apple_ref/swift/Method/init(data:file:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerCXeXecfc">init(data:file:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new <code>TemplateByteScanner</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bytes to scan.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Path to file bytes were loaded from or description of bytes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L35-L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC4peeks5UInt8VSgSi2by_tF"></a>
+                    <a name="//apple_ref/swift/Method/peek(by:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4peeks5UInt8VSgSi2by_tF">peek(by:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Peeks ahead to byte in front of current byte by supplied amount.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">peek</span><span class="p">(</span><span class="n">by</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Number of bytes to skip.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><ul>
+<li>Byte requested if not past end of data.</li>
+</ul></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L55-L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC3pops5UInt8VSgyF"></a>
+                    <a name="//apple_ref/swift/Method/pop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC3pops5UInt8VSgyF">pop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns current byte and increments byte pointer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pop</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L63-L79">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC10requirePopXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/requirePop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC10requirePopXeXeF">requirePop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls <code><a href="../Classes/TemplateByteScanner.html#/s:11TemplateKit0A11ByteScannerC3pops5UInt8VSgyF">pop()</a></code>, throwing an error if there are no more bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">requirePop</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Byte</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L83-L88">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC10requirePopySi1n_tKF"></a>
+                    <a name="//apple_ref/swift/Method/requirePop(n:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC10requirePopySi1n_tKF">requirePop(n:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls <code><a href="../Classes/TemplateByteScanner.html#/s:11TemplateKit0A11ByteScannerC10requirePopXeXeF">requirePop()</a></code> <code>n</code> times.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">requirePop</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L91-L95">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC11peekMatchesXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/peekMatches(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC11peekMatchesXeXeF">peekMatches(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the upcoming bytes match the supplied array of bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">peekMatches</span><span class="p">(</span><span class="n">_</span> <span class="nv">bytes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Byte</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L98-L112">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC15makeSourceStartAA0afG0VyF"></a>
+                    <a name="//apple_ref/swift/Method/makeSourceStart()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC15makeSourceStartAA0afG0VyF">makeSourceStart()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Structs/TemplateSourceStart.html">TemplateSourceStart</a></code> at the current location.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeSourceStart</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/TemplateSourceStart.html">TemplateSourceStart</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/AST/TemplateSource.swift#L74-L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC10makeSourceAA0aF0VAA0aF5StartV5using_tF"></a>
+                    <a name="//apple_ref/swift/Method/makeSource(using:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC10makeSourceAA0aF0VAA0aF5StartV5using_tF">makeSource(using:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closes a <code><a href="../Structs/TemplateSourceStart.html">TemplateSourceStart</a></code> at the current location, creating a <code><a href="../Structs/TemplateSource.html">TemplateSource</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeSource</span><span class="p">(</span><span class="n">using</span> <span class="nv">sourceStart</span><span class="p">:</span> <span class="kt"><a href="../Structs/TemplateSourceStart.html">TemplateSourceStart</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/TemplateSource.html">TemplateSource</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sourceStart</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Structs/TemplateSourceStart.html">TemplateSourceStart</a></code> to complete.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/AST/TemplateSource.swift#L82-L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
