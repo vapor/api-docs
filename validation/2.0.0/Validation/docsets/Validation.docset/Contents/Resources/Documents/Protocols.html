@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Protocols  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Validation Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/vapor/validation"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvalidation%2F2%2E0%2E0%2FValidation%2Fdocsets%2FValidation%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Validation Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Protocols  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10Validation1nopAA9ValidatorVyxGAElF">!(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10Validation2aaoiAA9ValidatorVyxGAE_AEtlF">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10Validation2aaoiAA9ValidatorVyxSgGADyxG_AFtlF">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10Validation2aaoiAA9ValidatorVyxSgGAF_ADyxGtlF">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10Validation1poiXeXeF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10Validation2oooiAA9ValidatorVyxGAE_AEtlF">||(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10Validation2oooiAA9ValidatorVyxSgGADyxG_AFtlF">||(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10Validation2oooiAA9ValidatorVyxSgGAF_ADyxGtlF">||(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Validatable.html">Validatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ValidationError.html">ValidationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ValidatorType.html">ValidatorType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/BasicValidationError.html">BasicValidationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Validations.html">Validations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Validator.html">Validator</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Validation11ValidatableP"></a>
+                    <a name="//apple_ref/swift/Protocol/Validatable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Validation11ValidatableP">Validatable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capable of being validated. Conformance adds a throwing <code>validate()</code> method.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">Validatable</span><span class="p">,</span> <span class="kt">Reflectable</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">var</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span>
+
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validations</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Validations</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">validations</span> <span class="o">=</span> <span class="kt">Validations</span><span class="p">(</span><span class="kt">User</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+        <span class="c1">// validate name is at least 5 characters and alphanumeric</span>
+        <span class="k">try</span> <span class="n">validations</span><span class="o">.</span><span class="nf">add</span><span class="p">(\</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="o">.</span><span class="nf">count</span><span class="p">(</span><span class="mi">5</span><span class="o">...</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">.</span><span class="n">alphanumeric</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">validations</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="Protocols/Validatable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Validatable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/validation/tree/2.0.0/Sources/Validation/Validatable.swift#L15-L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Validation0A5ErrorP"></a>
+                    <a name="//apple_ref/swift/Protocol/ValidationError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Validation0A5ErrorP">ValidationError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A validation error that supports dynamic key paths. These key paths will be automatically
+combined to support nested validations.</p>
+
+<p>See <code><a href="Structs/BasicValidationError.html">BasicValidationError</a></code> for a default implementation.</p>
+
+                        <a href="Protocols/ValidationError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ValidationError</span><span class="p">:</span> <span class="kt">Debuggable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/validation/tree/2.0.0/Sources/Validation/ValidationError.swift#L7-L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Validation13ValidatorTypeP"></a>
+                    <a name="//apple_ref/swift/Protocol/ValidatorType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Validation13ValidatorTypeP">ValidatorType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capable of validating validation data or throwing a validation error.
+Use this protocol to organize code for creating <code><a href="Structs/Validator.html">Validator</a></code>s.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">validator</span><span class="p">:</span> <span class="kt">Validator</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">MyValidator</span><span class="p">()</span><span class="o">.</span><span class="nf">validator</span><span class="p">()</span>
+</code></pre>
+
+<p>See <code><a href="Structs/Validator.html">Validator</a></code> for more information.</p>
+
+                        <a href="Protocols/ValidatorType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ValidatorType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/validation/tree/2.0.0/Sources/Validation/ValidatorType.swift#L7-L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
