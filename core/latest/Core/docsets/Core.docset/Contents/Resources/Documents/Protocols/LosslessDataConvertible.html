@@ -16,7 +16,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Core Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/core"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E3%2FCore%2Fdocsets%2FCore%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E1%2E0%2FCore%2Fdocsets%2FCore%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -135,10 +135,22 @@
                 <a href="../Structs/BasicKey.html">BasicKey</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/CaseInsensitiveString.html">CaseInsensitiveString</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/CoreError.html">CoreError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/File.html">File</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HeaderValue.html">HeaderValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MediaType.html">MediaType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ProcessExecuteError.html">ProcessExecuteError</a>
@@ -169,9 +181,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core23LosslessDataConvertibleP09convertToC010Foundation0C0VyKF"></a>
+                    <a name="/s:4Core23LosslessDataConvertibleP09convertToC010Foundation0C0VyF"></a>
                     <a name="//apple_ref/swift/Method/convertToData()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core23LosslessDataConvertibleP09convertToC010Foundation0C0VyKF">convertToData()</a>
+                    <a class="token" href="#/s:4Core23LosslessDataConvertibleP09convertToC010Foundation0C0VyF">convertToData()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,12 +198,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">convertToData</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">convertToData</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.3/Sources/Core/LosslessDataConvertible.swift#L4">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.0/Sources/Core/LosslessDataConvertible.swift#L4">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -199,9 +211,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core23LosslessDataConvertibleP011convertFromC0x10Foundation0C0VKFZ"></a>
+                    <a name="/s:4Core23LosslessDataConvertibleP011convertFromC0x10Foundation0C0VFZ"></a>
                     <a name="//apple_ref/swift/Method/convertFromData(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core23LosslessDataConvertibleP011convertFromC0x10Foundation0C0VKFZ">convertFromData(_:)</a>
+                    <a class="token" href="#/s:4Core23LosslessDataConvertibleP011convertFromC0x10Foundation0C0VFZ">convertFromData(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -216,12 +228,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">convertFromData</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">convertFromData</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.0.3/Sources/Core/LosslessDataConvertible.swift#L7">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.0/Sources/Core/LosslessDataConvertible.swift#L7">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -231,7 +243,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-09)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
