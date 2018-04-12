@@ -16,7 +16,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Crypto Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/vapor/crypto"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E0%2E0%2FCrypto%2Fdocsets%2FCrypto%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E0%2E1%2FCrypto%2Fdocsets%2FCrypto%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -168,7 +168,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/RSA/RSAKey.swift#L10-L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.1/Sources/Crypto/RSA/RSAKey.swift#L10-L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -198,7 +198,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/RSA/RSAKey.swift#L15-L17">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.1/Sources/Crypto/RSA/RSAKey.swift#L15-L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -228,7 +228,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/RSA/RSAKey.swift#L20-L22">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.1/Sources/Crypto/RSA/RSAKey.swift#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -272,7 +272,74 @@ is required to create new signatures.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.0/Sources/Crypto/RSA/RSAKey.swift#L30">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.0.1/Sources/Crypto/RSA/RSAKey.swift#L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Init"></a>
+                <a name="//apple_ref/swift/Section/Init" class="dashAnchor"></a>
+                <a href="#/Init">
+                  <h3 class="section-name">Init</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto6RSAKeyV10componentsACSS1n_SS1eSSSg1dtKFZ"></a>
+                    <a name="//apple_ref/swift/Method/components(n:e:d:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto6RSAKeyV10componentsACSS1n_SS1eSSSg1dtKFZ">components(n:e:d:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>RSAKey</code> from components.</p>
+
+<p>For example, if you want to use Google&rsquo;s <a href="https://www.googleapis.com/oauth2/v3/certs">public OAuth2 keys</a>,
+you could parse the request using:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">CertKeysResponse</span><span class="p">:</span> <span class="kt">APIResponse</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">keys</span><span class="p">:</span> <span class="p">[</span><span class="kt">Key</span><span class="p">]</span>
+
+    <span class="kd">struct</span> <span class="kt">Key</span><span class="p">:</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">kty</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">let</span> <span class="nv">alg</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">let</span> <span class="nv">kid</span><span class="p">:</span> <span class="kt">String</span>
+
+        <span class="k">let</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">let</span> <span class="nv">e</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">let</span> <span class="nv">d</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>And then instantiate the key as:</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="kt">RSAKey</span><span class="o">.</span><span class="nf">components</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="n">key</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="nv">e</span><span class="p">:</span> <span class="n">key</span><span class="o">.</span><span class="n">e</span><span class="p">,</span> <span class="nv">d</span><span class="p">:</span> <span class="n">key</span><span class="o">.</span><span class="n">d</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Structs/CryptoError.html">CryptoError</a></code> if key generation fails.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">components</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">e</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">d</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">RSAKey</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.0.1/Sources/Crypto/RSA/RSAKey.swift#L67-L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -282,7 +349,7 @@ is required to create new signatures.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-02)</p>
+          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
