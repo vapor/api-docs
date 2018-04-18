@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Protocols  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          HTTP Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/http">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E0%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">HTTP Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Protocols  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HTTPChunkedStream.html">HTTPChunkedStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HTTPServer.html">HTTPServer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HTTPSameSitePolicy.html">HTTPSameSitePolicy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/ByteBuffer.html">ByteBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/HTTPHeaders.html">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/JSONDecoder.html">JSONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/JSONEncoder.html">JSONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/StaticString.html">StaticString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/HTTPClientProtocolUpgrader.html">HTTPClientProtocolUpgrader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/HTTPMessage.html">HTTPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/HTTPMessageDecoder.html">HTTPMessageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/HTTPMessageEncoder.html">HTTPMessageEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/HTTPServerResponder.html">HTTPServerResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/LosslessHTTPBodyRepresentable.html">LosslessHTTPBodyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/URLRepresentable.html">URLRepresentable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPBody.html">HTTPBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPCookieValue.html">HTTPCookieValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPCookies.html">HTTPCookies</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPHeaderName.html">HTTPHeaderName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPPeer.html">HTTPPeer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPScheme.html">HTTPScheme</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/MediaTypePreference.html">MediaTypePreference</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP29LosslessHTTPBodyRepresentableP"></a>
+                    <a name="//apple_ref/swift/Protocol/LosslessHTTPBodyRepresentable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP29LosslessHTTPBodyRepresentableP">LosslessHTTPBodyRepresentable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Can be converted to an <code><a href="Structs/HTTPBody.html">HTTPBody</a></code> without the possibility of failure.</p>
+
+                        <a href="Protocols/LosslessHTTPBodyRepresentable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">LosslessHTTPBodyRepresentable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Body/HTTPBodyRepresentable.swift#L2-L5">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP18HTTPMessageDecoderP"></a>
+                    <a name="//apple_ref/swift/Protocol/HTTPMessageDecoder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP18HTTPMessageDecoderP">HTTPMessageDecoder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capable of decoding a <code>Decodable</code> type from an <code><a href="Structs/HTTPBody.html">HTTPBody</a></code>.</p>
+
+<p><code>HTTPMessageDecoder</code>s must handle all cases of an <code><a href="Structs/HTTPBody.html">HTTPBody</a></code>, including streaming bodies.
+Because the <code><a href="Structs/HTTPBody.html">HTTPBody</a></code> may be streaming (async), the <code>decode(_:from:on:)</code> method returns a <code>Future</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">jsonDecoder</span><span class="p">:</span> <span class="kt">BodyDecoder</span> <span class="o">=</span> <span class="kt">JSONDecoder</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="k">try</span> <span class="n">jsonDecoder</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">HTTPBody</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"hello"</span><span class="p">),</span> <span class="nv">on</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="c1">/// "hello" from the HTTP body</span>
+</code></pre>
+
+<p>The <code>HTTPMessageDecoder</code> protocol is what powers the <code>ContentContainer</code>s on <code>Request</code> and <code>Response</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="k">try</span> <span class="n">req</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="c1">// Future&lt;String&gt;</span>
+</code></pre>
+
+<p><code>HTTPMessageDecoder</code>s can be registered with <code>ContentConfig</code> during the application config phase.
+The decoders are associated with a <code>MediaType</code> when registered. When decoding content, the HTTP message&rsquo;s
+<code>MediaType</code> is used to lookup an appropriate coder.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">contentConfig</span> <span class="o">=</span> <span class="kt">ContentConfig</span><span class="o">.</span><span class="nf">default</span><span class="p">()</span>
+<span class="n">contentConfig</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="nv">decoder</span><span class="p">:</span> <span class="kt">JSONDecoder</span><span class="p">(),</span> <span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="n">contentConfig</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Protocols/HTTPMessageDecoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPMessageDecoder</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Codable/HTTPMessageCoder.swift#L25-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP18HTTPMessageEncoderP"></a>
+                    <a name="//apple_ref/swift/Protocol/HTTPMessageEncoder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP18HTTPMessageEncoderP">HTTPMessageEncoder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capable of encoding an <code>Encodable</code> type to an <code><a href="Structs/HTTPBody.html">HTTPBody</a></code>.</p>
+
+<p><code>HTTPMessageEncoder</code>s may encode data into an <code><a href="Structs/HTTPBody.html">HTTPBody</a></code> using any of the available
+cases (streaming, static, or other).</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">jsonEncoder</span><span class="p">:</span> <span class="kt">BodyEncoder</span> <span class="o">=</span> <span class="kt">JSONEncoder</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">body</span> <span class="o">=</span> <span class="k">try</span> <span class="n">jsonEncoder</span><span class="o">.</span><span class="nf">encodeBody</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"hello"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">body</span><span class="p">)</span> <span class="c1">/// HTTPBody containing the string "hello"</span>
+</code></pre>
+
+<p>The <code>HTTPMessageEncoder</code> protocol is what powers the <code>ContentContainer</code>s on <code>Request</code> and <code>Response</code>.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="n">res</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="s">"hello"</span><span class="p">,</span> <span class="nv">as</span><span class="p">:</span> <span class="o">.</span><span class="n">plaintext</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">mediaType</span><span class="p">)</span> <span class="c1">// .plaintext</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">body</span><span class="p">)</span> <span class="c1">// "hello"</span>
+</code></pre>
+
+<p><code>HTTPMessageEncoder</code>s can be registered with <code>ContentConfig</code> during the application config phase.
+The encoders are associated with a <code>MediaType</code> when registered. When encoding content, the <code>Content</code>&rsquo;s
+default <code>MediaType</code> is used to lookup an appropriate coder. You can also choose to override the
+<code>MediaType</code> when encoding.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">contentConfig</span> <span class="o">=</span> <span class="kt">ContentConfig</span><span class="o">.</span><span class="nf">default</span><span class="p">()</span>
+<span class="n">contentConfig</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="nv">encoder</span><span class="p">:</span> <span class="kt">JSONEncoder</span><span class="p">(),</span> <span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="n">contentConfig</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Protocols/HTTPMessageEncoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPMessageEncoder</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Codable/HTTPMessageCoder.swift#L77-L90">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPMessageP"></a>
+                    <a name="//apple_ref/swift/Protocol/HTTPMessage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPMessageP">HTTPMessage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An HTTP message.
+This is the basis of <code><a href="Structs/HTTPRequest.html">HTTPRequest</a></code> and <code><a href="Structs/HTTPResponse.html">HTTPResponse</a></code>. It has the general structure of:</p>
+<pre class="highlight swift"><code><span class="o">&lt;</span><span class="n">status</span> <span class="n">line</span><span class="o">&gt;</span> <span class="kt">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<span class="kt">Content</span><span class="o">-</span><span class="kt">Length</span><span class="p">:</span> <span class="mi">5</span>
+<span class="kt">Foo</span><span class="p">:</span> <span class="kt">Bar</span>
+
+<span class="n">hello</span>
+</code></pre>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The status line contains information that differentiates requests and responses.
+    If the status line contains an HTTP method and URI it is a request.
+    If the status line contains an HTTP status code it is a response.
+
+</div>
+
+<p>This protocol is useful for adding methods to both requests and responses, such as the ability to serialize
+content to both message types.</p>
+
+                        <a href="Protocols/HTTPMessage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPMessage</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPMessage.swift#L16-L29">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP16URLRepresentableP"></a>
+                    <a name="//apple_ref/swift/Protocol/URLRepresentable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP16URLRepresentableP">URLRepresentable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capable of converting <code>self</code> to a <code>URL</code>, returning <code>nil</code> if the conversion fails.</p>
+
+                        <a href="Protocols/URLRepresentable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">URLRepresentable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/URL+HTTP.swift#L2-L5">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP26HTTPClientProtocolUpgraderP"></a>
+                    <a name="//apple_ref/swift/Protocol/HTTPClientProtocolUpgrader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP26HTTPClientProtocolUpgraderP">HTTPClientProtocolUpgrader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Can be used to upgrade <code><a href="Classes/HTTPClient.html">HTTPClient</a></code> requests using the static <code><a href="Classes/HTTPClient.html#/s:4HTTP10HTTPClientC7upgradeXeXeFZ">HTTPClient.upgrade(...)</a></code> method.</p>
+
+                        <a href="Protocols/HTTPClientProtocolUpgrader.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPClientProtocolUpgrader</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPClientProtocolUpgrader.swift#L44-L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP19HTTPServerResponderP"></a>
+                    <a name="//apple_ref/swift/Protocol/HTTPServerResponder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP19HTTPServerResponderP">HTTPServerResponder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capable of responding to HTTP requests received by an <code><a href="Classes/HTTPServer.html">HTTPServer</a></code>.</p>
+
+                        <a href="Protocols/HTTPServerResponder.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPServerResponder</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPServerResponder.swift#L2-L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
