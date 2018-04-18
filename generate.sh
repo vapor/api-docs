@@ -29,7 +29,8 @@ function generate_docs() {
 		--github-file-prefix https://github.com/vapor/$REPO_NAME/tree/$VERSION \
 		--module-version $VERSION \
 		--module $MODULE \
-		--root-url https://api.vapor.codes/$DOCS_PATH/ \
+		--root-url https://api.vapor.codes/$DOCS_PATH/ \		
+		--theme fullwidth \
 		--output ../../$DOCS_PATH
 
 	cd ../../
