@@ -4,125 +4,153 @@
     <title>CipherMode Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Enum/CipherMode" class="dashAnchor"></a>
+
     <a title="CipherMode Enumeration Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">Crypto Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/crypto"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E0%2E1%2FCrypto%2Fdocsets%2FCrypto%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">Crypto Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        CipherMode Enumeration Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Crypto Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/crypto">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E1%2E0%2FCrypto%2Fdocsets%2FCrypto%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Crypto Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      CipherMode Enumeration Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/BCryptDigest.html">BCryptDigest</a>
+                <a class="nav-group-task-link" href="../Classes/BCryptDigest.html">BCryptDigest</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Cipher.html">Cipher</a>
+                <a class="nav-group-task-link" href="../Classes/Cipher.html">Cipher</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/CipherAlgorithm.html">CipherAlgorithm</a>
+                <a class="nav-group-task-link" href="../Classes/CipherAlgorithm.html">CipherAlgorithm</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/CryptoRandom.html">CryptoRandom</a>
+                <a class="nav-group-task-link" href="../Classes/CryptoRandom.html">CryptoRandom</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Digest.html">Digest</a>
+                <a class="nav-group-task-link" href="../Classes/Digest.html">Digest</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/DigestAlgorithm.html">DigestAlgorithm</a>
+                <a class="nav-group-task-link" href="../Classes/DigestAlgorithm.html">DigestAlgorithm</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/HMAC.html">HMAC</a>
+                <a class="nav-group-task-link" href="../Classes/HMAC.html">HMAC</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/RSA.html">RSA</a>
+                <a class="nav-group-task-link" href="../Classes/RSA.html">RSA</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Global Variables.html">Global Variables</a>
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto6AES128AA6CipherCv">AES128</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6AES128AA6CipherCvp">AES128</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto6AES256AA6CipherCv">AES256</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6AES256AA6CipherCvp">AES256</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto6BCryptAA0B6DigestCv">BCrypt</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6BCryptAA0B6DigestCvp">BCrypt</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto3MD4AA6DigestCv">MD4</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto3MD4AA6DigestCvp">MD4</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto3MD5AA6DigestCv">MD5</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto3MD5AA6DigestCvp">MD5</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto4SHA1AA6DigestCv">SHA1</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto4SHA1AA6DigestCvp">SHA1</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto6SHA224AA6DigestCv">SHA224</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6SHA224AA6DigestCvp">SHA224</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto6SHA256AA6DigestCv">SHA256</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6SHA256AA6DigestCvp">SHA256</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto6SHA384AA6DigestCv">SHA384</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6SHA384AA6DigestCvp">SHA384</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Crypto6SHA512AA6DigestCv">SHA512</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6SHA512AA6DigestCvp">SHA512</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/CipherMode.html">CipherMode</a>
+                <a class="nav-group-task-link" href="../Enums/CipherMode.html">CipherMode</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/RSAInputFormat.html">RSAInputFormat</a>
+                <a class="nav-group-task-link" href="../Enums/RSAInputFormat.html">RSAInputFormat</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/RSAKeyType.html">RSAKeyType</a>
+                <a class="nav-group-task-link" href="../Enums/RSAKeyType.html">RSAKeyType</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/CryptoError.html">CryptoError</a>
+                <a class="nav-group-task-link" href="../Structs/CryptoError.html">CryptoError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/RSAKey.html">RSAKey</a>
+                <a class="nav-group-task-link" href="../Structs/RSAKey.html">RSAKey</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>CipherMode</h1>
               <div class="declaration">
                 <div class="language">
@@ -134,10 +162,13 @@
 
 <p>Used when calling <code>reset</code> on a <code><a href="../Classes/Cipher.html">Cipher</a></code>.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -163,7 +194,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.1/Sources/Crypto/Cipher/Cipher.swift#L208">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.1.0/Sources/Crypto/Cipher/Cipher.swift#L208">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -171,7 +202,7 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -197,21 +228,22 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.0.1/Sources/Crypto/Cipher/Cipher.swift#L211">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.1.0/Sources/Crypto/Cipher/Cipher.swift#L211">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-12)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-20)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
