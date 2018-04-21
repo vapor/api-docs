@@ -4,167 +4,195 @@
     <title>MediaType Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Struct/MediaType" class="dashAnchor"></a>
+
     <a title="MediaType Structure Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">Core Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/core"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E1%2E2%2FCore%2Fdocsets%2FCore%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">Core Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        MediaType Structure Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Core Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/core">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E1%2E3%2FCore%2Fdocsets%2FCore%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Core Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      MediaType Structure Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Array.html">Array</a>
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+                <a class="nav-group-task-link" href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Bool.html">Bool</a>
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Data.html">Data</a>
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Date.html">Date</a>
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Decodable.html">Decodable</a>
+                <a class="nav-group-task-link" href="../Extensions/Decodable.html">Decodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Dictionary.html">Dictionary</a>
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Future.html">Future</a>
+                <a class="nav-group-task-link" href="../Extensions/Future.html">Future</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Int.html">Int</a>
+                <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Optional.html">Optional</a>
+                <a class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Process.html">Process</a>
+                <a class="nav-group-task-link" href="../Extensions/Process.html">Process</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/String.html">String</a>
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Thread.html">Thread</a>
+                <a class="nav-group-task-link" href="../Extensions/Thread.html">Thread</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/UUID.html">UUID</a>
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Functions.html">Functions</a>
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:4Core2qqoiXeXeF">??(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:4Core2qqoi3NIO15EventLoopFutureCyxGAEyxSgG_xtlF">??(_:_:)</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/AnyOptionalType.html">AnyOptionalType</a>
+                <a class="nav-group-task-link" href="../Protocols/AnyOptionalType.html">AnyOptionalType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/AnyReflectionDecodable.html">AnyReflectionDecodable</a>
+                <a class="nav-group-task-link" href="../Protocols/AnyReflectionDecodable.html">AnyReflectionDecodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/BasicKeyRepresentable.html">BasicKeyRepresentable</a>
+                <a class="nav-group-task-link" href="../Protocols/BasicKeyRepresentable.html">BasicKeyRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/DataDecoder.html">DataDecoder</a>
+                <a class="nav-group-task-link" href="../Protocols/DataDecoder.html">DataDecoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/DataEncoder.html">DataEncoder</a>
+                <a class="nav-group-task-link" href="../Protocols/DataEncoder.html">DataEncoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/FutureEncoder.html">FutureEncoder</a>
+                <a class="nav-group-task-link" href="../Protocols/FutureEncoder.html">FutureEncoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a>
+                <a class="nav-group-task-link" href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/NestedData.html">NestedData</a>
+                <a class="nav-group-task-link" href="../Protocols/NestedData.html">NestedData</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/OptionalType.html">OptionalType</a>
+                <a class="nav-group-task-link" href="../Protocols/OptionalType.html">OptionalType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Reflectable.html">Reflectable</a>
+                <a class="nav-group-task-link" href="../Protocols/Reflectable.html">Reflectable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ReflectionDecodable.html">ReflectionDecodable</a>
+                <a class="nav-group-task-link" href="../Protocols/ReflectionDecodable.html">ReflectionDecodable</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/BasicKey.html">BasicKey</a>
+                <a class="nav-group-task-link" href="../Structs/BasicKey.html">BasicKey</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CaseInsensitiveString.html">CaseInsensitiveString</a>
+                <a class="nav-group-task-link" href="../Structs/CaseInsensitiveString.html">CaseInsensitiveString</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CoreError.html">CoreError</a>
+                <a class="nav-group-task-link" href="../Structs/CoreError.html">CoreError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
+                <a class="nav-group-task-link" href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/File.html">File</a>
+                <a class="nav-group-task-link" href="../Structs/File.html">File</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/HeaderValue.html">HeaderValue</a>
+                <a class="nav-group-task-link" href="../Structs/HeaderValue.html">HeaderValue</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/MediaType.html">MediaType</a>
+                <a class="nav-group-task-link" href="../Structs/MediaType.html">MediaType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/ProcessExecuteError.html">ProcessExecuteError</a>
+                <a class="nav-group-task-link" href="../Structs/ProcessExecuteError.html">ProcessExecuteError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/ReflectedProperty.html">ReflectedProperty</a>
+                <a class="nav-group-task-link" href="../Structs/ReflectedProperty.html">ReflectedProperty</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>MediaType</h1>
               <div class="declaration">
                 <div class="language">
@@ -221,10 +249,13 @@
 <span class="p">;</span> <span class="n">to</span> <span class="n">use</span> <span class="n">within</span> <span class="n">parameter</span> <span class="n">values</span>
 </code></pre>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -250,7 +281,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L52-L70">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L52-L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -258,9 +289,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV4typeSSv"></a>
+                    <a name="/s:4Core9MediaTypeV4typeSSvp"></a>
                     <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV4typeSSv">type</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV4typeSSvp">type</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -268,7 +299,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>MediaType</code>&rsquo;s discrete or composite type. Usually one of the following.</p>
+                        <p>The <code>MediaType</code>&lsquo;s discrete or composite type. Usually one of the following.</p>
 <pre class="highlight swift"><code><span class="s">"text"</span> <span class="o">/</span> <span class="s">"image"</span> <span class="o">/</span> <span class="s">"audio"</span> <span class="o">/</span> <span class="s">"video"</span> <span class="o">/</span> <span class="s">"application
 "</span><span class="n">message</span><span class="s">" / "</span><span class="n">multipart</span><span class="s">"
 ...
@@ -291,7 +322,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L83">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -299,9 +330,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV03subC0SSv"></a>
+                    <a name="/s:4Core9MediaTypeV03subC0SSvp"></a>
                     <a name="//apple_ref/swift/Property/subType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV03subC0SSv">subType</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV03subC0SSvp">subType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -309,7 +340,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>MediaType</code>&rsquo;s specific type. Usually a unique string.</p>
+                        <p>The <code>MediaType</code>&lsquo;s specific type. Usually a unique string.</p>
 
 <p>In the <code>MediaType</code> <code>&quot;application/json; charset=utf8&quot;</code>:</p>
 
@@ -328,7 +359,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L92">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -336,9 +367,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV10parameterss10DictionaryVyAA21CaseInsensitiveStringVSSGv"></a>
+                    <a name="/s:4Core9MediaTypeV10parameterss10DictionaryVyAA21CaseInsensitiveStringVSSGvp"></a>
                     <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV10parameterss10DictionaryVyAA21CaseInsensitiveStringVSSGv">parameters</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV10parameterss10DictionaryVyAA21CaseInsensitiveStringVSSGvp">parameters</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -346,7 +377,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>MediaType</code>&rsquo;s metadata. Zero or more key/value pairs.</p>
+                        <p>The <code>MediaType</code>&lsquo;s metadata. Zero or more key/value pairs.</p>
 
 <p>In the <code>MediaType</code> <code>&quot;application/json; charset=utf8&quot;</code>:</p>
 
@@ -365,7 +396,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L101">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -404,7 +435,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L112-L118">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L112-L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -412,9 +443,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV11descriptionSSv"></a>
+                    <a name="/s:4Core9MediaTypeV11descriptionSSvp"></a>
                     <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV11descriptionSSv">description</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV11descriptionSSvp">description</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -434,7 +465,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L121-L123">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L121-L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -442,9 +473,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV9hashValueSiv"></a>
+                    <a name="/s:4Core9MediaTypeV9hashValueSivp"></a>
                     <a name="//apple_ref/swift/Property/hashValue" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV9hashValueSiv">hashValue</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV9hashValueSivp">hashValue</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -464,7 +495,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L126">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L126">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -494,7 +525,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L129-L134">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L129-L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -526,7 +557,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L140-L157">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L140-L157">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -581,7 +612,7 @@
                         <p>Newly created <code>MediaType</code>, <code>nil</code> if none was found.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L166-L168">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L166-L168">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -589,13 +620,13 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3anyACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3anyACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/any" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3anyACvZ">any</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3anyACvpZ">any</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -615,7 +646,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L173">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L173">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -623,9 +654,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV9plainTextACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV9plainTextACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/plainText" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV9plainTextACvZ">plainText</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV9plainTextACvpZ">plainText</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -645,7 +676,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L175">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L175">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -653,9 +684,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV4htmlACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV4htmlACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/html" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV4htmlACvZ">html</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV4htmlACvpZ">html</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -675,7 +706,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L177">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L177">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -683,9 +714,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3cssACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3cssACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/css" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3cssACvZ">css</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3cssACvpZ">css</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -705,7 +736,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L179">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L179">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -713,9 +744,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV14urlEncodedFormACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV14urlEncodedFormACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/urlEncodedForm" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV14urlEncodedFormACvZ">urlEncodedForm</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV14urlEncodedFormACvpZ">urlEncodedForm</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -735,7 +766,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L181">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L181">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -743,9 +774,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV8formDataACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV8formDataACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/formData" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV8formDataACvZ">formData</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV8formDataACvpZ">formData</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -765,7 +796,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L183">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L183">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -773,9 +804,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV9multipartACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV9multipartACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/multipart" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV9multipartACvZ">multipart</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV9multipartACvpZ">multipart</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -795,7 +826,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L185">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L185">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -803,9 +834,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV4jsonACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV4jsonACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/json" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV4jsonACvZ">json</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV4jsonACvpZ">json</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -825,7 +856,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L187">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L187">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -833,9 +864,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3xmlACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3xmlACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/xml" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3xmlACvZ">xml</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3xmlACvpZ">xml</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -855,7 +886,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L189">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L189">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -863,9 +894,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3dtdACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3dtdACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/dtd" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3dtdACvZ">dtd</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3dtdACvpZ">dtd</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -885,7 +916,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L191">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L191">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -893,9 +924,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3pdfACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3pdfACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/pdf" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3pdfACvZ">pdf</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3pdfACvpZ">pdf</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -915,7 +946,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L193">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L193">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -923,9 +954,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3zipACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3zipACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/zip" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3zipACvZ">zip</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3zipACvpZ">zip</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -945,7 +976,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L195">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L195">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -953,9 +984,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3tarACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3tarACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/tar" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3tarACvZ">tar</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3tarACvpZ">tar</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -975,7 +1006,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L197">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L197">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -983,9 +1014,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV4gzipACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV4gzipACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/gzip" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV4gzipACvZ">gzip</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV4gzipACvpZ">gzip</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1005,7 +1036,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L199">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L199">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1013,9 +1044,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV5bzip2ACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV5bzip2ACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/bzip2" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV5bzip2ACvZ">bzip2</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV5bzip2ACvpZ">bzip2</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1035,7 +1066,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L201">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L201">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1043,9 +1074,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV6binaryACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV6binaryACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/binary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV6binaryACvZ">binary</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV6binaryACvpZ">binary</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1065,7 +1096,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L203">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L203">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1073,9 +1104,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3gifACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3gifACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/gif" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3gifACvZ">gif</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3gifACvpZ">gif</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1095,7 +1126,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L205">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L205">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1103,9 +1134,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV4jpegACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV4jpegACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/jpeg" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV4jpegACvZ">jpeg</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV4jpegACvpZ">jpeg</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1125,7 +1156,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L207">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L207">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1133,9 +1164,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3pngACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3pngACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/png" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3pngACvZ">png</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3pngACvpZ">png</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1155,7 +1186,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L209">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L209">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1163,9 +1194,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3svgACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3svgACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/svg" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3svgACvZ">svg</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3svgACvpZ">svg</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1185,7 +1216,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L211">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L211">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1193,9 +1224,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV5audioACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV5audioACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/audio" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV5audioACvZ">audio</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV5audioACvpZ">audio</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1215,7 +1246,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L213">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L213">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1223,9 +1254,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV4midiACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV4midiACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/midi" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV4midiACvZ">midi</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV4midiACvpZ">midi</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1245,7 +1276,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L215">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L215">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1253,9 +1284,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3mp3ACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3mp3ACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/mp3" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3mp3ACvZ">mp3</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3mp3ACvpZ">mp3</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1275,7 +1306,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L217">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L217">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1283,9 +1314,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV4waveACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV4waveACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/wave" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV4waveACvZ">wave</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV4waveACvpZ">wave</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1305,7 +1336,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L219">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L219">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1313,9 +1344,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3oggACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3oggACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/ogg" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3oggACvZ">ogg</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3oggACvpZ">ogg</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1335,7 +1366,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L221">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L221">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1343,9 +1374,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV3aviACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV3aviACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/avi" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV3aviACvZ">avi</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV3aviACvpZ">avi</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1365,7 +1396,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L223">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L223">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1373,9 +1404,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core9MediaTypeV4mpegACvZ"></a>
+                    <a name="/s:4Core9MediaTypeV4mpegACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/mpeg" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core9MediaTypeV4mpegACvZ">mpeg</a>
+                    <a class="token" href="#/s:4Core9MediaTypeV4mpegACvpZ">mpeg</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1395,21 +1426,22 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.2/Sources/Core/MediaType.swift#L225">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.1.3/Sources/Core/MediaType.swift#L225">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-16)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
