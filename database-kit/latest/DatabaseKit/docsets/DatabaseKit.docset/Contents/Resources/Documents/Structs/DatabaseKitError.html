@@ -4,110 +4,156 @@
     <title>DatabaseKitError Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Struct/DatabaseKitError" class="dashAnchor"></a>
+
     <a title="DatabaseKitError Structure Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">DatabaseKit Docs</a> (91% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/database-kit"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2Drc%2E2%2E2%2E1%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">DatabaseKit Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        DatabaseKitError Structure Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          DatabaseKit Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/database-kit">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">DatabaseKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      DatabaseKitError Structure Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a>
+                <a class="nav-group-task-link" href="../Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/DatabaseKitProvider.html">DatabaseKitProvider</a>
+                <a class="nav-group-task-link" href="../Classes/DatabaseKeyedCache.html">DatabaseKeyedCache</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/DatabaseLogger.html">DatabaseLogger</a>
+                <a class="nav-group-task-link" href="../Classes/DatabaseKitProvider.html">DatabaseKitProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/MemoryKeyedCache.html">MemoryKeyedCache</a>
+                <a class="nav-group-task-link" href="../Classes/DatabaseLogger.html">DatabaseLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DictionaryKeyedCache.html">DictionaryKeyedCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MemoryKeyedCache.html">MemoryKeyedCache</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Container.html">Container</a>
+                <a class="nav-group-task-link" href="../Extensions/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/SubContainer.html">SubContainer</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/URL.html">URL</a>
+                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/Database.html">Database</a>
+                <a class="nav-group-task-link" href="../Protocols/Database.html">Database</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/DatabaseConnectable.html">DatabaseConnectable</a>
+                <a class="nav-group-task-link" href="../Protocols/DatabaseConnectable.html">DatabaseConnectable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/DatabaseConnection.html">DatabaseConnection</a>
+                <a class="nav-group-task-link" href="../Protocols/DatabaseConnection.html">DatabaseConnection</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/KeyedCache.html">KeyedCache</a>
+                <a class="nav-group-task-link" href="../Protocols/DatabaseLogHandler.html">DatabaseLogHandler</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/LogSupporting.html">LogSupporting</a>
+                <a class="nav-group-task-link" href="../Protocols/DatabaseStringFindable.html">DatabaseStringFindable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KeyedCache.html">KeyedCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KeyedCacheSupporting.html">KeyedCacheSupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LogSupporting.html">LogSupporting</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/DatabaseConfig.html">DatabaseConfig</a>
+                <a class="nav-group-task-link" href="../Structs/ConfiguredDatabase.html">ConfiguredDatabase</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DatabaseConnectionPoolConfig.html">DatabaseConnectionPoolConfig</a>
+                <a class="nav-group-task-link" href="../Structs/DatabaseConnectionPoolConfig.html">DatabaseConnectionPoolConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DatabaseIdentifier.html">DatabaseIdentifier</a>
+                <a class="nav-group-task-link" href="../Structs/DatabaseIdentifier.html">DatabaseIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DatabaseKitError.html">DatabaseKitError</a>
+                <a class="nav-group-task-link" href="../Structs/DatabaseKitError.html">DatabaseKitError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DatabaseLog.html">DatabaseLog</a>
+                <a class="nav-group-task-link" href="../Structs/DatabaseLog.html">DatabaseLog</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Databases.html">Databases</a>
+                <a class="nav-group-task-link" href="../Structs/Databases.html">Databases</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabasesConfig.html">DatabasesConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PrintLogHandler.html">PrintLogHandler</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>DatabaseKitError</h1>
               <div class="declaration">
                 <div class="language">
@@ -117,10 +163,13 @@
               </div>
             <p>Errors that can be thrown while working with Vapor.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -134,7 +183,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>See <code>Debuggable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -146,7 +195,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/DatabaseKitError.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L6">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -164,7 +213,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>See <code>Debuggable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -176,7 +225,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/DatabaseKitError.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L9">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -194,7 +243,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>See <code>Debuggable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -206,7 +255,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/DatabaseKitError.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -224,7 +273,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>See <code>Debuggable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -236,7 +285,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/DatabaseKitError.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -254,7 +303,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>See <code>Debuggable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -266,7 +315,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/DatabaseKitError.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -284,7 +333,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>See <code>Debuggable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -296,7 +345,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/DatabaseKitError.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -314,7 +363,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>See <code>Debuggable</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -326,21 +375,22 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/DatabaseKitError.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-29)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>

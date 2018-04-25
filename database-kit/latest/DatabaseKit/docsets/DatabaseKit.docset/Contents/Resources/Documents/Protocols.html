@@ -4,116 +4,165 @@
     <title>Protocols  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
+
+
     <a title="Protocols  Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">DatabaseKit Docs</a> (91% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/database-kit"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2Drc%2E2%2E2%2E1%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">DatabaseKit Reference</a>
-        <img id="carat" src="img/carat.png" />
-        Protocols  Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          DatabaseKit Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/database-kit">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">DatabaseKit Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Protocols  Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a>
+                <a class="nav-group-task-link" href="Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/DatabaseKitProvider.html">DatabaseKitProvider</a>
+                <a class="nav-group-task-link" href="Classes/DatabaseKeyedCache.html">DatabaseKeyedCache</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/DatabaseLogger.html">DatabaseLogger</a>
+                <a class="nav-group-task-link" href="Classes/DatabaseKitProvider.html">DatabaseKitProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/MemoryKeyedCache.html">MemoryKeyedCache</a>
+                <a class="nav-group-task-link" href="Classes/DatabaseLogger.html">DatabaseLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/DictionaryKeyedCache.html">DictionaryKeyedCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MemoryKeyedCache.html">MemoryKeyedCache</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/Container.html">Container</a>
+                <a class="nav-group-task-link" href="Extensions/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/SubContainer.html">SubContainer</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/URL.html">URL</a>
+                <a class="nav-group-task-link" href="Extensions/URL.html">URL</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/Database.html">Database</a>
+                <a class="nav-group-task-link" href="Protocols/Database.html">Database</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/DatabaseConnectable.html">DatabaseConnectable</a>
+                <a class="nav-group-task-link" href="Protocols/DatabaseConnectable.html">DatabaseConnectable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/DatabaseConnection.html">DatabaseConnection</a>
+                <a class="nav-group-task-link" href="Protocols/DatabaseConnection.html">DatabaseConnection</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/KeyedCache.html">KeyedCache</a>
+                <a class="nav-group-task-link" href="Protocols/DatabaseLogHandler.html">DatabaseLogHandler</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/LogSupporting.html">LogSupporting</a>
+                <a class="nav-group-task-link" href="Protocols/DatabaseStringFindable.html">DatabaseStringFindable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/KeyedCache.html">KeyedCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/KeyedCacheSupporting.html">KeyedCacheSupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/LogSupporting.html">LogSupporting</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/DatabaseConfig.html">DatabaseConfig</a>
+                <a class="nav-group-task-link" href="Structs/ConfiguredDatabase.html">ConfiguredDatabase</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/DatabaseConnectionPoolConfig.html">DatabaseConnectionPoolConfig</a>
+                <a class="nav-group-task-link" href="Structs/DatabaseConnectionPoolConfig.html">DatabaseConnectionPoolConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/DatabaseIdentifier.html">DatabaseIdentifier</a>
+                <a class="nav-group-task-link" href="Structs/DatabaseIdentifier.html">DatabaseIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/DatabaseKitError.html">DatabaseKitError</a>
+                <a class="nav-group-task-link" href="Structs/DatabaseKitError.html">DatabaseKitError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/DatabaseLog.html">DatabaseLog</a>
+                <a class="nav-group-task-link" href="Structs/DatabaseLog.html">DatabaseLog</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Databases.html">Databases</a>
+                <a class="nav-group-task-link" href="Structs/Databases.html">Databases</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/DatabasesConfig.html">DatabasesConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PrintLogHandler.html">PrintLogHandler</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>Protocols</h1>
             <p>The following protocols are available globally.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -127,8 +176,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Capable of being represented as a database connection
-for the supplied identifier.</p>
+                        <p>Capable of creating connections to identified databases.</p>
+
+<p>Subsequent requests for a connection to the same database should always
+yield the same connection.</p>
+
+<p>Types conforming to this protocol are responsible for cleaning up open connections
+in a way that makes sense to their use case. Usually on deinit.</p>
 
                         <a href="Protocols/DatabaseConnectable.html" class="slightly-smaller">See more</a>
                       </div>
@@ -141,7 +195,7 @@ for the supplied identifier.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/Connection/DatabaseConnectable.swift#L5-L11">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Connection/DatabaseConnectable.swift#L8-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -149,7 +203,7 @@ for the supplied identifier.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -163,8 +217,10 @@ for the supplied identifier.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Types conforming to this protocol can be used
-as a database connection for executing queries.</p>
+                        <p>Types conforming to this protocol can be used as a <code><a href="Protocols/Database.html#/s:11DatabaseKit0A0P10Connection">Database.Connection</a></code>.</p>
+
+<p>Most of the database interaction work is done through static methods on <code><a href="Protocols/Database.html">Database</a></code> that accept
+a connection. However, there are a few things like <code>isClosed</code> and <code>close()</code> that a connection must implement.</p>
 
                         <a href="Protocols/DatabaseConnection.html" class="slightly-smaller">See more</a>
                       </div>
@@ -177,7 +233,7 @@ as a database connection for executing queries.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/Connection/DatabaseConnection.swift#L6-L9">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Connection/DatabaseConnection.swift#L5-L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -185,7 +241,44 @@ as a database connection for executing queries.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11DatabaseKit0A14StringFindableP"></a>
+                    <a name="//apple_ref/swift/Protocol/DatabaseStringFindable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11DatabaseKit0A14StringFindableP">DatabaseStringFindable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capable of being looked up from a <code>String</code> on a <code><a href="Protocols/DatabaseConnection.html">DatabaseConnection</a></code>.</p>
+
+<p>This is useful for implementing databae models that can be found using routing parameters.</p>
+
+                        <a href="Protocols/DatabaseStringFindable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DatabaseStringFindable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Connection/DatabaseStringFindable.swift#L4-L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -199,8 +292,9 @@ as a database connection for executing queries.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Types conforming to this protocol can be used as
-a database for Fluent connections and connection pools.</p>
+                        <p>Types conforming to this protocol can be used as a database for connections and connection pools.</p>
+
+<p>This protocol is the basis for <code><a href="Protocols/KeyedCacheSupporting.html">...Supporting</a></code> protocols that further extend it, such as <code><a href="Protocols/KeyedCacheSupporting.html">KeyedCacheSupporting</a></code>.</p>
 
                         <a href="Protocols/Database.html" class="slightly-smaller">See more</a>
                       </div>
@@ -213,7 +307,7 @@ a database for Fluent connections and connection pools.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/Database/Database.swift#L6-L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Database/Database.swift#L4-L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -221,7 +315,7 @@ a database for Fluent connections and connection pools.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -235,7 +329,7 @@ a database for Fluent connections and connection pools.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A key-value cache</p>
+                        <p>A key-value cache.</p>
 
                         <a href="Protocols/KeyedCache.html" class="slightly-smaller">See more</a>
                       </div>
@@ -248,7 +342,7 @@ a database for Fluent connections and connection pools.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L4-L19">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L2-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -256,7 +350,77 @@ a database for Fluent connections and connection pools.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11DatabaseKit20KeyedCacheSupportingP"></a>
+                    <a name="//apple_ref/swift/Protocol/KeyedCacheSupporting" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11DatabaseKit20KeyedCacheSupportingP">KeyedCacheSupporting</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code><a href="Protocols/Database.html">Database</a></code> that supports key-value actions.</p>
+
+                        <a href="Protocols/KeyedCacheSupporting.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">KeyedCacheSupporting</span><span class="p">:</span> <span class="kt"><a href="Protocols/Database.html">Database</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/KeyedCacheSupporting.swift#L2-L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11DatabaseKit0A10LogHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/DatabaseLogHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11DatabaseKit0A10LogHandlerP">DatabaseLogHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capable of handling <code><a href="Protocols/Database.html">Database</a></code> logs.</p>
+
+                        <a href="Protocols/DatabaseLogHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DatabaseLogHandler</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Log/DatabaseLogHandler.swift#L2-L7">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -270,7 +434,7 @@ a database for Fluent connections and connection pools.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Capable of logging queries through a supplied DatabaseLogger.</p>
+                        <p>Capable of logging queries through a supplied <code><a href="Classes/DatabaseLogger.html">DatabaseLogger</a></code>.</p>
 
                         <a href="Protocols/LogSupporting.html" class="slightly-smaller">See more</a>
                       </div>
@@ -278,26 +442,27 @@ a database for Fluent connections and connection pools.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">LogSupporting</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">LogSupporting</span><span class="p">:</span> <span class="kt"><a href="Protocols/Database.html">Database</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0-rc.2.2.1/Sources/DatabaseKit/Log/DatabaseLog.swift#L4-L7">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Log/LogSupporting.swift#L2-L5">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-29)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
