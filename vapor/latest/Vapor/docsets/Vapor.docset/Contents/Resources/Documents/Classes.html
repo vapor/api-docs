@@ -4,336 +4,400 @@
     <title>Classes  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
+
+
     <a title="Classes  Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">Vapor Docs</a> (93% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/vapor"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E0%2Drc%2E2%2E2%2FVapor%2Fdocsets%2FVapor%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">Vapor Reference</a>
-        <img id="carat" src="img/carat.png" />
-        Classes  Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Vapor Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/vapor">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Vapor Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Classes  Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/Application.html">Application</a>
+                <a class="nav-group-task-link" href="Classes/Application.html">Application</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/BCryptHasher.html">BCryptHasher</a>
+                <a class="nav-group-task-link" href="Classes/CORSMiddleware.html">CORSMiddleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CORSMiddleware.html">CORSMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/CORSMiddleware/AllowOriginSetting.html">– AllowOriginSetting</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CORSMiddleware/AllowOriginSetting.html">– AllowOriginSetting</a>
+                <a class="nav-group-task-link" href="Classes/CORSMiddleware/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CORSMiddleware/Configuration.html">– Configuration</a>
+                <a class="nav-group-task-link" href="Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ConsoleLogger.html">ConsoleLogger</a>
+                <a class="nav-group-task-link" href="Classes/DateMiddleware.html">DateMiddleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/DateMiddleware.html">DateMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/EngineRouter.html">EngineRouter</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/EngineRouter.html">EngineRouter</a>
+                <a class="nav-group-task-link" href="Classes/ErrorMiddleware.html">ErrorMiddleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/EngineServer.html">EngineServer</a>
+                <a class="nav-group-task-link" href="Classes/FileMiddleware.html">FileMiddleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/EngineWebSocketServer.html">EngineWebSocketServer</a>
+                <a class="nav-group-task-link" href="Classes/FoundationClient.html">FoundationClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ErrorMiddleware.html">ErrorMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/KeyedCacheSessions.html">KeyedCacheSessions</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/FileMiddleware.html">FileMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/MemorySessions.html">MemorySessions</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/FoundationClient.html">FoundationClient</a>
+                <a class="nav-group-task-link" href="Classes/NIOServer.html">NIOServer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/KeyedCacheSessions.html">KeyedCacheSessions</a>
+                <a class="nav-group-task-link" href="Classes/NIOWebSocketClient.html">NIOWebSocketClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/MemorySessions.html">MemorySessions</a>
+                <a class="nav-group-task-link" href="Classes/NIOWebSocketServer.html">NIOWebSocketServer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/PlaintextEncoder.html">PlaintextEncoder</a>
+                <a class="nav-group-task-link" href="Classes/PlaintextEncoder.html">PlaintextEncoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Request.html">Request</a>
+                <a class="nav-group-task-link" href="Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Response.html">Response</a>
+                <a class="nav-group-task-link" href="Classes/Response.html">Response</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Session.html">Session</a>
+                <a class="nav-group-task-link" href="Classes/Session.html">Session</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/SessionsMiddleware.html">SessionsMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/SessionsMiddleware.html">SessionsMiddleware</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/RedirectType.html">RedirectType</a>
+                <a class="nav-group-task-link" href="Enums/RedirectType.html">RedirectType</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/Array.html">Array</a>
+                <a class="nav-group-task-link" href="Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Config.html">Config</a>
+                <a class="nav-group-task-link" href="Extensions/BlockingIOThreadPool.html">BlockingIOThreadPool</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/DecodingError.html">DecodingError</a>
+                <a class="nav-group-task-link" href="Extensions/CommandConfig.html">CommandConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Dictionary.html">Dictionary</a>
+                <a class="nav-group-task-link" href="Extensions/Config.html">Config</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Double.html">Double</a>
+                <a class="nav-group-task-link" href="Extensions/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Float.html">Float</a>
+                <a class="nav-group-task-link" href="Extensions/DecodingError.html">DecodingError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Future.html">Future</a>
+                <a class="nav-group-task-link" href="Extensions/Dictionary.html">Dictionary</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/HTTPCookieValue.html">HTTPCookieValue</a>
+                <a class="nav-group-task-link" href="Extensions/Double.html">Double</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/HTTPStatus.html">HTTPStatus</a>
+                <a class="nav-group-task-link" href="Extensions/Float.html">Float</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int.html">Int</a>
+                <a class="nav-group-task-link" href="Extensions/FormDataDecoder.html">FormDataDecoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int16.html">Int16</a>
+                <a class="nav-group-task-link" href="Extensions/FormDataEncoder.html">FormDataEncoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int32.html">Int32</a>
+                <a class="nav-group-task-link" href="Extensions/Future.html">Future</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int64.html">Int64</a>
+                <a class="nav-group-task-link" href="Extensions/HTTPMethod.html">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int8.html">Int8</a>
+                <a class="nav-group-task-link" href="Extensions/HTTPRequest.html">HTTPRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/MultipartForm.html">MultipartForm</a>
+                <a class="nav-group-task-link" href="Extensions/HTTPResponse.html">HTTPResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Services.html">Services</a>
+                <a class="nav-group-task-link" href="Extensions/HTTPStatus.html">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/StaticString.html">StaticString</a>
+                <a class="nav-group-task-link" href="Extensions/Int.html">Int</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/String.html">String</a>
+                <a class="nav-group-task-link" href="Extensions/Int16.html">Int16</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Thread.html">Thread</a>
+                <a class="nav-group-task-link" href="Extensions/Int32.html">Int32</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt.html">UInt</a>
+                <a class="nav-group-task-link" href="Extensions/Int64.html">Int64</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt16.html">UInt16</a>
+                <a class="nav-group-task-link" href="Extensions/Int8.html">Int8</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt32.html">UInt32</a>
+                <a class="nav-group-task-link" href="Extensions/JSONDecoder.html">JSONDecoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt64.html">UInt64</a>
+                <a class="nav-group-task-link" href="Extensions/JSONEncoder.html">JSONEncoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt8.html">UInt8</a>
+                <a class="nav-group-task-link" href="Extensions/Logger.html">Logger</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/URL.html">URL</a>
+                <a class="nav-group-task-link" href="Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/View.html">View</a>
+                <a class="nav-group-task-link" href="Extensions/Services.html">Services</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/StaticString.html">StaticString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Substring.html">Substring</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Thread.html">Thread</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt.html">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt8.html">UInt8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URLEncodedFormDecoder.html">URLEncodedFormDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URLEncodedFormEncoder.html">URLEncodedFormEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/View.html">View</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/ViewRenderer.html">ViewRenderer</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/AbortError.html">AbortError</a>
+                <a class="nav-group-task-link" href="Protocols/AbortError.html">AbortError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Client.html">Client</a>
+                <a class="nav-group-task-link" href="Protocols/Client.html">Client</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Content.html">Content</a>
+                <a class="nav-group-task-link" href="Protocols/Content.html">Content</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Middleware.html">Middleware</a>
+                <a class="nav-group-task-link" href="Protocols/HTTPMessageContainer.html">HTTPMessageContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RequestDecodable.html">RequestDecodable</a>
+                <a class="nav-group-task-link" href="Protocols/Middleware.html">Middleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RequestEncodable.html">RequestEncodable</a>
+                <a class="nav-group-task-link" href="Protocols/RequestDecodable.html">RequestDecodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Responder.html">Responder</a>
+                <a class="nav-group-task-link" href="Protocols/RequestEncodable.html">RequestEncodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/ResponseDecodable.html">ResponseDecodable</a>
+                <a class="nav-group-task-link" href="Protocols/Responder.html">Responder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/ResponseEncodable.html">ResponseEncodable</a>
+                <a class="nav-group-task-link" href="Protocols/ResponseDecodable.html">ResponseDecodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RouteCollection.html">RouteCollection</a>
+                <a class="nav-group-task-link" href="Protocols/ResponseEncodable.html">ResponseEncodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Router.html">Router</a>
+                <a class="nav-group-task-link" href="Protocols/RouteCollection.html">RouteCollection</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Server.html">Server</a>
+                <a class="nav-group-task-link" href="Protocols/Router.html">Router</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Sessions.html">Sessions</a>
+                <a class="nav-group-task-link" href="Protocols/Server.html">Server</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/URLRepresentable.html">URLRepresentable</a>
+                <a class="nav-group-task-link" href="Protocols/Sessions.html">Sessions</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/VaporProvider.html">VaporProvider</a>
+                <a class="nav-group-task-link" href="Protocols/VaporProvider.html">VaporProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/WebSocketServer.html">WebSocketServer</a>
+                <a class="nav-group-task-link" href="Protocols/WebSocketClient.html">WebSocketClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WebSocketServer.html">WebSocketServer</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/Abort.html">Abort</a>
+                <a class="nav-group-task-link" href="Structs/Abort.html">Abort</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/AnyResponse.html">AnyResponse</a>
+                <a class="nav-group-task-link" href="Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ApplicationResponder.html">ApplicationResponder</a>
+                <a class="nav-group-task-link" href="Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/BasicResponder.html">BasicResponder</a>
+                <a class="nav-group-task-link" href="Structs/BootCommand.html">BootCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/CommandConfig.html">CommandConfig</a>
+                <a class="nav-group-task-link" href="Structs/ContentCoders.html">ContentCoders</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ContentCoders.html">ContentCoders</a>
+                <a class="nav-group-task-link" href="Structs/ContentConfig.html">ContentConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ContentConfig.html">ContentConfig</a>
+                <a class="nav-group-task-link" href="Structs/ContentContainer.html">ContentContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ContentContainer.html">ContentContainer</a>
+                <a class="nav-group-task-link" href="Structs/FileIO.html">FileIO</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/EngineServerConfig.html">EngineServerConfig</a>
+                <a class="nav-group-task-link" href="Structs/MiddlewareConfig.html">MiddlewareConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/MiddlewareConfig.html">MiddlewareConfig</a>
+                <a class="nav-group-task-link" href="Structs/NIOServerConfig.html">NIOServerConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/MultipartFormConfig.html">MultipartFormConfig</a>
+                <a class="nav-group-task-link" href="Structs/ParametersContainer.html">ParametersContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/QueryContainer.html">QueryContainer</a>
+                <a class="nav-group-task-link" href="Structs/QueryContainer.html">QueryContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RequestDecodableResponder.html">RequestDecodableResponder</a>
+                <a class="nav-group-task-link" href="Structs/RoutesCommand.html">RoutesCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RouteResponder.html">RouteResponder</a>
+                <a class="nav-group-task-link" href="Structs/RunningServer.html">RunningServer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RouterResponder.html">RouterResponder</a>
+                <a class="nav-group-task-link" href="Structs/ServeCommand.html">ServeCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RoutesCommand.html">RoutesCommand</a>
+                <a class="nav-group-task-link" href="Structs/SessionData.html">SessionData</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RunningServer.html">RunningServer</a>
+                <a class="nav-group-task-link" href="Structs/SessionsConfig.html">SessionsConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ServeCommand.html">ServeCommand</a>
+                <a class="nav-group-task-link" href="Structs/VaporError.html">VaporError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/SessionData.html">SessionData</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/SessionsConfig.html">SessionsConfig</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/VaporError.html">VaporError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/WebSocketResponder.html">WebSocketResponder</a>
+                <a class="nav-group-task-link" href="Structs/WebSocketResponder.html">WebSocketResponder</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Typealiases.html">Type Aliases</a>
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:5Vapor14RequestCodablea">RequestCodable</a>
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor14RequestCodablea">RequestCodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:5Vapor15ResponseCodablea">ResponseCodable</a>
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor15ResponseCodablea">ResponseCodable</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>Classes</h1>
             <p>The following classes are available globally.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -350,8 +414,11 @@
                         <p>Core framework class. You usually create only one of these per application. Acts as your application&rsquo;s top-level service container.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">router</span> <span class="o">=</span> <span class="k">try</span> <span class="n">app</span><span class="o">.</span><span class="nf">make</span><span class="p">(</span><span class="kt">Router</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
 </code></pre>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    When generating responses to requests, you should use the <code><a href="Classes/Request.html">Request</a></code> as your service-container.
 
-<p>Note: When generating responses to requests, you should use the <code><a href="Classes/Request.html">Request</a></code> as your service-container.</p>
+</div>
 
 <p>Call the <code>run()</code> method to run this <code>Application</code>&rsquo;s commands. By default, this will boot an <code>HTTPServer</code> and begin serving requests.
 Which command is run depends on the command-line arguments and flags.</p>
@@ -359,10 +426,8 @@ Which command is run depends on the command-line arguments and flags.</p>
 </code></pre>
 
 <p>The <code>Application</code> is responsible for calling <code>Provider</code> (and <code><a href="Protocols/VaporProvider.html">VaporProvider</a></code>) boot methods. The <code>willBoot</code> and <code>didBoot</code> methods
-will be called on <code>Application.init(_:)</code> for both provider types. <code><a href="Protocols/VaporProvider.html">VaporProvider</a></code>&rsquo;s will have their <code>willRun</code> and <code>didRun</code> methods
+will be called on <code><a href="Classes/Application.html#/s:5Vapor11ApplicationCXeXecfc">Application.init(...)</a></code> for both provider types. <code><a href="Protocols/VaporProvider.html">VaporProvider</a></code>&rsquo;s will have their <code>willRun</code> and <code>didRun</code> methods
 called on <code><a href="Classes/Application.html#/s:5Vapor11ApplicationC3runyyKF">Application.run()</a></code></p>
-
-<p><a href="https://docs.vapor.codes/3.0/getting-started/application/">https://docs.vapor.codes/3.0/getting-started/application/</a></p>
 
                         <a href="Classes/Application.html" class="slightly-smaller">See more</a>
                       </div>
@@ -375,7 +440,7 @@ called on <code><a href="Classes/Application.html#/s:5Vapor11ApplicationC3runyyK
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Application.swift#L17-L156">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Application.swift#L15-L150">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -383,77 +448,7 @@ called on <code><a href="Classes/Application.html#/s:5Vapor11ApplicationC3runyyK
               </ul>
             </div>
             <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5Vapor16PlaintextEncoderC"></a>
-                    <a name="//apple_ref/swift/Class/PlaintextEncoder" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor16PlaintextEncoderC">PlaintextEncoder</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Encodes data as plaintext, utf8.</p>
-
-                        <a href="Classes/PlaintextEncoder.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">PlaintextEncoder</span><span class="p">:</span> <span class="kt">DataEncoder</span><span class="p">,</span> <span class="kt">HTTPBodyEncoder</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Content/PlaintextEncoder.swift#L5-L26">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5Vapor12EngineServerC"></a>
-                    <a name="//apple_ref/swift/Class/EngineServer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor12EngineServerC">EngineServer</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A TCP based server with HTTP parsing and serialization pipeline.</p>
-
-                        <a href="Classes/EngineServer.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">EngineServer</span><span class="p">:</span> <span class="kt"><a href="Protocols/Server.html">Server</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/HTTP/EngineServer.swift#L12-L77">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -475,12 +470,12 @@ called on <code><a href="Classes/Application.html#/s:5Vapor11ApplicationC3runyyK
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FoundationClient</span><span class="p">:</span> <span class="kt"><a href="Protocols/Client.html">Client</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FoundationClient</span><span class="p">:</span> <span class="kt"><a href="Protocols/Client.html">Client</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/HTTP/FoundationClient.swift#L4-L41">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Client/FoundationClient.swift#L2-L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -488,13 +483,13 @@ called on <code><a href="Classes/Application.html#/s:5Vapor11ApplicationC3runyyK
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor7RequestC"></a>
-                    <a name="//apple_ref/swift/Class/Request" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor7RequestC">Request</a>
+                    <a name="/s:5Vapor16PlaintextEncoderC"></a>
+                    <a name="//apple_ref/swift/Class/PlaintextEncoder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor16PlaintextEncoderC">PlaintextEncoder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -502,45 +497,20 @@ called on <code><a href="Classes/Application.html#/s:5Vapor11ApplicationC3runyyK
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>Request</code> is a service-container wrapper around an <code>HTTPRequest</code>.</p>
+                        <p>Encodes data as plaintext, utf8.</p>
 
-<p>Use this <code>Request</code> to access information about the <code>HTTPRequest</code> (<code>req.http</code>).</p>
-<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">url</span><span class="o">.</span><span class="n">path</span><span class="p">)</span> <span class="c1">// "/hello"</span>
-</code></pre>
-
-<p>You can also use <code>Request</code> to create services you may need while generating a response (<code>req.make(_:)</code>.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">client</span> <span class="o">=</span> <span class="k">try</span> <span class="n">req</span><span class="o">.</span><span class="nf">make</span><span class="p">(</span><span class="kt">Client</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="c1">// Client</span>
-<span class="n">client</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"http://vapor.codes"</span><span class="p">)</span>
-</code></pre>
-
-<p><code>Request</code> is also the <code>ParameterContainer</code> for routing. Use <code>.parameter(...)</code> to fetch parameterized values.</p>
-<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"hello"</span><span class="p">,</span> <span class="kt">String</span><span class="o">.</span><span class="n">parameter</span><span class="p">)</span> <span class="p">{</span> <span class="n">req</span> <span class="k">in</span>
-    <span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="k">try</span> <span class="n">req</span><span class="o">.</span><span class="nf">parameter</span><span class="p">(</span><span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s">"Hello, </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">!"</span>
-<span class="p">}</span>
-</code></pre>
-
-<p><code>Request</code> is <code>DatabaseConnectable</code>, meaning you can use it in-place of an actual <code>DatabaseConnection</code>.
-When used as a connection, the request will fetch a connection from the event loop&rsquo;s connection pool and
-cache the connection for the lifetime of the request.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">users</span> <span class="o">=</span> <span class="kt">User</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="nf">all</span><span class="p">()</span>
-</code></pre>
-
-<p>See <code>HTTPRequest</code>, <code>Container</code>, <code>ParameterContainer</code>, and <code>DatabaseConnectable</code> for more information.</p>
-
-                        <a href="Classes/Request.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/PlaintextEncoder.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Request</span><span class="p">:</span> <span class="kt">ParameterContainer</span><span class="p">,</span> <span class="kt">SubContainer</span><span class="p">,</span> <span class="kt">DatabaseConnectable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">PlaintextEncoder</span><span class="p">:</span> <span class="kt">DataEncoder</span><span class="p">,</span> <span class="kt">HTTPMessageEncoder</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/HTTP/Request.swift#L32-L158">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Content/PlaintextEncoder.swift#L2-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -548,13 +518,13 @@ cache the connection for the lifetime of the request.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC"></a>
-                    <a name="//apple_ref/swift/Class/Response" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC">Response</a>
+                    <a name="/s:5Vapor14MemorySessionsC"></a>
+                    <a name="//apple_ref/swift/Class/MemorySessions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor14MemorySessionsC">MemorySessions</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -562,32 +532,20 @@ cache the connection for the lifetime of the request.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>Response</code> is a service-container wrapper around an <code>HTTPResponse</code>.</p>
+                        <p>Simple in-memory sessions implementation.</p>
 
-<p>Use this <code>Response</code> to access information about the <code>HTTPResponse</code> (<code>res.http</code>).</p>
-<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="c1">// 200 OK</span>
-</code></pre>
-
-<p>You can also use <code>Response</code> to create services you may need while generating a response (<code>res.make(_:)</code>.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">client</span> <span class="o">=</span> <span class="k">try</span> <span class="n">res</span><span class="o">.</span><span class="nf">make</span><span class="p">(</span><span class="kt">Client</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="c1">// Client</span>
-<span class="n">client</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"http://vapor.codes"</span><span class="p">)</span>
-</code></pre>
-
-<p>See <code>HTTPResponse</code> and <code>Container</code> for more information.</p>
-
-                        <a href="Classes/Response.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/MemorySessions.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Response</span><span class="p">:</span> <span class="kt">SubContainer</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">MemorySessions</span><span class="p">:</span> <span class="kt"><a href="Protocols/Sessions.html">Sessions</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/HTTP/Response.swift#L17-L82">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Sessions/MemorySessions.swift#L2-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -595,7 +553,7 @@ cache the connection for the lifetime of the request.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -609,7 +567,7 @@ cache the connection for the lifetime of the request.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Logs messages to a console</p>
+                        <p><code>Console</code> based <code>Logger</code> implementation.</p>
 
                         <a href="Classes/ConsoleLogger.html" class="slightly-smaller">See more</a>
                       </div>
@@ -622,7 +580,7 @@ cache the connection for the lifetime of the request.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Logging/ConsoleLogger.swift#L5-L28">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Logging/ConsoleLogger.swift#L2-L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -630,7 +588,7 @@ cache the connection for the lifetime of the request.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -664,7 +622,7 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Middleware/CORSMiddleware.swift#L9-L54">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Middleware/CORSMiddleware.swift#L6-L150">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -672,7 +630,7 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -686,7 +644,12 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds the RFC 1123 date to the response.</p>
+                        <p>Adds the RFC 1123 date to outgoing <code><a href="Classes/Response.html">Response</a></code>s.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <code>DateMiddleware</code> is not thread safe.
+
+</div>
 
                         <a href="Classes/DateMiddleware.html" class="slightly-smaller">See more</a>
                       </div>
@@ -694,12 +657,12 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DateMiddleware</span><span class="p">:</span> <span class="kt"><a href="Protocols/Middleware.html">Middleware</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DateMiddleware</span><span class="p">:</span> <span class="kt"><a href="Protocols/Middleware.html">Middleware</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Middleware/DateMiddleware.swift#L32-L103">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Middleware/DateMiddleware.swift#L6-L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -707,7 +670,7 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -721,7 +684,7 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Captures all errors and transforms them into an internal server error.</p>
+                        <p>Captures all errors and transforms them into an internal server error HTTP response.</p>
 
                         <a href="Classes/ErrorMiddleware.html" class="slightly-smaller">See more</a>
                       </div>
@@ -729,12 +692,12 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ErrorMiddleware</span><span class="p">:</span> <span class="kt"><a href="Protocols/Middleware.html">Middleware</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ErrorMiddleware</span><span class="p">:</span> <span class="kt"><a href="Protocols/Middleware.html">Middleware</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Middleware/ErrorMiddleware.swift#L8-L81">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Middleware/ErrorMiddleware.swift#L2-L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -742,7 +705,7 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -756,7 +719,13 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Services files from the public folder.</p>
+                        <p>Serves static files from a public directory.</p>
+<pre class="highlight swift"><code><span class="n">middlewareConfig</span> <span class="o">=</span> <span class="kt">MiddlewareConfig</span><span class="p">()</span>
+<span class="n">middlewareConfig</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="kt">FileMiddleware</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="n">middlewareConfig</span><span class="p">)</span>
+</code></pre>
+
+<p><code>FileMiddleware</code> will default to <code>DirectoryConfig</code>&rsquo;s working directory with <code>&quot;/Public&quot;</code> appended.</p>
 
                         <a href="Classes/FileMiddleware.html" class="slightly-smaller">See more</a>
                       </div>
@@ -764,12 +733,12 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FileMiddleware</span><span class="p">:</span> <span class="kt"><a href="Protocols/Middleware.html">Middleware</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FileMiddleware</span><span class="p">:</span> <span class="kt"><a href="Protocols/Middleware.html">Middleware</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Middleware/FileMiddleware.swift#L9-L44">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Middleware/FileMiddleware.swift#L8-L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -777,7 +746,114 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor7RequestC"></a>
+                    <a name="//apple_ref/swift/Class/Request" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor7RequestC">Request</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>Request</code> is a service-container wrapper around an <code>HTTPRequest</code>.</p>
+
+<p>Use <code>Request</code> to access information about the <code>HTTPRequest</code> (<code>req.http</code>).</p>
+<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">url</span><span class="o">.</span><span class="n">path</span><span class="p">)</span> <span class="c1">// "/hello"</span>
+</code></pre>
+
+<p>You can also use <code>Request</code> to create services you may need while generating a response (<code>req.make()</code>).</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">client</span> <span class="o">=</span> <span class="k">try</span> <span class="n">req</span><span class="o">.</span><span class="nf">make</span><span class="p">(</span><span class="kt">Client</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="c1">// Client</span>
+<span class="n">client</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"http://vapor.codes"</span><span class="p">)</span>
+</code></pre>
+
+<p><code>Request</code> also carries a <code><a href="Structs/ParametersContainer.html">ParametersContainer</a></code> for routing. Use <code>parameters</code> to fetch parameterized values.</p>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"hello"</span><span class="p">,</span> <span class="kt">String</span><span class="o">.</span><span class="n">parameter</span><span class="p">)</span> <span class="p">{</span> <span class="n">req</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="k">try</span> <span class="n">req</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="nf">next</span><span class="p">(</span><span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s">"Hello, </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">!"</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><code>Request</code> is <code>DatabaseConnectable</code>, meaning you can use it in-place of an actual <code>DatabaseConnection</code>.
+When used as a connection, the request will fetch a connection from the event loop&rsquo;s connection pool and
+cache the connection for the lifetime of the request.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">users</span> <span class="o">=</span> <span class="kt">User</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="nf">all</span><span class="p">()</span>
+</code></pre>
+
+<p>See <code>HTTPRequest</code>, <code>Container</code>, <code>ParameterContainer</code>, and <code>DatabaseConnectable</code> for more information.</p>
+
+                        <a href="Classes/Request.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Request</span><span class="p">:</span> <span class="kt">ContainerAlias</span><span class="p">,</span> <span class="kt">DatabaseConnectable</span><span class="p">,</span> <span class="kt"><a href="Protocols/HTTPMessageContainer.html">HTTPMessageContainer</a></span><span class="p">,</span> <span class="kt"><a href="Typealiases.html#/s:5Vapor14RequestCodablea">RequestCodable</a></span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Request/Request.swift#L27-L180">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor8ResponseC"></a>
+                    <a name="//apple_ref/swift/Class/Response" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor8ResponseC">Response</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>Response</code> is a service-container wrapper around an <code>HTTPResponse</code>.</p>
+
+<p>Use this <code>Response</code> to access information about the <code>HTTPResponse</code> (<code>res.http</code>).</p>
+<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="c1">// 200 OK</span>
+</code></pre>
+
+<p>You can also use <code>Response</code> to create services you may need while generating a response (<code>res.make(_:)</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">client</span> <span class="o">=</span> <span class="k">try</span> <span class="n">res</span><span class="o">.</span><span class="nf">make</span><span class="p">(</span><span class="kt">Client</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="c1">// Client</span>
+<span class="n">client</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"http://vapor.codes"</span><span class="p">)</span>
+</code></pre>
+
+<p>See <code>HTTPResponse</code> and <code>Container</code> for more information.</p>
+
+                        <a href="Classes/Response.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Response</span><span class="p">:</span> <span class="kt">ContainerAlias</span><span class="p">,</span> <span class="kt"><a href="Protocols/HTTPMessageContainer.html">HTTPMessageContainer</a></span><span class="p">,</span> <span class="kt"><a href="Typealiases.html#/s:5Vapor15ResponseCodablea">ResponseCodable</a></span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Response/Response.swift#L14-L92">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -804,7 +880,7 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Routing/EngineRouter.swift#L6-L49">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Routing/EngineRouter.swift#L2-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -812,7 +888,42 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor9NIOServerC"></a>
+                    <a name="//apple_ref/swift/Class/NIOServer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor9NIOServerC">NIOServer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Vapor&rsquo;s default <code><a href="Protocols/Server.html">Server</a></code> implementation. Built on SwiftNIO-based <code>HTTPServer</code>.</p>
+
+                        <a href="Classes/NIOServer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NIOServer</span><span class="p">:</span> <span class="kt"><a href="Protocols/Server.html">Server</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Server/NIOServer.swift#L2-L119">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -834,12 +945,12 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">KeyedCacheSessions</span><span class="p">:</span> <span class="kt"><a href="Protocols/Sessions.html">Sessions</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">KeyedCacheSessions</span><span class="p">:</span> <span class="kt"><a href="Protocols/Sessions.html">Sessions</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L4-L39">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L4-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -847,42 +958,7 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
               </ul>
             </div>
             <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5Vapor14MemorySessionsC"></a>
-                    <a name="//apple_ref/swift/Class/MemorySessions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor14MemorySessionsC">MemorySessions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Simple in-memory sessions implementation.</p>
-
-                        <a href="Classes/MemorySessions.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">MemorySessions</span><span class="p">:</span> <span class="kt"><a href="Protocols/Sessions.html">Sessions</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Sessions/MemorySessions.swift#L5-L47">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -896,7 +972,12 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Something that is convertible between a Cookie and an instance.</p>
+                        <p>Sessions are a method for associating data with a client accessing your app.</p>
+
+<p>Each session has a unique identifier that is used to look it up with each request
+to your app. This is usually done via HTTP cookies.</p>
+
+<p>See <code><a href="Classes/Request.html#/s:5Vapor7RequestC7sessionAA7SessionCyKF">Request.session()</a></code> and <code><a href="Classes/SessionsMiddleware.html">SessionsMiddleware</a></code> for more information.</p>
 
                         <a href="Classes/Session.html" class="slightly-smaller">See more</a>
                       </div>
@@ -909,7 +990,7 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Sessions/Session.swift#L2-L14">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Sessions/Session.swift#L7-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -917,7 +998,7 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -931,7 +1012,20 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Checks the cookies for each <code><a href="Classes/Request.html">Request</a></code></p>
+                        <p>Uses HTTP cookies to save and restore sessions for connecting clients.</p>
+
+<p>If a cookie matching the configured cookie name is found on an incoming request,
+the value will be used as an identifier to find the associated <code><a href="Classes/Session.html">Session</a></code>.</p>
+
+<p>If a session is used during a request (<code><a href="Classes/Request.html#/s:5Vapor7RequestC7sessionAA7SessionCyKF">Request.session()</a></code>), a cookie will be set
+on the outgoing response with the session&rsquo;s unique identifier. This cookie must be
+returned on the next request to restore the session.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">middlewareConfig</span> <span class="o">=</span> <span class="kt">MiddlewareConfig</span><span class="p">()</span>
+<span class="n">middlewareConfig</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="kt">SessionsMiddleware</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="n">middlewareConfig</span><span class="p">)</span>
+</code></pre>
+
+<p>See <code><a href="Structs/SessionsConfig.html">SessionsConfig</a></code> and <code><a href="Protocols/Sessions.html">Sessions</a></code> for more information.</p>
 
                         <a href="Classes/SessionsMiddleware.html" class="slightly-smaller">See more</a>
                       </div>
@@ -939,12 +1033,12 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">SessionsMiddleware</span><span class="p">:</span> <span class="kt"><a href="Protocols/Middleware.html">Middleware</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">SessionsMiddleware</span><span class="p">:</span> <span class="kt"><a href="Protocols/Middleware.html">Middleware</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Sessions/SessionsMiddleware.swift#L4-L59">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/Sessions/SessionsMiddleware.swift#L15-L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -952,13 +1046,13 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor12BCryptHasherC"></a>
-                    <a name="//apple_ref/swift/Class/BCryptHasher" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor12BCryptHasherC">BCryptHasher</a>
+                    <a name="/s:5Vapor18NIOWebSocketClientC"></a>
+                    <a name="//apple_ref/swift/Class/NIOWebSocketClient" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor18NIOWebSocketClientC">NIOWebSocketClient</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -966,20 +1060,20 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A instance-based wrapper around Crypto.BCrypt.</p>
+                        <p>SwiftNIO based <code><a href="Protocols/WebSocketClient.html">WebSocketClient</a></code>.</p>
 
-                        <a href="Classes/BCryptHasher.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/NIOWebSocketClient.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">BCryptHasher</span><span class="p">:</span> <span class="kt">Service</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NIOWebSocketClient</span><span class="p">:</span> <span class="kt">ServiceType</span><span class="p">,</span> <span class="kt"><a href="Protocols/WebSocketClient.html">WebSocketClient</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/Utilities/BCryptHasher.swift#L5-L45">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/WebSocket/NIOWebSocketClient.swift#L2-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -987,13 +1081,13 @@ For configuration of this middleware please use the <code><a href="Classes/CORSM
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor21EngineWebSocketServerC"></a>
-                    <a name="//apple_ref/swift/Class/EngineWebSocketServer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor21EngineWebSocketServerC">EngineWebSocketServer</a>
+                    <a name="/s:5Vapor18NIOWebSocketServerC"></a>
+                    <a name="//apple_ref/swift/Class/NIOWebSocketServer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC">NIOWebSocketServer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1015,32 +1109,33 @@ Should the HTTP upgrade request be denied, the request will continue through Vap
 
 <p>Note: The <code><a href="Protocols/WebSocketServer.html">WebSocketServer</a></code> <em>always</em> runs behind an HTTP server and will only be invoked when HTTP requests request an uprade.</p>
 
-                        <a href="Classes/EngineWebSocketServer.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/NIOWebSocketServer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">EngineWebSocketServer</span><span class="p">:</span> <span class="kt"><a href="Protocols/WebSocketServer.html">WebSocketServer</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NIOWebSocketServer</span><span class="p">:</span> <span class="kt"><a href="Protocols/WebSocketServer.html">WebSocketServer</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.0-rc.2.2/Sources/Vapor/WebSocket/EngineWebSocketServer.swift#L14-L82">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.0.0/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L14-L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-25)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-04)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>

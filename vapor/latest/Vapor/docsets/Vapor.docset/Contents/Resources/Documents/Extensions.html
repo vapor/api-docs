@@ -4,334 +4,444 @@
     <title>Extensions  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
+
+
     <a title="Extensions  Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">Vapor Docs</a> (93% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/vapor"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E0%2Drc%2E2%2E2%2FVapor%2Fdocsets%2FVapor%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">Vapor Reference</a>
-        <img id="carat" src="img/carat.png" />
-        Extensions  Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Vapor Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/vapor">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Vapor Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Extensions  Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/Application.html">Application</a>
+                <a class="nav-group-task-link" href="Classes/Application.html">Application</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/BCryptHasher.html">BCryptHasher</a>
+                <a class="nav-group-task-link" href="Classes/CORSMiddleware.html">CORSMiddleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CORSMiddleware.html">CORSMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/CORSMiddleware/AllowOriginSetting.html">– AllowOriginSetting</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CORSMiddleware/AllowOriginSetting.html">– AllowOriginSetting</a>
+                <a class="nav-group-task-link" href="Classes/CORSMiddleware/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CORSMiddleware/Configuration.html">– Configuration</a>
+                <a class="nav-group-task-link" href="Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ConsoleLogger.html">ConsoleLogger</a>
+                <a class="nav-group-task-link" href="Classes/DateMiddleware.html">DateMiddleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/DateMiddleware.html">DateMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/EngineRouter.html">EngineRouter</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/EngineRouter.html">EngineRouter</a>
+                <a class="nav-group-task-link" href="Classes/ErrorMiddleware.html">ErrorMiddleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/EngineServer.html">EngineServer</a>
+                <a class="nav-group-task-link" href="Classes/FileMiddleware.html">FileMiddleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/EngineWebSocketServer.html">EngineWebSocketServer</a>
+                <a class="nav-group-task-link" href="Classes/FoundationClient.html">FoundationClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ErrorMiddleware.html">ErrorMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/KeyedCacheSessions.html">KeyedCacheSessions</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/FileMiddleware.html">FileMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/MemorySessions.html">MemorySessions</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/FoundationClient.html">FoundationClient</a>
+                <a class="nav-group-task-link" href="Classes/NIOServer.html">NIOServer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/KeyedCacheSessions.html">KeyedCacheSessions</a>
+                <a class="nav-group-task-link" href="Classes/NIOWebSocketClient.html">NIOWebSocketClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/MemorySessions.html">MemorySessions</a>
+                <a class="nav-group-task-link" href="Classes/NIOWebSocketServer.html">NIOWebSocketServer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/PlaintextEncoder.html">PlaintextEncoder</a>
+                <a class="nav-group-task-link" href="Classes/PlaintextEncoder.html">PlaintextEncoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Request.html">Request</a>
+                <a class="nav-group-task-link" href="Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Response.html">Response</a>
+                <a class="nav-group-task-link" href="Classes/Response.html">Response</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Session.html">Session</a>
+                <a class="nav-group-task-link" href="Classes/Session.html">Session</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/SessionsMiddleware.html">SessionsMiddleware</a>
+                <a class="nav-group-task-link" href="Classes/SessionsMiddleware.html">SessionsMiddleware</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/RedirectType.html">RedirectType</a>
+                <a class="nav-group-task-link" href="Enums/RedirectType.html">RedirectType</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/Array.html">Array</a>
+                <a class="nav-group-task-link" href="Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Config.html">Config</a>
+                <a class="nav-group-task-link" href="Extensions/BlockingIOThreadPool.html">BlockingIOThreadPool</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/DecodingError.html">DecodingError</a>
+                <a class="nav-group-task-link" href="Extensions/CommandConfig.html">CommandConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Dictionary.html">Dictionary</a>
+                <a class="nav-group-task-link" href="Extensions/Config.html">Config</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Double.html">Double</a>
+                <a class="nav-group-task-link" href="Extensions/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Float.html">Float</a>
+                <a class="nav-group-task-link" href="Extensions/DecodingError.html">DecodingError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Future.html">Future</a>
+                <a class="nav-group-task-link" href="Extensions/Dictionary.html">Dictionary</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/HTTPCookieValue.html">HTTPCookieValue</a>
+                <a class="nav-group-task-link" href="Extensions/Double.html">Double</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/HTTPStatus.html">HTTPStatus</a>
+                <a class="nav-group-task-link" href="Extensions/Float.html">Float</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int.html">Int</a>
+                <a class="nav-group-task-link" href="Extensions/FormDataDecoder.html">FormDataDecoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int16.html">Int16</a>
+                <a class="nav-group-task-link" href="Extensions/FormDataEncoder.html">FormDataEncoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int32.html">Int32</a>
+                <a class="nav-group-task-link" href="Extensions/Future.html">Future</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int64.html">Int64</a>
+                <a class="nav-group-task-link" href="Extensions/HTTPMethod.html">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Int8.html">Int8</a>
+                <a class="nav-group-task-link" href="Extensions/HTTPRequest.html">HTTPRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/MultipartForm.html">MultipartForm</a>
+                <a class="nav-group-task-link" href="Extensions/HTTPResponse.html">HTTPResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Services.html">Services</a>
+                <a class="nav-group-task-link" href="Extensions/HTTPStatus.html">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/StaticString.html">StaticString</a>
+                <a class="nav-group-task-link" href="Extensions/Int.html">Int</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/String.html">String</a>
+                <a class="nav-group-task-link" href="Extensions/Int16.html">Int16</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Thread.html">Thread</a>
+                <a class="nav-group-task-link" href="Extensions/Int32.html">Int32</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt.html">UInt</a>
+                <a class="nav-group-task-link" href="Extensions/Int64.html">Int64</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt16.html">UInt16</a>
+                <a class="nav-group-task-link" href="Extensions/Int8.html">Int8</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt32.html">UInt32</a>
+                <a class="nav-group-task-link" href="Extensions/JSONDecoder.html">JSONDecoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt64.html">UInt64</a>
+                <a class="nav-group-task-link" href="Extensions/JSONEncoder.html">JSONEncoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UInt8.html">UInt8</a>
+                <a class="nav-group-task-link" href="Extensions/Logger.html">Logger</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/URL.html">URL</a>
+                <a class="nav-group-task-link" href="Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/View.html">View</a>
+                <a class="nav-group-task-link" href="Extensions/Services.html">Services</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/StaticString.html">StaticString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Substring.html">Substring</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Thread.html">Thread</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt.html">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt8.html">UInt8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URLEncodedFormDecoder.html">URLEncodedFormDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URLEncodedFormEncoder.html">URLEncodedFormEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/View.html">View</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/ViewRenderer.html">ViewRenderer</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/AbortError.html">AbortError</a>
+                <a class="nav-group-task-link" href="Protocols/AbortError.html">AbortError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Client.html">Client</a>
+                <a class="nav-group-task-link" href="Protocols/Client.html">Client</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Content.html">Content</a>
+                <a class="nav-group-task-link" href="Protocols/Content.html">Content</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Middleware.html">Middleware</a>
+                <a class="nav-group-task-link" href="Protocols/HTTPMessageContainer.html">HTTPMessageContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RequestDecodable.html">RequestDecodable</a>
+                <a class="nav-group-task-link" href="Protocols/Middleware.html">Middleware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RequestEncodable.html">RequestEncodable</a>
+                <a class="nav-group-task-link" href="Protocols/RequestDecodable.html">RequestDecodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Responder.html">Responder</a>
+                <a class="nav-group-task-link" href="Protocols/RequestEncodable.html">RequestEncodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/ResponseDecodable.html">ResponseDecodable</a>
+                <a class="nav-group-task-link" href="Protocols/Responder.html">Responder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/ResponseEncodable.html">ResponseEncodable</a>
+                <a class="nav-group-task-link" href="Protocols/ResponseDecodable.html">ResponseDecodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RouteCollection.html">RouteCollection</a>
+                <a class="nav-group-task-link" href="Protocols/ResponseEncodable.html">ResponseEncodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Router.html">Router</a>
+                <a class="nav-group-task-link" href="Protocols/RouteCollection.html">RouteCollection</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Server.html">Server</a>
+                <a class="nav-group-task-link" href="Protocols/Router.html">Router</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Sessions.html">Sessions</a>
+                <a class="nav-group-task-link" href="Protocols/Server.html">Server</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/URLRepresentable.html">URLRepresentable</a>
+                <a class="nav-group-task-link" href="Protocols/Sessions.html">Sessions</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/VaporProvider.html">VaporProvider</a>
+                <a class="nav-group-task-link" href="Protocols/VaporProvider.html">VaporProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/WebSocketServer.html">WebSocketServer</a>
+                <a class="nav-group-task-link" href="Protocols/WebSocketClient.html">WebSocketClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WebSocketServer.html">WebSocketServer</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/Abort.html">Abort</a>
+                <a class="nav-group-task-link" href="Structs/Abort.html">Abort</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/AnyResponse.html">AnyResponse</a>
+                <a class="nav-group-task-link" href="Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ApplicationResponder.html">ApplicationResponder</a>
+                <a class="nav-group-task-link" href="Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/BasicResponder.html">BasicResponder</a>
+                <a class="nav-group-task-link" href="Structs/BootCommand.html">BootCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/CommandConfig.html">CommandConfig</a>
+                <a class="nav-group-task-link" href="Structs/ContentCoders.html">ContentCoders</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ContentCoders.html">ContentCoders</a>
+                <a class="nav-group-task-link" href="Structs/ContentConfig.html">ContentConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ContentConfig.html">ContentConfig</a>
+                <a class="nav-group-task-link" href="Structs/ContentContainer.html">ContentContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ContentContainer.html">ContentContainer</a>
+                <a class="nav-group-task-link" href="Structs/FileIO.html">FileIO</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/EngineServerConfig.html">EngineServerConfig</a>
+                <a class="nav-group-task-link" href="Structs/MiddlewareConfig.html">MiddlewareConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/MiddlewareConfig.html">MiddlewareConfig</a>
+                <a class="nav-group-task-link" href="Structs/NIOServerConfig.html">NIOServerConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/MultipartFormConfig.html">MultipartFormConfig</a>
+                <a class="nav-group-task-link" href="Structs/ParametersContainer.html">ParametersContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/QueryContainer.html">QueryContainer</a>
+                <a class="nav-group-task-link" href="Structs/QueryContainer.html">QueryContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RequestDecodableResponder.html">RequestDecodableResponder</a>
+                <a class="nav-group-task-link" href="Structs/RoutesCommand.html">RoutesCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RouteResponder.html">RouteResponder</a>
+                <a class="nav-group-task-link" href="Structs/RunningServer.html">RunningServer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RouterResponder.html">RouterResponder</a>
+                <a class="nav-group-task-link" href="Structs/ServeCommand.html">ServeCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RoutesCommand.html">RoutesCommand</a>
+                <a class="nav-group-task-link" href="Structs/SessionData.html">SessionData</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RunningServer.html">RunningServer</a>
+                <a class="nav-group-task-link" href="Structs/SessionsConfig.html">SessionsConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ServeCommand.html">ServeCommand</a>
+                <a class="nav-group-task-link" href="Structs/VaporError.html">VaporError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/SessionData.html">SessionData</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/SessionsConfig.html">SessionsConfig</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/VaporError.html">VaporError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/WebSocketResponder.html">WebSocketResponder</a>
+                <a class="nav-group-task-link" href="Structs/WebSocketResponder.html">WebSocketResponder</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Typealiases.html">Type Aliases</a>
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:5Vapor14RequestCodablea">RequestCodable</a>
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor14RequestCodablea">RequestCodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:5Vapor15ResponseCodablea">ResponseCodable</a>
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor15ResponseCodablea">ResponseCodable</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>Extensions</h1>
             <p>The following extensions are available globally.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/Container" class="dashAnchor"></a>
+                    <a class="token" href="#/">Container</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/Container.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/CommandConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/">CommandConfig</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/CommandConfig.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Default%20Conformances"></a>
@@ -340,7 +450,7 @@
                   <h3 class="section-name">Default Conformances</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -749,13 +859,13 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/"></a>
-                    <a name="//apple_ref/swift/Extension/MultipartForm" class="dashAnchor"></a>
-                    <a class="token" href="#/">MultipartForm</a>
+                    <a name="//apple_ref/swift/Extension/FormDataDecoder" class="dashAnchor"></a>
+                    <a class="token" href="#/">FormDataDecoder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -764,7 +874,117 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         
-                        <a href="Extensions/MultipartForm.html" class="slightly-smaller">See more</a>
+                        <a href="Extensions/FormDataDecoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/FormDataEncoder" class="dashAnchor"></a>
+                    <a class="token" href="#/">FormDataEncoder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/FormDataEncoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/FIXME:%20add%20key%20strategy%20support%20once%20avaialble%20on%20Linux%20*/"></a>
+                <a name="//apple_ref/swift/Section/FIXME: add key strategy support once avaialble on Linux */" class="dashAnchor"></a>
+                <a href="#/FIXME:%20add%20key%20strategy%20support%20once%20avaialble%20on%20Linux%20*/">
+                  <h3 class="section-name">FIXME: add key strategy support once avaialble on Linux */</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/JSONEncoder" class="dashAnchor"></a>
+                    <a class="token" href="#/">JSONEncoder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/JSONEncoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/JSONDecoder" class="dashAnchor"></a>
+                    <a class="token" href="#/">JSONDecoder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/JSONDecoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/URLEncodedFormDecoder" class="dashAnchor"></a>
+                    <a class="token" href="#/">URLEncodedFormDecoder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/URLEncodedFormDecoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/URLEncodedFormEncoder" class="dashAnchor"></a>
+                    <a class="token" href="#/">URLEncodedFormEncoder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/URLEncodedFormEncoder.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
@@ -779,7 +999,7 @@
                   <h3 class="section-name">Default Conformances</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -811,20 +1031,13 @@
               </ul>
             </div>
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Convenience"></a>
-                <a name="//apple_ref/swift/Section/Convenience" class="dashAnchor"></a>
-                <a href="#/Convenience">
-                  <h3 class="section-name">Convenience</h3>
-                </a>
-              </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation3URLV"></a>
-                    <a name="//apple_ref/swift/Extension/URL" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation3URLV">URL</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/Logger" class="dashAnchor"></a>
+                    <a class="token" href="#/">Logger</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -833,15 +1046,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         
-                        <a href="Extensions/URL.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">URL</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
-
-                        </div>
+                        <a href="Extensions/Logger.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
@@ -849,7 +1054,60 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/HTTPMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/">HTTPMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/HTTPMethod.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Default%20Conformances3"></a>
+                <a name="//apple_ref/swift/Section/Default Conformances" class="dashAnchor"></a>
+                <a href="#/Default%20Conformances3">
+                  <h3 class="section-name">Default Conformances</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/HTTPRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/">HTTPRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/HTTPRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -873,13 +1131,51 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Response%20Conformance"></a>
-                <a name="//apple_ref/swift/Section/Response Conformance" class="dashAnchor"></a>
-                <a href="#/Response%20Conformance">
-                  <h3 class="section-name">Response Conformance</h3>
+                <a name="/Default%20Conformances4"></a>
+                <a name="//apple_ref/swift/Section/Default Conformances" class="dashAnchor"></a>
+                <a href="#/Default%20Conformances4">
+                  <h3 class="section-name">Default Conformances</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/HTTPResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/">HTTPResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/HTTPResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/Future" class="dashAnchor"></a>
+                    <a class="token" href="#/">Future</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/Future.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -910,13 +1206,13 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Extension/Future" class="dashAnchor"></a>
-                    <a class="token" href="#/">Future</a>
+                    <a name="/s:s9SubstringV"></a>
+                    <a name="//apple_ref/swift/Extension/Substring" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s9SubstringV">Substring</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -925,7 +1221,15 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         
-                        <a href="Extensions/Future.html" class="slightly-smaller">See more</a>
+                        <a href="Extensions/Substring.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Substring</span> <span class="p">:</span> <span class="kt">StringProtocol</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -933,7 +1237,7 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -956,7 +1260,7 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -979,13 +1283,20 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <div class="task-name-container">
+                <a name="/Service"></a>
+                <a name="//apple_ref/swift/Section/Service" class="dashAnchor"></a>
+                <a href="#/Service">
+                  <h3 class="section-name">Service</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/"></a>
-                    <a name="//apple_ref/swift/Extension/HTTPCookieValue" class="dashAnchor"></a>
-                    <a class="token" href="#/">HTTPCookieValue</a>
+                    <a name="//apple_ref/swift/Extension/NonBlockingFileIO" class="dashAnchor"></a>
+                    <a class="token" href="#/">NonBlockingFileIO</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -994,7 +1305,26 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         
-                        <a href="Extensions/HTTPCookieValue.html" class="slightly-smaller">See more</a>
+                        <a href="Extensions/NonBlockingFileIO.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/BlockingIOThreadPool" class="dashAnchor"></a>
+                    <a class="token" href="#/">BlockingIOThreadPool</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/BlockingIOThreadPool.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
@@ -1002,13 +1332,13 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NSThread"></a>
+                    <a name="/"></a>
                     <a name="//apple_ref/swift/Extension/Thread" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSThread">Thread</a>
+                    <a class="token" href="#/">Thread</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1025,7 +1355,7 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1045,16 +1375,36 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Extension/ViewRenderer" class="dashAnchor"></a>
+                    <a class="token" href="#/">ViewRenderer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/ViewRenderer.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-25)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-04)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
