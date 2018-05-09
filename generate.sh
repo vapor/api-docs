@@ -7,6 +7,13 @@ function generate_docs() {
 	DOCS_PATH=$REPO_NAME/$VERSION/$MODULE
 	LATEST_PATH=$REPO_NAME/latest
 
+	# find which config we want
+	CONFIG_PATH="_jazzy_configs/_empty.jazzy.json"
+	REPO_CONFIG_PATH="_jazzy_configs/$REPO_NAME.jazzy.json"
+	if [ -d "$REPO_CONFIG_PATH" ]; then
+	    $CONFIG_PATH=$REPO_CONFIG_PATH
+	fi
+
 	echo "💧  Generating docs for $DOCS_PATH"
 
 	# remove these docs if they already exist
@@ -30,8 +37,9 @@ function generate_docs() {
 		--module-version $VERSION \
 		--module $MODULE \
 		--root-url https://api.vapor.codes/$DOCS_PATH/ \
-		--theme fullwidth \
-		--output ../../$DOCS_PATH
+		--theme ../../_doc_theme \
+		--output ../../$DOCS_PATH \
+		--config ../../$CONFIG_PATH
 
 	cd ../../
 	rm -rf code
