@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fwebsocket%2F1%2E0%2E0%2FWebSocket%2Fdocsets%2FWebSocket%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fwebsocket%2F1%2E0%2E1%2FWebSocket%2Fdocsets%2FWebSocket%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -109,8 +109,8 @@
                   <div>
                     <code>
                     <a name="/s:9WebSocket03webB0XeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/webSocket(scheme:hostname:port:path:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9WebSocket03webB0XeXeFZ">webSocket(scheme:hostname:port:path:on:)</a>
+                    <a name="//apple_ref/swift/Method/webSocket(scheme:hostname:port:path:headers:maxFrameSize:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9WebSocket03webB0XeXeFZ">webSocket(scheme:hostname:port:path:headers:maxFrameSize:on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -137,6 +137,8 @@
     <span class="nv">hostname</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">port</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"/"</span><span class="p">,</span>
+    <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(),</span>
+    <span class="nv">maxFrameSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">14</span><span class="p">,</span>
     <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/WebSocket.html">WebSocket</a></span><span class="o">&gt;</span></code></pre>
 
@@ -197,6 +199,30 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Additional HTTP headers are used to establish a connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maxFrameSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum WebSocket frame size this client will accept.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>worker</em>
                                 </code>
                               </td>
@@ -211,10 +237,10 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A <code>Future</code> containing the connected <code>HTTPClient</code>.</p>
+                        <p>A <code>Future</code> containing the connected <code><a href="../Classes/WebSocket.html">WebSocket</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/websocket/tree/1.0.0/Sources/WebSocket/WebSocket+Client.swift#L29-L38">Show on GitHub</a>
+                        <a href="https://github.com/vapor/websocket/tree/1.0.1/Sources/WebSocket/WebSocket+Client.swift#L33-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -227,7 +253,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-18)</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
