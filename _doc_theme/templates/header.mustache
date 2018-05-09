@@ -1,34 +1,37 @@
-<header class="header">
-    <p class="header-col header-col--primary">
-        <a class="header-link" href="{{path_to_root}}index.html">
-            {{module_name}} Docs
+<header class="api-header header">
+    <div class="api-header__site">
+        <a class="api-header__site-image"
+           href="{{path_to_root}}">
+            <img src="https://user-images.githubusercontent.com/1342803/36574488-0288efec-1814-11e8-9091-6e79553dca3d.png"/>
         </a>
-        {{#doc_coverage}} ({{doc_coverage}}% documented){{/doc_coverage}}
-    </p>
 
-    {{^disable_search}}
-        <p class="header-col--secondary">
-        <form role="search" action="{{path_to_root}}search.json">
-            <input type="text" placeholder="Search documentation" data-typeahead>
+        <span class="api-header__doc-coverage">({{doc_coverage}}% Documented)</span>
+    </div>
+
+    <div class="api-header__search">
+        <form class="api-header__search-form"
+              role="search"
+              action="{{path_to_root}}search.json">
+            <input class="api-header__search-input"
+                   type="text"
+                   placeholder="Search docs"
+                   data-typeahead/>
         </form>
-        </p>
-    {{/disable_search}}
+    </div>
 
-    {{#github_url}}
-        <p class="header-col header-col--secondary">
-            <a class="header-link" href="{{github_url}}">
-                <img class="header-icon" src="{{path_to_root}}img/gh.png"/>
-                View on GitHub
-            </a>
-        </p>
-    {{/github_url}}
+    <div class="api-header__external-links-container">
+        <a class="api-header__external-link"
+           href="{{github_url}}"
+           target="_blank">
+            <img class="header-icon"
+                 src="{{path_to_root}}img/gh.png"/>View on GitHub
+        </a>
 
-    {{#dash_url}}
-        <p class="header-col header-col--secondary">
-            <a class="header-link" href="{{dash_url}}">
-                <img class="header-icon" src="{{path_to_root}}img/dash.png"/>
-                Install in Dash
-            </a>
-        </p>
-    {{/dash_url}}
+        <a class="api-header__external-link"
+           href="{{dash_url}}"
+           target="_blank">
+            <img class="header-icon"
+                 src="{{path_to_root}}img/dash.png"/>Install in Dash
+        </a>
+    </div>
 </header>
