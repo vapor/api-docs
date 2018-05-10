@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>Reflectable Protocol Reference</title>
-    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+      <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/template-style.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
@@ -14,50 +15,46 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/Reflectable" class="dashAnchor"></a>
-
-    <a title="Reflectable Protocol Reference"></a>
-
-    <header class="header">
-      <p class="header-col header-col--primary">
-        <a class="header-link" href="../index.html">
-          Core Docs
+    <header class="api-header">
+        <div class="api-header__module">
+            <img src="../img/Core.png"/>
+    
+            <span class="api-header__doc-coverage">(100% Documented)</span>
+        </div>
+    
+        <div class="api-header__search">
+            <form class="api-header__search-form"
+                  role="search"
+                  action="../search.json">
+                <input class="api-header__search-input"
+                       type="text"
+                       placeholder="Search docs"
+                       data-typeahead/>
+            </form>
+        </div>
+    
+        <a class="api-header__external-link"
+           href="https://github.com/vapor/core"
+           target="_blank">
+            <img class="api-header__github-icon header-icon"
+                 src="../img/gh.png"/>View on GitHub
         </a>
-         (100% documented)
-      </p>
-    
-      <p class="header-col--secondary">
-        <form role="search" action="../search.json">
-          <input type="text" placeholder="Search documentation" data-typeahead>
-        </form>
-      </p>
-    
-        <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/vapor/core">
-            <img class="header-icon" src="../img/gh.png"/>
-            View on GitHub
-          </a>
-        </p>
-    
-        <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E1%2E4%2FCore%2Fdocsets%2FCore%2Exml">
-            <img class="header-icon" src="../img/dash.png"/>
-            Install in Dash
-          </a>
-        </p>
     </header>
 
-    <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">Core Reference</a>
-      <img class="carat" src="../img/carat.png" />
-      Reflectable Protocol Reference
-    </p>
 
     <div class="content-wrapper">
       <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
@@ -70,9 +67,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Decodable.html">Decodable</a>
@@ -102,23 +96,20 @@
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/Thread.html">Thread</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <a class="nav-group-name-link" href="../Other Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Functions.html#/s:4Core2qqoi3NIO15EventLoopFutureCyxGAEyxSgG_xtlF">??(_:_:)</a>
+                <a class="nav-group-task-link" href="../Other Functions.html#/s:4Core2qqoi3NIO15EventLoopFutureCyxGAEyxSgG_xtlF">??(_:_:)</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Other Protocols.html">Other Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/AnyOptionalType.html">AnyOptionalType</a>
@@ -142,9 +133,6 @@
                 <a class="nav-group-task-link" href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/NestedData.html">NestedData</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/OptionalType.html">OptionalType</a>
               </li>
               <li class="nav-group-task">
@@ -156,28 +144,16 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Other Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicKey.html">BasicKey</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/CaseInsensitiveString.html">CaseInsensitiveString</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/CoreError.html">CoreError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/File.html">File</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/HeaderValue.html">HeaderValue</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/MediaType.html">MediaType</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ProcessExecuteError.html">ProcessExecuteError</a>
@@ -314,7 +290,7 @@ the <code>reflectProperties(dpeth:)</code> and <code>reflectProperty(forKey:)</c
                         <p>All <code><a href="../Structs/ReflectedProperty.html">ReflectedProperty</a></code>s at the specified depth.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Reflectable.swift#L71">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Reflectable.swift#L71">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -376,11 +352,9 @@ the <code>reflectProperties(dpeth:)</code> and <code>reflectProperty(forKey:)</c
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>keyPath</em>
-                                </code>
+                            <tr class="api-parameters">
+                              <td class="api-parameters__names">
+                                <code>keyPath</code>
                               </td>
                               <td>
                                 <div>
@@ -396,7 +370,7 @@ the <code>reflectProperties(dpeth:)</code> and <code>reflectProperty(forKey:)</c
                         <p><code><a href="../Structs/ReflectedProperty.html">ReflectedProperty</a></code> if one was found.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Reflectable.swift#L93">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Reflectable.swift#L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -433,7 +407,7 @@ the <code>reflectProperties(dpeth:)</code> and <code>reflectProperty(forKey:)</c
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Reflectable.swift#L98-L100">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Reflectable.swift#L98-L100">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -445,10 +419,20 @@ the <code>reflectProperties(dpeth:)</code> and <code>reflectProperty(forKey:)</c
 
       </article>
     </div>
-    <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-30)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-    </section>
+
+    <footer class="api-footer">
+        &lt;p&gt;&amp;copy; 2018 &lt;a class=&quot;link&quot; href=&quot;https://vapor.codes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vapor&lt;/a&gt;. All rights reserved. (Last updated: 2018-05-09)&lt;/p&gt;
+    
+        <a class="api-header__external-link"
+           href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E0%2FCore%2Fdocsets%2FCore%2Exml"
+           target="_blank">
+            <img class="header-icon"
+                 src="../img/dash.png"/>Install in Dash
+        </a>
+    
+        <span class="api-footer__jazzy-attribution">Generated by <a class="api-footer__link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="api-footer__link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</span>
+    </footer>
+
   </body>
 </div>
 </html>

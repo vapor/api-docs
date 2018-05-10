@@ -10,8 +10,8 @@ function generate_docs() {
 	# find which config we want
 	CONFIG_PATH="_jazzy_configs/_empty.jazzy.json"
 	REPO_CONFIG_PATH="_jazzy_configs/$REPO_NAME.jazzy.json"
-	if [ -d "$REPO_CONFIG_PATH" ]; then
-	    $CONFIG_PATH=$REPO_CONFIG_PATH
+	if [ -e "./$REPO_CONFIG_PATH" ]; then
+	    CONFIG_PATH=$REPO_CONFIG_PATH
 	fi
 
 	echo "💧  Generating docs for $DOCS_PATH"

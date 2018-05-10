@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>Data Extension Reference</title>
-    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+      <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/template-style.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
@@ -14,50 +15,46 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/Data" class="dashAnchor"></a>
-
-    <a title="Data Extension Reference"></a>
-
-    <header class="header">
-      <p class="header-col header-col--primary">
-        <a class="header-link" href="../index.html">
-          Core Docs
+    <header class="api-header">
+        <div class="api-header__module">
+            <img src="../img/Core.png"/>
+    
+            <span class="api-header__doc-coverage">(100% Documented)</span>
+        </div>
+    
+        <div class="api-header__search">
+            <form class="api-header__search-form"
+                  role="search"
+                  action="../search.json">
+                <input class="api-header__search-input"
+                       type="text"
+                       placeholder="Search docs"
+                       data-typeahead/>
+            </form>
+        </div>
+    
+        <a class="api-header__external-link"
+           href="https://github.com/vapor/core"
+           target="_blank">
+            <img class="api-header__github-icon header-icon"
+                 src="../img/gh.png"/>View on GitHub
         </a>
-         (100% documented)
-      </p>
-    
-      <p class="header-col--secondary">
-        <form role="search" action="../search.json">
-          <input type="text" placeholder="Search documentation" data-typeahead>
-        </form>
-      </p>
-    
-        <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/vapor/core">
-            <img class="header-icon" src="../img/gh.png"/>
-            View on GitHub
-          </a>
-        </p>
-    
-        <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E1%2E4%2FCore%2Fdocsets%2FCore%2Exml">
-            <img class="header-icon" src="../img/dash.png"/>
-            Install in Dash
-          </a>
-        </p>
     </header>
 
-    <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">Core Reference</a>
-      <img class="carat" src="../img/carat.png" />
-      Data Extension Reference
-    </p>
 
     <div class="content-wrapper">
       <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
@@ -70,9 +67,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Decodable.html">Decodable</a>
@@ -102,23 +96,20 @@
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/Thread.html">Thread</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <a class="nav-group-name-link" href="../Other Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Functions.html#/s:4Core2qqoi3NIO15EventLoopFutureCyxGAEyxSgG_xtlF">??(_:_:)</a>
+                <a class="nav-group-task-link" href="../Other Functions.html#/s:4Core2qqoi3NIO15EventLoopFutureCyxGAEyxSgG_xtlF">??(_:_:)</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Other Protocols.html">Other Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/AnyOptionalType.html">AnyOptionalType</a>
@@ -142,9 +133,6 @@
                 <a class="nav-group-task-link" href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/NestedData.html">NestedData</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/OptionalType.html">OptionalType</a>
               </li>
               <li class="nav-group-task">
@@ -156,28 +144,16 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Other Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicKey.html">BasicKey</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/CaseInsensitiveString.html">CaseInsensitiveString</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/CoreError.html">CoreError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/File.html">File</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/HeaderValue.html">HeaderValue</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/MediaType.html">MediaType</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ProcessExecuteError.html">ProcessExecuteError</a>
@@ -194,46 +170,18 @@
         <section class="section">
           <div class="section-content">
             <h1>Data</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Data</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span><span class="p">,</span> <span class="kt">RangeReplaceableCollection</span></code></pre>
+
+                </div>
+              </div>
             
           </div>
         </section>
 
         <section class="section">
           <div class="section-content">
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10Foundation4DataV4CoreE14reflectDecodedAC_ACtyFZ"></a>
-                    <a name="//apple_ref/swift/Method/reflectDecoded()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DataV4CoreE14reflectDecodedAC_ACtyFZ">reflectDecoded()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ">ReflectionDecodable.reflectDecoded()</a></code> for more information.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectDecoded</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/CodableReflection/ReflectionDecodable.swift#L116-L120">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
             <div class="task-group">
               <ul class="item-container">
                 <li class="item">
@@ -263,7 +211,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Base64URL.swift#L7-L9">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Base64URL.swift#L7-L9">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -295,7 +243,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Base64URL.swift#L14-L16">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Base64URL.swift#L14-L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -330,11 +278,9 @@
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>options</em>
-                                </code>
+                            <tr class="api-parameters">
+                              <td class="api-parameters__names">
+                                <code>options</code>
                               </td>
                               <td>
                                 <div>
@@ -350,7 +296,7 @@
                         <p>The base64-url encoded string.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Base64URL.swift#L24-L26">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Base64URL.swift#L24-L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -385,11 +331,9 @@
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>options</em>
-                                </code>
+                            <tr class="api-parameters">
+                              <td class="api-parameters__names">
+                                <code>options</code>
                               </td>
                               <td>
                                 <div>
@@ -405,7 +349,7 @@
                         <p>The base64-url encoded data.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Base64URL.swift#L34-L36">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Base64URL.swift#L34-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -441,7 +385,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Base64URL.swift#L87-L100">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Base64URL.swift#L87-L100">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -473,7 +417,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Base64URL.swift#L105-L114">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Base64URL.swift#L105-L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -505,7 +449,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Base64URL.swift#L119-L123">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Base64URL.swift#L119-L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -537,7 +481,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Base64URL.swift#L128-L132">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Base64URL.swift#L128-L132">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -576,11 +520,9 @@
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>uppercase</em>
-                                </code>
+                            <tr class="api-parameters">
+                              <td class="api-parameters__names">
+                                <code>uppercase</code>
                               </td>
                               <td>
                                 <div>
@@ -593,7 +535,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Hex.swift#L11-L13">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Hex.swift#L11-L13">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -628,11 +570,9 @@
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>uppercase</em>
-                                </code>
+                            <tr class="api-parameters">
+                              <td class="api-parameters__names">
+                                <code>uppercase</code>
                               </td>
                               <td>
                                 <div>
@@ -645,7 +585,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/Data+Hex.swift#L23-L40">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/Data+Hex.swift#L23-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -657,69 +597,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DataV4CoreE7convertxxm2to_tAD08LosslessB11ConvertibleRzlF"></a>
-                    <a name="//apple_ref/swift/Method/convert(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DataV4CoreE7convertxxm2to_tAD08LosslessB11ConvertibleRzlF">convert(to:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Converts this <code>Data</code> to a <code><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></code> type.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="kt">Data</span><span class="p">([</span><span class="mh">0x68</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">])</span><span class="o">.</span><span class="nf">convert</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="c1">// "hi"</span>
-</code></pre>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">convert</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">T</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>type</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The <code><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></code> to convert to.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Instance of the <code><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></code> type.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/LosslessDataConvertible.swift#L19-L21">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10Foundation4DataV4CoreE09convertToB0ACyF"></a>
+                    <a name="/s:10Foundation4DataV4CoreE09convertToB0ACyKF"></a>
                     <a name="//apple_ref/swift/Method/convertToData()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DataV4CoreE09convertToB0ACyF">convertToData()</a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE09convertToB0ACyKF">convertToData()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -734,12 +614,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">convertToData</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">convertToData</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/LosslessDataConvertible.swift#L57-L59">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/LosslessDataConvertible.swift#L41-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -769,7 +649,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.1.4/Sources/Core/LosslessDataConvertible.swift#L62-L64">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.0.0/Sources/Core/LosslessDataConvertible.swift#L46-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -781,10 +661,20 @@
 
       </article>
     </div>
-    <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-30)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-    </section>
+
+    <footer class="api-footer">
+        &lt;p&gt;&amp;copy; 2018 &lt;a class=&quot;link&quot; href=&quot;https://vapor.codes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vapor&lt;/a&gt;. All rights reserved. (Last updated: 2018-05-09)&lt;/p&gt;
+    
+        <a class="api-header__external-link"
+           href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E0%2E0%2FCore%2Fdocsets%2FCore%2Exml"
+           target="_blank">
+            <img class="header-icon"
+                 src="../img/dash.png"/>Install in Dash
+        </a>
+    
+        <span class="api-footer__jazzy-attribution">Generated by <a class="api-footer__link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="api-footer__link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</span>
+    </footer>
+
   </body>
 </div>
 </html>
