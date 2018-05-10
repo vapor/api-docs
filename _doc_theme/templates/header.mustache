@@ -1,9 +1,6 @@
 <header class="api-header">
     <div class="api-header__module">
-        <a href="{{path_to_root}}">
-            <img class="api-header__site-image"
-                 src="https://user-images.githubusercontent.com/1342803/36574488-0288efec-1814-11e8-9091-6e79553dca3d.png"/>
-        </a>
+        <img src="{{path_to_root}}img/{{module_name}}.png"/>
 
         <span class="api-header__doc-coverage">({{doc_coverage}}% Documented)</span>
     </div>
@@ -19,19 +16,10 @@
         </form>
     </div>
 
-    <div class="api-header__external-links-container">
-        <a class="api-header__external-link"
-           href="{{github_url}}"
-           target="_blank">
-            <img class="header-icon"
-                 src="{{path_to_root}}img/gh.png"/>View on GitHub
-        </a>
-
-        <a class="api-header__external-link"
-           href="{{dash_url}}"
-           target="_blank">
-            <img class="header-icon"
-                 src="{{path_to_root}}img/dash.png"/>Install in Dash
-        </a>
-    </div>
+    <a class="api-header__external-link"
+       href="{{github_url}}"
+       target="_blank">
+        <img class="api-header__github-icon header-icon"
+             src="{{path_to_root}}img/gh.png"/>View on GitHub
+    </a>
 </header>

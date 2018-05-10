@@ -2,124 +2,144 @@
 <html lang="en">
   <head>
     <title>ContainerAlias Protocol Reference</title>
-    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+      <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/template-style.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/ContainerAlias" class="dashAnchor"></a>
-    <a title="ContainerAlias Protocol Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">Service Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/service"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
+
+    <header class="api-header">
+        <div class="api-header__module">
+            <img src="../img/Service.png"/>
+    
+            <span class="api-header__doc-coverage">(100% Documented)</span>
+        </div>
+    
+        <div class="api-header__search">
+            <form class="api-header__search-form"
+                  role="search"
+                  action="../search.json">
+                <input class="api-header__search-input"
+                       type="text"
+                       placeholder="Search docs"
+                       data-typeahead/>
+            </form>
+        </div>
+    
+        <a class="api-header__external-link"
+           href="https://github.com/vapor/service"
+           target="_blank">
+            <img class="api-header__github-icon header-icon"
+                 src="../img/gh.png"/>View on GitHub
+        </a>
     </header>
+
+
     <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">Service Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        ContainerAlias Protocol Reference
-      </p>
-    </div>
-    <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/BasicContainer.html">BasicContainer</a>
+                <a class="nav-group-task-link" href="../Classes/BasicContainer.html">BasicContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
+                <a class="nav-group-task-link" href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ServiceCache.html">ServiceCache</a>
+                <a class="nav-group-task-link" href="../Classes/ServiceCache.html">ServiceCache</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/Container.html">Container</a>
+                <a class="nav-group-task-link" href="../Protocols/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ContainerAlias.html">ContainerAlias</a>
+                <a class="nav-group-task-link" href="../Protocols/ContainerAlias.html">ContainerAlias</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Extendable.html">Extendable</a>
+                <a class="nav-group-task-link" href="../Protocols/Extendable.html">Extendable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Provider.html">Provider</a>
+                <a class="nav-group-task-link" href="../Protocols/Provider.html">Provider</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:7ServiceAAP">Service</a>
+                <a class="nav-group-task-link" href="../Protocols.html#/s:7ServiceAAP">Service</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ServiceFactory.html">ServiceFactory</a>
+                <a class="nav-group-task-link" href="../Protocols/ServiceFactory.html">ServiceFactory</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ServiceType.html">ServiceType</a>
+                <a class="nav-group-task-link" href="../Protocols/ServiceType.html">ServiceType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SubContainer.html">SubContainer</a>
+                <a class="nav-group-task-link" href="../Protocols/SubContainer.html">SubContainer</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/BasicServiceFactory.html">BasicServiceFactory</a>
+                <a class="nav-group-task-link" href="../Structs/BasicServiceFactory.html">BasicServiceFactory</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Config.html">Config</a>
+                <a class="nav-group-task-link" href="../Structs/Config.html">Config</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Environment.html">Environment</a>
+                <a class="nav-group-task-link" href="../Structs/Environment.html">Environment</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Extend.html">Extend</a>
+                <a class="nav-group-task-link" href="../Structs/Extend.html">Extend</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/ServiceError.html">ServiceError</a>
+                <a class="nav-group-task-link" href="../Structs/ServiceError.html">ServiceError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Services.html">Services</a>
+                <a class="nav-group-task-link" href="../Structs/Services.html">Services</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>ContainerAlias</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ContainerAlias</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ContainerAlias</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span></code></pre>
 
                 </div>
               </div>
             <p>An alias for another <code><a href="../Protocols/Container.html">Container</a></code>. All <code><a href="../Protocols/Container.html">Container</a></code> protocol requirements
 are redirected to the aliased container.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service14ContainerAliasP07aliasedB0s7KeyPathCyxAA0B0_pGvZ"></a>
+                    <a name="/s:7Service14ContainerAliasP07aliasedB0s7KeyPathCyxAA0B0_pGvpZ"></a>
                     <a name="//apple_ref/swift/Variable/aliasedContainer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service14ContainerAliasP07aliasedB0s7KeyPathCyxAA0B0_pGvZ">aliasedContainer</a>
+                    <a class="token" href="#/s:7Service14ContainerAliasP07aliasedB0s7KeyPathCyxAA0B0_pGvpZ">aliasedContainer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -134,7 +154,7 @@ are redirected to the aliased container.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">aliasedContainer</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">aliasedContainer</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Container.html">Container</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -147,13 +167,13 @@ are redirected to the aliased container.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service14ContainerAliasPAAE6configAA6ConfigVv"></a>
+                    <a name="/s:7Service14ContainerAliasPAAE6configAA6ConfigVvp"></a>
                     <a name="//apple_ref/swift/Property/config" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service14ContainerAliasPAAE6configAA6ConfigVv">config</a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE6configAA6ConfigVvp">config</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -171,7 +191,7 @@ are redirected to the aliased container.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/Config.html">Config</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/Config.html">Config</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -184,9 +204,9 @@ are redirected to the aliased container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service14ContainerAliasPAAE11environmentAA11EnvironmentVv"></a>
+                    <a name="/s:7Service14ContainerAliasPAAE11environmentAA11EnvironmentVvp"></a>
                     <a name="//apple_ref/swift/Property/environment" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service14ContainerAliasPAAE11environmentAA11EnvironmentVv">environment</a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE11environmentAA11EnvironmentVvp">environment</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -204,7 +224,7 @@ are redirected to the aliased container.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">environment</span><span class="p">:</span> <span class="kt"><a href="../Structs/Environment.html">Environment</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">environment</span><span class="p">:</span> <span class="kt"><a href="../Structs/Environment.html">Environment</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -217,9 +237,9 @@ are redirected to the aliased container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service14ContainerAliasPAAE8servicesAA8ServicesVv"></a>
+                    <a name="/s:7Service14ContainerAliasPAAE8servicesAA8ServicesVvp"></a>
                     <a name="//apple_ref/swift/Property/services" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service14ContainerAliasPAAE8servicesAA8ServicesVv">services</a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE8servicesAA8ServicesVvp">services</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -237,7 +257,7 @@ are redirected to the aliased container.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">services</span><span class="p">:</span> <span class="kt"><a href="../Structs/Services.html">Services</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">services</span><span class="p">:</span> <span class="kt"><a href="../Structs/Services.html">Services</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -250,9 +270,9 @@ are redirected to the aliased container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service14ContainerAliasPAAE12serviceCacheAA0aE0Cv"></a>
+                    <a name="/s:7Service14ContainerAliasPAAE12serviceCacheAA0aE0Cvp"></a>
                     <a name="//apple_ref/swift/Property/serviceCache" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service14ContainerAliasPAAE12serviceCacheAA0aE0Cv">serviceCache</a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE12serviceCacheAA0aE0Cvp">serviceCache</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -270,7 +290,7 @@ are redirected to the aliased container.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">serviceCache</span><span class="p">:</span> <span class="kt"><a href="../Classes/ServiceCache.html">ServiceCache</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">serviceCache</span><span class="p">:</span> <span class="kt"><a href="../Classes/ServiceCache.html">ServiceCache</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -283,9 +303,9 @@ are redirected to the aliased container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service14ContainerAliasPAAE9eventLoopXev"></a>
+                    <a name="/s:7Service14ContainerAliasPAAE9eventLoop3NIO05EventE0_pvp"></a>
                     <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service14ContainerAliasPAAE9eventLoopXev">eventLoop</a>
+                    <a class="token" href="#/s:7Service14ContainerAliasPAAE9eventLoop3NIO05EventE0_pvp">eventLoop</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -303,7 +323,7 @@ are redirected to the aliased container.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -315,14 +335,25 @@ are redirected to the aliased container.</p>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-03)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+
+    <footer class="api-footer">
+        &lt;p&gt;&amp;copy; 2018 &lt;a class=&quot;link&quot; href=&quot;https://vapor.codes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vapor&lt;/a&gt;. All rights reserved. (Last updated: 2018-05-09)&lt;/p&gt;
+    
+        <a class="api-header__external-link"
+           href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"
+           target="_blank">
+            <img class="header-icon"
+                 src="../img/dash.png"/>Install in Dash
+        </a>
+    
+        <span class="api-footer__jazzy-attribution">Generated by <a class="api-footer__link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="api-footer__link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</span>
+    </footer>
+
   </body>
 </div>
 </html>

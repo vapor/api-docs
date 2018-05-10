@@ -2,123 +2,143 @@
 <html lang="en">
   <head>
     <title>BasicSubContainer Class Reference</title>
-    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+      <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/template-style.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/BasicSubContainer" class="dashAnchor"></a>
-    <a title="BasicSubContainer Class Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">Service Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/service"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
+
+    <header class="api-header">
+        <div class="api-header__module">
+            <img src="../img/Service.png"/>
+    
+            <span class="api-header__doc-coverage">(100% Documented)</span>
+        </div>
+    
+        <div class="api-header__search">
+            <form class="api-header__search-form"
+                  role="search"
+                  action="../search.json">
+                <input class="api-header__search-input"
+                       type="text"
+                       placeholder="Search docs"
+                       data-typeahead/>
+            </form>
+        </div>
+    
+        <a class="api-header__external-link"
+           href="https://github.com/vapor/service"
+           target="_blank">
+            <img class="api-header__github-icon header-icon"
+                 src="../img/gh.png"/>View on GitHub
+        </a>
     </header>
+
+
     <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">Service Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        BasicSubContainer Class Reference
-      </p>
-    </div>
-    <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/BasicContainer.html">BasicContainer</a>
+                <a class="nav-group-task-link" href="../Classes/BasicContainer.html">BasicContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
+                <a class="nav-group-task-link" href="../Classes/BasicSubContainer.html">BasicSubContainer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ServiceCache.html">ServiceCache</a>
+                <a class="nav-group-task-link" href="../Classes/ServiceCache.html">ServiceCache</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/Container.html">Container</a>
+                <a class="nav-group-task-link" href="../Protocols/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ContainerAlias.html">ContainerAlias</a>
+                <a class="nav-group-task-link" href="../Protocols/ContainerAlias.html">ContainerAlias</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Extendable.html">Extendable</a>
+                <a class="nav-group-task-link" href="../Protocols/Extendable.html">Extendable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Provider.html">Provider</a>
+                <a class="nav-group-task-link" href="../Protocols/Provider.html">Provider</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:7ServiceAAP">Service</a>
+                <a class="nav-group-task-link" href="../Protocols.html#/s:7ServiceAAP">Service</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ServiceFactory.html">ServiceFactory</a>
+                <a class="nav-group-task-link" href="../Protocols/ServiceFactory.html">ServiceFactory</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ServiceType.html">ServiceType</a>
+                <a class="nav-group-task-link" href="../Protocols/ServiceType.html">ServiceType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SubContainer.html">SubContainer</a>
+                <a class="nav-group-task-link" href="../Protocols/SubContainer.html">SubContainer</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/BasicServiceFactory.html">BasicServiceFactory</a>
+                <a class="nav-group-task-link" href="../Structs/BasicServiceFactory.html">BasicServiceFactory</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Config.html">Config</a>
+                <a class="nav-group-task-link" href="../Structs/Config.html">Config</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Environment.html">Environment</a>
+                <a class="nav-group-task-link" href="../Structs/Environment.html">Environment</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Extend.html">Extend</a>
+                <a class="nav-group-task-link" href="../Structs/Extend.html">Extend</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/ServiceError.html">ServiceError</a>
+                <a class="nav-group-task-link" href="../Structs/ServiceError.html">ServiceError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Services.html">Services</a>
+                <a class="nav-group-task-link" href="../Structs/Services.html">Services</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>BasicSubContainer</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">BasicSubContainer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SubContainer.html">SubContainer</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">BasicSubContainer</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/SubContainer.html">SubContainer</a></span></code></pre>
 
                 </div>
               </div>
             <p>A basic <code><a href="../Protocols/SubContainer.html">SubContainer</a></code> implementation.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service17BasicSubContainerC05superD0AA0D0_pv"></a>
+                    <a name="/s:7Service17BasicSubContainerC05superD0AA0D0_pvp"></a>
                     <a name="//apple_ref/swift/Property/superContainer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service17BasicSubContainerC05superD0AA0D0_pv">superContainer</a>
+                    <a class="token" href="#/s:7Service17BasicSubContainerC05superD0AA0D0_pvp">superContainer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -146,9 +166,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service17BasicSubContainerC9eventLoopXev"></a>
+                    <a name="/s:7Service17BasicSubContainerC9eventLoop3NIO05EventF0_pvp"></a>
                     <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service17BasicSubContainerC9eventLoopXev">eventLoop</a>
+                    <a class="token" href="#/s:7Service17BasicSubContainerC9eventLoop3NIO05EventF0_pvp">eventLoop</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -176,9 +196,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service17BasicSubContainerC12serviceCacheAA0aF0Cv"></a>
+                    <a name="/s:7Service17BasicSubContainerC12serviceCacheAA0aF0Cvp"></a>
                     <a name="//apple_ref/swift/Property/serviceCache" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service17BasicSubContainerC12serviceCacheAA0aF0Cv">serviceCache</a>
+                    <a class="token" href="#/s:7Service17BasicSubContainerC12serviceCacheAA0aF0Cvp">serviceCache</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -206,9 +226,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Service17BasicSubContainerCXeXecfc"></a>
+                    <a name="/s:7Service17BasicSubContainerCAcA0D0_p5super_3NIO14EventLoopGroup_p2ontcfc"></a>
                     <a name="//apple_ref/swift/Method/init(super:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Service17BasicSubContainerCXeXecfc">init(super:on:)</a>
+                    <a class="token" href="#/s:7Service17BasicSubContainerCAcA0D0_p5super_3NIO14EventLoopGroup_p2ontcfc">init(super:on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -235,14 +255,25 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-03)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+
+    <footer class="api-footer">
+        &lt;p&gt;&amp;copy; 2018 &lt;a class=&quot;link&quot; href=&quot;https://vapor.codes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vapor&lt;/a&gt;. All rights reserved. (Last updated: 2018-05-09)&lt;/p&gt;
+    
+        <a class="api-header__external-link"
+           href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2F1%2E0%2E0%2FService%2Fdocsets%2FService%2Exml"
+           target="_blank">
+            <img class="header-icon"
+                 src="../img/dash.png"/>Install in Dash
+        </a>
+    
+        <span class="api-footer__jazzy-attribution">Generated by <a class="api-footer__link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="api-footer__link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</span>
+    </footer>
+
   </body>
 </div>
 </html>
