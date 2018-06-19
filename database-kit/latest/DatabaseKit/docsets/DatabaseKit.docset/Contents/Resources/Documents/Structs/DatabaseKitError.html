@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E2%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -106,6 +106,9 @@
                 <a class="nav-group-task-link" href="../Protocols/DatabaseLogHandler.html">DatabaseLogHandler</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DatabaseQueryable.html">DatabaseQueryable</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/DatabaseStringFindable.html">DatabaseStringFindable</a>
               </li>
               <li class="nav-group-task">
@@ -148,6 +151,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:11DatabaseKit0A6Configa">DatabaseConfig</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -157,7 +168,7 @@
             <h1>DatabaseKitError</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DatabaseKitError</span><span class="p">:</span> <span class="kt">Debuggable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DatabaseKitError</span> <span class="p">:</span> <span class="kt">Debuggable</span></code></pre>
 
                 </div>
               </div>
@@ -173,9 +184,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0aB5ErrorV12readableNameSSvZ"></a>
+                    <a name="/s:11DatabaseKit0aB5ErrorV12readableNameSSvpZ"></a>
                     <a name="//apple_ref/swift/Variable/readableName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV12readableNameSSvZ">readableName</a>
+                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV12readableNameSSvpZ">readableName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -190,12 +201,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">readableName</span> <span class="o">=</span> <span class="s">"DatabaseKit Error"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">readableName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L6">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L6">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -203,9 +214,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0aB5ErrorV10identifierSSv"></a>
+                    <a name="/s:11DatabaseKit0aB5ErrorV10identifierSSvp"></a>
                     <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV10identifierSSv">identifier</a>
+                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV10identifierSSvp">identifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -225,7 +236,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L9">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L9">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -233,9 +244,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0aB5ErrorV6reasonSSv"></a>
+                    <a name="/s:11DatabaseKit0aB5ErrorV6reasonSSvp"></a>
                     <a name="//apple_ref/swift/Property/reason" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV6reasonSSv">reason</a>
+                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV6reasonSSvp">reason</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -255,7 +266,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -263,9 +274,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0aB5ErrorV14sourceLocationXev"></a>
+                    <a name="/s:11DatabaseKit0aB5ErrorV14sourceLocation9Debugging06SourceE0VSgvp"></a>
                     <a name="//apple_ref/swift/Property/sourceLocation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV14sourceLocationXev">sourceLocation</a>
+                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV14sourceLocation9Debugging06SourceE0VSgvp">sourceLocation</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -285,7 +296,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -293,9 +304,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0aB5ErrorV10stackTraceSaySSGv"></a>
+                    <a name="/s:11DatabaseKit0aB5ErrorV10stackTraceSaySSGvp"></a>
                     <a name="//apple_ref/swift/Property/stackTrace" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV10stackTraceSaySSGv">stackTrace</a>
+                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV10stackTraceSaySSGvp">stackTrace</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -315,7 +326,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L18">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -323,9 +334,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0aB5ErrorV14suggestedFixesSaySSGv"></a>
+                    <a name="/s:11DatabaseKit0aB5ErrorV14suggestedFixesSaySSGvp"></a>
                     <a name="//apple_ref/swift/Property/suggestedFixes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV14suggestedFixesSaySSGv">suggestedFixes</a>
+                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV14suggestedFixesSaySSGvp">suggestedFixes</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -345,7 +356,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L21">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -353,9 +364,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0aB5ErrorV14possibleCausesSaySSGv"></a>
+                    <a name="/s:11DatabaseKit0aB5ErrorV14possibleCausesSaySSGvp"></a>
                     <a name="//apple_ref/swift/Property/possibleCauses" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV14possibleCausesSaySSGv">possibleCauses</a>
+                    <a class="token" href="#/s:11DatabaseKit0aB5ErrorV14possibleCausesSaySSGvp">possibleCauses</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -375,7 +386,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L24">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/DatabaseKitError.swift#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -388,8 +399,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

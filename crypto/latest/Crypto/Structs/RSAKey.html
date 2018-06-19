@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RSAKey Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/RSAKey" class="dashAnchor"></a>
+
+    <a title="RSAKey Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Crypto Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/crypto">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E2%2E0%2FCrypto%2Fdocsets%2FCrypto%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Crypto Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      RSAKey Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BCryptDigest.html">BCryptDigest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Cipher.html">Cipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CipherAlgorithm.html">CipherAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Digest.html">Digest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DigestAlgorithm.html">DigestAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HMAC.html">HMAC</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RSA.html">RSA</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6AES128AA6CipherCvp">AES128</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6AES256AA6CipherCvp">AES256</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto9AES256CBCAA6CipherCvp">AES256CBC</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto9AES256GCMAA6CipherCvp">AES256GCM</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6BCryptAA0B6DigestCvp">BCrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto3MD4AA6DigestCvp">MD4</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto3MD5AA6DigestCvp">MD5</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto4SHA1AA6DigestCvp">SHA1</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6SHA224AA6DigestCvp">SHA224</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6SHA256AA6DigestCvp">SHA256</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6SHA384AA6DigestCvp">SHA384</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Crypto6SHA512AA6DigestCvp">SHA512</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CipherMode.html">CipherMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RSAInputFormat.html">RSAInputFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RSAKeyType.html">RSAKeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RSAPadding.html">RSAPadding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CryptoError.html">CryptoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CryptoRandom.html">CryptoRandom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RSAKey.html">RSAKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>RSAKey</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RSAKey</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents an in-memory RSA key.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Static"></a>
+                <a name="//apple_ref/swift/Section/Static" class="dashAnchor"></a>
+                <a href="#/Static">
+                  <h3 class="section-name">Static</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto6RSAKeyV7privateAC4Core23LosslessDataConvertible_p3pem_tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/private(pem:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto6RSAKeyV7privateAC4Core23LosslessDataConvertible_p3pem_tKFZ">private(pem:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>RSAKey</code> from a private key pem file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">private</span><span class="p">`(</span><span class="nv">pem</span><span class="p">:</span> <span class="kt">LosslessDataConvertible</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">RSAKey</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/RSA/RSAKey.swift#L10-L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto6RSAKeyV6publicAC4Core23LosslessDataConvertible_p3pem_tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/public(pem:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto6RSAKeyV6publicAC4Core23LosslessDataConvertible_p3pem_tKFZ">public(pem:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>RSAKey</code> from a public key pem file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">public</span><span class="p">`(</span><span class="nv">pem</span><span class="p">:</span> <span class="kt">LosslessDataConvertible</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">RSAKey</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/RSA/RSAKey.swift#L15-L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto6RSAKeyV6publicAC4Core23LosslessDataConvertible_p11certificate_tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/public(certificate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto6RSAKeyV6publicAC4Core23LosslessDataConvertible_p11certificate_tKFZ">public(certificate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>RSAKey</code> from a public key certificate file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">public</span><span class="p">`(</span><span class="nv">certificate</span><span class="p">:</span> <span class="kt">LosslessDataConvertible</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">RSAKey</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/RSA/RSAKey.swift#L20-L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto6RSAKeyV4typeAA0B4TypeOvp"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto6RSAKeyV4typeAA0B4TypeOvp">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The specific RSA key type. Either public or private.</p>
+
+<p>Note: public keys can only verify signatures. A private key
+is required to create new signatures.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/RSAKeyType.html">RSAKeyType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/RSA/RSAKey.swift#L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Init"></a>
+                <a name="//apple_ref/swift/Section/Init" class="dashAnchor"></a>
+                <a href="#/Init">
+                  <h3 class="section-name">Init</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto6RSAKeyV10componentsACSS1n_SS1eSSSg1dtKFZ"></a>
+                    <a name="//apple_ref/swift/Method/components(n:e:d:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto6RSAKeyV10componentsACSS1n_SS1eSSSg1dtKFZ">components(n:e:d:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>RSAKey</code> from components.</p>
+
+<p>For example, if you want to use Google&rsquo;s <a href="https://www.googleapis.com/oauth2/v3/certs">public OAuth2 keys</a>,
+you could parse the request using:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">CertKeysResponse</span><span class="p">:</span> <span class="kt">APIResponse</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">keys</span><span class="p">:</span> <span class="p">[</span><span class="kt">Key</span><span class="p">]</span>
+
+    <span class="kd">struct</span> <span class="kt">Key</span><span class="p">:</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">kty</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">let</span> <span class="nv">alg</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">let</span> <span class="nv">kid</span><span class="p">:</span> <span class="kt">String</span>
+
+        <span class="k">let</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">let</span> <span class="nv">e</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">let</span> <span class="nv">d</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>And then instantiate the key as:</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="kt">RSAKey</span><span class="o">.</span><span class="nf">components</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="n">key</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="nv">e</span><span class="p">:</span> <span class="n">key</span><span class="o">.</span><span class="n">e</span><span class="p">,</span> <span class="nv">d</span><span class="p">:</span> <span class="n">key</span><span class="o">.</span><span class="n">d</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Structs/CryptoError.html">CryptoError</a></code> if key generation fails.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">components</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">e</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">d</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">RSAKey</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/RSA/RSAKey.swift#L67-L87">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-31)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

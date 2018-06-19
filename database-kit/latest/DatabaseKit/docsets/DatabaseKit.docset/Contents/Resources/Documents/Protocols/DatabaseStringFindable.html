@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E2%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -106,6 +106,9 @@
                 <a class="nav-group-task-link" href="../Protocols/DatabaseLogHandler.html">DatabaseLogHandler</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DatabaseQueryable.html">DatabaseQueryable</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/DatabaseStringFindable.html">DatabaseStringFindable</a>
               </li>
               <li class="nav-group-task">
@@ -148,6 +151,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:11DatabaseKit0A6Configa">DatabaseConfig</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -175,9 +186,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A14StringFindableP0A0"></a>
+                    <a name="/s:11DatabaseKit0A14StringFindableP0A0Qa"></a>
                     <a name="//apple_ref/swift/Alias/Database" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A14StringFindableP0A0">Database</a>
+                    <a class="token" href="#/s:11DatabaseKit0A14StringFindableP0A0Qa">Database</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -192,12 +203,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Database</span><span class="p">:</span> <span class="kt">DatabaseKit</span><span class="o">.</span><span class="kt">Database</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Database</span> <span class="p">:</span> <span class="kt">Database</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Connection/DatabaseStringFindable.swift#L6">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Connection/DatabaseStringFindable.swift#L6">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -205,9 +216,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A14StringFindableP12databaseFindXeXeF"></a>
+                    <a name="/s:11DatabaseKit0A14StringFindableP12databaseFind_2on3NIO15EventLoopFutureCyxSgGSS_0A0_10ConnectionQZtF"></a>
                     <a name="//apple_ref/swift/Method/databaseFind(_:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A14StringFindableP12databaseFindXeXeF">databaseFind(_:on:)</a>
+                    <a class="token" href="#/s:11DatabaseKit0A14StringFindableP12databaseFind_2on3NIO15EventLoopFutureCyxSgGSS_0A0_10ConnectionQZtF">databaseFind(_:on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -224,7 +235,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">databaseFind</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DatabaseStringFindable.html#/s:11DatabaseKit0A14StringFindableP0A0">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">databaseFind</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DatabaseStringFindable.html#/s:11DatabaseKit0A14StringFindableP0A0Qa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -252,7 +263,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>An instance of the associated <code><a href="../Protocols/DatabaseStringFindable.html#/s:11DatabaseKit0A14StringFindableP0A0">Database</a></code>&rsquo;s connection.</p>
+                                  <p>An instance of the associated <code><a href="../Protocols/DatabaseStringFindable.html#/s:11DatabaseKit0A14StringFindableP0A0Qa">Database</a></code>&lsquo;s connection.</p>
                                 </div>
                               </td>
                             </tr>
@@ -264,7 +275,7 @@
                         <p>Future containing optional <code>Self</code>, <code>nil</code> if no model could be found.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Connection/DatabaseStringFindable.swift#L16">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Connection/DatabaseStringFindable.swift#L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -277,8 +288,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

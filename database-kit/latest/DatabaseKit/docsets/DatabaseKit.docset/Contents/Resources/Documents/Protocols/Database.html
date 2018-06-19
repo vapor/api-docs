@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E2%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -106,6 +106,9 @@
                 <a class="nav-group-task-link" href="../Protocols/DatabaseLogHandler.html">DatabaseLogHandler</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DatabaseQueryable.html">DatabaseQueryable</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/DatabaseStringFindable.html">DatabaseStringFindable</a>
               </li>
               <li class="nav-group-task">
@@ -148,6 +151,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:11DatabaseKit0A6Configa">DatabaseConfig</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -175,9 +186,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A0P10Connection"></a>
+                    <a name="/s:11DatabaseKit0A0P10ConnectionQa"></a>
                     <a name="//apple_ref/swift/Alias/Connection" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A0P10Connection">Connection</a>
+                    <a class="token" href="#/s:11DatabaseKit0A0P10ConnectionQa">Connection</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -193,12 +204,12 @@ static methods on this type that supplied an instance of <code>Connection</code>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Connection</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DatabaseConnection.html">DatabaseConnection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Connection</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/DatabaseConnection.html">DatabaseConnection</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Database/Database.swift#L7">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Database/Database.swift#L7">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -206,9 +217,9 @@ static methods on this type that supplied an instance of <code>Connection</code>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A0P13newConnectionXeXeF"></a>
+                    <a name="/s:11DatabaseKit0A0P13newConnection2on3NIO15EventLoopFutureCy0D0QzGAF0gH5Group_p_tF"></a>
                     <a name="//apple_ref/swift/Method/newConnection(on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A0P13newConnectionXeXeF">newConnection(on:)</a>
+                    <a class="token" href="#/s:11DatabaseKit0A0P13newConnection2on3NIO15EventLoopFutureCy0D0QzGAF0gH5Group_p_tF">newConnection(on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -225,7 +236,7 @@ static methods on this type that supplied an instance of <code>Connection</code>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">newConnection</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Database.html#/s:11DatabaseKit0A0P10Connection">Connection</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">newConnection</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Database.html#/s:11DatabaseKit0A0P10ConnectionQa">Connection</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -249,7 +260,7 @@ static methods on this type that supplied an instance of <code>Connection</code>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Database/Database.swift#L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Database/Database.swift#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -261,9 +272,9 @@ static methods on this type that supplied an instance of <code>Connection</code>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A0PAAE17newConnectionPoolXeXeF"></a>
+                    <a name="/s:11DatabaseKit0A0PAAE17newConnectionPool6config2onAA0adE0CyxGAA0adE6ConfigV_3NIO14EventLoopGroup_ptF"></a>
                     <a name="//apple_ref/swift/Method/newConnectionPool(config:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A0PAAE17newConnectionPoolXeXeF">newConnectionPool(config:on:)</a>
+                    <a class="token" href="#/s:11DatabaseKit0A0PAAE17newConnectionPool6config2onAA0adE0CyxGAA0adE6ConfigV_3NIO14EventLoopGroup_ptF">newConnectionPool(config:on:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -302,7 +313,7 @@ static methods on this type that supplied an instance of <code>Connection</code>
                         <p>Newly created <code><a href="../Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Database/Database.swift#L28-L30">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Database/Database.swift#L28-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -321,9 +332,9 @@ static methods on this type that supplied an instance of <code>Connection</code>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A0PAAE14makeConnectionXeXeF"></a>
+                    <a name="/s:11DatabaseKit0A0PAAE14makeConnection2on3NIO15EventLoopFutureCy0D0QzGAF0gH5Group_p_tF"></a>
                     <a name="//apple_ref/swift/Method/makeConnection(on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A0PAAE14makeConnectionXeXeF">makeConnection(on:)</a>
+                    <a class="token" href="#/s:11DatabaseKit0A0PAAE14makeConnection2on3NIO15EventLoopFutureCy0D0QzGAF0gH5Group_p_tF">makeConnection(on:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -334,19 +345,20 @@ static methods on this type that supplied an instance of <code>Connection</code>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/Database.html#/s:11DatabaseKit0A0P13newConnectionXeXeF">Database.newConnection(on:)</a></code>.</p>
+                        <p>See <code><a href="../Protocols/Database.html#/s:11DatabaseKit0A0P13newConnection2on3NIO15EventLoopFutureCy0D0QzGAF0gH5Group_p_tF">Database.newConnection(on:)</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeConnection</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Database.html#/s:11DatabaseKit0A0P10Connection">Connection</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, renamed: "newConnection(on:﹚")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeConnection</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Database.html#/s:11DatabaseKit0A0P10ConnectionQa">Connection</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/Deprecated.swift#L10-L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/Deprecated.swift#L10-L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -354,9 +366,9 @@ static methods on this type that supplied an instance of <code>Connection</code>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A0PAAE18makeConnectionPoolXeXeF"></a>
+                    <a name="/s:11DatabaseKit0A0PAAE18makeConnectionPool3max2onAA0adE0CyxGSu_3NIO14EventLoopGroup_ptF"></a>
                     <a name="//apple_ref/swift/Method/makeConnectionPool(max:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A0PAAE18makeConnectionPoolXeXeF">makeConnectionPool(max:on:)</a>
+                    <a class="token" href="#/s:11DatabaseKit0A0PAAE18makeConnectionPool3max2onAA0adE0CyxGSu_3NIO14EventLoopGroup_ptF">makeConnectionPool(max:on:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -374,12 +386,13 @@ static methods on this type that supplied an instance of <code>Connection</code>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeConnectionPool</span><span class="p">(</span><span class="nv">max</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, renamed: "newConnectionPool(on:worker:﹚")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeConnectionPool</span><span class="p">(</span><span class="nv">max</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DatabaseConnectionPool.html">DatabaseConnectionPool</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/Deprecated.swift#L16-L18">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/Deprecated.swift#L16-L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -392,8 +405,8 @@ static methods on this type that supplied an instance of <code>Connection</code>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

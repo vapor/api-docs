@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
 
     <a title="Classes  Reference"></a>
 
@@ -39,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E2%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -105,6 +106,9 @@
                 <a class="nav-group-task-link" href="Protocols/DatabaseLogHandler.html">DatabaseLogHandler</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DatabaseQueryable.html">DatabaseQueryable</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/DatabaseStringFindable.html">DatabaseStringFindable</a>
               </li>
               <li class="nav-group-task">
@@ -147,6 +151,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:11DatabaseKit0A6Configa">DatabaseConfig</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -185,7 +197,7 @@ be created unless existing, active connections become closed.</p>
 <span class="c1">// use the connection</span>
 </code></pre>
 
-<p>Normally you will not use this type directly and you will use methods like <code><a href="Extensions/Container.html#/s:11DatabaseKit20withPooledConnectionXeXeF">Container.withPooledConnection(...)</a></code> instead.</p>
+<p>Normally you will not use this type directly and you will use methods like <code><a href="Extensions/Container.html#/s:7Service9ContainerP11DatabaseKitE20withPooledConnection2to7closure3NIO15EventLoopFutureCyqd_0_GAD0C10IdentifierVyqd__G_AK0G0Qyd__KctAD0C0Rd__r0_lF">Container.withPooledConnection(...)</a></code> instead.</p>
 
                         <a href="Classes/DatabaseConnectionPool.html" class="slightly-smaller">See more</a>
                       </div>
@@ -193,12 +205,12 @@ be created unless existing, active connections become closed.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DatabaseConnectionPool</span><span class="o">&lt;</span><span class="kt"><a href="Protocols/Database.html">Database</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt"><a href="Protocols/Database.html">Database</a></span><span class="p">:</span> <span class="kt">DatabaseKit</span><span class="o">.</span><span class="kt"><a href="Protocols/Database.html">Database</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DatabaseConnectionPool</span><span class="o">&lt;</span><span class="kt"><a href="Protocols/Database.html">Database</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt"><a href="Protocols/Database.html">Database</a></span> <span class="p">:</span> <span class="kt"><a href="Protocols/Database.html">Database</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPool.swift#L11-L136">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPool.swift#L11-L136">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -234,7 +246,7 @@ be created unless existing, active connections become closed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/DatabaseKeyedCache.swift#L2-L40">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/KeyedCache/DatabaseKeyedCache.swift#L2-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -266,12 +278,12 @@ be created unless existing, active connections become closed.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DictionaryKeyedCache</span><span class="p">:</span> <span class="kt"><a href="Protocols/KeyedCache.html">KeyedCache</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DictionaryKeyedCache</span> <span class="p">:</span> <span class="kt"><a href="Protocols/KeyedCache.html">KeyedCache</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/DictionaryKeyedCache.swift#L4-L44">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/KeyedCache/DictionaryKeyedCache.swift#L4-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -309,12 +321,12 @@ be created unless existing, active connections become closed.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">MemoryKeyedCache</span><span class="p">:</span> <span class="kt"><a href="Protocols/KeyedCache.html">KeyedCache</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">MemoryKeyedCache</span> <span class="p">:</span> <span class="kt"><a href="Protocols/KeyedCache.html">KeyedCache</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/MemoryKeyedCache.swift#L7-L41">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/KeyedCache/MemoryKeyedCache.swift#L7-L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -349,7 +361,7 @@ be created unless existing, active connections become closed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Log/DatabaseLogger.swift#L2-L20">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Log/DatabaseLogger.swift#L2-L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -379,12 +391,12 @@ be created unless existing, active connections become closed.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DatabaseKitProvider</span><span class="p">:</span> <span class="kt">Provider</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DatabaseKitProvider</span> <span class="p">:</span> <span class="kt">Provider</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Service/DatabaseKitProvider.swift#L2-L23">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Service/DatabaseKitProvider.swift#L2-L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -397,8 +409,8 @@ be created unless existing, active connections become closed.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

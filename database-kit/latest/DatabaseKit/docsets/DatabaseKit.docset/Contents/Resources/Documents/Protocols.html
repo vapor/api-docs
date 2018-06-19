@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
 
     <a title="Protocols  Reference"></a>
 
@@ -39,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E2%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -105,6 +106,9 @@
                 <a class="nav-group-task-link" href="Protocols/DatabaseLogHandler.html">DatabaseLogHandler</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DatabaseQueryable.html">DatabaseQueryable</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/DatabaseStringFindable.html">DatabaseStringFindable</a>
               </li>
               <li class="nav-group-task">
@@ -144,6 +148,14 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/PrintLogHandler.html">PrintLogHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:11DatabaseKit0A6Configa">DatabaseConfig</a>
               </li>
             </ul>
           </li>
@@ -190,12 +202,12 @@ in a way that makes sense to their use case. Usually on deinit.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DatabaseConnectable</span><span class="p">:</span> <span class="kt">Worker</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DatabaseConnectable</span> <span class="p">:</span> <span class="kt">EventLoopGroup</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Connection/DatabaseConnectable.swift#L8-L19">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Connection/DatabaseConnectable.swift#L8-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -217,7 +229,7 @@ in a way that makes sense to their use case. Usually on deinit.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Types conforming to this protocol can be used as a <code><a href="Protocols/Database.html#/s:11DatabaseKit0A0P10Connection">Database.Connection</a></code>.</p>
+                        <p>Types conforming to this protocol can be used as a <code><a href="Protocols/Database.html#/s:11DatabaseKit0A0P10ConnectionQa">Database.Connection</a></code>.</p>
 
 <p>Most of the database interaction work is done through static methods on <code><a href="Protocols/Database.html">Database</a></code> that accept
 a connection. However, there are a few things like <code>isClosed</code> and <code>close()</code> that a connection must implement.</p>
@@ -228,12 +240,12 @@ a connection. However, there are a few things like <code>isClosed</code> and <co
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DatabaseConnection</span><span class="p">:</span> <span class="kt"><a href="Protocols/DatabaseConnectable.html">DatabaseConnectable</a></span><span class="p">,</span> <span class="kt">Extendable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DatabaseConnection</span> <span class="p">:</span> <span class="kt"><a href="Protocols/DatabaseConnectable.html">DatabaseConnectable</a></span><span class="p">,</span> <span class="kt">Extendable</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Connection/DatabaseConnection.swift#L5-L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Connection/DatabaseConnection.swift#L5-L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -270,7 +282,7 @@ a connection. However, there are a few things like <code>isClosed</code> and <co
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Connection/DatabaseStringFindable.swift#L4-L17">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Connection/DatabaseStringFindable.swift#L4-L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -307,7 +319,42 @@ a connection. However, there are a few things like <code>isClosed</code> and <co
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Database/Database.swift#L4-L16">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Database/Database.swift#L4-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11DatabaseKit0A9QueryableP"></a>
+                    <a name="//apple_ref/swift/Protocol/DatabaseQueryable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11DatabaseKit0A9QueryableP">DatabaseQueryable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capable of asynchronously executing a generic <code>Query</code>, passing zero or more output to a supplied handler.</p>
+
+                        <a href="Protocols/DatabaseQueryable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DatabaseQueryable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Database/DatabaseQueryable.swift#L2-L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -342,7 +389,7 @@ a connection. However, there are a few things like <code>isClosed</code> and <co
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L2-L32">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L2-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -372,12 +419,12 @@ a connection. However, there are a few things like <code>isClosed</code> and <co
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">KeyedCacheSupporting</span><span class="p">:</span> <span class="kt"><a href="Protocols/Database.html">Database</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">KeyedCacheSupporting</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Database.html">Database</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/KeyedCacheSupporting.swift#L2-L13">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/KeyedCache/KeyedCacheSupporting.swift#L2-L13">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -412,7 +459,7 @@ a connection. However, there are a few things like <code>isClosed</code> and <co
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Log/DatabaseLogHandler.swift#L2-L7">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Log/DatabaseLogHandler.swift#L2-L7">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -442,12 +489,12 @@ a connection. However, there are a few things like <code>isClosed</code> and <co
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">LogSupporting</span><span class="p">:</span> <span class="kt"><a href="Protocols/Database.html">Database</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">LogSupporting</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Database.html">Database</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Log/LogSupporting.swift#L2-L5">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Log/LogSupporting.swift#L2-L5">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -460,8 +507,8 @@ a connection. However, there are a few things like <code>isClosed</code> and <co
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

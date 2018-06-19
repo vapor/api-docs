@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E2%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -106,6 +106,9 @@
                 <a class="nav-group-task-link" href="../Protocols/DatabaseLogHandler.html">DatabaseLogHandler</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DatabaseQueryable.html">DatabaseQueryable</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/DatabaseStringFindable.html">DatabaseStringFindable</a>
               </li>
               <li class="nav-group-task">
@@ -148,6 +151,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:11DatabaseKit0A6Configa">DatabaseConfig</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -157,7 +168,7 @@
             <h1>DatabaseConnectionPoolConfig</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DatabaseConnectionPoolConfig</span><span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DatabaseConnectionPoolConfig</span> <span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
 
                 </div>
               </div>
@@ -195,7 +206,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPoolConfig.swift#L4-L6">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPoolConfig.swift#L4-L6">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -203,9 +214,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A20ConnectionPoolConfigV11makeServiceXeXeFZ"></a>
+                    <a name="/s:11DatabaseKit0A20ConnectionPoolConfigV11makeService3forAC0G09Container_p_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/makeService(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A20ConnectionPoolConfigV11makeServiceXeXeFZ">makeService(for:)</a>
+                    <a class="token" href="#/s:11DatabaseKit0A20ConnectionPoolConfigV11makeService3forAC0G09Container_p_tKFZ">makeService(for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -225,7 +236,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPoolConfig.swift#L9-L11">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPoolConfig.swift#L9-L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -233,9 +244,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A20ConnectionPoolConfigV14maxConnectionsSiv"></a>
+                    <a name="/s:11DatabaseKit0A20ConnectionPoolConfigV14maxConnectionsSivp"></a>
                     <a name="//apple_ref/swift/Property/maxConnections" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A20ConnectionPoolConfigV14maxConnectionsSiv">maxConnections</a>
+                    <a class="token" href="#/s:11DatabaseKit0A20ConnectionPoolConfigV14maxConnectionsSivp">maxConnections</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -261,7 +272,7 @@ at least n connections where n = num logical CPU cores.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPoolConfig.swift#L20">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPoolConfig.swift#L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -269,9 +280,9 @@ at least n connections where n = num logical CPU cores.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit0A20ConnectionPoolConfigVACSi14maxConnections_tcfc"></a>
+                    <a name="/s:11DatabaseKit0A20ConnectionPoolConfigV14maxConnectionsACSi_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(maxConnections:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit0A20ConnectionPoolConfigVACSi14maxConnections_tcfc">init(maxConnections:)</a>
+                    <a class="token" href="#/s:11DatabaseKit0A20ConnectionPoolConfigV14maxConnectionsACSi_tcfc">init(maxConnections:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -303,7 +314,7 @@ at least n connections where n = num logical CPU cores.</p>
                               <td>
                                 <div>
                                   <p>Maximum number of connections per pool.
-              See <code><a href="../Structs/DatabaseConnectionPoolConfig.html#/s:11DatabaseKit0A20ConnectionPoolConfigV14maxConnectionsSiv">maxConnections</a></code> property docs for more information.</p>
+              See <code><a href="../Structs/DatabaseConnectionPoolConfig.html#/s:11DatabaseKit0A20ConnectionPoolConfigV14maxConnectionsSivp">maxConnections</a></code> property docs for more information.</p>
                                 </div>
                               </td>
                             </tr>
@@ -311,7 +322,7 @@ at least n connections where n = num logical CPU cores.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPoolConfig.swift#L27-L30">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/ConnectionPool/DatabaseConnectionPoolConfig.swift#L27-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -324,8 +335,8 @@ at least n connections where n = num logical CPU cores.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

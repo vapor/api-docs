@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E0%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fdatabase%2Dkit%2F1%2E2%2E0%2FDatabaseKit%2Fdocsets%2FDatabaseKit%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -106,6 +106,9 @@
                 <a class="nav-group-task-link" href="../Protocols/DatabaseLogHandler.html">DatabaseLogHandler</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DatabaseQueryable.html">DatabaseQueryable</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/DatabaseStringFindable.html">DatabaseStringFindable</a>
               </li>
               <li class="nav-group-task">
@@ -148,6 +151,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:11DatabaseKit0A6Configa">DatabaseConfig</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -173,9 +184,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit10KeyedCacheP3getXeXeF"></a>
+                    <a name="/s:11DatabaseKit10KeyedCacheP3get_2as3NIO15EventLoopFutureCyqd__SgGSS_qd__mts9DecodableRd__lF"></a>
                     <a name="//apple_ref/swift/Method/get(_:as:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit10KeyedCacheP3getXeXeF">get(_:as:)</a>
+                    <a class="token" href="#/s:11DatabaseKit10KeyedCacheP3get_2as3NIO15EventLoopFutureCyqd__SgGSS_qd__mts9DecodableRd__lF">get(_:as:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -193,7 +204,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span> <span class="nv">decodable</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span> <span class="nv">decodable</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">?</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
                       </div>
@@ -233,7 +244,7 @@
                         <p>A future containing an optional value of <code>D</code>, nil if no value was found.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -241,9 +252,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit10KeyedCacheP3setXeXeF"></a>
+                    <a name="/s:11DatabaseKit10KeyedCacheP3set_2to3NIO15EventLoopFutureCyytGSS_qd__ts9EncodableRd__lF"></a>
                     <a name="//apple_ref/swift/Method/set(_:to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit10KeyedCacheP3setXeXeF">set(_:to:)</a>
+                    <a class="token" href="#/s:11DatabaseKit10KeyedCacheP3set_2to3NIO15EventLoopFutureCyytGSS_qd__ts9EncodableRd__lF">set(_:to:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -260,7 +271,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="k">set</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">to</span> <span class="nv">encodable</span><span class="p">:</span> <span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="k">set</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">to</span> <span class="nv">encodable</span><span class="p">:</span> <span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
 
                         </div>
                       </div>
@@ -300,7 +311,7 @@
                         <p>A future that completes when the action finishes. May also contain an error.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L23">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -308,9 +319,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit10KeyedCacheP6removeXeXeF"></a>
+                    <a name="/s:11DatabaseKit10KeyedCacheP6removey3NIO15EventLoopFutureCyytGSSF"></a>
                     <a name="//apple_ref/swift/Method/remove(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit10KeyedCacheP6removeXeXeF">remove(_:)</a>
+                    <a class="token" href="#/s:11DatabaseKit10KeyedCacheP6removey3NIO15EventLoopFutureCyytGSSF">remove(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -336,7 +347,7 @@
                         <p>A future that completes when the action finishes. May also contain an error.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L31">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/KeyedCache/KeyedCache.swift#L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -355,9 +366,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit10KeyedCachePAAE3getXeXeF"></a>
+                    <a name="/s:11DatabaseKit10KeyedCachePAAE3get_6forKey3NIO15EventLoopFutureCyqd__SgGqd__m_SSts9DecodableRd__lF"></a>
                     <a name="//apple_ref/swift/Method/get(_:forKey:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit10KeyedCachePAAE3getXeXeF">get(_:forKey:)</a>
+                    <a class="token" href="#/s:11DatabaseKit10KeyedCachePAAE3get_6forKey3NIO15EventLoopFutureCyqd__SgGqd__m_SSts9DecodableRd__lF">get(_:forKey:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -368,19 +379,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/KeyedCache.html#/s:11DatabaseKit10KeyedCacheP3getXeXeF">KeyedCache.get(_:as:)</a></code>.</p>
+                        <p>See <code><a href="../Protocols/KeyedCache.html#/s:11DatabaseKit10KeyedCacheP3get_2as3NIO15EventLoopFutureCyqd__SgGSS_qd__mts9DecodableRd__lF">KeyedCache.get(_:as:)</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">?</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">D</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, renamed: "get(_:as:﹚")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">?</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/Deprecated.swift#L36-L38">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/Deprecated.swift#L48-L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -388,9 +400,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11DatabaseKit10KeyedCachePAAE3setXeXeF"></a>
+                    <a name="/s:11DatabaseKit10KeyedCachePAAE3set_6forKey3NIO15EventLoopFutureCyytGqd___SSts9EncodableRd__lF"></a>
                     <a name="//apple_ref/swift/Method/set(_:forKey:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11DatabaseKit10KeyedCachePAAE3setXeXeF">set(_:forKey:)</a>
+                    <a class="token" href="#/s:11DatabaseKit10KeyedCachePAAE3set_6forKey3NIO15EventLoopFutureCyytGqd___SSts9EncodableRd__lF">set(_:forKey:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -401,19 +413,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/KeyedCache.html#/s:11DatabaseKit10KeyedCacheP3setXeXeF">KeyedCache.set(_:to:)</a></code>.</p>
+                        <p>See <code><a href="../Protocols/KeyedCache.html#/s:11DatabaseKit10KeyedCacheP3set_2to3NIO15EventLoopFutureCyytGSS_qd__ts9EncodableRd__lF">KeyedCache.set(_:to:)</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="k">set</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">E</span><span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, renamed: "set(_:to:﹚")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="k">set</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/database-kit/tree/1.0.0/Sources/DatabaseKit/Utilities/Deprecated.swift#L42-L44">Show on GitHub</a>
+                        <a href="https://github.com/vapor/database-kit/tree/1.2.0/Sources/DatabaseKit/Utilities/Deprecated.swift#L54-L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -426,8 +439,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
