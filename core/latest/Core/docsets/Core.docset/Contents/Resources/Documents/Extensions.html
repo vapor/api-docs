@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Extensions" class="dashAnchor"></a>
 
     <a title="Extensions  Reference"></a>
 
@@ -39,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E2%2E1%2FCore%2Fdocsets%2FCore%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E4%2E0%2FCore%2Fdocsets%2FCore%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -85,6 +86,9 @@
                 <a class="nav-group-task-link" href="Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Decimal.html">Decimal</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/Decodable.html">Decodable</a>
               </li>
               <li class="nav-group-task">
@@ -106,9 +110,6 @@
                 <a class="nav-group-task-link" href="Extensions/Process.html">Process</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions/RawRepresentable.html">RawRepresentable</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
@@ -123,7 +124,7 @@
             <a class="nav-group-name-link" href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Functions.html#/s:4Core2qqoiXeXeF">??(_:_:)</a>
+                <a class="nav-group-task-link" href="Functions.html#/s:4Core2qqoiy3NIO15EventLoopFutureCyxGAEyxSgG_xtlF">??(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -191,6 +192,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/MediaType.html">MediaType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/NotFound.html">NotFound</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/ProcessExecuteError.html">ProcessExecuteError</a>
@@ -290,7 +294,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="n">_DestructorSafeContainer</span></code></pre>
 
                         </div>
                       </div>
@@ -359,7 +363,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FixedWidthInteger</span> <span class="p">:</span> <span class="kt">BinaryInteger</span><span class="p">,</span> <span class="kt">LosslessStringConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FixedWidthInteger</span> <span class="p">:</span> <span class="kt">BinaryInteger</span><span class="p">,</span> <span class="kt">LosslessStringConvertible</span><span class="p">,</span> <span class="n">_BitwiseOperations</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Magnitude</span> <span class="p">:</span> <span class="kt">FixedWidthInteger</span></code></pre>
 
                         </div>
                       </div>
@@ -413,7 +417,34 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">BinaryFloatingPoint</span> <span class="p">:</span> <span class="kt">FloatingPoint</span><span class="p">,</span> <span class="kt">ExpressibleByFloatLiteral</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">BinaryFloatingPoint</span> <span class="p">:</span> <span class="kt">ExpressibleByFloatLiteral</span><span class="p">,</span> <span class="kt">FloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@SA@NSDecimal"></a>
+                    <a name="//apple_ref/swift/Extension/Decimal" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@SA@NSDecimal">Decimal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/Decimal.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Decimal</span></code></pre>
 
                         </div>
                       </div>
@@ -440,7 +471,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">UUID</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(OSX 10.8, iOS 6.0, *)</span>
+<span class="kd">struct</span> <span class="kt">UUID</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -462,6 +494,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/Data.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Data</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span><span class="p">,</span> <span class="kt">RangeReplaceableCollection</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -513,7 +553,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ExpressibleByNilLiteral</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@_frozen</span>
+<span class="kd">enum</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ExpressibleByNilLiteral</span></code></pre>
 
                         </div>
                       </div>
@@ -540,34 +581,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Dictionary</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Collection</span><span class="p">,</span> <span class="kt">ExpressibleByDictionaryLiteral</span> <span class="k">where</span> <span class="kt">Key</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:s16RawRepresentableP"></a>
-                    <a name="//apple_ref/swift/Extension/RawRepresentable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s16RawRepresentableP">RawRepresentable</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/RawRepresentable.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">RawRepresentable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Dictionary</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Key</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
 
                         </div>
                       </div>
@@ -581,9 +595,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:5Async6Futurea"></a>
                     <a name="//apple_ref/swift/Extension/Future" class="dashAnchor"></a>
-                    <a class="token" href="#/">Future</a>
+                    <a class="token" href="#/s:5Async6Futurea">Future</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -593,6 +607,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/Future.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Future</span> <span class="o">=</span> <span class="kt">EventLoopFuture</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -616,6 +638,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/Process.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Process</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -644,7 +674,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Collection</span> <span class="p">:</span> <span class="kt">Sequence</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Collection</span> <span class="p">:</span> <span class="kt">Sequence</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">SubSequence</span> <span class="p">:</span> <span class="kt">Collection</span></code></pre>
 
                         </div>
                       </div>
@@ -671,6 +701,14 @@
                         
                         <a href="Extensions/Thread.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Thread</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -682,8 +720,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-24)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

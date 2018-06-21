@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E2%2E1%2FCore%2Fdocsets%2FCore%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E4%2E0%2FCore%2Fdocsets%2FCore%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -86,6 +86,9 @@
                 <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decimal.html">Decimal</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Decodable.html">Decodable</a>
               </li>
               <li class="nav-group-task">
@@ -107,9 +110,6 @@
                 <a class="nav-group-task-link" href="../Extensions/Process.html">Process</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
@@ -124,7 +124,7 @@
             <a class="nav-group-name-link" href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Functions.html#/s:4Core2qqoiXeXeF">??(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:4Core2qqoiy3NIO15EventLoopFutureCyxGAEyxSgG_xtlF">??(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -194,6 +194,9 @@
                 <a class="nav-group-task-link" href="../Structs/MediaType.html">MediaType</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ProcessExecuteError.html">ProcessExecuteError</a>
               </li>
               <li class="nav-group-task">
@@ -210,7 +213,7 @@
             <h1>ReflectionDecodable</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ReflectionDecodable</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AnyReflectionDecodable.html">AnyReflectionDecodable</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ReflectionDecodable</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/AnyReflectionDecodable.html">AnyReflectionDecodable</a></span></code></pre>
 
                 </div>
               </div>
@@ -260,6 +263,9 @@ you must expand the type to have at least two distinct cases, or use a different
                     <a name="//apple_ref/swift/Method/reflectDecoded()" class="dashAnchor"></a>
                     <a class="token" href="#/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ">reflectDecoded()</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
@@ -278,6 +284,13 @@ you must expand the type to have at least two distinct cases, or use a different
 </div>
 
                       </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Default implementation of <code>ReflectionDecodable</code> for enums that are also <code>CaseIterable</code>.</p>
+
+<p>See <code>ReflectionDecodable.reflectDecoded(_:)</code> for more information.</p>
+
+                      </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
@@ -291,7 +304,7 @@ you must expand the type to have at least two distinct cases, or use a different
                         <p>Two distinct instances of this type.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.2.1/Sources/Core/CodableReflection/ReflectionDecodable.swift#L42">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/CodableReflection/ReflectionDecodable.swift#L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -299,9 +312,9 @@ you must expand the type to have at least two distinct cases, or use a different
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftSbxKFZ"></a>
+                    <a name="/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftySbxKFZ"></a>
                     <a name="//apple_ref/swift/Method/reflectDecodedIsLeft(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftSbxKFZ">reflectDecodedIsLeft(_:)</a>
+                    <a class="token" href="#/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftySbxKFZ">reflectDecodedIsLeft(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -348,7 +361,7 @@ This method is automatically implemented for types that conform to `Equatable.</
                         <p><code>true</code> if supplied instance equals left side of <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ">reflectDecoded()</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.2.1/Sources/Core/CodableReflection/ReflectionDecodable.swift#L56">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/CodableReflection/ReflectionDecodable.swift#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -356,6 +369,13 @@ This method is automatically implemented for types that conform to `Equatable.</
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Type%20Erased"></a>
+                <a name="//apple_ref/swift/Section/Type Erased" class="dashAnchor"></a>
+                <a href="#/Type%20Erased">
+                  <h3 class="section-name">Type Erased</h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -387,7 +407,7 @@ This method is automatically implemented for types that conform to `Equatable.</
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.2.1/Sources/Core/CodableReflection/ReflectionDecodable.swift#L213-L216">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/CodableReflection/ReflectionDecodable.swift#L202-L205">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -395,9 +415,9 @@ This method is automatically implemented for types that conform to `Equatable.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Core19ReflectionDecodablePAAE23anyReflectDecodedIsLeftSbypKFZ"></a>
+                    <a name="/s:4Core19ReflectionDecodablePAAE23anyReflectDecodedIsLeftySbypKFZ"></a>
                     <a name="//apple_ref/swift/Method/anyReflectDecodedIsLeft(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Core19ReflectionDecodablePAAE23anyReflectDecodedIsLeftSbypKFZ">anyReflectDecodedIsLeft(_:)</a>
+                    <a class="token" href="#/s:4Core19ReflectionDecodablePAAE23anyReflectDecodedIsLeftySbypKFZ">anyReflectDecodedIsLeft(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -408,9 +428,9 @@ This method is automatically implemented for types that conform to `Equatable.</
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Type-erased version of <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftSbxKFZ">ReflectionDecodable.reflectDecodedIsLeft(_:)</a></code>.</p>
+                        <p>Type-erased version of <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftySbxKFZ">ReflectionDecodable.reflectDecodedIsLeft(_:)</a></code>.</p>
 
-<p>See <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftSbxKFZ">ReflectionDecodable.reflectDecodedIsLeft(_:)</a></code> for more information.</p>
+<p>See <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP20reflectDecodedIsLeftySbxKFZ">ReflectionDecodable.reflectDecodedIsLeft(_:)</a></code> for more information.</p>
 
                       </div>
                       <div class="declaration">
@@ -422,7 +442,7 @@ This method is automatically implemented for types that conform to `Equatable.</
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/core/tree/3.2.1/Sources/Core/CodableReflection/ReflectionDecodable.swift#L221-L223">Show on GitHub</a>
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/CodableReflection/ReflectionDecodable.swift#L210-L212">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -435,8 +455,8 @@ This method is automatically implemented for types that conform to `Equatable.</
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-24)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
