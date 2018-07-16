@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SQLColumnDefinition Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/SQLColumnDefinition" class="dashAnchor"></a>
+
+    <a title="SQLColumnDefinition Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SQL Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/sql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fsql%2F2%2E0%2E0%2FSQL%2Fdocsets%2FSQL%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SQL Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SQLColumnDefinition Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLCreateIndexBuilder.html">SQLCreateIndexBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLCreateTableBuilder.html">SQLCreateTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLDeleteBuilder.html">SQLDeleteBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLDropTableBuilder.html">SQLDropTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLInsertBuilder.html">SQLInsertBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLPredicateGroupBuilder.html">SQLPredicateGroupBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLRawBuilder.html">SQLRawBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLSelectBuilder.html">SQLSelectBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLUpdateBuilder.html">SQLUpdateBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLBinaryOperator.html">GenericSQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLColumnConstraintAlgorithm.html">GenericSQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLDirection.html">GenericSQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLDistinct.html">GenericSQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLExpression.html">GenericSQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLForeignKeyAction.html">GenericSQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLFunctionArgument.html">GenericSQLFunctionArgument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLIndexModifier.html">GenericSQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLJoinMethod.html">GenericSQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLLiteral.html">GenericSQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLSelectExpression.html">GenericSQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLTableConstraintAlgorithm.html">GenericSQLTableConstraintAlgorithm</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseQueryable.html">DatabaseQueryable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2neoiyq0_s7KeyPathCyxq_G_q_tAA8SQLTableRzSER_AA13SQLExpressionR0_r1_lF">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2neoiyq2_s7KeyPathCyxq_G_ADyq0_q1_GtAA8SQLTableRzSER_AaGR0_SER1_AA13SQLExpressionR2_r3_lF">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2aaoiyxx_xtAA13SQLExpressionRzlF">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2aeoiyyxSgz_xtAA13SQLExpressionRzlF">&amp;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2eeoiyq0_s7KeyPathCyxq_G_q_tAA8SQLTableRzSER_AA13SQLExpressionR0_r1_lF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2eeoiyq2_s7KeyPathCyxq_G_ADyq0_q1_GtAA8SQLTableRzSER_AaGR0_SER1_AA13SQLExpressionR2_r3_lF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2oeoiyyxSgz_xtAA13SQLExpressionRzlF">|=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2oooiyxx_xtAA13SQLExpressionRzlF">||(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnySQLTable.html">AnySQLTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLAlterTable.html">SQLAlterTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLBinaryOperator.html">SQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLBind.html">SQLBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLBoolLiteral.html">SQLBoolLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:3SQL12SQLCollationP">SQLCollation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnBuilder.html">SQLColumnBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnConstraint.html">SQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnConstraintAlgorithm.html">SQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnDefinition.html">SQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnIdentifier.html">SQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLConnection.html">SQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLCreateIndex.html">SQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLCreateTable.html">SQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDataType.html">SQLDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDefaultLiteral.html">SQLDefaultLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDelete.html">SQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDirection.html">SQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDistinct.html">SQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:3SQL12SQLDropIndexP">SQLDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDropTable.html">SQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLExpression.html">SQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLForeignKey.html">SQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLForeignKeyAction.html">SQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLFunction.html">SQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLFunctionArgument.html">SQLFunctionArgument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLGroupBy.html">SQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLIdentifier.html">SQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLIndexModifier.html">SQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLInsert.html">SQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLJoin.html">SQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLJoinMethod.html">SQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLLiteral.html">SQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLOrderBy.html">SQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLPredicateBuilder.html">SQLPredicateBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLPrimaryKeyDefault.html">SQLPrimaryKeyDefault</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLQuery.html">SQLQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLQueryBuilder.html">SQLQueryBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLQueryFetcher.html">SQLQueryFetcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLSelect.html">SQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLSerializable.html">SQLSerializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:3SQL8SQLTableP">SQLTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLTableConstraint.html">SQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLTableConstraintAlgorithm.html">SQLTableConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLTableIdentifier.html">SQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLUpdate.html">SQLUpdate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLBind.html">GenericSQLBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLColumnConstraint.html">GenericSQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLColumnDefinition.html">GenericSQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLColumnIdentifier.html">GenericSQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLCreateIndex.html">GenericSQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLCreateTable.html">GenericSQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLDelete.html">GenericSQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLDropTable.html">GenericSQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLForeignKey.html">GenericSQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLFunction.html">GenericSQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLGroupBy.html">GenericSQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLIdentifier.html">GenericSQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLInsert.html">GenericSQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLJoin.html">GenericSQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLOrderBy.html">GenericSQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLSelect.html">GenericSQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLTableConstraint.html">GenericSQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLTableIdentifier.html">GenericSQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLUpdate.html">GenericSQLUpdate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLQueryEncoder.html">SQLQueryEncoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>SQLColumnDefinition</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SQLColumnDefinition</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/SQLSerializable.html">SQLSerializable</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Table column definition. DDL. Used by <code><a href="../Protocols/SQLCreateTable.html">SQLCreateTable</a></code> and <code><a href="../Protocols/SQLAlterTable.html">SQLAlterTable</a></code>.</p>
+
+<p>See <code><a href="../Classes/SQLCreateTableBuilder.html">SQLCreateTableBuilder</a></code> and <code><a href="../Classes/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a></code>.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL19SQLColumnDefinitionP16ColumnIdentifierQa"></a>
+                    <a name="//apple_ref/swift/Alias/ColumnIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL19SQLColumnDefinitionP16ColumnIdentifierQa">ColumnIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLColumnIdentifier.html">SQLColumnIdentifier</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">ColumnIdentifier</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/SQLColumnIdentifier.html">SQLColumnIdentifier</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.0.0/Sources/SQL/SQLColumnDefinition.swift#L6">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL19SQLColumnDefinitionP8DataTypeQa"></a>
+                    <a name="//apple_ref/swift/Alias/DataType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL19SQLColumnDefinitionP8DataTypeQa">DataType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLDataType.html">SQLDataType</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">DataType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/SQLDataType.html">SQLDataType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.0.0/Sources/SQL/SQLColumnDefinition.swift#L9">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL19SQLColumnDefinitionP16ColumnConstraintQa"></a>
+                    <a name="//apple_ref/swift/Alias/ColumnConstraint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL19SQLColumnDefinitionP16ColumnConstraintQa">ColumnConstraint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLColumnConstraint.html">SQLColumnConstraint</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">ColumnConstraint</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/SQLColumnConstraint.html">SQLColumnConstraint</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.0.0/Sources/SQL/SQLColumnDefinition.swift#L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL19SQLColumnDefinitionP06columnC0yx16ColumnIdentifierQz_8DataTypeQzSay0E10ConstraintQzGtFZ"></a>
+                    <a name="//apple_ref/swift/Method/columnDefinition(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL19SQLColumnDefinitionP06columnC0yx16ColumnIdentifierQz_8DataTypeQzSay0E10ConstraintQzGtFZ">columnDefinition(_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>SQLColumnDefinition</code> from column identifier, data type, and zero or more constraints.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">columnDefinition</span><span class="p">(</span><span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLColumnDefinition.html#/s:3SQL19SQLColumnDefinitionP16ColumnIdentifierQa">ColumnIdentifier</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">dataType</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLColumnDefinition.html#/s:3SQL19SQLColumnDefinitionP8DataTypeQa">DataType</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">constraints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/SQLColumnDefinition.html#/s:3SQL19SQLColumnDefinitionP16ColumnConstraintQa">ColumnConstraint</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.0.0/Sources/SQL/SQLColumnDefinition.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-16)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
