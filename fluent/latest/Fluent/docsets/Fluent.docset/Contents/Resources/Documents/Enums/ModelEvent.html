@@ -4,305 +4,231 @@
     <title>ModelEvent Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Enum/ModelEvent" class="dashAnchor"></a>
+
     <a title="ModelEvent Enumeration Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">Fluent Docs</a> (91% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/fluent"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2F3%2E0%2E0%2Drc%2E2%2E3%2FFluent%2Fdocsets%2FFluent%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">Fluent Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        ModelEvent Enumeration Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Fluent Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/fluent">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2F3%2E0%2E0%2FFluent%2Fdocsets%2FFluent%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Fluent Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      ModelEvent Enumeration Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/FluentCache.html">FluentCache</a>
+                <a class="nav-group-task-link" href="../Classes/CacheEntry.html">CacheEntry</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/FluentCacheEntry.html">FluentCacheEntry</a>
+                <a class="nav-group-task-link" href="../Classes/FluentProvider.html">FluentProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/FluentProvider.html">FluentProvider</a>
+                <a class="nav-group-task-link" href="../Classes/MigrateCommand.html">MigrateCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/QueryBuilder.html">QueryBuilder</a>
+                <a class="nav-group-task-link" href="../Classes/MigrationLog.html">MigrationLog</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/RevertCommand.html">RevertCommand</a>
+                <a class="nav-group-task-link" href="../Classes/QueryBuilder.html">QueryBuilder</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SchemaCreator.html">SchemaCreator</a>
+                <a class="nav-group-task-link" href="../Classes/RevertCommand.html">RevertCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SchemaUpdater.html">SchemaUpdater</a>
+                <a class="nav-group-task-link" href="../Classes/SchemaCreator.html">SchemaCreator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SchemaUpdater.html">SchemaUpdater</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Global Variables.html">Global Variables</a>
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6Fluent18pivotNameConnectorSSv">pivotNameConnector</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Fluent18pivotNameConnectorSSvp">pivotNameConnector</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/ModelEvent.html">ModelEvent</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/QueryAction.html">QueryAction</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/QueryAggregateMethod.html">QueryAggregateMethod</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/QueryFilterItem.html">QueryFilterItem</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/QueryGroupRelation.html">QueryGroupRelation</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/QueryJoinMethod.html">QueryJoinMethod</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/QuerySortDirection.html">QuerySortDirection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ReferentialAction.html">ReferentialAction</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/SchemaAction.html">SchemaAction</a>
+                <a class="nav-group-task-link" href="../Enums/ModelEvent.html">ModelEvent</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/CommandConfig.html">CommandConfig</a>
+                <a class="nav-group-task-link" href="../Extensions/CommandConfig.html">CommandConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/DatabaseConnection.html">DatabaseConnection</a>
+                <a class="nav-group-task-link" href="../Extensions/DatabaseConnectable.html">DatabaseConnectable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Dictionary.html">Dictionary</a>
+                <a class="nav-group-task-link" href="../Extensions/DatabasesConfig.html">DatabasesConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Future.html">Future</a>
+                <a class="nav-group-task-link" href="../Extensions/Decodable.html">Decodable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/KeyPath.html">KeyPath</a>
+                <a class="nav-group-task-link" href="../Extensions/Future.html">Future</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/KeyedCacheSupporting.html">KeyedCacheSupporting</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Functions.html">Functions</a>
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2neoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">!=(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2neoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">!=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2neoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">!=(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2ntoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_Sayq0_GtAA15QuerySupportingRzSER0_r1_lF">!~(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2ntoiAA11ModelFilterVyxGs7KeyPathCyxq_G_Sayq_GtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">!~(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent1loiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">&lt;(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent1loiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0B0RzAA15QuerySupporting8DatabaseRpzr0_lF">&lt;(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2leoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">&lt;=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent1loiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0B0RzAA15QuerySupporting8DatabaseRpzr0_lF">&lt;(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2eeoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2leoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">&lt;=(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent1goiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">&gt;(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2leoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">&lt;=(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2geoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">&gt;=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2eeoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2eeoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent1goiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0B0RzAA15QuerySupporting8DatabaseRpzr0_lF">&gt;(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent1goiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0B0RzAA15QuerySupporting8DatabaseRpzr0_lF">&gt;(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2geoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_SgtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">&gt;=(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2geoiAA11ModelFilterVyxGs7KeyPathCyxq_G_q_tKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">&gt;=(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:6Fluent2ttoiAA11ModelFilterVyxGs7KeyPathCyxq_G_Sayq_GtKAA0C0RzAA15QuerySupporting8DatabaseRpzr0_lF">~~(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2ttoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_Sayq0_GtAA15QuerySupportingRzSER0_r1_lF">~~(_:_:)</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/AnyModel.html">AnyModel</a>
+                <a class="nav-group-task-link" href="../Protocols/AnyMigration.html">AnyMigration</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/AnySoftDeletable.html">AnySoftDeletable</a>
+                <a class="nav-group-task-link" href="../Protocols/AnyModel.html">AnyModel</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/AnyTimestampable.html">AnyTimestampable</a>
+                <a class="nav-group-task-link" href="../Protocols.html#/s:6Fluent2IDP">ID</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/FluentData.html">FluentData</a>
+                <a class="nav-group-task-link" href="../Protocols/JoinSupporting.html">JoinSupporting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:6Fluent2IDP">ID</a>
+                <a class="nav-group-task-link" href="../Protocols/Migration.html">Migration</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:6Fluent15IndexSupportingP">IndexSupporting</a>
+                <a class="nav-group-task-link" href="../Protocols/MigrationSupporting.html">MigrationSupporting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:6Fluent14JoinSupportingP">JoinSupporting</a>
+                <a class="nav-group-task-link" href="../Protocols/Model.html">Model</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Migration.html">Migration</a>
+                <a class="nav-group-task-link" href="../Protocols/ModifiablePivot.html">ModifiablePivot</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Model.html">Model</a>
+                <a class="nav-group-task-link" href="../Protocols/Pivot.html">Pivot</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ModifiablePivot.html">ModifiablePivot</a>
+                <a class="nav-group-task-link" href="../Protocols/QuerySupporting.html">QuerySupporting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Pivot.html">Pivot</a>
+                <a class="nav-group-task-link" href="../Protocols/SchemaBuilder.html">SchemaBuilder</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/QuerySupporting.html">QuerySupporting</a>
+                <a class="nav-group-task-link" href="../Protocols/SchemaSupporting.html">SchemaSupporting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ReferenceSupporting.html">ReferenceSupporting</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/SchemaBuilder.html">SchemaBuilder</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/SchemaSupporting.html">SchemaSupporting</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/SoftDeletable.html">SoftDeletable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/Timestampable.html">Timestampable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/TransactionSupporting.html">TransactionSupporting</a>
+                <a class="nav-group-task-link" href="../Protocols/TransactionSupporting.html">TransactionSupporting</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/Children.html">Children</a>
+                <a class="nav-group-task-link" href="../Structs/Children.html">Children</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DatabaseQuery.html">DatabaseQuery</a>
+                <a class="nav-group-task-link" href="../Structs/FilterOperator.html">FilterOperator</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DatabaseSchema.html">DatabaseSchema</a>
+                <a class="nav-group-task-link" href="../Structs/FluentError.html">FluentError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DatabaseTransaction.html">DatabaseTransaction</a>
+                <a class="nav-group-task-link" href="../Structs/FluentProperty.html">FluentProperty</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/FluentError.html">FluentError</a>
+                <a class="nav-group-task-link" href="../Structs/MigrationConfig.html">MigrationConfig</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/MigrationConfig.html">MigrationConfig</a>
+                <a class="nav-group-task-link" href="../Structs/Parent.html">Parent</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/ModelFilter.html">ModelFilter</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/Parent.html">Parent</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryAggregate.html">QueryAggregate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryField.html">QueryField</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryFieldDecodingContainer.html">QueryFieldDecodingContainer</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryFieldEncodingContainer.html">QueryFieldEncodingContainer</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryFilter.html">QueryFilter</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryFilterType.html">QueryFilterType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryFilterValue.html">QueryFilterValue</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryGroupBy.html">QueryGroupBy</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryJoin.html">QueryJoin</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QueryRange.html">QueryRange</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/QuerySort.html">QuerySort</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/ReferentialActions.html">ReferentialActions</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/SchemaField.html">SchemaField</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/SchemaIndex.html">SchemaIndex</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/SchemaReference.html">SchemaReference</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/Siblings.html">Siblings</a>
+                <a class="nav-group-task-link" href="../Structs/Siblings.html">Siblings</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>ModelEvent</h1>
               <div class="declaration">
                 <div class="language">
@@ -310,18 +236,21 @@
 
                 </div>
               </div>
-            <p>Model events.</p>
+            <p>Model lifecycle events.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Fluent10ModelEventO10willCreateA2CmF"></a>
+                    <a name="/s:6Fluent10ModelEventO10willCreateyA2CmF"></a>
                     <a name="//apple_ref/swift/Element/willCreate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Fluent10ModelEventO10willCreateA2CmF">willCreate</a>
+                    <a class="token" href="#/s:6Fluent10ModelEventO10willCreateyA2CmF">willCreate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -329,7 +258,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called before a model is created when saving.</p>
 
                       </div>
                       <div class="declaration">
@@ -341,21 +270,17 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Query/QuerySupporting.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/Model/ModelEvent.swift#L4">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Fluent10ModelEventO9didCreateA2CmF"></a>
+                    <a name="/s:6Fluent10ModelEventO9didCreateyA2CmF"></a>
                     <a name="//apple_ref/swift/Element/didCreate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Fluent10ModelEventO9didCreateA2CmF">didCreate</a>
+                    <a class="token" href="#/s:6Fluent10ModelEventO9didCreateyA2CmF">didCreate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -363,7 +288,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called after the model is created when saving.</p>
 
                       </div>
                       <div class="declaration">
@@ -375,21 +300,17 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Query/QuerySupporting.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/Model/ModelEvent.swift#L6">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Fluent10ModelEventO10willUpdateA2CmF"></a>
+                    <a name="/s:6Fluent10ModelEventO10willUpdateyA2CmF"></a>
                     <a name="//apple_ref/swift/Element/willUpdate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Fluent10ModelEventO10willUpdateA2CmF">willUpdate</a>
+                    <a class="token" href="#/s:6Fluent10ModelEventO10willUpdateyA2CmF">willUpdate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -397,7 +318,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called before a model is updated when saving.</p>
 
                       </div>
                       <div class="declaration">
@@ -409,21 +330,17 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Query/QuerySupporting.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/Model/ModelEvent.swift#L8">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Fluent10ModelEventO9didUpdateA2CmF"></a>
+                    <a name="/s:6Fluent10ModelEventO9didUpdateyA2CmF"></a>
                     <a name="//apple_ref/swift/Element/didUpdate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Fluent10ModelEventO9didUpdateA2CmF">didUpdate</a>
+                    <a class="token" href="#/s:6Fluent10ModelEventO9didUpdateyA2CmF">didUpdate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -431,7 +348,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called after the model is updated when saving.</p>
 
                       </div>
                       <div class="declaration">
@@ -443,21 +360,17 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Query/QuerySupporting.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/Model/ModelEvent.swift#L10">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Fluent10ModelEventO8willReadA2CmF"></a>
+                    <a name="/s:6Fluent10ModelEventO8willReadyA2CmF"></a>
                     <a name="//apple_ref/swift/Element/willRead" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Fluent10ModelEventO8willReadA2CmF">willRead</a>
+                    <a class="token" href="#/s:6Fluent10ModelEventO8willReadyA2CmF">willRead</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -465,7 +378,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called before a model is fetched.</p>
 
                       </div>
                       <div class="declaration">
@@ -477,21 +390,17 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Query/QuerySupporting.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/Model/ModelEvent.swift#L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Fluent10ModelEventO10willDeleteA2CmF"></a>
+                    <a name="/s:6Fluent10ModelEventO10willDeleteyA2CmF"></a>
                     <a name="//apple_ref/swift/Element/willDelete" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Fluent10ModelEventO10willDeleteA2CmF">willDelete</a>
+                    <a class="token" href="#/s:6Fluent10ModelEventO10willDeleteyA2CmF">willDelete</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -499,7 +408,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called before a model is deleted.</p>
 
                       </div>
                       <div class="declaration">
@@ -511,21 +420,22 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0-rc.2.3/Sources/Fluent/Query/QuerySupporting.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/Model/ModelEvent.swift#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-27)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-16)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
