@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SQLiteCreateTable Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/SQLiteCreateTable" class="dashAnchor"></a>
+
+    <a title="SQLiteCreateTable Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SQLite Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/sqlite">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fsqlite%2F3%2E0%2E0%2FSQLite%2Fdocsets%2FSQLite%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SQLite Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SQLiteCreateTable Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLiteConnection.html">SQLiteConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLiteDatabase.html">SQLiteDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLiteDropIndexBuilder.html">SQLiteDropIndexBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLiteBoolLiteral.html">SQLiteBoolLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLiteCollation.html">SQLiteCollation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLiteData.html">SQLiteData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLiteDataType.html">SQLiteDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLitePrimaryKeyDefault.html">SQLitePrimaryKeyDefault</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLiteQuery.html">SQLiteQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLiteStorage.html">SQLiteStorage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLConnection.html">SQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLCreateTableBuilder.html">SQLCreateTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLSelectExpression.html">SQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteDataConvertible.html">SQLiteDataConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteDataTypeStaticRepresentable.html">SQLiteDataTypeStaticRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteQueryExpressionRepresentable.html">SQLiteQueryExpressionRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:6SQLite0A5TableP">SQLiteTable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteAlterTable.html">SQLiteAlterTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteAlterTable/Value.html">– Value</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteBind.html">SQLiteBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteBind/Value.html">– Value</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteColumn.html">SQLiteColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteCreateTable.html">SQLiteCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteDataDecoder.html">SQLiteDataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteDataEncoder.html">SQLiteDataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteDefaultLiteral.html">SQLiteDefaultLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteDropIndex.html">SQLiteDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteError.html">SQLiteError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteFunction.html">SQLiteFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLiteRowDecoder.html">SQLiteRowDecoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A14BinaryOperatora">SQLiteBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A16ColumnConstrainta">SQLiteColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A25ColumnConstraintAlgorithma">SQLiteColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A16ColumnDefinitiona">SQLiteColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A16ColumnIdentifiera">SQLiteColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A11CreateIndexa">SQLiteCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A6Deletea">SQLiteDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A9Directiona">SQLiteDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A8Distincta">SQLiteDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A9DropTablea">SQLiteDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A10Expressiona">SQLiteExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A10ForeignKeya">SQLiteForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A16ForeignKeyActiona">SQLiteForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A7GroupBya">SQLiteGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A10Identifiera">SQLiteIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A13IndexModifiera">SQLiteIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A6Inserta">SQLiteInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A4Joina">SQLiteJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A10JoinMethoda">SQLiteJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A7Literala">SQLiteLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A7OrderBya">SQLiteOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A6Selecta">SQLiteSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A16SelectExpressiona">SQLiteSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A15TableConstrainta">SQLiteTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A24TableConstraintAlgorithma">SQLiteTableConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A15TableIdentifiera">SQLiteTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:6SQLite0A6Updatea">SQLiteUpdate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>SQLiteCreateTable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SQLiteCreateTable</span> <span class="p">:</span> <span class="kt">SQLCreateTable</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>CREATE TABLE</code> command is used to create a new table in an SQLite database.</p>
+
+<p><a href="https://www.sqlite.org/lang_createtable.html">https://www.sqlite.org/lang_createtable.html</a></p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A11CreateTableV06createC0yAC3SQL25GenericSQLTableIdentifierVyAE0F13SQLIdentifierVGFZ"></a>
+                    <a name="//apple_ref/swift/Method/createTable(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A11CreateTableV06createC0yAC3SQL25GenericSQLTableIdentifierVyAE0F13SQLIdentifierVGFZ">createTable(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLCreateTable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">createTable</span><span class="p">(</span><span class="n">_</span> <span class="nv">table</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:6SQLite0A15TableIdentifiera">SQLiteTableIdentifier</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SQLiteCreateTable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sqlite/tree/3.0.0/Sources/SQLite/SQL/SQLiteCreateTable.swift#L18-L20">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A11CreateTableV06createC03SQL016GenericSQLCreateC0VyAE0F18SQLTableIdentifierVyAE0F13SQLIdentifierVGAE0F19SQLColumnDefinitionVyAE0fkI0VyAlKGAA0A8DataTypeOAE0fK10ConstraintVyAkE0fkO9AlgorithmOyAE0F13SQLExpressionOyAE0F10SQLLiteralOyAA0A14DefaultLiteralVAA0a4BoolT0OGAA0A4BindVAqE0F17SQLBinaryOperatorOAA0A8FunctionVAA0A5QueryOGAA0A9CollationOAA0a10PrimaryKeyS0OAE0F13SQLForeignKeyVyAlkE0F19SQLForeignKeyActionOGGGGAE0fhO0VyAkE0fhoP0OyAKA13_A15_A22_GGGvp"></a>
+                    <a name="//apple_ref/swift/Property/createTable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A11CreateTableV06createC03SQL016GenericSQLCreateC0VyAE0F18SQLTableIdentifierVyAE0F13SQLIdentifierVGAE0F19SQLColumnDefinitionVyAE0fkI0VyAlKGAA0A8DataTypeOAE0fK10ConstraintVyAkE0fkO9AlgorithmOyAE0F13SQLExpressionOyAE0F10SQLLiteralOyAA0A14DefaultLiteralVAA0a4BoolT0OGAA0A4BindVAqE0F17SQLBinaryOperatorOAA0A8FunctionVAA0A5QueryOGAA0A9CollationOAA0a10PrimaryKeyS0OAE0F13SQLForeignKeyVyAlkE0F19SQLForeignKeyActionOGGGGAE0fhO0VyAkE0fhoP0OyAKA13_A15_A22_GGGvp">createTable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLCreateTable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">createTable</span><span class="p">:</span> <span class="kt">GenericSQLCreateTable</span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:6SQLite0A15TableIdentifiera">SQLiteTableIdentifier</a></span><span class="p">,</span> <span class="kt"><a href="../Typealiases.html#/s:6SQLite0A16ColumnDefinitiona">SQLiteColumnDefinition</a></span><span class="p">,</span> <span class="kt"><a href="../Typealiases.html#/s:6SQLite0A15TableConstrainta">SQLiteTableConstraint</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sqlite/tree/3.0.0/Sources/SQLite/SQL/SQLiteCreateTable.swift#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A11CreateTableV9temporarySbvp"></a>
+                    <a name="//apple_ref/swift/Property/temporary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A11CreateTableV9temporarySbvp">temporary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLCreateTable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">temporary</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sqlite/tree/3.0.0/Sources/SQLite/SQL/SQLiteCreateTable.swift#L29-L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A11CreateTableV11ifNotExistsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/ifNotExists" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A11CreateTableV11ifNotExistsSbvp">ifNotExists</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLCreateTable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">ifNotExists</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sqlite/tree/3.0.0/Sources/SQLite/SQL/SQLiteCreateTable.swift#L35-L38">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A11CreateTableV5table3SQL25GenericSQLTableIdentifierVyAE0F13SQLIdentifierVGvp"></a>
+                    <a name="//apple_ref/swift/Property/table" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A11CreateTableV5table3SQL25GenericSQLTableIdentifierVyAE0F13SQLIdentifierVGvp">table</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLCreateTable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">table</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:6SQLite0A15TableIdentifiera">SQLiteTableIdentifier</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sqlite/tree/3.0.0/Sources/SQLite/SQL/SQLiteCreateTable.swift#L41-L44">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A11CreateTableV7columnsSay3SQL26GenericSQLColumnDefinitionVyAE0fG10IdentifierVyAE0f8SQLTableI0VyAE0F13SQLIdentifierVGAMGAA0A8DataTypeOAE0fG10ConstraintVyAmE0fgN9AlgorithmOyAE0F13SQLExpressionOyAE0F10SQLLiteralOyAA0A14DefaultLiteralVAA0a4BoolS0OGAA0A4BindVAoE0F17SQLBinaryOperatorOAA0A8FunctionVAA0A5QueryOGAA0A9CollationOAA0a10PrimaryKeyR0OAE0F13SQLForeignKeyVyAnmE0F19SQLForeignKeyActionOGGGGGvp"></a>
+                    <a name="//apple_ref/swift/Property/columns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A11CreateTableV7columnsSay3SQL26GenericSQLColumnDefinitionVyAE0fG10IdentifierVyAE0f8SQLTableI0VyAE0F13SQLIdentifierVGAMGAA0A8DataTypeOAE0fG10ConstraintVyAmE0fgN9AlgorithmOyAE0F13SQLExpressionOyAE0F10SQLLiteralOyAA0A14DefaultLiteralVAA0a4BoolS0OGAA0A4BindVAoE0F17SQLBinaryOperatorOAA0A8FunctionVAA0A5QueryOGAA0A9CollationOAA0a10PrimaryKeyR0OAE0F13SQLForeignKeyVyAnmE0F19SQLForeignKeyActionOGGGGGvp">columns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLCreateTable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">columns</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:6SQLite0A16ColumnDefinitiona">SQLiteColumnDefinition</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sqlite/tree/3.0.0/Sources/SQLite/SQL/SQLiteCreateTable.swift#L47-L50">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A11CreateTableV16tableConstraintsSay3SQL25GenericSQLTableConstraintVyAE0G13SQLIdentifierVAE0ghI9AlgorithmOyAiE0G13SQLExpressionOyAE0G10SQLLiteralOyAA0A14DefaultLiteralVAA0a4BoolO0OGAA0A4BindVAE0G19SQLColumnIdentifierVyAE0ghS0VyAIGAIGAE0G17SQLBinaryOperatorOAA0A8FunctionVAA0A5QueryOGAA0A9CollationOAE0G13SQLForeignKeyVyA_AiE0gyZ6ActionOGGGGvp"></a>
+                    <a name="//apple_ref/swift/Property/tableConstraints" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A11CreateTableV16tableConstraintsSay3SQL25GenericSQLTableConstraintVyAE0G13SQLIdentifierVAE0ghI9AlgorithmOyAiE0G13SQLExpressionOyAE0G10SQLLiteralOyAA0A14DefaultLiteralVAA0a4BoolO0OGAA0A4BindVAE0G19SQLColumnIdentifierVyAE0ghS0VyAIGAIGAE0G17SQLBinaryOperatorOAA0A8FunctionVAA0A5QueryOGAA0A9CollationOAE0G13SQLForeignKeyVyA_AiE0gyZ6ActionOGGGGvp">tableConstraints</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLCreateTable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tableConstraints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:6SQLite0A15TableConstrainta">SQLiteTableConstraint</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sqlite/tree/3.0.0/Sources/SQLite/SQL/SQLiteCreateTable.swift#L53-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A11CreateTableV12withoutRowIDSbvp"></a>
+                    <a name="//apple_ref/swift/Property/withoutRowID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A11CreateTableV12withoutRowIDSbvp">withoutRowID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>By default, every row in SQLite has a special column, usually called the <q>rowid</q>, that uniquely identifies that row within
+the table. However if the phrase <q>WITHOUT ROWID</q> is added to the end of a CREATE TABLE statement, then the special <q>rowid</q>
+column is omitted. There are sometimes space and performance advantages to omitting the rowid.</p>
+
+<p><a href="https://www.sqlite.org/withoutrowid.html">https://www.sqlite.org/withoutrowid.html</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">withoutRowID</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sqlite/tree/3.0.0/Sources/SQLite/SQL/SQLiteCreateTable.swift#L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A11CreateTableV9serializeySSSaySE_pGzF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A11CreateTableV9serializeySSSaySE_pGzF">serialize(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLSerializable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">_</span> <span class="nv">binds</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Encodable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sqlite/tree/3.0.0/Sources/SQLite/SQL/SQLiteCreateTable.swift#L66-L73">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-16)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
