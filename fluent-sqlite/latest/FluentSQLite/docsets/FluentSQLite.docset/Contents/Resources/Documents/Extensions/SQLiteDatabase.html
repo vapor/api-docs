@@ -4,154 +4,181 @@
     <title>SQLiteDatabase Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Extension/SQLiteDatabase" class="dashAnchor"></a>
+
     <a title="SQLiteDatabase Extension Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">FluentSQLite Docs</a> (87% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/fluent-sqlite"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2Dsqlite%2F3%2E0%2E0%2Drc%2E2%2E1%2FFluentSQLite%2Fdocsets%2FFluentSQLite%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">FluentSQLite Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        SQLiteDatabase Extension Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          FluentSQLite Docs
+        </a>
+         (58% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/fluent-sqlite">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2Dsqlite%2F3%2E0%2E0%2FFluentSQLite%2Fdocsets%2FFluentSQLite%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">FluentSQLite Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SQLiteDatabase Extension Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/FluentSQLiteProvider.html">FluentSQLiteProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/SQLiteSQLSerializer.html">SQLiteSQLSerializer</a>
+                <a class="nav-group-task-link" href="../Classes/FluentSQLiteProvider.html">FluentSQLiteProvider</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+                <a class="nav-group-task-link" href="../Enums/FluentSQLiteQueryStatement.html">FluentSQLiteQueryStatement</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Bool.html">Bool</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Data.html">Data</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/DatabaseLogger.html">DatabaseLogger</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Date.html">Date</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/SQLiteConnection.html">SQLiteConnection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/SQLiteDataConvertible.html">SQLiteDataConvertible</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/SQLiteDatabase.html">SQLiteDatabase</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/String.html">String</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/URL.html">URL</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/UUID.html">UUID</a>
+                <a class="nav-group-task-link" href="../Enums/FluentSQLiteSchemaStatement.html">FluentSQLiteSchemaStatement</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/SQLiteFieldTypeStaticRepresentable.html">SQLiteFieldTypeStaticRepresentable</a>
+                <a class="nav-group-task-link" href="../Extensions/SQLiteDataConvertible.html">SQLiteDataConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SQLiteJSONType.html">SQLiteJSONType</a>
+                <a class="nav-group-task-link" href="../Extensions/SQLiteDataTypeStaticRepresentable.html">SQLiteDataTypeStaticRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SQLiteModel.html">SQLiteModel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols.html#/s:12FluentSQLite0B5PivotP">SQLitePivot</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/SQLiteStringModel.html">SQLiteStringModel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols.html#/s:12FluentSQLite0B11StringPivotP">SQLiteStringPivot</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/SQLiteUUIDModel.html">SQLiteUUIDModel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols.html#/s:12FluentSQLite0B9UUIDPivotP">SQLiteUUIDPivot</a>
+                <a class="nav-group-task-link" href="../Extensions/SQLiteDatabase.html">SQLiteDatabase</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/FluentSQLiteError.html">FluentSQLiteError</a>
+                <a class="nav-group-task-link" href="../Protocols/SQLiteJSONType.html">SQLiteJSONType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/SQLiteConfig.html">SQLiteConfig</a>
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B9MigrationP">SQLiteMigration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteModel.html">SQLiteModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B5PivotP">SQLitePivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteStringModel.html">SQLiteStringModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B11StringPivotP">SQLiteStringPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B5TableP">SQLiteTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteUUIDModel.html">SQLiteUUIDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B9UUIDPivotP">SQLiteUUIDPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite01_B5ModelP">_SQLiteModel</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Typealiases.html">Type Aliases</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:12FluentSQLite0B8EnumTypea">SQLiteEnumType</a>
+                <a class="nav-group-task-link" href="../Structs/FluentSQLiteError.html">FluentSQLiteError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:12FluentSQLite0B4Typea">SQLiteType</a>
+                <a class="nav-group-task-link" href="../Structs/FluentSQLiteQuery.html">FluentSQLiteQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentSQLiteSchema.html">FluentSQLiteSchema</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:12FluentSQLite0B5Cachea">SQLiteCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:12FluentSQLite0B8EnumTypea">SQLiteEnumType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:12FluentSQLite0B4Typea">SQLiteType</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>SQLiteDatabase</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">SQLiteDatabase</span> <span class="p">:</span> <span class="kt">Database</span><span class="p">,</span> <span class="kt">LogSupporting</span></code></pre>
+
+                </div>
+              </div>
             
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite14makeConnectionXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/makeConnection(using:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite14makeConnectionXeXeF">makeConnection(using:on:)</a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E9QueryJoina"></a>
+                    <a name="//apple_ref/swift/Alias/QueryJoin" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E9QueryJoina">QueryJoin</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -159,36 +186,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>Database.makeConnection</code></p>
+                        <p>See <code>JoinSupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeConnection</span><span class="p">(</span>
-    <span class="n">using</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/SQLiteConfig.html">SQLiteConfig</a></span><span class="p">,</span>
-    <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">SQLiteConnection</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryJoin</span> <span class="o">=</span> <span class="kt">SQLiteJoin</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Fluent.swift#L19-L24">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+JoinSupporting.swift#L3">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite13enableLoggingXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/enableLogging(using:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite13enableLoggingXeXeF">enableLogging(using:)</a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E15QueryJoinMethoda"></a>
+                    <a name="//apple_ref/swift/Alias/QueryJoinMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E15QueryJoinMethoda">QueryJoinMethod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -196,19 +216,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See SupportsLogging.enableLogging</p>
+                        <p>See <code>JoinSupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableLogging</span><span class="p">(</span><span class="n">using</span> <span class="nv">logger</span><span class="p">:</span> <span class="kt">DatabaseLogger</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryJoinMethod</span> <span class="o">=</span> <span class="kt">SQLiteJoinMethod</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Fluent.swift#L52-L54">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+JoinSupporting.swift#L6">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -216,13 +236,133 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite9QueryDataa"></a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E5Querya"></a>
+                    <a name="//apple_ref/swift/Alias/Query" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E5Querya">Query</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Query</span> <span class="o">=</span> <span class="kt"><a href="../Structs/FluentSQLiteQuery.html">FluentSQLiteQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L3">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E6Outputa"></a>
+                    <a name="//apple_ref/swift/Alias/Output" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E6Outputa">Output</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Output</span> <span class="o">=</span> <span class="p">[</span><span class="kt">SQLiteColumn</span> <span class="p">:</span> <span class="kt">SQLiteData</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L6">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E11QueryActiona"></a>
+                    <a name="//apple_ref/swift/Alias/QueryAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E11QueryActiona">QueryAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryAction</span> <span class="o">=</span> <span class="kt"><a href="../Enums/FluentSQLiteQueryStatement.html">FluentSQLiteQueryStatement</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L9">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E14QueryAggregatea"></a>
+                    <a name="//apple_ref/swift/Alias/QueryAggregate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E14QueryAggregatea">QueryAggregate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryAggregate</span> <span class="o">=</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E9QueryDataa"></a>
                     <a name="//apple_ref/swift/Alias/QueryData" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite9QueryDataa">QueryData</a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E9QueryDataa">QueryData</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -230,19 +370,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>QuerySupporting.QueryData</code></p>
+                        <p>See <code>QuerySupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryData</span> <span class="o">=</span> <span class="kt">SQLiteData</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryData</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">SQLiteExpression</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Query.swift#L10">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -250,9 +390,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite20QueryDataConvertiblea"></a>
-                    <a name="//apple_ref/swift/Alias/QueryDataConvertible" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite20QueryDataConvertiblea">QueryDataConvertible</a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E10QueryFielda"></a>
+                    <a name="//apple_ref/swift/Alias/QueryField" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E10QueryFielda">QueryField</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -260,19 +400,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>QuerySupporting.QueryDataConvertible</code></p>
+                        <p>See <code>QuerySupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryDataConvertible</span> <span class="o">=</span> <span class="kt">SQLiteDataConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryField</span> <span class="o">=</span> <span class="kt">SQLiteColumnIdentifier</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Query.swift#L13">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -280,9 +420,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite7executeXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/execute(query:into:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite7executeXeXeFZ">execute(query:into:on:)</a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E17QueryFilterMethoda"></a>
+                    <a name="//apple_ref/swift/Alias/QueryFilterMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E17QueryFilterMethoda">QueryFilterMethod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -290,23 +430,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>QuerySupporting.execute</code></p>
+                        <p>See <code>QuerySupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span>
-    <span class="nv">query</span><span class="p">:</span> <span class="kt">DatabaseQuery</span><span class="o">&lt;</span><span class="kt">SQLiteDatabase</span><span class="o">&gt;</span><span class="p">,</span>
-    <span class="n">into</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">QueryField</span> <span class="p">:</span> <span class="kt">SQLiteData</span><span class="p">],</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(),</span>
-    <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">SQLiteConnection</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryFilterMethod</span> <span class="o">=</span> <span class="kt">SQLiteBinaryOperator</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Query.swift#L16-L55">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -314,9 +450,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite10modelEventXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/modelEvent(event:model:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite10modelEventXeXeFZ">modelEvent(event:model:on:)</a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E16QueryFilterValuea"></a>
+                    <a name="//apple_ref/swift/Alias/QueryFilterValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E16QueryFilterValuea">QueryFilterValue</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -324,23 +460,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>QuerySupporting.modelEvent</code></p>
+                        <p>See <code>QuerySupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">modelEvent</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span><span class="p">(</span>
-    <span class="nv">event</span><span class="p">:</span> <span class="kt">ModelEvent</span><span class="p">,</span>
-    <span class="nv">model</span><span class="p">:</span> <span class="kt">M</span><span class="p">,</span>
-    <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">SQLiteConnection</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">SQLiteDatabase</span> <span class="o">==</span> <span class="kt">M</span><span class="o">.</span><span class="kt">Database</span><span class="p">,</span> <span class="kt">M</span><span class="p">:</span> <span class="kt">Model</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryFilterValue</span> <span class="o">=</span> <span class="kt">SQLiteExpression</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Query.swift#L58-L79">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -348,69 +480,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite14queryDataParseXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/queryDataParse(_:from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite14queryDataParseXeXeFZ">queryDataParse(_:from:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See <code>QuerySupporting.queryDataParse</code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">queryDataParse</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">SQLiteData</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Query.swift#L82-L89">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12FluentSQLite18queryDataSerializeXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/queryDataSerialize(data:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite18queryDataSerializeXeXeFZ">queryDataSerialize(data:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See <code>QuerySupporting.queryDataSerialize</code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">queryDataSerialize</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">T</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">SQLiteData</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Query.swift#L92-L101">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12FluentSQLite11QueryFiltera"></a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E11QueryFiltera"></a>
                     <a name="//apple_ref/swift/Alias/QueryFilter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite11QueryFiltera">QueryFilter</a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E11QueryFiltera">QueryFilter</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -418,19 +490,199 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code>QuerySupporting.QueryFilter</code></p>
+                        <p>See <code>QuerySupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryFilter</span> <span class="o">=</span> <span class="kt">DataPredicateComparison</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryFilter</span> <span class="o">=</span> <span class="kt">SQLiteExpression</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Query.swift#L104">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E19QueryFilterRelationa"></a>
+                    <a name="//apple_ref/swift/Alias/QueryFilterRelation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E19QueryFilterRelationa">QueryFilterRelation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryFilterRelation</span> <span class="o">=</span> <span class="kt">SQLiteBinaryOperator</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E8QueryKeya"></a>
+                    <a name="//apple_ref/swift/Alias/QueryKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E8QueryKeya">QueryKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryKey</span> <span class="o">=</span> <span class="kt">SQLiteSelectExpression</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L33">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E9QuerySorta"></a>
+                    <a name="//apple_ref/swift/Alias/QuerySort" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E9QuerySorta">QuerySort</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QuerySort</span> <span class="o">=</span> <span class="kt">SQLiteOrderBy</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E18QuerySortDirectiona"></a>
+                    <a name="//apple_ref/swift/Alias/QuerySortDirection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E18QuerySortDirectiona">QuerySortDirection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QuerySortDirection</span> <span class="o">=</span> <span class="kt">SQLiteDirection</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E12queryExecute_2on4into3NIO15EventLoopFutureCyytGAD0cA5QueryV_AA0A10ConnectionCySDyAA0A6ColumnVAA0A4DataOG_AOtKctFZ"></a>
+                    <a name="//apple_ref/swift/Method/queryExecute(_:on:into:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E12queryExecute_2on4into3NIO15EventLoopFutureCyytGAD0cA5QueryV_AA0A10ConnectionCySDyAA0A6ColumnVAA0A4DataOG_AOtKctFZ">queryExecute(_:on:into:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">queryExecute</span><span class="p">(</span><span class="n">_</span> <span class="nv">fluent</span><span class="p">:</span> <span class="kt"><a href="../Extensions/SQLiteDatabase.html#/s:6SQLite0A8DatabaseC06FluentA0E5Querya">Query</a></span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">,</span> <span class="n">into</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">SQLiteColumn</span> <span class="p">:</span> <span class="kt">SQLiteData</span><span class="p">],</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L42-L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E10modelEvent5event0D02on3NIO0E10LoopFutureCyxG0C005ModelE0O_xAA0A10ConnectionCtAM0K0RzAC0B0RtzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/modelEvent(event:model:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E10modelEvent5event0D02on3NIO0E10LoopFutureCyxG0C005ModelE0O_xAA0A10ConnectionCtAM0K0RzAC0B0RtzlFZ">modelEvent(event:model:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">modelEvent</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">event</span><span class="p">:</span> <span class="kt">ModelEvent</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">M</span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">M</span> <span class="p">:</span> <span class="kt">Model</span><span class="p">,</span> <span class="kt">M</span><span class="o">.</span><span class="kt">Database</span> <span class="o">==</span> <span class="kt">SQLiteDatabase</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift#L92-L106">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -438,13 +690,287 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite16enableReferencesXeXeFZ"></a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E32normalizeSQLConstraintIdentifieryS2SFZ"></a>
+                    <a name="//apple_ref/swift/Method/normalizeSQLConstraintIdentifier(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E32normalizeSQLConstraintIdentifieryS2SFZ">normalizeSQLConstraintIdentifier(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLConstraintIdentifierNormalizer</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">normalizeSQLConstraintIdentifier</span><span class="p">(</span><span class="n">_</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L3-L5">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E6Schemaa"></a>
+                    <a name="//apple_ref/swift/Alias/Schema" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E6Schemaa">Schema</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Schema</span> <span class="o">=</span> <span class="kt"><a href="../Structs/FluentSQLiteSchema.html">FluentSQLiteSchema</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E12SchemaActiona"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E12SchemaActiona">SchemaAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaAction</span> <span class="o">=</span> <span class="kt"><a href="../Enums/FluentSQLiteSchemaStatement.html">FluentSQLiteSchemaStatement</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E11SchemaFielda"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaField" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E11SchemaFielda">SchemaField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaField</span> <span class="o">=</span> <span class="kt">SQLiteColumnDefinition</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E15SchemaFieldTypea"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaFieldType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E15SchemaFieldTypea">SchemaFieldType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaFieldType</span> <span class="o">=</span> <span class="kt">SQLiteDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E16SchemaConstrainta"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaConstraint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E16SchemaConstrainta">SchemaConstraint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaConstraint</span> <span class="o">=</span> <span class="kt">SQLiteTableConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E21SchemaReferenceActiona"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaReferenceAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E21SchemaReferenceActiona">SchemaReferenceAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaReferenceAction</span> <span class="o">=</span> <span class="kt">SQLiteForeignKeyAction</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E11schemaField3for12isIdentifier_3SQL26GenericSQLColumnDefinitionVyAH0jkH0VyAH0j8SQLTableH0VyAH0J13SQLIdentifierVGAPGAA0A8DataTypeOAH0jK10ConstraintVyApH0jkQ9AlgorithmOyAH0J13SQLExpressionOyAH0J10SQLLiteralOyAA0A14DefaultLiteralVAA0a4BoolV0OGAA0A4BindVArH0J17SQLBinaryOperatorOAA0A8FunctionVAA0A5QueryOGAA0A9CollationOAA0a10PrimaryKeyU0OAH0J13SQLForeignKeyVyAqpH0J19SQLForeignKeyActionOGGGGypXp_SbARtFZ"></a>
+                    <a name="//apple_ref/swift/Method/schemaField(for:isIdentifier:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E11schemaField3for12isIdentifier_3SQL26GenericSQLColumnDefinitionVyAH0jkH0VyAH0j8SQLTableH0VyAH0J13SQLIdentifierVGAPGAA0A8DataTypeOAH0jK10ConstraintVyApH0jkQ9AlgorithmOyAH0J13SQLExpressionOyAH0J10SQLLiteralOyAA0A14DefaultLiteralVAA0a4BoolV0OGAA0A4BindVArH0J17SQLBinaryOperatorOAA0A8FunctionVAA0A5QueryOGAA0A9CollationOAA0a10PrimaryKeyU0OAH0J13SQLForeignKeyVyAqpH0J19SQLForeignKeyActionOGGGGypXp_SbARtFZ">schemaField(for:isIdentifier:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">schemaField</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">isIdentifier</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt"><a href="../Extensions/SQLiteDatabase.html#/s:6SQLite0A8DatabaseC06FluentA0E10QueryFielda">QueryField</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Extensions/SQLiteDatabase.html#/s:6SQLite0A8DatabaseC06FluentA0E11SchemaFielda">SchemaField</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L28-L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E13schemaExecute_2on3NIO15EventLoopFutureCyytGAD0cA6SchemaV_AA0A10ConnectionCtFZ"></a>
+                    <a name="//apple_ref/swift/Method/schemaExecute(_:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E13schemaExecute_2on3NIO15EventLoopFutureCyytGAD0cA6SchemaV_AA0A10ConnectionCtFZ">schemaExecute(_:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">schemaExecute</span><span class="p">(</span><span class="n">_</span> <span class="nv">fluent</span><span class="p">:</span> <span class="kt"><a href="../Extensions/SQLiteDatabase.html#/s:6SQLite0A8DatabaseC06FluentA0E6Schemaa">Schema</a></span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L61-L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E16enableReferences2on3NIO15EventLoopFutureCyytGAA0A10ConnectionC_tFZ"></a>
                     <a name="//apple_ref/swift/Method/enableReferences(on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite16enableReferencesXeXeFZ">enableReferences(on:)</a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E16enableReferences2on3NIO15EventLoopFutureCyytGAA0A10ConnectionC_tFZ">enableReferences(on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -452,19 +978,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ReferenceSupporting.enableReferences</p>
+                        <p>See <code>SchemaSupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">enableReferences</span><span class="p">(</span><span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">enableReferences</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Reference.swift#L5-L7">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L86-L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -472,9 +998,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite17disableReferencesXeXeFZ"></a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E17disableReferences2on3NIO15EventLoopFutureCyytGAA0A10ConnectionC_tFZ"></a>
                     <a name="//apple_ref/swift/Method/disableReferences(on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite17disableReferencesXeXeFZ">disableReferences(on:)</a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E17disableReferences2on3NIO15EventLoopFutureCyytGAA0A10ConnectionC_tFZ">disableReferences(on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -482,19 +1008,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ReferenceSupporting.disableReferences</p>
+                        <p>See <code>SchemaSupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">disableReferences</span><span class="p">(</span><span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">disableReferences</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Reference.swift#L10-L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift#L91-L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -502,13 +1028,13 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12FluentSQLite7executeXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/execute(schema:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite7executeXeXeFZ">execute(schema:on:)</a>
+                    <a name="/s:6SQLite0A8DatabaseC06FluentA0E18transactionExecute_2on3NIO15EventLoopFutureCyxGAjA0A10ConnectionCKc_ALtlFZ"></a>
+                    <a name="//apple_ref/swift/Method/transactionExecute(_:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLite0A8DatabaseC06FluentA0E18transactionExecute_2on3NIO15EventLoopFutureCyxGAjA0A10ConnectionCKc_ALtlFZ">transactionExecute(_:on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -516,127 +1042,34 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See SchemaExecutor.execute()</p>
+                        <p>See <code>TransactionSupporting</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="nv">schema</span><span class="p">:</span> <span class="kt">DatabaseSchema</span><span class="o">&lt;</span><span class="kt">SQLiteDatabase</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">transactionExecute</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">transaction</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Schema.swift#L9-L44">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12FluentSQLite8dataTypeXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/dataType(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite8dataTypeXeXeFZ">dataType(for:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See SchemaSupporting.dataType</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">dataType</span><span class="p">(</span><span class="k">for</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">SchemaField</span><span class="o">&lt;</span><span class="kt">SQLiteDatabase</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Schema.swift#L47-L66">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12FluentSQLite9fieldTypeXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/fieldType(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite9fieldTypeXeXeFZ">fieldType(for:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See SchemaSupporting.fieldType</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fieldType</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">SQLiteFieldType</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Schema.swift#L69-L78">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteDatabase+TransactionSupporting.swift#L3-L13">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12FluentSQLite7executeXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/execute(transaction:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FluentSQLite7executeXeXeFZ">execute(transaction:on:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See TransactionSupporting.execute</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="nv">transaction</span><span class="p">:</span> <span class="kt">DatabaseTransaction</span><span class="o">&lt;</span><span class="kt">SQLiteDatabase</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">SQLiteConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0-rc.2.1/Sources/FluentSQLite/SQLiteDatabase+Transaction.swift#L7-L27">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>

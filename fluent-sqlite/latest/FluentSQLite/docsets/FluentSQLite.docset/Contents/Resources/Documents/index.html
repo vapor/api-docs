@@ -4,141 +4,159 @@
     <title>FluentSQLite  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
+
+
     <a title="FluentSQLite  Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">FluentSQLite Docs</a> (87% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/fluent-sqlite"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2Dsqlite%2F3%2E0%2E0%2Drc%2E2%2E1%2FFluentSQLite%2Fdocsets%2FFluentSQLite%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">FluentSQLite Reference</a>
-        <img id="carat" src="img/carat.png" />
-        FluentSQLite  Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          FluentSQLite Docs
+        </a>
+         (58% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/fluent-sqlite">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2Dsqlite%2F3%2E0%2E0%2FFluentSQLite%2Fdocsets%2FFluentSQLite%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">FluentSQLite Reference</a>
+      <img class="carat" src="img/carat.png" />
+      FluentSQLite  Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/FluentSQLiteProvider.html">FluentSQLiteProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/SQLiteSQLSerializer.html">SQLiteSQLSerializer</a>
+                <a class="nav-group-task-link" href="Classes/FluentSQLiteProvider.html">FluentSQLiteProvider</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+                <a class="nav-group-task-link" href="Enums/FluentSQLiteQueryStatement.html">FluentSQLiteQueryStatement</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Bool.html">Bool</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Data.html">Data</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/DatabaseLogger.html">DatabaseLogger</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Date.html">Date</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/SQLiteConnection.html">SQLiteConnection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/SQLiteDataConvertible.html">SQLiteDataConvertible</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/SQLiteDatabase.html">SQLiteDatabase</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/String.html">String</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/URL.html">URL</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UUID.html">UUID</a>
+                <a class="nav-group-task-link" href="Enums/FluentSQLiteSchemaStatement.html">FluentSQLiteSchemaStatement</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/SQLiteFieldTypeStaticRepresentable.html">SQLiteFieldTypeStaticRepresentable</a>
+                <a class="nav-group-task-link" href="Extensions/SQLiteDataConvertible.html">SQLiteDataConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/SQLiteJSONType.html">SQLiteJSONType</a>
+                <a class="nav-group-task-link" href="Extensions/SQLiteDataTypeStaticRepresentable.html">SQLiteDataTypeStaticRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/SQLiteModel.html">SQLiteModel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols.html#/s:12FluentSQLite0B5PivotP">SQLitePivot</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/SQLiteStringModel.html">SQLiteStringModel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols.html#/s:12FluentSQLite0B11StringPivotP">SQLiteStringPivot</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/SQLiteUUIDModel.html">SQLiteUUIDModel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols.html#/s:12FluentSQLite0B9UUIDPivotP">SQLiteUUIDPivot</a>
+                <a class="nav-group-task-link" href="Extensions/SQLiteDatabase.html">SQLiteDatabase</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/FluentSQLiteError.html">FluentSQLiteError</a>
+                <a class="nav-group-task-link" href="Protocols/SQLiteJSONType.html">SQLiteJSONType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/SQLiteConfig.html">SQLiteConfig</a>
+                <a class="nav-group-task-link" href="Protocols.html#/s:12FluentSQLite0B9MigrationP">SQLiteMigration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SQLiteModel.html">SQLiteModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:12FluentSQLite0B5PivotP">SQLitePivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SQLiteStringModel.html">SQLiteStringModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:12FluentSQLite0B11StringPivotP">SQLiteStringPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:12FluentSQLite0B5TableP">SQLiteTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SQLiteUUIDModel.html">SQLiteUUIDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:12FluentSQLite0B9UUIDPivotP">SQLiteUUIDPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:12FluentSQLite01_B5ModelP">_SQLiteModel</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Typealiases.html">Type Aliases</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:12FluentSQLite0B8EnumTypea">SQLiteEnumType</a>
+                <a class="nav-group-task-link" href="Structs/FluentSQLiteError.html">FluentSQLiteError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:12FluentSQLite0B4Typea">SQLiteType</a>
+                <a class="nav-group-task-link" href="Structs/FluentSQLiteQuery.html">FluentSQLiteQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/FluentSQLiteSchema.html">FluentSQLiteSchema</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12FluentSQLite0B5Cachea">SQLiteCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12FluentSQLite0B8EnumTypea">SQLiteEnumType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12FluentSQLite0B4Typea">SQLiteType</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             
             <p align="center">
     <img src="https://user-images.githubusercontent.com/1342803/36623069-9e1f049e-18cf-11e8-99ee-5bf317486191.png" height="64" alt="Fluent SQLite">
@@ -147,8 +165,8 @@
     <a href="http://docs.vapor.codes/3.0/fluent/getting-started/">
         <img src="http://img.shields.io/badge/read_the-docs-2196f3.svg" alt="Documentation">
     </a>
-    <a href="http://vapor.team">
-        <img src="http://vapor.team/badge.svg" alt="Slack Team">
+    <a href="https://discord.gg/vapor">
+        <img src="https://img.shields.io/discord/431917998102675485.svg" alt="Team Chat">
     </a>
     <a href="LICENSE">
         <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
@@ -161,14 +179,16 @@
     </a>
 </p>
 
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
