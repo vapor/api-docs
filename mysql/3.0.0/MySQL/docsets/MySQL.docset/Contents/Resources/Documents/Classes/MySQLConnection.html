@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MySQLConnection Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/MySQLConnection" class="dashAnchor"></a>
+
+    <a title="MySQLConnection Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          MySQL Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/mysql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fmysql%2F3%2E0%2E0%2FMySQL%2Fdocsets%2FMySQL%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MySQL Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      MySQLConnection Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLConnection.html">MySQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLConnection/Metadata.html">– Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLDatabase.html">MySQLDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLDropIndexBuilder.html">MySQLDropIndexBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLProvider.html">MySQLProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MySQLBoolLiteral.html">MySQLBoolLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MySQLDataFormat.html">MySQLDataFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MySQLPrimaryKeyDefault.html">MySQLPrimaryKeyDefault</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MySQLQuery.html">MySQLQuery</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ChannelPipeline.html">ChannelPipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseLogger.html">DatabaseLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decimal.html">Decimal</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/MySQLBinaryDataType.html">MySQLBinaryDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/OptionalType.html">OptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLConnection.html">SQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLInsertBuilder.html">SQLInsertBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MySQLDataConvertible.html">MySQLDataConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MySQLDataTypeStaticRepresentable.html">MySQLDataTypeStaticRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MySQLExpressionRepresentable.html">MySQLExpressionRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MySQLLogger.html">MySQLLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:5MySQL0A8SQLTableP">MySQLTable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLAlterTable.html">MySQLAlterTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLAlterTable/ColumnPosition.html">– ColumnPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLBind.html">MySQLBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLBind/Value.html">– Value</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLCapabilities.html">MySQLCapabilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLCollation.html">MySQLCollation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLColumn.html">MySQLColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLData.html">MySQLData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLDataType.html">MySQLDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLDatabaseConfig.html">MySQLDatabaseConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLDefaultLiteral.html">MySQLDefaultLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLDropIndex.html">MySQLDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLError.html">MySQLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLFractionalSecondsPrecision.html">MySQLFractionalSecondsPrecision</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLFunction.html">MySQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLIdentifier.html">MySQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLInsert.html">MySQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLText.html">MySQLText</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLTransportConfig.html">MySQLTransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLUpsert.html">MySQLUpsert</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A17SQLBinaryOperatora">MySQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLColumnConstrainta">MySQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A28SQLColumnConstraintAlgorithma">MySQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLColumnDefinitiona">MySQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLColumnIdentifiera">MySQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A14SQLCreateIndexa">MySQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A14SQLCreateTablea">MySQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A9SQLDeletea">MySQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A12SQLDirectiona">MySQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A11SQLDistincta">MySQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A12SQLDropTablea">MySQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A13SQLExpressiona">MySQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A13SQLForeignKeya">MySQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLForeignKeyActiona">MySQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A10SQLGroupBya">MySQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A16SQLIndexModifiera">MySQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A7SQLJoina">MySQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A13SQLJoinMethoda">MySQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A10SQLLiterala">MySQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A10SQLOrderBya">MySQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A9SQLSelecta">MySQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLSelectExpressiona">MySQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A18SQLTableConstrainta">MySQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A27SQLTableConstraintAlgorithma">MySQLTableConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A18SQLTableIdentifiera">MySQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A9SQLUpdatea">MySQLUpdate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>MySQLConnection</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">MySQLConnection</span> <span class="p">:</span> <span class="kt">BasicWorker</span><span class="p">,</span> <span class="kt">DatabaseConnection</span><span class="p">,</span> <span class="kt">DatabaseQueryable</span><span class="p">,</span> <span class="kt">SQLConnection</span></code></pre>
+
+                </div>
+              </div>
+            <p>A MySQL frontend client.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC8Databasea"></a>
+                    <a name="//apple_ref/swift/Alias/Database" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC8Databasea">Database</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>DatabaseConnection</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Database</span> <span class="o">=</span> <span class="kt"><a href="../Classes/MySQLDatabase.html">MySQLDatabase</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection.swift#L8">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC9eventLoop3NIO05EventE0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC9eventLoop3NIO05EventE0_pvp">eventLoop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Worker</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection.swift#L11-L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC8isClosedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC8isClosedSbvp">isClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>DatabaseConnection</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isClosed</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC6logger11DatabaseKit0E6LoggerCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/logger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC6logger11DatabaseKit0E6LoggerCSgvp">logger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If non-nil, will log queries.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">logger</span><span class="p">:</span> <span class="kt">DatabaseLogger</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection.swift#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC12lastMetadataAC0E0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastMetadata" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC12lastMetadataAC0E0VSgvp">lastMetadata</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pointer to the last metadata returned from a call to <code><a href="../Classes/MySQLConnection.html#/s:5MySQL0A13SQLConnectionC5query3NIO15EventLoopFutureCyytGAA0A8SQLQueryO_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF">query(...)</a></code> or <code><a href="../Classes/MySQLConnection.html#/s:5MySQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCySays10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGGGSSF">simpleQuery(...)</a></code>.
+See <code>MySQLQueryMetadata</code> for more information.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastMetadata</span><span class="p">:</span> <span class="kt">MySQLConnection</span><span class="o">.</span><span class="kt"><a href="../Classes/MySQLConnection/Metadata.html">Metadata</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection.swift#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC6extend7Service6ExtendVvp"></a>
+                    <a name="//apple_ref/swift/Property/extend" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC6extend7Service6ExtendVvp">extend</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Extendable</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">extend</span><span class="p">:</span> <span class="kt">Extend</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection.swift#L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC6decodexxm_s10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVG4from0B025GenericSQLTableIdentifierVyAA0A13SQLIdentifierVGSg5tabletKs9DecodableRzlF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:from:table:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC6decodexxm_s10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVG4from0B025GenericSQLTableIdentifierVyAA0A13SQLIdentifierVGSg5tabletKs9DecodableRzlF">decode(_:from:table:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLConnection</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">decode</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">from</span> <span class="nv">row</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/MySQLColumn.html">MySQLColumn</a></span> <span class="p">:</span> <span class="kt"><a href="../Structs/MySQLData.html">MySQLData</a></span><span class="p">],</span> <span class="nv">table</span><span class="p">:</span> <span class="kt">GenericSQLTableIdentifier</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MySQLIdentifier.html">MySQLIdentifier</a></span><span class="o">&gt;</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection.swift#L67-L69">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC5closeyyF"></a>
+                    <a name="//apple_ref/swift/Method/close()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC5closeyyF">close()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>DatabaseConnectable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">close</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection.swift#L111-L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC5closey3NIO16EventLoopPromiseVyytGSg4done_tF"></a>
+                    <a name="//apple_ref/swift/Method/close(done:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC5closey3NIO16EventLoopPromiseVyytGSg4done_tF">close(done:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closes this client.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">close</span><span class="p">(</span><span class="n">done</span> <span class="nv">promise</span><span class="p">:</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection.swift#L116-L131">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC7connect3NIO15EventLoopFutureCyACGAA0A17SQLDatabaseConfigV6config_AE0fG5Group_p2ontFZ"></a>
+                    <a name="//apple_ref/swift/Method/connect(config:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC7connect3NIO15EventLoopFutureCyACGAA0A17SQLDatabaseConfigV6config_AE0fG5Group_p2ontFZ">connect(config:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Connects to a MySQL server using TCP.</p>
+<pre class="highlight swift"><code><span class="kt">MySQLConnection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="nv">config</span><span class="p">:</span> <span class="o">.</span><span class="nf">root</span><span class="p">(</span><span class="nv">database</span><span class="p">:</span> <span class="s">"vapor"</span><span class="p">),</span> <span class="nv">on</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLDatabaseConfig.html">MySQLDatabaseConfig</a></span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">MySQLConnection</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Connection configuration options.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>worker</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Event loop to run the connection on.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection+Connect.swift#L11-L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC8MetadataV"></a>
+                    <a name="//apple_ref/swift/Struct/Metadata" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC8MetadataV">Metadata</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Query result metadata.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="n">lastMetadata</span><span class="p">?</span><span class="o">.</span><span class="n">affectedRows</span>
+</code></pre>
+
+                        <a href="../Classes/MySQLConnection/Metadata.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Metadata</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection+Metadata.swift#L6-L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC5query3NIO15EventLoopFutureCyytGAA0A8SQLQueryO_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF"></a>
+                    <a name="//apple_ref/swift/Method/query(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC5query3NIO15EventLoopFutureCyytGAA0A8SQLQueryO_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF">query(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a parameterized (a.k.a, prepared or statement protocol query) to the server.
+The connection must be authenticated usign <code>.authenticate(...)</code> first.</p>
+
+<p>See <code><a href="../Classes/MySQLConnection.html#/s:5MySQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCySays10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGGGSSF">.simpleQuery(...)</a></code> for the non-parameterized version.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Enums/MySQLQuery.html">MySQLQuery</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">onRow</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Structs/MySQLColumn.html">MySQLColumn</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLData.html">MySQLData</a></span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>string</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The query string to run. Any values should be represented by <code>?</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><ul>
+<li>string: The query string to run. Any values should be represented by <code>?</code>.</li>
+<li>onRow: Handles each row as it is received from the server.</li>
+</ul></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onRow</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Handles each row as it is received from the server.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future that will complete when the query is finished.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection+Query.swift#L12-L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCySays10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGGGSSF"></a>
+                    <a name="//apple_ref/swift/Method/simpleQuery(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCySays10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGGGSSF">simpleQuery(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a simple query (a.k.a, text protocol query) to the server.
+The connection must be authenticated usign <code>.authenticate(...)</code> first.</p>
+
+<p>See <code><a href="../Classes/MySQLConnection.html#/s:5MySQL0A13SQLConnectionC5query3NIO15EventLoopFutureCyytGAA0A8SQLQueryO_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF">.query(...)</a></code> for parameterized queries.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simpleQuery</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="p">[[</span><span class="kt"><a href="../Structs/MySQLColumn.html">MySQLColumn</a></span> <span class="p">:</span> <span class="kt"><a href="../Structs/MySQLData.html">MySQLData</a></span><span class="p">]]</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>string</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The query string to run. Any values should be interpolated into the string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future containing the resulting rows.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection+SimpleQuery.swift#L10-L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCyytGSS_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKc5onRowtF"></a>
+                    <a name="//apple_ref/swift/Method/simpleQuery(_:onRow:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCyytGSS_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKc5onRowtF">simpleQuery(_:onRow:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a simple query (a.k.a, text protocol query) to the server.
+The connection must be authenticated usign <code>.authenticate(...)</code> first.</p>
+
+<p>See <code><a href="../Classes/MySQLConnection.html#/s:5MySQL0A13SQLConnectionC5query3NIO15EventLoopFutureCyytGAA0A8SQLQueryO_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF">.query(...)</a></code> for parameterized queries.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simpleQuery</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">onRow</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Structs/MySQLColumn.html">MySQLColumn</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLData.html">MySQLData</a></span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>string</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The query string to run. Any values should be interpolated into the string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onRow</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Handles each row as it is received from the server.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future that will complete when the query is finished.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/Connection/MySQLConnection+SimpleQuery.swift#L28-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MySQLDataType Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/MySQLDataType" class="dashAnchor"></a>
+
+    <a title="MySQLDataType Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          MySQL Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/mysql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fmysql%2F3%2E0%2E0%2FMySQL%2Fdocsets%2FMySQL%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MySQL Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      MySQLDataType Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLConnection.html">MySQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLConnection/Metadata.html">– Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLDatabase.html">MySQLDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLDropIndexBuilder.html">MySQLDropIndexBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MySQLProvider.html">MySQLProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MySQLBoolLiteral.html">MySQLBoolLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MySQLDataFormat.html">MySQLDataFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MySQLPrimaryKeyDefault.html">MySQLPrimaryKeyDefault</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MySQLQuery.html">MySQLQuery</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ChannelPipeline.html">ChannelPipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseLogger.html">DatabaseLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decimal.html">Decimal</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/MySQLBinaryDataType.html">MySQLBinaryDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/OptionalType.html">OptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLConnection.html">SQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLInsertBuilder.html">SQLInsertBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MySQLDataConvertible.html">MySQLDataConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MySQLDataTypeStaticRepresentable.html">MySQLDataTypeStaticRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MySQLExpressionRepresentable.html">MySQLExpressionRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MySQLLogger.html">MySQLLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:5MySQL0A8SQLTableP">MySQLTable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLAlterTable.html">MySQLAlterTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLAlterTable/ColumnPosition.html">– ColumnPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLBind.html">MySQLBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLBind/Value.html">– Value</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLCapabilities.html">MySQLCapabilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLCollation.html">MySQLCollation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLColumn.html">MySQLColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLData.html">MySQLData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLDataType.html">MySQLDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLDatabaseConfig.html">MySQLDatabaseConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLDefaultLiteral.html">MySQLDefaultLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLDropIndex.html">MySQLDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLError.html">MySQLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLFractionalSecondsPrecision.html">MySQLFractionalSecondsPrecision</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLFunction.html">MySQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLIdentifier.html">MySQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLInsert.html">MySQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLText.html">MySQLText</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLTransportConfig.html">MySQLTransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MySQLUpsert.html">MySQLUpsert</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A17SQLBinaryOperatora">MySQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLColumnConstrainta">MySQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A28SQLColumnConstraintAlgorithma">MySQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLColumnDefinitiona">MySQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLColumnIdentifiera">MySQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A14SQLCreateIndexa">MySQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A14SQLCreateTablea">MySQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A9SQLDeletea">MySQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A12SQLDirectiona">MySQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A11SQLDistincta">MySQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A12SQLDropTablea">MySQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A13SQLExpressiona">MySQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A13SQLForeignKeya">MySQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLForeignKeyActiona">MySQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A10SQLGroupBya">MySQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A16SQLIndexModifiera">MySQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A7SQLJoina">MySQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A13SQLJoinMethoda">MySQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A10SQLLiterala">MySQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A10SQLOrderBya">MySQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A9SQLSelecta">MySQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A19SQLSelectExpressiona">MySQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A18SQLTableConstrainta">MySQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A27SQLTableConstraintAlgorithma">MySQLTableConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A18SQLTableIdentifiera">MySQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5MySQL0A9SQLUpdatea">MySQLUpdate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>MySQLDataType</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MySQLDataType</span> <span class="p">:</span> <span class="kt">SQLDataType</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
+
+                </div>
+              </div>
+            <p>MySQL table column data types.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV2eeoiSbAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV2eeoiSbAC_ACtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Equatable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">MySQLDataType</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">MySQLDataType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L4-L8">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV04dataD0ACSgypXp14appropriateFor_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/dataType(appropriateFor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV04dataD0ACSgypXp14appropriateFor_tFZ">dataType(appropriateFor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDataType</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">dataType</span><span class="p">(</span><span class="n">appropriateFor</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L11-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Numeric"></a>
+                <a name="//apple_ref/swift/Section/Numeric" class="dashAnchor"></a>
+                <a href="#/Numeric">
+                  <h3 class="section-name">Numeric</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV3bitACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV3bitACvpZ">bit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A bit-value type. M indicates the number of bits per value, from 1 to 64.
+The default is 1 if M is omitted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bit</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L22-L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV3bitACSiSgFZ"></a>
+                    <a name="//apple_ref/swift/Method/bit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV3bitACSiSgFZ">bit(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A bit-value type. M indicates the number of bits per value, from 1 to 64.
+The default is 1 if M is omitted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">bit</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L28-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV7tinyintACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/tinyint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV7tinyintACvpZ">tinyint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A very small integer. The signed range is -128 to 127.
+The unsigned range is 0 to 255.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">tinyint</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L34-L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV7tinyintACSiSg_Sb8unsignedSb8zerofilltFZ"></a>
+                    <a name="//apple_ref/swift/Method/tinyint(_:unsigned:zerofill:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV7tinyintACSiSg_Sb8unsignedSb8zerofilltFZ">tinyint(_:unsigned:zerofill:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A very small integer. The signed range is -128 to 127.
+The unsigned range is 0 to 255.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">tinyint</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">unsigned</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">zerofill</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L40-L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4boolACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bool" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4boolACvpZ">bool</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>These types are synonyms for TINYINT(1).
+A value of zero is considered false. Nonzero values are considered true.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bool</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L46-L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8smallintACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/smallint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8smallintACvpZ">smallint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A small integer. The signed range is -32768 to 32767. The unsigned range is 0 to 65535.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">smallint</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L51-L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8smallintACSiSg_Sb8unsignedSb8zerofilltFZ"></a>
+                    <a name="//apple_ref/swift/Method/smallint(_:unsigned:zerofill:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8smallintACSiSg_Sb8unsignedSb8zerofilltFZ">smallint(_:unsigned:zerofill:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A small integer. The signed range is -32768 to 32767. The unsigned range is 0 to 65535.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">smallint</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">unsigned</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">zerofill</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L56-L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV9mediumintACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/mediumint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV9mediumintACvpZ">mediumint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A medium-sized integer. The signed range is -8388608 to 8388607. The unsigned range is 0 to 16777215.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">mediumint</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L61-L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV9mediumintACSiSg_Sb8unsignedSb8zerofilltFZ"></a>
+                    <a name="//apple_ref/swift/Method/mediumint(_:unsigned:zerofill:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV9mediumintACSiSg_Sb8unsignedSb8zerofilltFZ">mediumint(_:unsigned:zerofill:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A medium-sized integer. The signed range is -8388608 to 8388607. The unsigned range is 0 to 16777215.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">mediumint</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">unsigned</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">zerofill</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L66-L68">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV3intACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV3intACvpZ">int</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A normal-size integer. The signed range is -2147483648 to 2147483647. The unsigned range is 0 to 4294967295.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">int</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L71-L73">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV3intACSiSg_Sb8unsignedSb8zerofilltFZ"></a>
+                    <a name="//apple_ref/swift/Method/int(_:unsigned:zerofill:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV3intACSiSg_Sb8unsignedSb8zerofilltFZ">int(_:unsigned:zerofill:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A normal-size integer. The signed range is -2147483648 to 2147483647. The unsigned range is 0 to 4294967295.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">int</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">unsigned</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">zerofill</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L76-L78">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV6bigintACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bigint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV6bigintACvpZ">bigint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A large integer. The signed range is -9223372036854775808 to 9223372036854775807.
+The unsigned range is 0 to 18446744073709551615.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bigint</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L82-L84">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV6bigintACSiSg_Sb8unsignedSb8zerofilltFZ"></a>
+                    <a name="//apple_ref/swift/Method/bigint(_:unsigned:zerofill:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV6bigintACSiSg_Sb8unsignedSb8zerofilltFZ">bigint(_:unsigned:zerofill:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A large integer. The signed range is -9223372036854775808 to 9223372036854775807.
+The unsigned range is 0 to 18446744073709551615.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">bigint</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">unsigned</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">zerofill</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L88-L90">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV7decimalACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/decimal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV7decimalACvpZ">decimal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A packed “exact” fixed-point number. M is the total number of digits (the precision) and D is
+the number of digits after the decimal point (the scale).
+The decimal point and (for negative numbers) the - sign are not counted in M. If D is 0,
+values have no decimal point or fractional part. The maximum number of digits (M) for DECIMAL is 65.
+The maximum number of supported decimals (D) is 30. If D is omitted, the default is 0. If M is omitted,
+the default is 10.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">decimal</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L98-L100">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV7decimalACSi_SiSgtSg_Sb8unsignedSb8zerofilltFZ"></a>
+                    <a name="//apple_ref/swift/Method/decimal(_:unsigned:zerofill:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV7decimalACSi_SiSgtSg_Sb8unsignedSb8zerofilltFZ">decimal(_:unsigned:zerofill:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A packed “exact” fixed-point number. M is the total number of digits (the precision) and D is
+the number of digits after the decimal point (the scale).
+The decimal point and (for negative numbers) the - sign are not counted in M. If D is 0,
+values have no decimal point or fractional part. The maximum number of digits (M) for DECIMAL is 65.
+The maximum number of supported decimals (D) is 30. If D is omitted, the default is 0. If M is omitted,
+the default is 10.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">decimal</span><span class="p">(</span><span class="n">_</span> <span class="nv">md</span><span class="p">:</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">?)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">unsigned</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">zerofill</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L108-L110">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV5floatACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/float" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV5floatACvpZ">float</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A small (single-precision) floating-point number. Permissible values are -3.402823466E+38 to -1.175494351E-38,
+0, and 1.175494351E-38 to 3.402823466E+38. These are the theoretical limits, based on the IEEE standard.
+The actual range might be slightly smaller depending on your hardware or operating system.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">float</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L115-L117">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV5floatACSi_SitSg_Sb8unsignedSb8zerofilltFZ"></a>
+                    <a name="//apple_ref/swift/Method/float(_:unsigned:zerofill:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV5floatACSi_SitSg_Sb8unsignedSb8zerofilltFZ">float(_:unsigned:zerofill:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A small (single-precision) floating-point number. Permissible values are -3.402823466E+38 to -1.175494351E-38,
+0, and 1.175494351E-38 to 3.402823466E+38. These are the theoretical limits, based on the IEEE standard.
+The actual range might be slightly smaller depending on your hardware or operating system.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">float</span><span class="p">(</span><span class="n">_</span> <span class="nv">md</span><span class="p">:</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">unsigned</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">zerofill</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L122-L124">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV6doubleACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/double" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV6doubleACvpZ">double</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A normal-size (double-precision) floating-point number. Permissible values are -1.7976931348623157E+308 to
+-2.2250738585072014E-308, 0, and 2.2250738585072014E-308 to 1.7976931348623157E+308.
+These are the theoretical limits, based on the IEEE standard. The actual range might be slightly smaller
+depending on your hardware or operating system.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">double</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L130-L132">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV6doubleACSi_SitSg_Sb8unsignedSb8zerofilltFZ"></a>
+                    <a name="//apple_ref/swift/Method/double(_:unsigned:zerofill:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV6doubleACSi_SitSg_Sb8unsignedSb8zerofilltFZ">double(_:unsigned:zerofill:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A normal-size (double-precision) floating-point number. Permissible values are -1.7976931348623157E+308 to
+-2.2250738585072014E-308, 0, and 2.2250738585072014E-308 to 1.7976931348623157E+308.
+These are the theoretical limits, based on the IEEE standard. The actual range might be slightly smaller
+depending on your hardware or operating system.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">double</span><span class="p">(</span><span class="n">_</span> <span class="nv">md</span><span class="p">:</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">unsigned</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">zerofill</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L138-L140">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Date%20and%20Time"></a>
+                <a name="//apple_ref/swift/Section/Date and Time" class="dashAnchor"></a>
+                <a href="#/Date%20and%20Time">
+                  <h3 class="section-name">Date and Time</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4dateACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/date" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4dateACvpZ">date</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A date. The supported range is &lsquo;1000-01-01&rsquo; to &lsquo;9999-12-31&rsquo;. MySQL displays DATE values in &lsquo;YYYY-MM-DD&rsquo; format,
+but permits assignment of values to DATE columns using either strings or numbers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L146-L148">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8datetimeACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/datetime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8datetimeACvpZ">datetime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A date and time combination. The supported range is &lsquo;1000-01-01 00:00:00.000000&rsquo; to &lsquo;9999-12-31 23:59:59.999999&rsquo;.
+MySQL displays DATETIME values in &lsquo;YYYY-MM-DD HH:MM:SS[.fraction]&rsquo; format, but permits assignment of values to DATETIME
+columns using either strings or numbers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">datetime</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L153-L155">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8datetimeAcA0A29SQLFractionalSecondsPrecisionVSgFZ"></a>
+                    <a name="//apple_ref/swift/Method/datetime(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8datetimeAcA0A29SQLFractionalSecondsPrecisionVSgFZ">datetime(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A date and time combination. The supported range is &lsquo;1000-01-01 00:00:00.000000&rsquo; to &lsquo;9999-12-31 23:59:59.999999&rsquo;.
+MySQL displays DATETIME values in &lsquo;YYYY-MM-DD HH:MM:SS[.fraction]&rsquo; format, but permits assignment of values to DATETIME
+columns using either strings or numbers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">datetime</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsp</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLFractionalSecondsPrecision.html">MySQLFractionalSecondsPrecision</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L160-L162">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV9timestampACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/timestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV9timestampACvpZ">timestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A timestamp. The range is &lsquo;1970-01-01 00:00:01.000000&rsquo; UTC to &lsquo;2038-01-19 03:14:07.999999&rsquo; UTC.
+TIMESTAMP values are stored as the number of seconds since the epoch (&lsquo;1970-01-01 00:00:00&rsquo; UTC).
+A TIMESTAMP cannot represent the value &lsquo;1970-01-01 00:00:00&rsquo; because that is equivalent to 0 seconds from the epoch and the
+value 0 is reserved for representing &lsquo;0000-00-00 00:00:00&rsquo;, the “zero” TIMESTAMP value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L168-L170">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV9timestampAcA0A29SQLFractionalSecondsPrecisionVSgFZ"></a>
+                    <a name="//apple_ref/swift/Method/timestamp(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV9timestampAcA0A29SQLFractionalSecondsPrecisionVSgFZ">timestamp(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A timestamp. The range is &lsquo;1970-01-01 00:00:01.000000&rsquo; UTC to &lsquo;2038-01-19 03:14:07.999999&rsquo; UTC.
+TIMESTAMP values are stored as the number of seconds since the epoch (&lsquo;1970-01-01 00:00:00&rsquo; UTC).
+A TIMESTAMP cannot represent the value &lsquo;1970-01-01 00:00:00&rsquo; because that is equivalent to 0 seconds from the epoch and the
+value 0 is reserved for representing &lsquo;0000-00-00 00:00:00&rsquo;, the “zero” TIMESTAMP value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">timestamp</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsp</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLFractionalSecondsPrecision.html">MySQLFractionalSecondsPrecision</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L176-L178">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4timeACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/time" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4timeACvpZ">time</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A time. The range is &lsquo;-838:59:59.000000&rsquo; to &lsquo;838:59:59.000000&rsquo;. MySQL displays TIME values in &lsquo;HH:MM:SS[.fraction]&rsquo; format,
+but permits assignment of values to TIME columns using either strings or numbers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">time</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L182-L184">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4timeAcA0A29SQLFractionalSecondsPrecisionVSgFZ"></a>
+                    <a name="//apple_ref/swift/Method/time(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4timeAcA0A29SQLFractionalSecondsPrecisionVSgFZ">time(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A time. The range is &lsquo;-838:59:59.000000&rsquo; to &lsquo;838:59:59.000000&rsquo;. MySQL displays TIME values in &lsquo;HH:MM:SS[.fraction]&rsquo; format,
+but permits assignment of values to TIME columns using either strings or numbers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">time</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsp</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLFractionalSecondsPrecision.html">MySQLFractionalSecondsPrecision</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L188-L190">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4yearACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/year" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4yearACvpZ">year</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A year in four-digit format. MySQL displays YEAR values in YYYY format, but permits assignment of values to YEAR columns
+using either strings or numbers. Values display as 1901 to 2155, and 0000.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">year</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L194-L196">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/String"></a>
+                <a name="//apple_ref/swift/Section/String" class="dashAnchor"></a>
+                <a href="#/String">
+                  <h3 class="section-name">String</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4charACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/char" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4charACvpZ">char</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A fixed-length string that is always right-padded with spaces to the specified length when stored.
+M represents the column length in characters. The range of M is 0 to 255. If M is omitted, the length is 1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">char</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L202-L204">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4charACSiSg_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ"></a>
+                    <a name="//apple_ref/swift/Method/char(_:characterSet:collate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4charACSiSg_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ">char(_:characterSet:collate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A fixed-length string that is always right-padded with spaces to the specified length when stored.
+M represents the column length in characters. The range of M is 0 to 255. If M is omitted, the length is 1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">char</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">characterSet</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collate</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCollation.html">MySQLCollation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L208-L210">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV7varcharACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/varchar" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV7varcharACvpZ">varchar</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A variable-length string. M represents the maximum column length in characters. The range of M is 0 to 65,535.
+The effective maximum length of a VARCHAR is subject to the maximum row size (65,535 bytes, which is shared among all columns)
+and the character set used. For example, utf8 characters can require up to three bytes per character, so a VARCHAR column that
+uses the utf8 character set can be declared to be a maximum of 21,844 characters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">varchar</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L216-L218">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV7varcharACSiSg_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ"></a>
+                    <a name="//apple_ref/swift/Method/varchar(_:characterSet:collate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV7varcharACSiSg_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ">varchar(_:characterSet:collate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A variable-length string. M represents the maximum column length in characters. The range of M is 0 to 65,535.
+The effective maximum length of a VARCHAR is subject to the maximum row size (65,535 bytes, which is shared among all columns)
+and the character set used. For example, utf8 characters can require up to three bytes per character, so a VARCHAR column that
+uses the utf8 character set can be declared to be a maximum of 21,844 characters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">varchar</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">characterSet</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collate</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCollation.html">MySQLCollation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L224-L226">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV6binaryACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/binary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV6binaryACvpZ">binary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The BINARY type is similar to the CHAR type, but stores binary byte strings rather than nonbinary character strings.
+An optional length M represents the column length in bytes. If omitted, M defaults to 1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">binary</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L230-L232">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV6binaryACSiSgFZ"></a>
+                    <a name="//apple_ref/swift/Method/binary(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV6binaryACSiSgFZ">binary(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The BINARY type is similar to the CHAR type, but stores binary byte strings rather than nonbinary character strings.
+An optional length M represents the column length in bytes. If omitted, M defaults to 1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">binary</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L236-L238">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV9varbinaryACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/varbinary(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV9varbinaryACSiFZ">varbinary(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The VARBINARY type is similar to the VARCHAR type, but stores binary byte strings rather than nonbinary character strings.
+M represents the maximum column length in bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">varbinary</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L242-L244">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8tinyblobACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/tinyblob" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8tinyblobACvpZ">tinyblob</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A BLOB column with a maximum length of 255 (28 − 1) bytes. Each TINYBLOB value is stored using a 1-byte length prefix that
+indicates the number of bytes in the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">tinyblob</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L248-L250">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8tinytextACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/tinytext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8tinytextACvpZ">tinytext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A TEXT column with a maximum length of 255 (28 − 1) characters. The effective maximum length is less if the value contains
+multibyte characters. Each TINYTEXT value is stored using a 1-byte length prefix that indicates the number of bytes in the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">tinytext</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L254-L256">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8tinytextAcA0A15SQLCharacterSetVSg09characterG0_AA0A12SQLCollationVSg7collatetFZ"></a>
+                    <a name="//apple_ref/swift/Method/tinytext(characterSet:collate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8tinytextAcA0A15SQLCharacterSetVSg09characterG0_AA0A12SQLCollationVSg7collatetFZ">tinytext(characterSet:collate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A TEXT column with a maximum length of 255 (28 − 1) characters. The effective maximum length is less if the value contains
+multibyte characters. Each TINYTEXT value is stored using a 1-byte length prefix that indicates the number of bytes in the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">tinytext</span><span class="p">(</span><span class="nv">characterSet</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collate</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCollation.html">MySQLCollation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L260-L262">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4blobACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/blob" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4blobACvpZ">blob</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A BLOB column with a maximum length of 65,535 (216 − 1) bytes. Each BLOB value is stored using a 2-byte length prefix that indicates
+the number of bytes in the value. An optional length M can be given for this type. If this is done, MySQL creates the column as the
+smallest BLOB type large enough to hold values M bytes long.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">blob</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L267-L269">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4blobACSiSgFZ"></a>
+                    <a name="//apple_ref/swift/Method/blob(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4blobACSiSgFZ">blob(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A BLOB column with a maximum length of 65,535 (216 − 1) bytes. Each BLOB value is stored using a 2-byte length prefix that indicates
+the number of bytes in the value. An optional length M can be given for this type. If this is done, MySQL creates the column as the
+smallest BLOB type large enough to hold values M bytes long.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">blob</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L274-L276">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4textACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/text" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4textACvpZ">text</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A TEXT column with a maximum length of 65,535 (216 − 1) characters. The effective maximum length is less if the value contains
+multibyte characters. Each TEXT value is stored using a 2-byte length prefix that indicates the number of bytes in the value.
+An optional length M can be given for this type. If this is done, MySQL creates the column as the smallest TEXT type large
+enough to hold values M characters long.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L282-L284">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4textACSiSg_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ"></a>
+                    <a name="//apple_ref/swift/Method/text(_:characterSet:collate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4textACSiSg_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ">text(_:characterSet:collate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A TEXT column with a maximum length of 65,535 (216 − 1) characters. The effective maximum length is less if the value contains
+multibyte characters. Each TEXT value is stored using a 2-byte length prefix that indicates the number of bytes in the value.
+An optional length M can be given for this type. If this is done, MySQL creates the column as the smallest TEXT type large
+enough to hold values M characters long.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">text</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">characterSet</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collate</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCollation.html">MySQLCollation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L290-L292">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV10mediumblobACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/mediumblob" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV10mediumblobACvpZ">mediumblob</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A BLOB column with a maximum length of 16,777,215 (224 − 1) bytes. Each MEDIUMBLOB value is stored using a 3-byte length prefix that
+indicates the number of bytes in the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">mediumblob</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L296-L298">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV10mediumtextACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/mediumtext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV10mediumtextACvpZ">mediumtext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A TEXT column with a maximum length of 16,777,215 (224 − 1) characters. The effective maximum length is less if the value contains
+multibyte characters. Each MEDIUMTEXT value is stored using a 3-byte length prefix that indicates the number of bytes in the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">mediumtext</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L302-L304">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV10mediumtextAcA0A15SQLCharacterSetVSg09characterG0_AA0A12SQLCollationVSg7collatetFZ"></a>
+                    <a name="//apple_ref/swift/Method/mediumtext(characterSet:collate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV10mediumtextAcA0A15SQLCharacterSetVSg09characterG0_AA0A12SQLCollationVSg7collatetFZ">mediumtext(characterSet:collate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A TEXT column with a maximum length of 16,777,215 (224 − 1) characters. The effective maximum length is less if the value contains
+multibyte characters. Each MEDIUMTEXT value is stored using a 3-byte length prefix that indicates the number of bytes in the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">mediumtext</span><span class="p">(</span><span class="nv">characterSet</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collate</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCollation.html">MySQLCollation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L308-L310">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8longblobACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/longblob" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8longblobACvpZ">longblob</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A BLOB column with a maximum length of 4,294,967,295 or 4GB (232 − 1) bytes. The effective maximum length of LONGBLOB columns depends
+on the configured maximum packet size in the client/server protocol and available memory. Each LONGBLOB value is stored using a 4-byte
+length prefix that indicates the number of bytes in the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">longblob</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L315-L317">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8longtextACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/longtext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8longtextACvpZ">longtext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A TEXT column with a maximum length of 4,294,967,295 or 4GB (232 − 1) characters. The effective maximum length is less if the value
+contains multibyte characters. The effective maximum length of LONGTEXT columns also depends on the configured maximum packet size in
+the client/server protocol and available memory. Each LONGTEXT value is stored using a 4-byte length prefix that indicates the number
+of bytes in the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">longtext</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L323-L325">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV8longtextAcA0A15SQLCharacterSetVSg09characterG0_AA0A12SQLCollationVSg7collatetFZ"></a>
+                    <a name="//apple_ref/swift/Method/longtext(characterSet:collate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV8longtextAcA0A15SQLCharacterSetVSg09characterG0_AA0A12SQLCollationVSg7collatetFZ">longtext(characterSet:collate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A TEXT column with a maximum length of 4,294,967,295 or 4GB (232 − 1) characters. The effective maximum length is less if the value
+contains multibyte characters. The effective maximum length of LONGTEXT columns also depends on the configured maximum packet size in
+the client/server protocol and available memory. Each LONGTEXT value is stored using a 4-byte length prefix that indicates the number
+of bytes in the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">longtext</span><span class="p">(</span><span class="nv">characterSet</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collate</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCollation.html">MySQLCollation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L331-L333">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4enumACSaySSSgG_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ"></a>
+                    <a name="//apple_ref/swift/Method/enum(_:characterSet:collate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4enumACSaySSSgG_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ">enum(_:characterSet:collate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MARK: Special
+A string object that can have only one value, chosen from the list of values &lsquo;value1&rsquo;, &lsquo;value2&rsquo;, &hellip;, NULL or the special &ldquo; error value.
+ENUM values are represented internally as integers.
+An ENUM column can have a maximum of 65,535 distinct elements.
+The maximum supported length of an individual ENUM element is M &lt;= 255 and (M x w) &lt;= 1020, where M is the element literal length and
+w is the number of bytes required for the maximum-length character in the character set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">enum</span><span class="p">`(</span><span class="n">_</span> <span class="nv">cases</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">?],</span> <span class="nv">characterSet</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collate</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCollation.html">MySQLCollation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L342-L344">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV3setACSaySSG_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ"></a>
+                    <a name="//apple_ref/swift/Method/set(_:characterSet:collate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV3setACSaySSG_AA0A15SQLCharacterSetVSg09characterG0AA0A12SQLCollationVSg7collatetFZ">set(_:characterSet:collate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A set. A string object that can have zero or more values, each of which must be chosen from the list of values &lsquo;value1&rsquo;, &lsquo;value2&rsquo;, &hellip;
+SET values are represented internally as integers. A SET column can have a maximum of 64 distinct members.
+The maximum supported length of an individual SET element is M &lt;= 255 and (M x w) &lt;= 1020, where M is the element literal length and
+w is the number of bytes required for the maximum-length character in the character set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="n">_</span> <span class="nv">cases</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">characterSet</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCharacterSet.html">MySQLCharacterSet</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collate</span><span class="p">:</span> <span class="kt"><a href="../Structs/MySQLCollation.html">MySQLCollation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MySQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L350-L352">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV4jsonACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/json" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV4jsonACvpZ">json</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MySQL supports a native JSON data type defined by RFC 7159 that enables efficient access to data in JSON
+(JavaScript Object Notation) documents.</p>
+
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/json.html">https://dev.mysql.com/doc/refman/8.0/en/json.html</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">json</span><span class="p">:</span> <span class="kt">MySQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L358-L360">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MySQL0A11SQLDataTypeV9serializeSSSays9Encodable_pGzF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MySQL0A11SQLDataTypeV9serializeSSSays9Encodable_pGzF">serialize(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLSerializable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">_</span> <span class="nv">binds</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Encodable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/mysql/tree/3.0.0/Sources/MySQL/SQL/MySQLDataType.swift#L519-L648">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
