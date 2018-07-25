@@ -4,173 +4,374 @@
     <title>PostgreSQLConnection Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Class/PostgreSQLConnection" class="dashAnchor"></a>
+
     <a title="PostgreSQLConnection Class Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">PostgreSQL Docs</a> (76% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/postgresql"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fpostgresql%2F1%2E0%2E0%2Drc%2E2%2E0%2E2%2FPostgreSQL%2Fdocsets%2FPostgreSQL%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">PostgreSQL Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        PostgreSQLConnection Class Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          PostgreSQL Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/postgresql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fpostgresql%2F1%2E0%2E0%2FPostgreSQL%2Fdocsets%2FPostgreSQL%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">PostgreSQL Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      PostgreSQLConnection Class Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/PostgreSQLConnection.html">PostgreSQLConnection</a>
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection.html">PostgreSQLConnection</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/PostgreSQLDatabase.html">PostgreSQLDatabase</a>
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection/ServerAddress.html">– ServerAddress</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/PostgreSQLProvider.html">PostgreSQLProvider</a>
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection/TableNameCache.html">– TableNameCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection/TransportConfig.html">– TransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLDatabase.html">PostgreSQLDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLDropIndexBuilder.html">PostgreSQLDropIndexBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLProvider.html">PostgreSQLProvider</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/PostgreSQLFormatCode.html">PostgreSQLFormatCode</a>
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLBinaryOperator.html">PostgreSQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLBoolLiteral.html">PostgreSQLBoolLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLPrimaryKeyDefault.html">PostgreSQLPrimaryKeyDefault</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLPrimaryKeyDefault/Generated.html">– Generated</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLQuery.html">PostgreSQLQuery</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Array.html">Array</a>
+                <a class="nav-group-task-link" href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Bool.html">Bool</a>
+                <a class="nav-group-task-link" href="../Extensions/ChannelPipeline.html">ChannelPipeline</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Data.html">Data</a>
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
+                <a class="nav-group-task-link" href="../Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Date.html">Date</a>
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Dictionary.html">Dictionary</a>
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+                <a class="nav-group-task-link" href="../Extensions/Double.html">Double</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Optional.html">Optional</a>
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/OptionalType.html">OptionalType</a>
+                <a class="nav-group-task-link" href="../Extensions/Float.html">Float</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/PostgreSQLRowDescription.html">PostgreSQLRowDescription</a>
+                <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+                <a class="nav-group-task-link" href="../Extensions/Int16.html">Int16</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/String.html">String</a>
+                <a class="nav-group-task-link" href="../Extensions/Int32.html">Int32</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/UUID.html">UUID</a>
+                <a class="nav-group-task-link" href="../Extensions/Int64.html">Int64</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/UnsafeBufferPointer.html">UnsafeBufferPointer</a>
+                <a class="nav-group-task-link" href="../Extensions/Int8.html">Int8</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/UnsafeRawBufferPointer.html">UnsafeRawBufferPointer</a>
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLConnection.html">SQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLInsertBuilder.html">SQLInsertBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt.html">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/PostgreSQLArrayCustomConvertible.html">PostgreSQLArrayCustomConvertible</a>
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a>
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLDataTypeStaticRepresentable.html">PostgreSQLDataTypeStaticRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/PostgreSQLJSONCustomConvertible.html">PostgreSQLJSONCustomConvertible</a>
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLExpressionRepresentable.html">PostgreSQLExpressionRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/PostgreSQLLogger.html">PostgreSQLLogger</a>
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLLogger.html">PostgreSQLLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:10PostgreSQL0A8SQLTableP">PostgreSQLTable</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a>
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLAlterTable.html">PostgreSQLAlterTable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PostgreSQLData.html">PostgreSQLData</a>
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLAlterTable/DropAction.html">– DropAction</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PostgreSQLDataType.html">PostgreSQLDataType</a>
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLBind.html">PostgreSQLBind</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PostgreSQLDatabaseConfig.html">PostgreSQLDatabaseConfig</a>
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLBind/Value.html">– Value</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PostgreSQLError.html">PostgreSQLError</a>
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLCollation.html">PostgreSQLCollation</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PostgreSQLPoint.html">PostgreSQLPoint</a>
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PostgreSQLResultFormat.html">PostgreSQLResultFormat</a>
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLData.html">PostgreSQLData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDataFormat.html">PostgreSQLDataFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDataType.html">PostgreSQLDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDatabaseConfig.html">PostgreSQLDatabaseConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDefaultLiteral.html">PostgreSQLDefaultLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDropIndex.html">PostgreSQLDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLError.html">PostgreSQLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLFunction.html">PostgreSQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLInsert.html">PostgreSQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLPoint.html">PostgreSQLPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLResultFormat.html">PostgreSQLResultFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLUpsert.html">PostgreSQLUpsert</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLColumnConstrainta">PostgreSQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A28SQLColumnConstraintAlgorithma">PostgreSQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLColumnDefinitiona">PostgreSQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLColumnIdentifiera">PostgreSQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A14SQLCreateIndexa">PostgreSQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A14SQLCreateTablea">PostgreSQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A9SQLDeletea">PostgreSQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A12SQLDirectiona">PostgreSQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A11SQLDistincta">PostgreSQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A12SQLDropTablea">PostgreSQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLExpressiona">PostgreSQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLForeignKeya">PostgreSQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLForeignKeyActiona">PostgreSQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A10SQLGroupBya">PostgreSQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLIdentifiera">PostgreSQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A16SQLIndexModifiera">PostgreSQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A7SQLJoina">PostgreSQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLJoinMethoda">PostgreSQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A10SQLLiterala">PostgreSQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A10SQLOrderBya">PostgreSQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A9SQLSelecta">PostgreSQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLSelectExpressiona">PostgreSQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A18SQLTableConstrainta">PostgreSQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A27SQLTableConstraintAlgorithma">PostgreSQLTableConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A18SQLTableIdentifiera">PostgreSQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A9SQLUpdatea">PostgreSQLUpdate</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>PostgreSQLConnection</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">PostgreSQLConnection</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">PostgreSQLConnection</span> <span class="p">:</span> <span class="kt">DatabaseConnection</span><span class="p">,</span> <span class="kt">BasicWorker</span><span class="p">,</span> <span class="kt">DatabaseQueryable</span><span class="p">,</span> <span class="kt">SQLConnection</span></code></pre>
 
                 </div>
               </div>
             <p>A PostgreSQL frontend client.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10PostgreSQL0A13SQLConnectionC9eventLoopXev"></a>
-                    <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC9eventLoopXev">eventLoop</a>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC8Databasea"></a>
+                    <a name="//apple_ref/swift/Alias/Database" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC8Databasea">Database</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -178,19 +379,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>See <code>DatabaseConnection</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Database</span> <span class="o">=</span> <span class="kt"><a href="../Classes/PostgreSQLDatabase.html">PostgreSQLDatabase</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L7-L9">Show on GitHub</a>
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L4">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -198,9 +399,39 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10PostgreSQL0A13SQLConnectionC6loggerAA0A9SQLLogger_pSgv"></a>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC9eventLoop3NIO05EventE0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC9eventLoop3NIO05EventE0_pvp">eventLoop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>BasicWorker</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L7-L9">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC6logger11DatabaseKit0E6LoggerCSgvp"></a>
                     <a name="//apple_ref/swift/Property/logger" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC6loggerAA0A9SQLLogger_pSgv">logger</a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC6logger11DatabaseKit0E6LoggerCSgvp">logger</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -215,12 +446,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">logger</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PostgreSQLLogger.html">PostgreSQLLogger</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">logger</span><span class="p">:</span> <span class="kt">DatabaseLogger</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L18">Show on GitHub</a>
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -228,9 +459,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10PostgreSQL0A13SQLConnectionC12authenticateXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/authenticate(username:database:password:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC12authenticateXeXeF">authenticate(username:database:password:)</a>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC8isClosedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC8isClosedSbvp">isClosed</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -238,19 +469,79 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Authenticates the <code>PostgreSQLClient</code> using a username with no password.</p>
+                        <p>See <code>DatabaseConnection</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">authenticate</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">database</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isClosed</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L73-L135">Show on GitHub</a>
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC6extend7Service6ExtendVvp"></a>
+                    <a name="//apple_ref/swift/Property/extend" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC6extend7Service6ExtendVvp">extend</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Extendable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">extend</span><span class="p">:</span> <span class="kt">Extend</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC6decodexxm_s10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVG4from0B025GenericSQLTableIdentifierVyAM0I13SQLIdentifierVGSg5tabletKs9DecodableRzlF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:from:table:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC6decodexxm_s10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVG4from0B025GenericSQLTableIdentifierVyAM0I13SQLIdentifierVGSg5tabletKs9DecodableRzlF">decode(_:from:table:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLConnection</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">decode</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">from</span> <span class="nv">row</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a></span> <span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLData.html">PostgreSQLData</a></span><span class="p">],</span> <span class="nv">table</span><span class="p">:</span> <span class="kt">GenericSQLTableIdentifier</span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:10PostgreSQL0A13SQLIdentifiera">PostgreSQLIdentifier</a></span><span class="o">&gt;</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L51-L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -280,7 +571,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L138-L140">Show on GitHub</a>
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection.swift#L124-L126">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -288,13 +579,13 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10PostgreSQL0A13SQLConnectionC5queryXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/query(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC5queryXeXeF">query(_:_:)</a>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC12authenticate3NIO15EventLoopFutureCyytGSS8username_SSSg8databaseAJ8passwordtF"></a>
+                    <a name="//apple_ref/swift/Method/authenticate(username:database:password:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC12authenticate3NIO15EventLoopFutureCyytGSS8username_SSSg8databaseAJ8passwordtF">authenticate(username:database:password:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -302,58 +593,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sends a parameterized PostgreSQL query command, collecting the parsed results.</p>
+                        <p>Authenticates the <code>PostgreSQLClient</code> using a username with no password.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">(</span>
-    <span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-    <span class="n">_</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="p">[[</span><span class="kt"><a href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLData.html">PostgreSQLData</a></span><span class="p">]]</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">authenticate</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">database</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Connection/PostgreSQLConnection+Query.swift#L5-L15">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10PostgreSQL0A13SQLConnectionC5queryXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/query(_:_:resultFormat:onRow:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC5queryXeXeF">query(_:_:resultFormat:onRow:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sends a parameterized PostgreSQL query command, returning the parsed results to
-the supplied closure.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">(</span>
-    <span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-    <span class="n">_</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
-    <span class="nv">resultFormat</span><span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLResultFormat.html">PostgreSQLResultFormat</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">binary</span><span class="p">(),</span>
-    <span class="nv">onRow</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLData.html">PostgreSQLData</a></span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">()</span>
-<span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Connection/PostgreSQLConnection+Query.swift#L19-L67">Show on GitHub</a>
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+Authenticate.swift#L5-L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -361,13 +613,13 @@ the supplied closure.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10PostgreSQL0A13SQLConnectionC11simpleQueryXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/simpleQuery(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC11simpleQueryXeXeF">simpleQuery(_:)</a>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC7connect3NIO15EventLoopFutureCyACGSS8hostname_Si4portAC15TransportConfigV9transportAE0fG5Group_p2ontKFZ"></a>
+                    <a name="//apple_ref/swift/Method/connect(hostname:port:transport:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC7connect3NIO15EventLoopFutureCyACGSS8hostname_Si4portAC15TransportConfigV9transportAE0fG5Group_p2ontKFZ">connect(hostname:port:transport:on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -375,72 +627,7 @@ the supplied closure.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sends a simple PostgreSQL query command, collecting the parsed results.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simpleQuery</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="p">[[</span><span class="kt"><a href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLData.html">PostgreSQLData</a></span><span class="p">]]</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Connection/PostgreSQLConnection+SimpleQuery.swift#L5-L12">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10PostgreSQL0A13SQLConnectionC11simpleQueryXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/simpleQuery(_:onRow:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC11simpleQueryXeXeF">simpleQuery(_:onRow:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sends a simple PostgreSQL query command, returning the parsed results to
-the supplied closure.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simpleQuery</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">onRow</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLData.html">PostgreSQLData</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Connection/PostgreSQLConnection+SimpleQuery.swift#L16-L34">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10PostgreSQL0A13SQLConnectionC7connectXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/connect(hostname:port:on:onError:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC7connectXeXeFZ">connect(hostname:port:on:onError:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Connects to a Redis server using a TCP socket.</p>
+                        <p>Connects to PostgreSQL server via TCP.</p>
 
                       </div>
                       <div class="declaration">
@@ -450,28 +637,579 @@ the supplied closure.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span>
     <span class="nv">hostname</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"localhost"</span><span class="p">,</span>
     <span class="nv">port</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">5432</span><span class="p">,</span>
-    <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">,</span>
-    <span class="nv">onError</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span>
+    <span class="nv">transport</span><span class="p">:</span> <span class="kt"><a href="../Classes/PostgreSQLConnection/TransportConfig.html">TransportConfig</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">cleartext</span><span class="p">,</span>
+    <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span>
 <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">PostgreSQLConnection</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Connection/PostgreSQLConnection+TCP.swift#L6-L25">Show on GitHub</a>
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+Connect.swift#L3-L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC7connect3NIO15EventLoopFutureCyACGAC13ServerAddressV2to_AC15TransportConfigV9transportAE0fG5Group_p2ontKFZ"></a>
+                    <a name="//apple_ref/swift/Method/connect(to:transport:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC7connect3NIO15EventLoopFutureCyACGAC13ServerAddressV2to_AC15TransportConfigV9transportAE0fG5Group_p2ontKFZ">connect(to:transport:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Connects to PostgreSQL server specified by a <code><a href="../Classes/PostgreSQLConnection/ServerAddress.html">ServerAddress</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span>
+    <span class="n">to</span> <span class="nv">serverAddress</span><span class="p">:</span> <span class="kt"><a href="../Classes/PostgreSQLConnection/ServerAddress.html">ServerAddress</a></span><span class="p">,</span>
+    <span class="nv">transport</span><span class="p">:</span> <span class="kt"><a href="../Classes/PostgreSQLConnection/TransportConfig.html">TransportConfig</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">cleartext</span><span class="p">,</span>
+    <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span>
+<span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">PostgreSQLConnection</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+Connect.swift#L13-L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC6listen3NIO15EventLoopFutureCyytGSS_SbSSKc7handlertF"></a>
+                    <a name="//apple_ref/swift/Method/listen(_:handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC6listen3NIO15EventLoopFutureCyytGSS_SbSSKc7handlertF">listen(_:handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begins listening for notifications on a channel.</p>
+<pre class="highlight swift"><code><span class="kt">LISTEN</span> <span class="s">"&lt;channel name&gt;"</span>
+</code></pre>
+
+<p>To subscribe to a channel, call <code>listen(...)</code> and provide the channel name.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">listen</span><span class="p">(</span><span class="s">"foo"</span><span class="p">)</span> <span class="p">{</span> <span class="n">message</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Once a connection is listening, it may not be used to send further queries until <code>UNLISTEN</code> is sent.
+To unlisten, return <code>true</code> in the callback handler. Returning <code>false</code> will continue the subscription.</p>
+
+<p>See <code><a href="../Classes/PostgreSQLConnection.html#/s:10PostgreSQL0A13SQLConnectionC6notify3NIO15EventLoopFutureCyytGSS_SS7messagetF">notify(...)</a></code> to send messages.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listen</span><span class="p">(</span><span class="n">_</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String identifier for the channel to subscribe to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Handles incoming String messages. Returning <code>true</code> here will end the subscription
+       sending an <code>UNLISTEN</code> command.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future that signals completion of the <code>UNLISTEN</code> command.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+NotifyAndListen.swift#L23-L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC6notify3NIO15EventLoopFutureCyytGSS_SS7messagetF"></a>
+                    <a name="//apple_ref/swift/Method/notify(_:message:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC6notify3NIO15EventLoopFutureCyytGSS_SS7messagetF">notify(_:message:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a notification to a listening connection. Use in conjunction with <code><a href="../Classes/PostgreSQLConnection.html#/s:10PostgreSQL0A13SQLConnectionC6listen3NIO15EventLoopFutureCyytGSS_SbSSKc7handlertF">listen(...)</a></code>.</p>
+<pre class="highlight swift"><code><span class="kt">NOTIFY</span> <span class="s">"foo"</span> <span class="err">'</span><span class="n">hello</span><span class="err">'</span>
+</code></pre>
+
+<p>A single connection can be used to send notifications to as many channels as desired.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">notify</span><span class="p">(</span><span class="s">"foo"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"hello"</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">notify</span><span class="p">(</span><span class="n">_</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String identifier for the channel to send to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String message to send to subscribers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future that signals completion of the send.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+NotifyAndListen.swift#L53-L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC5query3NIO15EventLoopFutureCyytGAA0A8SQLQueryO_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF"></a>
+                    <a name="//apple_ref/swift/Method/query(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC5query3NIO15EventLoopFutureCyytGAA0A8SQLQueryO_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF">query(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs a query, returning each row to the supplied handler.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="n">conn</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="o">.</span><span class="nf">select</span><span class="p">(</span><span class="o">.</span><span class="n">all</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"users"</span><span class="p">))</span> <span class="p">{</span> <span class="n">row</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Any values bound to the <code>DataQuery</code> as placeholders will be sent as query parameters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Enums/PostgreSQLQuery.html">PostgreSQLQuery</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">onRow</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLData.html">PostgreSQLData</a></span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Query</code> to execute.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onRow</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>PostgreSQL row accepting closure to handle results, if any.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future that signals query completion.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+Query.swift#L14-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC5query3NIO15EventLoopFutureCyytGAA0A8SQLQueryO_AA0A15SQLResultFormatV06resultK0ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF"></a>
+                    <a name="//apple_ref/swift/Method/query(_:resultFormat:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC5query3NIO15EventLoopFutureCyytGAA0A8SQLQueryO_AA0A15SQLResultFormatV06resultK0ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF">query(_:resultFormat:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs a parameterized <code>Query</code>, returning each row of the results to the supplied handler one at a time.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="n">conn</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="o">.</span><span class="nf">select</span><span class="p">(</span><span class="o">.</span><span class="n">all</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"users"</span><span class="p">))</span> <span class="p">{</span> <span class="n">row</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Any values bound to the <code>DataQuery</code> as placeholders will be sent as query parameters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Enums/PostgreSQLQuery.html">PostgreSQLQuery</a></span><span class="p">,</span> <span class="nv">resultFormat</span><span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLResultFormat.html">PostgreSQLResultFormat</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">onRow</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLData.html">PostgreSQLData</a></span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Query</code> to execute.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultFormat</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Desired <code><a href="../Structs/PostgreSQLResultFormat.html">PostgreSQLResultFormat</a></code> to request from PostgreSQL. Defaults to <code>.binary</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onRow</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>PostgreSQL row accepting closure to handle results, if any.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future that signals query completion.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+Query.swift#L31-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC13ServerAddressV"></a>
+                    <a name="//apple_ref/swift/Struct/ServerAddress" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC13ServerAddressV">ServerAddress</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies how to connect to a PostgreSQL server.</p>
+
+                        <a href="../Classes/PostgreSQLConnection/ServerAddress.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ServerAddress</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+ServerAddress.swift#L3-L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCyytGSSF"></a>
+                    <a name="//apple_ref/swift/Method/simpleQuery(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCyytGSSF">simpleQuery(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a non-parameterized (text protocol) query to PostgreSQL.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simpleQuery</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+SimpleQuery.swift#L3-L5">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCyytGSS_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF"></a>
+                    <a name="//apple_ref/swift/Method/simpleQuery(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC11simpleQuery3NIO15EventLoopFutureCyytGSS_ys10DictionaryVyAA0A9SQLColumnVAA0A7SQLDataVGKctF">simpleQuery(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a non-parameterized (text protocol) query to PostgreSQL.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simpleQuery</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">onRow</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/PostgreSQLData.html">PostgreSQLData</a></span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+SimpleQuery.swift#L8-L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC14TableNameCacheV"></a>
+                    <a name="//apple_ref/swift/Struct/TableNameCache" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC14TableNameCacheV">TableNameCache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Caches table OID to string name associations.</p>
+
+                        <a href="../Classes/PostgreSQLConnection/TableNameCache.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TableNameCache</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+TableNameCache.swift#L3-L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC10tableNames3NIO15EventLoopFutureCyAC14TableNameCacheVGyF"></a>
+                    <a name="//apple_ref/swift/Method/tableNames()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC10tableNames3NIO15EventLoopFutureCyAC14TableNameCacheVGyF">tableNames()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetches a struct that can convert table OIDs to table names.</p>
+<pre class="highlight swift"><code><span class="kt">SELECT</span> <span class="n">oid</span><span class="p">,</span> <span class="n">relname</span> <span class="kt">FROM</span> <span class="n">pg_class</span>
+</code></pre>
+
+<p>The table names will be cached on the connection after fetching.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tableNames</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/PostgreSQLConnection/TableNameCache.html">TableNameCache</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+TableNameCache.swift#L41-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A13SQLConnectionC15TransportConfigV"></a>
+                    <a name="//apple_ref/swift/Struct/TransportConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A13SQLConnectionC15TransportConfigV">TransportConfig</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Transport-layer security configuration for the PostgreSQL connection.</p>
+
+                        <a href="../Classes/PostgreSQLConnection/TransportConfig.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TransportConfig</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Connection/PostgreSQLConnection+TransportConfig.swift#L5-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-23)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>

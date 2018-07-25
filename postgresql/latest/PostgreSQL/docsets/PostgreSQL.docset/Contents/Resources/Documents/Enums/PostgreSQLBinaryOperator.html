@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PostgreSQLBinaryOperator Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Enum/PostgreSQLBinaryOperator" class="dashAnchor"></a>
+
+    <a title="PostgreSQLBinaryOperator Enumeration Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          PostgreSQL Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/postgresql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fpostgresql%2F1%2E0%2E0%2FPostgreSQL%2Fdocsets%2FPostgreSQL%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">PostgreSQL Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      PostgreSQLBinaryOperator Enumeration Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection.html">PostgreSQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection/ServerAddress.html">– ServerAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection/TableNameCache.html">– TableNameCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection/TransportConfig.html">– TransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLDatabase.html">PostgreSQLDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLDropIndexBuilder.html">PostgreSQLDropIndexBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLProvider.html">PostgreSQLProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLBinaryOperator.html">PostgreSQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLBoolLiteral.html">PostgreSQLBoolLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLPrimaryKeyDefault.html">PostgreSQLPrimaryKeyDefault</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLPrimaryKeyDefault/Generated.html">– Generated</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLQuery.html">PostgreSQLQuery</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ChannelPipeline.html">ChannelPipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int16.html">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int8.html">Int8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLConnection.html">SQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLInsertBuilder.html">SQLInsertBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt.html">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLDataTypeStaticRepresentable.html">PostgreSQLDataTypeStaticRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLExpressionRepresentable.html">PostgreSQLExpressionRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLLogger.html">PostgreSQLLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:10PostgreSQL0A8SQLTableP">PostgreSQLTable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLAlterTable.html">PostgreSQLAlterTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLAlterTable/DropAction.html">– DropAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLBind.html">PostgreSQLBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLBind/Value.html">– Value</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLCollation.html">PostgreSQLCollation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLData.html">PostgreSQLData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDataFormat.html">PostgreSQLDataFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDataType.html">PostgreSQLDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDatabaseConfig.html">PostgreSQLDatabaseConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDefaultLiteral.html">PostgreSQLDefaultLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDropIndex.html">PostgreSQLDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLError.html">PostgreSQLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLFunction.html">PostgreSQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLInsert.html">PostgreSQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLPoint.html">PostgreSQLPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLResultFormat.html">PostgreSQLResultFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLUpsert.html">PostgreSQLUpsert</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLColumnConstrainta">PostgreSQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A28SQLColumnConstraintAlgorithma">PostgreSQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLColumnDefinitiona">PostgreSQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLColumnIdentifiera">PostgreSQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A14SQLCreateIndexa">PostgreSQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A14SQLCreateTablea">PostgreSQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A9SQLDeletea">PostgreSQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A12SQLDirectiona">PostgreSQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A11SQLDistincta">PostgreSQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A12SQLDropTablea">PostgreSQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLExpressiona">PostgreSQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLForeignKeya">PostgreSQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLForeignKeyActiona">PostgreSQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A10SQLGroupBya">PostgreSQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLIdentifiera">PostgreSQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A16SQLIndexModifiera">PostgreSQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A7SQLJoina">PostgreSQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLJoinMethoda">PostgreSQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A10SQLLiterala">PostgreSQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A10SQLOrderBya">PostgreSQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A9SQLSelecta">PostgreSQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLSelectExpressiona">PostgreSQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A18SQLTableConstrainta">PostgreSQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A27SQLTableConstraintAlgorithma">PostgreSQLTableConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A18SQLTableIdentifiera">PostgreSQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A9SQLUpdatea">PostgreSQLUpdate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>PostgreSQLBinaryOperator</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">:</span> <span class="kt">SQLBinaryOperator</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
+
+                </div>
+              </div>
+            <p>PostgreSQL specific <code>SQLBinaryOperator</code>.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO5equalACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/equal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO5equalACvpZ">equal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">equal</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L4">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO8notEqualACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/notEqual" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO8notEqualACvpZ">notEqual</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">notEqual</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L7">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO11greaterThanACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/greaterThan" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO11greaterThanACvpZ">greaterThan</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">greaterThan</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO8lessThanACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/lessThan" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO8lessThanACvpZ">lessThan</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">lessThan</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO18greaterThanOrEqualACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/greaterThanOrEqual" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO18greaterThanOrEqualACvpZ">greaterThanOrEqual</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">greaterThanOrEqual</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO15lessThanOrEqualACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/lessThanOrEqual" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO15lessThanOrEqualACvpZ">lessThanOrEqual</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">lessThanOrEqual</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO4likeACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/like" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO4likeACvpZ">like</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">like</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO7notLikeACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/notLike" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO7notLikeACvpZ">notLike</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">notLike</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO2inACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/in" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO2inACvpZ">in</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">var</span> <span class="p">`</span><span class="nv">in</span><span class="p">`:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO5notInACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/notIn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO5notInACvpZ">notIn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">notIn</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO3andACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/and" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO3andACvpZ">and</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">and</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO2orACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/or" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO2orACvpZ">or</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">or</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO11concatenateACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/concatenate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO11concatenateACvpZ">concatenate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">concatenate</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO8multiplyACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/multiply" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO8multiplyACvpZ">multiply</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">multiply</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO6divideACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/divide" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO6divideACvpZ">divide</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">divide</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L46">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO6moduloACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/modulo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO6moduloACvpZ">modulo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">modulo</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO3addACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/add" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO3addACvpZ">add</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">add</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO8subtractACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/subtract" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO8subtractACvpZ">subtract</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLBinaryOperator</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">subtract</span><span class="p">:</span> <span class="kt">PostgreSQLBinaryOperator</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO12_concatenateA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_concatenate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO12_concatenateA2CmF">_concatenate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>||</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_concatenate</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO9_multiplyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_multiply" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO9_multiplyA2CmF">_multiply</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>*</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_multiply</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L62">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO7_divideA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_divide" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO7_divideA2CmF">_divide</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>/</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_divide</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO7_moduloA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_modulo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO7_moduloA2CmF">_modulo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>%</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_modulo</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L68">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO4_addA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_add" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO4_addA2CmF">_add</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>+</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_add</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO9_subtractA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_subtract" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO9_subtractA2CmF">_subtract</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>-</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_subtract</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO17_bitwiseShiftLeftA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_bitwiseShiftLeft" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO17_bitwiseShiftLeftA2CmF">_bitwiseShiftLeft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>&lt;&lt;</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_bitwiseShiftLeft</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L77">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO18_bitwiseShiftRightA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_bitwiseShiftRight" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO18_bitwiseShiftRightA2CmF">_bitwiseShiftRight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>&gt;&gt;</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_bitwiseShiftRight</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L80">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO11_bitwiseAndA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_bitwiseAnd" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO11_bitwiseAndA2CmF">_bitwiseAnd</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>&amp;</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_bitwiseAnd</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO10_bitwiseOrA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_bitwiseOr" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO10_bitwiseOrA2CmF">_bitwiseOr</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>|</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_bitwiseOr</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L86">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO9_lessThanA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_lessThan" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO9_lessThanA2CmF">_lessThan</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>&lt;</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_lessThan</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO16_lessThanOrEqualA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_lessThanOrEqual" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO16_lessThanOrEqualA2CmF">_lessThanOrEqual</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>&lt;=</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_lessThanOrEqual</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L92">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO12_greaterThanA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_greaterThan" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO12_greaterThanA2CmF">_greaterThan</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>&gt;</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_greaterThan</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L95">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO19_greaterThanOrEqualA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_greaterThanOrEqual" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO19_greaterThanOrEqualA2CmF">_greaterThanOrEqual</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>&gt;=</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_greaterThanOrEqual</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L98">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO6_equalA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_equal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO6_equalA2CmF">_equal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>=</code> or <code>==</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_equal</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L101">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO9_notEqualA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_notEqual" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO9_notEqualA2CmF">_notEqual</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>!=</code> or <code>&lt;&gt;</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_notEqual</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L104">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO4_andA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_and" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO4_andA2CmF">_and</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>AND</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_and</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L107">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO3_orA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_or" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO3_orA2CmF">_or</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>OR</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_or</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L110">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO3_isA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_is" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO3_isA2CmF">_is</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>IS</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_is</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO6_isNotA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_isNot" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO6_isNotA2CmF">_isNot</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>IS NOT</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_isNot</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L116">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO3_inA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_in" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO3_inA2CmF">_in</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>IN</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_in</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L119">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO6_notInA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_notIn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO6_notInA2CmF">_notIn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>NOT IN</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_notIn</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L122">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO5_likeA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_like" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO5_likeA2CmF">_like</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>LIKE</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_like</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L125">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO8_notLikeA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_notLike" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO8_notLikeA2CmF">_notLike</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>NOT LIKE</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_notLike</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L128">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO5_globA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_glob" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO5_globA2CmF">_glob</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>GLOB</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_glob</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L131">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO8_notGlobA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_notGlob" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO8_notGlobA2CmF">_notGlob</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>NOT GLOB</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_notGlob</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L134">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO6_matchA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_match" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO6_matchA2CmF">_match</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>MATCH</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_match</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L137">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO9_notMatchA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_notMatch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO9_notMatchA2CmF">_notMatch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>NOT MATCH</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_notMatch</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L140">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO7_regexpA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_regexp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO7_regexpA2CmF">_regexp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>REGEXP</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_regexp</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L143">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO10_notRegexpA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/_notRegexp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO10_notRegexpA2CmF">_notRegexp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>NOT REGEXP</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_notRegexp</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L146">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO5ilikeA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/ilike" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO5ilikeA2CmF">ilike</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>ILIKE</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">ilike</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L149">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO8notILikeA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/notILike" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO8notILikeA2CmF">notILike</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>NOT ILIKE</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notILike</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L152">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A17SQLBinaryOperatorO9serializeSSSays9Encodable_pGzF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A17SQLBinaryOperatorO9serializeSSSays9Encodable_pGzF">serialize(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLSerializable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">_</span> <span class="nv">binds</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Encodable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBinaryOperator.swift#L155-L190">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

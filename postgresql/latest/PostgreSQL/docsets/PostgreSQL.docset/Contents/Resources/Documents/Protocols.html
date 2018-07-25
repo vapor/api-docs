@@ -4,195 +4,362 @@
     <title>Protocols  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
+
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
+
     <a title="Protocols  Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">PostgreSQL Docs</a> (76% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/postgresql"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fpostgresql%2F1%2E0%2E0%2Drc%2E2%2E0%2E2%2FPostgreSQL%2Fdocsets%2FPostgreSQL%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">PostgreSQL Reference</a>
-        <img id="carat" src="img/carat.png" />
-        Protocols  Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          PostgreSQL Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/postgresql">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fpostgresql%2F1%2E0%2E0%2FPostgreSQL%2Fdocsets%2FPostgreSQL%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">PostgreSQL Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Protocols  Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/PostgreSQLConnection.html">PostgreSQLConnection</a>
+                <a class="nav-group-task-link" href="Classes/PostgreSQLConnection.html">PostgreSQLConnection</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/PostgreSQLDatabase.html">PostgreSQLDatabase</a>
+                <a class="nav-group-task-link" href="Classes/PostgreSQLConnection/ServerAddress.html">– ServerAddress</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/PostgreSQLProvider.html">PostgreSQLProvider</a>
+                <a class="nav-group-task-link" href="Classes/PostgreSQLConnection/TableNameCache.html">– TableNameCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PostgreSQLConnection/TransportConfig.html">– TransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PostgreSQLDatabase.html">PostgreSQLDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PostgreSQLDropIndexBuilder.html">PostgreSQLDropIndexBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PostgreSQLProvider.html">PostgreSQLProvider</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/PostgreSQLFormatCode.html">PostgreSQLFormatCode</a>
+                <a class="nav-group-task-link" href="Enums/PostgreSQLBinaryOperator.html">PostgreSQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/PostgreSQLBoolLiteral.html">PostgreSQLBoolLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/PostgreSQLPrimaryKeyDefault.html">PostgreSQLPrimaryKeyDefault</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/PostgreSQLPrimaryKeyDefault/Generated.html">– Generated</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/PostgreSQLQuery.html">PostgreSQLQuery</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/Array.html">Array</a>
+                <a class="nav-group-task-link" href="Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+                <a class="nav-group-task-link" href="Extensions/Bool.html">Bool</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Bool.html">Bool</a>
+                <a class="nav-group-task-link" href="Extensions/ChannelPipeline.html">ChannelPipeline</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Data.html">Data</a>
+                <a class="nav-group-task-link" href="Extensions/Data.html">Data</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
+                <a class="nav-group-task-link" href="Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Date.html">Date</a>
+                <a class="nav-group-task-link" href="Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Dictionary.html">Dictionary</a>
+                <a class="nav-group-task-link" href="Extensions/Dictionary.html">Dictionary</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+                <a class="nav-group-task-link" href="Extensions/Double.html">Double</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Optional.html">Optional</a>
+                <a class="nav-group-task-link" href="Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/OptionalType.html">OptionalType</a>
+                <a class="nav-group-task-link" href="Extensions/Float.html">Float</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/PostgreSQLRowDescription.html">PostgreSQLRowDescription</a>
+                <a class="nav-group-task-link" href="Extensions/Int.html">Int</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/RawRepresentable.html">RawRepresentable</a>
+                <a class="nav-group-task-link" href="Extensions/Int16.html">Int16</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/String.html">String</a>
+                <a class="nav-group-task-link" href="Extensions/Int32.html">Int32</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UUID.html">UUID</a>
+                <a class="nav-group-task-link" href="Extensions/Int64.html">Int64</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UnsafeBufferPointer.html">UnsafeBufferPointer</a>
+                <a class="nav-group-task-link" href="Extensions/Int8.html">Int8</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/UnsafeRawBufferPointer.html">UnsafeRawBufferPointer</a>
+                <a class="nav-group-task-link" href="Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/SQLConnection.html">SQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/SQLInsertBuilder.html">SQLInsertBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt.html">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UInt8.html">UInt8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UUID.html">UUID</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/PostgreSQLArrayCustomConvertible.html">PostgreSQLArrayCustomConvertible</a>
+                <a class="nav-group-task-link" href="Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a>
+                <a class="nav-group-task-link" href="Protocols/PostgreSQLDataTypeStaticRepresentable.html">PostgreSQLDataTypeStaticRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/PostgreSQLJSONCustomConvertible.html">PostgreSQLJSONCustomConvertible</a>
+                <a class="nav-group-task-link" href="Protocols/PostgreSQLExpressionRepresentable.html">PostgreSQLExpressionRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/PostgreSQLLogger.html">PostgreSQLLogger</a>
+                <a class="nav-group-task-link" href="Protocols/PostgreSQLLogger.html">PostgreSQLLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:10PostgreSQL0A8SQLTableP">PostgreSQLTable</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/PostgreSQLColumn.html">PostgreSQLColumn</a>
+                <a class="nav-group-task-link" href="Structs/PostgreSQLAlterTable.html">PostgreSQLAlterTable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/PostgreSQLData.html">PostgreSQLData</a>
+                <a class="nav-group-task-link" href="Structs/PostgreSQLAlterTable/DropAction.html">– DropAction</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/PostgreSQLDataType.html">PostgreSQLDataType</a>
+                <a class="nav-group-task-link" href="Structs/PostgreSQLBind.html">PostgreSQLBind</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/PostgreSQLDatabaseConfig.html">PostgreSQLDatabaseConfig</a>
+                <a class="nav-group-task-link" href="Structs/PostgreSQLBind/Value.html">– Value</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/PostgreSQLError.html">PostgreSQLError</a>
+                <a class="nav-group-task-link" href="Structs/PostgreSQLCollation.html">PostgreSQLCollation</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/PostgreSQLPoint.html">PostgreSQLPoint</a>
+                <a class="nav-group-task-link" href="Structs/PostgreSQLColumn.html">PostgreSQLColumn</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/PostgreSQLResultFormat.html">PostgreSQLResultFormat</a>
+                <a class="nav-group-task-link" href="Structs/PostgreSQLData.html">PostgreSQLData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLDataFormat.html">PostgreSQLDataFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLDataType.html">PostgreSQLDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLDatabaseConfig.html">PostgreSQLDatabaseConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLDefaultLiteral.html">PostgreSQLDefaultLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLDropIndex.html">PostgreSQLDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLError.html">PostgreSQLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLFunction.html">PostgreSQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLInsert.html">PostgreSQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLPoint.html">PostgreSQLPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLResultFormat.html">PostgreSQLResultFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PostgreSQLUpsert.html">PostgreSQLUpsert</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A19SQLColumnConstrainta">PostgreSQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A28SQLColumnConstraintAlgorithma">PostgreSQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A19SQLColumnDefinitiona">PostgreSQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A19SQLColumnIdentifiera">PostgreSQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A14SQLCreateIndexa">PostgreSQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A14SQLCreateTablea">PostgreSQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A9SQLDeletea">PostgreSQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A12SQLDirectiona">PostgreSQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A11SQLDistincta">PostgreSQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A12SQLDropTablea">PostgreSQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A13SQLExpressiona">PostgreSQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A13SQLForeignKeya">PostgreSQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A19SQLForeignKeyActiona">PostgreSQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A10SQLGroupBya">PostgreSQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A13SQLIdentifiera">PostgreSQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A16SQLIndexModifiera">PostgreSQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A7SQLJoina">PostgreSQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A13SQLJoinMethoda">PostgreSQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A10SQLLiterala">PostgreSQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A10SQLOrderBya">PostgreSQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A9SQLSelecta">PostgreSQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A19SQLSelectExpressiona">PostgreSQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A18SQLTableConstrainta">PostgreSQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A27SQLTableConstraintAlgorithma">PostgreSQLTableConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A18SQLTableIdentifiera">PostgreSQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10PostgreSQL0A9SQLUpdatea">PostgreSQLUpdate</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>Protocols</h1>
             <p>The following protocols are available globally.</p>
 
-          </section>
-          <section class="section task-group-section">
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10PostgreSQL0A25SQLArrayCustomConvertibleP"></a>
-                    <a name="//apple_ref/swift/Protocol/PostgreSQLArrayCustomConvertible" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A25SQLArrayCustomConvertibleP">PostgreSQLArrayCustomConvertible</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Representable by a <code>T[]</code> column on the PostgreSQL database.</p>
+          </div>
+        </section>
 
-                        <a href="Protocols/PostgreSQLArrayCustomConvertible.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PostgreSQLArrayCustomConvertible</span><span class="p">:</span> <span class="kt"><a href="Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Data/PostgreSQLArrayCustomConvertible.swift#L4-L13">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -219,7 +386,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Data/PostgreSQLDataConvertible.swift#L2-L14">Show on GitHub</a>
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Data/PostgreSQLDataConvertible.swift#L2-L8">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -227,42 +394,7 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10PostgreSQL0A24SQLJSONCustomConvertibleP"></a>
-                    <a name="//apple_ref/swift/Protocol/PostgreSQLJSONCustomConvertible" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10PostgreSQL0A24SQLJSONCustomConvertibleP">PostgreSQLJSONCustomConvertible</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Representable by a <code>JSONB</code> column on the PostgreSQL database.</p>
-
-                        <a href="Protocols/PostgreSQLJSONCustomConvertible.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PostgreSQLJSONCustomConvertible</span><span class="p">:</span> <span class="kt"><a href="Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Data/PostgreSQLJSONCustomConvertible.swift#L5">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -289,21 +421,126 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/postgresql/tree/1.0.0-rc.2.0.2/Sources/PostgreSQL/Database/PostgreSQLLogger.swift#L2-L5">Show on GitHub</a>
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/Database/PostgreSQLLogger.swift#L2-L5">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A26SQLExpressionRepresentableP"></a>
+                    <a name="//apple_ref/swift/Protocol/PostgreSQLExpressionRepresentable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A26SQLExpressionRepresentableP">PostgreSQLExpressionRepresentable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Representable as a <code><a href="Typealiases.html#/s:10PostgreSQL0A13SQLExpressiona">PostgreSQLExpression</a></code>.</p>
+
+                        <a href="Protocols/PostgreSQLExpressionRepresentable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PostgreSQLExpressionRepresentable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLBind.swift#L2-L5">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A30SQLDataTypeStaticRepresentableP"></a>
+                    <a name="//apple_ref/swift/Protocol/PostgreSQLDataTypeStaticRepresentable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A30SQLDataTypeStaticRepresentableP">PostgreSQLDataTypeStaticRepresentable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Statically representable as a <code><a href="Structs/PostgreSQLDataType.html">PostgreSQLDataType</a></code>.</p>
+
+                        <a href="Protocols/PostgreSQLDataTypeStaticRepresentable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PostgreSQLDataTypeStaticRepresentable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLDataTypeStaticRepresentable.swift#L2-L5">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A8SQLTableP"></a>
+                    <a name="//apple_ref/swift/Protocol/PostgreSQLTable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A8SQLTableP">PostgreSQLTable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>PostgreSQL specific <code>SQLTable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PostgreSQLTable</span> <span class="p">:</span> <span class="kt">SQLTable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.0.0/Sources/PostgreSQL/SQL/PostgreSQLTable.swift#L2">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-23)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
