@@ -4,213 +4,244 @@
     <title>TemplateByteScanner Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Class/TemplateByteScanner" class="dashAnchor"></a>
+
     <a title="TemplateByteScanner Class Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">TemplateKit Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/template-kit"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ftemplate%2Dkit%2F1%2E0%2E0%2FTemplateKit%2Fdocsets%2FTemplateKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">TemplateKit Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        TemplateByteScanner Class Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          TemplateKit Docs
+        </a>
+         (99% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/template-kit">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ftemplate%2Dkit%2F1%2E1%2E0%2FTemplateKit%2Fdocsets%2FTemplateKit%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">TemplateKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      TemplateByteScanner Class Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/Capitalize.html">Capitalize</a>
+                <a class="nav-group-task-link" href="../Classes/Capitalize.html">Capitalize</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Comment.html">Comment</a>
+                <a class="nav-group-task-link" href="../Classes/Comment.html">Comment</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Contains.html">Contains</a>
+                <a class="nav-group-task-link" href="../Classes/Contains.html">Contains</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Count.html">Count</a>
+                <a class="nav-group-task-link" href="../Classes/Count.html">Count</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/DateFormat.html">DateFormat</a>
+                <a class="nav-group-task-link" href="../Classes/DateFormat.html">DateFormat</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Lowercase.html">Lowercase</a>
+                <a class="nav-group-task-link" href="../Classes/Lowercase.html">Lowercase</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/PlaintextRenderer.html">PlaintextRenderer</a>
+                <a class="nav-group-task-link" href="../Classes/PlaintextRenderer.html">PlaintextRenderer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Print.html">Print</a>
+                <a class="nav-group-task-link" href="../Classes/Print.html">Print</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Raw.html">Raw</a>
+                <a class="nav-group-task-link" href="../Classes/Raw.html">Raw</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TagContext.html">TagContext</a>
+                <a class="nav-group-task-link" href="../Classes/TagContext.html">TagContext</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TemplateByteScanner.html">TemplateByteScanner</a>
+                <a class="nav-group-task-link" href="../Classes/TemplateByteScanner.html">TemplateByteScanner</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TemplateConditional.html">TemplateConditional</a>
+                <a class="nav-group-task-link" href="../Classes/TemplateConditional.html">TemplateConditional</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TemplateDataContext.html">TemplateDataContext</a>
+                <a class="nav-group-task-link" href="../Classes/TemplateDataContext.html">TemplateDataContext</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TemplateDataEncoder.html">TemplateDataEncoder</a>
+                <a class="nav-group-task-link" href="../Classes/TemplateDataEncoder.html">TemplateDataEncoder</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TemplateSerializer.html">TemplateSerializer</a>
+                <a class="nav-group-task-link" href="../Classes/TemplateSerializer.html">TemplateSerializer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Uppercase.html">Uppercase</a>
+                <a class="nav-group-task-link" href="../Classes/Uppercase.html">Uppercase</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Var.html">Var</a>
+                <a class="nav-group-task-link" href="../Classes/Var.html">Var</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Global Variables.html">Global Variables</a>
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:11TemplateKit11defaultTagss10DictionaryVySSAA11TagRenderer_pGv">defaultTags</a>
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:11TemplateKit11defaultTagss10DictionaryVySSAA11TagRenderer_pGvp">defaultTags</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/TemplateConstant.html">TemplateConstant</a>
+                <a class="nav-group-task-link" href="../Enums/TemplateConstant.html">TemplateConstant</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TemplateExpression.html">TemplateExpression</a>
+                <a class="nav-group-task-link" href="../Enums/TemplateExpression.html">TemplateExpression</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TemplateExpression/InfixOperator.html">– InfixOperator</a>
+                <a class="nav-group-task-link" href="../Enums/TemplateExpression/InfixOperator.html">– InfixOperator</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TemplateExpression/PrefixOperator.html">– PrefixOperator</a>
+                <a class="nav-group-task-link" href="../Enums/TemplateExpression/PrefixOperator.html">– PrefixOperator</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TemplateExpression/PostfixOperator.html">– PostfixOperator</a>
+                <a class="nav-group-task-link" href="../Enums/TemplateExpression/PostfixOperator.html">– PostfixOperator</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TemplateSyntaxType.html">TemplateSyntaxType</a>
+                <a class="nav-group-task-link" href="../Enums/TemplateSyntaxType.html">TemplateSyntaxType</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Bool.html">Bool</a>
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Date.html">Date</a>
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Double.html">Double</a>
+                <a class="nav-group-task-link" href="../Extensions/Double.html">Double</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Float.html">Float</a>
+                <a class="nav-group-task-link" href="../Extensions/Float.html">Float</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/OptionalType.html">OptionalType</a>
+                <a class="nav-group-task-link" href="../Extensions/OptionalType.html">OptionalType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/String.html">String</a>
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/UUID.html">UUID</a>
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/TagRenderer.html">TagRenderer</a>
+                <a class="nav-group-task-link" href="../Protocols/TagRenderer.html">TagRenderer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TemplateDataRepresentable.html">TemplateDataRepresentable</a>
+                <a class="nav-group-task-link" href="../Protocols/TemplateDataRepresentable.html">TemplateDataRepresentable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TemplateParser.html">TemplateParser</a>
+                <a class="nav-group-task-link" href="../Protocols/TemplateParser.html">TemplateParser</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TemplateRenderer.html">TemplateRenderer</a>
+                <a class="nav-group-task-link" href="../Protocols/TemplateRenderer.html">TemplateRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ViewRenderer.html">ViewRenderer</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/ASTCache.html">ASTCache</a>
+                <a class="nav-group-task-link" href="../Structs/ASTCache.html">ASTCache</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateCustom.html">TemplateCustom</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateCustom.html">TemplateCustom</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateData.html">TemplateData</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateData.html">TemplateData</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateEmbed.html">TemplateEmbed</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateEmbed.html">TemplateEmbed</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateIdentifier.html">TemplateIdentifier</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateIdentifier.html">TemplateIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateIterator.html">TemplateIterator</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateIterator.html">TemplateIterator</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateKitError.html">TemplateKitError</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateKitError.html">TemplateKitError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateRaw.html">TemplateRaw</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateRaw.html">TemplateRaw</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateSource.html">TemplateSource</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateSource.html">TemplateSource</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateSourceStart.html">TemplateSourceStart</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateSourceStart.html">TemplateSourceStart</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateSyntax.html">TemplateSyntax</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateSyntax.html">TemplateSyntax</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TemplateTag.html">TemplateTag</a>
+                <a class="nav-group-task-link" href="../Structs/TemplateTag.html">TemplateTag</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/View.html">View</a>
+                <a class="nav-group-task-link" href="../Structs/View.html">View</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>TemplateByteScanner</h1>
               <div class="declaration">
                 <div class="language">
@@ -220,16 +251,19 @@
               </div>
             <p>Used to facilitate parsing byte arrays.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11TemplateKit0A11ByteScannerC4fileSSv"></a>
+                    <a name="/s:11TemplateKit0A11ByteScannerC4fileSSvp"></a>
                     <a name="//apple_ref/swift/Property/file" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4fileSSv">file</a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4fileSSvp">file</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -250,7 +284,7 @@ instead use any string describing where the bytes came from.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L7">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L7">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -258,9 +292,9 @@ instead use any string describing where the bytes came from.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11TemplateKit0A11ByteScannerC6offsetSiv"></a>
+                    <a name="/s:11TemplateKit0A11ByteScannerC6offsetSivp"></a>
                     <a name="//apple_ref/swift/Property/offset" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC6offsetSiv">offset</a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC6offsetSivp">offset</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -280,7 +314,7 @@ instead use any string describing where the bytes came from.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L10">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L10">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -288,9 +322,9 @@ instead use any string describing where the bytes came from.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11TemplateKit0A11ByteScannerC4lineSiv"></a>
+                    <a name="/s:11TemplateKit0A11ByteScannerC4lineSivp"></a>
                     <a name="//apple_ref/swift/Property/line" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4lineSiv">line</a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4lineSivp">line</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -310,7 +344,7 @@ instead use any string describing where the bytes came from.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L13">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L13">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -318,9 +352,9 @@ instead use any string describing where the bytes came from.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11TemplateKit0A11ByteScannerC6columnSiv"></a>
+                    <a name="/s:11TemplateKit0A11ByteScannerC6columnSivp"></a>
                     <a name="//apple_ref/swift/Property/column" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC6columnSiv">column</a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC6columnSivp">column</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -340,7 +374,7 @@ instead use any string describing where the bytes came from.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L16">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -348,9 +382,9 @@ instead use any string describing where the bytes came from.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11TemplateKit0A11ByteScannerC4dataXev"></a>
+                    <a name="/s:11TemplateKit0A11ByteScannerC4data10Foundation4DataVvp"></a>
                     <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4dataXev">data</a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC4data10Foundation4DataVvp">data</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -370,7 +404,7 @@ instead use any string describing where the bytes came from.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L19">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -378,9 +412,9 @@ instead use any string describing where the bytes came from.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11TemplateKit0A11ByteScannerCXeXecfc"></a>
+                    <a name="/s:11TemplateKit0A11ByteScannerCAC10Foundation4DataV4data_SS4filetcfc"></a>
                     <a name="//apple_ref/swift/Method/init(data:file:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerCXeXecfc">init(data:file:)</a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerCAC10Foundation4DataV4data_SS4filetcfc">init(data:file:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -431,7 +465,7 @@ instead use any string describing where the bytes came from.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L35-L47">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L35-L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -486,7 +520,7 @@ instead use any string describing where the bytes came from.</p>
 </ul></p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L55-L60">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L55-L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -516,7 +550,7 @@ instead use any string describing where the bytes came from.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L63-L79">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L63-L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -524,9 +558,9 @@ instead use any string describing where the bytes came from.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11TemplateKit0A11ByteScannerC10requirePopXeXeF"></a>
+                    <a name="/s:11TemplateKit0A11ByteScannerC10requirePops5UInt8VyKF"></a>
                     <a name="//apple_ref/swift/Method/requirePop()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC10requirePopXeXeF">requirePop()</a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC10requirePops5UInt8VyKF">requirePop()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -541,12 +575,13 @@ instead use any string describing where the bytes came from.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">requirePop</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Byte</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">requirePop</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Byte</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L83-L88">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L83-L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -564,7 +599,7 @@ instead use any string describing where the bytes came from.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Calls <code><a href="../Classes/TemplateByteScanner.html#/s:11TemplateKit0A11ByteScannerC10requirePopXeXeF">requirePop()</a></code> <code>n</code> times.</p>
+                        <p>Calls <code><a href="../Classes/TemplateByteScanner.html#/s:11TemplateKit0A11ByteScannerC10requirePops5UInt8VyKF">requirePop()</a></code> <code>n</code> times.</p>
 
                       </div>
                       <div class="declaration">
@@ -576,7 +611,7 @@ instead use any string describing where the bytes came from.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L91-L95">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L91-L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -584,9 +619,9 @@ instead use any string describing where the bytes came from.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11TemplateKit0A11ByteScannerC11peekMatchesXeXeF"></a>
+                    <a name="/s:11TemplateKit0A11ByteScannerC11peekMatchesSbSays5UInt8VGF"></a>
                     <a name="//apple_ref/swift/Method/peekMatches(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC11peekMatchesXeXeF">peekMatches(_:)</a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC11peekMatchesSbSays5UInt8VGF">peekMatches(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -606,7 +641,7 @@ instead use any string describing where the bytes came from.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L98-L112">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L98-L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -614,7 +649,7 @@ instead use any string describing where the bytes came from.</p>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -640,7 +675,7 @@ instead use any string describing where the bytes came from.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/AST/TemplateSource.swift#L74-L76">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/AST/TemplateSource.swift#L74-L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -689,21 +724,22 @@ instead use any string describing where the bytes came from.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/template-kit/tree/1.0.0/Sources/TemplateKit/AST/TemplateSource.swift#L82-L89">Show on GitHub</a>
+                        <a href="https://github.com/vapor/template-kit/tree/1.1.0/Sources/TemplateKit/AST/TemplateSource.swift#L82-L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-09)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-08)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
