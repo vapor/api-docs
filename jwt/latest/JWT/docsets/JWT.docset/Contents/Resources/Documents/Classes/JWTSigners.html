@@ -4,121 +4,130 @@
     <title>JWTSigners Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Class/JWTSigners" class="dashAnchor"></a>
+
     <a title="JWTSigners Class Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">JWT Docs</a> (94% documented)</p>
-        <p class="header-right"><a href="https://github.com/vapor/jwt"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fjwt%2F3%2E0%2E0%2Drc%2E2%2E1%2FJWT%2Fdocsets%2FJWT%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">JWT Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        JWTSigners Class Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          JWT Docs
+        </a>
+         (97% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/jwt">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fjwt%2F3%2E0%2E0%2FJWT%2Fdocsets%2FJWT%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">JWT Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      JWTSigners Class Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/JWTSigner.html">JWTSigner</a>
+                <a class="nav-group-task-link" href="../Classes/JWTSigner.html">JWTSigner</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/JWTSigners.html">JWTSigners</a>
+                <a class="nav-group-task-link" href="../Classes/JWTSigners.html">JWTSigners</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/HMACAlgorithmVariant.html">HMACAlgorithmVariant</a>
+                <a class="nav-group-task-link" href="../Protocols/JWTAlgorithm.html">JWTAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/JWTClaim.html">JWTClaim</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/JWTPayload.html">JWTPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/JWTUnixEpochClaim.html">JWTUnixEpochClaim</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/DigestAlgorithm.html">DigestAlgorithm</a>
+                <a class="nav-group-task-link" href="../Structs/AudienceClaim.html">AudienceClaim</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/RSA.html">RSA</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Protocols/JWTAlgorithm.html">JWTAlgorithm</a>
+                <a class="nav-group-task-link" href="../Structs/CustomJWTAlgorithm.html">CustomJWTAlgorithm</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/JWTClaim.html">JWTClaim</a>
+                <a class="nav-group-task-link" href="../Structs/ExpirationClaim.html">ExpirationClaim</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:3JWT10JWTPayloadP">JWTPayload</a>
+                <a class="nav-group-task-link" href="../Structs/IDClaim.html">IDClaim</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/JWTVerifiable.html">JWTVerifiable</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Structs/AudienceClaim.html">AudienceClaim</a>
+                <a class="nav-group-task-link" href="../Structs/IssuedAtClaim.html">IssuedAtClaim</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/ExpirationClaim.html">ExpirationClaim</a>
+                <a class="nav-group-task-link" href="../Structs/IssuerClaim.html">IssuerClaim</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/HMACAlgorithm.html">HMACAlgorithm</a>
+                <a class="nav-group-task-link" href="../Structs/JWT.html">JWT</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/IDClaim.html">IDClaim</a>
+                <a class="nav-group-task-link" href="../Structs/JWTError.html">JWTError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/IssuedAtClaim.html">IssuedAtClaim</a>
+                <a class="nav-group-task-link" href="../Structs/JWTHeader.html">JWTHeader</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/IssuerClaim.html">IssuerClaim</a>
+                <a class="nav-group-task-link" href="../Structs/NotBeforeClaim.html">NotBeforeClaim</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/JWT.html">JWT</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/JWTError.html">JWTError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/JWTHeader.html">JWTHeader</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/NotBeforeClaim.html">NotBeforeClaim</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/SubjectClaim.html">SubjectClaim</a>
+                <a class="nav-group-task-link" href="../Structs/SubjectClaim.html">SubjectClaim</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>JWTSigners</h1>
               <div class="declaration">
                 <div class="language">
@@ -126,12 +135,15 @@
 
                 </div>
               </div>
-            <p>A collection of signers labeled by kid.</p>
+            <p>A collection of signers labeled by <code>kid</code>.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -145,7 +157,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create a new collection of signers</p>
+                        <p>Create a new <code>JWTSigners</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -157,7 +169,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/jwt/tree/3.0.0-rc.2.1/Sources/JWT/JWTSigners.swift#L7-L9">Show on GitHub</a>
+                        <a href="https://github.com/vapor/jwt/tree/3.0.0/Sources/JWT/JWTSigners.swift#L7-L9">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -175,7 +187,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds a new signer</p>
+                        <p>Adds a new signer.</p>
 
                       </div>
                       <div class="declaration">
@@ -187,7 +199,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/jwt/tree/3.0.0-rc.2.1/Sources/JWT/JWTSigners.swift#L12-L14">Show on GitHub</a>
+                        <a href="https://github.com/vapor/jwt/tree/3.0.0/Sources/JWT/JWTSigners.swift#L12-L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -205,7 +217,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets a signer for the <code>kid</code> if one exists</p>
+                        <p>Gets a signer for the supplied <code>kid</code>, if one exists.</p>
 
                       </div>
                       <div class="declaration">
@@ -217,7 +229,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/jwt/tree/3.0.0-rc.2.1/Sources/JWT/JWTSigners.swift#L17-L19">Show on GitHub</a>
+                        <a href="https://github.com/vapor/jwt/tree/3.0.0/Sources/JWT/JWTSigners.swift#L17-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -235,7 +247,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a signer for the <code>kid</code> or throws an error</p>
+                        <p>Returns a signer for the <code>kid</code> or throws an error.</p>
 
                       </div>
                       <div class="declaration">
@@ -247,21 +259,22 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/jwt/tree/3.0.0-rc.2.1/Sources/JWT/JWTSigners.swift#L22-L27">Show on GitHub</a>
+                        <a href="https://github.com/vapor/jwt/tree/3.0.0/Sources/JWT/JWTSigners.swift#L22-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-03-25)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
