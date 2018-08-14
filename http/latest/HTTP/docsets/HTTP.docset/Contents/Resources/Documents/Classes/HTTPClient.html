@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E0%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E1%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -146,6 +146,12 @@
             <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BasicAuthorization.html">BasicAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BearerAuthorization.html">BearerAuthorization</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/HTTPBody.html">HTTPBody</a>
               </li>
               <li class="nav-group-task">
@@ -214,9 +220,9 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP10HTTPClientC7connectXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/connect(scheme:hostname:port:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP10HTTPClientC7connectXeXeFZ">connect(scheme:hostname:port:on:)</a>
+                    <a name="/s:4HTTP10HTTPClientC7connect3NIO15EventLoopFutureCyACGAA10HTTPSchemeV6scheme_SS8hostnameSiSg4portAE10TimeAmountV0C7TimeoutAE0eF5Group_p2onys5Error_pc0pQ0tFZ"></a>
+                    <a name="//apple_ref/swift/Method/connect(scheme:hostname:port:connectTimeout:on:onError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP10HTTPClientC7connect3NIO15EventLoopFutureCyACGAA10HTTPSchemeV6scheme_SS8hostnameSiSg4portAE10TimeAmountV0C7TimeoutAE0eF5Group_p2onys5Error_pc0pQ0tFZ">connect(scheme:hostname:port:connectTimeout:on:onError:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -239,7 +245,9 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
     <span class="nv">scheme</span><span class="p">:</span> <span class="kt"><a href="../Structs/HTTPScheme.html">HTTPScheme</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">http</span><span class="p">,</span>
     <span class="nv">hostname</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">port</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span>
+    <span class="nv">connectTimeout</span><span class="p">:</span> <span class="kt">TimeAmount</span> <span class="o">=</span> <span class="kt">TimeAmount</span><span class="o">.</span><span class="nf">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+    <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">,</span>
+    <span class="nv">onError</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">}</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">HTTPClient</span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -287,12 +295,36 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                             <tr>
                               <td>
                                 <code>
+                                <em>connectTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The timeout that will apply to the connection attempt.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>worker</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p><code>Worker</code> to perform async work on.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onError</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional closure, which fires when a networking error is caught.</p>
                                 </div>
                               </td>
                             </tr>
@@ -304,7 +336,7 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                         <p>A <code>Future</code> containing the connected <code>HTTPClient</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPClient.swift#L23-L48">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClient.swift#L25-L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -323,9 +355,9 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP10HTTPClientC7onCloseXev"></a>
+                    <a name="/s:4HTTP10HTTPClientC7onClose3NIO15EventLoopFutureCyytGvp"></a>
                     <a name="//apple_ref/swift/Property/onClose" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP10HTTPClientC7onCloseXev">onClose</a>
+                    <a class="token" href="#/s:4HTTP10HTTPClientC7onClose3NIO15EventLoopFutureCyytGvp">onClose</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -340,12 +372,12 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onClose</span><span class="p">:</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onClose</span><span class="p">:</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPClient.swift#L59-L61">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClient.swift#L65-L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -364,9 +396,9 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP10HTTPClientC4sendXeXeF"></a>
+                    <a name="/s:4HTTP10HTTPClientC4send3NIO15EventLoopFutureCyAA12HTTPResponseVGAA11HTTPRequestVF"></a>
                     <a name="//apple_ref/swift/Method/send(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP10HTTPClientC4sendXeXeF">send(_:)</a>
+                    <a class="token" href="#/s:4HTTP10HTTPClientC4send3NIO15EventLoopFutureCyAA12HTTPResponseVGAA11HTTPRequestVF">send(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -413,7 +445,7 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                         <p>A <code>Future</code> <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code> containing the server&rsquo;s response.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPClient.swift#L80-L88">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClient.swift#L86-L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -421,9 +453,9 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP10HTTPClientC5closeXeXeF"></a>
+                    <a name="/s:4HTTP10HTTPClientC5close3NIO15EventLoopFutureCyytGyF"></a>
                     <a name="//apple_ref/swift/Method/close()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP10HTTPClientC5closeXeXeF">close()</a>
+                    <a class="token" href="#/s:4HTTP10HTTPClientC5close3NIO15EventLoopFutureCyytGyF">close()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -431,7 +463,7 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Closes this <code>HTTPClient</code>&rsquo;s connection to the remote server.</p>
+                        <p>Closes this <code>HTTPClient</code>&lsquo;s connection to the remote server.</p>
 
                       </div>
                       <div class="declaration">
@@ -443,7 +475,7 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPClient.swift#L91-L93">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClient.swift#L97-L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -462,9 +494,9 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP10HTTPClientC7upgradeXeXeFZ"></a>
+                    <a name="/s:4HTTP10HTTPClientC7upgrade3NIO15EventLoopFutureCy13UpgradeResultQzGAA10HTTPSchemeV6scheme_SS8hostnameSiSg4portx8upgraderAE0eF5Group_p2ontAA0B16ProtocolUpgraderRzlFZ"></a>
                     <a name="//apple_ref/swift/Method/upgrade(scheme:hostname:port:upgrader:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP10HTTPClientC7upgradeXeXeFZ">upgrade(scheme:hostname:port:upgrader:on:)</a>
+                    <a class="token" href="#/s:4HTTP10HTTPClientC7upgrade3NIO15EventLoopFutureCy13UpgradeResultQzGAA10HTTPSchemeV6scheme_SS8hostnameSiSg4portx8upgraderAE0eF5Group_p2ontAA0B16ProtocolUpgraderRzlFZ">upgrade(scheme:hostname:port:upgrader:on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -552,7 +584,7 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
                         <p>A <code>Future</code> containing the upgrade result.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPClientProtocolUpgrader.swift#L15-L40">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClientProtocolUpgrader.swift#L15-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -565,8 +597,8 @@ receive <code><a href="../Structs/HTTPResponse.html">HTTPResponse</a></code>s.</
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-18)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

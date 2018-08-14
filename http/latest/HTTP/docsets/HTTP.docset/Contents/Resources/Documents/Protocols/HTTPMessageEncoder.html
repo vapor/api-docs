@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E0%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E1%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -146,6 +146,12 @@
             <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BasicAuthorization.html">BasicAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BearerAuthorization.html">BearerAuthorization</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/HTTPBody.html">HTTPBody</a>
               </li>
               <li class="nav-group-task">
@@ -206,7 +212,7 @@ cases (streaming, static, or other).</p>
 </code></pre>
 
 <p><code>HTTPMessageEncoder</code>s can be registered with <code>ContentConfig</code> during the application config phase.
-The encoders are associated with a <code>MediaType</code> when registered. When encoding content, the <code>Content</code>&rsquo;s
+The encoders are associated with a <code>MediaType</code> when registered. When encoding content, the <code>Content</code>&lsquo;s
 default <code>MediaType</code> is used to lookup an appropriate coder. You can also choose to override the
 <code>MediaType</code> when encoding.</p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">contentConfig</span> <span class="o">=</span> <span class="kt">ContentConfig</span><span class="o">.</span><span class="nf">default</span><span class="p">()</span>
@@ -224,9 +230,9 @@ default <code>MediaType</code> is used to lookup an appropriate coder. You can a
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP18HTTPMessageEncoderP6encodeXeXeF"></a>
+                    <a name="/s:4HTTP18HTTPMessageEncoderP6encodeyqd___qd_0_z2to3NIO14EventLoopGroup_p2ontKs9EncodableRd__AA0B0Rd_0_r0_lF"></a>
                     <a name="//apple_ref/swift/Method/encode(_:to:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP18HTTPMessageEncoderP6encodeXeXeF">encode(_:to:on:)</a>
+                    <a class="token" href="#/s:4HTTP18HTTPMessageEncoderP6encodeyqd___qd_0_z2to3NIO14EventLoopGroup_p2ontKs9EncodableRd__AA0B0Rd_0_r0_lF">encode(_:to:on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -250,7 +256,7 @@ default <code>MediaType</code> is used to lookup an appropriate coder. You can a
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">encode</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">M</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">encodable</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="n">to</span> <span class="nv">message</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">M</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">encode</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">M</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">encodable</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="n">to</span> <span class="nv">message</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">M</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="k">throws</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">M</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/HTTPMessage.html">HTTPMessage</a></span></code></pre>
 
                         </div>
                       </div>
@@ -278,7 +284,7 @@ default <code>MediaType</code> is used to lookup an appropriate coder. You can a
                         <p>Encoded HTTP body.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Codable/HTTPMessageCoder.swift#L88">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Codable/HTTPMessageCoder.swift#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -291,8 +297,8 @@ default <code>MediaType</code> is used to lookup an appropriate coder. You can a
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-18)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

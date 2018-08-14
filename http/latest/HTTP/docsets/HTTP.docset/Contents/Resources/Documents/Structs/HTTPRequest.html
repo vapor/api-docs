@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E0%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E1%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -146,6 +146,12 @@
             <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BasicAuthorization.html">BasicAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BearerAuthorization.html">BearerAuthorization</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/HTTPBody.html">HTTPBody</a>
               </li>
               <li class="nav-group-task">
@@ -186,7 +192,7 @@
             <h1>HTTPRequest</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HTTPRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/HTTPMessage.html">HTTPMessage</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HTTPRequest</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/HTTPMessage.html">HTTPMessage</a></span></code></pre>
 
                 </div>
               </div>
@@ -213,9 +219,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP11HTTPRequestV6methodXev"></a>
+                    <a name="/s:4HTTP11HTTPRequestV6method8NIOHTTP110HTTPMethodOvp"></a>
                     <a name="//apple_ref/swift/Property/method" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestV6methodXev">method</a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV6method8NIOHTTP110HTTPMethodOvp">method</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -232,12 +238,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L13">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L16-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -245,9 +251,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP11HTTPRequestV9urlStringSSv"></a>
-                    <a name="//apple_ref/swift/Property/urlString" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestV9urlStringSSv">urlString</a>
+                    <a name="/s:4HTTP11HTTPRequestV3url10Foundation3URLVvp"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV3url10Foundation3URLVvp">url</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -255,7 +261,37 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The unparsed URL string. This is usually set through the <code><a href="../Structs/HTTPRequest.html#/s:4HTTP11HTTPRequestV3urlXev">url</a></code> property.</p>
+                        <p>The URL used on this request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L22-L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP11HTTPRequestV9urlStringSSvp"></a>
+                    <a name="//apple_ref/swift/Property/urlString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV9urlStringSSvp">urlString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The unparsed URL string. This is usually set through the <code><a href="../Structs/HTTPRequest.html#/s:4HTTP11HTTPRequestV3url10Foundation3URLVvp">url</a></code> property.</p>
 <pre class="highlight swift"><code><span class="n">httpReq</span><span class="o">.</span><span class="n">urlString</span> <span class="o">=</span> <span class="s">"/welcome"</span>
 </code></pre>
 
@@ -264,12 +300,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">urlString</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">urlString</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L19">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L31-L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -277,9 +313,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP11HTTPRequestV7versionXev"></a>
+                    <a name="/s:4HTTP11HTTPRequestV7version8NIOHTTP111HTTPVersionVvp"></a>
                     <a name="//apple_ref/swift/Property/version" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestV7versionXev">version</a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV7version8NIOHTTP111HTTPVersionVvp">version</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -294,12 +330,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">HTTPVersion</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">HTTPVersion</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L22">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L37-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -307,9 +343,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP11HTTPRequestV7headersXev"></a>
+                    <a name="/s:4HTTP11HTTPRequestV7headers8NIOHTTP111HTTPHeadersVvp"></a>
                     <a name="//apple_ref/swift/Property/headers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestV7headersXev">headers</a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV7headers8NIOHTTP111HTTPHeadersVvp">headers</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -319,19 +355,19 @@
                       <div class="abstract">
                         <p>The header fields for this HTTP request.
 The <code>&quot;Content-Length&quot;</code> and <code>&quot;Transfer-Encoding&quot;</code> headers will be set automatically
-when the <code><a href="../Structs/HTTPRequest.html#/s:4HTTP11HTTPRequestV4bodyAA8HTTPBodyVv">body</a></code> property is mutated.</p>
+when the <code><a href="../Structs/HTTPRequest.html#/s:4HTTP11HTTPRequestV4bodyAA8HTTPBodyVvp">body</a></code> property is mutated.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L27">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L45-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -339,9 +375,9 @@ when the <code><a href="../Structs/HTTPRequest.html#/s:4HTTP11HTTPRequestV4bodyA
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP11HTTPRequestV4bodyAA8HTTPBodyVv"></a>
+                    <a name="/s:4HTTP11HTTPRequestV4bodyAA8HTTPBodyVvp"></a>
                     <a name="//apple_ref/swift/Property/body" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestV4bodyAA8HTTPBodyVv">body</a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV4bodyAA8HTTPBodyVvp">body</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -361,12 +397,12 @@ represents the <code><a href="../Structs/HTTPBody.html">HTTPBody</a></code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kt"><a href="../Structs/HTTPBody.html">HTTPBody</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kt"><a href="../Structs/HTTPBody.html">HTTPBody</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L35-L37">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L56-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -374,9 +410,9 @@ represents the <code><a href="../Structs/HTTPBody.html">HTTPBody</a></code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP11HTTPRequestV7channelXev"></a>
+                    <a name="/s:4HTTP11HTTPRequestV7channel3NIO7Channel_pSgvp"></a>
                     <a name="//apple_ref/swift/Property/channel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestV7channelXev">channel</a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV7channel3NIO7Channel_pSgvp">channel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -396,48 +432,7 @@ represents the <code><a href="../Structs/HTTPBody.html">HTTPBody</a></code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L40">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Computed"></a>
-                <a name="//apple_ref/swift/Section/Computed" class="dashAnchor"></a>
-                <a href="#/Computed">
-                  <h3 class="section-name">Computed</h3>
-                </a>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4HTTP11HTTPRequestV3urlXev"></a>
-                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestV3urlXev">url</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The URL used on this request.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L45-L48">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L61">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -445,9 +440,9 @@ represents the <code><a href="../Structs/HTTPBody.html">HTTPBody</a></code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP11HTTPRequestV7cookiesAA11HTTPCookiesVv"></a>
+                    <a name="/s:4HTTP11HTTPRequestV7cookiesAA11HTTPCookiesVvp"></a>
                     <a name="//apple_ref/swift/Property/cookies" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestV7cookiesAA11HTTPCookiesVv">cookies</a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV7cookiesAA11HTTPCookiesVvp">cookies</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -463,12 +458,12 @@ This accesses the <code>&quot;Cookie&quot;</code> header.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cookies</span><span class="p">:</span> <span class="kt"><a href="../Structs/HTTPCookies.html">HTTPCookies</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cookies</span><span class="p">:</span> <span class="kt"><a href="../Structs/HTTPCookies.html">HTTPCookies</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L52-L55">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L65-L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -476,9 +471,9 @@ This accesses the <code>&quot;Cookie&quot;</code> header.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP11HTTPRequestV11descriptionSSv"></a>
+                    <a name="/s:4HTTP11HTTPRequestV11descriptionSSvp"></a>
                     <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestV11descriptionSSv">description</a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV11descriptionSSvp">description</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -493,12 +488,12 @@ This accesses the <code>&quot;Cookie&quot;</code> header.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L58-L64">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L71-L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -517,9 +512,9 @@ This accesses the <code>&quot;Cookie&quot;</code> header.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP11HTTPRequestVXeXecfc"></a>
+                    <a name="/s:4HTTP11HTTPRequestVAC8NIOHTTP110HTTPMethodO6method_AA16URLRepresentable_p3urlAD11HTTPVersionV7versionAD11HTTPHeadersV7headersAA29LosslessHTTPBodyRepresentable_p4bodytcfc"></a>
                     <a name="//apple_ref/swift/Method/init(method:url:version:headers:body:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP11HTTPRequestVXeXecfc">init(method:url:version:headers:body:)</a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestVAC8NIOHTTP110HTTPMethodO6method_AA16URLRepresentable_p3urlAD11HTTPVersionV7versionAD11HTTPHeadersV7headersAA29LosslessHTTPBodyRepresentable_p4bodytcfc">init(method:url:version:headers:body:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -618,7 +613,7 @@ This accesses the <code>&quot;Cookie&quot;</code> header.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPRequest.swift#L82-L98">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPRequest.swift#L95-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -631,8 +626,8 @@ This accesses the <code>&quot;Cookie&quot;</code> header.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-18)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

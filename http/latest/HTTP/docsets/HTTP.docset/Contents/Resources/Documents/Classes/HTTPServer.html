@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E0%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E1%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -146,6 +146,12 @@
             <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BasicAuthorization.html">BasicAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BearerAuthorization.html">BearerAuthorization</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/HTTPBody.html">HTTPBody</a>
               </li>
               <li class="nav-group-task">
@@ -213,9 +219,9 @@ that will be used to generate responses to incoming requests.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP10HTTPServerC5startXeXeFZ"></a>
-                    <a name="//apple_ref/swift/Method/start(hostname:port:responder:maxBodySize:backlog:reuseAddress:tcpNoDelay:upgraders:on:onError:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP10HTTPServerC5startXeXeFZ">start(hostname:port:responder:maxBodySize:backlog:reuseAddress:tcpNoDelay:upgraders:on:onError:)</a>
+                    <a name="/s:4HTTP10HTTPServerC5start3NIO15EventLoopFutureCyACGSS8hostname_Si4portx9responderSi11maxBodySizeSi7backlogSb12reuseAddressSb10tcpNoDelaySb18supportCompressionSSSg10serverNameSay8NIOHTTP120HTTPProtocolUpgrader_pG9upgradersAE0eF5Group_p2onys5Error_pc7onErrortAA0B9ResponderRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/start(hostname:port:responder:maxBodySize:backlog:reuseAddress:tcpNoDelay:supportCompression:serverName:upgraders:on:onError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP10HTTPServerC5start3NIO15EventLoopFutureCyACGSS8hostname_Si4portx9responderSi11maxBodySizeSi7backlogSb12reuseAddressSb10tcpNoDelaySb18supportCompressionSSSg10serverNameSay8NIOHTTP120HTTPProtocolUpgrader_pG9upgradersAE0eF5Group_p2onys5Error_pc7onErrortAA0B9ResponderRzlFZ">start(hostname:port:responder:maxBodySize:backlog:reuseAddress:tcpNoDelay:supportCompression:serverName:upgraders:on:onError:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -242,6 +248,8 @@ responder to generate HTTP responses for incoming requests.</p>
     <span class="nv">backlog</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
     <span class="nv">reuseAddress</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nv">tcpNoDelay</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nv">supportCompression</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">serverName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">upgraders</span><span class="p">:</span> <span class="p">[</span><span class="kt">HTTPProtocolUpgrader</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
     <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">,</span>
     <span class="nv">onError</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">}</span>
@@ -341,6 +349,30 @@ responder to generate HTTP responses for incoming requests.</p>
                             <tr>
                               <td>
                                 <code>
+                                <em>supportCompression</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>When <code>true</code>, HTTP server will support gzip and deflate compression.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serverName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If set, this name will be serialized as the <code>Server</code> header in outgoing responses.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>upgraders</em>
                                 </code>
                               </td>
@@ -378,7 +410,7 @@ responder to generate HTTP responses for incoming requests.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPServer.swift#L28-L75">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPServer.swift#L30-L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -397,9 +429,9 @@ responder to generate HTTP responses for incoming requests.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP10HTTPServerC7onCloseXev"></a>
+                    <a name="/s:4HTTP10HTTPServerC7onClose3NIO15EventLoopFutureCyytGvp"></a>
                     <a name="//apple_ref/swift/Property/onClose" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP10HTTPServerC7onCloseXev">onClose</a>
+                    <a class="token" href="#/s:4HTTP10HTTPServerC7onClose3NIO15EventLoopFutureCyytGvp">onClose</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -414,12 +446,12 @@ responder to generate HTTP responses for incoming requests.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onClose</span><span class="p">:</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onClose</span><span class="p">:</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPServer.swift#L80-L82">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPServer.swift#L88-L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -438,9 +470,9 @@ responder to generate HTTP responses for incoming requests.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4HTTP10HTTPServerC5closeXeXeF"></a>
+                    <a name="/s:4HTTP10HTTPServerC5close3NIO15EventLoopFutureCyytGyF"></a>
                     <a name="//apple_ref/swift/Method/close()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4HTTP10HTTPServerC5closeXeXeF">close()</a>
+                    <a class="token" href="#/s:4HTTP10HTTPServerC5close3NIO15EventLoopFutureCyytGyF">close()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -460,7 +492,7 @@ responder to generate HTTP responses for incoming requests.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPServer.swift#L95-L97">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPServer.swift#L103-L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -473,8 +505,8 @@ responder to generate HTTP responses for incoming requests.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-18)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

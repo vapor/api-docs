@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
 
     <a title="Protocols  Reference"></a>
 
@@ -39,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E0%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E1%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -145,6 +146,12 @@
             <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/BasicAuthorization.html">BasicAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/BearerAuthorization.html">BearerAuthorization</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/HTTPBody.html">HTTPBody</a>
               </li>
               <li class="nav-group-task">
@@ -218,7 +225,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Body/HTTPBodyRepresentable.swift#L2-L5">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBodyRepresentable.swift#L2-L5">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -273,7 +280,7 @@ The decoders are associated with a <code>MediaType</code> when registered. When 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Codable/HTTPMessageCoder.swift#L25-L41">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Codable/HTTPMessageCoder.swift#L25-L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -307,7 +314,7 @@ cases (streaming, static, or other).</p>
 </code></pre>
 
 <p><code>HTTPMessageEncoder</code>s can be registered with <code>ContentConfig</code> during the application config phase.
-The encoders are associated with a <code>MediaType</code> when registered. When encoding content, the <code>Content</code>&rsquo;s
+The encoders are associated with a <code>MediaType</code> when registered. When encoding content, the <code>Content</code>&lsquo;s
 default <code>MediaType</code> is used to lookup an appropriate coder. You can also choose to override the
 <code>MediaType</code> when encoding.</p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">contentConfig</span> <span class="o">=</span> <span class="kt">ContentConfig</span><span class="o">.</span><span class="nf">default</span><span class="p">()</span>
@@ -326,7 +333,7 @@ default <code>MediaType</code> is used to lookup an appropriate coder. You can a
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Codable/HTTPMessageCoder.swift#L77-L90">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Codable/HTTPMessageCoder.swift#L77-L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -373,12 +380,12 @@ content to both message types.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPMessage</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPMessage</span> <span class="p">:</span> <span class="kt">CustomDebugStringConvertible</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/HTTPMessage.swift#L16-L29">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/HTTPMessage.swift#L16-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -413,7 +420,7 @@ content to both message types.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Message/URL+HTTP.swift#L2-L5">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Message/URL+HTTP.swift#L2-L5">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -435,7 +442,7 @@ content to both message types.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Can be used to upgrade <code><a href="Classes/HTTPClient.html">HTTPClient</a></code> requests using the static <code><a href="Classes/HTTPClient.html#/s:4HTTP10HTTPClientC7upgradeXeXeFZ">HTTPClient.upgrade(...)</a></code> method.</p>
+                        <p>Can be used to upgrade <code><a href="Classes/HTTPClient.html">HTTPClient</a></code> requests using the static <code><a href="Classes/HTTPClient.html#/s:4HTTP10HTTPClientC7upgrade3NIO15EventLoopFutureCy13UpgradeResultQzGAA10HTTPSchemeV6scheme_SS8hostnameSiSg4portx8upgraderAE0eF5Group_p2ontAA0B16ProtocolUpgraderRzlFZ">HTTPClient.upgrade(...)</a></code> method.</p>
 
                         <a href="Protocols/HTTPClientProtocolUpgrader.html" class="slightly-smaller">See more</a>
                       </div>
@@ -448,7 +455,7 @@ content to both message types.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPClientProtocolUpgrader.swift#L44-L58">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClientProtocolUpgrader.swift#L44-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -483,7 +490,7 @@ content to both message types.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/http/tree/3.0.0/Sources/HTTP/Responder/HTTPServerResponder.swift#L2-L10">Show on GitHub</a>
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPServerResponder.swift#L2-L10">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -496,8 +503,8 @@ content to both message types.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-04-18)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
