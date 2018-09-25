@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E2%2E0%2FCrypto%2Fdocsets%2FCrypto%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2F3%2E3%2E0%2FCrypto%2Fdocsets%2FCrypto%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -59,6 +59,12 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AuthenticatedCipher.html">AuthenticatedCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AuthenticatedCipherAlgorithm.html">AuthenticatedCipherAlgorithm</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/BCryptDigest.html">BCryptDigest</a>
               </li>
@@ -95,7 +101,7 @@
                 <a class="nav-group-task-link" href="Global Variables.html#/s:6Crypto9AES256CBCAA6CipherCvp">AES256CBC</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Global Variables.html#/s:6Crypto9AES256GCMAA6CipherCvp">AES256GCM</a>
+                <a class="nav-group-task-link" href="Global Variables.html#/s:6Crypto9AES256GCMAA19AuthenticatedCipherCvp">AES256GCM</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Global Variables.html#/s:6Crypto6BCryptAA0B6DigestCvp">BCrypt</a>
@@ -130,6 +136,9 @@
                 <a class="nav-group-task-link" href="Enums/CipherMode.html">CipherMode</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/OTPDigits.html">OTPDigits</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/RSAInputFormat.html">RSAInputFormat</a>
               </li>
               <li class="nav-group-task">
@@ -146,6 +155,20 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/Collection.html">Collection</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Data.html">Data</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/OpenSSLCipherAlgorithm.html">OpenSSLCipherAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/OpenSSLStreamCipher.html">OpenSSLStreamCipher</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -158,7 +181,13 @@
                 <a class="nav-group-task-link" href="Structs/CryptoRandom.html">CryptoRandom</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HOTP.html">HOTP</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/RSAKey.html">RSAKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TOTP.html">TOTP</a>
               </li>
             </ul>
           </li>
@@ -209,7 +238,82 @@ use the global <code><a href="Global Variables.html#/s:6Crypto6BCryptAA0B6Digest
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/BCrypt/BCryptDigest.swift#L10-L212">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.3.0/Sources/Crypto/BCrypt/BCryptDigest.swift#L10-L212">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto19AuthenticatedCipherC"></a>
+                    <a name="//apple_ref/swift/Class/AuthenticatedCipher" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto19AuthenticatedCipherC">AuthenticatedCipher</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>AuthenticatedCipher supports AEAD-type ciphers. It feels a lot like &lsquo;Cipher&rsquo; except that it supports the
+AEAD tag and related validation.</p>
+
+                        <a href="Classes/AuthenticatedCipher.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">AuthenticatedCipher</span> <span class="p">:</span> <span class="kt"><a href="Protocols/OpenSSLStreamCipher.html">OpenSSLStreamCipher</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.3.0/Sources/Crypto/Cipher/AuthenticatedCipher.swift#L22-L140">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Crypto28AuthenticatedCipherAlgorithmC"></a>
+                    <a name="//apple_ref/swift/Class/AuthenticatedCipherAlgorithm" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Crypto28AuthenticatedCipherAlgorithmC">AuthenticatedCipherAlgorithm</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies an authenticated cipher algorithm (e.g., AES-256-GCM) to be used with an <code><a href="Classes/AuthenticatedCipher.html">AuthenticatedCipher</a></code>.</p>
+
+<p>Common authenticated cipher algorithms are provided as static properties on this class.</p>
+
+<p>There are also static methods for creating <code>AuthenticatedCipherAlgorithm</code> such as <code><a href="Classes/AuthenticatedCipherAlgorithm.html#/s:6Crypto28AuthenticatedCipherAlgorithmC5namedACSSKFZ">AuthenticatedCipherAlgorithm.named(_:)</a></code></p>
+
+                        <a href="Classes/AuthenticatedCipherAlgorithm.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">AuthenticatedCipherAlgorithm</span> <span class="p">:</span> <span class="kt"><a href="Protocols/OpenSSLCipherAlgorithm.html">OpenSSLCipherAlgorithm</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto/tree/3.3.0/Sources/Crypto/Cipher/AuthenticatedCipherAlgorithm.swift#L8-L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -259,12 +363,12 @@ use the global <code><a href="Global Variables.html#/s:6Crypto6BCryptAA0B6Digest
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Cipher</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Cipher</span> <span class="p">:</span> <span class="kt"><a href="Protocols/OpenSSLStreamCipher.html">OpenSSLStreamCipher</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/Cipher/Cipher.swift#L62-L231">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.3.0/Sources/Crypto/Cipher/Cipher.swift#L51-L126">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -298,12 +402,12 @@ use the global <code><a href="Global Variables.html#/s:6Crypto6BCryptAA0B6Digest
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CipherAlgorithm</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CipherAlgorithm</span> <span class="p">:</span> <span class="kt"><a href="Protocols/OpenSSLCipherAlgorithm.html">OpenSSLCipherAlgorithm</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/Cipher/CipherAlgorithm.swift#L8-L76">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.3.0/Sources/Crypto/Cipher/CipherAlgorithm.swift#L8-L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -354,7 +458,7 @@ use the global <code><a href="Global Variables.html#/s:6Crypto6BCryptAA0B6Digest
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/Digest/Digest.swift#L51-L148">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.3.0/Sources/Crypto/Digest/Digest.swift#L51-L150">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -394,7 +498,7 @@ use the global <code><a href="Global Variables.html#/s:6Crypto6BCryptAA0B6Digest
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/Digest/DigestAlgorithm.swift#L9-L78">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.3.0/Sources/Crypto/Digest/DigestAlgorithm.swift#L9-L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -436,7 +540,7 @@ use the global <code><a href="Global Variables.html#/s:6Crypto6BCryptAA0B6Digest
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/MAC/HMAC.swift#L12-L156">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.3.0/Sources/Crypto/MAC/HMAC.swift#L12-L158">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -484,7 +588,7 @@ can only verify data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/crypto/tree/3.2.0/Sources/Crypto/RSA/RSA.swift#L19-L194">Show on GitHub</a>
+                        <a href="https://github.com/vapor/crypto/tree/3.3.0/Sources/Crypto/RSA/RSA.swift#L19-L199">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -497,7 +601,7 @@ can only verify data.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-31)</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-09-25)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
