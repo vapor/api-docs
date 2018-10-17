@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2F3%2E0%2E0%2FFluent%2Fdocsets%2FFluent%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2F3%2E1%2E0%2FFluent%2Fdocsets%2FFluent%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -277,7 +277,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder.swift#L11">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder.swift#L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -312,7 +312,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder.swift#L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder.swift#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -416,7 +416,7 @@
                         <p>Self for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/Join/QueryBuilder+Join.swift#L27-L30">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/Join/QueryBuilder+Join.swift#L27-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -435,9 +435,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Fluent12QueryBuilderC3sumy3NIO15EventLoopFutureCyqd__Gs7KeyPathCyq_qd__GSeRd__lF"></a>
-                    <a name="//apple_ref/swift/Method/sum(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Fluent12QueryBuilderC3sumy3NIO15EventLoopFutureCyqd__Gs7KeyPathCyq_qd__GSeRd__lF">sum(_:)</a>
+                    <a name="/s:6Fluent12QueryBuilderC3sum_7default3NIO15EventLoopFutureCyqd__Gs7KeyPathCyq_qd__G_qd__SgtSeRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/sum(_:default:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent12QueryBuilderC3sum_7default3NIO15EventLoopFutureCyqd__Gs7KeyPathCyq_qd__G_qd__SgtSeRd__lF">sum(_:default:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -449,12 +449,19 @@
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">totalLikes</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Post</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">conn</span><span class="p">)</span><span class="o">.</span><span class="nf">sum</span><span class="p">(\</span><span class="o">.</span><span class="n">likes</span><span class="p">)</span>
 </code></pre>
 
+<p>If a default value is supplied, it will be used when the sum&rsquo;s result
+set is empty and no sum can be determined.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">totalViralPostLikes</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Post</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">conn</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">filter</span><span class="p">(\</span><span class="o">.</span><span class="n">likes</span> <span class="o">&gt;=</span> <span class="mi">10_000_000</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">sum</span><span class="p">(\</span><span class="o">.</span><span class="n">likes</span><span class="p">,</span> <span class="k">default</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sum</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Result</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sum</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Result</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="k">default</span><span class="p">:</span> <span class="kt">T</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
                       </div>
@@ -474,6 +481,18 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>default</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional default to use.</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -482,7 +501,7 @@
                         <p>A <code>Future</code> containing the sum.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L11-L13">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L19-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -537,7 +556,7 @@
                         <p>A <code>Future</code> containing the average.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L22-L24">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L41-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -592,7 +611,7 @@
                         <p>A <code>Future</code> containing the min.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L33-L35">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L52-L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -647,7 +666,7 @@
                         <p>A <code>Future</code> containing the max.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L44-L46">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L63-L65">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -728,7 +747,7 @@ the convenience methods like <code><a href="../Classes/QueryBuilder.html#/s:6Flu
                         <p>A <code>Future</code> containing the aggregate.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L58-L62">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L77-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -764,7 +783,7 @@ the convenience methods like <code><a href="../Classes/QueryBuilder.html#/s:6Flu
                         <p>A <code>Future</code> containing the count.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L69-L71">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Aggregate.swift#L88-L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -836,7 +855,7 @@ the convenience methods like <code><a href="../Classes/QueryBuilder.html#/s:6Flu
                         <p>A <code>Future</code> that will be completed when the create is done.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L14-L16">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L14-L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -897,7 +916,7 @@ the convenience methods like <code><a href="../Classes/QueryBuilder.html#/s:6Flu
                         <p>A <code>Future</code> that will be completed when the update is done.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L28-L30">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L28-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -968,7 +987,7 @@ the convenience methods like <code><a href="../Classes/QueryBuilder.html#/s:6Flu
                         <p><code>Self</code> for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L52-L56">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L52-L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1004,7 +1023,7 @@ the convenience methods like <code><a href="../Classes/QueryBuilder.html#/s:6Flu
                         <p>A <code>Future</code> that will be completed when the delete is done.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L63-L70">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L66-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1040,7 +1059,7 @@ the convenience methods like <code><a href="../Classes/QueryBuilder.html#/s:6Flu
                         <p>A <code>Future</code> that will be completed when the delete is done.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L77-L86">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+CRUD.swift#L80-L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1111,7 +1130,7 @@ The new result for this query will be a tuple containing the previous result and
                         <p><code>QueryBuilder</code> decoding type <code>(Result, D)</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L16-L18">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L16-L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1183,7 +1202,7 @@ The new result for this query will be a tuple containing the previous result and
                         <p><code>QueryBuilder</code> decoding type <code>(Result, D)</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L33-L37">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L33-L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1242,7 +1261,7 @@ The new result for this query will be a tuple containing the previous result and
                         <p><code>QueryBuilder</code> decoding type <code>D</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L50-L52">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L50-L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1313,7 +1332,7 @@ The new result for this query will be a tuple containing the previous result and
                         <p><code>QueryBuilder</code> decoding type <code>D</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L66-L70">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L66-L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1346,7 +1365,7 @@ The new result for this query will be a tuple containing the previous result and
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L77-L81">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L77-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1410,7 +1429,7 @@ the current Model&rsquo;s entity.</p>
                         <p><code>QueryBuilder</code> decoding type <code>D</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L123-L125">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Decode.swift#L123-L125">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1504,7 +1523,7 @@ the current Model&rsquo;s entity.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L16-L24">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L16-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1588,7 +1607,7 @@ the current Model&rsquo;s entity.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L39-L47">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L39-L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1671,7 +1690,7 @@ the current Model&rsquo;s entity.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L61-L69">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L61-L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1708,7 +1727,7 @@ the current Model&rsquo;s entity.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L93-L96">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L93-L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1790,7 +1809,7 @@ the current Model&rsquo;s entity.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L112-L128">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Filter.swift#L112-L128">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1858,7 +1877,7 @@ If you need to create a model with a pre-existing ID, call <code><a href="../Cla
                         <p>A <code>Future</code> containing the saved <code><a href="../Protocols/Model.html">Model</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Model.swift#L13-L19">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Model.swift#L13-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1915,7 +1934,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>A <code>Future</code> containing the created <code><a href="../Protocols/Model.html">Model</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Model.swift#L30-L66">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Model.swift#L30-L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1983,7 +2002,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>A <code>Future</code> containing the created <code><a href="../Protocols/Model.html">Model</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Model.swift#L77-L105">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Model.swift#L77-L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2026,7 +2045,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Operators.swift#L9-L11">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Operators.swift#L9-L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2068,7 +2087,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Operators.swift#L23-L25">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Operators.swift#L23-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2115,7 +2134,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L9-L11">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L9-L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2151,7 +2170,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L18-L20">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L18-L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2187,7 +2206,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L27-L29">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L27-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2223,7 +2242,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L36-L38">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L36-L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2259,7 +2278,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L45-L47">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L45-L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2324,7 +2343,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L55-L58">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Range.swift#L55-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2371,7 +2390,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>A <code>Future</code> containing the results.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Run.swift#L9-L16">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Run.swift#L9-L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2407,7 +2426,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>A <code>Future</code> containing the first result, if one exists.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Run.swift#L23-L25">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Run.swift#L23-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2479,7 +2498,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>A <code>Future</code> that will be completed when all chunks have been handled.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Run.swift#L40-L54">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Run.swift#L40-L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2536,7 +2555,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>A <code>Future</code> that will be completed when the query has finished.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Run.swift#L65-L71">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Run.swift#L65-L71">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2614,7 +2633,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Sort.swift#L12-L14">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Sort.swift#L12-L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2667,7 +2686,7 @@ This method can auto-generate an ID depending on ID type.</p>
                         <p>Query builder for chaining.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/fluent/tree/3.0.0/Sources/Fluent/QueryBuilder/QueryBuilder+Sort.swift#L21-L24">Show on GitHub</a>
+                        <a href="https://github.com/vapor/fluent/tree/3.1.0/Sources/Fluent/QueryBuilder/QueryBuilder+Sort.swift#L21-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2680,7 +2699,7 @@ This method can auto-generate an ID depending on ID type.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-16)</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
