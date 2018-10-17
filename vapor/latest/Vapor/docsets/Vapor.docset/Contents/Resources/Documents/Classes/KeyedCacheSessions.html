@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -70,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateMiddleware.html">DateMiddleware</a>
@@ -208,6 +205,9 @@
                 <a class="nav-group-task-link" href="../Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -317,6 +317,9 @@
                 <a class="nav-group-task-link" href="../Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -373,6 +376,12 @@
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -392,7 +401,7 @@
             <h1>KeyedCacheSessions</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">KeyedCacheSessions</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Sessions.html">Sessions</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">KeyedCacheSessions</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Sessions.html">Sessions</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                 </div>
               </div>
@@ -408,9 +417,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18KeyedCacheSessionsC15serviceSupportsSayypXpGvZ"></a>
+                    <a name="/s:5Vapor18KeyedCacheSessionsC15serviceSupportsSayypXpGvpZ"></a>
                     <a name="//apple_ref/swift/Variable/serviceSupports" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC15serviceSupportsSayypXpGvZ">serviceSupports</a>
+                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC15serviceSupportsSayypXpGvpZ">serviceSupports</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -425,12 +434,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">serviceSupports</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">serviceSupports</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L6">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L6">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -438,9 +447,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18KeyedCacheSessionsC11makeServiceXeXeFZ"></a>
+                    <a name="/s:5Vapor18KeyedCacheSessionsC11makeService3forAC0F09Container_p_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/makeService(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC11makeServiceXeXeFZ">makeService(for:)</a>
+                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC11makeService3forAC0F09Container_p_tKFZ">makeService(for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -460,7 +469,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L9-L11">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L9-L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -468,9 +477,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18KeyedCacheSessionsC05keyedC0Xev"></a>
+                    <a name="/s:5Vapor18KeyedCacheSessionsC05keyedC011DatabaseKit0bC0_pvp"></a>
                     <a name="//apple_ref/swift/Property/keyedCache" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC05keyedC0Xev">keyedCache</a>
+                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC05keyedC011DatabaseKit0bC0_pvp">keyedCache</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -490,7 +499,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L14">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -498,9 +507,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18KeyedCacheSessionsCXeXecfc"></a>
+                    <a name="/s:5Vapor18KeyedCacheSessionsC05keyedC0AC11DatabaseKit0bC0_p_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(keyedCache:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsCXeXecfc">init(keyedCache:)</a>
+                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC05keyedC0AC11DatabaseKit0bC0_p_tcfc">init(keyedCache:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -520,7 +529,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L17-L19">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L17-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -528,9 +537,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18KeyedCacheSessionsC13createSessionXeXeF"></a>
+                    <a name="/s:5Vapor18KeyedCacheSessionsC13createSessiony3NIO15EventLoopFutureCyytGAA0F0CKF"></a>
                     <a name="//apple_ref/swift/Method/createSession(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC13createSessionXeXeF">createSession(_:)</a>
+                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC13createSessiony3NIO15EventLoopFutureCyytGAA0F0CKF">createSession(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -550,7 +559,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L22-L26">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L22-L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -558,9 +567,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18KeyedCacheSessionsC11readSessionXeXeF"></a>
+                    <a name="/s:5Vapor18KeyedCacheSessionsC11readSession9sessionID3NIO15EventLoopFutureCyAA0F0CSgGSS_tKF"></a>
                     <a name="//apple_ref/swift/Method/readSession(sessionID:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC11readSessionXeXeF">readSession(sessionID:)</a>
+                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC11readSession9sessionID3NIO15EventLoopFutureCyAA0F0CSgGSS_tKF">readSession(sessionID:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -580,7 +589,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L29-L33">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L29-L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -588,9 +597,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18KeyedCacheSessionsC13updateSessionXeXeF"></a>
+                    <a name="/s:5Vapor18KeyedCacheSessionsC13updateSessiony3NIO15EventLoopFutureCyytGAA0F0CKF"></a>
                     <a name="//apple_ref/swift/Method/updateSession(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC13updateSessionXeXeF">updateSession(_:)</a>
+                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC13updateSessiony3NIO15EventLoopFutureCyytGAA0F0CKF">updateSession(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -610,7 +619,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L36-L42">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L36-L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -618,9 +627,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18KeyedCacheSessionsC14destroySessionXeXeF"></a>
+                    <a name="/s:5Vapor18KeyedCacheSessionsC14destroySession9sessionID3NIO15EventLoopFutureCyytGSS_tKF"></a>
                     <a name="//apple_ref/swift/Method/destroySession(sessionID:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC14destroySessionXeXeF">destroySession(sessionID:)</a>
+                    <a class="token" href="#/s:5Vapor18KeyedCacheSessionsC14destroySession9sessionID3NIO15EventLoopFutureCyytGSS_tKF">destroySession(sessionID:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -640,7 +649,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L45-L47">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/KeyedCacheSessions.swift#L45-L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -653,8 +662,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

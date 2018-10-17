@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -70,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateMiddleware.html">DateMiddleware</a>
@@ -208,6 +205,9 @@
                 <a class="nav-group-task-link" href="../Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -317,6 +317,9 @@
                 <a class="nav-group-task-link" href="../Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -373,6 +376,12 @@
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -392,7 +401,7 @@
             <h1>Content</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Content</span><span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt"><a href="../Typealiases.html#/s:5Vapor15ResponseCodablea">ResponseCodable</a></span><span class="p">,</span> <span class="kt"><a href="../Typealiases.html#/s:5Vapor14RequestCodablea">RequestCodable</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Content</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt"><a href="../Protocols/RequestDecodable.html">RequestDecodable</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/RequestEncodable.html">RequestEncodable</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/ResponseDecodable.html">ResponseDecodable</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                 </div>
               </div>
@@ -427,9 +436,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor7ContentP07defaultB4TypeXevZ"></a>
+                    <a name="/s:5Vapor7ContentP07defaultB4Type4Core05MediaD0VvpZ"></a>
                     <a name="//apple_ref/swift/Variable/defaultContentType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor7ContentP07defaultB4TypeXevZ">defaultContentType</a>
+                    <a class="token" href="#/s:5Vapor7ContentP07defaultB4Type4Core05MediaD0VvpZ">defaultContentType</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -453,7 +462,7 @@
 <span class="p">}</span>
 
 <span class="n">router</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"greeting2"</span><span class="p">)</span> <span class="p">{</span> <span class="n">req</span> <span class="k">in</span>
-    <span class="k">let</span> <span class="nv">res</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="nf">makeResponse</span><span class="p">()</span>
+    <span class="k">let</span> <span class="nv">res</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="nf">response</span><span class="p">()</span>
     <span class="k">try</span> <span class="n">res</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="kt">Hello</span><span class="p">(),</span> <span class="nv">as</span><span class="p">:</span> <span class="o">.</span><span class="n">json</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">res</span> <span class="c1">// {"message":"Hello!"}</span>
 <span class="p">}</span>
@@ -471,12 +480,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultContentType</span><span class="p">:</span> <span class="kt">MediaType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultContentType</span><span class="p">:</span> <span class="kt">MediaType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Content/Content.swift#L39">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Content/Content.swift#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -488,9 +497,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor7ContentPAAE6encodeXeXeF"></a>
+                    <a name="/s:5Vapor7ContentPAAE6encode5using3NIO15EventLoopFutureCyAA7RequestCG7Service9Container_p_tKF"></a>
                     <a name="//apple_ref/swift/Method/encode(using:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor7ContentPAAE6encodeXeXeF">encode(using:)</a>
+                    <a class="token" href="#/s:5Vapor7ContentPAAE6encode5using3NIO15EventLoopFutureCyAA7RequestCG7Service9Container_p_tKF">encode(using:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -515,7 +524,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Content/Content.swift#L55-L59">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Content/Content.swift#L55-L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -523,9 +532,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor7ContentPAAE6encodeXeXeF"></a>
+                    <a name="/s:5Vapor7ContentPAAE6encode3for3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestC_tKF"></a>
                     <a name="//apple_ref/swift/Method/encode(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor7ContentPAAE6encodeXeXeF">encode(for:)</a>
+                    <a class="token" href="#/s:5Vapor7ContentPAAE6encode3for3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestC_tKF">encode(for:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -550,7 +559,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Content/Content.swift#L64-L68">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Content/Content.swift#L64-L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -558,9 +567,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor7ContentPAAE6decodeXeXeFZ"></a>
+                    <a name="/s:5Vapor7ContentPAAE6decode4from3NIO15EventLoopFutureCyxGAA7RequestC_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/decode(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor7ContentPAAE6decodeXeXeFZ">decode(from:)</a>
+                    <a class="token" href="#/s:5Vapor7ContentPAAE6decode4from3NIO15EventLoopFutureCyxGAA7RequestC_tKFZ">decode(from:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -585,7 +594,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Content/Content.swift#L73-L76">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Content/Content.swift#L73-L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -593,9 +602,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor7ContentPAAE6decodeXeXeFZ"></a>
+                    <a name="/s:5Vapor7ContentPAAE6decode4from3for3NIO15EventLoopFutureCyxGAA8ResponseC_AA7RequestCtKFZ"></a>
                     <a name="//apple_ref/swift/Method/decode(from:for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor7ContentPAAE6decodeXeXeFZ">decode(from:for:)</a>
+                    <a class="token" href="#/s:5Vapor7ContentPAAE6decode4from3for3NIO15EventLoopFutureCyxGAA8ResponseC_AA7RequestCtKFZ">decode(from:for:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -620,7 +629,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Content/Content.swift#L81-L84">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Content/Content.swift#L81-L84">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -633,8 +642,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

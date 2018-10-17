@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -70,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateMiddleware.html">DateMiddleware</a>
@@ -208,6 +205,9 @@
                 <a class="nav-group-task-link" href="../Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -317,6 +317,9 @@
                 <a class="nav-group-task-link" href="../Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -373,6 +376,12 @@
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -392,7 +401,7 @@
             <h1>Application</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Application</span><span class="p">:</span> <span class="kt">Container</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Application</span> <span class="p">:</span> <span class="kt">Container</span></code></pre>
 
                 </div>
               </div>
@@ -405,13 +414,13 @@
 
 </div>
 
-<p>Call the <code>run()</code> method to run this <code>Application</code>&rsquo;s commands. By default, this will boot an <code>HTTPServer</code> and begin serving requests.
+<p>Call the <code>run()</code> method to run this <code>Application</code>&lsquo;s commands. By default, this will boot an <code>HTTPServer</code> and begin serving requests.
 Which command is run depends on the command-line arguments and flags.</p>
 <pre class="highlight swift"><code><span class="k">try</span> <span class="n">app</span><span class="o">.</span><span class="nf">run</span><span class="p">()</span>
 </code></pre>
 
 <p>The <code>Application</code> is responsible for calling <code>Provider</code> (and <code><a href="../Protocols/VaporProvider.html">VaporProvider</a></code>) boot methods. The <code>willBoot</code> and <code>didBoot</code> methods
-will be called on <code><a href="../Classes/Application.html#/s:5Vapor11ApplicationCXeXecfc">Application.init(...)</a></code> for both provider types. <code><a href="../Protocols/VaporProvider.html">VaporProvider</a></code>&rsquo;s will have their <code>willRun</code> and <code>didRun</code> methods
+will be called on <code><a href="../Classes/Application.html#/s:5Vapor11ApplicationC6config11environment8servicesAC7Service6ConfigV_AG11EnvironmentVAG8ServicesVtKcfc">Application.init(...)</a></code> for both provider types. <code><a href="../Protocols/VaporProvider.html">VaporProvider</a></code>&rsquo;s will have their <code>willRun</code> and <code>didRun</code> methods
 called on <code><a href="../Classes/Application.html#/s:5Vapor11ApplicationC3runyyKF">Application.run()</a></code></p>
 
           </div>
@@ -424,9 +433,9 @@ called on <code><a href="../Classes/Application.html#/s:5Vapor11ApplicationC3run
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationC6configXev"></a>
+                    <a name="/s:5Vapor11ApplicationC6config7Service6ConfigVvp"></a>
                     <a name="//apple_ref/swift/Property/config" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationC6configXev">config</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC6config7Service6ConfigVvp">config</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -447,7 +456,7 @@ for a given interface when multiple are available.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L18">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -455,9 +464,9 @@ for a given interface when multiple are available.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationC11environmentXev"></a>
+                    <a name="/s:5Vapor11ApplicationC11environment7Service11EnvironmentVvp"></a>
                     <a name="//apple_ref/swift/Property/environment" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationC11environmentXev">environment</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC11environment7Service11EnvironmentVvp">environment</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -477,7 +486,7 @@ for a given interface when multiple are available.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L21">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -485,9 +494,9 @@ for a given interface when multiple are available.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationC8servicesXev"></a>
+                    <a name="/s:5Vapor11ApplicationC8services7Service8ServicesVvp"></a>
                     <a name="//apple_ref/swift/Property/services" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationC8servicesXev">services</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC8services7Service8ServicesVvp">services</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -508,7 +517,7 @@ form this application (i.e., <code><a href="../Classes/Request.html">Request</a>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L25">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -516,9 +525,9 @@ form this application (i.e., <code><a href="../Classes/Request.html">Request</a>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationC12serviceCacheXev"></a>
+                    <a name="/s:5Vapor11ApplicationC12serviceCache7Service0eD0Cvp"></a>
                     <a name="//apple_ref/swift/Property/serviceCache" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationC12serviceCacheXev">serviceCache</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC12serviceCache7Service0eD0Cvp">serviceCache</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -526,7 +535,7 @@ form this application (i.e., <code><a href="../Classes/Request.html">Request</a>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>Application</code>&rsquo;s private service cache. This cache will not be shared with any sub-containers created by this application.</p>
+                        <p>The <code>Application</code>&lsquo;s private service cache. This cache will not be shared with any sub-containers created by this application.</p>
 
                       </div>
                       <div class="declaration">
@@ -538,7 +547,7 @@ form this application (i.e., <code><a href="../Classes/Request.html">Request</a>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L28">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -546,9 +555,9 @@ form this application (i.e., <code><a href="../Classes/Request.html">Request</a>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationC9eventLoopXev"></a>
+                    <a name="/s:5Vapor11ApplicationC9eventLoop3NIO05EventD0_pvp"></a>
                     <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationC9eventLoopXev">eventLoop</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC9eventLoop3NIO05EventD0_pvp">eventLoop</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -556,7 +565,7 @@ form this application (i.e., <code><a href="../Classes/Request.html">Request</a>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This <code>Application</code>&rsquo;s event loop. This event-loop is separate from the <code>HTTPServer</code>&rsquo;s event loop group and should only be used
+                        <p>This <code>Application</code>&lsquo;s event loop. This event-loop is separate from the <code>HTTPServer</code>&rsquo;s event loop group and should only be used
 for creating services during boot / configuration phases. Never use this event loop while responding to requests.</p>
 
                       </div>
@@ -564,12 +573,12 @@ for creating services during boot / configuration phases. Never use this event l
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L35-L37">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L35-L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -577,9 +586,9 @@ for creating services during boot / configuration phases. Never use this event l
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationC6extendXev"></a>
+                    <a name="/s:5Vapor11ApplicationC6extend7Service6ExtendVvp"></a>
                     <a name="//apple_ref/swift/Property/extend" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationC6extendXev">extend</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC6extend7Service6ExtendVvp">extend</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -599,7 +608,7 @@ for creating services during boot / configuration phases. Never use this event l
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L40">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -618,9 +627,9 @@ for creating services during boot / configuration phases. Never use this event l
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationC9asyncBootXeXeFZ"></a>
+                    <a name="/s:5Vapor11ApplicationC9asyncBoot6config11environment8services3NIO15EventLoopFutureCyACG7Service6ConfigV_AL11EnvironmentVAL8ServicesVtFZ"></a>
                     <a name="//apple_ref/swift/Method/asyncBoot(config:environment:services:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationC9asyncBootXeXeFZ">asyncBoot(config:environment:services:)</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC9asyncBoot6config11environment8services3NIO15EventLoopFutureCyACG7Service6ConfigV_AL11EnvironmentVAL8ServicesVtFZ">asyncBoot(config:environment:services:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -684,7 +693,7 @@ for creating services during boot / configuration phases. Never use this event l
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L51-L54">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L51-L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -692,9 +701,9 @@ for creating services during boot / configuration phases. Never use this event l
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationCXeXecfc"></a>
+                    <a name="/s:5Vapor11ApplicationC6config11environment8servicesAC7Service6ConfigV_AG11EnvironmentVAG8ServicesVtKcfc"></a>
                     <a name="//apple_ref/swift/Method/init(config:environment:services:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationCXeXecfc">init(config:environment:services:)</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC6config11environment8servicesAC7Service6ConfigV_AG11EnvironmentVAG8ServicesVtKcfc">init(config:environment:services:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -742,7 +751,7 @@ for creating services during boot / configuration phases. Never use this event l
                               <td>
                                 <div>
                                   <p>Application&rsquo;s environment type (i.e., testing, production).
-           Different environments can trigger different application behavior (for example, supressing verbose logs in production mode).</p>
+           Different environments can trigger different application behavior (for example, suppressing verbose logs in production mode).</p>
                                 </div>
                               </td>
                             </tr>
@@ -762,7 +771,7 @@ for creating services during boot / configuration phases. Never use this event l
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L63-L70">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L63-L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -781,9 +790,9 @@ for creating services during boot / configuration phases. Never use this event l
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationC8asyncRunXeXeF"></a>
+                    <a name="/s:5Vapor11ApplicationC8asyncRun3NIO15EventLoopFutureCyytGyF"></a>
                     <a name="//apple_ref/swift/Method/asyncRun()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationC8asyncRunXeXeF">asyncRun()</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC8asyncRun3NIO15EventLoopFutureCyytGyF">asyncRun()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -791,7 +800,7 @@ for creating services during boot / configuration phases. Never use this event l
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Asynchronously runs the <code>Application</code>&rsquo;s commands. This method will call the <code>willRun(_:)</code> methods of all
+                        <p>Asynchronously runs the <code>Application</code>&lsquo;s commands. This method will call the <code>willRun(_:)</code> methods of all
 registered <code>VaporProvider&#39;s</code> before running.</p>
 
 <p>Normally this command will boot an <code>HTTPServer</code>. However, depending on configuration and command-line arguments/flags, this method may run a different command.
@@ -799,7 +808,7 @@ See <code>CommandConfig</code> for more information about customizing the comman
 <pre class="highlight swift"><code><span class="k">try</span> <span class="n">app</span><span class="o">.</span><span class="nf">asyncRun</span><span class="p">()</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
 </code></pre>
 
-<p>Note: When running a server, <code>asyncRun()</code> will return when the server has finished <em>booting</em>. Use the <code><a href="../Classes/Application.html#/s:5Vapor11ApplicationC13runningServerAA07RunningD0VSgv">runningServer</a></code> property on <code>Application</code> to wait
+<p>Note: When running a server, <code>asyncRun()</code> will return when the server has finished <em>booting</em>. Use the <code><a href="../Classes/Application.html#/s:5Vapor11ApplicationC13runningServerAA07RunningD0VSgvp">runningServer</a></code> property on <code>Application</code> to wait
 for the server to close. The synchronous <code><a href="../Classes/Application.html#/s:5Vapor11ApplicationC3runyyKF">run()</a></code> method will call this automatically.</p>
 <pre class="highlight swift"><code><span class="k">try</span> <span class="n">app</span><span class="o">.</span><span class="n">runningServer</span><span class="p">?</span><span class="o">.</span><span class="nf">onClose</span><span class="p">()</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
 </code></pre>
@@ -816,7 +825,7 @@ for the server to close. The synchronous <code><a href="../Classes/Application.h
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L88-L104">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L88-L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -834,7 +843,7 @@ for the server to close. The synchronous <code><a href="../Classes/Application.h
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Synchronously calls <code><a href="../Classes/Application.html#/s:5Vapor11ApplicationC8asyncRunXeXeF">asyncRun()</a></code> and waits for the running server to close (if one exists).</p>
+                        <p>Synchronously calls <code><a href="../Classes/Application.html#/s:5Vapor11ApplicationC8asyncRun3NIO15EventLoopFutureCyytGyF">asyncRun()</a></code> and waits for the running server to close (if one exists).</p>
 
                       </div>
                       <div class="declaration">
@@ -846,7 +855,7 @@ for the server to close. The synchronous <code><a href="../Classes/Application.h
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Application.swift#L107-L110">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Application.swift#L107-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -858,9 +867,9 @@ for the server to close. The synchronous <code><a href="../Classes/Application.h
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor11ApplicationC13runningServerAA07RunningD0VSgv"></a>
+                    <a name="/s:5Vapor11ApplicationC13runningServerAA07RunningD0VSgvp"></a>
                     <a name="//apple_ref/swift/Property/runningServer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor11ApplicationC13runningServerAA07RunningD0VSgv">runningServer</a>
+                    <a class="token" href="#/s:5Vapor11ApplicationC13runningServerAA07RunningD0VSgvp">runningServer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -868,19 +877,19 @@ for the server to close. The synchronous <code><a href="../Classes/Application.h
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Stores a reference to the <code>Application</code>&rsquo;s currently running server.</p>
+                        <p>Stores a reference to the <code>Application</code>&lsquo;s currently running server.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">runningServer</span><span class="p">:</span> <span class="kt"><a href="../Structs/RunningServer.html">RunningServer</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">runningServer</span><span class="p">:</span> <span class="kt"><a href="../Structs/RunningServer.html">RunningServer</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Server/RunningServer.swift#L3-L16">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/RunningServer.swift#L3-L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -893,8 +902,8 @@ for the server to close. The synchronous <code><a href="../Classes/Application.h
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

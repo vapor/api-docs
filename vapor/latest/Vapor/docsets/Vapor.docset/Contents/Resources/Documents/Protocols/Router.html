@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -70,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateMiddleware.html">DateMiddleware</a>
@@ -208,6 +205,9 @@
                 <a class="nav-group-task-link" href="../Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -317,6 +317,9 @@
                 <a class="nav-group-task-link" href="../Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -373,6 +376,12 @@
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -392,7 +401,7 @@
             <h1>Router</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Router</span><span class="p">:</span> <span class="kd">class</span><span class="p">,</span> <span class="kt">Service</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Router</span> <span class="p">:</span> <span class="kt">AnyObject</span><span class="p">,</span> <span class="kt">Service</span></code></pre>
 
                 </div>
               </div>
@@ -408,9 +417,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterP6routesXev"></a>
+                    <a name="/s:5Vapor6RouterP6routesSay7Routing5RouteCyAA9Responder_pGGvp"></a>
                     <a name="//apple_ref/swift/Property/routes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterP6routesXev">routes</a>
+                    <a class="token" href="#/s:5Vapor6RouterP6routesSay7Routing5RouteCyAA9Responder_pGGvp">routes</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -425,12 +434,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">routes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">routes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router.swift#L4">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router.swift#L4">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -438,9 +447,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterP8registerXeXeF"></a>
+                    <a name="/s:5Vapor6RouterP8register5routey7Routing5RouteCyAA9Responder_pG_tF"></a>
                     <a name="//apple_ref/swift/Method/register(route:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterP8registerXeXeF">register(route:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterP8register5routey7Routing5RouteCyAA9Responder_pG_tF">register(route:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -479,7 +488,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router.swift#L10">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router.swift#L10">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -487,9 +496,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterP5routeAA9Responder_pSgAA7RequestC7request_tF"></a>
+                    <a name="/s:5Vapor6RouterP5route7requestAA9Responder_pSgAA7RequestC_tF"></a>
                     <a name="//apple_ref/swift/Method/route(request:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterP5routeAA9Responder_pSgAA7RequestC7request_tF">route(request:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterP5route7requestAA9Responder_pSgAA7RequestC_tF">route(request:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -532,7 +541,7 @@
                         <p>Matching <code><a href="../Protocols/Responder.html">Responder</a></code> or <code>nil</code> if none was found.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router.swift#L17">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router.swift#L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -544,9 +553,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE8registeryAA15RouteCollection_p10collection_tKF"></a>
+                    <a name="/s:5Vapor6RouterPAAE8register10collectionyAA15RouteCollection_p_tKF"></a>
                     <a name="//apple_ref/swift/Method/register(collection:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE8registeryAA15RouteCollection_p10collection_tKF">register(collection:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE8register10collectionyAA15RouteCollection_p_tKF">register(collection:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -588,7 +597,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/RouteCollection.swift#L15-L17">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/RouteCollection.swift#L15-L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -607,9 +616,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE4postXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE4post_2at3use7Routing5RouteCyAA9Responder_pGqd__m_AG27PathComponentsRepresentable_pdqd_0_AA7RequestC_qd__tKctAA0L9DecodableRd__AA17ResponseEncodableRd_0_r0_lF"></a>
                     <a name="//apple_ref/swift/Method/post(_:at:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE4postXeXeF">post(_:at:use:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE4post_2at3use7Routing5RouteCyAA9Responder_pGqd__m_AG27PathComponentsRepresentable_pdqd_0_AA7RequestC_qd__tKctAA0L9DecodableRd__AA17ResponseEncodableRd_0_r0_lF">post(_:at:use:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -636,7 +645,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
     <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RequestDecodable.html">RequestDecodable</a></span><span class="p">,</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
@@ -689,7 +699,7 @@
                         <p>Discardable <code>Route</code> that was just created.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Content.swift#L21-L25">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Content.swift#L21-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -697,9 +707,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE5patchXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE5patch_2at3use7Routing5RouteCyAA9Responder_pGqd__m_AG27PathComponentsRepresentable_pdqd_0_AA7RequestC_qd__tKctAA0L9DecodableRd__AA17ResponseEncodableRd_0_r0_lF"></a>
                     <a name="//apple_ref/swift/Method/patch(_:at:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE5patchXeXeF">patch(_:at:use:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE5patch_2at3use7Routing5RouteCyAA9Responder_pGqd__m_AG27PathComponentsRepresentable_pdqd_0_AA7RequestC_qd__tKctAA0L9DecodableRd__AA17ResponseEncodableRd_0_r0_lF">patch(_:at:use:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -728,7 +738,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
     <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RequestDecodable.html">RequestDecodable</a></span><span class="p">,</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
@@ -781,7 +792,7 @@
                         <p>Discardable <code>Route</code> that was just created.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Content.swift#L46-L50">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Content.swift#L46-L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -789,9 +800,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE3putXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE3put_2at3use7Routing5RouteCyAA9Responder_pGqd__m_AG27PathComponentsRepresentable_pdqd_0_AA7RequestC_qd__tKctAA0L9DecodableRd__AA17ResponseEncodableRd_0_r0_lF"></a>
                     <a name="//apple_ref/swift/Method/put(_:at:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE3putXeXeF">put(_:at:use:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE3put_2at3use7Routing5RouteCyAA9Responder_pGqd__m_AG27PathComponentsRepresentable_pdqd_0_AA7RequestC_qd__tKctAA0L9DecodableRd__AA17ResponseEncodableRd_0_r0_lF">put(_:at:use:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -820,7 +831,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
     <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RequestDecodable.html">RequestDecodable</a></span><span class="p">,</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
@@ -873,7 +885,7 @@
                         <p>Discardable <code>Route</code> that was just created.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Content.swift#L71-L75">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Content.swift#L71-L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -881,9 +893,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE2onXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE2on__2at3use7Routing5RouteCyAA9Responder_pG8NIOHTTP110HTTPMethodO_qd__mAG27PathComponentsRepresentable_pdqd_0_AA7RequestC_qd__tKctAA0N9DecodableRd__AA17ResponseEncodableRd_0_r0_lF"></a>
                     <a name="//apple_ref/swift/Method/on(_:_:at:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE2onXeXeF">on(_:_:at:use:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE2on__2at3use7Routing5RouteCyAA9Responder_pG8NIOHTTP110HTTPMethodO_qd__mAG27PathComponentsRepresentable_pdqd_0_AA7RequestC_qd__tKctAA0N9DecodableRd__AA17ResponseEncodableRd_0_r0_lF">on(_:_:at:use:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -912,7 +924,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">on</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span><span class="p">,</span> <span class="n">_</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">on</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span><span class="p">,</span> <span class="n">_</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
     <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RequestDecodable.html">RequestDecodable</a></span><span class="p">,</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
@@ -977,7 +990,7 @@
                         <p>Discardable <code>Route</code> that was just created.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Content.swift#L97-L101">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Content.swift#L97-L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -996,9 +1009,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE7groupedXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE7groupedyAaB_p3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestC_AA9Responder_ptKcF"></a>
                     <a name="//apple_ref/swift/Method/grouped(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE7groupedXeXeF">grouped(_:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE7groupedyAaB_p3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestC_AA9Responder_ptKcF">grouped(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1054,7 +1067,7 @@
                         <p><code>Router</code> with closure attached</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Function.swift#L19-L21">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Function.swift#L19-L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1062,9 +1075,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE5groupXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE5group_9configurey3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestC_AA9Responder_ptKc_yAaB_pXEtF"></a>
                     <a name="//apple_ref/swift/Method/group(_:configure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE5groupXeXeF">group(_:configure:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE5group_9configurey3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestC_AA9Responder_ptKc_yAaB_pXEtF">group(_:configure:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1129,7 +1142,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Function.swift#L39-L41">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Function.swift#L39-L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1148,9 +1161,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE7groupedAaB_pqd__mAA10MiddlewareRd__lF"></a>
+                    <a name="/s:5Vapor6RouterPAAE7groupedyAaB_pqd__mAA10MiddlewareRd__lF"></a>
                     <a name="//apple_ref/swift/Method/grouped(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE7groupedAaB_pqd__mAA10MiddlewareRd__lF">grouped(_:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE7groupedyAaB_pqd__mAA10MiddlewareRd__lF">grouped(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1173,12 +1186,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">grouped</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">middleware</span><span class="p">:</span> <span class="kt">M</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Router</span> <span class="k">where</span> <span class="kt">M</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Middleware.html">Middleware</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">grouped</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">middleware</span><span class="p">:</span> <span class="kt">M</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Router</span> <span class="k">where</span> <span class="kt">M</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Middleware.html">Middleware</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+LazyMiddleware.swift#L10-L12">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+LazyMiddleware.swift#L10-L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1186,9 +1199,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE5groupyqd__m_yAaB_pKc9configuretKAA10MiddlewareRd__lF"></a>
+                    <a name="/s:5Vapor6RouterPAAE5group_9configureyqd__m_yAaB_pKXEtKAA10MiddlewareRd__lF"></a>
                     <a name="//apple_ref/swift/Method/group(_:configure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE5groupyqd__m_yAaB_pKc9configuretKAA10MiddlewareRd__lF">group(_:configure:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE5group_9configureyqd__m_yAaB_pKXEtKAA10MiddlewareRd__lF">group(_:configure:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1212,12 +1225,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">group</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">middleware</span><span class="p">:</span> <span class="kt">M</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">configure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Router</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="k">rethrows</span> <span class="k">where</span> <span class="kt">M</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Middleware.html">Middleware</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">group</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">middleware</span><span class="p">:</span> <span class="kt">M</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">configure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Router</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="k">rethrows</span> <span class="k">where</span> <span class="kt">M</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Middleware.html">Middleware</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+LazyMiddleware.swift#L21-L23">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+LazyMiddleware.swift#L21-L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1236,9 +1249,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE3getXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE3get_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF"></a>
                     <a name="//apple_ref/swift/Method/get(_:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE3getXeXeF">get(_:use:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE3get_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF">get(_:use:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1271,7 +1284,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
     <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
@@ -1312,7 +1326,7 @@
                         <p>Discardable <code>Route</code> that was just created.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Method.swift#L27-L31">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Method.swift#L27-L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1320,9 +1334,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE4postXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE4post_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF"></a>
                     <a name="//apple_ref/swift/Method/post(_:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE4postXeXeF">post(_:use:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE4post_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF">post(_:use:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1355,7 +1369,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
     <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
@@ -1396,7 +1411,7 @@
                         <p>Discardable <code>Route</code> that was just created.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Method.swift#L55-L59">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Method.swift#L55-L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1404,9 +1419,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE5patchXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE5patch_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF"></a>
                     <a name="//apple_ref/swift/Method/patch(_:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE5patchXeXeF">patch(_:use:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE5patch_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF">patch(_:use:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1439,7 +1454,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
     <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
@@ -1480,7 +1496,7 @@
                         <p>Discardable <code>Route</code> that was just created.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Method.swift#L83-L87">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Method.swift#L83-L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1488,9 +1504,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE3putXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE3put_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF"></a>
                     <a name="//apple_ref/swift/Method/put(_:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE3putXeXeF">put(_:use:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE3put_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF">put(_:use:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1523,7 +1539,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
     <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
@@ -1564,7 +1581,7 @@
                         <p>Discardable <code>Route</code> that was just created.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Method.swift#L111-L115">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Method.swift#L111-L115">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1572,9 +1589,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE6deleteXeXeF"></a>
+                    <a name="/s:5Vapor6RouterPAAE6delete_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF"></a>
                     <a name="//apple_ref/swift/Method/delete(_:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE6deleteXeXeF">delete(_:use:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE6delete_3use7Routing5RouteCyAA9Responder_pGAF27PathComponentsRepresentable_pd_qd__AA7RequestCKctAA17ResponseEncodableRd__lF">delete(_:use:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1607,7 +1624,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">delete</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">delete</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
     <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
@@ -1648,7 +1666,201 @@
                         <p>Discardable <code>Route</code> that was just created.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Method.swift#L139-L143">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Method.swift#L139-L143">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor6RouterPAAE2on_2at3use7Routing5RouteCyAA9Responder_pG8NIOHTTP110HTTPMethodO_AG27PathComponentsRepresentable_pdqd__AA7RequestCKctAA17ResponseEncodableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/on(_:at:use:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE2on_2at3use7Routing5RouteCyAA9Responder_pG8NIOHTTP110HTTPMethodO_AG27PathComponentsRepresentable_pdqd__AA7RequestCKctAA17ResponseEncodableRd__lF">on(_:at:use:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>Route</code> at the provided path using an HTTP method.</p>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">on</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="s">"hello"</span><span class="p">,</span> <span class="s">"world"</span><span class="p">)</span> <span class="p">{</span> <span class="n">req</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="s">"Hello, world!"</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The above route closure would return <code>&quot;Hello, world&quot;</code> to requests to <code>GET /hello/world</code>.</p>
+
+<p>You can use anything <code>PathComponentsRepresentable</code> to create the path, including dynamic parameters.</p>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">on</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="s">"users"</span><span class="p">,</span> <span class="kt">Int</span><span class="o">.</span><span class="n">parameter</span><span class="p">)</span> <span class="p">{</span> <span class="n">req</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">id</span> <span class="o">=</span> <span class="k">try</span> <span class="n">req</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="nf">next</span><span class="p">(</span><span class="kt">Int</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s">"User #</span><span class="se">\(</span><span class="n">id</span><span class="se">)</span><span class="s">"</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>See <code><a href="../Structs/ParametersContainer.html">ParametersContainer</a></code> for more information on using dynamic parameters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">on</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>HTTPMethod</code> to accept.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Variadic <code>PathComponentsRepresentable</code> items.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Creates a <code><a href="../Classes/Response.html">Response</a></code> for the incoming <code><a href="../Classes/Request.html">Request</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Discardable <code>Route</code> that was just created.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Method.swift#L168-L172">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor6RouterPAAE2on_2at3use7Routing5RouteCyAA9Responder_pG8NIOHTTP110HTTPMethodO_SayAG27PathComponentsRepresentable_pGqd__AA7RequestCKctAA17ResponseEncodableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/on(_:at:use:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE2on_2at3use7Routing5RouteCyAA9Responder_pG8NIOHTTP110HTTPMethodO_SayAG27PathComponentsRepresentable_pGqd__AA7RequestCKctAA17ResponseEncodableRd__lF">on(_:at:use:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>Route</code> at the provided path using an HTTP method.</p>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">on</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="p">[</span><span class="s">"hello"</span><span class="p">,</span> <span class="s">"world"</span><span class="p">])</span> <span class="p">{</span> <span class="n">req</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="s">"Hello, world!"</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The above route closure would return <code>&quot;Hello, world&quot;</code> to requests to <code>GET /hello/world</code>.</p>
+
+<p>You can use anything <code>PathComponentsRepresentable</code> to create the path, including dynamic parameters.</p>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">on</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="p">[</span><span class="s">"users"</span><span class="p">,</span> <span class="kt">Int</span><span class="o">.</span><span class="n">parameter</span><span class="p">])</span> <span class="p">{</span> <span class="n">req</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">id</span> <span class="o">=</span> <span class="k">try</span> <span class="n">req</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="nf">next</span><span class="p">(</span><span class="kt">Int</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s">"User #</span><span class="se">\(</span><span class="n">id</span><span class="se">)</span><span class="s">"</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>See <code><a href="../Structs/ParametersContainer.html">ParametersContainer</a></code> for more information on using dynamic parameters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">on</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span><span class="p">,</span> <span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="p">[</span><span class="kt">PathComponentsRepresentable</span><span class="p">],</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Responder.html">Responder</a></span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>HTTPMethod</code> to accept.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Variadic <code>PathComponentsRepresentable</code> items.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Creates a <code><a href="../Classes/Response.html">Response</a></code> for the incoming <code><a href="../Classes/Request.html">Request</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Discardable <code>Route</code> that was just created.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Method.swift#L197-L201">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1667,9 +1879,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE7groupedAaB_pSayAA10Middleware_pGd_tF"></a>
+                    <a name="/s:5Vapor6RouterPAAE7groupedyAaB_pAA10Middleware_pd_tF"></a>
                     <a name="//apple_ref/swift/Method/grouped(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE7groupedAaB_pSayAA10Middleware_pGd_tF">grouped(_:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE7groupedyAaB_pAA10Middleware_pd_tF">grouped(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1719,7 +1931,7 @@
                         <p>New <code>Router</code> wrapped in <code><a href="../Protocols/Middleware.html">Middleware</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Middleware.swift#L13-L15">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Middleware.swift#L13-L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1727,9 +1939,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE5groupySayAA10Middleware_pGd_yAaB_pc9configuretF"></a>
+                    <a name="/s:5Vapor6RouterPAAE5group_9configureyAA10Middleware_pd_yAaB_pXEtF"></a>
                     <a name="//apple_ref/swift/Method/group(_:configure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE5groupySayAA10Middleware_pGd_yAaB_pc9configuretF">group(_:configure:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE5group_9configureyAA10Middleware_pd_yAaB_pXEtF">group(_:configure:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1788,7 +2000,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Middleware.swift#L27-L29">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Middleware.swift#L27-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1796,9 +2008,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE7groupedAaB_pSayAA10Middleware_pGF"></a>
+                    <a name="/s:5Vapor6RouterPAAE7groupedyAaB_pSayAA10Middleware_pGF"></a>
                     <a name="//apple_ref/swift/Method/grouped(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE7groupedAaB_pSayAA10Middleware_pGF">grouped(_:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE7groupedyAaB_pSayAA10Middleware_pGF">grouped(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1848,7 +2060,7 @@
                         <p>New <code>Router</code> wrapped in <code><a href="../Protocols/Middleware.html">Middleware</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Middleware.swift#L40-L45">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Middleware.swift#L40-L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1856,9 +2068,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6RouterPAAE5groupySayAA10Middleware_pG_yAaB_pc9configuretF"></a>
+                    <a name="/s:5Vapor6RouterPAAE5group_9configureySayAA10Middleware_pG_yAaB_pXEtF"></a>
                     <a name="//apple_ref/swift/Method/group(_:configure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6RouterPAAE5groupySayAA10Middleware_pG_yAaB_pc9configuretF">group(_:configure:)</a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE5group_9configureySayAA10Middleware_pG_yAaB_pXEtF">group(_:configure:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1917,7 +2129,151 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/Router+Middleware.swift#L57-L59">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Middleware.swift#L57-L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Path"></a>
+                <a name="//apple_ref/swift/Section/Path" class="dashAnchor"></a>
+                <a href="#/Path">
+                  <h3 class="section-name">Path</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor6RouterPAAE7groupedyAaB_p7Routing27PathComponentsRepresentable_pd_tF"></a>
+                    <a name="//apple_ref/swift/Method/grouped(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE7groupedyAaB_p7Routing27PathComponentsRepresentable_pd_tF">grouped(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>Router</code> that will automatically prepend the supplied path components.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">users</span> <span class="o">=</span> <span class="n">router</span><span class="o">.</span><span class="nf">grouped</span><span class="p">(</span><span class="s">"user"</span><span class="p">)</span>
+<span class="c1">// Adding "user/auth/" route to router.</span>
+<span class="n">users</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"auth"</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+<span class="c1">// adding "user/profile/" route to router</span>
+<span class="n">users</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"profile"</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">grouped</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Router</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Group path components separated by commas.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Newly created <code>Router</code> wrapped in the path.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Path.swift#L15-L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor6RouterPAAE5group_9configurey7Routing27PathComponentsRepresentable_pd_yAaB_pXEtF"></a>
+                    <a name="//apple_ref/swift/Method/group(_:configure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor6RouterPAAE5group_9configurey7Routing27PathComponentsRepresentable_pd_yAaB_pXEtF">group(_:configure:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>Router</code> that will automatically prepend the supplied path components.</p>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">group</span><span class="p">(</span><span class="s">"user"</span><span class="p">)</span> <span class="p">{</span> <span class="n">users</span> <span class="k">in</span>
+    <span class="c1">// Adding "user/auth/" route to router.</span>
+    <span class="n">users</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"auth"</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+    <span class="c1">// adding "user/profile/" route to router</span>
+    <span class="n">users</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"profile"</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">group</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="nv">configure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Router</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Group path components separated by commas.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to configure the newly created <code>Router</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/Router+Path.swift#L31-L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1930,8 +2286,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

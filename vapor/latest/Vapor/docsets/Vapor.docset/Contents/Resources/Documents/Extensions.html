@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Extensions" class="dashAnchor"></a>
 
     <a title="Extensions  Reference"></a>
 
@@ -39,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -69,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/DateMiddleware.html">DateMiddleware</a>
@@ -207,6 +205,9 @@
                 <a class="nav-group-task-link" href="Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -316,6 +317,9 @@
                 <a class="nav-group-task-link" href="Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -372,6 +376,12 @@
             <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -401,9 +411,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7Service9ContainerP"></a>
                     <a name="//apple_ref/swift/Extension/Container" class="dashAnchor"></a>
-                    <a class="token" href="#/">Container</a>
+                    <a class="token" href="#/s:7Service9ContainerP">Container</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -413,6 +423,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/Container.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt">BasicWorker</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -424,9 +442,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7Command0A6ConfigV"></a>
                     <a name="//apple_ref/swift/Extension/CommandConfig" class="dashAnchor"></a>
-                    <a class="token" href="#/">CommandConfig</a>
+                    <a class="token" href="#/s:7Command0A6ConfigV">CommandConfig</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -436,6 +454,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/CommandConfig.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">CommandConfig</span> <span class="p">:</span> <span class="kt">Service</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -822,7 +848,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="n">_DestructorSafeContainer</span></code></pre>
 
                         </div>
                       </div>
@@ -832,9 +858,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s10DictionaryV"></a>
+                    <a name="/s:SD"></a>
                     <a name="//apple_ref/swift/Extension/Dictionary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s10DictionaryV">Dictionary</a>
+                    <a class="token" href="#/s:SD">Dictionary</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -849,7 +875,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Dictionary</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Collection</span><span class="p">,</span> <span class="kt">ExpressibleByDictionaryLiteral</span> <span class="k">where</span> <span class="kt">Key</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Dictionary</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Key</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
 
                         </div>
                       </div>
@@ -863,9 +889,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:9Multipart15FormDataDecoderC"></a>
                     <a name="//apple_ref/swift/Extension/FormDataDecoder" class="dashAnchor"></a>
-                    <a class="token" href="#/">FormDataDecoder</a>
+                    <a class="token" href="#/s:9Multipart15FormDataDecoderC">FormDataDecoder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -876,15 +902,23 @@
                         
                         <a href="Extensions/FormDataDecoder.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">FormDataDecoder</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:9Multipart15FormDataEncoderC"></a>
                     <a name="//apple_ref/swift/Extension/FormDataEncoder" class="dashAnchor"></a>
-                    <a class="token" href="#/">FormDataEncoder</a>
+                    <a class="token" href="#/s:9Multipart15FormDataEncoderC">FormDataEncoder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -895,26 +929,27 @@
                         
                         <a href="Extensions/FormDataEncoder.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">FormDataEncoder</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/FIXME:%20add%20key%20strategy%20support%20once%20avaialble%20on%20Linux%20*/"></a>
-                <a name="//apple_ref/swift/Section/FIXME: add key strategy support once avaialble on Linux */" class="dashAnchor"></a>
-                <a href="#/FIXME:%20add%20key%20strategy%20support%20once%20avaialble%20on%20Linux%20*/">
-                  <h3 class="section-name">FIXME: add key strategy support once avaialble on Linux */</h3>
-                </a>
-              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:10Foundation11JSONEncoderC"></a>
                     <a name="//apple_ref/swift/Extension/JSONEncoder" class="dashAnchor"></a>
-                    <a class="token" href="#/">JSONEncoder</a>
+                    <a class="token" href="#/s:10Foundation11JSONEncoderC">JSONEncoder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -925,15 +960,23 @@
                         
                         <a href="Extensions/JSONEncoder.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">JSONEncoder</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:10Foundation11JSONDecoderC"></a>
                     <a name="//apple_ref/swift/Extension/JSONDecoder" class="dashAnchor"></a>
-                    <a class="token" href="#/">JSONDecoder</a>
+                    <a class="token" href="#/s:10Foundation11JSONDecoderC">JSONDecoder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -943,6 +986,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/JSONDecoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">JSONDecoder</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -954,9 +1005,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:14URLEncodedForm0aB7DecoderC"></a>
                     <a name="//apple_ref/swift/Extension/URLEncodedFormDecoder" class="dashAnchor"></a>
-                    <a class="token" href="#/">URLEncodedFormDecoder</a>
+                    <a class="token" href="#/s:14URLEncodedForm0aB7DecoderC">URLEncodedFormDecoder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -967,15 +1018,23 @@
                         
                         <a href="Extensions/URLEncodedFormDecoder.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">URLEncodedFormDecoder</span> <span class="p">:</span> <span class="kt">DataDecoder</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:14URLEncodedForm0aB7EncoderC"></a>
                     <a name="//apple_ref/swift/Extension/URLEncodedFormEncoder" class="dashAnchor"></a>
-                    <a class="token" href="#/">URLEncodedFormEncoder</a>
+                    <a class="token" href="#/s:14URLEncodedForm0aB7EncoderC">URLEncodedFormEncoder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -985,6 +1044,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/URLEncodedFormEncoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">URLEncodedFormEncoder</span> <span class="p">:</span> <span class="kt">DataEncoder</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1028,16 +1095,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Extension/Logger" class="dashAnchor"></a>
-                    <a class="token" href="#/">Logger</a>
+                    <a name="/s:4Core8NotFoundV"></a>
+                    <a name="//apple_ref/swift/Extension/NotFound" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Core8NotFoundV">NotFound</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1046,7 +1109,15 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         
-                        <a href="Extensions/Logger.html" class="slightly-smaller">See more</a>
+                        <a href="Extensions/NotFound.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">NotFound</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1058,9 +1129,40 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7Logging6LoggerP"></a>
+                    <a name="//apple_ref/swift/Extension/Logger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging6LoggerP">Logger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/Logger.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Logger</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8NIOHTTP110HTTPMethodO"></a>
                     <a name="//apple_ref/swift/Extension/HTTPMethod" class="dashAnchor"></a>
-                    <a class="token" href="#/">HTTPMethod</a>
+                    <a class="token" href="#/s:8NIOHTTP110HTTPMethodO">HTTPMethod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1070,6 +1172,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/HTTPMethod.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">HTTPMethod</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1088,9 +1198,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:4HTTP11HTTPRequestV"></a>
                     <a name="//apple_ref/swift/Extension/HTTPRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/">HTTPRequest</a>
+                    <a class="token" href="#/s:4HTTP11HTTPRequestV">HTTPRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1100,6 +1210,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/HTTPRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">HTTPRequest</span> <span class="p">:</span> <span class="kt">HTTPMessage</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1111,9 +1229,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:5Vapor10HTTPStatusa"></a>
                     <a name="//apple_ref/swift/Extension/HTTPStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/">HTTPStatus</a>
+                    <a class="token" href="#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1123,6 +1241,17 @@
                       <div class="abstract">
                         
                         <a href="Extensions/HTTPStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt"><a href="Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a></span> <span class="o">=</span> <span class="kt">HTTPResponseStatus</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/HTTPStatus.swift#L2">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1141,9 +1270,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:4HTTP12HTTPResponseV"></a>
                     <a name="//apple_ref/swift/Extension/HTTPResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/">HTTPResponse</a>
+                    <a class="token" href="#/s:4HTTP12HTTPResponseV">HTTPResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1154,15 +1283,23 @@
                         
                         <a href="Extensions/HTTPResponse.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">HTTPResponse</span> <span class="p">:</span> <span class="kt">HTTPMessage</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:5Async6Futurea"></a>
                     <a name="//apple_ref/swift/Extension/Future" class="dashAnchor"></a>
-                    <a class="token" href="#/">Future</a>
+                    <a class="token" href="#/s:5Async6Futurea">Future</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1172,6 +1309,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/Future.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Future</span> <span class="o">=</span> <span class="kt">EventLoopFuture</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1210,9 +1355,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s9SubstringV"></a>
+                    <a name="/s:Ss"></a>
                     <a name="//apple_ref/swift/Extension/Substring" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s9SubstringV">Substring</a>
+                    <a class="token" href="#/s:Ss">Substring</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1241,9 +1386,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7Service6ConfigV"></a>
                     <a name="//apple_ref/swift/Extension/Config" class="dashAnchor"></a>
-                    <a class="token" href="#/">Config</a>
+                    <a class="token" href="#/s:7Service6ConfigV">Config</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1253,6 +1398,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/Config.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Config</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1264,9 +1417,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7Service8ServicesV"></a>
                     <a name="//apple_ref/swift/Extension/Services" class="dashAnchor"></a>
-                    <a class="token" href="#/">Services</a>
+                    <a class="token" href="#/s:7Service8ServicesV">Services</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1276,6 +1429,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/Services.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Services</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1294,9 +1455,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:3NIO17NonBlockingFileIOV"></a>
                     <a name="//apple_ref/swift/Extension/NonBlockingFileIO" class="dashAnchor"></a>
-                    <a class="token" href="#/">NonBlockingFileIO</a>
+                    <a class="token" href="#/s:3NIO17NonBlockingFileIOV">NonBlockingFileIO</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1307,15 +1468,23 @@
                         
                         <a href="Extensions/NonBlockingFileIO.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">NonBlockingFileIO</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:3NIO20BlockingIOThreadPoolC"></a>
                     <a name="//apple_ref/swift/Extension/BlockingIOThreadPool" class="dashAnchor"></a>
-                    <a class="token" href="#/">BlockingIOThreadPool</a>
+                    <a class="token" href="#/s:3NIO20BlockingIOThreadPoolC">BlockingIOThreadPool</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1326,6 +1495,14 @@
                         
                         <a href="Extensions/BlockingIOThreadPool.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">BlockingIOThreadPool</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1336,9 +1513,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/c:objc(cs)NSThread"></a>
                     <a name="//apple_ref/swift/Extension/Thread" class="dashAnchor"></a>
-                    <a class="token" href="#/">Thread</a>
+                    <a class="token" href="#/c:objc(cs)NSThread">Thread</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1349,6 +1526,14 @@
                         
                         <a href="Extensions/Thread.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Thread</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1359,9 +1544,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11TemplateKit4ViewV"></a>
                     <a name="//apple_ref/swift/Extension/View" class="dashAnchor"></a>
-                    <a class="token" href="#/">View</a>
+                    <a class="token" href="#/s:11TemplateKit4ViewV">View</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1372,15 +1557,23 @@
                         
                         <a href="Extensions/View.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">View</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11TemplateKit12ViewRendererP"></a>
                     <a name="//apple_ref/swift/Extension/ViewRenderer" class="dashAnchor"></a>
-                    <a class="token" href="#/">ViewRenderer</a>
+                    <a class="token" href="#/s:11TemplateKit12ViewRendererP">ViewRenderer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1390,6 +1583,14 @@
                       <div class="abstract">
                         
                         <a href="Extensions/ViewRenderer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ViewRenderer</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1402,8 +1603,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

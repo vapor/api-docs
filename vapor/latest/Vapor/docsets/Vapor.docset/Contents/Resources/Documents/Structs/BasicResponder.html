@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -70,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateMiddleware.html">DateMiddleware</a>
@@ -208,6 +205,9 @@
                 <a class="nav-group-task-link" href="../Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -317,6 +317,9 @@
                 <a class="nav-group-task-link" href="../Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -373,6 +376,12 @@
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -392,7 +401,7 @@
             <h1>BasicResponder</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BasicResponder</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Responder.html">Responder</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BasicResponder</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Responder.html">Responder</a></span></code></pre>
 
                 </div>
               </div>
@@ -408,9 +417,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor14BasicResponderVXeXecfc"></a>
+                    <a name="/s:5Vapor14BasicResponderV7closureAC3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestCKc_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(closure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor14BasicResponderVXeXecfc">init(closure:)</a>
+                    <a class="token" href="#/s:5Vapor14BasicResponderV7closureAC3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestCKc_tcfc">init(closure:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -420,7 +429,7 @@
                       <div class="abstract">
                         <p>Create a new <code>BasicResponder</code>.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">notFound</span><span class="p">:</span> <span class="kt">Responder</span> <span class="o">=</span> <span class="kt">BasicResponder</span> <span class="p">{</span> <span class="n">req</span> <span class="k">in</span>
-    <span class="k">let</span> <span class="nv">res</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="nf">makeResponse</span><span class="p">(</span><span class="nv">http</span><span class="p">:</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="o">.</span><span class="n">notFound</span><span class="p">))</span>
+    <span class="k">let</span> <span class="nv">res</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="nf">response</span><span class="p">(</span><span class="nv">http</span><span class="p">:</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="o">.</span><span class="n">notFound</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">req</span><span class="o">.</span><span class="n">eventLoop</span><span class="o">.</span><span class="nf">newSucceededFuture</span><span class="p">(</span><span class="nv">result</span><span class="p">:</span> <span class="n">res</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -454,7 +463,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/BasicResponder.swift#L15-L17">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/BasicResponder.swift#L15-L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -462,9 +471,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor14BasicResponderV7respondXeXeF"></a>
+                    <a name="/s:5Vapor14BasicResponderV7respond2to3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestC_tKF"></a>
                     <a name="//apple_ref/swift/Method/respond(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor14BasicResponderV7respondXeXeF">respond(to:)</a>
+                    <a class="token" href="#/s:5Vapor14BasicResponderV7respond2to3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestC_tKF">respond(to:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -484,7 +493,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/BasicResponder.swift#L20-L22">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/BasicResponder.swift#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -497,8 +506,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
 
     <a title="Structures  Reference"></a>
 
@@ -39,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -69,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/DateMiddleware.html">DateMiddleware</a>
@@ -207,6 +205,9 @@
                 <a class="nav-group-task-link" href="Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -316,6 +317,9 @@
                 <a class="nav-group-task-link" href="Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -372,6 +376,12 @@
             <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -411,7 +421,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Boots the <code><a href="Classes/Application.html">Application</a></code>&rsquo;s providers then exits successfully.</p>
+                        <p>Boots the <code><a href="Classes/Application.html">Application</a></code>&lsquo;s providers then exits successfully.</p>
 <pre class="highlight swift"><code><span class="err">$</span> <span class="n">swift</span> <span class="n">run</span> <span class="kt">Run</span> <span class="n">boot</span>
 <span class="kt">Done</span><span class="o">.</span>
 </code></pre>
@@ -422,12 +432,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BootCommand</span><span class="p">:</span> <span class="kt">Command</span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BootCommand</span> <span class="p">:</span> <span class="kt">Command</span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Commands/BootCommand.swift#L6-L33">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Commands/BootCommand.swift#L6-L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -449,7 +459,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Displays all routes registered to the <code><a href="Classes/Application.html">Application</a></code>&rsquo;s <code><a href="Protocols/Router.html">Router</a></code> in an ASCII-formatted table.</p>
+                        <p>Displays all routes registered to the <code><a href="Classes/Application.html">Application</a></code>&lsquo;s <code><a href="Protocols/Router.html">Router</a></code> in an ASCII-formatted table.</p>
 <pre class="highlight swift"><code><span class="err">$</span> <span class="n">swift</span> <span class="n">run</span> <span class="kt">Run</span> <span class="n">routes</span>
 <span class="o">+------+------------------+</span>
 <span class="o">|</span> <span class="kt">GET</span>  <span class="o">|</span> <span class="o">/</span><span class="n">search</span>          <span class="o">|</span>
@@ -458,7 +468,7 @@
 <span class="o">+------+------------------+</span>
 </code></pre>
 
-<p>A colon preceeding a path component indicates a variable parameter. A colon with no text following
+<p>A colon preceding a path component indicates a variable parameter. A colon with no text following
 is a parameter whose result will be discarded.</p>
 
 <p>An asterisk indicates a catch-all. Any path components after a catch-all will be discarded and ignored.</p>
@@ -469,12 +479,12 @@ is a parameter whose result will be discarded.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RoutesCommand</span><span class="p">:</span> <span class="kt">Command</span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RoutesCommand</span> <span class="p">:</span> <span class="kt">Command</span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Commands/RoutesCommand.swift#L14-L137">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Commands/RoutesCommand.swift#L14-L137">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -496,7 +506,7 @@ is a parameter whose result will be discarded.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Starts serving the <code><a href="Classes/Application.html">Application</a></code>&rsquo;s <code><a href="Protocols/Responder.html">Responder</a></code> over HTTP.</p>
+                        <p>Starts serving the <code><a href="Classes/Application.html">Application</a></code>&lsquo;s <code><a href="Protocols/Responder.html">Responder</a></code> over HTTP.</p>
 <pre class="highlight swift"><code><span class="err">$</span> <span class="n">swift</span> <span class="n">run</span> <span class="kt">Run</span> <span class="n">serve</span>
 <span class="kt">Server</span> <span class="n">starting</span> <span class="n">on</span> <span class="nv">http</span><span class="p">:</span><span class="c1">//localhost:8080</span>
 </code></pre>
@@ -507,12 +517,12 @@ is a parameter whose result will be discarded.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ServeCommand</span><span class="p">:</span> <span class="kt">Command</span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ServeCommand</span> <span class="p">:</span> <span class="kt">Command</span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Commands/ServeCommand.swift#L6-L48">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Commands/ServeCommand.swift#L6-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -544,12 +554,12 @@ is a parameter whose result will be discarded.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ContentCoders</span><span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ContentCoders</span> <span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Content/ContentCoders.swift#L4-L118">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Content/ContentCoders.swift#L4-L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -594,12 +604,12 @@ See the <code><a href="Protocols/Content.html">Content</a></code> protocol for m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ContentConfig</span><span class="p">:</span> <span class="kt">Service</span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ContentConfig</span> <span class="p">:</span> <span class="kt">Service</span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Content/ContentConfig.swift#L17-L264">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Content/ContentConfig.swift#L17-L264">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -633,12 +643,12 @@ See the <code><a href="Protocols/Content.html">Content</a></code> protocol for m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ContentContainer</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">M</span><span class="p">:</span> <span class="kt"><a href="Protocols/HTTPMessageContainer.html">HTTPMessageContainer</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ContentContainer</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">M</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HTTPMessageContainer.html">HTTPMessageContainer</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Content/ContentContainer.swift#L6-L341">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Content/ContentContainer.swift#L6-L333">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -662,7 +672,7 @@ See the <code><a href="Protocols/Content.html">Content</a></code> protocol for m
                       <div class="abstract">
                         <p>Helper for encoding and decoding data from an HTTP request query string.</p>
 
-<p>See <code><a href="Classes/Request.html#/s:5Vapor7RequestC5queryAA14QueryContainerVv">Request.query</a></code> for more information.</p>
+<p>See <code><a href="Classes/Request.html#/s:5Vapor7RequestC5queryAA14QueryContainerVvp">Request.query</a></code> for more information.</p>
 
                         <a href="Structs/QueryContainer.html" class="slightly-smaller">See more</a>
                       </div>
@@ -675,7 +685,7 @@ See the <code><a href="Protocols/Content.html">Content</a></code> protocol for m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Content/QueryContainer.swift#L4-L147">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Content/QueryContainer.swift#L4-L147">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -708,12 +718,12 @@ See the <code><a href="Protocols/Content.html">Content</a></code> protocol for m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Abort</span><span class="p">:</span> <span class="kt"><a href="Protocols/AbortError.html">AbortError</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Abort</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AbortError.html">AbortError</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Error/Abort.swift#L6-L55">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Error/Abort.swift#L6-L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -743,12 +753,12 @@ See the <code><a href="Protocols/Content.html">Content</a></code> protocol for m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VaporError</span><span class="p">:</span> <span class="kt">Debuggable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VaporError</span> <span class="p">:</span> <span class="kt">Debuggable</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Error/Error.swift#L4-L44">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Error/Error.swift#L4-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -779,12 +789,47 @@ Middleware will be used in the order they are added.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MiddlewareConfig</span><span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MiddlewareConfig</span> <span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Middleware/MiddlewareConfig.swift#L3-L55">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Middleware/MiddlewareConfig.swift#L3-L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor20ApplicationResponderV"></a>
+                    <a name="//apple_ref/swift/Struct/ApplicationResponder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor20ApplicationResponderV">ApplicationResponder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Vapor&rsquo;s main <code><a href="Protocols/Responder.html">Responder</a></code> type. Combines configured middleware + router to create a responder.</p>
+
+                        <a href="Structs/ApplicationResponder.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ApplicationResponder</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Responder.html">Responder</a></span><span class="p">,</span> <span class="kt">ServiceType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/ApplicationResponder.swift#L2-L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -814,12 +859,12 @@ Middleware will be used in the order they are added.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BasicResponder</span><span class="p">:</span> <span class="kt"><a href="Protocols/Responder.html">Responder</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BasicResponder</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Responder.html">Responder</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/BasicResponder.swift#L2-L23">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/BasicResponder.swift#L2-L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -856,7 +901,7 @@ Middleware will be used in the order they are added.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Routing/ParametersContainer.swift#L5-L52">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Routing/ParametersContainer.swift#L5-L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -889,12 +934,12 @@ Middleware will be used in the order they are added.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NIOServerConfig</span><span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NIOServerConfig</span> <span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Server/NIOServerConfig.swift#L6-L84">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L6-L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -916,7 +961,7 @@ Middleware will be used in the order they are added.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A context for the currently running <code><a href="Protocols/Server.html">Server</a></code> protocol. When a <code><a href="Protocols/Server.html">Server</a></code> succesfully boots,
+                        <p>A context for the currently running <code><a href="Protocols/Server.html">Server</a></code> protocol. When a <code><a href="Protocols/Server.html">Server</a></code> successfully boots,
 it sets one of these on the <code>runningServer</code> property of the <code><a href="Classes/Application.html">Application</a></code>.</p>
 
 <p>This struct can be used to close the server.</p>
@@ -938,7 +983,7 @@ it sets one of these on the <code>runningServer</code> property of the <code><a 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Server/RunningServer.swift#L30-L36">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/RunningServer.swift#L30-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -968,12 +1013,12 @@ it sets one of these on the <code>runningServer</code> property of the <code><a 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SessionData</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SessionData</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/SessionData.swift#L2-L20">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/SessionData.swift#L2-L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1003,12 +1048,12 @@ it sets one of these on the <code>runningServer</code> property of the <code><a 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SessionsConfig</span><span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SessionsConfig</span> <span class="p">:</span> <span class="kt">ServiceType</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Sessions/SessionsConfig.swift#L2-L45">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Sessions/SessionsConfig.swift#L2-L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1068,12 +1113,12 @@ it sets one of these on the <code>runningServer</code> property of the <code><a 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AnyResponse</span><span class="p">:</span> <span class="kt"><a href="Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AnyResponse</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ResponseEncodable.html">ResponseEncodable</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Utilities/AnyResponse.swift#L33-L49">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Utilities/AnyResponse.swift#L33-L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1131,7 +1176,7 @@ it sets one of these on the <code>runningServer</code> property of the <code><a 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Utilities/FileIO.swift#L61-L210">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Utilities/FileIO.swift#L61-L210">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1171,7 +1216,7 @@ In this case, the HTTP request will continue to Vapor&rsquo;s normal request/res
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/WebSocket/WebSocketResponder.swift#L7-L29">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/WebSocketResponder.swift#L7-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1184,8 +1229,8 @@ In this case, the HTTP request will continue to Vapor&rsquo;s normal request/res
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

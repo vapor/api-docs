@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -70,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateMiddleware.html">DateMiddleware</a>
@@ -208,6 +205,9 @@
                 <a class="nav-group-task-link" href="../Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -317,6 +317,9 @@
                 <a class="nav-group-task-link" href="../Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -373,6 +376,12 @@
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -392,7 +401,7 @@
             <h1>NIOWebSocketServer</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NIOWebSocketServer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/WebSocketServer.html">WebSocketServer</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NIOWebSocketServer</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/WebSocketServer.html">WebSocketServer</a></span><span class="p">,</span> <span class="kt">Service</span></code></pre>
 
                 </div>
               </div>
@@ -408,7 +417,7 @@ be approved or denied. If approved, additional headers can be returned in the 10
 (including middleware). Should an HTTP upgrade request be accepted, no other parts of Vapor&rsquo;s pipeline will be invoked.
 Should the HTTP upgrade request be denied, the request will continue through Vapor&rsquo;s HTTP pipeline normally.</p>
 
-<p>Note: The <code><a href="../Protocols/WebSocketServer.html">WebSocketServer</a></code> <em>always</em> runs behind an HTTP server and will only be invoked when HTTP requests request an uprade.</p>
+<p>Note: The <code><a href="../Protocols/WebSocketServer.html">WebSocketServer</a></code> <em>always</em> runs behind an HTTP server and will only be invoked when HTTP requests request an upgrade.</p>
 
           </div>
         </section>
@@ -420,9 +429,9 @@ Should the HTTP upgrade request be denied, the request will continue through Vap
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18NIOWebSocketServerC6routesXev"></a>
+                    <a name="/s:5Vapor18NIOWebSocketServerC6routesSay7Routing5RouteCyAA03WebC9ResponderVGGvp"></a>
                     <a name="//apple_ref/swift/Property/routes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC6routesXev">routes</a>
+                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC6routesSay7Routing5RouteCyAA03WebC9ResponderVGGvp">routes</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -442,7 +451,7 @@ Should the HTTP upgrade request be denied, the request will continue through Vap
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L20">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -472,7 +481,7 @@ Should the HTTP upgrade request be denied, the request will continue through Vap
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L23-L25">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L23-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -480,9 +489,9 @@ Should the HTTP upgrade request be denied, the request will continue through Vap
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18NIOWebSocketServerC8registerXeXeF"></a>
+                    <a name="/s:5Vapor18NIOWebSocketServerC8register5routey7Routing5RouteCyAA03WebC9ResponderVG_tF"></a>
                     <a name="//apple_ref/swift/Method/register(route:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC8registerXeXeF">register(route:)</a>
+                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC8register5routey7Routing5RouteCyAA03WebC9ResponderVG_tF">register(route:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -492,7 +501,7 @@ Should the HTTP upgrade request be denied, the request will continue through Vap
                       <div class="abstract">
                         <p>Registers a new <code>Route&lt;WebSocketResponder&gt;</code> to this <code>NIOWebSocketServer</code>.</p>
 
-<p>This is normally done using the convenience <code><a href="../Classes/NIOWebSocketServer.html#/s:5Vapor18NIOWebSocketServerC3getXeXeF">.get(...)</a></code> methods. However, this method is
+<p>This is normally done using the convenience <code><a href="../Classes/NIOWebSocketServer.html#/s:5Vapor18NIOWebSocketServerC3get2at3use7Routing5RouteCyAA03WebC9ResponderVGSayAG13PathComponentOG_y0jC0APC_AA7RequestCtKctF">.get(...)</a></code> methods. However, this method is
 useful for registering custom routes.</p>
 
                       </div>
@@ -524,7 +533,7 @@ useful for registering custom routes.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L40-L43">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L40-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -532,9 +541,9 @@ useful for registering custom routes.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18NIOWebSocketServerC03webC13ShouldUpgradeXeXeF"></a>
+                    <a name="/s:5Vapor18NIOWebSocketServerC03webC13ShouldUpgrade3for8NIOHTTP111HTTPHeadersVSgAA7RequestC_tF"></a>
                     <a name="//apple_ref/swift/Method/webSocketShouldUpgrade(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC03webC13ShouldUpgradeXeXeF">webSocketShouldUpgrade(for:)</a>
+                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC03webC13ShouldUpgrade3for8NIOHTTP111HTTPHeadersVSgAA7RequestC_tF">webSocketShouldUpgrade(for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -579,7 +588,7 @@ Only HTTP requests that have requested websocket protocol upgrade will be suppli
        If <code>nil</code>, the HTTP upgrade request will be denied.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L52-L59">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L52-L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -587,9 +596,9 @@ Only HTTP requests that have requested websocket protocol upgrade will be suppli
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18NIOWebSocketServerC03webC9OnUpgradeXeXeF"></a>
+                    <a name="/s:5Vapor18NIOWebSocketServerC03webC9OnUpgrade_3fory03WebC0AFC_AA7RequestCtF"></a>
                     <a name="//apple_ref/swift/Method/webSocketOnUpgrade(_:for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC03webC9OnUpgradeXeXeF">webSocketOnUpgrade(_:for:)</a>
+                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC03webC9OnUpgrade_3fory03WebC0AFC_AA7RequestCtF">webSocketOnUpgrade(_:for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -597,7 +606,7 @@ Only HTTP requests that have requested websocket protocol upgrade will be suppli
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Handles newly connected websocket clients. This method will only be called if <code><a href="../Classes/NIOWebSocketServer.html#/s:5Vapor18NIOWebSocketServerC03webC13ShouldUpgradeXeXeF">webSocketShouldUpgrade(for:)</a></code> returned
+                        <p>Handles newly connected websocket clients. This method will only be called if <code><a href="../Classes/NIOWebSocketServer.html#/s:5Vapor18NIOWebSocketServerC03webC13ShouldUpgrade3for8NIOHTTP111HTTPHeadersVSgAA7RequestC_tF">webSocketShouldUpgrade(for:)</a></code> returned
 non-nil HTTP headers.</p>
 
                       </div>
@@ -641,7 +650,7 @@ non-nil HTTP headers.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L67-L78">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L67-L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -653,9 +662,9 @@ non-nil HTTP headers.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18NIOWebSocketServerC3getXeXeF"></a>
+                    <a name="/s:5Vapor18NIOWebSocketServerC3get2at3use7Routing5RouteCyAA03WebC9ResponderVGSayAG13PathComponentOG_y0jC0APC_AA7RequestCtKctF"></a>
                     <a name="//apple_ref/swift/Method/get(at:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC3getXeXeF">get(at:use:)</a>
+                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC3get2at3use7Routing5RouteCyAA03WebC9ResponderVGSayAG13PathComponentOG_y0jC0APC_AA7RequestCtKctF">get(at:use:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -670,7 +679,8 @@ non-nil HTTP headers.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">get</span><span class="p">(</span><span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="p">[</span><span class="kt">PathComponent</span><span class="p">],</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">WebSocket</span><span class="p">,</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/WebSocketResponder.html">WebSocketResponder</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">get</span><span class="p">(</span><span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="p">[</span><span class="kt">PathComponent</span><span class="p">],</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">WebSocket</span><span class="p">,</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/WebSocketResponder.html">WebSocketResponder</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -689,7 +699,7 @@ non-nil HTTP headers.</p>
                                   <p>Dynamic path to associate with this websocket upgrade closure.
     HTTP upgrade requests that contain a matching path will invoke the supplied on upgrade
     closure when the websocket client connects.
-    Any parameterized values can be retreived from the HTTP request supplied to the closure.</p>
+    Any parameterized values can be retrieved from the HTTP request supplied to the closure.</p>
                                 </div>
                               </td>
                             </tr>
@@ -713,7 +723,7 @@ non-nil HTTP headers.</p>
                         <p>Discardable websocket responder route. Use this route reference to append metadata to the route.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L95-L103">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L95-L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -721,9 +731,9 @@ non-nil HTTP headers.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor18NIOWebSocketServerC3getXeXeF"></a>
+                    <a name="/s:5Vapor18NIOWebSocketServerC3get_3use7Routing5RouteCyAA03WebC9ResponderVGAF13PathComponentOd_y0iC0ANC_AA7RequestCtKctF"></a>
                     <a name="//apple_ref/swift/Method/get(_:use:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC3getXeXeF">get(_:use:)</a>
+                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC3get_3use7Routing5RouteCyAA03WebC9ResponderVGAF13PathComponentOd_y0iC0ANC_AA7RequestCtKctF">get(_:use:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -738,7 +748,8 @@ non-nil HTTP headers.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">get</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponent</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">WebSocket</span><span class="p">,</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/WebSocketResponder.html">WebSocketResponder</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">get</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponent</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">WebSocket</span><span class="p">,</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/WebSocketResponder.html">WebSocketResponder</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -757,7 +768,7 @@ non-nil HTTP headers.</p>
                                   <p>Dynamic path to associate with this websocket upgrade closure.
     HTTP upgrade requests that contain a matching path will invoke the supplied on upgrade
     closure when the websocket client connects.
-    Any parameterized values can be retreived from the HTTP request supplied to the closure.</p>
+    Any parameterized values can be retrieved from the HTTP request supplied to the closure.</p>
                                 </div>
                               </td>
                             </tr>
@@ -781,7 +792,76 @@ non-nil HTTP headers.</p>
                         <p>Discardable websocket responder route. Use this route reference to append metadata to the route.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L116-L118">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L116-L118">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor18NIOWebSocketServerC3get_3use7Routing5RouteCyAA03WebC9ResponderVGAF27PathComponentsRepresentable_pd_y0iC0AMC_AA7RequestCtKctF"></a>
+                    <a name="//apple_ref/swift/Method/get(_:use:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor18NIOWebSocketServerC3get_3use7Routing5RouteCyAA03WebC9ResponderVGAF27PathComponentsRepresentable_pd_y0iC0AMC_AA7RequestCtKctF">get(_:use:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a new websocket handling route at the supplied dynamic path.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">get</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PathComponentsRepresentable</span><span class="o">...</span><span class="p">,</span> <span class="n">use</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">WebSocket</span><span class="p">,</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Route</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/WebSocketResponder.html">WebSocketResponder</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dynamic path to associate with this websocket upgrade closure.
+    HTTP upgrade requests that contain a matching path will invoke the supplied on upgrade
+    closure when the websocket client connects.
+    Any parameterized values can be retrieved from the HTTP request supplied to the closure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Websocket on upgrade closure. Accepts newly upgraded websocket connections.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Discardable websocket responder route. Use this route reference to append metadata to the route.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/NIOWebSocketServer.swift#L131-L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -794,8 +874,8 @@ non-nil HTTP headers.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

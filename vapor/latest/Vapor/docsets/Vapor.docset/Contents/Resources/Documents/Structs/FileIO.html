@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -70,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateMiddleware.html">DateMiddleware</a>
@@ -208,6 +205,9 @@
                 <a class="nav-group-task-link" href="../Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -317,6 +317,9 @@
                 <a class="nav-group-task-link" href="../Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -373,6 +376,12 @@
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -424,9 +433,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6FileIOV4readXeXeF"></a>
+                    <a name="/s:5Vapor6FileIOV4read4file3NIO15EventLoopFutureCy10Foundation4DataVGSS_tF"></a>
                     <a name="//apple_ref/swift/Method/read(file:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6FileIOV4readXeXeF">read(file:)</a>
+                    <a class="token" href="#/s:5Vapor6FileIOV4read4file3NIO15EventLoopFutureCy10Foundation4DataVGSS_tF">read(file:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -472,7 +481,7 @@
                         <p><code>Future</code> containing the file data.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Utilities/FileIO.swift#L88-L91">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Utilities/FileIO.swift#L88-L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -480,9 +489,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6FileIOV11readChunkedXeXeF"></a>
+                    <a name="/s:5Vapor6FileIOV11readChunked4file9chunkSize6onRead3NIO15EventLoopFutureCyytGSS_Siy10Foundation4DataVctF"></a>
                     <a name="//apple_ref/swift/Method/readChunked(file:chunkSize:onRead:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6FileIOV11readChunkedXeXeF">readChunked(file:chunkSize:onRead:)</a>
+                    <a class="token" href="#/s:5Vapor6FileIOV11readChunked4file9chunkSize6onRead3NIO15EventLoopFutureCyytGSS_Siy10Foundation4DataVctF">readChunked(file:chunkSize:onRead:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -529,7 +538,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Maxiumum size for the file data chunks.</p>
+                                  <p>Maximum size for the file data chunks.</p>
                                 </div>
                               </td>
                             </tr>
@@ -553,7 +562,7 @@
                         <p><code>Future</code> that will complete when the file read is finished.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Utilities/FileIO.swift#L104-L112">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Utilities/FileIO.swift#L104-L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -561,9 +570,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6FileIOV15chunkedResponseXeXeF"></a>
+                    <a name="/s:5Vapor6FileIOV15chunkedResponse4file3for9chunkSize4HTTP12HTTPResponseVSS_AH11HTTPRequestVSitF"></a>
                     <a name="//apple_ref/swift/Method/chunkedResponse(file:for:chunkSize:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6FileIOV15chunkedResponseXeXeF">chunkedResponse(file:for:chunkSize:)</a>
+                    <a class="token" href="#/s:5Vapor6FileIOV15chunkedResponse4file3for9chunkSize4HTTP12HTTPResponseVSS_AH11HTTPRequestVSitF">chunkedResponse(file:for:chunkSize:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -625,7 +634,7 @@ automatically if an appropriate <code>MediaType</code> can be found for the file
                               </td>
                               <td>
                                 <div>
-                                  <p>Maxiumum size for the file data chunks.</p>
+                                  <p>Maximum size for the file data chunks.</p>
                                 </div>
                               </td>
                             </tr>
@@ -637,7 +646,7 @@ automatically if an appropriate <code>MediaType</code> can be found for the file
                         <p>A <code>200 OK</code> response containing the file stream and appropriate headers.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Utilities/FileIO.swift#L128-L164">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Utilities/FileIO.swift#L128-L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -645,9 +654,9 @@ automatically if an appropriate <code>MediaType</code> can be found for the file
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6FileIOV13chunkedStreamXeXeF"></a>
+                    <a name="/s:5Vapor6FileIOV13chunkedStream4file9chunkSize4HTTP011HTTPChunkedE0CSS_SitF"></a>
                     <a name="//apple_ref/swift/Method/chunkedStream(file:chunkSize:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6FileIOV13chunkedStreamXeXeF">chunkedStream(file:chunkSize:)</a>
+                    <a class="token" href="#/s:5Vapor6FileIOV13chunkedStream4file9chunkSize4HTTP011HTTPChunkedE0CSS_SitF">chunkedStream(file:chunkSize:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -697,7 +706,7 @@ automatically if an appropriate <code>MediaType</code> can be found for the file
                               </td>
                               <td>
                                 <div>
-                                  <p>Maxiumum size for the file data chunks.</p>
+                                  <p>Maximum size for the file data chunks.</p>
                                 </div>
                               </td>
                             </tr>
@@ -709,7 +718,7 @@ automatically if an appropriate <code>MediaType</code> can be found for the file
                         <p>An <code>HTTPChunkedStream</code> containing the file stream.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Utilities/FileIO.swift#L179-L190">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Utilities/FileIO.swift#L179-L190">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -722,8 +731,8 @@ automatically if an appropriate <code>MediaType</code> can be found for the file
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

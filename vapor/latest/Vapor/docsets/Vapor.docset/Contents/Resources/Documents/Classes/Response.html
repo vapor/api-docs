@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -70,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateMiddleware.html">DateMiddleware</a>
@@ -208,6 +205,9 @@
                 <a class="nav-group-task-link" href="../Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -317,6 +317,9 @@
                 <a class="nav-group-task-link" href="../Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -373,6 +376,12 @@
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -392,7 +401,7 @@
             <h1>Response</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Response</span><span class="p">:</span> <span class="kt">ContainerAlias</span><span class="p">,</span> <span class="kt"><a href="../Protocols/HTTPMessageContainer.html">HTTPMessageContainer</a></span><span class="p">,</span> <span class="kt"><a href="../Typealiases.html#/s:5Vapor15ResponseCodablea">ResponseCodable</a></span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Response</span> <span class="p">:</span> <span class="kt">ContainerAlias</span><span class="p">,</span> <span class="kt"><a href="../Protocols/HTTPMessageContainer.html">HTTPMessageContainer</a></span><span class="p">,</span> <span class="kt"><a href="../Typealiases.html#/s:5Vapor15ResponseCodablea">ResponseCodable</a></span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
 
                 </div>
               </div>
@@ -420,9 +429,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC16aliasedContainerXevZ"></a>
+                    <a name="/s:5Vapor8ResponseC16aliasedContainers7KeyPathCyAC7Service0D0_pGvpZ"></a>
                     <a name="//apple_ref/swift/Variable/aliasedContainer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC16aliasedContainerXevZ">aliasedContainer</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC16aliasedContainers7KeyPathCyAC7Service0D0_pGvpZ">aliasedContainer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -437,12 +446,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">aliasedContainer</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Response</span><span class="p">,</span> <span class="kt">Container</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">\</span><span class="o">.</span><span class="n"><a href="../Classes/Response.html#/s:5Vapor8ResponseC15sharedContainerXev">sharedContainer</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">aliasedContainer</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Response</span><span class="p">,</span> <span class="kt">Container</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L16">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -461,9 +470,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC4httpXev"></a>
+                    <a name="/s:5Vapor8ResponseC4http4HTTP12HTTPResponseVvp"></a>
                     <a name="//apple_ref/swift/Property/http" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC4httpXev">http</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC4http4HTTP12HTTPResponseVvp">http</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -485,7 +494,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L24">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -504,9 +513,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC15sharedContainerXev"></a>
+                    <a name="/s:5Vapor8ResponseC15sharedContainer7Service0D0_pvp"></a>
                     <a name="//apple_ref/swift/Property/sharedContainer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC15sharedContainerXev">sharedContainer</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC15sharedContainer7Service0D0_pvp">sharedContainer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -514,7 +523,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This <code>Response</code>&rsquo;s parent container. This is normally the event loop. The <code>Response</code> will redirect
+                        <p>This <code>Response</code>&lsquo;s parent container. This is normally the event loop. The <code>Response</code> will redirect
 all calls to create services to this container.</p>
 
                       </div>
@@ -527,7 +536,7 @@ all calls to create services to this container.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L30">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -535,9 +544,9 @@ all calls to create services to this container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC16privateContainerXev"></a>
+                    <a name="/s:5Vapor8ResponseC16privateContainer7Service03SubD0_pvp"></a>
                     <a name="//apple_ref/swift/Property/privateContainer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC16privateContainerXev">privateContainer</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC16privateContainer7Service03SubD0_pvp">privateContainer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -557,7 +566,7 @@ all calls to create services to this container.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L33">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -576,9 +585,9 @@ all calls to create services to this container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC11descriptionSSv"></a>
+                    <a name="/s:5Vapor8ResponseC11descriptionSSvp"></a>
                     <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC11descriptionSSv">description</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC11descriptionSSvp">description</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -593,12 +602,12 @@ all calls to create services to this container.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L38-L40">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L38-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -606,9 +615,9 @@ all calls to create services to this container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC16debugDescriptionSSv"></a>
+                    <a name="/s:5Vapor8ResponseC16debugDescriptionSSvp"></a>
                     <a name="//apple_ref/swift/Property/debugDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC16debugDescriptionSSv">debugDescription</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC16debugDescriptionSSvp">debugDescription</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -623,12 +632,12 @@ all calls to create services to this container.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L43-L45">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L43-L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -647,9 +656,9 @@ all calls to create services to this container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC7contentAA16ContentContainerVyACGv"></a>
+                    <a name="/s:5Vapor8ResponseC7contentAA16ContentContainerVyACGvp"></a>
                     <a name="//apple_ref/swift/Property/content" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC7contentAA16ContentContainerVyACGv">content</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC7contentAA16ContentContainerVyACGvp">content</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -659,7 +668,7 @@ all calls to create services to this container.</p>
                       <div class="abstract">
                         <p>Helper for encoding and decoding <code><a href="../Protocols/Content.html">Content</a></code> from an HTTP message.</p>
 
-<p>This helpper can encode data to the HTTP message. Uses the Content&rsquo;s default media type if none is supplied.</p>
+<p>This helper can encode data to the HTTP message. Uses the Content&rsquo;s default media type if none is supplied.</p>
 <pre class="highlight swift"><code><span class="k">try</span> <span class="n">res</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
 </code></pre>
 
@@ -675,12 +684,12 @@ all calls to create services to this container.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">content</span><span class="p">:</span> <span class="kt"><a href="../Structs/ContentContainer.html">ContentContainer</a></span><span class="o">&lt;</span><span class="kt">Response</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">content</span><span class="p">:</span> <span class="kt"><a href="../Structs/ContentContainer.html">ContentContainer</a></span><span class="o">&lt;</span><span class="kt">Response</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L61-L63">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L61-L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -699,9 +708,9 @@ all calls to create services to this container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseCXeXecfc"></a>
+                    <a name="/s:5Vapor8ResponseC4http5usingAC4HTTP12HTTPResponseV_7Service9Container_ptcfc"></a>
                     <a name="//apple_ref/swift/Method/init(http:using:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseCXeXecfc">init(http:using:)</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC4http5usingAC4HTTP12HTTPResponseV_7Service9Container_ptcfc">init(http:using:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -721,7 +730,7 @@ all calls to create services to this container.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L68-L72">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L68-L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -762,7 +771,7 @@ all calls to create services to this container.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L77-L79">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L77-L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -781,9 +790,9 @@ all calls to create services to this container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC6decodeXeXeFZ"></a>
+                    <a name="/s:5Vapor8ResponseC6decode4from3for3NIO15EventLoopFutureCyACGAC_AA7RequestCtKFZ"></a>
                     <a name="//apple_ref/swift/Method/decode(from:for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC6decodeXeXeFZ">decode(from:for:)</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC6decode4from3for3NIO15EventLoopFutureCyACGAC_AA7RequestCtKFZ">decode(from:for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,7 +812,7 @@ all calls to create services to this container.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L84-L86">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L84-L86">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -811,9 +820,9 @@ all calls to create services to this container.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor8ResponseC6encodeXeXeF"></a>
+                    <a name="/s:5Vapor8ResponseC6encode3for3NIO15EventLoopFutureCyACGAA7RequestC_tKF"></a>
                     <a name="//apple_ref/swift/Method/encode(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor8ResponseC6encodeXeXeF">encode(for:)</a>
+                    <a class="token" href="#/s:5Vapor8ResponseC6encode3for3NIO15EventLoopFutureCyACGAA7RequestC_tKF">encode(for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -833,7 +842,7 @@ all calls to create services to this container.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Response/Response.swift#L89-L91">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Response/Response.swift#L89-L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -846,8 +855,8 @@ all calls to create services to this container.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

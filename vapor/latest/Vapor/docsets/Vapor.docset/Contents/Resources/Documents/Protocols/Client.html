@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E0%2E2%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -70,9 +70,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateMiddleware.html">DateMiddleware</a>
@@ -208,6 +205,9 @@
                 <a class="nav-group-task-link" href="../Extensions/NonBlockingFileIO.html">NonBlockingFileIO</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Services.html">Services</a>
               </li>
               <li class="nav-group-task">
@@ -317,6 +317,9 @@
                 <a class="nav-group-task-link" href="../Structs/AnyResponse.html">AnyResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BasicResponder.html">BasicResponder</a>
               </li>
               <li class="nav-group-task">
@@ -373,6 +376,12 @@
             <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor12EngineServera">EngineServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor18EngineServerConfiga">EngineServerConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
               </li>
               <li class="nav-group-task">
@@ -411,9 +420,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientP9containerXev"></a>
+                    <a name="/s:5Vapor6ClientP9container7Service9Container_pvp"></a>
                     <a name="//apple_ref/swift/Property/container" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientP9containerXev">container</a>
+                    <a class="token" href="#/s:5Vapor6ClientP9container7Service9Container_pvp">container</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -428,12 +437,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Client/Client.swift#L20">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Client/Client.swift#L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -441,9 +450,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientP4sendXeXeF"></a>
+                    <a name="/s:5Vapor6ClientP4sendy3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestCF"></a>
                     <a name="//apple_ref/swift/Method/send(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientP4sendXeXeF">send(_:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientP4sendy3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestCF">send(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -490,7 +499,7 @@
                         <p>A <code>Future</code> containing the requested <code><a href="../Classes/Response.html">Response</a></code> or an <code>Error</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Client/Client.swift#L31">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Client/Client.swift#L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -502,9 +511,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE3getXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE3get_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF"></a>
                     <a name="//apple_ref/swift/Method/get(_:headers:beforeSend:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE3getXeXeF">get(_:headers:beforeSend:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE3get_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF">get(_:headers:beforeSend:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -586,7 +595,7 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <p>A <code>Future</code> containing the requested <code><a href="../Classes/Response.html">Response</a></code> or an <code>Error</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Client/Client.swift#L54-L56">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Client/Client.swift#L54-L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -594,9 +603,9 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE4postXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE4post_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF"></a>
                     <a name="//apple_ref/swift/Method/post(_:headers:beforeSend:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE4postXeXeF">post(_:headers:beforeSend:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE4post_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF">post(_:headers:beforeSend:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -673,7 +682,7 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <p>A <code>Future</code> containing the requested <code><a href="../Classes/Response.html">Response</a></code> or an <code>Error</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Client/Client.swift#L72-L74">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Client/Client.swift#L72-L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -681,9 +690,9 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE5patchXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE5patch_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF"></a>
                     <a name="//apple_ref/swift/Method/patch(_:headers:beforeSend:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE5patchXeXeF">patch(_:headers:beforeSend:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE5patch_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF">patch(_:headers:beforeSend:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -760,7 +769,7 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <p>A <code>Future</code> containing the requested <code><a href="../Classes/Response.html">Response</a></code> or an <code>Error</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Client/Client.swift#L90-L92">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Client/Client.swift#L90-L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -768,9 +777,9 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE3putXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE3put_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF"></a>
                     <a name="//apple_ref/swift/Method/put(_:headers:beforeSend:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE3putXeXeF">put(_:headers:beforeSend:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE3put_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF">put(_:headers:beforeSend:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -847,7 +856,7 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <p>A <code>Future</code> containing the requested <code><a href="../Classes/Response.html">Response</a></code> or an <code>Error</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Client/Client.swift#L108-L110">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Client/Client.swift#L108-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -855,9 +864,9 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE6deleteXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE6delete_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF"></a>
                     <a name="//apple_ref/swift/Method/delete(_:headers:beforeSend:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE6deleteXeXeF">delete(_:headers:beforeSend:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE6delete_7headers10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF">delete(_:headers:beforeSend:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -939,7 +948,7 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <p>A <code>Future</code> containing the requested <code><a href="../Classes/Response.html">Response</a></code> or an <code>Error</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Client/Client.swift#L131-L133">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Client/Client.swift#L131-L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -947,9 +956,9 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE4sendXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE4send_7headers2to10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG8NIOHTTP110HTTPMethodO_AN11HTTPHeadersV4HTTP16URLRepresentable_pyAA7RequestCKXEtF"></a>
                     <a name="//apple_ref/swift/Method/send(_:headers:to:beforeSend:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE4sendXeXeF">send(_:headers:to:beforeSend:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE4send_7headers2to10beforeSend3NIO15EventLoopFutureCyAA8ResponseCG8NIOHTTP110HTTPMethodO_AN11HTTPHeadersV4HTTP16URLRepresentable_pyAA7RequestCKXEtF">send(_:headers:to:beforeSend:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1038,7 +1047,7 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <p>A <code>Future</code> containing the requested <code><a href="../Classes/Response.html">Response</a></code> or an <code>Error</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Client/Client.swift#L150-L158">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Client/Client.swift#L150-L158">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1050,9 +1059,9 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE3putXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE3put_7headers7content3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVqd__tAA7ContentRd__lF"></a>
                     <a name="//apple_ref/swift/Method/put(_:headers:content:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE3putXeXeF">put(_:headers:content:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE3put_7headers7content3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVqd__tAA7ContentRd__lF">put(_:headers:content:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1070,12 +1079,13 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URLRepresentable</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(),</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Content.html">Content</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "Use beforeSend closure instead.")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URLRepresentable</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(),</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Content.html">Content</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Deprecated.swift#L15-L17">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Deprecated.swift#L15-L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1083,9 +1093,9 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE4postXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE4post_7headers7content3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVqd__tAA7ContentRd__lF"></a>
                     <a name="//apple_ref/swift/Method/post(_:headers:content:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE4postXeXeF">post(_:headers:content:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE4post_7headers7content3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVqd__tAA7ContentRd__lF">post(_:headers:content:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1103,12 +1113,13 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URLRepresentable</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(),</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Content.html">Content</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "Use beforeSend closure instead.")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URLRepresentable</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(),</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Content.html">Content</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Deprecated.swift#L21-L23">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Deprecated.swift#L21-L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1116,9 +1127,9 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE5patchXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE5patch_7headers7content3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVqd__tAA7ContentRd__lF"></a>
                     <a name="//apple_ref/swift/Method/patch(_:headers:content:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE5patchXeXeF">patch(_:headers:content:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE5patch_7headers7content3NIO15EventLoopFutureCyAA8ResponseCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVqd__tAA7ContentRd__lF">patch(_:headers:content:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1136,12 +1147,13 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URLRepresentable</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(),</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Content.html">Content</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "Use beforeSend closure instead.")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URLRepresentable</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(),</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">C</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Content.html">Content</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/Deprecated.swift#L27-L29">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Deprecated.swift#L27-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1153,9 +1165,9 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor6ClientPAAE9webSocketXeXeF"></a>
+                    <a name="/s:5Vapor6ClientPAAE9webSocket_7headers10beforeSend3NIO15EventLoopFutureCy03WebD0AJCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF"></a>
                     <a name="//apple_ref/swift/Method/webSocket(_:headers:beforeSend:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor6ClientPAAE9webSocketXeXeF">webSocket(_:headers:beforeSend:)</a>
+                    <a class="token" href="#/s:5Vapor6ClientPAAE9webSocket_7headers10beforeSend3NIO15EventLoopFutureCy03WebD0AJCG4HTTP16URLRepresentable_p_8NIOHTTP111HTTPHeadersVyAA7RequestCKXEtF">webSocket(_:headers:beforeSend:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1238,7 +1250,7 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
                         <p>A <code>Future</code> containing the newly connected <code>WebSocket</code> or an <code>Error</code>.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.0.2/Sources/Vapor/WebSocket/WebSocketClient.swift#L22-L30">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/WebSocket/WebSocketClient.swift#L22-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1251,8 +1263,8 @@ However, the <code>beforeSend</code> closure is a great place for encoding query
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-05-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
