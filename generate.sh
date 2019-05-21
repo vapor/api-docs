@@ -1,4 +1,7 @@
+#!/bin/sh
+
 function generate_docs() {
+	cd `dirname $4`
 	REPO_NAME=$1
 	MODULE=$2
 	VERSION=$3
@@ -40,4 +43,4 @@ function generate_docs() {
 	cp -R $DOCS_PATH $LATEST_PATH
 }
 
-generate_docs $1 $2 $3
+generate_docs $1 $2 $3 $0
