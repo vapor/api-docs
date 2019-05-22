@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Structures  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
+
+    <a title="Structures  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          ConsoleKit Docs
+        </a>
+         (98% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/console">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2Fmaster%2FConsoleKit%2Fdocsets%2FConsoleKit%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">ConsoleKit Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Structures  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ActivityIndicator.html">ActivityIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Terminal.html">Terminal</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ActivityIndicatorState.html">ActivityIndicatorState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/CommandRunnableType.html">CommandRunnableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ConsoleClear.html">ConsoleClear</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ConsoleColor.html">ConsoleColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/OptionType.html">OptionType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Logger/Level.html">– Level</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/LoggingSystem.html">LoggingSystem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:10ConsoleKit1poiyAA0A4TextVAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:10ConsoleKit2peoiyyAA0A4TextVz_ADtF">+=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ActivityBar.html">ActivityBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ActivityIndicatorType.html">ActivityIndicatorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AnyArgument.html">AnyArgument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AnyCommand.html">AnyCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AnyCommandGroup.html">AnyCommandGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AnyCommandRunnable.html">AnyCommandRunnable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AnyOption.html">AnyOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:10ConsoleKit7CommandP">Command</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/CommandRunnable.html">CommandRunnable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:10ConsoleKit16CommandSignatureP">CommandSignature</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Console.html">Console</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AnyCommandContext.html">AnyCommandContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Argument.html">Argument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CommandConfiguration.html">CommandConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CommandContext.html">CommandContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CommandError.html">CommandError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CommandInput.html">CommandInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Commands.html">Commands</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ConsoleError.html">ConsoleError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ConsoleLogger.html">ConsoleLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ConsoleStyle.html">ConsoleStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ConsoleText.html">ConsoleText</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ConsoleTextFragment.html">ConsoleTextFragment</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CustomActivity.html">CustomActivity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/LoadingBar.html">LoadingBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Option.html">Option</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ProgressBar.html">ProgressBar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:10ConsoleKit12CommandGroupa">CommandGroup</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit14CustomActivityV"></a>
+                    <a name="//apple_ref/swift/Struct/CustomActivity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit14CustomActivityV">CustomActivity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An activity indicator with customizable frames and success and failure messages.</p>
+
+<p>See <code>Console.activity(frames:success:failure:color:)</code> to make one.</p>
+
+                        <a href="Structs/CustomActivity.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CustomActivity</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ActivityIndicatorType.html">ActivityIndicatorType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Activity/CustomActivity.swift#L64-L115">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit10LoadingBarV"></a>
+                    <a name="//apple_ref/swift/Struct/LoadingBar" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit10LoadingBarV">LoadingBar</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loading-style implementation of <code><a href="Protocols/ActivityBar.html">ActivityBar</a></code>.</p>
+<pre class="highlight swift"><code><span class="kt">Loading</span> <span class="p">[</span>        <span class="err">•</span>             <span class="p">]</span>
+</code></pre>
+
+<p>The <code>•</code> character will bounce from left to right while the bar is active.</p>
+
+<p>See <code><a href="Protocols/Console.html#/s:10ConsoleKit0A0PAAE10loadingBar5titleAA17ActivityIndicatorCyAA07LoadingD0VGSS_tF">Console.loadingBar(title:)</a></code> to create one.</p>
+
+                        <a href="Structs/LoadingBar.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LoadingBar</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ActivityBar.html">ActivityBar</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Activity/LoadingBar.swift#L32-L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit11ProgressBarV"></a>
+                    <a name="//apple_ref/swift/Struct/ProgressBar" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit11ProgressBarV">ProgressBar</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Progress-style implementation of <code><a href="Protocols/ActivityBar.html">ActivityBar</a></code>.</p>
+<pre class="highlight swift"><code><span class="kt">Downloading</span> <span class="p">[</span><span class="o">========</span>                <span class="p">]</span>
+</code></pre>
+
+<p>The <code>=</code> characters represent the value of <code><a href="Structs/ProgressBar.html#/s:10ConsoleKit11ProgressBarV07currentC0Sdvp">ProgressBar.currentProgress</a></code> from 0&hellip;1</p>
+
+<p>See <code><a href="Protocols/Console.html#/s:10ConsoleKit0A0PAAE11progressBar5titleAA17ActivityIndicatorCyAA08ProgressD0VGSS_tF">Console.progressBar(title:)</a></code> to create one.</p>
+
+                        <a href="Structs/ProgressBar.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ProgressBar</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ActivityBar.html">ActivityBar</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Activity/ProgressBar.swift#L37-L62">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit6OptionV"></a>
+                    <a name="//apple_ref/swift/Struct/Option" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit6OptionV">Option</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A supported option for a command.</p>
+<pre class="highlight swift"><code><span class="n">exec</span> <span class="n">command</span> <span class="p">[</span><span class="o">--</span><span class="n">opt</span> <span class="o">-</span><span class="n">o</span><span class="p">]</span>
+</code></pre>
+
+                        <a href="Structs/Option.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Option</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AnyOption.html">AnyOption</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">LosslessStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Command/Base/Option.swift#L23-L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit8ArgumentV"></a>
+                    <a name="//apple_ref/swift/Struct/Argument" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit8ArgumentV">Argument</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An argument for a console command</p>
+<pre class="highlight swift"><code><span class="n">exec</span> <span class="n">command</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span>
+</code></pre>
+
+<p>Used by the <code>Command.Arguments</code> associated type:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">CowsayCommand</span><span class="p">:</span> <span class="kt">Command</span> <span class="p">{</span>
+    <span class="kd">struct</span> <span class="kt">Arguments</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">message</span> <span class="o">=</span> <span class="kt">Argument</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"message"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Fetch arguments using <code><a href="Structs/CommandContext.html#/s:10ConsoleKit14CommandContextV8argumentyqd__s7KeyPathCy9SignatureQzAA8ArgumentVyqd__GGKs25LosslessStringConvertibleRd__lF">CommandContext&lt;Command&gt;.argument(_:)</a></code>:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">CowsayCommand</span><span class="p">:</span> <span class="kt">Command</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">using</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">CommandContext</span><span class="o">&lt;</span><span class="kt">CowsayCommand</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">message</span> <span class="o">=</span> <span class="k">try</span> <span class="n">context</span><span class="o">.</span><span class="nf">argument</span><span class="p">(\</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>See <code><a href="Protocols.html#/s:10ConsoleKit7CommandP">Command</a></code> for more information.</p>
+
+                        <a href="Structs/Argument.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Argument</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AnyArgument.html">AnyArgument</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">LosslessStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Command/Command/Argument.swift#L38-L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit20CommandConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/CommandConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit20CommandConfigurationV">CommandConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures commands for a service container.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">commandConfig</span> <span class="o">=</span> <span class="kt">CommandConfig</span><span class="o">.</span><span class="nf">default</span><span class="p">()</span>
+<span class="c1">/// You can register command types that will be lazily created</span>
+<span class="n">commandConfig</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="kt">FooCommand</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">as</span><span class="p">:</span> <span class="s">"foo"</span><span class="p">)</span>
+<span class="c1">/// You can also register pre-initialized instances of a command</span>
+<span class="n">commandConfig</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="n">barCommand</span><span class="p">,</span> <span class="nv">as</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">)</span>
+<span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="n">commandConfig</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Structs/CommandConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CommandConfiguration</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Command/Config/CommandConfiguration.swift#L10-L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit8CommandsV"></a>
+                    <a name="//apple_ref/swift/Struct/Commands" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit8CommandsV">Commands</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a top-level group of configured commands. This is usually created by calling <code>resolve(for:)</code> on <code>CommandConfig</code>.</p>
+
+                        <a href="Structs/Commands.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Commands</span> <span class="p">:</span> <span class="kt">ExpressibleByDictionaryLiteral</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Command/Config/Commands.swift#L2-L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit17AnyCommandContextV"></a>
+                    <a name="//apple_ref/swift/Struct/AnyCommandContext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit17AnyCommandContextV">AnyCommandContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A type-erased <code><a href="Structs/CommandContext.html">CommandContext</a></code></p>
+
+                        <a href="Structs/AnyCommandContext.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AnyCommandContext</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Command/Run/CommandContext.swift#L2-L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit14CommandContextV"></a>
+                    <a name="//apple_ref/swift/Struct/CommandContext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit14CommandContextV">CommandContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Contains required data for running a command such as the <code><a href="Protocols/Console.html">Console</a></code> and <code><a href="Structs/CommandInput.html">CommandInput</a></code>.</p>
+
+<p>See <code><a href="Protocols/CommandRunnable.html">CommandRunnable</a></code> for more information.</p>
+
+                        <a href="Structs/CommandContext.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CommandContext</span><span class="o">&lt;</span><span class="kt"><a href="Protocols.html#/s:10ConsoleKit7CommandP">Command</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt"><a href="Protocols.html#/s:10ConsoleKit7CommandP">Command</a></span> <span class="p">:</span> <span class="kt"><a href="Protocols/CommandRunnable.html">CommandRunnable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Command/Run/CommandContext.swift#L94-L184">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit12CommandInputV"></a>
+                    <a name="//apple_ref/swift/Struct/CommandInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit12CommandInputV">CommandInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Raw input for commands. Use this to parse options and arguments for the command context.</p>
+
+                        <a href="Structs/CommandInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CommandInput</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Command/Run/CommandInput.swift#L2-L158">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit12CommandErrorV"></a>
+                    <a name="//apple_ref/swift/Struct/CommandError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit12CommandErrorV">CommandError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Errors working with the <code><a href="Protocols.html#/s:10ConsoleKit7CommandP">Command</a></code> module.</p>
+
+                        <a href="Structs/CommandError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CommandError</span> <span class="p">:</span> <span class="kt">Error</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Command/Utilities/CommandError.swift#L2-L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit0A5StyleV"></a>
+                    <a name="//apple_ref/swift/Struct/ConsoleStyle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit0A5StyleV">ConsoleStyle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Representation of a style for outputting to a Console in different colors with differing attributes.
+A few suggested default styles are provided.</p>
+
+                        <a href="Structs/ConsoleStyle.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ConsoleStyle</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Output/ConsoleStyle.swift#L3-L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit0A4TextV"></a>
+                    <a name="//apple_ref/swift/Struct/ConsoleText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit0A4TextV">ConsoleText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A collection of <code><a href="Structs/ConsoleTextFragment.html">ConsoleTextFragment</a></code>s. Represents stylized text that can be outputted
+to a <code><a href="Protocols/Console.html">Console</a></code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">ConsoleText</span> <span class="o">=</span> <span class="s">"Hello, "</span> <span class="o">+</span> <span class="s">"world"</span><span class="o">.</span><span class="nf">consoleText</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">green</span><span class="p">)</span>
+</code></pre>
+
+<p>See <code><a href="Protocols/Console.html#/s:10ConsoleKit0A0P6output_7newLineyAA0A4TextV_SbtF">Console.output(_:newLine:)</a></code> for more information.</p>
+
+                        <a href="Structs/ConsoleText.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ConsoleText</span> <span class="p">:</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">ExpressibleByArrayLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Output/ConsoleText.swift#L28-L79">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit0A12TextFragmentV"></a>
+                    <a name="//apple_ref/swift/Struct/ConsoleTextFragment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit0A12TextFragmentV">ConsoleTextFragment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A single piece of <code><a href="Structs/ConsoleText.html">ConsoleText</a></code>. Contains a raw <code>String</code> and the desired <code><a href="Structs/ConsoleStyle.html">ConsoleStyle</a></code>.</p>
+
+                        <a href="Structs/ConsoleTextFragment.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ConsoleTextFragment</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Output/ConsoleTextFragment.swift#L2-L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit0A5ErrorV"></a>
+                    <a name="//apple_ref/swift/Struct/ConsoleError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit0A5ErrorV">ConsoleError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Errors working with the <code><a href="Protocols/Console.html">Console</a></code> module.</p>
+
+                        <a href="Structs/ConsoleError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ConsoleError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Utilities/ConsoleError.swift#L2-L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ConsoleKit0A6LoggerV"></a>
+                    <a name="//apple_ref/swift/Struct/ConsoleLogger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ConsoleKit0A6LoggerV">ConsoleLogger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Outputs logs to a <code><a href="Protocols/Console.html">Console</a></code>.</p>
+
+                        <a href="Structs/ConsoleLogger.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ConsoleLogger</span> <span class="p">:</span> <span class="kt">LogHandler</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/master/Sources/ConsoleKit/Utilities/ConsoleLogger.swift#L4-L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
+
+    <a title="Classes  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Authentication Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/auth">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fauth%2Fmaster%2FAuthentication%2Fdocsets%2FAuthentication%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Authentication Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Classes  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AuthenticationProvider.html">AuthenticationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AuthenticationSessionsMiddleware.html">AuthenticationSessionsMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BasicAuthenticationMiddleware.html">BasicAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:14Authentication06BearerA10MiddlewareC">BearerAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GuardAuthenticationMiddleware.html">GuardAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HeaderValueAuthenticationMiddleware.html">HeaderValueAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TokenAuthenticationMiddleware.html">TokenAuthenticationMiddleware</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Request.html">Request</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Authenticatable.html">Authenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/BasicAuthenticatable.html">BasicAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/BearerAuthenticatable.html">BearerAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/HeaderValueAuthenticatable.html">HeaderValueAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PasswordAuthenticatable.html">PasswordAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PasswordVerifier.html">PasswordVerifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SessionAuthenticatable.html">SessionAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Token.html">Token</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/TokenAuthenticatable.html">TokenAuthenticatable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AuthenticationError.html">AuthenticationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PlaintextVerifier.html">PlaintextVerifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RedirectMiddleware.html">RedirectMiddleware</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication0A8ProviderC"></a>
+                    <a name="//apple_ref/swift/Class/AuthenticationProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication0A8ProviderC">AuthenticationProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds authentication services to a container</p>
+
+                        <a href="Classes/AuthenticationProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">AuthenticationProvider</span> <span class="p">:</span> <span class="kt">Provider</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/AuthenticationProvider.swift#L2-L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication05BasicA10MiddlewareC"></a>
+                    <a name="//apple_ref/swift/Class/BasicAuthenticationMiddleware" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication05BasicA10MiddlewareC">BasicAuthenticationMiddleware</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Protects a route group, requiring a password authenticatable
+instance to pass through.</p>
+
+<p>use <code>req.requireAuthenticated(A.self)</code> to fetch the instance.</p>
+
+                        <a href="Classes/BasicAuthenticationMiddleware.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">BasicAuthenticationMiddleware</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Middleware</span> <span class="k">where</span> <span class="kt">A</span> <span class="p">:</span> <span class="kt"><a href="Protocols/BasicAuthenticatable.html">BasicAuthenticatable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Basic/BasicAuthenticationMiddleware.swift#L5-L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication06BearerA10MiddlewareC"></a>
+                    <a name="//apple_ref/swift/Class/BearerAuthenticationMiddleware" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication06BearerA10MiddlewareC">BearerAuthenticationMiddleware</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Protects a route group, requiring a token authenticatable
+instance to pass through.</p>
+
+<p>use <code>req.requireAuthenticated(A.self)</code> to fetch the instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">BearerAuthenticationMiddleware</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/HeaderValueAuthenticationMiddleware.html">HeaderValueAuthenticationMiddleware</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">A</span> <span class="p">:</span> <span class="kt"><a href="Protocols/BearerAuthenticatable.html">BearerAuthenticatable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Bearer/BearerAuthenticationMiddleware.swift#L6">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication011HeaderValueA10MiddlewareC"></a>
+                    <a name="//apple_ref/swift/Class/HeaderValueAuthenticationMiddleware" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication011HeaderValueA10MiddlewareC">HeaderValueAuthenticationMiddleware</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Protects a route group, requiring a token authenticatable
+instance to pass through.</p>
+
+<p>use <code>req.requireAuthenticated(A.self)</code> to fetch the instance.</p>
+
+                        <a href="Classes/HeaderValueAuthenticationMiddleware.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HeaderValueAuthenticationMiddleware</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Middleware</span> <span class="k">where</span> <span class="kt">A</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HeaderValueAuthenticatable.html">HeaderValueAuthenticatable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Header/HeaderAuthenticatableMiddleware.swift#L6-L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication0A18SessionsMiddlewareC"></a>
+                    <a name="//apple_ref/swift/Class/AuthenticationSessionsMiddleware" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication0A18SessionsMiddlewareC">AuthenticationSessionsMiddleware</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Persists authentication done by another auth middleware allowing the authentication to only be passed once.</p>
+
+                        <a href="Classes/AuthenticationSessionsMiddleware.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">AuthenticationSessionsMiddleware</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Middleware</span> <span class="k">where</span> <span class="kt">A</span> <span class="p">:</span> <span class="kt"><a href="Protocols/SessionAuthenticatable.html">SessionAuthenticatable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Persist/AuthenticationSessionsMiddleware.swift#L2-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication05TokenA10MiddlewareC"></a>
+                    <a name="//apple_ref/swift/Class/TokenAuthenticationMiddleware" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication05TokenA10MiddlewareC">TokenAuthenticationMiddleware</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Protects a route group, requiring a token authenticatable
+instance to pass through.</p>
+
+<p>use <code>req.requireAuthenticated(A.self)</code> to fetch the instance.</p>
+
+                        <a href="Classes/TokenAuthenticationMiddleware.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TokenAuthenticationMiddleware</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Middleware</span> <span class="k">where</span> <span class="kt">A</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TokenAuthenticatable.html">TokenAuthenticatable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Token/TokenAuthenticationMiddleware.swift#L5-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication05GuardA10MiddlewareC"></a>
+                    <a name="//apple_ref/swift/Class/GuardAuthenticationMiddleware" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication05GuardA10MiddlewareC">GuardAuthenticationMiddleware</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This middleware ensures that an <code><a href="Protocols/Authenticatable.html">Authenticatable</a></code> type <code>A</code> has been authenticated
+by a previous <code>Middleware</code> or throws an <code>Error</code>. The middlewares that actually perform
+authentication will <em>not</em> throw errors if they fail to authenticate the user (except in
+some exceptional cases like malformed data). This allows the middlewares to be composed
+together to create chains of authentication for multiple user types.</p>
+
+<p>Use this middleware to protect routes that might not otherwise attempt to access the
+authenticated user (which always requires prior authentication).</p>
+
+<p>Use <code><a href="Protocols/Authenticatable.html#/s:14Authentication15AuthenticatablePAAE19guardAuthMiddleware8throwingAA05GuardaE0CyxGs5Error_p_tFZ">Authenticatable.guardAuthMiddleware(...)</a></code> to create an instance.</p>
+
+<p>Use this middleware in conjunction with other middleware such as <code><a href="Classes.html#/s:14Authentication06BearerA10MiddlewareC">BearerAuthenticationMiddleware</a></code>
+and <code><a href="Classes/BasicAuthenticationMiddleware.html">BasicAuthenticationMiddleware</a></code> to do the actual authentication.</p>
+
+                        <a href="Classes/GuardAuthenticationMiddleware.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">GuardAuthenticationMiddleware</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Middleware</span> <span class="k">where</span> <span class="kt">A</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Authenticatable.html">Authenticatable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Utilities/GuardMiddleware.swift#L14-L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

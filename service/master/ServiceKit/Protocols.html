@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
+
+    <a title="Protocols  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          ServiceKit Docs
+        </a>
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/service">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fservice%2Fmaster%2FServiceKit%2Fdocsets%2FServiceKit%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">ServiceKit Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Protocols  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Container.html">Container</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/s:10ServiceKit0A5ErrorO">ServiceError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Extendable.html">Extendable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Provider.html">Provider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Environment/Process.html">– Process</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Extend.html">Extend</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Services.html">Services</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ServiceKit8ProviderP"></a>
+                    <a name="//apple_ref/swift/Protocol/Provider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ServiceKit8ProviderP">Provider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>Provider</code>s allow third-party services to be easily integrated into a service <code><a href="Classes/Container.html">Container</a></code>.</p>
+
+<p>Simply register the <code>Provider</code> like any other service and it will take care of setting up any necessary
+configurations on itself and the container.</p>
+<pre class="highlight swift"><code><span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="kt">RedisProvider</span><span class="p">())</span>
+</code></pre>
+<h1 id='lifecycle' class='heading'>Lifecycle</h1>
+
+<p><code>Provider</code>s have two phases:</p>
+
+<ul>
+<li>Registration</li>
+<li>Boot</li>
+</ul>
+<h2 id='registration' class='heading'>Registration</h2>
+
+<p>During the registration phase, the <code>Provider</code> is supplied with a mutable <code><a href="Structs/Services.html">Services</a></code> struct. The <code>Provider</code>
+is expected to register all services it would like to expose to the <code><a href="Classes/Container.html">Container</a></code> during this phase.</p>
+<pre class="highlight swift"><code><span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="kt">RedisCache</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
+<h2 id='boot' class='heading'>Boot</h2>
+
+<p>There are two parts of the boot phase: <code>willBoot(_:)</code> and <code>didBoot(_:)</code>. Both of these methods supply
+the <code>Provider</code> with access to the initialized <code><a href="Classes/Container.html">Container</a></code> and allow asynchronous work to be done.</p>
+
+<p>The <code>didBoot(_:)</code> method is guaranteed to be called after all providers have run <code>willBoot(_:)</code>. Most providers should
+try to do their work in the <code>didBoot(_:)</code> method, resorting to the <code>willBoot(_:)</code> method if they want to pre-empt work
+done by other providers.</p>
+
+                        <a href="Protocols/Provider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Provider</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/service/tree/master/Sources/ServiceKit/Provider/Provider.swift#L32-L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ServiceKit10ExtendableP"></a>
+                    <a name="//apple_ref/swift/Protocol/Extendable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ServiceKit10ExtendableP">Extendable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Types conforming to <code>Extendable</code> can have stored properties added in extension by using the <code><a href="Structs/Extend.html">Extend</a></code> struct.</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="n">cass</span> <span class="kt">MyType</span><span class="p">:</span> <span class="kt">Extendable</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+<span class="kd">extension</span> <span class="kt">MyType</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">foo</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">extend</span><span class="o">.</span><span class="nf">get</span><span class="p">(\</span><span class="kt">MyType</span><span class="o">.</span><span class="n">foo</span><span class="p">,</span> <span class="k">default</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+        <span class="k">set</span> <span class="p">{</span> <span class="n">extend</span><span class="o">.</span><span class="nf">set</span><span class="p">(\</span><span class="kt">MyType</span><span class="o">.</span><span class="n">foo</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">newValue</span><span class="p">)</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="Protocols/Extendable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Extendable</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/service/tree/master/Sources/ServiceKit/Utilities/Extendable.swift#L11-L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

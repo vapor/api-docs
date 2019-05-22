@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Benchmarker Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/Benchmarker" class="dashAnchor"></a>
+
+    <a title="Benchmarker Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          FluentBenchmark Docs
+        </a>
+         (82% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/fluent">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2F3%2E2%2E0%2FFluentBenchmark%2Fdocsets%2FFluentBenchmark%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">FluentBenchmark Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      Benchmarker Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Benchmarker.html">Benchmarker</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/IndexSupportingModel.html">IndexSupportingModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LogMessage.html">LogMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Pet.html">Pet</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PetToy.html">PetToy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentBenchmarkError.html">FluentBenchmarkError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Toy.html">Toy</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Benchmarker</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Benchmarker</span><span class="o">&lt;</span><span class="kt">Database</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Database</span> <span class="p">:</span> <span class="kt">LogSupporting</span></code></pre>
+
+                </div>
+              </div>
+            <p>Benchmarks a Fluent database implementation.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerC8databasexvp"></a>
+                    <a name="//apple_ref/swift/Property/database" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerC8databasexvp">database</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The database being benchmarked</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">database</span><span class="p">:</span> <span class="kt">Database</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/Benchmarker.swift#L9">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerC4pool11DatabaseKit0E14ConnectionPoolCyAE010ConfiguredE0VyxGGvp"></a>
+                    <a name="//apple_ref/swift/Property/pool" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerC4pool11DatabaseKit0E14ConnectionPoolCyAE010ConfiguredE0VyxGGvp">pool</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Connection pool to use.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pool</span><span class="p">:</span> <span class="kt">DatabaseConnectionPool</span><span class="o">&lt;</span><span class="kt">ConfiguredDatabase</span><span class="o">&lt;</span><span class="kt">Database</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/Benchmarker.swift#L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerC6OnFaila"></a>
+                    <a name="//apple_ref/swift/Alias/OnFail" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerC6OnFaila">OnFail</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error handler</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">OnFail</span> <span class="o">=</span> <span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="kt">StaticString</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/Benchmarker.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerC_2on0D4FailACyxGx_3NIO14EventLoopGroup_pySS_s12StaticStringVSutctKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:on:onFail:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerC_2on0D4FailACyxGx_3NIO14EventLoopGroup_pySS_s12StaticStringVSutctKcfc">init(_:on:onFail:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new benchmarker</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">database</span><span class="p">:</span> <span class="kt">Database</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">,</span> <span class="nv">onFail</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Benchmarker.html#/s:15FluentBenchmark11BenchmarkerC6OnFaila">OnFail</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/Benchmarker.swift#L27-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE18benchmarkAggregateyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkAggregate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE18benchmarkAggregateyyKF">benchmarkAggregate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkAggregate</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkAggregate.swift#L46-L50">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE023benchmarkAggregate_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkAggregate_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE023benchmarkAggregate_withF0yyKF">benchmarkAggregate_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkAggregate_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkAggregate.swift#L54-L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE22benchmarkAutoincrementyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkAutoincrement()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE22benchmarkAutoincrementyyKF">benchmarkAutoincrement()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark the Timestampable protocol</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkAutoincrement</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkAutoincrement.swift#L20-L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE027benchmarkAutoincrement_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkAutoincrement_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE027benchmarkAutoincrement_withF0yyKF">benchmarkAutoincrement_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark the Timestampable protocol
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkAutoincrement_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkAutoincrement.swift#L30-L38">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE13benchmarkBugsyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkBugs()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE13benchmarkBugsyyKF">benchmarkBugs()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmarks misc bugs</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkBugs</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkBugs.swift#L44-L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE018benchmarkBugs_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkBugs_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE018benchmarkBugs_withF0yyKF">benchmarkBugs_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmarks misc bugs, preparing the schema first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkBugs_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkBugs.swift#L53-L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA11DatabaseKit20KeyedCacheSupportingRz0A005QueryH0RzAF011TransactionH0RzrlE09benchmarkG0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkCache()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA11DatabaseKit20KeyedCacheSupportingRz0A005QueryH0RzAF011TransactionH0RzrlE09benchmarkG0yyKF">benchmarkCache()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent transactions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkCache</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkCache.swift#L38-L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA11DatabaseKit20KeyedCacheSupportingRz0A009MigrationH0RzAF06SchemaH0RzAF011TransactionH0RzrlE09benchmarkg5_withJ0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkCache_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA11DatabaseKit20KeyedCacheSupportingRz0A009MigrationH0RzAF06SchemaH0RzAF011TransactionH0RzrlE09benchmarkg5_withJ0yyKF">benchmarkCache_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent transactions.
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkCache_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkCache.swift#L53-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE17benchmarkChunkingyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkChunking()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE17benchmarkChunkingyyKF">benchmarkChunking()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark result chunking</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkChunking</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkChunk.swift#L50-L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE022benchmarkChunking_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkChunking_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE022benchmarkChunking_withF0yyKF">benchmarkChunking_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark result chunking
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkChunking_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkChunk.swift#L64-L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE014benchmarkIndexE0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkIndexSupporting()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE014benchmarkIndexE0yyKF">benchmarkIndexSupporting()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent relations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkIndexSupporting</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkIndexSupporting.swift#L21-L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE014benchmarkIndexe5_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkIndexSupporting_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE014benchmarkIndexe5_withF0yyKF">benchmarkIndexSupporting_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent relations.
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkIndexSupporting_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkIndexSupporting.swift#L31-L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzrlE14benchmarkJoinsyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkJoins()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzrlE14benchmarkJoinsyyKF">benchmarkJoins()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent relations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkJoins</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkJoins.swift#L26-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzAD09MigrationE0RzAD06SchemaE0RzrlE019benchmarkJoins_withG0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkJoins_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzAD09MigrationE0RzAD06SchemaE0RzrlE019benchmarkJoins_withG0yyKF">benchmarkJoins_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent relations.
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkJoins_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkJoins.swift#L36-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE18benchmarkLifecycleyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkLifecycle()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE18benchmarkLifecycleyyKF">benchmarkLifecycle()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkLifecycle</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkLifecycle.swift#L32-L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE023benchmarkLifecycle_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkLifecycle_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE023benchmarkLifecycle_withF0yyKF">benchmarkLifecycle_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmarks misc bugs, preparing the schema first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkLifecycle_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkLifecycle.swift#L41-L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE15benchmarkModelsyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkModels()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE15benchmarkModelsyyKF">benchmarkModels()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark the basic model CRUD.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkModels</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkModels.swift#L57-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE020benchmarkModels_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkModels_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE020benchmarkModels_withF0yyKF">benchmarkModels_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark the basic model CRUD.
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkModels_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkModels.swift#L67-L73">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE14benchmarkRangeyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkRange()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE14benchmarkRangeyyKF">benchmarkRange()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkRange</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkRange.swift#L25-L29">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE019benchmarkRange_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkRange_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE019benchmarkRange_withF0yyKF">benchmarkRange_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkRange_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkRange.swift#L33-L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzrlE27benchmarkReferentialActionsyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkReferentialActions()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzrlE27benchmarkReferentialActionsyyKF">benchmarkReferentialActions()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent relations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkReferentialActions</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkReferentialActions.swift#L65-L69">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzAD09MigrationE0RzAD06SchemaE0RzrlE032benchmarkReferentialActions_withG0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkReferentialActions_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzAD09MigrationE0RzAD06SchemaE0RzrlE032benchmarkReferentialActions_withG0yyKF">benchmarkReferentialActions_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent relations.
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkReferentialActions_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkReferentialActions.swift#L75-L88">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzrlE18benchmarkRelationsyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkRelations()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzrlE18benchmarkRelationsyyKF">benchmarkRelations()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent relations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkRelations</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkRelations.swift#L72-L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzAD09MigrationE0RzAD06SchemaE0RzrlE023benchmarkRelations_withG0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkRelations_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A014JoinSupportingRzAD09MigrationE0RzAD06SchemaE0RzrlE023benchmarkRelations_withG0yyKF">benchmarkRelations_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent relations.
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkRelations_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkRelations.swift#L82-L99">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE09benchmarkF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE09benchmarkF0yyKF">benchmarkSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark the basic schema creations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkSchema.swift#L5-L11">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzAD011TransactionE0RzrlE22benchmarkSoftDeletableyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkSoftDeletable()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzAD011TransactionE0RzrlE22benchmarkSoftDeletableyyKF">benchmarkSoftDeletable()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent transactions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkSoftDeletable</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkSoftDeletable.swift#L48-L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzAD011TransactionE0RzrlE027benchmarkSoftDeletable_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkSoftDeletable_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzAD011TransactionE0RzrlE027benchmarkSoftDeletable_withF0yyKF">benchmarkSoftDeletable_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent transactions.
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkSoftDeletable_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkSoftDeletable.swift#L58-L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE13benchmarkSortyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkSort()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE13benchmarkSortyyKF">benchmarkSort()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkSort</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkSort.swift#L22-L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE018benchmarkSort_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkSort_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE018benchmarkSort_withF0yyKF">benchmarkSort_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkSort_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkSort.swift#L30-L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE15benchmarkSubsetyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkSubset()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE15benchmarkSubsetyyKF">benchmarkSubset()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkSubset</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkSubset.swift#L21-L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE020benchmarkSubset_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkSubset_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE020benchmarkSubset_withF0yyKF">benchmarkSubset_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkSubset_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkSubset.swift#L29-L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE22benchmarkTimestampableyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkTimestampable()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE22benchmarkTimestampableyyKF">benchmarkTimestampable()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark the Timestampable protocol</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkTimestampable</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkTimestampable.swift#L93-L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE027benchmarkTimestampable_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkTimestampable_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE027benchmarkTimestampable_withF0yyKF">benchmarkTimestampable_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark the Timestampable protocol
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkTimestampable_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkTimestampable.swift#L103-L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzAD011TransactionE0RzrlE21benchmarkTransactionsyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkTransactions()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzAD011TransactionE0RzrlE21benchmarkTransactionsyyKF">benchmarkTransactions()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent transactions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkTransactions</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkTransaction.swift#L36-L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzAD011TransactionE0RzrlE026benchmarkTransactions_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkTransactions_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzAD011TransactionE0RzrlE026benchmarkTransactions_withF0yyKF">benchmarkTransactions_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Benchmark fluent transactions.
+The schema will be prepared first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkTransactions_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkTransaction.swift#L46-L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE15benchmarkUpdateyyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkUpdate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A015QuerySupportingRzrlE15benchmarkUpdateyyKF">benchmarkUpdate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkUpdate</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkUpdate.swift#L24-L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE020benchmarkUpdate_withF0yyKF"></a>
+                    <a name="//apple_ref/swift/Method/benchmarkUpdate_withSchema()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA0A019MigrationSupportingRzAD06SchemaE0RzrlE020benchmarkUpdate_withF0yyKF">benchmarkUpdate_withSchema()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">benchmarkUpdate_withSchema</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/BenchmarkUpdate.swift#L32-L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15FluentBenchmark11BenchmarkerCAA11DatabaseKit20KeyedCacheSupportingRz0A004JoinH0RzAF09MigrationH0RzAF06SchemaH0RzAF011TransactionH0RzrlE6runAllyyKF"></a>
+                    <a name="//apple_ref/swift/Method/runAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15FluentBenchmark11BenchmarkerCAA11DatabaseKit20KeyedCacheSupportingRz0A004JoinH0RzAF09MigrationH0RzAF06SchemaH0RzAF011TransactionH0RzrlE6runAllyyKF">runAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">runAll</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/FluentBenchmark/Benchmarks/Benchmarker.swift#L87-L107">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

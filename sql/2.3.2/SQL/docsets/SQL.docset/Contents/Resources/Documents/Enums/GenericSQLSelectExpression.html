@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GenericSQLSelectExpression Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Enum/GenericSQLSelectExpression" class="dashAnchor"></a>
+
+    <a title="GenericSQLSelectExpression Enumeration Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SQL Docs
+        </a>
+         (99% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/sql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fsql%2F2%2E3%2E2%2FSQL%2Fdocsets%2FSQL%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SQL Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      GenericSQLSelectExpression Enumeration Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLCreateIndexBuilder.html">SQLCreateIndexBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLCreateTableBuilder.html">SQLCreateTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLDeleteBuilder.html">SQLDeleteBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLDropTableBuilder.html">SQLDropTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLInsertBuilder.html">SQLInsertBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLPredicateGroupBuilder.html">SQLPredicateGroupBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLRawBuilder.html">SQLRawBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLSelectBuilder.html">SQLSelectBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLUpdateBuilder.html">SQLUpdateBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLBinaryOperator.html">GenericSQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLColumnConstraintAlgorithm.html">GenericSQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLDirection.html">GenericSQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLDistinct.html">GenericSQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLExpression.html">GenericSQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLForeignKeyAction.html">GenericSQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLFunctionArgument.html">GenericSQLFunctionArgument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLIndexModifier.html">GenericSQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLJoinMethod.html">GenericSQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLLiteral.html">GenericSQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLSelectExpression.html">GenericSQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GenericSQLTableConstraintAlgorithm.html">GenericSQLTableConstraintAlgorithm</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseConnectionPool.html">DatabaseConnectionPool</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2neoiyq0_s7KeyPathCyxq_G_q_tAA8SQLTableRzSER_AA13SQLExpressionR0_r1_lF">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2neoiyq2_s7KeyPathCyxq_G_ADyq0_q1_GtAA8SQLTableRzSER_AaGR0_SER1_AA13SQLExpressionR2_r3_lF">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2aaoiyxx_xtAA13SQLExpressionRzlF">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2aeoiyyxSgz_xtAA13SQLExpressionRzlF">&amp;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2eeoiyq0_s7KeyPathCyxq_G_q_tAA8SQLTableRzSER_AA13SQLExpressionR0_r1_lF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2eeoiyq2_s7KeyPathCyxq_G_ADyq0_q1_GtAA8SQLTableRzSER_AaGR0_SER1_AA13SQLExpressionR2_r3_lF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2oeoiyyxSgz_xtAA13SQLExpressionRzlF">|=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:3SQL2oooiyxx_xtAA13SQLExpressionRzlF">||(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnySQLTable.html">AnySQLTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLAlterTable.html">SQLAlterTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLBinaryOperator.html">SQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLBind.html">SQLBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLBoolLiteral.html">SQLBoolLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:3SQL12SQLCollationP">SQLCollation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnBuilder.html">SQLColumnBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnConstraint.html">SQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnConstraintAlgorithm.html">SQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnDefinition.html">SQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnIdentifier.html">SQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLConnectable.html">SQLConnectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLConnection.html">SQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLCreateIndex.html">SQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLCreateTable.html">SQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDataType.html">SQLDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDefaultLiteral.html">SQLDefaultLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDelete.html">SQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDirection.html">SQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDistinct.html">SQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:3SQL12SQLDropIndexP">SQLDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDropTable.html">SQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLError.html">SQLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLExpression.html">SQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLForeignKey.html">SQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLForeignKeyAction.html">SQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLFunction.html">SQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLFunctionArgument.html">SQLFunctionArgument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLGroupBy.html">SQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLIdentifier.html">SQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLIndexModifier.html">SQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLInsert.html">SQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLJoin.html">SQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLJoinMethod.html">SQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLLiteral.html">SQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLOrderBy.html">SQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLPredicateBuilder.html">SQLPredicateBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLPrimaryKeyDefault.html">SQLPrimaryKeyDefault</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLQuery.html">SQLQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLQueryBuilder.html">SQLQueryBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLQueryFetcher.html">SQLQueryFetcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLSelect.html">SQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLSerializable.html">SQLSerializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:3SQL8SQLTableP">SQLTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLTableConstraint.html">SQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLTableConstraintAlgorithm.html">SQLTableConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLTableIdentifier.html">SQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLUpdate.html">SQLUpdate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLBind.html">GenericSQLBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLColumnConstraint.html">GenericSQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLColumnDefinition.html">GenericSQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLColumnIdentifier.html">GenericSQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLCreateIndex.html">GenericSQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLCreateTable.html">GenericSQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLDelete.html">GenericSQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLDropTable.html">GenericSQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLForeignKey.html">GenericSQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLFunction.html">GenericSQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLGroupBy.html">GenericSQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLIdentifier.html">GenericSQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLInsert.html">GenericSQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLJoin.html">GenericSQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLOrderBy.html">GenericSQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLSelect.html">GenericSQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLTableConstraint.html">GenericSQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLTableIdentifier.html">GenericSQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GenericSQLUpdate.html">GenericSQLUpdate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLErrorType.html">SQLErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLQueryEncoder.html">SQLQueryEncoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>GenericSQLSelectExpression</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">GenericSQLSelectExpression</span><span class="o">&lt;</span><span class="kt">Expression</span><span class="p">,</span> <span class="kt">Identifier</span><span class="p">,</span> <span class="kt">TableIdentifier</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a></span> <span class="k">where</span>
+    <span class="kt">Expression</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLExpression.html">SQLExpression</a></span><span class="p">,</span> <span class="kt">Identifier</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLIdentifier.html">SQLIdentifier</a></span><span class="p">,</span> <span class="kt">TableIdentifier</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLTableIdentifier.html">SQLTableIdentifier</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Generic implementation of <code><a href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a></code>.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO4Selfa"></a>
+                    <a name="//apple_ref/swift/Alias/Self" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO4Selfa">Self</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">GenericSQLSelectExpression</span><span class="o">&lt;</span><span class="kt">Expression</span><span class="p">,</span> <span class="kt">Identifier</span><span class="p">,</span> <span class="kt">TableIdentifier</span><span class="o">&gt;.</span><span class="p">`</span><span class="nv">Self</span><span class="p">`</span> <span class="o">=</span> <span class="kt">GenericSQLSelectExpression</span><span class="o">&lt;</span><span class="kt">Expression</span><span class="p">,</span> <span class="kt">Identifier</span><span class="p">,</span> <span class="kt">TableIdentifier</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L69">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO3allACyxq_q0_GvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/all" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO3allACyxq_q0_GvpZ">all</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">all</span><span class="p">:</span> <span class="p">`</span><span class="nv">Self</span><span class="p">`</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L72-L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO8allTableyACyxq_q0_Gq0_FZ"></a>
+                    <a name="//apple_ref/swift/Method/allTable(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO8allTableyACyxq_q0_Gq0_FZ">allTable(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">allTable</span><span class="p">(</span><span class="n">_</span> <span class="nv">table</span><span class="p">:</span> <span class="kt">TableIdentifier</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">GenericSQLSelectExpression</span><span class="o">&lt;</span><span class="kt">Expression</span><span class="p">,</span> <span class="kt">Identifier</span><span class="p">,</span> <span class="kt">TableIdentifier</span><span class="o">&gt;.</span><span class="p">`</span><span class="nv">Self</span><span class="p">`</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L77-L79">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO10expression_5aliasACyxq_q0_Gx_q_SgtFZ"></a>
+                    <a name="//apple_ref/swift/Method/expression(_:alias:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO10expression_5aliasACyxq_q0_Gx_q_SgtFZ">expression(_:alias:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">expression</span><span class="p">(</span><span class="n">_</span> <span class="nv">expression</span><span class="p">:</span> <span class="kt">Expression</span><span class="p">,</span> <span class="nv">alias</span><span class="p">:</span> <span class="kt">Identifier</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">GenericSQLSelectExpression</span><span class="o">&lt;</span><span class="kt">Expression</span><span class="p">,</span> <span class="kt">Identifier</span><span class="p">,</span> <span class="kt">TableIdentifier</span><span class="o">&gt;.</span><span class="p">`</span><span class="nv">Self</span><span class="p">`</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L82-L84">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO13stringLiteralACyxq_q0_GSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO13stringLiteralACyxq_q0_GSS_tcfc">init(stringLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>ExpressibleByStringLiteral</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">stringLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L87-L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO5isAllSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isAll" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO5isAllSbvp">isAll</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isAll</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L92-L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO8allTableq0_Sgvp"></a>
+                    <a name="//apple_ref/swift/Property/allTable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO8allTableq0_Sgvp">allTable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allTable</span><span class="p">:</span> <span class="kt">TableIdentifier</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L100-L105">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO10expressionxAD_q_Sg5aliastSgvp"></a>
+                    <a name="//apple_ref/swift/Property/expression" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO10expressionxAD_q_Sg5aliastSgvp">expression</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLSelectExpression.html">SQLSelectExpression</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">expression</span><span class="p">:</span> <span class="p">(</span><span class="nv">expression</span><span class="p">:</span> <span class="kt">Expression</span><span class="p">,</span> <span class="nv">alias</span><span class="p">:</span> <span class="kt">Identifier</span><span class="p">?)?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L108-L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO4_allyACyxq_q0_GAEmAA13SQLExpressionRzAA13SQLIdentifierR_AA18SQLTableIdentifierR0_r1_lF"></a>
+                    <a name="//apple_ref/swift/Element/_all" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO4_allyACyxq_q0_GAEmAA13SQLExpressionRzAA13SQLIdentifierR_AA18SQLTableIdentifierR0_r1_lF">_all</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>*</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_all</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L116">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO9_allTableyACyxq_q0_Gq0_cAEmAA13SQLExpressionRzAA13SQLIdentifierR_AA18SQLTableIdentifierR0_r1_lF"></a>
+                    <a name="//apple_ref/swift/Element/_allTable(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO9_allTableyACyxq_q0_Gq0_cAEmAA13SQLExpressionRzAA13SQLIdentifierR_AA18SQLTableIdentifierR0_r1_lF">_allTable(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>table.*</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">_allTable</span><span class="p">(</span><span class="kt">TableIdentifier</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L119">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO11_expressionyACyxq_q0_Gx_q_SgtcAEmAA13SQLExpressionRzAA13SQLIdentifierR_AA18SQLTableIdentifierR0_r1_lF"></a>
+                    <a name="//apple_ref/swift/Element/_expression(_:alias:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO11_expressionyACyxq_q0_Gx_q_SgtcAEmAA13SQLExpressionRzAA13SQLIdentifierR_AA18SQLTableIdentifierR0_r1_lF">_expression(_:alias:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>md5(a) AS hash</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">_expression</span><span class="p">(</span><span class="kt">Expression</span><span class="p">,</span> <span class="nv">alias</span><span class="p">:</span> <span class="kt">Identifier</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L122">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQL26GenericSQLSelectExpressionO9serializeySSSaySE_pGzF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQL26GenericSQLSelectExpressionO9serializeySSSaySE_pGzF">serialize(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/SQLSerializable.html">SQLSerializable</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">_</span> <span class="nv">binds</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Encodable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/2.3.2/Sources/SQL/SQLSelectExpression.swift#L125-L135">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

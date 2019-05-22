@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>URLEncodedFormEncoder Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/URLEncodedFormEncoder" class="dashAnchor"></a>
+
+    <a title="URLEncodedFormEncoder Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          URLEncodedForm Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/url-encoded-form">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Furl%2Dencoded%2Dform%2Fmaster%2FURLEncodedForm%2Fdocsets%2FURLEncodedForm%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">URLEncodedForm Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      URLEncodedFormEncoder Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLEncodedFormDecoder.html">URLEncodedFormDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLEncodedFormEncoder.html">URLEncodedFormEncoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/URLEncodedFormError.html">URLEncodedFormError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>URLEncodedFormEncoder</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">URLEncodedFormEncoder</span> <span class="p">:</span> <span class="kt">DataEncoder</span></code></pre>
+
+                </div>
+              </div>
+            <p>Encodes <code>Encodable</code> instances to <code>application/x-www-form-urlencoded</code> data.</p>
+<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="c1">/// User</span>
+<span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">URLEncodedFormEncoder</span><span class="p">()</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">/// Data</span>
+</code></pre>
+
+<p>URL-encoded forms are commonly used by websites to send form data via POST requests. This encoding is relatively
+efficient for small amounts of data but must be percent-encoded.  <code>multipart/form-data</code> is more efficient for sending
+large data blobs like files.</p>
+
+<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">Mozilla&rsquo;s</a> docs for more information about
+url-encoded forms.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14URLEncodedForm0aB7EncoderCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14URLEncodedForm0aB7EncoderCACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new <code>URLEncodedFormEncoder</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/url-encoded-form/tree/master/Sources/URLEncodedForm/Codable/URLEncodedFormEncoder.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14URLEncodedForm0aB7EncoderC6encodey10Foundation4DataVxKSERzlF"></a>
+                    <a name="//apple_ref/swift/Method/encode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14URLEncodedForm0aB7EncoderC6encodey10Foundation4DataVxKSERzlF">encode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes the supplied <code>Encodable</code> object to <code>Data</code>.</p>
+<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="c1">// User</span>
+<span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">URLEncodedFormEncoder</span><span class="p">()</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">// "name=Vapor&amp;age=3"</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Any error that may occur while attempting to encode the specified type.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">encode</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">encodable</span><span class="p">:</span> <span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encodable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Generic <code>Encodable</code> object (<code>E</code>) to encode.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Encoded <code>Data</code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/url-encoded-form/tree/master/Sources/URLEncodedForm/Codable/URLEncodedFormEncoder.swift#L27-L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

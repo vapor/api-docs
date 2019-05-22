@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SQLDatabase Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/SQLDatabase" class="dashAnchor"></a>
+
+    <a title="SQLDatabase Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SQLKit Docs
+        </a>
+         (59% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/sql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fsql%2Fmaster%2FSQLKit%2Fdocsets%2FSQLKit%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SQLKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SQLDatabase Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLCreateIndexBuilder.html">SQLCreateIndexBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLCreateTableBuilder.html">SQLCreateTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLDeleteBuilder.html">SQLDeleteBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLDropTableBuilder.html">SQLDropTableBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLInsertBuilder.html">SQLInsertBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLPredicateGroupBuilder.html">SQLPredicateGroupBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLRawBuilder.html">SQLRawBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLSelectBuilder.html">SQLSelectBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SQLUpdateBuilder.html">SQLUpdateBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLBinaryOperator.html">SQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLConstraintAlgorithm.html">SQLConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLDataType.html">SQLDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLDirection.html">SQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLForeignKeyAction.html">SQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLJoinMethod.html">SQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLLiteral.html">SQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SQLLockingClause.html">SQLLockingClause</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:6SQLKit12SQLCollationP">SQLCollation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLColumnBuilder.html">SQLColumnBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDatabase.html">SQLDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLDialect.html">SQLDialect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLError.html">SQLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLExpression.html">SQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLPredicateBuilder.html">SQLPredicateBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLQueryBuilder.html">SQLQueryBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLQueryFetcher.html">SQLQueryFetcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLRow.html">SQLRow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLAlias.html">SQLAlias</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLAlterTable.html">SQLAlterTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLBinaryExpression.html">SQLBinaryExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLBind.html">SQLBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLColumn.html">SQLColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLColumnConstraint.html">SQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLColumnDefinition.html">SQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLCreateIndex.html">SQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLCreateTable.html">SQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLDelete.html">SQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLDropIndex.html">SQLDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLDropTable.html">SQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLErrorType.html">SQLErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLForeignKey.html">SQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLFunction.html">SQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLGroupExpression.html">SQLGroupExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLIdentifier.html">SQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLInsert.html">SQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLJoin.html">SQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLList.html">SQLList</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLOrderBy.html">SQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLQueryString.html">SQLQueryString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLRaw.html">SQLRaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLSelect.html">SQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLSerializer.html">SQLSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLTableConstraint.html">SQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SQLUpdate.html">SQLUpdate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>SQLDatabase</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SQLDatabase</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabaseP8sqlQueryy3NIO15EventLoopFutureCyytGAA13SQLExpression_p_yAA6SQLRow_pKctF"></a>
+                    <a name="//apple_ref/swift/Method/sqlQuery(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabaseP8sqlQueryy3NIO15EventLoopFutureCyytGAA13SQLExpression_p_yAA6SQLRow_pKctF">sqlQuery(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sqlQuery</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLExpression.html">SQLExpression</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">onRow</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Protocols/SQLRow.html">SQLRow</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/SQLDatabase.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Connection"></a>
+                <a name="//apple_ref/swift/Section/Connection" class="dashAnchor"></a>
+                <a href="#/Connection">
+                  <h3 class="section-name">Connection</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE5alter5tableAA20SQLAlterTableBuilderCSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/alter(table:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE5alter5tableAA20SQLAlterTableBuilderCSS_tF">alter(table:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">alter</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="s">"planets"</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">alter</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to alter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>AlterTableBuilder</code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLAlterTableBuilder.swift#L47-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE5alter5tableAA20SQLAlterTableBuilderCAA13SQLIdentifierV_tF"></a>
+                    <a name="//apple_ref/swift/Method/alter(table:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE5alter5tableAA20SQLAlterTableBuilderCAA13SQLIdentifierV_tF">alter(table:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">alter</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="kt"><a href="../Structs/SQLIdentifier.html">SQLIdentifier</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLAlterTableBuilder.html">SQLAlterTableBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to alter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>AlterTableBuilder</code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLAlterTableBuilder.swift#L56-L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Connection2"></a>
+                <a name="//apple_ref/swift/Section/Connection" class="dashAnchor"></a>
+                <a href="#/Connection2">
+                  <h3 class="section-name">Connection</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6create5indexAA21SQLCreateIndexBuilderCSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/create(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6create5indexAA21SQLCreateIndexBuilderCSS_tF">create(index:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLCreateIndexBuilder.html">SQLCreateIndexBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">create</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="s">"foo"</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span>
+    <span class="n">index</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLCreateIndexBuilder.html">SQLCreateIndexBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name for this index.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/SQLCreateIndexBuilder.html">SQLCreateIndexBuilder</a></code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLCreateIndexBuilder.swift#L87-L91">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6create5indexAA21SQLCreateIndexBuilderCAA13SQLExpression_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/create(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6create5indexAA21SQLCreateIndexBuilderCAA13SQLExpression_p_tF">create(index:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLCreateIndexBuilder.html">SQLCreateIndexBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">create</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="s">"foo"</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span>
+    <span class="n">index</span> <span class="nv">name</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLExpression.html">SQLExpression</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLCreateIndexBuilder.html">SQLCreateIndexBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name for this index.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/SQLCreateIndexBuilder.html">SQLCreateIndexBuilder</a></code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLCreateIndexBuilder.swift#L100-L104">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Connection3"></a>
+                <a name="//apple_ref/swift/Section/Connection" class="dashAnchor"></a>
+                <a href="#/Connection3">
+                  <h3 class="section-name">Connection</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6create5tableAA21SQLCreateTableBuilderCSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/create(table:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6create5tableAA21SQLCreateTableBuilderCSS_tF">create(table:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLCreateTableBuilder.html">SQLCreateTableBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">create</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="s">"planets"</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLCreateTableBuilder.html">SQLCreateTableBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to create.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>CreateTableBuilder</code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLCreateTableBuilder.swift#L61-L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6create5tableAA21SQLCreateTableBuilderCAA13SQLExpression_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/create(table:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6create5tableAA21SQLCreateTableBuilderCAA13SQLExpression_p_tF">create(table:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLCreateTableBuilder.html">SQLCreateTableBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">create</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="kt">SQLIdentifier</span><span class="p">(</span><span class="s">"planets"</span><span class="p">))</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLExpression.html">SQLExpression</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLCreateTableBuilder.html">SQLCreateTableBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to create.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>CreateTableBuilder</code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLCreateTableBuilder.swift#L72-L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Connection4"></a>
+                <a name="//apple_ref/swift/Section/Connection" class="dashAnchor"></a>
+                <a href="#/Connection4">
+                  <h3 class="section-name">Connection</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6delete4fromAA16SQLDeleteBuilderCSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/delete(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6delete4fromAA16SQLDeleteBuilderCSS_tF">delete(from:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLDeleteBuilder.html">SQLDeleteBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">delete</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="kt">Planet</span><span class="o">.</span><span class="k">self</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">from</span> <span class="nv">table</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLDeleteBuilder.html">SQLDeleteBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to delete from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Newly created <code><a href="../Classes/SQLDeleteBuilder.html">SQLDeleteBuilder</a></code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLDeleteBuilder.swift#L42-L44">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6delete4fromAA16SQLDeleteBuilderCAA13SQLExpression_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/delete(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6delete4fromAA16SQLDeleteBuilderCAA13SQLExpression_p_tF">delete(from:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLDeleteBuilder.html">SQLDeleteBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">delete</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"planets"</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">from</span> <span class="nv">table</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLExpression.html">SQLExpression</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLDeleteBuilder.html">SQLDeleteBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to delete from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Newly created <code><a href="../Classes/SQLDeleteBuilder.html">SQLDeleteBuilder</a></code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLDeleteBuilder.swift#L53-L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Connection5"></a>
+                <a name="//apple_ref/swift/Section/Connection" class="dashAnchor"></a>
+                <a href="#/Connection5">
+                  <h3 class="section-name">Connection</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE4drop5tableAA19SQLDropTableBuilderCSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/drop(table:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE4drop5tableAA19SQLDropTableBuilderCSS_tF">drop(table:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Structs/SQLDropTable.html">SQLDropTable</a></code> builder.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">drop</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="s">"planets"</span><span class="p">)</span><span class="o">.</span><span class="nf">run</span><span class="p">()</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">drop</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLDropTableBuilder.html">SQLDropTableBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLDropTableBuilder.swift#L39-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE4drop5tableAA19SQLDropTableBuilderCAA13SQLExpression_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/drop(table:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE4drop5tableAA19SQLDropTableBuilderCAA13SQLExpression_p_tF">drop(table:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Structs/SQLDropTable.html">SQLDropTable</a></code> builder.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">drop</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="s">"planets"</span><span class="p">)</span><span class="o">.</span><span class="nf">run</span><span class="p">()</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">drop</span><span class="p">(</span><span class="nv">table</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLExpression.html">SQLExpression</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLDropTableBuilder.html">SQLDropTableBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLDropTableBuilder.swift#L47-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Connection6"></a>
+                <a name="//apple_ref/swift/Section/Connection" class="dashAnchor"></a>
+                <a href="#/Connection6">
+                  <h3 class="section-name">Connection</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6insert4intoAA16SQLInsertBuilderCSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/insert(into:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6insert4intoAA16SQLInsertBuilderCSS_tF">insert(into:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLInsertBuilder.html">SQLInsertBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="nv">into</span><span class="p">:</span> <span class="s">"planets"</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="n">into</span> <span class="nv">table</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLInsertBuilder.html">SQLInsertBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to insert into.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Newly created <code><a href="../Classes/SQLInsertBuilder.html">SQLInsertBuilder</a></code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLInsertBuilder.swift#L105-L107">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6insert4intoAA16SQLInsertBuilderCAA13SQLExpression_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/insert(into:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6insert4intoAA16SQLInsertBuilderCAA13SQLExpression_p_tF">insert(into:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLInsertBuilder.html">SQLInsertBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="nv">into</span><span class="p">:</span> <span class="s">"planets"</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="n">into</span> <span class="nv">table</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLExpression.html">SQLExpression</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLInsertBuilder.html">SQLInsertBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to insert into.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Newly created <code><a href="../Classes/SQLInsertBuilder.html">SQLInsertBuilder</a></code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLInsertBuilder.swift#L116-L118">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Connection7"></a>
+                <a name="//apple_ref/swift/Section/Connection" class="dashAnchor"></a>
+                <a href="#/Connection7">
+                  <h3 class="section-name">Connection</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE3rawyAA13SQLRawBuilderCAA14SQLQueryStringVF"></a>
+                    <a name="//apple_ref/swift/Method/raw(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE3rawyAA13SQLRawBuilderCAA14SQLQueryStringVF">raw(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLRawBuilder.html">SQLRawBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">raw</span><span class="p">(</span><span class="s">"SELECT * FROM ..."</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">raw</span><span class="p">(</span><span class="n">_</span> <span class="nv">sql</span><span class="p">:</span> <span class="kt"><a href="../Structs/SQLQueryString.html">SQLQueryString</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLRawBuilder.html">SQLRawBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sql</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The SQL query string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/SQLRawBuilder.html">SQLRawBuilder</a></code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLRawBuilder.swift#L35-L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Connection8"></a>
+                <a name="//apple_ref/swift/Section/Connection" class="dashAnchor"></a>
+                <a href="#/Connection8">
+                  <h3 class="section-name">Connection</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6selectAA16SQLSelectBuilderCyF"></a>
+                    <a name="//apple_ref/swift/Method/select()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6selectAA16SQLSelectBuilderCyF">select()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLSelectBuilder.html">SQLSelectBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">select</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">column</span><span class="p">(</span><span class="s">"*"</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">from</span><span class="p">(</span><span class="s">"planets"")
+    .where("</span><span class="n">name</span><span class="s">", .equal, SQLBind("</span><span class="kt">Earth</span><span class="s">"))
+    .all()
+</span></code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">select</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLSelectBuilder.html">SQLSelectBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLSelectBuilder.swift#L177-L179">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Connection9"></a>
+                <a name="//apple_ref/swift/Section/Connection" class="dashAnchor"></a>
+                <a href="#/Connection9">
+                  <h3 class="section-name">Connection</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6updateyAA16SQLUpdateBuilderCSSF"></a>
+                    <a name="//apple_ref/swift/Method/update(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6updateyAA16SQLUpdateBuilderCSSF">update(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLUpdateBuilder.html">SQLUpdateBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">update</span><span class="p">(</span><span class="s">"planets"</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">_</span> <span class="nv">table</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLUpdateBuilder.html">SQLUpdateBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to update.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Newly created <code><a href="../Classes/SQLUpdateBuilder.html">SQLUpdateBuilder</a></code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLUpdateBuilder.swift#L58-L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6SQLKit11SQLDatabasePAAE6updateyAA16SQLUpdateBuilderCAA13SQLExpression_pF"></a>
+                    <a name="//apple_ref/swift/Method/update(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6SQLKit11SQLDatabasePAAE6updateyAA16SQLUpdateBuilderCAA13SQLExpression_pF">update(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code><a href="../Classes/SQLUpdateBuilder.html">SQLUpdateBuilder</a></code>.</p>
+<pre class="highlight swift"><code><span class="n">conn</span><span class="o">.</span><span class="nf">update</span><span class="p">(</span><span class="s">"planets"</span><span class="p">)</span><span class="o">...</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">_</span> <span class="nv">table</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SQLExpression.html">SQLExpression</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SQLUpdateBuilder.html">SQLUpdateBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>table</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Table to update.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Newly created <code><a href="../Classes/SQLUpdateBuilder.html">SQLUpdateBuilder</a></code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/sql/tree/master/Sources/SQLKit/Builders/SQLUpdateBuilder.swift#L69-L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

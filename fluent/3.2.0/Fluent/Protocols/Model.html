@@ -1,0 +1,2524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Model Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/Model" class="dashAnchor"></a>
+
+    <a title="Model Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Fluent Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/fluent">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2F3%2E2%2E0%2FFluent%2Fdocsets%2FFluent%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Fluent Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      Model Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CacheEntry.html">CacheEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FluentProvider.html">FluentProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MigrateCommand.html">MigrateCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MigrationLog.html">MigrationLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QueryBuilder.html">QueryBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RevertCommand.html">RevertCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SchemaCreator.html">SchemaCreator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SchemaUpdater.html">SchemaUpdater</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:6Fluent18pivotNameConnectorSSvp">pivotNameConnector</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ModelEvent.html">ModelEvent</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/CommandConfig.html">CommandConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseConnectable.html">DatabaseConnectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabasesConfig.html">DatabasesConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decodable.html">Decodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Future.html">Future</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/KeyedCacheSupporting.html">KeyedCacheSupporting</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2neoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2ntoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_Sayq0_GtAA15QuerySupportingRzSER0_r1_lF">!~(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent1loiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2leoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2eeoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent1goiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2geoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_q0_tAA15QuerySupportingRzSER0_r1_lF">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:6Fluent2ttoiyAA14FilterOperatorVyxq_Gs7KeyPathCyq_q0_G_Sayq0_GtAA15QuerySupportingRzSER0_r1_lF">~~(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyMigration.html">AnyMigration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyModel.html">AnyModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:6Fluent2IDP">ID</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/JoinSupporting.html">JoinSupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Migration.html">Migration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MigrationSupporting.html">MigrationSupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ModifiablePivot.html">ModifiablePivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Pivot.html">Pivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/QuerySupporting.html">QuerySupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SchemaBuilder.html">SchemaBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SchemaSupporting.html">SchemaSupporting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/TransactionSupporting.html">TransactionSupporting</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Children.html">Children</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FilterOperator.html">FilterOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentError.html">FluentError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentProperty.html">FluentProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MigrationConfig.html">MigrationConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Parent.html">Parent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Siblings.html">Siblings</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Model</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Model</span> <span class="p">:</span> <span class="kt">Reflectable</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AnyModel.html">AnyModel</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents a single table / collection in a Fluent database. Models
+are the basis for querying databases (create, read, update, and delete).</p>
+
+<p>Models can also conform to <code><a href="../Protocols/Migration.html">Migration</a></code> to provide prepare and revert methods for performing actions
+on the database before the application boots.</p>
+
+<p>Both <code>struct</code>s and <code>class</code>es can be models. Since Fluent is closure-based,
+copied <code>struct</code>s will be returned by any methods that must mutate the model.</p>
+
+<p>Here is an example of a simple <code>User</code> model.</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">Model</span> <span class="p">{</span>
+    <span class="kd">typealias</span> <span class="kt">Database</span> <span class="o">=</span> <span class="kt">PostgreSQLDatabase</span>
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">idKey</span><span class="p">:</span> <span class="kt">WritableKeyPath</span><span class="o">&lt;</span><span class="kt">User</span><span class="p">,</span> <span class="kt">UUID</span><span class="p">?</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">\</span><span class="o">.</span><span class="n">id</span>
+    <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">?</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Most of the time, you should use the Fluent driver&rsquo;s sub-protocols for conforming to <code>Model</code> instead of
+using the protocol directly.</p>
+<h2 id='query' class='heading'>Query</h2>
+
+<p>To create a <code><a href="../Classes/QueryBuilder.html">QueryBuilder</a></code> for a model, use the <code>query(on:)</code> method.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">users</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">User</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="nf">filter</span><span class="p">(\</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">"Vapor"</span><span class="p">)</span><span class="o">.</span><span class="nf">all</span><span class="p">()</span>
+</code></pre>
+
+<p>You can also create <code><a href="../Classes/QueryBuilder.html">QueryBuilder</a></code>s for any <code>Decodable</code> type. However, <code><a href="../Classes/QueryBuilder.html">QueryBuilder</a></code>s created for <code>Model</code>s
+have some extra methods and functionality.</p>
+<h2 id='lifecycle' class='heading'>Lifecycle</h2>
+
+<p>Models can implement optional lifecycle methods to hook into Fluent actions.</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">Model</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="kd">func</span> <span class="nf">willDelete</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Deleting user: </span><span class="se">\(</span><span class="n">id</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">conn</span><span class="o">.</span><span class="nf">future</span><span class="p">(</span><span class="k">self</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='timestamps' class='heading'>Timestamps</h2>
+
+<p>Models are capable of storing timestamps representing when this model was first created and when it was last updated.
+If you decide to store timestamps on your model, Fluent will automatically update them whenever changes to the database are made.</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">Model</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">createdAtKey</span><span class="p">:</span> <span class="kt">TimestampKey</span><span class="p">?</span> <span class="o">=</span> <span class="p">\</span><span class="kt">User</span><span class="o">.</span><span class="n">createdAt</span>
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">updatedAtKey</span><span class="p">:</span> <span class="kt">TimestampKey</span><span class="p">?</span> <span class="o">=</span> <span class="p">\</span><span class="kt">User</span><span class="o">.</span><span class="n">updatedAt</span>
+    <span class="o">...</span>
+    <span class="k">var</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span>
+    <span class="k">var</span> <span class="nv">updatedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Add timestamp keys pointing to the properties on your model to let Fluent automatically update the values.
+You can set key paths for one or both of the keys per model.</p>
+<h2 id='soft-delete' class='heading'>Soft Delete</h2>
+
+<p>Instead of actually deleting rows from the database, soft deleted models can have a <q>deleted at</q> property set.</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">Model</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="k">var</span> <span class="nv">deletedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">SoftDeletable</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">deletedAtKey</span><span class="p">:</span> <span class="kt">TimestampKey</span><span class="p">?</span> <span class="o">=</span> <span class="p">\</span><span class="o">.</span><span class="n">deletedAt</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>You can add <code>SoftDeletable</code> to existing models that have an optional <code>Date</code> property for storing the
+deleted at date.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The deleted at date may be set in the future. The model will continue to be included in
+    queries until the deleted at date passes.
+
+</div>
+
+<p>Use <code>softDelete(on:)</code> to soft-delete a <code>SoftDeletable</code> model from the database.
+Use <code>restore(on:)</code> to restore a soft-deleted model.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">User</span>
+<span class="k">try</span> <span class="n">user</span><span class="o">.</span><span class="nf">softDelete</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">conn</span><span class="p">)</span>
+<span class="c1">// later ...</span>
+<span class="k">try</span> <span class="n">user</span><span class="o">.</span><span class="nf">restore</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">conn</span><span class="p">)</span>
+</code></pre>
+
+<p>Use <code>excludeSoftDeleted()</code> on <code><a href="../Classes/QueryBuilder.html">QueryBuilder</a></code> to exclude soft-deleted results (included by default).</p>
+<pre class="highlight swift"><code><span class="kt">User</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">conn</span><span class="p">)</span><span class="o">.</span><span class="nf">excludeSoftDeleted</span><span class="p">()</span><span class="o">.</span><span class="nf">count</span><span class="p">()</span>
+</code></pre>
+
+<p><code>SoftDeletable</code> models have extra lifecycle events:</p>
+<pre class="highlight swift"><code><span class="o">-</span> <span class="p">`</span><span class="nv">willRestore</span><span class="p">`</span><span class="o">.</span>
+<span class="o">-</span> <span class="p">`</span><span class="nv">didRestore</span><span class="p">`</span><span class="o">.</span>
+<span class="o">-</span> <span class="p">`</span><span class="nv">willSoftDelete</span><span class="p">`</span><span class="o">.</span>
+<span class="o">-</span> <span class="p">`</span><span class="nv">didSoftDelete</span><span class="p">`</span><span class="o">.</span>
+</code></pre>
+
+<p>See <code>Model</code> to learn more about Fluent lifecycle hooks.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/DB"></a>
+                <a name="//apple_ref/swift/Section/DB" class="dashAnchor"></a>
+                <a href="#/DB">
+                  <h3 class="section-name">DB</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP8DatabaseQa"></a>
+                    <a name="//apple_ref/swift/Alias/Database" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP8DatabaseQa">Database</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of database this model can be queried on.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Database</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/QuerySupporting.html">QuerySupporting</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ID"></a>
+                <a name="//apple_ref/swift/Section/ID" class="dashAnchor"></a>
+                <a href="#/ID">
+                  <h3 class="section-name">ID</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP2IDQa"></a>
+                    <a name="//apple_ref/swift/Alias/ID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP2IDQa">ID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The associated Identifier type. Usually <code>Int</code> or <code>UUID</code>. Must conform to <code>ID</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">ID</span> <span class="p">:</span> <span class="kt">ID</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP5IDKeya"></a>
+                    <a name="//apple_ref/swift/Alias/IDKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP5IDKeya">IDKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Typealias for Swift <code>KeyPath</code> to an optional ID for this model.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">IDKey</span> <span class="o">=</span> <span class="kt">WritableKeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L116">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP5idKeys08WritableD4PathCyx2IDQzSgGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/idKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP5idKeys08WritableD4PathCyx2IDQzSgGvpZ">idKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Swift <code>KeyPath</code> to this <code>Model</code>&lsquo;s identifier.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">idKey</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP5IDKeya">IDKey</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L119">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Timestamps"></a>
+                <a name="//apple_ref/swift/Section/Timestamps" class="dashAnchor"></a>
+                <a href="#/Timestamps">
+                  <h3 class="section-name">Timestamps</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP12TimestampKeya"></a>
+                    <a name="//apple_ref/swift/Alias/TimestampKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP12TimestampKeya">TimestampKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Timestamp key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">TimestampKey</span> <span class="o">=</span> <span class="kt">WritableKeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Date</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L124">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP12createdAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/createdAtKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP12createdAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ">createdAtKey</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date at which this model was created. <code>nil</code> if the model has not been created yet.
+By default, Fluent will assume your model does not have a created at key.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">createdAtKey</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP12TimestampKeya">TimestampKey</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L128">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP12updatedAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/updatedAtKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP12updatedAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ">updatedAtKey</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date at which this model was last updated. <code>nil</code> if the model has not been created yet.
+By default, Fluent will assume your model does not have an updated at key.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">updatedAtKey</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP12TimestampKeya">TimestampKey</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L132">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP12deletedAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/deletedAtKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP12deletedAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ">deletedAtKey</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date at which this model was or will be soft deleted. <code>nil</code> if the model has not been deleted yet.
+If this property is set, the model will not be included in any query results unless
+<code>withSoftDeleted()</code> is used on the <code><a href="../Classes/QueryBuilder.html">QueryBuilder</a></code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">deletedAtKey</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP12TimestampKeya">TimestampKey</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L137">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Lifecycle"></a>
+                <a name="//apple_ref/swift/Section/Lifecycle" class="dashAnchor"></a>
+                <a href="#/Lifecycle">
+                  <h3 class="section-name">Lifecycle</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP10willCreate2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/willCreate(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP10willCreate2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">willCreate(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called before a model is created when saving.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Throwing will cancel the save.
+
+</div>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willCreate</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L145">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP9didCreate2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/didCreate(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP9didCreate2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">didCreate(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called after the model is created when saving.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didCreate</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L149">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP8willRead2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/willRead(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP8willRead2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">willRead(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called before a model is fetched.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Throwing will cancel the fetch.
+
+</div>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willRead</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L155">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP10willUpdate2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/willUpdate(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP10willUpdate2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">willUpdate(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called before a model is updated when saving.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Throwing will cancel the save.
+
+</div>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willUpdate</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L161">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP9didUpdate2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/didUpdate(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP9didUpdate2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">didUpdate(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called after the model is updated when saving.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didUpdate</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L165">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP10willDelete2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/willDelete(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP10willDelete2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">willDelete(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called before a model is deleted.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Throwing will cancel the delete.
+
+</div>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willDelete</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L171">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP9didDelete2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/didDelete(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP9didDelete2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">didDelete(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called after the model is deleted.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didDelete</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L175">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP11willRestore2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/willRestore(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP11willRestore2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">willRestore(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called before a model is restored (from being soft deleted).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Throwing will cancel the restore.
+
+</div>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willRestore</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L181">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP10didRestore2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/didRestore(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP10didRestore2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">didRestore(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called after the model is restored (from being soft deleted.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didRestore</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L185">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP14willSoftDelete2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/willSoftDelete(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP14willSoftDelete2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">willSoftDelete(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called before a model is soft deleted.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Throwing will cancel the soft delete.
+
+</div>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willSoftDelete</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L191">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelP13didSoftDelete2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF"></a>
+                    <a name="//apple_ref/swift/Method/didSoftDelete(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelP13didSoftDelete2on3NIO15EventLoopFutureCyxG8Database_10ConnectionQZ_tKF">didSoftDelete(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called after the model is soft deleted.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>Model</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didSoftDelete</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L195">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPA2A16SchemaSupporting8DatabaseRpzrlE13addProperties2toyAA0C7CreatorCyxG_tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/addProperties(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPA2A16SchemaSupporting8DatabaseRpzrlE13addProperties2toyAA0C7CreatorCyxG_tKFZ">addProperties(to:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Automatically adds <code>SchemaField</code>s for each of this <code>Model</code>s properties.</p>
+<pre class="highlight swift"><code><span class="kt">PostgreSQLDatabase</span><span class="o">.</span><span class="nf">create</span><span class="p">(</span><span class="kt">User</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">on</span><span class="p">:</span> <span class="n">conn</span><span class="p">)</span> <span class="p">{</span> <span class="n">builder</span> <span class="k">in</span>
+    <span class="k">try</span> <span class="kt">User</span><span class="o">.</span><span class="nf">addProperties</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="n">builder</span><span class="p">)</span>
+    <span class="c1">// use the builder to add other things like indexes</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>This method will be used automatically by <code>Model</code>&lsquo;s default conformance to <code><a href="../Protocols/Migration.html">Migration</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">addProperties</span><span class="p">(</span><span class="n">to</span> <span class="nv">builder</span><span class="p">:</span> <span class="kt"><a href="../Classes/SchemaCreator.html">SchemaCreator</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>builder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/SchemaCreator.html">SchemaCreator</a></code> to add the properties to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Migration/Migration.swift#L107-L120">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE4save2on3NIO15EventLoopFutureCyxG11DatabaseKit0I11Connectable_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/save(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE4save2on3NIO15EventLoopFutureCyxG11DatabaseKit0I11Connectable_p_tF">save(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves the model, calling either <code><a href="../Protocols/Model.html#/s:6Fluent5ModelPAAE6create2on3NIO15EventLoopFutureCyxG11DatabaseKit0I11Connectable_p_tF">create(...)</a></code> or <code><a href="../Protocols/Model.html#/s:6Fluent5ModelPAAE6update2on10originalID3NIO15EventLoopFutureCyxG11DatabaseKit0K11Connectable_p_0F0QzSgtF">update(...)</a></code> depending on whether
+the model already has an ID.</p>
+
+<p>If you need to create a model with a pre-existing ID, call <code>create</code> instead.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="kt">User</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">user</span><span class="o">.</span><span class="nf">save</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">save</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">DatabaseConnectable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Database connection to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Future containing the saved model.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model+CRUD.swift#L13-L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE6create2on3NIO15EventLoopFutureCyxG11DatabaseKit0I11Connectable_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/create(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE6create2on3NIO15EventLoopFutureCyxG11DatabaseKit0I11Connectable_p_tF">create(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves this model as a new item in the database.
+This method can auto-generate an ID depending on ID type.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="kt">User</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">user</span><span class="o">.</span><span class="nf">create</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">DatabaseConnectable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Database connection to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Future containing the created model.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model+CRUD.swift#L26-L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE6update2on10originalID3NIO15EventLoopFutureCyxG11DatabaseKit0K11Connectable_p_0F0QzSgtF"></a>
+                    <a name="//apple_ref/swift/Method/update(on:originalID:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE6update2on10originalID3NIO15EventLoopFutureCyxG11DatabaseKit0K11Connectable_p_0F0QzSgtF">update(on:originalID:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates the model. This requires that the model has its ID set.</p>
+<pre class="highlight swift"><code><span class="n">user</span><span class="o">.</span><span class="nf">update</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">,</span> <span class="nv">originalID</span><span class="p">:</span> <span class="mi">42</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">DatabaseConnectable</span><span class="p">,</span> <span class="nv">originalID</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Database connection to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>originalID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specify the original ID if the ID has changed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Future containing the updated model.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model+CRUD.swift#L38-L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE6delete5force2on3NIO15EventLoopFutureCyytGSb_11DatabaseKit0J11Connectable_ptF"></a>
+                    <a name="//apple_ref/swift/Method/delete(force:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE6delete5force2on3NIO15EventLoopFutureCyytGSb_11DatabaseKit0J11Connectable_ptF">delete(force:on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes this model from the database. This requires that the model has its ID set.</p>
+<pre class="highlight swift"><code><span class="n">user</span><span class="o">.</span><span class="nf">delete</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">force</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">DatabaseConnectable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>force</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code>, the model will be deleted from the database even if it has a <code><a href="../Protocols/Model.html#/s:6Fluent5ModelP12deletedAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ">deletedAtKey</a></code>.
+     This is <code>false</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Database connection to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Future that will be completed when the delete is done.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model+CRUD.swift#L51-L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE7restore2on3NIO15EventLoopFutureCyxG11DatabaseKit0I11Connectable_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/restore(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE7restore2on3NIO15EventLoopFutureCyxG11DatabaseKit0I11Connectable_p_tF">restore(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Restores a soft deleted model.</p>
+<pre class="highlight swift"><code><span class="n">user</span><span class="o">.</span><span class="nf">restore</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">restore</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">DatabaseConnectable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Used to fetch a database connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future that will return the succesfully restored model.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model+CRUD.swift#L62-L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Optional"></a>
+                <a name="//apple_ref/swift/Section/Optional" class="dashAnchor"></a>
+                <a href="#/Optional">
+                  <h3 class="section-name">Optional</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE9requireID0D0QzyKF"></a>
+                    <a name="//apple_ref/swift/Method/requireID()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE9requireID0D0QzyKF">requireID()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the model&rsquo;s ID, throwing an error if the model does not yet have an ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">requireID</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L271-L277">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE8fluentID0D0QzSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fluentID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE8fluentID0D0QzSgvp">fluentID</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Access the Fluent identifier keyed by <code><a href="../Protocols/Model.html#/s:6Fluent5ModelP5idKeys08WritableD4PathCyx2IDQzSgGvpZ">idKey</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fluentID</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L280-L289">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE15fluentCreatedAt10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fluentCreatedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE15fluentCreatedAt10Foundation4DateVSgvp">fluentCreatedAt</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Access the Fluent timestamp keyed by <code><a href="../Protocols/Model.html#/s:6Fluent5ModelP12createdAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ">createdAtKey</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fluentCreatedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L292-L305">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE15fluentUpdatedAt10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fluentUpdatedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE15fluentUpdatedAt10Foundation4DateVSgvp">fluentUpdatedAt</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Access the Fluent timestamp keyed by <code><a href="../Protocols/Model.html#/s:6Fluent5ModelP12updatedAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ">updatedAtKey</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fluentUpdatedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L308-L321">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE15fluentDeletedAt10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fluentDeletedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE15fluentDeletedAt10Foundation4DateVSgvp">fluentDeletedAt</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Access the Fluent timestamp keyed by <code><a href="../Protocols/Model.html#/s:6Fluent5ModelP12deletedAtKeys08WritableE4PathCyx10Foundation4DateVSgGSgvpZ">deletedAtKey</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fluentDeletedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L324-L337">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Query"></a>
+                <a name="//apple_ref/swift/Section/Query" class="dashAnchor"></a>
+                <a href="#/Query">
+                  <h3 class="section-name">Query</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE5query2on15withSoftDeletedAA12QueryBuilderCy8DatabaseQzxG0J3Kit0J11Connectable_p_SbtFZ"></a>
+                    <a name="//apple_ref/swift/Method/query(on:withSoftDeleted:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE5query2on15withSoftDeletedAA12QueryBuilderCy8DatabaseQzxG0J3Kit0J11Connectable_p_SbtFZ">query(on:withSoftDeleted:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a query for this model type on the supplied connection.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">users</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">User</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="nf">filter</span><span class="p">(\</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">"Vapor"</span><span class="p">)</span><span class="o">.</span><span class="nf">all</span><span class="p">()</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">DatabaseConnectable</span><span class="p">,</span> <span class="nv">withSoftDeleted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/QueryBuilder.html">QueryBuilder</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="p">,</span> <span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Something <code>DatabaseConnectable</code> to create the <code><a href="../Classes/QueryBuilder.html">QueryBuilder</a></code> on.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withSoftDeleted</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code>, soft-deleted models will be included in the results. Defaults to <code>false</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new <code><a href="../Classes/QueryBuilder.html">QueryBuilder</a></code> for this model.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L351-L353">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE4find_2on3NIO15EventLoopFutureCyxSgG2IDQz_11DatabaseKit0J11Connectable_ptFZ"></a>
+                    <a name="//apple_ref/swift/Method/find(_:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE4find_2on3NIO15EventLoopFutureCyxSgG2IDQz_11DatabaseKit0J11Connectable_ptFZ">find(_:on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to find an instance of this model with the supplied identifier.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">User</span><span class="o">.</span><span class="nf">find</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">find</span><span class="p">(</span><span class="n">_</span> <span class="nv">id</span><span class="p">:</span> <span class="k">Self</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">DatabaseConnectable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID to lookup.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Something <code>DatabaseConnectable</code> to create the <code><a href="../Classes/QueryBuilder.html">QueryBuilder</a></code> on.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future containing the model, if found.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L363-L365">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Default%20Database"></a>
+                <a name="//apple_ref/swift/Section/Default Database" class="dashAnchor"></a>
+                <a href="#/Default%20Database">
+                  <h3 class="section-name">Default Database</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE15defaultDatabase0D3Kit0D10IdentifierVy0D0QzGSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/defaultDatabase" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE15defaultDatabase0D3Kit0D10IdentifierVy0D0QzGSgvpZ">defaultDatabase</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This Model&rsquo;s default database. This will be used when no database id is passed (for example, on <code>Model.query(on:)</code>)
+or when it is not possible to pass a database (such as static lookup).</p>
+
+<p>You can set this property manually for each model. This is especially useful if you are not using migrations.</p>
+<pre class="highlight swift"><code><span class="kt">User</span><span class="o">.</span><span class="n">defaultDatabase</span> <span class="o">=</span> <span class="o">.</span><span class="n">mysql</span>
+</code></pre>
+
+<p>Make sure to set this property <em>before</em> running any queries using your model.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultDatabase</span><span class="p">:</span> <span class="kt">DatabaseIdentifier</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">&gt;</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L423-L426">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE22requireDefaultDatabase0E3Kit0E10IdentifierVy0E0QzGyKFZ"></a>
+                    <a name="//apple_ref/swift/Method/requireDefaultDatabase()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE22requireDefaultDatabase0E3Kit0E10IdentifierVy0E0QzGyKFZ">requireDefaultDatabase()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the <code><a href="../Protocols/Model.html#/s:6Fluent5ModelPAAE15defaultDatabase0D3Kit0D10IdentifierVy0D0QzGSgvpZ">defaultDatabase</a></code> or throws an error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">requireDefaultDatabase</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">DatabaseIdentifier</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L429-L438">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Routing"></a>
+                <a name="//apple_ref/swift/Section/Routing" class="dashAnchor"></a>
+                <a href="#/Routing">
+                  <h3 class="section-name">Routing</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE4make3for5using3NIO15EventLoopFutureCyxGSS_7Service9Container_ptKFZ"></a>
+                    <a name="//apple_ref/swift/Method/make(for:using:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE4make3for5using3NIO15EventLoopFutureCyxGSS_7Service9Container_ptKFZ">make(for:using:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Parameter</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">make</span><span class="p">(</span><span class="k">for</span> <span class="nv">parameter</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">using</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L447-L480">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE16resolveParameter_2on3NIO15EventLoopFutureCyxGSS_7Service9Container_ptKFZ"></a>
+                    <a name="//apple_ref/swift/Method/resolveParameter(_:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE16resolveParameter_2on3NIO15EventLoopFutureCyxGSS_7Service9Container_ptKFZ">resolveParameter(_:on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Parameter</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">resolveParameter</span><span class="p">(</span><span class="n">_</span> <span class="nv">parameter</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">on</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Model/Model.swift#L483-L485">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Model"></a>
+                <a name="//apple_ref/swift/Section/Model" class="dashAnchor"></a>
+                <a href="#/Model">
+                  <h3 class="section-name">Model</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE8childrenyAA8ChildrenVyxqd__Gs7KeyPathCyqd__2IDQzGAaBRd__8DatabaseQyd__AMRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/children(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE8childrenyAA8ChildrenVyxqd__Gs7KeyPathCyqd__2IDQzGAaBRd__8DatabaseQyd__AMRtzlF">children(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a children relation for this model.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pets</span><span class="p">:</span> <span class="kt">Children</span><span class="o">&lt;</span><span class="kt">User</span><span class="p">,</span> <span class="kt">Pet</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nf">children</span><span class="p">(\</span><span class="o">.</span><span class="n">userID</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The <code>parentID</code> should refer to the field on the child entity that contains the parent&rsquo;s ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">children</span><span class="o">&lt;</span><span class="kt">Child</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">parentID</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Child</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Children.html">Children</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Child</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Child</span> <span class="p">:</span> <span class="kt">Model</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span> <span class="o">==</span> <span class="kt">Child</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Relations/Children.swift#L74-L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE8childrenyAA8ChildrenVyxqd__Gs7KeyPathCyqd__2IDQzSgGAaBRd__8DatabaseQyd__ANRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/children(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE8childrenyAA8ChildrenVyxqd__Gs7KeyPathCyqd__2IDQzSgGAaBRd__8DatabaseQyd__ANRtzlF">children(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a children relation for this model.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pets</span><span class="p">:</span> <span class="kt">Children</span><span class="o">&lt;</span><span class="kt">User</span><span class="p">,</span> <span class="kt">Pet</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nf">children</span><span class="p">(\</span><span class="o">.</span><span class="n">userID</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The <code>parentID</code> should refer to the field on the child entity that contains the parent&rsquo;s ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">children</span><span class="o">&lt;</span><span class="kt">Child</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">parentID</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Child</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="p">?</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Children.html">Children</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Child</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Child</span> <span class="p">:</span> <span class="kt">Model</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span> <span class="o">==</span> <span class="kt">Child</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Relations/Children.swift#L85-L87">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Model2"></a>
+                <a name="//apple_ref/swift/Section/Model" class="dashAnchor"></a>
+                <a href="#/Model2">
+                  <h3 class="section-name">Model</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE6parentyAA6ParentVyxqd__Gs7KeyPathCyx2IDQyd__GAaBRd__8DatabaseQyd__AMRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/parent(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE6parentyAA6ParentVyxqd__Gs7KeyPathCyx2IDQyd__GAaBRd__8DatabaseQyd__AMRtzlF">parent(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a children relation for this model.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">Parent</span><span class="o">&lt;</span><span class="kt">User</span><span class="p">,</span> <span class="kt">Pet</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nf">parent</span><span class="p">(\</span><span class="o">.</span><span class="n">userID</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The <code>parentID</code> should refer to the field on the child entity that contains the parent&rsquo;s ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">parent</span><span class="o">&lt;</span><span class="kt">P</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">parentID</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">P</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Parent.html">Parent</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">P</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">P</span> <span class="p">:</span> <span class="kt">Model</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span> <span class="o">==</span> <span class="kt">P</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Relations/Parent.swift#L84-L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE6parentyAA6ParentVyxqd__GSgs7KeyPathCyx2IDQyd__SgGAaBRd__8DatabaseQyd__AORtzlF"></a>
+                    <a name="//apple_ref/swift/Method/parent(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE6parentyAA6ParentVyxqd__GSgs7KeyPathCyx2IDQyd__SgGAaBRd__8DatabaseQyd__AORtzlF">parent(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a children relation for this model.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">Parent</span><span class="o">&lt;</span><span class="kt">Pet</span><span class="p">,</span> <span class="kt">User</span><span class="o">&gt;</span><span class="p">?</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nf">parent</span><span class="p">(\</span><span class="o">.</span><span class="n">userID</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>This method supports an optional relation and will return <code>nil</code> if the parent ID is <code>nil</code>.</p>
+
+<p>The <code>parentID</code> should refer to the field on the child entity that contains the parent&rsquo;s ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">parent</span><span class="o">&lt;</span><span class="kt">P</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">parentID</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">P</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="p">?</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Parent.html">Parent</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">P</span><span class="o">&gt;</span><span class="p">?</span> <span class="k">where</span> <span class="kt">P</span> <span class="p">:</span> <span class="kt">Model</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span> <span class="o">==</span> <span class="kt">P</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP8DatabaseQa">Database</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Relations/Parent.swift#L100-L106">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Model3"></a>
+                <a name="//apple_ref/swift/Section/Model" class="dashAnchor"></a>
+                <a href="#/Model3">
+                  <h3 class="section-name">Model</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE8siblings7related7through__AA8SiblingsVyxqd__qd_0_Gqd__m_qd_0_ms15WritableKeyPathCyqd_0_2IDQzGAKyqd_0_ALQyd__GtAaBRd__AA5PivotRd_0_AA14JoinSupporting8DatabaseRpzASQyd__ATRSASQyd_0_AURSr0_lF"></a>
+                    <a name="//apple_ref/swift/Method/siblings(related:through:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE8siblings7related7through__AA8SiblingsVyxqd__qd_0_Gqd__m_qd_0_ms15WritableKeyPathCyqd_0_2IDQzGAKyqd_0_ALQyd__GtAaBRd__AA5PivotRd_0_AA14JoinSupporting8DatabaseRpzASQyd__ATRSASQyd_0_AURSr0_lF">siblings(related:through:_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a siblings relation for this model.</p>
+
+<p>Unless you are doing custom keys, you should not need to
+pass any parameters to this function.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Toy</span><span class="p">:</span> <span class="kt">Model</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">pets</span><span class="p">:</span> <span class="kt">Siblings</span><span class="o">&lt;</span><span class="kt">Toy</span><span class="p">,</span> <span class="kt">Pet</span><span class="p">,</span> <span class="kt">PetToyPivot</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nf">siblings</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>See Siblings class documentation for more information
+about the many parameters. They can be confusing at first!</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    From is assumed to be the model you are calling this method on.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">siblings</span><span class="o">&lt;</span><span class="kt">Related</span><span class="p">,</span> <span class="kt">Through</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="nv">related</span><span class="p">:</span> <span class="kt">Related</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Related</span><span class="o">.</span><span class="k">self</span><span class="p">,</span>
+    <span class="nv">through</span><span class="p">:</span> <span class="kt">Through</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Through</span><span class="o">.</span><span class="k">self</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">basePivotField</span><span class="p">:</span> <span class="kt">WritableKeyPath</span><span class="o">&lt;</span><span class="kt">Through</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">relatedPivotField</span><span class="p">:</span> <span class="kt">WritableKeyPath</span><span class="o">&lt;</span><span class="kt">Through</span><span class="p">,</span> <span class="kt">Related</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html#/s:6Fluent5ModelP2IDQa">ID</a></span><span class="o">&gt;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Siblings.html">Siblings</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Related</span><span class="p">,</span> <span class="kt">Through</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Relations/Siblings.swift#L158-L169">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE8siblings7related7throughAA8SiblingsVyxqd__qd_0_Gqd__m_qd_0_mt5RightQyd_0_Rsz4LeftQyd_0_Rsd__AA5PivotRd_0_AA14JoinSupporting8DatabaseRpzAPQyd__AQRSAPQyd_0_ARRSr0_lF"></a>
+                    <a name="//apple_ref/swift/Method/siblings(related:through:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE8siblings7related7throughAA8SiblingsVyxqd__qd_0_Gqd__m_qd_0_mt5RightQyd_0_Rsz4LeftQyd_0_Rsd__AA5PivotRd_0_AA14JoinSupporting8DatabaseRpzAPQyd__AQRSAPQyd_0_ARRSr0_lF">siblings(related:through:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Free implementation where pivot constraints are met.
+See <code>Model.siblings(_:_:)</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">siblings</span><span class="o">&lt;</span><span class="kt">Related</span><span class="p">,</span> <span class="kt">Through</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="nv">related</span><span class="p">:</span> <span class="kt">Related</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Related</span><span class="o">.</span><span class="k">self</span><span class="p">,</span>
+    <span class="nv">through</span><span class="p">:</span> <span class="kt">Through</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Through</span><span class="o">.</span><span class="k">self</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Siblings.html">Siblings</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Related</span><span class="p">,</span> <span class="kt">Through</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Through</span><span class="o">.</span><span class="kt">Right</span> <span class="o">==</span> <span class="k">Self</span><span class="p">,</span> <span class="kt">Through</span><span class="o">.</span><span class="kt">Left</span> <span class="o">==</span> <span class="kt">Related</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Relations/Siblings.swift#L173-L180">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Fluent5ModelPAAE8siblings7related7throughAA8SiblingsVyxqd__qd_0_Gqd__m_qd_0_mt4LeftQyd_0_Rsz5RightQyd_0_Rsd__AA5PivotRd_0_AA14JoinSupporting8DatabaseRpzAPQyd__AQRSAPQyd_0_ARRSr0_lF"></a>
+                    <a name="//apple_ref/swift/Method/siblings(related:through:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Fluent5ModelPAAE8siblings7related7throughAA8SiblingsVyxqd__qd_0_Gqd__m_qd_0_mt4LeftQyd_0_Rsz5RightQyd_0_Rsd__AA5PivotRd_0_AA14JoinSupporting8DatabaseRpzAPQyd__AQRSAPQyd_0_ARRSr0_lF">siblings(related:through:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Free implementation where pivot constraints are met.
+See <code>Model.siblings(_:_:)</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">siblings</span><span class="o">&lt;</span><span class="kt">Related</span><span class="p">,</span> <span class="kt">Through</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="nv">related</span><span class="p">:</span> <span class="kt">Related</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Related</span><span class="o">.</span><span class="k">self</span><span class="p">,</span>
+    <span class="nv">through</span><span class="p">:</span> <span class="kt">Through</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Through</span><span class="o">.</span><span class="k">self</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Siblings.html">Siblings</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Related</span><span class="p">,</span> <span class="kt">Through</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Through</span><span class="o">.</span><span class="kt">Left</span> <span class="o">==</span> <span class="k">Self</span><span class="p">,</span> <span class="kt">Through</span><span class="o">.</span><span class="kt">Right</span> <span class="o">==</span> <span class="kt">Related</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent/tree/3.2.0/Sources/Fluent/Relations/Siblings.swift#L184-L191">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

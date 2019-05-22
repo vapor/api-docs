@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BasicAuthenticatable Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/BasicAuthenticatable" class="dashAnchor"></a>
+
+    <a title="BasicAuthenticatable Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Authentication Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/auth">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fauth%2Fmaster%2FAuthentication%2Fdocsets%2FAuthentication%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Authentication Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      BasicAuthenticatable Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticationProvider.html">AuthenticationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticationSessionsMiddleware.html">AuthenticationSessionsMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BasicAuthenticationMiddleware.html">BasicAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/s:14Authentication06BearerA10MiddlewareC">BearerAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/GuardAuthenticationMiddleware.html">GuardAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HeaderValueAuthenticationMiddleware.html">HeaderValueAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TokenAuthenticationMiddleware.html">TokenAuthenticationMiddleware</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Request.html">Request</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Authenticatable.html">Authenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BasicAuthenticatable.html">BasicAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BearerAuthenticatable.html">BearerAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HeaderValueAuthenticatable.html">HeaderValueAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PasswordAuthenticatable.html">PasswordAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PasswordVerifier.html">PasswordVerifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SessionAuthenticatable.html">SessionAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Token.html">Token</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/TokenAuthenticatable.html">TokenAuthenticatable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AuthenticationError.html">AuthenticationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PlaintextVerifier.html">PlaintextVerifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RedirectMiddleware.html">RedirectMiddleware</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>BasicAuthenticatable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">BasicAuthenticatable</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Authenticatable.html">Authenticatable</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Authenticatable by <code>Basic username:password</code> auth.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication20BasicAuthenticatableP11UsernameKeya"></a>
+                    <a name="//apple_ref/swift/Alias/UsernameKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication20BasicAuthenticatableP11UsernameKeya">UsernameKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Key path to the username</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">UsernameKey</span> <span class="o">=</span> <span class="kt">WritableKeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Basic/BasicAuthenticatable.swift#L8">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication20BasicAuthenticatableP11usernameKeys08WritableE4PathCyxSSGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/usernameKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication20BasicAuthenticatableP11usernameKeys08WritableE4PathCyxSSGvpZ">usernameKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The key under which the user&rsquo;s username,
+email, or other identifing value is stored.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">usernameKey</span><span class="p">:</span> <span class="kt"><a href="../Protocols/BasicAuthenticatable.html#/s:14Authentication20BasicAuthenticatableP11UsernameKeya">UsernameKey</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Basic/BasicAuthenticatable.swift#L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication20BasicAuthenticatableP11PasswordKeya"></a>
+                    <a name="//apple_ref/swift/Alias/PasswordKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication20BasicAuthenticatableP11PasswordKeya">PasswordKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Key path to the password</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">PasswordKey</span> <span class="o">=</span> <span class="kt">WritableKeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Basic/BasicAuthenticatable.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication20BasicAuthenticatableP11passwordKeys08WritableE4PathCyxSSGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/passwordKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication20BasicAuthenticatableP11passwordKeys08WritableE4PathCyxSSGvpZ">passwordKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The key under which the user&rsquo;s password
+is stored.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">passwordKey</span><span class="p">:</span> <span class="kt"><a href="../Protocols/BasicAuthenticatable.html#/s:14Authentication20BasicAuthenticatableP11PasswordKeya">PasswordKey</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Basic/BasicAuthenticatable.swift#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication20BasicAuthenticatableP12authenticate5using8verifier2on3NIO15EventLoopFutureCyxSgG5Vapor0B13AuthorizationV_AA16PasswordVerifier_p11DatabaseKit0P11Connectable_ptFZ"></a>
+                    <a name="//apple_ref/swift/Method/authenticate(using:verifier:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication20BasicAuthenticatableP12authenticate5using8verifier2on3NIO15EventLoopFutureCyxSgG5Vapor0B13AuthorizationV_AA16PasswordVerifier_p11DatabaseKit0P11Connectable_ptFZ">authenticate(using:verifier:on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Authenticates using the supplied credentials, connection, and verifier.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>BasicAuthenticatable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">authenticate</span><span class="p">(</span><span class="n">using</span> <span class="nv">basic</span><span class="p">:</span> <span class="kt">BasicAuthorization</span><span class="p">,</span> <span class="nv">verifier</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PasswordVerifier.html">PasswordVerifier</a></span><span class="p">,</span> <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">DatabaseConnectable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Basic/BasicAuthenticatable.swift#L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication20BasicAuthenticatablePAAE13basicPasswordSSvp"></a>
+                    <a name="//apple_ref/swift/Property/basicPassword" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication20BasicAuthenticatablePAAE13basicPasswordSSvp">basicPassword</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Accesses the model&rsquo;s password</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">basicPassword</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Basic/BasicAuthenticatable.swift#L40-L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication20BasicAuthenticatablePAAE13basicUsernameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/basicUsername" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication20BasicAuthenticatablePAAE13basicUsernameSSvp">basicUsername</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Accesses the model&rsquo;s username</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">basicUsername</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Basic/BasicAuthenticatable.swift#L46-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication20BasicAuthenticatablePAA6Fluent5ModelRzrlE19basicAuthMiddleware5usingAA0baH0CyxGAA16PasswordVerifier_p_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/basicAuthMiddleware(using:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication20BasicAuthenticatablePAA6Fluent5ModelRzrlE19basicAuthMiddleware5usingAA0baH0CyxGAA16PasswordVerifier_p_tFZ">basicAuthMiddleware(using:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a basic auth middleware for this model.
+See <code><a href="../Classes/BasicAuthenticationMiddleware.html">BasicAuthenticationMiddleware</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">basicAuthMiddleware</span><span class="p">(</span><span class="n">using</span> <span class="nv">verifier</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PasswordVerifier.html">PasswordVerifier</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BasicAuthenticationMiddleware.html">BasicAuthenticationMiddleware</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Basic/BasicAuthenticationMiddleware.swift#L41-L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

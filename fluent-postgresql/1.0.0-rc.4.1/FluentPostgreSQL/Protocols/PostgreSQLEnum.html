@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PostgreSQLEnum Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/PostgreSQLEnum" class="dashAnchor"></a>
+
+    <a title="PostgreSQLEnum Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          FluentPostgreSQL Docs
+        </a>
+         (41% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/fluent-postgresql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2Dpostgresql%2F1%2E0%2E0%2Drc%2E4%2E1%2FFluentPostgreSQL%2Fdocsets%2FFluentPostgreSQL%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">FluentPostgreSQL Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      PostgreSQLEnum Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FluentPostgreSQLProvider.html">FluentPostgreSQLProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FluentPostgreSQLQueryStatement.html">FluentPostgreSQLQueryStatement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FluentPostgreSQLSchemaStatement.html">FluentPostgreSQLSchemaStatement</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/PostgreSQLDatabase.html">PostgreSQLDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/QueryBuilder.html">QueryBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B12SQLArrayTypeP">PostgreSQLArrayType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLEnum.html">PostgreSQLEnum</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B11SQLEnumTypeP">PostgreSQLEnumType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B11SQLJSONTypeP">PostgreSQLJSONType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B12SQLMigrationP">PostgreSQLMigration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLModel.html">PostgreSQLModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B8SQLPivotP">PostgreSQLPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLStringModel.html">PostgreSQLStringModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B14SQLStringPivotP">PostgreSQLStringPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B7SQLTypeP">PostgreSQLType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLUUIDModel.html">PostgreSQLUUIDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B12SQLUUIDPivotP">PostgreSQLUUIDPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/_PostgreSQLModel.html">_PostgreSQLModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentPostgreSQLQuery.html">FluentPostgreSQLQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentPostgreSQLSchema.html">FluentPostgreSQLSchema</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16FluentPostgreSQL0B28SQLColumnStaticRepresentablea">PostgreSQLColumnStaticRepresentable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>PostgreSQLEnum</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PostgreSQLEnum</span> <span class="p">:</span> <span class="kt">ReflectionDecodable</span><span class="p">,</span> <span class="kt">PostgreSQLDataTypeStaticRepresentable</span><span class="p">,</span> <span class="kt">PostgreSQLExpressionRepresentable</span><span class="p">,</span> <span class="kt">CaseIterable</span><span class="p">,</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">RawRepresentable</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">RawValue</span> <span class="p">:</span> <span class="kt">LosslessStringConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16FluentPostgreSQL0B7SQLEnumP07postgreD8TypeNameSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/postgreSQLEnumTypeName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16FluentPostgreSQL0B7SQLEnumP07postgreD8TypeNameSSvpZ">postgreSQLEnumTypeName</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>See <code>PostgreSQLEnum</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">postgreSQLEnumTypeName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLEnum.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16FluentPostgreSQL0B7SQLEnumPAAE18postgreSQLDataType0bC00bfG0VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/postgreSQLDataType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16FluentPostgreSQL0B7SQLEnumPAAE18postgreSQLDataType0bC00bfG0VvpZ">postgreSQLDataType</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>PostgreSQLDataTypeStaticRepresentable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">postgreSQLDataType</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLEnum.swift#L12-L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16FluentPostgreSQL0B7SQLEnumPAAE20postgreSQLExpression0C007GenericF0OyAE0G10SQLLiteralOy0bC00B17SQLDefaultLiteralVAJ0b7SQLBoolJ0OGAJ0B7SQLBindVAE0G19SQLColumnIdentifierVyAE0g8SQLTableN0VyAE0G13SQLIdentifierVGAWGAJ0B17SQLBinaryOperatorVAJ0B11SQLFunctionVAJ0B8SQLQueryOGvp"></a>
+                    <a name="//apple_ref/swift/Property/postgreSQLExpression" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16FluentPostgreSQL0B7SQLEnumPAAE20postgreSQLExpression0C007GenericF0OyAE0G10SQLLiteralOy0bC00B17SQLDefaultLiteralVAJ0b7SQLBoolJ0OGAJ0B7SQLBindVAE0G19SQLColumnIdentifierVyAE0g8SQLTableN0VyAE0G13SQLIdentifierVGAWGAJ0B17SQLBinaryOperatorVAJ0B11SQLFunctionVAJ0B8SQLQueryOGvp">postgreSQLExpression</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>PostgreSQLExpressionRepresentable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">postgreSQLExpression</span><span class="p">:</span> <span class="kt">PostgreSQLExpression</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLEnum.swift#L17-L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16FluentPostgreSQL0B7SQLEnumPA2A0B12SQLMigrationRzrlE7prepare2on3NIO15EventLoopFutureCyytG0bC00B13SQLConnectionC_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/prepare(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16FluentPostgreSQL0B7SQLEnumPA2A0B12SQLMigrationRzrlE7prepare2on3NIO15EventLoopFutureCyytG0bC00B13SQLConnectionC_tFZ">prepare(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols.html#/s:16FluentPostgreSQL0B12SQLMigrationP">PostgreSQLMigration</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLEnum.swift#L24-L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16FluentPostgreSQL0B7SQLEnumPA2A0B12SQLMigrationRzrlE6revert2on3NIO15EventLoopFutureCyytG0bC00B13SQLConnectionC_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/revert(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16FluentPostgreSQL0B7SQLEnumPA2A0B12SQLMigrationRzrlE6revert2on3NIO15EventLoopFutureCyytG0bC00B13SQLConnectionC_tFZ">revert(on:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols.html#/s:16FluentPostgreSQL0B12SQLMigrationP">PostgreSQLMigration</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">revert</span><span class="p">(</span><span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLEnum.swift#L29-L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

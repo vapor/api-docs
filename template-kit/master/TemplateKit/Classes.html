@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
+
+    <a title="Classes  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          TemplateKit Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/template-kit">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ftemplate%2Dkit%2Fmaster%2FTemplateKit%2Fdocsets%2FTemplateKit%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">TemplateKit Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Classes  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Capitalize.html">Capitalize</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Comment.html">Comment</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Contains.html">Contains</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Count.html">Count</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/DateFormat.html">DateFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Lowercase.html">Lowercase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PlaintextRenderer.html">PlaintextRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Print.html">Print</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Raw.html">Raw</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TagContext.html">TagContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TemplateByteScanner.html">TemplateByteScanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TemplateConditional.html">TemplateConditional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TemplateDataContext.html">TemplateDataContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TemplateDataEncoder.html">TemplateDataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TemplateSerializer.html">TemplateSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Uppercase.html">Uppercase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Var.html">Var</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:11TemplateKit11defaultTagsSDySSAA11TagRenderer_pGvp">defaultTags</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/TemplateConstant.html">TemplateConstant</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/TemplateExpression.html">TemplateExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/TemplateExpression/InfixOperator.html">– InfixOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/TemplateExpression/PrefixOperator.html">– PrefixOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/TemplateExpression/PostfixOperator.html">– PostfixOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/TemplateSyntaxType.html">TemplateSyntaxType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/OptionalType.html">OptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/TagRenderer.html">TagRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/TemplateDataRepresentable.html">TemplateDataRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/TemplateParser.html">TemplateParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/TemplateRenderer.html">TemplateRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ViewRenderer.html">ViewRenderer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ASTCache.html">ASTCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateCustom.html">TemplateCustom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateData.html">TemplateData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateEmbed.html">TemplateEmbed</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateIdentifier.html">TemplateIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateIterator.html">TemplateIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateKitError.html">TemplateKitError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateRaw.html">TemplateRaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateSource.html">TemplateSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateSourceStart.html">TemplateSourceStart</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateSyntax.html">TemplateSyntax</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TemplateTag.html">TemplateTag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ConditionalC"></a>
+                    <a name="//apple_ref/swift/Class/TemplateConditional" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ConditionalC">TemplateConditional</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A conditional collection of syntax to execute if the specified condition is truthy.</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="o">&lt;</span><span class="n">next</span><span class="p">?</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="Classes/TemplateConditional.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TemplateConditional</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/AST/TemplateConditional.swift#L9-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11DataContextC"></a>
+                    <a name="//apple_ref/swift/Class/TemplateDataContext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11DataContextC">TemplateDataContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A reference wrapper around <code><a href="Structs/TemplateData.html">TemplateData</a></code>.</p>
+
+                        <a href="Classes/TemplateDataContext.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TemplateDataContext</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/AST/TemplateDataContext.swift#L2-L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11ByteScannerC"></a>
+                    <a name="//apple_ref/swift/Class/TemplateByteScanner" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11ByteScannerC">TemplateByteScanner</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Used to facilitate parsing byte arrays.</p>
+
+                        <a href="Classes/TemplateByteScanner.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TemplateByteScanner</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Pipeline/TemplateByteScanner.swift#L4-L106">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A11DataEncoderC"></a>
+                    <a name="//apple_ref/swift/Class/TemplateDataEncoder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A11DataEncoderC">TemplateDataEncoder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts <code>Encodable</code> objects to <code><a href="Structs/TemplateData.html">TemplateData</a></code>.</p>
+
+                        <a href="Classes/TemplateDataEncoder.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TemplateDataEncoder</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Data/TemplateDataEncoder.swift#L2-L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit17PlaintextRendererC"></a>
+                    <a name="//apple_ref/swift/Class/PlaintextRenderer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit17PlaintextRendererC">PlaintextRenderer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Renders templates as plaintext.</p>
+
+                        <a href="Classes/PlaintextRenderer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">PlaintextRenderer</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TemplateRenderer.html">TemplateRenderer</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/TemplateParser.html">TemplateParser</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Pipeline/PlaintextRenderer.swift#L2-L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit0A10SerializerC"></a>
+                    <a name="//apple_ref/swift/Class/TemplateSerializer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit0A10SerializerC">TemplateSerializer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes parsed AST, using context, into <code><a href="Structs/View.html">View</a></code>s.</p>
+
+<p>See <code><a href="Protocols/TemplateRenderer.html">TemplateRenderer</a></code> for more information.</p>
+
+                        <a href="Classes/TemplateSerializer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TemplateSerializer</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Pipeline/TemplateSerializer.swift#L4-L274">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit10CapitalizeC"></a>
+                    <a name="//apple_ref/swift/Class/Capitalize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit10CapitalizeC">Capitalize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Capitalizes a <code>String</code>.</p>
+<pre class="highlight swift"><code><span class="nf">capitalize</span><span class="p">(</span><span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Classes/Capitalize.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Capitalize</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/Capitalize.swift#L4-L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit7CommentC"></a>
+                    <a name="//apple_ref/swift/Class/Comment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit7CommentC">Comment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ignores zero or more parameters always returning an empty <code>String</code>.</p>
+
+                        <a href="Classes/Comment.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Comment</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/Comment.swift#L2-L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit8ContainsC"></a>
+                    <a name="//apple_ref/swift/Class/Contains" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit8ContainsC">Contains</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the supplied array contains a given item.</p>
+<pre class="highlight swift"><code><span class="nf">contains</span><span class="p">(</span><span class="o">&lt;</span><span class="n">array</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;</span>
+</code></pre>
+
+                        <a href="Classes/Contains.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Contains</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/Contains.swift#L5-L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit5CountC"></a>
+                    <a name="//apple_ref/swift/Class/Count" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit5CountC">Count</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the number of items in the supplied array.</p>
+<pre class="highlight swift"><code><span class="nf">count</span><span class="p">(</span><span class="o">&lt;</span><span class="n">array</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+
+<p>Supports counting arrays or dictionaries (keys).</p>
+
+                        <a href="Classes/Count.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Count</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/Count.swift#L6-L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit10DateFormatC"></a>
+                    <a name="//apple_ref/swift/Class/DateFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit10DateFormatC">DateFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Formats a floating-point time interval since epoch date to a specified format.</p>
+<pre class="highlight swift"><code><span class="nf">dateFormat</span><span class="p">(</span><span class="o">&lt;</span><span class="n">timeIntervalSinceEpoch</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">dateFormat</span><span class="p">?</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+
+<p>If no date format is supplied, a default will be used.</p>
+
+                        <a href="Classes/DateFormat.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DateFormat</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/DateFormat.swift#L6-L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit9LowercaseC"></a>
+                    <a name="//apple_ref/swift/Class/Lowercase" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit9LowercaseC">Lowercase</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts a <code>String</code> to all lowercase characters.</p>
+<pre class="highlight swift"><code><span class="nf">lowercase</span><span class="p">(</span><span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Classes/Lowercase.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Lowercase</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/Lowercase.swift#L5-L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit5PrintC"></a>
+                    <a name="//apple_ref/swift/Class/Print" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit5PrintC">Print</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prints a parameter, HTML-escaping it first.</p>
+<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Classes/Print.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Print</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/Print.swift#L5-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit3RawC"></a>
+                    <a name="//apple_ref/swift/Class/Raw" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit3RawC">Raw</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prints a parameter without HTML-escaping it (be careful!).</p>
+<pre class="highlight swift"><code><span class="nf">raw</span><span class="p">(</span><span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Classes/Raw.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Raw</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/Raw.swift#L5-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit10TagContextC"></a>
+                    <a name="//apple_ref/swift/Class/TagContext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit10TagContextC">TagContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Contains contextual information corresponding to a <code><a href="Structs/TemplateTag.html">TemplateTag</a></code> in the AST.
+This information will be passed to the <code><a href="Protocols/TagRenderer.html">TagRenderer</a></code> for the identified tag.</p>
+
+                        <a href="Classes/TagContext.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TagContext</span> <span class="p">:</span> <span class="kt">BasicWorker</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/TagContext.swift#L3-L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit9UppercaseC"></a>
+                    <a name="//apple_ref/swift/Class/Uppercase" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit9UppercaseC">Uppercase</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts a <code>String</code> to all uppercase characters.</p>
+<pre class="highlight swift"><code><span class="nf">uppercase</span><span class="p">(</span><span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Classes/Uppercase.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Uppercase</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/Uppercase.swift#L5-L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TemplateKit3VarC"></a>
+                    <a name="//apple_ref/swift/Class/Var" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TemplateKit3VarC">Var</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets data to the tag context.</p>
+<pre class="highlight swift"><code><span class="k">var</span><span class="p">(</span><span class="err">&lt;</span><span class="nv">key</span><span class="err">&gt;</span><span class="p">,</span> <span class="err">&lt;</span><span class="nv">item</span><span class="err">&gt;</span><span class="p">)</span>
+</code></pre>
+
+<p>The second parameter can be either an item or emitted and the tag body will be used.</p>
+
+                        <a href="Classes/Var.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Var</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TagRenderer.html">TagRenderer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/template-kit/tree/master/Sources/TemplateKit/Tag/Var.swift#L6-L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

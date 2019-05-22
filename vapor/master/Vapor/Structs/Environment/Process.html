@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Process Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+    <script src="../../js/lunr.min.js" defer></script>
+    <script src="../../js/typeahead.jquery.js" defer></script>
+    <script src="../../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/Process" class="dashAnchor"></a>
+
+    <a title="Process Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../../index.html">
+          Vapor Docs
+        </a>
+         (76% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/vapor">
+            <img class="header-icon" src="../../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2Fmaster%2FVapor%2Fdocsets%2FVapor%2Exml">
+            <img class="header-icon" src="../../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../../index.html">Vapor Reference</a>
+      <img class="carat" src="../../img/carat.png" />
+      Process Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Application.html">Application</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Application/Running.html">– Running</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/BootCommand.html">BootCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/BootCommand.html#/s:5Vapor11BootCommandC9SignatureV">– Signature</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/CORSMiddleware.html">CORSMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/CORSMiddleware/AllowOriginSetting.html">– AllowOriginSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Container.html">Container</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/ErrorMiddleware.html">ErrorMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/FileMiddleware.html">FileMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/FoundationClient.html">FoundationClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/HTTPServer.html">HTTPServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/HTTPServer/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/MultipartParser.html">MultipartParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/MultipartSerializer.html">MultipartSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Request/Body.html">– Body</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Response/Body.html">– Body</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Route.html">Route</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Routes.html">Routes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/RoutesCommand.html">RoutesCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/RoutesCommand.html#/s:5Vapor13RoutesCommandC9SignatureV">– Signature</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/ServeCommand.html">ServeCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/ServeCommand/Signature.html">– Signature</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Session.html">Session</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/SessionsMiddleware.html">SessionsMiddleware</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Enums/BasicCodingKey.html">BasicCodingKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Enums/BodyStreamResult.html">BodyStreamResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Enums/HTTPBodyStreamStrategy.html">HTTPBodyStreamStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Enums/HTTPVersionMajor.html">HTTPVersionMajor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Enums/RedirectType.html">RedirectType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/CommandConfiguration.html">CommandConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/DecodingError.html">DecodingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/EventLoopFuture.html">EventLoopFuture</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/HTTPHeaders.html">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/HTTPHeaders/Name.html">– Name</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/HTTPMethod.html">HTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/HTTPStatus.html">HTTPStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/JSONDecoder.html">JSONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/JSONEncoder.html">JSONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/StaticString.html">StaticString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/Thread.html">Thread</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:5Vapor1nopyAA9ValidatorVyxGAESeRzSERzlF">!(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:5Vapor2aaoiyAA9ValidatorVyxGAE_AEtSeRzSERzlF">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:5Vapor2aaoiyAA9ValidatorVyxSgGADyxG_AFtSeRzSERzlF">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:5Vapor2aaoiyAA9ValidatorVyxSgGAF_ADyxGtSeRzSERzlF">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:5Vapor1poiy10Foundation12CharacterSetVAE_AEtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:5Vapor2qqoiy3NIO15EventLoopFutureCyxGAEyxSgG_xtlF">??(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:5Vapor2oooiyAA9ValidatorVyxGAE_AEtSeRzSERzlF">||(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:5Vapor2oooiyAA9ValidatorVyxSgGADyxG_AFtSeRzSERzlF">||(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:5Vapor2oooiyAA9ValidatorVyxSgGAF_ADyxGtSeRzSERzlF">||(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/AbortError.html">AbortError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/AnyOptionalType.html">AnyOptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/AnyValidation.html">AnyValidation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Authenticatable.html">Authenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/AuthenticationToken.html">AuthenticationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/BasicAuthenticator.html">BasicAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/BearerAuthenticator.html">BearerAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/BodyStreamWriter.html">BodyStreamWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/CodingKeyRepresentable.html">CodingKeyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Content.html">Content</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/ContentContainer.html">ContentContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/ContentDecoder.html">ContentDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/ContentEncoder.html">ContentEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/CredentialsAuthenticator.html">CredentialsAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Extendable.html">Extendable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Middleware.html">Middleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/MultipartPartConvertible.html">MultipartPartConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/OptionalType.html">OptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/PasswordVerifier.html">PasswordVerifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Provider.html">Provider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/RequestAuthenticator.html">RequestAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/RequestDecodable.html">RequestDecodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Responder.html">Responder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/ResponseEncodable.html">ResponseEncodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/RouteCollection.html">RouteCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/RoutesBuilder.html">RoutesBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Server.html">Server</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/SessionAuthenticatable.html">SessionAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/SessionAuthenticator.html">SessionAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Sessions.html">Sessions</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/URLQueryContainer.html">URLQueryContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/URLQueryDecoder.html">URLQueryDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/URLQueryEncoder.html">URLQueryEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/URLRepresentable.html">URLRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/UserTokenAuthenticator.html">UserTokenAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/Validatable.html">Validatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/ValidatorType.html">ValidatorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/ViewRenderer.html">ViewRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Protocols/WebSocket.html">WebSocket</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/Abort.html">Abort</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/AnyResponse.html">AnyResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/ApplicationResponder.html">ApplicationResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/BasicAuthorization.html">BasicAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/BasicResponder.html">BasicResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/BearerAuthorization.html">BearerAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/ClientRequest.html">ClientRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/ClientResponse.html">ClientResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/ContentConfiguration.html">ContentConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/DecoderUnwrapper.html">DecoderUnwrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/DirectoryConfiguration.html">DirectoryConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/DotEnvFile.html">DotEnvFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/DotEnvFile/Line.html">– Line</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/Environment/Process.html">– Process</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/Extend.html">Extend</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/File.html">File</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/FileIO.html">FileIO</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/FormDataDecoder.html">FormDataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/FormDataEncoder.html">FormDataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/HTTPCookies.html">HTTPCookies</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/HTTPCookies/SameSitePolicy.html">– SameSitePolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/HTTPCookies/Value.html">– Value</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/HTTPHeaderValue.html">HTTPHeaderValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/HTTPMediaType.html">HTTPMediaType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/HTTPMediaTypePreference.html">HTTPMediaTypePreference</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/MemorySessions.html">MemorySessions</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/MemorySessions/Storage.html">– Storage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/MiddlewareConfiguration.html">MiddlewareConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/MultipartError.html">MultipartError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/MultipartPart.html">MultipartPart</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/PlaintextEncoder.html">PlaintextEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/PlaintextRenderer.html">PlaintextRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/PlaintextVerifier.html">PlaintextVerifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/Services.html">Services</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/SessionData.html">SessionData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/SessionID.html">SessionID</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/SessionsConfig.html">SessionsConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/URLEncodedFormDecoder.html">URLEncodedFormDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/URLEncodedFormEncoder.html">URLEncodedFormEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/URLEncodedFormError.html">URLEncodedFormError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/ValidationError.html">ValidationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/ValidationFailure.html">ValidationFailure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/Validations.html">Validations</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/Validator.html">Validator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/ValidatorFailure.html">ValidatorFailure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Typealiases.html#/s:5Vapor10HTTPStatusa">HTTPStatus</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Process</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@dynamicMemberLookup</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Process</span></code></pre>
+
+                </div>
+              </div>
+            <p>The process information of an environment. Wraps <code>ProcessInto.processInfo</code>.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor11EnvironmentV7ProcessV13dynamicMemberxSgSS_tcs25LosslessStringConvertibleRzluip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(dynamicMember:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor11EnvironmentV7ProcessV13dynamicMemberxSgSS_tcs25LosslessStringConvertibleRzluip">subscript(dynamicMember:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets a variable&rsquo;s value from the process&rsquo; environment, and converts it to generic type <code>T</code>.</p>
+<pre class="highlight swift"><code><span class="kt">Environment</span><span class="o">.</span><span class="n">process</span><span class="o">.</span><span class="kt">DATABASE_PORT</span> <span class="o">=</span> <span class="mi">3306</span>
+<span class="kt">Environment</span><span class="o">.</span><span class="n">process</span><span class="o">.</span><span class="kt">DATABASE_PORT</span> <span class="c1">// 3306</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">subscript</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dynamicMember</span> <span class="nv">member</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">LosslessStringConvertible</span> <span class="p">{</span> <span class="k">get</span> <span class="k">nonmutating</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/master/Sources/Vapor/Services/Environment+Proccess.swift#L19-L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor11EnvironmentV7ProcessV13dynamicMemberSSSgSS_tcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(dynamicMember:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor11EnvironmentV7ProcessV13dynamicMemberSSSgSS_tcip">subscript(dynamicMember:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets a variable&rsquo;s value from the process&rsquo; environment as a <code>String</code>.</p>
+<pre class="highlight swift"><code><span class="kt">Environment</span><span class="o">.</span><span class="n">process</span><span class="o">.</span><span class="kt">DATABASE_USER</span> <span class="o">=</span> <span class="s">"root"</span>
+<span class="kt">Environment</span><span class="o">.</span><span class="n">process</span><span class="o">.</span><span class="kt">DATABASE_USER</span> <span class="c1">// "root"</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="n">dynamicMember</span> <span class="nv">member</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">nonmutating</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/master/Sources/Vapor/Services/Environment+Proccess.swift#L40-L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

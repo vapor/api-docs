@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Token Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/Token" class="dashAnchor"></a>
+
+    <a title="Token Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Authentication Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/auth">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fauth%2Fmaster%2FAuthentication%2Fdocsets%2FAuthentication%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Authentication Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      Token Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticationProvider.html">AuthenticationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticationSessionsMiddleware.html">AuthenticationSessionsMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BasicAuthenticationMiddleware.html">BasicAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/s:14Authentication06BearerA10MiddlewareC">BearerAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/GuardAuthenticationMiddleware.html">GuardAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HeaderValueAuthenticationMiddleware.html">HeaderValueAuthenticationMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TokenAuthenticationMiddleware.html">TokenAuthenticationMiddleware</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Request.html">Request</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Authenticatable.html">Authenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BasicAuthenticatable.html">BasicAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BearerAuthenticatable.html">BearerAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HeaderValueAuthenticatable.html">HeaderValueAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PasswordAuthenticatable.html">PasswordAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PasswordVerifier.html">PasswordVerifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SessionAuthenticatable.html">SessionAuthenticatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Token.html">Token</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/TokenAuthenticatable.html">TokenAuthenticatable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AuthenticationError.html">AuthenticationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PlaintextVerifier.html">PlaintextVerifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RedirectMiddleware.html">RedirectMiddleware</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Token</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Token</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/HeaderValueAuthenticatable.html">HeaderValueAuthenticatable</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>A token, related to a user, capable of being used with Bearer auth.
+See <code><a href="../Protocols/TokenAuthenticatable.html">TokenAuthenticatable</a></code>.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication5TokenP8UserTypeQa"></a>
+                    <a name="//apple_ref/swift/Alias/UserType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication5TokenP8UserTypeQa">UserType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The User type that owns this token.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">UserType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Token/TokenAuthenticatable.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication5TokenP10UserIDTypeQa"></a>
+                    <a name="//apple_ref/swift/Alias/UserIDType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication5TokenP10UserIDTypeQa">UserIDType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Type of the User&rsquo;s ID</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">UserIDType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Token/TokenAuthenticatable.swift#L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication5TokenP9UserIDKeya"></a>
+                    <a name="//apple_ref/swift/Alias/UserIDKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication5TokenP9UserIDKeya">UserIDKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Key path to the user ID</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">UserIDKey</span> <span class="o">=</span> <span class="kt">WritableKeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Token.html#/s:14Authentication5TokenP10UserIDTypeQa">UserIDType</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Token/TokenAuthenticatable.swift#L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication5TokenP9userIDKeys15WritableKeyPathCyx10UserIDTypeQzGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/userIDKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication5TokenP9userIDKeys15WritableKeyPathCyx10UserIDTypeQzGvpZ">userIDKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A relation to the user that owns this token.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">userIDKey</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Token.html#/s:14Authentication5TokenP9UserIDKeya">UserIDKey</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Token/TokenAuthenticatable.swift#L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Authentication5TokenPAA6Fluent5ModelRz8UserTypeAC_8DatabaseQZAgdEPRtzAfC_2IDQZ0E6IDTypeACRtzAdefCRpzrlE04authE0AD6ParentVyxAOGvp"></a>
+                    <a name="//apple_ref/swift/Property/authUser" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Authentication5TokenPAA6Fluent5ModelRz8UserTypeAC_8DatabaseQZAgdEPRtzAfC_2IDQZ0E6IDTypeACRtzAdefCRpzrlE04authE0AD6ParentVyxAOGvp">authUser</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A relation to this token&rsquo;s owner.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">authUser</span><span class="p">:</span> <span class="kt">Parent</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Token.html#/s:14Authentication5TokenP8UserTypeQa">UserType</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/auth/tree/master/Sources/Authentication/Token/TokenAuthenticatable.swift#L50-L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

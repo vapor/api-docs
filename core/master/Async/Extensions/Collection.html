@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Collection Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Extension/Collection" class="dashAnchor"></a>
+
+    <a title="Collection Extension Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Async Docs
+        </a>
+         (96% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/core">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2Fmaster%2FAsync%2Fdocsets%2FAsync%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Async Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      Collection Extension Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QueueHandler.html">QueueHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FutureResult.html">FutureResult</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/EventLoop.html">EventLoop</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/EventLoopFuture.html">EventLoopFuture</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Future.html">Future</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Promise.html">Promise</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Worker.html">Worker</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:5Async7flatMap2to___3NIO15EventLoopFutureCyq0_Gq0_m_AFyxGAFyq_GAGx_q_tKctr1_lF">flatMap(to:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:5Async7flatMap2to____3NIO15EventLoopFutureCyq1_Gq1_m_AFyxGAFyq_GAFyq0_GAGx_q_q0_tKctr2_lF">flatMap(to:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:5Async7flatMap2to_____3NIO15EventLoopFutureCyq2_Gq2_m_AFyxGAFyq_GAFyq0_GAFyq1_GAGx_q_q0_q1_tKctr3_lF">flatMap(to:_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:5Async7flatMap2to______3NIO15EventLoopFutureCyq3_Gq3_m_AFyxGAFyq_GAFyq0_GAFyq1_GAFyq2_GAGx_q_q0_q1_q2_tKctr4_lF">flatMap(to:_:_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:5Async3map2to___3NIO15EventLoopFutureCyq0_Gq0_m_AFyxGAFyq_Gq0_x_q_tKctr1_lF">map(to:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:5Async3map2to____3NIO15EventLoopFutureCyq1_Gq1_m_AFyxGAFyq_GAFyq0_Gq1_x_q_q0_tKctr2_lF">map(to:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:5Async3map2to_____3NIO15EventLoopFutureCyq2_Gq2_m_AFyxGAFyq_GAFyq0_GAFyq1_Gq2_x_q_q0_q1_tKctr3_lF">map(to:_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:5Async3map2to______3NIO15EventLoopFutureCyq3_Gq3_m_AFyxGAFyq_GAFyq0_GAFyq1_GAFyq2_Gq3_x_q_q0_q1_q2_tKctr4_lF">map(to:_:_:_:_:_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BasicWorker.html">BasicWorker</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FutureType.html">FutureType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Async6Futurea">Future</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Async20FutureResultCallbacka">FutureResultCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Async10LazyFuturea">LazyFuture</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Async7Promisea">Promise</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:5Async6Workera">Worker</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Collection</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Collection</span> <span class="p">:</span> <span class="kt">Sequence</span></code></pre>
+
+                </div>
+              </div>
+            
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5AsyncE3map2to2on_3NIO15EventLoopFutureCyqd_0_Gqd_0_m_AE0fG5Group_pqd_0_Sayqd__GKctAGyqd__G7ElementRtzr0_lF"></a>
+                    <a name="//apple_ref/swift/Method/map(to:on:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5AsyncE3map2to2on_3NIO15EventLoopFutureCyqd_0_Gqd_0_m_AE0fG5Group_pqd_0_Sayqd__GKctAGyqd__G7ElementRtzr0_lF">map(to:on:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maps a collection of same-type <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code>s.</p>
+
+<p>See <code>Future.map</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">S</span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Element</span> <span class="o">==</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Collection+Future.swift#L5-L7">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5AsyncE7flatMap2to2on_3NIO15EventLoopFutureCyqd_0_Gqd_0_m_AE0gH5Group_pAHSayqd__GKctAGyqd__G7ElementRtzr0_lF"></a>
+                    <a name="//apple_ref/swift/Method/flatMap(to:on:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5AsyncE7flatMap2to2on_3NIO15EventLoopFutureCyqd_0_Gqd_0_m_AE0gH5Group_pAHSayqd__GKctAGyqd__G7ElementRtzr0_lF">flatMap(to:on:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maps a collection of same-type <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code>s.</p>
+
+<p>See <code>Future.flatMap</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">S</span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Element</span> <span class="o">==</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Collection+Future.swift#L12-L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5Async3NIO15EventLoopFutureCyytG7ElementRtzrlE3map2to2on_ADyqd__Gqd__m_AB0cD5Group_pqd__yKctlF"></a>
+                    <a name="//apple_ref/swift/Method/map(to:on:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5Async3NIO15EventLoopFutureCyytG7ElementRtzrlE3map2to2on_ADyqd__Gqd__m_AB0cD5Group_pqd__yKctlF">map(to:on:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maps a collection of void <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code>s.</p>
+
+<p>See <code>Future.map</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Collection+Future.swift#L21-L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5Async3NIO15EventLoopFutureCyytG7ElementRtzrlE7flatMap2to2on_ADyqd__Gqd__m_AB0cD5Group_pAKyKctlF"></a>
+                    <a name="//apple_ref/swift/Method/flatMap(to:on:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5Async3NIO15EventLoopFutureCyytG7ElementRtzrlE7flatMap2to2on_ADyqd__Gqd__m_AB0cD5Group_pAKyKctlF">flatMap(to:on:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maps a collection of void <code><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></code>s.</p>
+
+<p>See <code>Future.flatMap</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Collection+Future.swift#L30-L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5AsyncE2do2on_3NIO15EventLoopFutureCySayqd__GGAD0eF5Group_p_yAGctAFyqd__G7ElementRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/do(on:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5AsyncE2do2on_3NIO15EventLoopFutureCySayqd__GGAD0eF5Group_p_yAGctAFyqd__G7ElementRtzlF">do(on:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a callback for handling this <code>[Future]</code>&lsquo;s result when it becomes available.</p>
+<pre class="highlight swift"><code><span class="n">futureStrings</span><span class="o">.</span><span class="k">do</span> <span class="p">{</span> <span class="n">strings</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"oops: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Don&rsquo;t forget to use <code>catch</code> to handle the error case.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">do</span><span class="p">`</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt">T</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Element</span> <span class="o">==</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Future+DoCatch.swift#L61-L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5AsyncE5catch2on_3NIO15EventLoopFutureCySayqd__GGAD0eF5Group_p_ys5Error_pctAFyqd__G7ElementRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/catch(on:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5AsyncE5catch2on_3NIO15EventLoopFutureCySayqd__GGAD0eF5Group_p_ys5Error_pctAFyqd__G7ElementRtzlF">catch(on:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a callback for handling this <code>[Future]</code>&lsquo;s result if an error occurs.</p>
+<pre class="highlight swift"><code><span class="n">futureStrings</span><span class="o">.</span><span class="k">do</span> <span class="p">{</span> <span class="n">strings</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"oops: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Will <em>only</em> be executed if an error occurs. Successful results will not call this handler.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">catch</span><span class="p">`</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt">T</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Element</span> <span class="o">==</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Future+DoCatch.swift#L75-L77">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5AsyncE6always2on_3NIO15EventLoopFutureCySayqd__GGAD0eF5Group_p_yyctAFyqd__G7ElementRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/always(on:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5AsyncE6always2on_3NIO15EventLoopFutureCySayqd__GGAD0eF5Group_p_yyctAFyqd__G7ElementRtzlF">always(on:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a handler to be asynchronously executed on completion of these futures.</p>
+<pre class="highlight swift"><code><span class="n">futureStrings</span><span class="o">.</span><span class="k">do</span> <span class="p">{</span> <span class="n">strings</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"oops: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="n">always</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"done"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Will be executed on both success and failure, but will not receive any input.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">always</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">,</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt">T</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Element</span> <span class="o">==</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Future+DoCatch.swift#L92-L94">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5AsyncE11syncFlatten2on3NIO15EventLoopFutureCySayqd__GGAD0fG5Group_p_tAFyqd__GyKc7ElementRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/syncFlatten(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5AsyncE11syncFlatten2on3NIO15EventLoopFutureCySayqd__GGAD0fG5Group_p_tAFyqd__GyKc7ElementRtzlF">syncFlatten(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flattens an array of lazy futures into a future with an array of results.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    each subsequent future will wait for the previous to complete before starting.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">syncFlatten</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt">T</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Future+Flatten.swift#L9-L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5Async3NIO15EventLoopFutureCyytGyKc7ElementRtzrlE11syncFlatten2onAeB0cD5Group_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/syncFlatten(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5Async3NIO15EventLoopFutureCyytGyKc7ElementRtzrlE11syncFlatten2onAeB0cD5Group_p_tF">syncFlatten(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flattens an array of lazy void futures into a single void future.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    each subsequent future will wait for the previous to complete before starting.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">syncFlatten</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Future+Flatten.swift#L46-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5AsyncE7flatten2on3NIO15EventLoopFutureCySayqd__GGAD0eF5Group_p_tAFyqd__G7ElementRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/flatten(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5AsyncE7flatten2on3NIO15EventLoopFutureCySayqd__GGAD0eF5Group_p_tAFyqd__G7ElementRtzlF">flatten(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flattens an array of futures into a future with an array of results.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    the order of the results will match the order of the futures in the input array.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">flatten</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt">T</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Future+Flatten.swift#L55-L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl5Async3NIO15EventLoopFutureCyytG7ElementRtzrlE7flatten2onAeB0cD5Group_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/flatten(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl5Async3NIO15EventLoopFutureCyytG7ElementRtzrlE7flatten2onAeB0cD5Group_p_tF">flatten(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flattens an array of void futures into a single one.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Workera">Worker</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:5Async6Futurea">Future</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/master/Sources/Async/Future+Flatten.swift#L62-L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

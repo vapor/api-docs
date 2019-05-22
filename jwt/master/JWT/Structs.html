@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Structures  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
+
+    <a title="Structures  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          JWT Docs
+        </a>
+         (97% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/jwt">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fjwt%2Fmaster%2FJWT%2Fdocsets%2FJWT%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">JWT Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Structures  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/JWTSigner.html">JWTSigner</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/JWTSigners.html">JWTSigners</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/JWTAlgorithm.html">JWTAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/JWTClaim.html">JWTClaim</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/JWTPayload.html">JWTPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/JWTUnixEpochClaim.html">JWTUnixEpochClaim</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AudienceClaim.html">AudienceClaim</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CustomJWTAlgorithm.html">CustomJWTAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ExpirationClaim.html">ExpirationClaim</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/IDClaim.html">IDClaim</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/IssuedAtClaim.html">IssuedAtClaim</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/IssuerClaim.html">IssuerClaim</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/JWT.html">JWT</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/JWTError.html">JWTError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/JWTHeader.html">JWTHeader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/NotBeforeClaim.html">NotBeforeClaim</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SubjectClaim.html">SubjectClaim</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT15ExpirationClaimV"></a>
+                    <a name="//apple_ref/swift/Struct/ExpirationClaim" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT15ExpirationClaimV">ExpirationClaim</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <q>exp</q> (expiration time) claim identifies the expiration time on
+or after which the JWT MUST NOT be accepted for processing.  The
+processing of the <q>exp</q> claim requires that the current date/time
+MUST be before the expiration date/time listed in the <q>exp</q> claim.
+Implementers MAY provide for some small leeway, usually no more than
+a few minutes, to account for clock skew.  Its value MUST be a number
+containing a NumericDate value.  Use of this claim is OPTIONAL.</p>
+
+                        <a href="Structs/ExpirationClaim.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExpirationClaim</span> <span class="p">:</span> <span class="kt"><a href="Protocols/JWTUnixEpochClaim.html">JWTUnixEpochClaim</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTClaims.swift#L92-L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT14NotBeforeClaimV"></a>
+                    <a name="//apple_ref/swift/Struct/NotBeforeClaim" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT14NotBeforeClaimV">NotBeforeClaim</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <q>nbf</q> (not before) claim identifies the time before which the JWT
+MUST NOT be accepted for processing.  The processing of the <q>nbf</q>
+claim requires that the current date/time MUST be after or equal to
+the not-before date/time listed in the <q>nbf</q> claim.  Implementers MAY
+provide for some small leeway, usually no more than a few minutes, to
+account for clock skew.  Its value MUST be a number containing a
+NumericDate value.  Use of this claim is OPTIONAL.</p>
+
+                        <a href="Structs/NotBeforeClaim.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NotBeforeClaim</span> <span class="p">:</span> <span class="kt"><a href="Protocols/JWTUnixEpochClaim.html">JWTUnixEpochClaim</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTClaims.swift#L117-L133">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT11IssuerClaimV"></a>
+                    <a name="//apple_ref/swift/Struct/IssuerClaim" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT11IssuerClaimV">IssuerClaim</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <q>iss</q> (issuer) claim identifies the principal that issued the
+JWT.  The processing of this claim is generally application specific.
+The <q>iss</q> value is a case-sensitive string containing a StringOrURI
+value.  Use of this claim is OPTIONAL.</p>
+
+                        <a href="Structs/IssuerClaim.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">IssuerClaim</span> <span class="p">:</span> <span class="kt"><a href="Protocols/JWTClaim.html">JWTClaim</a></span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTClaims.swift#L5-L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT12SubjectClaimV"></a>
+                    <a name="//apple_ref/swift/Struct/SubjectClaim" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT12SubjectClaimV">SubjectClaim</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <q>sub</q> (subject) claim identifies the principal that is the
+subject of the JWT.  The claims in a JWT are normally statements
+about the subject.  The subject value MUST either be scoped to be
+locally unique in the context of the issuer or be globally unique.
+The processing of this claim is generally application specific.  The
+<q>sub</q> value is a case-sensitive string containing a StringOrURI
+value.  Use of this claim is OPTIONAL.</p>
+
+                        <a href="Structs/SubjectClaim.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SubjectClaim</span> <span class="p">:</span> <span class="kt"><a href="Protocols/JWTClaim.html">JWTClaim</a></span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTClaims.swift#L22-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT13AudienceClaimV"></a>
+                    <a name="//apple_ref/swift/Struct/AudienceClaim" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT13AudienceClaimV">AudienceClaim</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <q>aud</q> (audience) claim identifies the recipients that the JWT is
+intended for.  Each principal intended to process the JWT MUST
+identify itself with a value in the audience claim.  If the principal
+processing the claim does not identify itself with a value in the
+<q>aud</q> claim when this claim is present, then the JWT MUST be
+rejected.  In the general case, the <q>aud</q> value is an array of case-
+sensitive strings, each containing a StringOrURI value.  In the
+special case when the JWT has one audience, the <q>aud</q> value MAY be a
+single case-sensitive string containing a StringOrURI value.  The
+interpretation of audience values is generally application specific.
+Use of this claim is OPTIONAL.</p>
+
+                        <a href="Structs/AudienceClaim.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AudienceClaim</span> <span class="p">:</span> <span class="kt"><a href="Protocols/JWTClaim.html">JWTClaim</a></span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTClaims.swift#L43-L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT7IDClaimV"></a>
+                    <a name="//apple_ref/swift/Struct/IDClaim" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT7IDClaimV">IDClaim</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <q>jti</q> (JWT ID) claim provides a unique identifier for the JWT.
+The identifier value MUST be assigned in a manner that ensures that
+there is a negligible probability that the same value will be
+accidentally assigned to a different data object; if the application
+uses multiple issuers, collisions MUST be prevented among values
+produced by different issuers as well.  The <q>jti</q> claim can be used
+to prevent the JWT from being replayed.  The <q>jti</q> value is a case-
+sensitive string.  Use of this claim is OPTIONAL.</p>
+
+                        <a href="Structs/IDClaim.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">IDClaim</span> <span class="p">:</span> <span class="kt"><a href="Protocols/JWTClaim.html">JWTClaim</a></span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTClaims.swift#L61-L69">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT13IssuedAtClaimV"></a>
+                    <a name="//apple_ref/swift/Struct/IssuedAtClaim" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT13IssuedAtClaimV">IssuedAtClaim</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <q>iat</q> (issued at) claim identifies the time at which the JWT was
+issued.  This claim can be used to determine the age of the JWT.  Its
+value MUST be a number containing a NumericDate value.  Use of this
+claim is OPTIONAL.</p>
+
+                        <a href="Structs/IssuedAtClaim.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">IssuedAtClaim</span> <span class="p">:</span> <span class="kt"><a href="Protocols/JWTUnixEpochClaim.html">JWTUnixEpochClaim</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTClaims.swift#L75-L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWTAAV"></a>
+                    <a name="//apple_ref/swift/Struct/JWT" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWTAAV">JWT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A JSON Web Token with a generic, codable payload.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">jwt</span> <span class="o">=</span> <span class="kt">JWT</span><span class="p">(</span><span class="nv">payload</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try</span> <span class="n">jwt</span><span class="o">.</span><span class="nf">sign</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+</code></pre>
+
+<p>Learn more at <a href="https://jwt.io">https://jwt.io</a>.
+Read specification (RFC 7519) <a href="https://tools.ietf.org/html/rfc7519">https://tools.ietf.org/html/rfc7519</a>.</p>
+
+                        <a href="Structs/JWT.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">JWT</span><span class="o">&lt;</span><span class="kt">Payload</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Payload</span> <span class="p">:</span> <span class="kt"><a href="Protocols/JWTPayload.html">JWTPayload</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWT.swift#L10-L128">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT18CustomJWTAlgorithmV"></a>
+                    <a name="//apple_ref/swift/Struct/CustomJWTAlgorithm" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT18CustomJWTAlgorithmV">CustomJWTAlgorithm</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience struct for <code><a href="Protocols/JWTAlgorithm.html">JWTAlgorithm</a></code> conformance.</p>
+
+                        <a href="Structs/CustomJWTAlgorithm.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CustomJWTAlgorithm</span> <span class="p">:</span> <span class="kt"><a href="Protocols/JWTAlgorithm.html">JWTAlgorithm</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTAlgorithm.swift#L60-L90">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT8JWTErrorV"></a>
+                    <a name="//apple_ref/swift/Struct/JWTError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT8JWTErrorV">JWTError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Errors that can be thrown while working with JWT.</p>
+
+                        <a href="Structs/JWTError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">JWTError</span> <span class="p">:</span> <span class="kt">Debuggable</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTError.swift#L4-L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3JWT9JWTHeaderV"></a>
+                    <a name="//apple_ref/swift/Struct/JWTHeader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3JWT9JWTHeaderV">JWTHeader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The header (details) used for signing and processing the JWT.</p>
+
+                        <a href="Structs/JWTHeader.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">JWTHeader</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/jwt/tree/master/Sources/JWT/JWTHeader.swift#L2-L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

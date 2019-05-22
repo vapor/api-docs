@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PostgreSQLDatabase Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Extension/PostgreSQLDatabase" class="dashAnchor"></a>
+
+    <a title="PostgreSQLDatabase Extension Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          FluentPostgreSQL Docs
+        </a>
+         (41% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/fluent-postgresql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2Dpostgresql%2F1%2E0%2E0%2Drc%2E4%2E1%2FFluentPostgreSQL%2Fdocsets%2FFluentPostgreSQL%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">FluentPostgreSQL Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      PostgreSQLDatabase Extension Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FluentPostgreSQLProvider.html">FluentPostgreSQLProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FluentPostgreSQLQueryStatement.html">FluentPostgreSQLQueryStatement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FluentPostgreSQLSchemaStatement.html">FluentPostgreSQLSchemaStatement</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/PostgreSQLDatabase.html">PostgreSQLDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/QueryBuilder.html">QueryBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B12SQLArrayTypeP">PostgreSQLArrayType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLEnum.html">PostgreSQLEnum</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B11SQLEnumTypeP">PostgreSQLEnumType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B11SQLJSONTypeP">PostgreSQLJSONType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B12SQLMigrationP">PostgreSQLMigration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLModel.html">PostgreSQLModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B8SQLPivotP">PostgreSQLPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLStringModel.html">PostgreSQLStringModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B14SQLStringPivotP">PostgreSQLStringPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B7SQLTypeP">PostgreSQLType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLUUIDModel.html">PostgreSQLUUIDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:16FluentPostgreSQL0B12SQLUUIDPivotP">PostgreSQLUUIDPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/_PostgreSQLModel.html">_PostgreSQLModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentPostgreSQLQuery.html">FluentPostgreSQLQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentPostgreSQLSchema.html">FluentPostgreSQLSchema</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16FluentPostgreSQL0B28SQLColumnStaticRepresentablea">PostgreSQLColumnStaticRepresentable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>PostgreSQLDatabase</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">PostgreSQLDatabase</span> <span class="p">:</span> <span class="kt">Database</span><span class="p">,</span> <span class="kt">LogSupporting</span></code></pre>
+
+                </div>
+              </div>
+            
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E9QueryJoina"></a>
+                    <a name="//apple_ref/swift/Alias/QueryJoin" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E9QueryJoina">QueryJoin</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryJoin</span> <span class="o">=</span> <span class="kt">PostgreSQLJoin</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+JoinSupporting.swift#L3">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E15QueryJoinMethoda"></a>
+                    <a name="//apple_ref/swift/Alias/QueryJoinMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E15QueryJoinMethoda">QueryJoinMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryJoinMethod</span> <span class="o">=</span> <span class="kt">PostgreSQLJoinMethod</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+JoinSupporting.swift#L6">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E5Querya"></a>
+                    <a name="//apple_ref/swift/Alias/Query" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E5Querya">Query</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Query</span> <span class="o">=</span> <span class="kt"><a href="../Structs/FluentPostgreSQLQuery.html">FluentPostgreSQLQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L4">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E6Outputa"></a>
+                    <a name="//apple_ref/swift/Alias/Output" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E6Outputa">Output</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Output</span> <span class="o">=</span> <span class="p">[</span><span class="kt">PostgreSQLColumn</span> <span class="p">:</span> <span class="kt">PostgreSQLData</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L7">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E11QueryActiona"></a>
+                    <a name="//apple_ref/swift/Alias/QueryAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E11QueryActiona">QueryAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryAction</span> <span class="o">=</span> <span class="kt"><a href="../Enums/FluentPostgreSQLQueryStatement.html">FluentPostgreSQLQueryStatement</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E14QueryAggregatea"></a>
+                    <a name="//apple_ref/swift/Alias/QueryAggregate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E14QueryAggregatea">QueryAggregate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryAggregate</span> <span class="o">=</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E9QueryDataa"></a>
+                    <a name="//apple_ref/swift/Alias/QueryData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E9QueryDataa">QueryData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryData</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">PostgreSQLExpression</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E10QueryFielda"></a>
+                    <a name="//apple_ref/swift/Alias/QueryField" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E10QueryFielda">QueryField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryField</span> <span class="o">=</span> <span class="kt">PostgreSQLColumnIdentifier</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E17QueryFilterMethoda"></a>
+                    <a name="//apple_ref/swift/Alias/QueryFilterMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E17QueryFilterMethoda">QueryFilterMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryFilterMethod</span> <span class="o">=</span> <span class="kt">PostgreSQLBinaryOperator</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E16QueryFilterValuea"></a>
+                    <a name="//apple_ref/swift/Alias/QueryFilterValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E16QueryFilterValuea">QueryFilterValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryFilterValue</span> <span class="o">=</span> <span class="kt">PostgreSQLExpression</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E11QueryFiltera"></a>
+                    <a name="//apple_ref/swift/Alias/QueryFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E11QueryFiltera">QueryFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryFilter</span> <span class="o">=</span> <span class="kt">PostgreSQLExpression</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E19QueryFilterRelationa"></a>
+                    <a name="//apple_ref/swift/Alias/QueryFilterRelation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E19QueryFilterRelationa">QueryFilterRelation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryFilterRelation</span> <span class="o">=</span> <span class="kt">PostgreSQLBinaryOperator</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E8QueryKeya"></a>
+                    <a name="//apple_ref/swift/Alias/QueryKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E8QueryKeya">QueryKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QueryKey</span> <span class="o">=</span> <span class="kt">PostgreSQLSelectExpression</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E9QuerySorta"></a>
+                    <a name="//apple_ref/swift/Alias/QuerySort" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E9QuerySorta">QuerySort</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QuerySort</span> <span class="o">=</span> <span class="kt">PostgreSQLOrderBy</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E18QuerySortDirectiona"></a>
+                    <a name="//apple_ref/swift/Alias/QuerySortDirection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E18QuerySortDirectiona">QuerySortDirection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QuerySortDirection</span> <span class="o">=</span> <span class="kt">PostgreSQLDirection</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E12queryExecute_2on4into3NIO15EventLoopFutureCyytGAD0dA8SQLQueryV_AA0A13SQLConnectionCySDyAA0A9SQLColumnVAA0A7SQLDataVG_AOtKctFZ"></a>
+                    <a name="//apple_ref/swift/Method/queryExecute(_:on:into:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E12queryExecute_2on4into3NIO15EventLoopFutureCyytGAD0dA8SQLQueryV_AA0A13SQLConnectionCySDyAA0A9SQLColumnVAA0A7SQLDataVG_AOtKctFZ">queryExecute(_:on:into:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDatabase</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">queryExecute</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">fluent</span><span class="p">:</span> <span class="kt"><a href="../Structs/FluentPostgreSQLQuery.html">FluentPostgreSQLQuery</a></span><span class="p">,</span>
+    <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">,</span>
+    <span class="n">into</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">PostgreSQLColumn</span><span class="p">:</span> <span class="kt">PostgreSQLData</span><span class="p">],</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">()</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L43-L96">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E10modelEvent5event0E02on3NIO0F10LoopFutureCyxG0D005ModelF0O_xAA0A13SQLConnectionCtAM0L0RzAC8DatabaseRtzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/modelEvent(event:model:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E10modelEvent5event0E02on3NIO0F10LoopFutureCyxG0D005ModelF0O_xAA0A13SQLConnectionCtAM0L0RzAC8DatabaseRtzlFZ">modelEvent(event:model:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>QuerySupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">modelEvent</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">event</span><span class="p">:</span> <span class="kt">ModelEvent</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">M</span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">PostgreSQLDatabase</span> <span class="o">==</span> <span class="kt">M</span><span class="o">.</span><span class="kt">Database</span><span class="p">,</span> <span class="kt">M</span><span class="p">:</span> <span class="kt">Model</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+QuerySupporting.swift#L103-L117">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E32normalizeSQLConstraintIdentifieryS2SFZ"></a>
+                    <a name="//apple_ref/swift/Method/normalizeSQLConstraintIdentifier(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E32normalizeSQLConstraintIdentifieryS2SFZ">normalizeSQLConstraintIdentifier(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLConstraintIdentifierNormalizer</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">normalizeSQLConstraintIdentifier</span><span class="p">(</span><span class="n">_</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L3-L5">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E6Schemaa"></a>
+                    <a name="//apple_ref/swift/Alias/Schema" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E6Schemaa">Schema</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Schema</span> <span class="o">=</span> <span class="kt"><a href="../Structs/FluentPostgreSQLSchema.html">FluentPostgreSQLSchema</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E12SchemaActiona"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E12SchemaActiona">SchemaAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaAction</span> <span class="o">=</span> <span class="kt"><a href="../Enums/FluentPostgreSQLSchemaStatement.html">FluentPostgreSQLSchemaStatement</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E11SchemaFielda"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaField" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E11SchemaFielda">SchemaField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaField</span> <span class="o">=</span> <span class="kt">PostgreSQLColumnDefinition</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E15SchemaFieldTypea"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaFieldType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E15SchemaFieldTypea">SchemaFieldType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaFieldType</span> <span class="o">=</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E16SchemaConstrainta"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaConstraint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E16SchemaConstrainta">SchemaConstraint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaConstraint</span> <span class="o">=</span> <span class="kt">PostgreSQLTableConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E21SchemaReferenceActiona"></a>
+                    <a name="//apple_ref/swift/Alias/SchemaReferenceAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E21SchemaReferenceActiona">SchemaReferenceAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SchemaReferenceAction</span> <span class="o">=</span> <span class="kt">PostgreSQLForeignKeyAction</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E13schemaExecute_2on3NIO15EventLoopFutureCyytGAD0dA9SQLSchemaV_AA0A13SQLConnectionCtFZ"></a>
+                    <a name="//apple_ref/swift/Method/schemaExecute(_:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E13schemaExecute_2on3NIO15EventLoopFutureCyytGAD0dA9SQLSchemaV_AA0A13SQLConnectionCtFZ">schemaExecute(_:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">schemaExecute</span><span class="p">(</span><span class="n">_</span> <span class="nv">fluent</span><span class="p">:</span> <span class="kt"><a href="../Structs/FluentPostgreSQLSchema.html">FluentPostgreSQLSchema</a></span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L28-L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E11schemaField3for12isIdentifier_0B026GenericSQLColumnDefinitionVyAH0jkI0VyAH0j8SQLTableI0VyAH0J13SQLIdentifierVGAPGAA0A11SQLDataTypeVAH0jK10ConstraintVyApH0jkQ9AlgorithmOyAH0J13SQLExpressionOyAH0J10SQLLiteralOyAA0A17SQLDefaultLiteralVAA0a7SQLBoolV0OGAA0A7SQLBindVArA0A17SQLBinaryOperatorVAA0A11SQLFunctionVAA0A8SQLQueryOGAA0A12SQLCollationVAA0A20SQLPrimaryKeyDefaultOAH0J13SQLForeignKeyVyAqpH0J19SQLForeignKeyActionOGGGGypXp_SbARtFZ"></a>
+                    <a name="//apple_ref/swift/Method/schemaField(for:isIdentifier:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E11schemaField3for12isIdentifier_0B026GenericSQLColumnDefinitionVyAH0jkI0VyAH0j8SQLTableI0VyAH0J13SQLIdentifierVGAPGAA0A11SQLDataTypeVAH0jK10ConstraintVyApH0jkQ9AlgorithmOyAH0J13SQLExpressionOyAH0J10SQLLiteralOyAA0A17SQLDefaultLiteralVAA0a7SQLBoolV0OGAA0A7SQLBindVArA0A17SQLBinaryOperatorVAA0A11SQLFunctionVAA0A8SQLQueryOGAA0A12SQLCollationVAA0A20SQLPrimaryKeyDefaultOAH0J13SQLForeignKeyVyAqpH0J19SQLForeignKeyActionOGGGGypXp_SbARtFZ">schemaField(for:isIdentifier:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">schemaField</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">isIdentifier</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">PostgreSQLColumnIdentifier</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLColumnDefinition</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L56-L118">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E16enableReferences2on3NIO15EventLoopFutureCyytGAA0A13SQLConnectionC_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/enableReferences(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E16enableReferences2on3NIO15EventLoopFutureCyytGAA0A13SQLConnectionC_tFZ">enableReferences(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">enableReferences</span><span class="p">(</span><span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L121-L124">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E17disableReferences2on3NIO15EventLoopFutureCyytGAA0A13SQLConnectionC_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/disableReferences(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E17disableReferences2on3NIO15EventLoopFutureCyytGAA0A13SQLConnectionC_tFZ">disableReferences(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SchemaSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">disableReferences</span><span class="p">(</span><span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+SchemaSupporting.swift#L127-L131">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E18transactionExecute_2on3NIO15EventLoopFutureCyxGAjA0A13SQLConnectionCKc_ALtlFZ"></a>
+                    <a name="//apple_ref/swift/Method/transactionExecute(_:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E18transactionExecute_2on3NIO15EventLoopFutureCyxGAjA0A13SQLConnectionCKc_ALtlFZ">transactionExecute(_:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>TransactionSupporting</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">transactionExecute</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">transaction</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">on</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLDatabase+TransactionSupporting.swift#L3-L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E6create4enum2on3NIO15EventLoopFutureCyytGxm_AA0A13SQLConnectionCtAD0A7SQLEnumRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/create(enum:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E6create4enum2on3NIO15EventLoopFutureCyytGxm_AA0A13SQLConnectionCtAD0A7SQLEnumRzlFZ">create(enum:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">create</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">enum</span><span class="p">:</span> <span class="kt">E</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PostgreSQLEnum.html">PostgreSQLEnum</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLEnum.swift#L35-L38">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E5alter4enum3add2on3NIO15EventLoopFutureCyytGxm_xAA0A13SQLConnectionCtAD0A7SQLEnumRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/alter(enum:add:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E5alter4enum3add2on3NIO15EventLoopFutureCyytGxm_xAA0A13SQLConnectionCtAD0A7SQLEnumRzlFZ">alter(enum:add:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">alter</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">enum</span><span class="p">:</span> <span class="kt">E</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">add</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PostgreSQLEnum.html">PostgreSQLEnum</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLEnum.swift#L40-L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E4drop4enum2on3NIO15EventLoopFutureCyytGxm_AA0A13SQLConnectionCtAD0A7SQLEnumRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/drop(enum:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDatabaseC06FluentaB0E4drop4enum2on3NIO15EventLoopFutureCyytGxm_AA0A13SQLConnectionCtAD0A7SQLEnumRzlFZ">drop(enum:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">drop</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">enum</span><span class="p">:</span> <span class="kt">E</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">on</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">PostgreSQLConnection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PostgreSQLEnum.html">PostgreSQLEnum</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-postgresql/tree/1.0.0-rc.4.1/Sources/FluentPostgreSQL/PostgreSQLEnum.swift#L44-L46">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

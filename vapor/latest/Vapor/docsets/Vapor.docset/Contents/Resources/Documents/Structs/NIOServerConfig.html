@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E1%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fvapor%2F3%2E3%2E0%2FVapor%2Fdocsets%2FVapor%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -442,7 +442,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L8-L10">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L8-L10">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -450,9 +450,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor15NIOServerConfigV7default8hostname4port7backlog11workerCount11maxBodySize12reuseAddress10tcpNoDelay017webSocketMaxFrameL0ACSS_S4iS2bSitFZ"></a>
-                    <a name="//apple_ref/swift/Method/default(hostname:port:backlog:workerCount:maxBodySize:reuseAddress:tcpNoDelay:webSocketMaxFrameSize:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor15NIOServerConfigV7default8hostname4port7backlog11workerCount11maxBodySize12reuseAddress10tcpNoDelay017webSocketMaxFrameL0ACSS_S4iS2bSitFZ">default(hostname:port:backlog:workerCount:maxBodySize:reuseAddress:tcpNoDelay:webSocketMaxFrameSize:)</a>
+                    <a name="/s:5Vapor15NIOServerConfigV7default8hostname4port7backlog11workerCount11maxBodySize12reuseAddress10tcpNoDelay18supportCompression017webSocketMaxFrameL0ACSS_S4iS3bSitFZ"></a>
+                    <a name="//apple_ref/swift/Method/default(hostname:port:backlog:workerCount:maxBodySize:reuseAddress:tcpNoDelay:supportCompression:webSocketMaxFrameSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor15NIOServerConfigV7default8hostname4port7backlog11workerCount11maxBodySize12reuseAddress10tcpNoDelay18supportCompression017webSocketMaxFrameL0ACSS_S4iS3bSitFZ">default(hostname:port:backlog:workerCount:maxBodySize:reuseAddress:tcpNoDelay:supportCompression:webSocketMaxFrameSize:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -475,6 +475,7 @@
     <span class="nv">maxBodySize</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1_000_000</span><span class="p">,</span>
     <span class="nv">reuseAddress</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nv">tcpNoDelay</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nv">supportCompression</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
     <span class="nv">webSocketMaxFrameSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">14</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NIOServerConfig</span></code></pre>
 
@@ -573,6 +574,18 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>supportCompression</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>When <code>true</code>, HTTP server will support gzip and deflate</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>webSocketMaxFrameSize</em>
                                 </code>
                               </td>
@@ -586,7 +599,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L25-L45">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L26-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -616,7 +629,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L48">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -646,7 +659,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L51">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -676,7 +689,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L54">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -707,7 +720,7 @@ Should be equal to the number of logical cores.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L58">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L61">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -737,7 +750,7 @@ Should be equal to the number of logical cores.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L61">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -767,7 +780,7 @@ Should be equal to the number of logical cores.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L64">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -797,7 +810,37 @@ Should be equal to the number of logical cores.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L67">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor15NIOServerConfigV18supportCompressionSbvp"></a>
+                    <a name="//apple_ref/swift/Property/supportCompression" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor15NIOServerConfigV18supportCompressionSbvp">supportCompression</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When <code>true</code>, HTTP server will support gzip and deflate compression.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">supportCompression</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -827,7 +870,7 @@ Should be equal to the number of logical cores.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L70">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -835,9 +878,9 @@ Should be equal to the number of logical cores.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor15NIOServerConfigV8hostname4port7backlog11workerCount11maxBodySize12reuseAddress10tcpNoDelay017webSocketMaxFrameK0ACSS_S4iS2bSitcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(hostname:port:backlog:workerCount:maxBodySize:reuseAddress:tcpNoDelay:webSocketMaxFrameSize:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor15NIOServerConfigV8hostname4port7backlog11workerCount11maxBodySize12reuseAddress10tcpNoDelay017webSocketMaxFrameK0ACSS_S4iS2bSitcfc">init(hostname:port:backlog:workerCount:maxBodySize:reuseAddress:tcpNoDelay:webSocketMaxFrameSize:)</a>
+                    <a name="/s:5Vapor15NIOServerConfigV8hostname4port7backlog11workerCount11maxBodySize12reuseAddress10tcpNoDelay18supportCompression017webSocketMaxFrameK0ACSS_S4iS3bSitcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(hostname:port:backlog:workerCount:maxBodySize:reuseAddress:tcpNoDelay:supportCompression:webSocketMaxFrameSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor15NIOServerConfigV8hostname4port7backlog11workerCount11maxBodySize12reuseAddress10tcpNoDelay18supportCompression017webSocketMaxFrameK0ACSS_S4iS3bSitcfc">init(hostname:port:backlog:workerCount:maxBodySize:reuseAddress:tcpNoDelay:supportCompression:webSocketMaxFrameSize:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -860,13 +903,14 @@ Should be equal to the number of logical cores.</p>
     <span class="nv">maxBodySize</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
     <span class="nv">reuseAddress</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
     <span class="nv">tcpNoDelay</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+    <span class="nv">supportCompression</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
     <span class="nv">webSocketMaxFrameSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">14</span>
 <span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/3.1.0/Sources/Vapor/Server/NIOServerConfig.swift#L73-L91">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/3.3.0/Sources/Vapor/Server/NIOServerConfig.swift#L79-L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -879,8 +923,8 @@ Should be equal to the number of logical cores.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-10-17)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

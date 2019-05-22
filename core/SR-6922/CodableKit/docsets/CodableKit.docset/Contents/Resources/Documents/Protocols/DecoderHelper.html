@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DecoderHelper Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/DecoderHelper" class="dashAnchor"></a>
+
+    <a title="DecoderHelper Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          CodableKit Docs
+        </a>
+         (32% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/core">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2FSR%2D6922%2FCodableKit%2Fdocsets%2FCodableKit%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">CodableKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      DecoderHelper Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CodableDataDecoder.html">CodableDataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CodableDataEncoder.html">CodableDataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CodingPathKeyPreEncoder.html">CodingPathKeyPreEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/EncodableStream.html">EncodableStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/s:10CodableKit07PartialA4DataC">PartialCodableData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/UnsupportedEncodingContainer.html">UnsupportedEncodingContainer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CodableData.html">CodableData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CodableDecodingError.html">CodableDecodingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Either.html">Either</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Integers.html">Integers</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decodable.html">Decodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Future.html">Future</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/KeyedDecodingContainerProtocol.html">KeyedDecodingContainerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/KeyedEncodingContainerProtocol.html">KeyedEncodingContainerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/OutputStream.html">OutputStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SingleValueDecodingContainer.html">SingleValueDecodingContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SingleValueEncodingContainer.html">SingleValueEncodingContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UnkeyedDecodingContainer.html">UnkeyedDecodingContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UnkeyedEncodingContainer.html">UnkeyedEncodingContainer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyKeyStringDecodable.html">AnyKeyStringDecodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BasicKeyRepresentable.html">BasicKeyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DecoderHelper.html">DecoderHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FutureEncoder.html">FutureEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KeyStringDecodable.html">KeyStringDecodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KeyedDecodingContainerProtocolHelper.html">KeyedDecodingContainerProtocolHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KeyedDecodingHelper.html">KeyedDecodingHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SingleValueDecodingContainerHelper.html">SingleValueDecodingContainerHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/StreamEncoder.html">StreamEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/StringDecodable.html">StringDecodable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BasicKey.html">BasicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CodableError.html">CodableError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CodingKeyProperty.html">CodingKeyProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs.html#/s:10CodableKit24UnsupportedEncodingErrorV">UnsupportedEncodingError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>DecoderHelper</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DecoderHelper</span> <span class="p">:</span> <span class="kt">Decoder</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP5ValueQa"></a>
+                    <a name="//apple_ref/swift/Alias/Value" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Value</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP5KeyedQa"></a>
+                    <a name="//apple_ref/swift/Alias/Keyed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP5KeyedQa">Keyed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Keyed</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP7UnkeyedQa"></a>
+                    <a name="//apple_ref/swift/Alias/Unkeyed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP7UnkeyedQa">Unkeyed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Unkeyed</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6eitherAA6EitherOy5ValueQz5KeyedQz7UnkeyedQzGvp"></a>
+                    <a name="//apple_ref/swift/Property/either" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6eitherAA6EitherOy5ValueQz5KeyedQz7UnkeyedQzGvp">either</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">either</span><span class="p">:</span> <span class="kt"><a href="../Enums/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5KeyedQa">Keyed</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP7UnkeyedQa">Unkeyed</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP13lossyIntegersSbvp"></a>
+                    <a name="//apple_ref/swift/Property/lossyIntegers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP13lossyIntegersSbvp">lossyIntegers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lossyIntegers</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP12lossyStringsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/lossyStrings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP12lossyStringsSbvp">lossyStrings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lossyStrings</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeySS5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeySS5ValueQzKF">decode(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+<p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeySb5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeySb5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeys4Int8V5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeys4Int8V5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int8</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeys5Int16V5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeys5Int16V5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int16</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeys5Int32V5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeys5Int32V5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeys5Int64V5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeys5Int64V5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int64</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeySi5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeySi5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeys5UInt8V5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeys5UInt8V5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeys6UInt16V5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeys6UInt16V5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt16</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeys6UInt32V5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeys6UInt32V5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeys6UInt64V5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeys6UInt64V5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeySu5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeySu5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeySd5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeySd5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decodeySf5ValueQzKF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decodeySf5ValueQzKF">decode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP6decode_4fromqd__qd__m_5ValueQztKSeRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP6decode_4fromqd__qd__m_5ValueQztKSeRd__lF">decode(_:from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">decode</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">from</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP8integers3forAA8IntegersOSg5ValueQz_tKF"></a>
+                    <a name="//apple_ref/swift/Method/integers(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP8integers3forAA8IntegersOSg5ValueQz_tKF">integers(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">integers</span><span class="p">(</span><span class="k">for</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP5keyed13lossyIntegers0F7Stringsx5KeyedQz_S2btKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(keyed:lossyIntegers:lossyStrings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP5keyed13lossyIntegers0F7Stringsx5KeyedQz_S2btKcfc">init(keyed:lossyIntegers:lossyStrings:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">keyed</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5KeyedQa">Keyed</a></span><span class="p">,</span> <span class="nv">lossyIntegers</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">lossyStrings</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP5value13lossyIntegers0F7Stringsx5ValueQz_S2btKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(value:lossyIntegers:lossyStrings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP5value13lossyIntegers0F7Stringsx5ValueQz_S2btKcfc">init(value:lossyIntegers:lossyStrings:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">,</span> <span class="nv">lossyIntegers</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">lossyStrings</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP7unkeyed13lossyIntegers0F7Stringsx7UnkeyedQz_S2btKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(unkeyed:lossyIntegers:lossyStrings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP7unkeyed13lossyIntegers0F7Stringsx7UnkeyedQz_S2btKcfc">init(unkeyed:lossyIntegers:lossyStrings:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">unkeyed</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP7UnkeyedQa">Unkeyed</a></span><span class="p">,</span> <span class="nv">lossyIntegers</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">lossyStrings</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperP3any13lossyIntegers0F7Stringsx5ValueQz_S2btKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(any:lossyIntegers:lossyStrings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperP3any13lossyIntegers0F7Stringsx5ValueQz_S2btKcfc">init(any:lossyIntegers:lossyStrings:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">any</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DecoderHelper.html#/s:10CodableKit13DecoderHelperP5ValueQa">Value</a></span><span class="p">,</span> <span class="nv">lossyIntegers</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">lossyStrings</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyys4Int8VAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyys4Int8VAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int8</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L377-L393">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyys5Int16VAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyys5Int16VAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int16</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L395-L411">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyys5Int32VAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyys5Int32VAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L413-L429">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyys5Int64VAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyys5Int64VAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int64</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L431-L447">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyySiAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyySiAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L449-L465">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyys5UInt8VAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyys5UInt8VAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L467-L483">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyys6UInt16VAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyys6UInt16VAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt16</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L485-L501">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyys6UInt32VAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyys6UInt32VAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L503-L519">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyys6UInt64VAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyys6UInt64VAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L521-L537">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyySuAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyySuAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L539-L555">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyySdAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyySdAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L557-L565">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodableKit13DecoderHelperPAAE11decodeLossyySfAA8IntegersOKF"></a>
+                    <a name="//apple_ref/swift/Method/decodeLossy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodableKit13DecoderHelperPAAE11decodeLossyySfAA8IntegersOKF">decodeLossy(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decodeLossy</span><span class="p">(</span><span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt"><a href="../Enums/Integers.html">Integers</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/SR-6922/Sources/CodableKit/DecoderHelper.swift#L567-L575">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
