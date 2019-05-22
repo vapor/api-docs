@@ -11,7 +11,10 @@ function generate_docs() {
     echo "    🧩 $MODULE"
 
     if [[ $MODULE == "COperatingSystem" ]] || 
-       [[ $MODULE == "Boilerplate" ]]; then
+       [[ $MODULE == "Boilerplate" ]] || 
+       [[ $MODULE == "CCryptoOpenSSL" ]] || 
+       [[ $MODULE == *"Benchmark" ]] || 
+       [[ $MODULE == *"Development" ]]; then
         echo "       skipping module..."
     elif [ -e "$ROOT/$DOCS_PATH/index.html" ] && [ $VERSION != "master" ]; then
         echo "       already exists..."
