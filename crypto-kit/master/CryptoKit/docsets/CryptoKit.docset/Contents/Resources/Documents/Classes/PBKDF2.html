@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PBKDF2 Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/PBKDF2" class="dashAnchor"></a>
+
+    <a title="PBKDF2 Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          CryptoKit Docs
+        </a>
+         (88% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/crypto-kit">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2Dkit%2Fmaster%2FCryptoKit%2Fdocsets%2FCryptoKit%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">CryptoKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      PBKDF2 Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticatedCipher.html">AuthenticatedCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticatedCipher/Algorithm.html">– Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BCryptDigest.html">BCryptDigest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Digest.html">Digest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Digest/Algorithm.html">– Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HMAC.html">HMAC</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PBKDF2.html">PBKDF2</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PBKDF2/KeySize.html">– KeySize</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RSA.html">RSA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URandom.html">URandom</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit9AES256CBCAA6CipherVvp">AES256CBC</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit12AES256CFB128AA6CipherVvp">AES256CFB128</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit9AES256GCMAA19AuthenticatedCipherCvp">AES256GCM</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6BCryptAA0C6DigestCvp">BCrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit3MD4AA6DigestCvp">MD4</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit3MD5AA6DigestCvp">MD5</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit4SHA1AA6DigestCvp">SHA1</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6SHA224AA6DigestCvp">SHA224</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6SHA256AA6DigestCvp">SHA256</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6SHA384AA6DigestCvp">SHA384</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6SHA512AA6DigestCvp">SHA512</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CipherMode.html">CipherMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CryptoData.html">CryptoData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/OTPDigits.html">OTPDigits</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RSAInputFormat.html">RSAInputFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RSAKeyType.html">RSAKeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RSAPadding.html">RSAPadding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataGenerator.html">DataGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Cipher.html">Cipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Cipher/Algorithm.html">– Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CryptoError.html">CryptoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CryptoRandom.html">CryptoRandom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HOTP.html">HOTP</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/OSRandom.html">OSRandom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RSAKey.html">RSAKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RandomGenerator.html">RandomGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/TOTP.html">TOTP</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>PBKDF2</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">PBKDF2</span></code></pre>
+
+                </div>
+              </div>
+            <p>PBKDF2 derives a fixed or custom length key from a password and salt.</p>
+
+<p>It accepts a customizable amount of iterations to increase the algorithm weight and security.</p>
+
+<p>Unlike BCrypt, the salt does not get stored in the final result,
+meaning it needs to be generated and stored manually.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">passwordHasher</span> <span class="o">=</span> <span class="kt">PBKDF2</span><span class="p">(</span><span class="nv">digest</span><span class="p">:</span> <span class="kt">SHA1</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">salt</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">CryptoRandom</span><span class="p">()</span><span class="o">.</span><span class="nf">generateData</span><span class="p">(</span><span class="nv">count</span><span class="p">:</span> <span class="mi">64</span><span class="p">)</span> <span class="c1">// Data</span>
+<span class="k">let</span> <span class="nv">hash</span> <span class="o">=</span> <span class="k">try</span> <span class="n">passwordHasher</span><span class="o">.</span><span class="nf">deriveKey</span><span class="p">(</span><span class="nv">fromPassword</span><span class="p">:</span> <span class="s">"secret"</span><span class="p">,</span> <span class="nv">salt</span><span class="p">:</span> <span class="n">salt</span><span class="p">,</span> <span class="nv">iterations</span><span class="p">:</span> <span class="mi">15_000</span><span class="p">)</span> <span class="c1">// Data</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">hash</span><span class="o">.</span><span class="nf">hexEncodedString</span><span class="p">())</span> <span class="c1">// 8e55fa3015da583bb51b706371aa418afc8a0a44</span>
+</code></pre>
+
+<p>PBKDF2 leans on HMAC for each iteration and can use all hash functions supported in Crypto</p>
+
+<p><a href="https://en.wikipedia.org/wiki/PBKDF2">https://en.wikipedia.org/wiki/PBKDF2</a></p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C7KeySizeO"></a>
+                    <a name="//apple_ref/swift/Enum/KeySize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C7KeySizeO">KeySize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The requested amount of output bytes from the key derivation</p>
+
+<p>In circumstances with low iterations the amount of output bytes may not be met.</p>
+
+<p><code>digest.digestSize * iterations</code> is the amount of bytes stored in PBKDF2&rsquo;s buffer.
+Any data added beyond this limit</p>
+
+                        <a href="../Classes/PBKDF2/KeySize.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeySize</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L25-L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C3MD4ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MD4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C3MD4ACvpZ">MD4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MD4 digest powered key derivation.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/MD4">https://en.wikipedia.org/wiki/MD4</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">MD4</span><span class="p">:</span> <span class="kt">PBKDF2</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C3MD5ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MD5" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C3MD5ACvpZ">MD5</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MD5 digest powered key derivation.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/MD5">https://en.wikipedia.org/wiki/MD5</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">MD5</span><span class="p">:</span> <span class="kt">PBKDF2</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C4SHA1ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/SHA1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C4SHA1ACvpZ">SHA1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SHA-1 digest powered key derivation.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/SHA-1">https://en.wikipedia.org/wiki/SHA-1</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">SHA1</span><span class="p">:</span> <span class="kt">PBKDF2</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C6SHA224ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/SHA224" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C6SHA224ACvpZ">SHA224</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SHA-224 (SHA-2) digest powered key derivation.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/SHA-2">https://en.wikipedia.org/wiki/SHA-2</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">SHA224</span><span class="p">:</span> <span class="kt">PBKDF2</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C6SHA256ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/SHA256" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C6SHA256ACvpZ">SHA256</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SHA-256 (SHA-2) digest powered key derivation.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/SHA-2">https://en.wikipedia.org/wiki/SHA-2</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">SHA256</span><span class="p">:</span> <span class="kt">PBKDF2</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L62">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C6SHA384ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/SHA384" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C6SHA384ACvpZ">SHA384</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SHA-384 (SHA-2) digest powered key derivation.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/SHA-2">https://en.wikipedia.org/wiki/SHA-2</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">SHA384</span><span class="p">:</span> <span class="kt">PBKDF2</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L67">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C6SHA512ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/SHA512" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C6SHA512ACvpZ">SHA512</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SHA-512 (SHA-2) digest powered key derivation.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/SHA-2">https://en.wikipedia.org/wiki/SHA-2</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">SHA512</span><span class="p">:</span> <span class="kt">PBKDF2</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C6digestAcA6DigestC9AlgorithmC_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(digest:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C6digestAcA6DigestC9AlgorithmC_tcfc">init(digest:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new PBKDF2 derivator based on a hashing algorithm</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">digest</span><span class="p">:</span> <span class="kt"><a href="../Classes/Digest.html">Digest</a></span><span class="o">.</span><span class="kt">Algorithm</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L77-L79">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C4hash_4salt10iterations7keySizeAA0A4DataOAI_AIs5Int32VAC03KeyH0OtKF"></a>
+                    <a name="//apple_ref/swift/Method/hash(_:salt:iterations:keySize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C4hash_4salt10iterations7keySizeAA0A4DataOAI_AIs5Int32VAC03KeyH0OtKF">hash(_:salt:iterations:keySize:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Derives a key with up to <code>keySize</code> of bytes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hash</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">password</span><span class="p">:</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span><span class="p">,</span>
+    <span class="nv">salt</span><span class="p">:</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span><span class="p">,</span>
+    <span class="nv">iterations</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span>
+    <span class="nv">keySize</span><span class="p">:</span> <span class="kt"><a href="../Classes/PBKDF2/KeySize.html">KeySize</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">digestSize</span>
+<span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/KDF/PBKDF2.swift#L84-L115">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-29)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

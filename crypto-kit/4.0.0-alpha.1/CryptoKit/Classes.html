@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
+
+    <a title="Classes  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          CryptoKit Docs
+        </a>
+         (88% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/crypto-kit">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2Dkit%2F4%2E0%2E0%2Dalpha%2E1%2FCryptoKit%2Fdocsets%2FCryptoKit%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">CryptoKit Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Classes  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AuthenticatedCipher.html">AuthenticatedCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AuthenticatedCipher/Algorithm.html">– Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BCryptDigest.html">BCryptDigest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Digest.html">Digest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Digest/Algorithm.html">– Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HMAC.html">HMAC</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PBKDF2.html">PBKDF2</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PBKDF2/KeySize.html">– KeySize</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/RSA.html">RSA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/URandom.html">URandom</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit9AES256CBCAA6CipherVvp">AES256CBC</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit12AES256CFB128AA6CipherVvp">AES256CFB128</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit9AES256GCMAA19AuthenticatedCipherCvp">AES256GCM</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit6BCryptAA0C6DigestCvp">BCrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit3MD4AA6DigestCvp">MD4</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit3MD5AA6DigestCvp">MD5</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit4SHA1AA6DigestCvp">SHA1</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit6SHA224AA6DigestCvp">SHA224</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit6SHA256AA6DigestCvp">SHA256</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit6SHA384AA6DigestCvp">SHA384</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:9CryptoKit6SHA512AA6DigestCvp">SHA512</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/CipherMode.html">CipherMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/CryptoData.html">CryptoData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/OTPDigits.html">OTPDigits</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RSAInputFormat.html">RSAInputFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RSAKeyType.html">RSAKeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RSAPadding.html">RSAPadding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DataGenerator.html">DataGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Cipher.html">Cipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Cipher/Algorithm.html">– Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CryptoError.html">CryptoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CryptoRandom.html">CryptoRandom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HOTP.html">HOTP</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/OSRandom.html">OSRandom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RSAKey.html">RSAKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RandomGenerator.html">RandomGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TOTP.html">TOTP</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit12BCryptDigestC"></a>
+                    <a name="//apple_ref/swift/Class/BCryptDigest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit12BCryptDigestC">BCryptDigest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates and verifies BCrypt hashes. Normally you will not need to initialize one of these classes and you will
+use the global <code><a href="Global Variables.html#/s:9CryptoKit6BCryptAA0C6DigestCvp">BCrypt</a></code> convenience instead.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="kt">BCrypt</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">cost</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
+</code></pre>
+
+<p>See <code><a href="Global Variables.html#/s:9CryptoKit6BCryptAA0C6DigestCvp">BCrypt</a></code> for more information.</p>
+
+                        <a href="Classes/BCryptDigest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">BCryptDigest</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/4.0.0-alpha.1/Sources/CryptoKit/BCrypt/BCryptDigest.swift#L9-L209">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit19AuthenticatedCipherC"></a>
+                    <a name="//apple_ref/swift/Class/AuthenticatedCipher" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit19AuthenticatedCipherC">AuthenticatedCipher</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>AuthenticatedCipher supports AEAD-type ciphers. It feels a lot like &lsquo;Cipher&rsquo; except that it supports the
+AEAD tag and related validation.</p>
+
+                        <a href="Classes/AuthenticatedCipher.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">AuthenticatedCipher</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/4.0.0-alpha.1/Sources/CryptoKit/Cipher/AuthenticatedCipher.swift#L15-L121">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Digests"></a>
+                <a name="//apple_ref/swift/Section/Digests" class="dashAnchor"></a>
+                <a href="#/Digests">
+                  <h3 class="section-name">Digests</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6DigestC"></a>
+                    <a name="//apple_ref/swift/Class/Digest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6DigestC">Digest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cryptographic hash functions convert data of arbitrary size to a fixed-size digest.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">digest</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">SHA1</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="s">"hello"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">digest</span><span class="o">.</span><span class="nf">hexEncodedString</span><span class="p">())</span> <span class="c1">// aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d</span>
+</code></pre>
+
+<p>See <code><a href="Classes/HMAC.html">HMAC</a></code> for keyed-hash functions.</p>
+
+<p>Read more about hashing on <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">Wikipedia</a>.</p>
+
+<p>Read more about OpenSSL&rsquo;s <a href="https://www.openssl.org/docs/man1.1.0/crypto/EVP_MD_CTX_free.html">EVP message digest</a>/</p>
+
+                        <a href="Classes/Digest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Digest</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/4.0.0-alpha.1/Sources/CryptoKit/Digest/Digest.swift#L50-L235">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6PBKDF2C"></a>
+                    <a name="//apple_ref/swift/Class/PBKDF2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6PBKDF2C">PBKDF2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>PBKDF2 derives a fixed or custom length key from a password and salt.</p>
+
+<p>It accepts a customizable amount of iterations to increase the algorithm weight and security.</p>
+
+<p>Unlike BCrypt, the salt does not get stored in the final result,
+meaning it needs to be generated and stored manually.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">passwordHasher</span> <span class="o">=</span> <span class="kt">PBKDF2</span><span class="p">(</span><span class="nv">digest</span><span class="p">:</span> <span class="kt">SHA1</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">salt</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">CryptoRandom</span><span class="p">()</span><span class="o">.</span><span class="nf">generateData</span><span class="p">(</span><span class="nv">count</span><span class="p">:</span> <span class="mi">64</span><span class="p">)</span> <span class="c1">// Data</span>
+<span class="k">let</span> <span class="nv">hash</span> <span class="o">=</span> <span class="k">try</span> <span class="n">passwordHasher</span><span class="o">.</span><span class="nf">deriveKey</span><span class="p">(</span><span class="nv">fromPassword</span><span class="p">:</span> <span class="s">"secret"</span><span class="p">,</span> <span class="nv">salt</span><span class="p">:</span> <span class="n">salt</span><span class="p">,</span> <span class="nv">iterations</span><span class="p">:</span> <span class="mi">15_000</span><span class="p">)</span> <span class="c1">// Data</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">hash</span><span class="o">.</span><span class="nf">hexEncodedString</span><span class="p">())</span> <span class="c1">// 8e55fa3015da583bb51b706371aa418afc8a0a44</span>
+</code></pre>
+
+<p>PBKDF2 leans on HMAC for each iteration and can use all hash functions supported in Crypto</p>
+
+<p><a href="https://en.wikipedia.org/wiki/PBKDF2">https://en.wikipedia.org/wiki/PBKDF2</a></p>
+
+                        <a href="Classes/PBKDF2.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">PBKDF2</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/4.0.0-alpha.1/Sources/CryptoKit/KDF/PBKDF2.swift#L18-L116">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit4HMACC"></a>
+                    <a name="//apple_ref/swift/Class/HMAC" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit4HMACC">HMAC</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HMAC is a MAC (message authentication code), i.e. a keyed hash function used for message authentication, which is based on a hash function.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">digest</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">HMAC</span><span class="o">.</span><span class="kt">SHA1</span><span class="o">.</span><span class="nf">authenticate</span><span class="p">(</span><span class="s">"hello"</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"vapor"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">digest</span><span class="o">.</span><span class="nf">hexEncodedString</span><span class="p">())</span> <span class="c1">// bb2a9aabb537902647f3f40bfecb679bf0d7d64b</span>
+</code></pre>
+
+<p>Read more about <a href="https://en.wikipedia.org/wiki/HMAC">HMAC on Wikipedia</a>.</p>
+
+<p>Read more about OpenSSL&rsquo;s <a href="https://www.openssl.org/docs/man1.0.2/crypto/hmac.html">HMAC methods</a></p>
+
+                        <a href="Classes/HMAC.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">HMAC</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/4.0.0-alpha.1/Sources/CryptoKit/MAC/HMAC.swift#L11-L159">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit3RSAC"></a>
+                    <a name="//apple_ref/swift/Class/RSA" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit3RSAC">RSA</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>RSA is an asymmetric cryptographic algorithm for signing and verifying data.</p>
+
+<p>Use <code>sign(_:key:)</code> to create a fixed-size signature for aribtrary plaintext data.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">ciphertext</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">RSA</span><span class="o">.</span><span class="kt">SHA512</span><span class="o">.</span><span class="nf">sign</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="o">.</span><span class="kd">private</span><span class="p">(</span><span class="nv">pem</span><span class="p">:</span> <span class="o">...</span><span class="p">))</span>
+</code></pre>
+
+<p>Use <code>verify(_:signs:key:)</code> to verify that a given signature was created by some plaintext data.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="kt">RSA</span><span class="o">.</span><span class="kt">SHA512</span><span class="o">.</span><span class="nf">verify</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="nv">signs</span><span class="p">:</span> <span class="s">"vapor"</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="o">.</span><span class="nf">public</span><span class="p">(</span><span class="nv">pem</span><span class="p">:</span> <span class="o">...</span><span class="p">))</span>
+</code></pre>
+
+<p>RSA has two key types: public and private. Private keys can sign and verify data. Public keys
+can only verify data.</p>
+
+<p>Read more about RSA on <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">Wikipedia</a>.</p>
+
+                        <a href="Classes/RSA.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">RSA</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/4.0.0-alpha.1/Sources/CryptoKit/RSA/RSA.swift#L17-L210">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit7URandomC"></a>
+                    <a name="//apple_ref/swift/Class/URandom" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit7URandomC">URandom</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>URandom represents a file connection to /dev/urandom on Unix systems.
+<code>/dev/urandom</code> is a cryptographically secure random generator provided by the OS.</p>
+
+                        <a href="Classes/URandom.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">URandom</span> <span class="p">:</span> <span class="kt"><a href="Protocols/DataGenerator.html">DataGenerator</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/4.0.0-alpha.1/Sources/CryptoKit/Random/URandom.swift#L9-L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-29)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

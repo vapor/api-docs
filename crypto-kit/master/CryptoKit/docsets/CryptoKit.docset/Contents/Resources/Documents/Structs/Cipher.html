@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cipher Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/Cipher" class="dashAnchor"></a>
+
+    <a title="Cipher Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          CryptoKit Docs
+        </a>
+         (88% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/crypto-kit">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcrypto%2Dkit%2Fmaster%2FCryptoKit%2Fdocsets%2FCryptoKit%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">CryptoKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      Cipher Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticatedCipher.html">AuthenticatedCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticatedCipher/Algorithm.html">– Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BCryptDigest.html">BCryptDigest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Digest.html">Digest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Digest/Algorithm.html">– Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HMAC.html">HMAC</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PBKDF2.html">PBKDF2</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PBKDF2/KeySize.html">– KeySize</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RSA.html">RSA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URandom.html">URandom</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit9AES256CBCAA6CipherVvp">AES256CBC</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit12AES256CFB128AA6CipherVvp">AES256CFB128</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit9AES256GCMAA19AuthenticatedCipherCvp">AES256GCM</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6BCryptAA0C6DigestCvp">BCrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit3MD4AA6DigestCvp">MD4</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit3MD5AA6DigestCvp">MD5</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit4SHA1AA6DigestCvp">SHA1</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6SHA224AA6DigestCvp">SHA224</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6SHA256AA6DigestCvp">SHA256</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6SHA384AA6DigestCvp">SHA384</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9CryptoKit6SHA512AA6DigestCvp">SHA512</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CipherMode.html">CipherMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CryptoData.html">CryptoData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/OTPDigits.html">OTPDigits</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RSAInputFormat.html">RSAInputFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RSAKeyType.html">RSAKeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RSAPadding.html">RSAPadding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataGenerator.html">DataGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Cipher.html">Cipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Cipher/Algorithm.html">– Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CryptoError.html">CryptoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CryptoRandom.html">CryptoRandom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HOTP.html">HOTP</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/OSRandom.html">OSRandom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RSAKey.html">RSAKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RandomGenerator.html">RandomGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/TOTP.html">TOTP</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Cipher</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Cipher</span></code></pre>
+
+                </div>
+              </div>
+            <p>Cryptographic encryption and decryption functions for converting plaintext to and from ciphertext.</p>
+
+<p>Normally, you will use the global convenience variables for encrypting and decrypting.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">ciphertext</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">AES128</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"passwordpassword"</span><span class="p">)</span>
+<span class="k">try</span> <span class="kt">AES128</span><span class="o">.</span><span class="nf">decrypt</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"passwordpassword"</span><span class="p">)</span><span class="o">.</span><span class="nf">convert</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="c1">// "vapor"</span>
+</code></pre>
+
+<p>You may also create a <code>Cipher</code> manually.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="kt">Cipher</span><span class="p">(</span><span class="nv">algorithm</span><span class="p">:</span> <span class="o">.</span><span class="nf">named</span><span class="p">(</span><span class="s">"aes-128-ecb"</span><span class="p">)</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre>
+
+<p>Read more about <a href="https://en.wikipedia.org/wiki/Encryption">encryption on Wikipedia</a>.</p>
+
+<p>Read more about OpenSSL&rsquo;s <a href="https://www.openssl.org/docs/man1.1.0/crypto/EVP_EncryptInit.html">EVP encryption methods</a>.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6CipherV9AlgorithmV"></a>
+                    <a name="//apple_ref/swift/Struct/Algorithm" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6CipherV9AlgorithmV">Algorithm</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies a cipher algorithm (e.g., AES128-ECB) to be used with a <code><a href="../Structs/Cipher.html">Cipher</a></code>.</p>
+
+<p>Common cipher algorithms are provided as static properties on this class.</p>
+
+<p>There are also static methods for creating <code>CipherAlgorithm</code> such as <code>CipherAlgorithm.named(_:)</code></p>
+
+                        <a href="../Structs/Cipher/Algorithm.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Algorithm</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/Cipher/Cipher.swift#L39-L73">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6CipherV9algorithmA2C9AlgorithmV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(algorithm:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6CipherV9algorithmA2C9AlgorithmV_tcfc">init(algorithm:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>Cipher</code> using the supplied <code>CipherAlgorithm</code>.</p>
+
+<p>You can use the convenience static variables for common algorithms.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="kt">AES128</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre>
+
+<p>You can also use this <code>init(algorithm:)</code> method manually to supply a custom <code>CipherAlgorithm</code>.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="kt">Cipher</span><span class="p">(</span><span class="nv">algorithm</span><span class="p">:</span> <span class="o">.</span><span class="nf">named</span><span class="p">(</span><span class="s">"aes-128-ecb"</span><span class="p">)</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">algorithm</span><span class="p">:</span> <span class="kt"><a href="../Structs/Cipher/Algorithm.html">Algorithm</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/Cipher/Cipher.swift#L88-L90">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6CipherV7encrypt_3key2ivAA0A4DataOAH_A2HSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/encrypt(_:key:iv:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6CipherV7encrypt_3key2ivAA0A4DataOAH_A2HSgtKF">encrypt(_:key:iv:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encrypts the supplied plaintext into ciphertext. This method will call <code>reset(key:iv:mode:)</code>, <code>update(data:into:)</code>,
+and <code>finish(into:)</code> automatically.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Data</span> <span class="c1">// 16-bytes</span>
+<span class="k">let</span> <span class="nv">ciphertext</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">AES128</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">)</span> <span class="c1">/// Encrypted Data</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Structs/CryptoError.html">CryptoError</a></code> if reset, update, or finalization steps fail or if data conversion fails.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span><span class="p">,</span> <span class="nv">iv</span><span class="p">:</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Plaintext data to encrypt.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Cipher key to use for encryption.
+   This key must be an appropriate length for the cipher you are using. See <code>CipherAlgorithm.keySize</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>iv</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional initialization vector to use for encryption.
+  The IV must be an appropriate length for the cipher you are using. See <code>CipherAlgorithm.ivSize</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Encrypted ciphertext.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/Cipher/Cipher.swift#L107-L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CryptoKit6CipherV7decrypt_3key2ivAA0A4DataOAH_A2HSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/decrypt(_:key:iv:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CryptoKit6CipherV7decrypt_3key2ivAA0A4DataOAH_A2HSgtKF">decrypt(_:key:iv:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decrypts the supplied ciphertext back to plaintext. This method will call <code>reset(key:iv:mode:)</code>, <code>update(data:into:)</code>,
+and <code>finish(into:)</code> automatically.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Data</span> <span class="c1">// 16-bytes</span>
+<span class="k">let</span> <span class="nv">ciphertext</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">AES128</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="s">"vapor"</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">)</span>
+<span class="k">try</span> <span class="kt">AES128</span><span class="o">.</span><span class="nf">decrypt</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">)</span> <span class="c1">// "vapor"</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Structs/CryptoError.html">CryptoError</a></code> if reset, update, or finalization steps fail or if data conversion fails.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span><span class="p">,</span> <span class="nv">iv</span><span class="p">:</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/CryptoData.html">CryptoData</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Ciphertext data to decrypt.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Cipher key to use for decryption.
+   This key must be an appropriate length for the cipher you are using. See <code>CipherAlgorithm.keySize</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>iv</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional initialization vector to use for decryption.
+  The IV must be an appropriate length for the cipher you are using. See <code>CipherAlgorithm.ivSize</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Decrypted plaintext.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/crypto-kit/tree/master/Sources/CryptoKit/Cipher/Cipher.swift#L130-L136">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-29)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
