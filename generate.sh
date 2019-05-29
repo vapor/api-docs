@@ -70,7 +70,7 @@ function main() {
         # "nio-postgres"
         # "postgresql"
         # "redis"
-        # "routing"
+        "routing-kit"
         # "service"
         # "sql"
         # "sqlite"
