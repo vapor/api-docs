@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Socket Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+    <script src="../../js/lunr.min.js" defer></script>
+    <script src="../../js/typeahead.jquery.js" defer></script>
+    <script src="../../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/Socket" class="dashAnchor"></a>
+
+    <a title="Socket Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../../index.html">
+          NIOWebSocketClient Docs
+        </a>
+         (36% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/nio-websocket-client">
+            <img class="header-icon" src="../../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fnio%2Dwebsocket%2Dclient%2F1%2E0%2E0%2Dalpha%2E1%2FNIOWebSocketClient%2Fdocsets%2FNIOWebSocketClient%2Exml">
+            <img class="header-icon" src="../../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../../index.html">NIOWebSocketClient Reference</a>
+      <img class="carat" src="../../img/carat.png" />
+      Socket Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/WebSocketClient.html">WebSocketClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/WebSocketClient/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/WebSocketClient/Socket.html">– Socket</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Enums/EventLoopGroupProvider.html">EventLoopGroupProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Enums/WebSocketClientError.html">WebSocketClientError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Socket</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Socket</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents a client connected via WebSocket protocol.
+Use this to receive text/data frames and send responses.</p>
+<pre class="highlight swift"><code> <span class="n">ws</span><span class="o">.</span><span class="n">onText</span> <span class="p">{</span> <span class="n">ws</span><span class="p">,</span> <span class="n">string</span> <span class="k">in</span>
+    <span class="n">ws</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="nf">reversed</span><span class="p">())</span>
+ <span class="p">}</span>
+</code></pre>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C9eventLoop3NIO05EventF0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C9eventLoop3NIO05EventF0_pvp">eventLoop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L13-L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Receive"></a>
+                <a name="//apple_ref/swift/Section/Receive" class="dashAnchor"></a>
+                <a href="#/Receive">
+                  <h3 class="section-name">Receive</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C6onTextyyyAE_SStcF"></a>
+                    <a name="//apple_ref/swift/Method/onText(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C6onTextyyyAE_SStcF">onText(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a callback to this <code>WebSocket</code> to receive text-formatted messages.</p>
+<pre class="highlight swift"><code><span class="n">ws</span><span class="o">.</span><span class="n">onText</span> <span class="p">{</span> <span class="n">ws</span><span class="p">,</span> <span class="n">string</span> <span class="k">in</span>
+    <span class="n">ws</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="nf">reversed</span><span class="p">())</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Use <code><a href="../../Classes/WebSocketClient/Socket.html#/s:18NIOWebSocketClient03WebbC0C0B0C8onBinaryyyyAE_3NIO10ByteBufferVtcF">onBinary(_:)</a></code> to handle binary-formatted messages.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onText</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Socket</span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to accept incoming text-formatted data.
+        This will be called every time the connected client sends text.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L54-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C8onBinaryyyyAE_3NIO10ByteBufferVtcF"></a>
+                    <a name="//apple_ref/swift/Method/onBinary(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C8onBinaryyyyAE_3NIO10ByteBufferVtcF">onBinary(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a callback to this <code>WebSocket</code> to receive binary-formatted messages.</p>
+<pre class="highlight swift"><code><span class="n">ws</span><span class="o">.</span><span class="n">onBinary</span> <span class="p">{</span> <span class="n">ws</span><span class="p">,</span> <span class="n">data</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Use <code><a href="../../Classes/WebSocketClient/Socket.html#/s:18NIOWebSocketClient03WebbC0C0B0C6onTextyyyAE_SStcF">onText(_:)</a></code> to handle text-formatted messages.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onBinary</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Socket</span><span class="p">,</span> <span class="kt">ByteBuffer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to accept incoming binary-formatted data.
+        This will be called every time the connected client sends binary-data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L69-L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C7onErroryyyAE_s0F0_ptcF"></a>
+                    <a name="//apple_ref/swift/Method/onError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C7onErroryyyAE_s0F0_ptcF">onError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a callback to this <code>WebSocket</code> to handle errors.</p>
+<pre class="highlight swift"><code><span class="n">ws</span><span class="o">.</span><span class="n">onError</span> <span class="p">{</span> <span class="n">ws</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onError</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Socket</span><span class="p">,</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to handle error&rsquo;s caught during this connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L81-L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C11onCloseCodeyyy0aB00db5ErrorG0OcF"></a>
+                    <a name="//apple_ref/swift/Method/onCloseCode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C11onCloseCodeyyy0aB00db5ErrorG0OcF">onCloseCode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a callback to this <code>WebSocket</code> to handle incoming close codes.</p>
+<pre class="highlight swift"><code><span class="n">ws</span><span class="o">.</span><span class="n">onCloseCode</span> <span class="p">{</span> <span class="n">closeCode</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">closeCode</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onCloseCode</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">WebSocketErrorCode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to handle received close codes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L93-L95">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Send"></a>
+                <a name="//apple_ref/swift/Section/Send" class="dashAnchor"></a>
+                <a href="#/Send">
+                  <h3 class="section-name">Send</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C4send4text7promiseyx_3NIO16EventLoopPromiseVyytGSgtSlRzSJ7ElementRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/send(text:promise:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C4send4text7promiseyx_3NIO16EventLoopPromiseVyytGSgtSlRzSJ7ElementRtzlF">send(text:promise:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends text-formatted data to the connected client.</p>
+<pre class="highlight swift"><code><span class="n">ws</span><span class="o">.</span><span class="n">onText</span> <span class="p">{</span> <span class="n">ws</span><span class="p">,</span> <span class="n">string</span> <span class="k">in</span>
+    <span class="n">ws</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="nf">reversed</span><span class="p">())</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">send</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="nv">promise</span><span class="p">:</span> <span class="kt">EventLoopPromise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">where</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt">Collection</span><span class="p">,</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Character</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>String</code> to send as text-formatted data to the client.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>promise</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional <code>Promise</code> to complete when the send is finished.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L107-L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C4send6binary7promiseySays5UInt8VG_3NIO16EventLoopPromiseVyytGSgtF"></a>
+                    <a name="//apple_ref/swift/Method/send(binary:promise:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C4send6binary7promiseySays5UInt8VG_3NIO16EventLoopPromiseVyytGSgtF">send(binary:promise:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends binary-formatted data to the connected client.</p>
+<pre class="highlight swift"><code><span class="n">ws</span><span class="o">.</span><span class="n">onText</span> <span class="p">{</span> <span class="n">ws</span><span class="p">,</span> <span class="n">string</span> <span class="k">in</span>
+    <span class="n">ws</span><span class="o">.</span><span class="nf">send</span><span class="p">([</span><span class="mh">0x68</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">])</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">binary</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt8</span><span class="p">],</span> <span class="nv">promise</span><span class="p">:</span> <span class="kt">EventLoopPromise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Data</code> to send as binary-formatted data to the client.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>promise</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional <code>Promise</code> to complete when the send is finished.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L124-L126">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C4send3raw6opcode3fin7promiseySays5UInt8VG_0aB00dB6OpcodeVSb3NIO16EventLoopPromiseVyytGSgtF"></a>
+                    <a name="//apple_ref/swift/Method/send(raw:opcode:fin:promise:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C4send3raw6opcode3fin7promiseySays5UInt8VG_0aB00dB6OpcodeVSb3NIO16EventLoopPromiseVyytGSgtF">send(raw:opcode:fin:promise:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends raw-data to the connected client using the supplied WebSocket opcode.</p>
+<pre class="highlight swift"><code><span class="c1">// client will receive "Hello, world!" as one message</span>
+<span class="n">ws</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="nv">raw</span><span class="p">:</span> <span class="s">"Hello, "</span><span class="p">,</span> <span class="nv">opcode</span><span class="p">:</span> <span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="nv">fin</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ws</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="nv">raw</span><span class="p">:</span> <span class="s">"world"</span><span class="p">,</span> <span class="nv">opcode</span><span class="p">:</span> <span class="o">.</span><span class="n">continuation</span><span class="p">,</span> <span class="nv">fin</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ws</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="nv">raw</span><span class="p">:</span> <span class="s">"!"</span><span class="p">,</span> <span class="nv">opcode</span><span class="p">:</span> <span class="o">.</span><span class="n">continuation</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">raw</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt8</span><span class="p">],</span> <span class="nv">opcode</span><span class="p">:</span> <span class="kt">WebSocketOpcode</span><span class="p">,</span> <span class="nv">fin</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">promise</span><span class="p">:</span> <span class="kt">EventLoopPromise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>LosslessDataConvertible</code> to send to the client.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>opcode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>WebSocketOpcode</code> indicating data format. Usually <code>.text</code> or <code>.binary</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fin</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>false</code>, additional <code>.continuation</code> frames are expected.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>promise</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional <code>Promise</code> to complete when the send is finished.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L140-L144">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C8isClosedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C8isClosedSbvp">isClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>true</code> if the <code>WebSocket</code> has been closed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isClosed</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L147-L149">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C7onClose3NIO15EventLoopFutureCyytGvp"></a>
+                    <a name="//apple_ref/swift/Property/onClose" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C7onClose3NIO15EventLoopFutureCyytGvp">onClose</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>Future</code> that will be completed when the <code>WebSocket</code> closes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onClose</span><span class="p">:</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L152-L154">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C5close4code3NIO15EventLoopFutureCyytG0aB00dB9ErrorCodeOSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/close(code:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C5close4code3NIO15EventLoopFutureCyytG0aB00dB9ErrorCodeOSg_tF">close(code:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">close</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">WebSocketErrorCode</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L156-L160">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NIOWebSocketClient03WebbC0C0B0C5close4code7promisey0aB00dB9ErrorCodeOSg_3NIO16EventLoopPromiseVyytGSgtF"></a>
+                    <a name="//apple_ref/swift/Method/close(code:promise:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NIOWebSocketClient03WebbC0C0B0C5close4code7promisey0aB00dB9ErrorCodeOSg_3NIO16EventLoopPromiseVyytGSgtF">close(code:promise:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">close</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">WebSocketErrorCode</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">promise</span><span class="p">:</span> <span class="kt">EventLoopPromise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/nio-websocket-client/tree/1.0.0-alpha.1/Sources/NIOWebSocketClient/WebSocket.swift#L162-L171">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-30)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

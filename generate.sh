@@ -68,6 +68,7 @@ function main() {
         # "multipart"
         # "mysql"
         # "nio-postgres"
+        "nio-websocket-client"
         # "postgresql"
         # "redis"
         "routing-kit"
