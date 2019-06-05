@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Vapor Docs
         </a>
-         (76% documented)
+         (75% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -81,6 +81,9 @@
                 <a class="nav-group-task-link" href="../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
@@ -88,9 +91,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/FileMiddleware.html">FileMiddleware</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/FoundationClient.html">FoundationClient</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HTTPServer.html">HTTPServer</a>
@@ -202,9 +202,6 @@
                 <a class="nav-group-task-link" href="../Extensions/Float.html">Float</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/HTTPClient.html">HTTPClient</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/HTTPHeaders.html">HTTPHeaders</a>
               </li>
               <li class="nav-group-task">
@@ -241,7 +238,10 @@
                 <a class="nav-group-task-link" href="../Extensions/Thread.html">Thread</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
+                <a class="nav-group-task-link" href="../Extensions/WebSocketClient.html">WebSocketClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/WebSocketClient/Socket.html">– Socket</a>
               </li>
             </ul>
           </li>
@@ -306,9 +306,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/BodyStreamWriter.html">BodyStreamWriter</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/Client.html">Client</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/CodingKeyRepresentable.html">CodingKeyRepresentable</a>
@@ -384,9 +381,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/URLQueryEncoder.html">URLQueryEncoder</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/URLRepresentable.html">URLRepresentable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/UserTokenAuthenticator.html">UserTokenAuthenticator</a>
@@ -523,6 +517,9 @@
                 <a class="nav-group-task-link" href="../Structs/SessionsConfig.html">SessionsConfig</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/URI.html">URI</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/URLEncodedFormDecoder.html">URLEncodedFormDecoder</a>
               </li>
               <li class="nav-group-task">
@@ -584,9 +581,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor15URLQueryEncoderP6encode_2toyqd___10Foundation3URLVztKSERd__lF"></a>
+                    <a name="/s:5Vapor15URLQueryEncoderP6encode_2toyqd___AA3URIVztKSERd__lF"></a>
                     <a name="//apple_ref/swift/Method/encode(_:to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor15URLQueryEncoderP6encode_2toyqd___10Foundation3URLVztKSERd__lF">encode(_:to:)</a>
+                    <a class="token" href="#/s:5Vapor15URLQueryEncoderP6encode_2toyqd___AA3URIVztKSERd__lF">encode(_:to:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -601,7 +598,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">encode</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">encodable</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">URL</span><span class="p">)</span> <span class="k">throws</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">encode</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">encodable</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../Structs/URI.html">URI</a></span><span class="p">)</span> <span class="k">throws</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
 
                         </div>
                       </div>
@@ -619,7 +616,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-31)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

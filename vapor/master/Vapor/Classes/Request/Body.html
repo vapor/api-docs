@@ -23,7 +23,7 @@
         <a class="header-link" href="../../index.html">
           Vapor Docs
         </a>
-         (76% documented)
+         (75% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -81,6 +81,9 @@
                 <a class="nav-group-task-link" href="../../Classes/CORSMiddleware/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Classes/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../../Classes/Container.html">Container</a>
               </li>
               <li class="nav-group-task">
@@ -88,9 +91,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../../Classes/FileMiddleware.html">FileMiddleware</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../../Classes/FoundationClient.html">FoundationClient</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../../Classes/HTTPServer.html">HTTPServer</a>
@@ -202,9 +202,6 @@
                 <a class="nav-group-task-link" href="../../Extensions/Float.html">Float</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../../Extensions/HTTPClient.html">HTTPClient</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../../Extensions/HTTPHeaders.html">HTTPHeaders</a>
               </li>
               <li class="nav-group-task">
@@ -241,7 +238,10 @@
                 <a class="nav-group-task-link" href="../../Extensions/Thread.html">Thread</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../../Extensions/URL.html">URL</a>
+                <a class="nav-group-task-link" href="../../Extensions/WebSocketClient.html">WebSocketClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/WebSocketClient/Socket.html">– Socket</a>
               </li>
             </ul>
           </li>
@@ -306,9 +306,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../../Protocols/BodyStreamWriter.html">BodyStreamWriter</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../../Protocols/Client.html">Client</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../../Protocols/CodingKeyRepresentable.html">CodingKeyRepresentable</a>
@@ -384,9 +381,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../../Protocols/URLQueryEncoder.html">URLQueryEncoder</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../../Protocols/URLRepresentable.html">URLRepresentable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../../Protocols/UserTokenAuthenticator.html">UserTokenAuthenticator</a>
@@ -523,6 +517,9 @@
                 <a class="nav-group-task-link" href="../../Structs/SessionsConfig.html">SessionsConfig</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/URI.html">URI</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../../Structs/URLEncodedFormDecoder.html">URLEncodedFormDecoder</a>
               </li>
               <li class="nav-group-task">
@@ -614,9 +611,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Vapor7RequestC4BodyV5drainyyyAA0C12StreamResultOcF"></a>
-                    <a name="//apple_ref/swift/Method/drain(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Vapor7RequestC4BodyV5drainyyyAA0C12StreamResultOcF">drain(_:)</a>
+                    <a name="/s:5Vapor7RequestC4BodyV6stringSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/string" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor7RequestC4BodyV6stringSSSgvp">string</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -631,12 +628,42 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">drain</span><span class="p">(</span><span class="n">_</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../../Enums/BodyStreamResult.html">BodyStreamResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/master/Sources/Vapor/Request/Request+Body.swift#L16-L24">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/master/Sources/Vapor/Request/Request+Body.swift#L16-L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Vapor7RequestC4BodyV5drainyy3NIO15EventLoopFutureCyytGAA0C12StreamResultOcF"></a>
+                    <a name="//apple_ref/swift/Method/drain(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Vapor7RequestC4BodyV5drainyy3NIO15EventLoopFutureCyytGAA0C12StreamResultOcF">drain(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">drain</span><span class="p">(</span><span class="n">_</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../../Enums/BodyStreamResult.html">BodyStreamResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/vapor/tree/master/Sources/Vapor/Request/Request+Body.swift#L24-L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -701,7 +728,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/master/Sources/Vapor/Request/Request+Body.swift#L35-L47">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/master/Sources/Vapor/Request/Request+Body.swift#L45-L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -730,7 +757,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/vapor/tree/master/Sources/Vapor/Request/Request+Body.swift#L49-L51">Show on GitHub</a>
+                        <a href="https://github.com/vapor/vapor/tree/master/Sources/Vapor/Request/Request+Body.swift#L59-L61">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -743,7 +770,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-31)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QueryBuilder Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/QueryBuilder" class="dashAnchor"></a>
+
+    <a title="QueryBuilder Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          FluentKit Docs
+        </a>
+         (4% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/fluent-kit">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2Dkit%2Fmaster%2FFluentKit%2Fdocsets%2FFluentKit%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">FluentKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      QueryBuilder Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QueryBuilder.html">QueryBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QueryBuilder/EagerLoadMethod.html">– EagerLoadMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Row.html">Row</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SchemaBuilder.html">SchemaBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FluentError.html">FluentError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Storage.html">Storage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:9FluentKit2eeoiyAA11ModelFilterVyxGs7KeyPathCyxAA5FieldVyq_GG_q_tAA0D0RzSeR_SER_r0_lF">==(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyModel.html">AnyModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Database.html">Database</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DatabaseError.html">DatabaseError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DatabaseOutput.html">DatabaseOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Migration.html">Migration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SoftDeletable.html">SoftDeletable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Timestampable.html">Timestampable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/_AnySoftDeletable.html">_AnySoftDeletable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/_AnyTimestampable.html">_AnyTimestampable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Children.html">Children</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseID.html">DatabaseID</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseQuery.html">DatabaseQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseQuery/Action.html">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseQuery/Field.html">– Field</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseQuery/Filter.html">– Filter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseQuery/Value.html">– Value</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseQuery/Join.html">– Join</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseQuery/Sort.html">– Sort</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseSchema.html">DatabaseSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseSchema/Action.html">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseSchema/DataType.html">– DataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseSchema/FieldConstraint.html">– FieldConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseSchema/Constraint.html">– Constraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseSchema/FieldDefinition.html">– FieldDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DatabaseSchema/FieldName.html">– FieldName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Databases.html">Databases</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DummyDatabase.html">DummyDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Field.html">Field</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MigrationLog.html">MigrationLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Migrations.html">Migrations</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Migrator.html">Migrator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs.html#/s:9FluentKit11ModelFilterV">ModelFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NestedPath.html">NestedPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Parent.html">Parent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RowChildren.html">RowChildren</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RowParent.html">RowParent</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>QueryBuilder</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">QueryBuilder</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC5queryAA08DatabaseC0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/query" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC5queryAA08DatabaseC0Vvp">query</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC8databaseACyxGAA8Database_p_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(database:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC8databaseACyxGAA8Database_p_tcfc">init(database:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">database</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Database.html">Database</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L21-L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Eager%20Load"></a>
+                <a name="//apple_ref/swift/Section/Eager Load" class="dashAnchor"></a>
+                <a href="#/Eager%20Load">
+                  <h3 class="section-name">Eager Load</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC9eagerLoad_6methodACyxGXDs7KeyPathCyxAA8ChildrenVyqd__GG_AC05EagerF6MethodOyx_GtAA5ModelRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/eagerLoad(_:method:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC9eagerLoad_6methodACyxGXDs7KeyPathCyxAA8ChildrenVyqd__GG_AC05EagerF6MethodOyx_GtAA5ModelRd__lF">eagerLoad(_:method:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">eagerLoad</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Children.html">Children</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Classes/QueryBuilder/EagerLoadMethod.html">EagerLoadMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">subquery</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L37-L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC9eagerLoad_6methodACyxGXDs7KeyPathCyxAA6ParentVyqd__GG_AC05EagerF6MethodOyx_GtAA5ModelRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/eagerLoad(_:method:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC9eagerLoad_6methodACyxGXDs7KeyPathCyxAA6ParentVyqd__GG_AC05EagerF6MethodOyx_GtAA5ModelRd__lF">eagerLoad(_:method:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">eagerLoad</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Parent.html">Parent</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Classes/QueryBuilder/EagerLoadMethod.html">EagerLoadMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">subquery</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L48-L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Join"></a>
+                <a name="//apple_ref/swift/Section/Join" class="dashAnchor"></a>
+                <a href="#/Join">
+                  <h3 class="section-name">Join</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC4joinyACyxGXDs7KeyPathCyxAA6ParentVyqd__GGAA5ModelRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/join(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC4joinyACyxGXDs7KeyPathCyxAA6ParentVyqd__GGAA5ModelRd__lF">join(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">join</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Parent.html">Parent</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L62-L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC4join_2to6methodACyxGXDs7KeyPathCyqd__AA5FieldVyqd_1_SgGG_AIyqd_0_AKyqd_1_GGAA08DatabaseC0V4JoinO6MethodOtAA5ModelRd__AaWRd_0_SeRd_1_SERd_1_r1_lF"></a>
+                    <a name="//apple_ref/swift/Method/join(_:to:method:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC4join_2to6methodACyxGXDs7KeyPathCyqd__AA5FieldVyqd_1_SgGG_AIyqd_0_AKyqd_1_GGAA08DatabaseC0V4JoinO6MethodOtAA5ModelRd__AaWRd_0_SeRd_1_SERd_1_r1_lF">join(_:to:method:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">join</span><span class="o">&lt;</span><span class="kt">Foreign</span><span class="p">,</span> <span class="kt">Local</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">foreign</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Foreign</span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">local</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Local</span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+    <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Join</span><span class="o">.</span><span class="kt">Method</span> <span class="o">=</span> <span class="o">.</span><span class="n">inner</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Foreign</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt">Local</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L73-L85">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC4join_2to6methodACyxGXDs7KeyPathCyqd__AA5FieldVyqd_1_GG_AIyqd_0_AKyqd_1_SgGGAA08DatabaseC0V4JoinO6MethodOtAA5ModelRd__AaWRd_0_SeRd_1_SERd_1_r1_lF"></a>
+                    <a name="//apple_ref/swift/Method/join(_:to:method:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC4join_2to6methodACyxGXDs7KeyPathCyqd__AA5FieldVyqd_1_GG_AIyqd_0_AKyqd_1_SgGGAA08DatabaseC0V4JoinO6MethodOtAA5ModelRd__AaWRd_0_SeRd_1_SERd_1_r1_lF">join(_:to:method:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">join</span><span class="o">&lt;</span><span class="kt">Foreign</span><span class="p">,</span> <span class="kt">Local</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">foreign</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Foreign</span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">local</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Local</span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+    <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Join</span><span class="o">.</span><span class="kt">Method</span> <span class="o">=</span> <span class="o">.</span><span class="n">inner</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Foreign</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt">Local</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L88-L100">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC4join_2to6methodACyxGXDs7KeyPathCyqd__AA5FieldVyqd_1_GG_AIyqd_0_ALGAA08DatabaseC0V4JoinO6MethodOtAA5ModelRd__AaURd_0_SeRd_1_SERd_1_r1_lF"></a>
+                    <a name="//apple_ref/swift/Method/join(_:to:method:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC4join_2to6methodACyxGXDs7KeyPathCyqd__AA5FieldVyqd_1_GG_AIyqd_0_ALGAA08DatabaseC0V4JoinO6MethodOtAA5ModelRd__AaURd_0_SeRd_1_SERd_1_r1_lF">join(_:to:method:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">join</span><span class="o">&lt;</span><span class="kt">Foreign</span><span class="p">,</span> <span class="kt">Local</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">foreign</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Foreign</span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">local</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Local</span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+    <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Join</span><span class="o">.</span><span class="kt">Method</span> <span class="o">=</span> <span class="o">.</span><span class="n">inner</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Foreign</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt">Local</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L103-L115">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC4join__2to_6methodACyxGXDqd__m_SSqd_0_mSSAA08DatabaseC0V4JoinO6MethodOtAA5ModelRd__AaNRd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/join(_:_:to:_:method:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC4join__2to_6methodACyxGXDqd__m_SSqd_0_mSSAA08DatabaseC0V4JoinO6MethodOtAA5ModelRd__AaNRd_0_r0_lF">join(_:_:to:_:method:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">join</span><span class="o">&lt;</span><span class="kt">Foreign</span><span class="p">,</span> <span class="kt">Local</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">foreign</span><span class="p">:</span> <span class="kt">Foreign</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">foreignField</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="n">to</span> <span class="nv">local</span><span class="p">:</span> <span class="kt">Local</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">localField</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Join</span><span class="o">.</span><span class="kt">Method</span> <span class="o">=</span> <span class="o">.</span><span class="n">inner</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Foreign</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt">Local</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L118-L141">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Filter"></a>
+                <a name="//apple_ref/swift/Section/Filter" class="dashAnchor"></a>
+                <a href="#/Filter">
+                  <h3 class="section-name">Filter</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6filteryACyxGXDAA11ModelFilterVyxGF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6filteryACyxGXDAA11ModelFilterVyxGF">filter(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="n">_</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:9FluentKit11ModelFilterV">ModelFilter</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L146-L148">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6filter_2inACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_Sayqd__GtSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6filter_2inACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_Sayqd__GtSeRd__SERd__lF">filter(_:in:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="k">in</span> <span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">Value</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L151-L153">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6filter_2inACyxGXDSS_Sayqd__GtSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6filter_2inACyxGXDSS_Sayqd__GtSeRd__SERd__lF">filter(_:in:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fieldName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">in</span> <span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">Value</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L156-L161">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6filteryACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_AA08DatabaseC0V6FilterO6MethodOqd__tSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6filteryACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_AA08DatabaseC0V6FilterO6MethodOqd__tSeRd__SERd__lF">filter(_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Filter</span><span class="o">.</span><span class="kt">Method</span><span class="p">,</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L164-L166">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6filteryACyxGXDSS_AA08DatabaseC0V6FilterO6MethodOqd__tSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6filteryACyxGXDSS_AA08DatabaseC0V6FilterO6MethodOqd__tSeRd__SERd__lF">filter(_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fieldName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Filter</span><span class="o">.</span><span class="kt">Method</span><span class="p">,</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L169-L173">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6filteryACyxGXDAA08DatabaseC0V5FieldO_AG6FilterO6MethodOAG5ValueOtF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6filteryACyxGXDAA08DatabaseC0V5FieldO_AG6FilterO6MethodOAG5ValueOtF">filter(_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Filter</span><span class="o">.</span><span class="kt">Method</span><span class="p">,</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L176-L178">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6filteryACyxGXDAA08DatabaseC0V6FilterOF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6filteryACyxGXDAA08DatabaseC0V6FilterOF">filter(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="n">_</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Filter</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L181-L184">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3setyACyxGXDSDySSAA08DatabaseC0V5ValueOGF"></a>
+                    <a name="//apple_ref/swift/Method/set(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3setyACyxGXDSDySSAA08DatabaseC0V5ValueOGF">set(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Value</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L187-L191">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Set"></a>
+                <a name="//apple_ref/swift/Section/Set" class="dashAnchor"></a>
+                <a href="#/Set">
+                  <h3 class="section-name">Set</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3set_2toACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_qd__tSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/set(_:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3set_2toACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_qd__tSeRd__SERd__lF">set(_:to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="k">set</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="n">to</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L196-L204">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Sort"></a>
+                <a name="//apple_ref/swift/Section/Sort" class="dashAnchor"></a>
+                <a href="#/Sort">
+                  <h3 class="section-name">Sort</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC4sortyACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_AA08DatabaseC0V4SortO9DirectionOtSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC4sortyACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_AA08DatabaseC0V4SortO9DirectionOtSeRd__SERd__lF">sort(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add a sort to the query builder for a field.</p>
+<pre class="highlight swift"><code><span class="kt">Planet</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">db</span><span class="p">)</span><span class="o">.</span><span class="nf">sort</span><span class="p">(\</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="o">.</span><span class="n">descending</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sort</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Sort</span><span class="o">.</span><span class="kt">Direction</span> <span class="o">=</span> <span class="o">.</span><span class="n">ascending</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Swift <code>KeyPath</code> to field on model to sort.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Direction to sort the fields, ascending or descending.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Query builder for chaining.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L216-L218">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC4sortyACyxGXDs7KeyPathCyqd__AA5FieldVyqd_0_GG_AA08DatabaseC0V4SortO9DirectionOtAA5ModelRd__SeRd_0_SERd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC4sortyACyxGXDs7KeyPathCyqd__AA5FieldVyqd_0_GG_AA08DatabaseC0V4SortO9DirectionOtAA5ModelRd__SeRd_0_SERd_0_r0_lF">sort(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add a sort to the query builder for a field.</p>
+<pre class="highlight swift"><code><span class="kt">Planet</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">db</span><span class="p">)</span><span class="o">.</span><span class="nf">join</span><span class="p">(\</span><span class="o">.</span><span class="n">galaxy</span><span class="p">)</span><span class="o">.</span><span class="nf">sort</span><span class="p">(\</span><span class="kt">Galaxy</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="o">.</span><span class="n">ascending</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sort</span><span class="o">&lt;</span><span class="kt">Joined</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">Joined</span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Sort</span><span class="o">.</span><span class="kt">Direction</span> <span class="o">=</span> <span class="o">.</span><span class="n">ascending</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Joined</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Swift <code>KeyPath</code> to field on model to sort.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Direction to sort the fields, ascending or descending.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Query builder for chaining.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L228-L232">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC4sortyACyxGXDSS_AA08DatabaseC0V4SortO9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC4sortyACyxGXDSS_AA08DatabaseC0V4SortO9DirectionOtF">sort(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sort</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Sort</span><span class="o">.</span><span class="kt">Direction</span> <span class="o">=</span> <span class="o">.</span><span class="n">ascending</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L234-L236">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC4sortyACyxGXDqd__m_SSAA08DatabaseC0V4SortO9DirectionOtAA5ModelRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC4sortyACyxGXDqd__m_SSAA08DatabaseC0V4SortO9DirectionOtAA5ModelRd__lF">sort(_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sort</span><span class="o">&lt;</span><span class="kt">Joined</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">Joined</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Sort</span><span class="o">.</span><span class="kt">Direction</span> <span class="o">=</span> <span class="o">.</span><span class="n">ascending</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Joined</span><span class="p">:</span> <span class="kt">FluentKit</span><span class="o">.</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L238-L243">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Nested"></a>
+                <a name="//apple_ref/swift/Section/Nested" class="dashAnchor"></a>
+                <a href="#/Nested">
+                  <h3 class="section-name">Nested</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6filteryACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_AA06NestedG0VAA08DatabaseC0V6FilterO6MethodOqd_0_tSeRd__SERd__SeRd_0_SERd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6filteryACyxGXDs7KeyPathCyxAA5FieldVyqd__GG_AA06NestedG0VAA08DatabaseC0V6FilterO6MethodOqd_0_tSeRd__SERd__SeRd_0_SERd_0_r0_lF">filter(_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt">NestedValue</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt"><a href="../Structs/NestedPath.html">NestedPath</a></span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Filter</span><span class="o">.</span><span class="kt">Method</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NestedValue</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">NestedValue</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L247-L256">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6filteryACyxGXDSS_AA10NestedPathVAA08DatabaseC0V6FilterO6MethodOqd__tSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6filteryACyxGXDSS_AA10NestedPathVAA08DatabaseC0V6FilterO6MethodOqd__tSeRd__SERd__lF">filter(_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">NestedValue</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">fieldName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt"><a href="../Structs/NestedPath.html">NestedPath</a></span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt">Filter</span><span class="o">.</span><span class="kt">Method</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NestedValue</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">NestedValue</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L258-L268">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Actions"></a>
+                <a name="//apple_ref/swift/Section/Actions" class="dashAnchor"></a>
+                <a href="#/Actions">
+                  <h3 class="section-name">Actions</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6create3NIO15EventLoopFutureCyytGyF"></a>
+                    <a name="//apple_ref/swift/Method/create()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6create3NIO15EventLoopFutureCyytGyF">create()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L272-L275">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6update3NIO15EventLoopFutureCyytGyF"></a>
+                    <a name="//apple_ref/swift/Method/update()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6update3NIO15EventLoopFutureCyytGyF">update()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L277-L280">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC6delete3NIO15EventLoopFutureCyytGyF"></a>
+                    <a name="//apple_ref/swift/Method/delete()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC6delete3NIO15EventLoopFutureCyytGyF">delete()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L282-L285">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Aggregate"></a>
+                <a name="//apple_ref/swift/Section/Aggregate" class="dashAnchor"></a>
+                <a href="#/Aggregate">
+                  <h3 class="section-name">Aggregate</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC5count3NIO15EventLoopFutureCySiGyF"></a>
+                    <a name="//apple_ref/swift/Method/count()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC5count3NIO15EventLoopFutureCySiGyF">count()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">count</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L290-L292">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3sumy3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyAHGGSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/sum(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3sumy3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyAHGGSeRd__SERd__lF">sum(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sum</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L294-L298">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3sumy3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyqd__GGSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/sum(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3sumy3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyqd__GGSeRd__SERd__lF">sum(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sum</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L300-L304">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC7averagey3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyAHGGSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/average(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC7averagey3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyAHGGSeRd__SERd__lF">average(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">average</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L306-L310">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC7averagey3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyqd__GGSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/average(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC7averagey3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyqd__GGSeRd__SERd__lF">average(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">average</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L312-L316">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3miny3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyAHGGSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/min(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3miny3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyAHGGSeRd__SERd__lF">min(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">min</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L318-L322">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3miny3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyqd__GGSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/min(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3miny3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyqd__GGSeRd__SERd__lF">min(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">min</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span><span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L324-L328">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3maxy3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyAHGGSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/max(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3maxy3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyAHGGSeRd__SERd__lF">max(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">max</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L330-L334">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3maxy3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyqd__GGSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/max(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3maxy3NIO15EventLoopFutureCyqd__SgGs7KeyPathCyxAA5FieldVyqd__GGSeRd__SERd__lF">max(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">max</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">?</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L336-L340">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC9aggregate__2as3NIO15EventLoopFutureCyqd_0_GAA08DatabaseC0V5FieldO9AggregateO6MethodO_s7KeyPathCyxAaLVyqd__GGqd_0_mtSeRd__SERd__SeRd_0_SERd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/aggregate(_:_:as:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC9aggregate__2as3NIO15EventLoopFutureCyqd_0_GAA08DatabaseC0V5FieldO9AggregateO6MethodO_s7KeyPathCyxAaLVyqd__GGqd_0_mtSeRd__SERd__SeRd_0_SERd_0_r0_lF">aggregate(_:_:as:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">aggregate</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">.</span><span class="kt">Aggregate</span><span class="o">.</span><span class="kt">Method</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+    <span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Result</span><span class="o">.</span><span class="k">self</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Result</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L343-L351">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC9aggregate__2as3NIO15EventLoopFutureCyqd__GAA08DatabaseC0V5FieldO9AggregateO6MethodO_SSqd__mtSeRd__SERd__lF"></a>
+                    <a name="//apple_ref/swift/Method/aggregate(_:_:as:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC9aggregate__2as3NIO15EventLoopFutureCyqd__GAA08DatabaseC0V5FieldO9AggregateO6MethodO_SSqd__mtSeRd__SERd__lF">aggregate(_:_:as:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">aggregate</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/DatabaseQuery.html">DatabaseQuery</a></span><span class="o">.</span><span class="kt"><a href="../Structs/Field.html">Field</a></span><span class="o">.</span><span class="kt">Aggregate</span><span class="o">.</span><span class="kt">Method</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">fieldName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Result</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Result</span><span class="o">.</span><span class="k">self</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span>
+    <span class="k">where</span> <span class="kt">Result</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L353-L371">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC15EagerLoadMethodO"></a>
+                    <a name="//apple_ref/swift/Enum/EagerLoadMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC15EagerLoadMethodO">EagerLoadMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Classes/QueryBuilder/EagerLoadMethod.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">EagerLoadMethod</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L373-L376">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Fetch"></a>
+                <a name="//apple_ref/swift/Section/Fetch" class="dashAnchor"></a>
+                <a href="#/Fetch">
+                  <h3 class="section-name">Fetch</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC5chunk3max7closure3NIO15EventLoopFutureCyytGSi_ySayAA3RowCyxGGKctF"></a>
+                    <a name="//apple_ref/swift/Method/chunk(max:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC5chunk3max7closure3NIO15EventLoopFutureCyytGSi_ySayAA3RowCyxGGKctF">chunk(max:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">chunk</span><span class="p">(</span><span class="nv">max</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Classes/Row.html">Row</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L381-L397">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC5first3NIO15EventLoopFutureCyAA3RowCyxGSgGyF"></a>
+                    <a name="//apple_ref/swift/Method/first()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC5first3NIO15EventLoopFutureCyAA3RowCyxGSgGyF">first()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">first</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Row.html">Row</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L399-L401">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3all3NIO15EventLoopFutureCySayAA3RowCyxGGGyF"></a>
+                    <a name="//apple_ref/swift/Method/all()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3all3NIO15EventLoopFutureCySayAA3RowCyxGGGyF">all()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">all</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="p">[</span><span class="kt"><a href="../Classes/Row.html">Row</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">]</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L403-L408">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3run3NIO15EventLoopFutureCyytGyF"></a>
+                    <a name="//apple_ref/swift/Method/run()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3run3NIO15EventLoopFutureCyytGyF">run()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">run</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L415-L417">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC3runy3NIO15EventLoopFutureCyytGyAA3RowCyxGKcF"></a>
+                    <a name="//apple_ref/swift/Method/run(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC3runy3NIO15EventLoopFutureCyytGyAA3RowCyxGKcF">run(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">_</span> <span class="nv">onOutput</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Row.html">Row</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Model.html">Model</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Query/QueryBuilder.swift#L419-L447">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FluentKit12QueryBuilderC15withSoftDeletedACyxGXDyF"></a>
+                    <a name="//apple_ref/swift/Method/withSoftDeleted()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FluentKit12QueryBuilderC15withSoftDeletedACyxGXDyF">withSoftDeleted()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withSoftDeleted</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-kit/tree/master/Sources/FluentKit/Model/SoftDeletable.swift#L32-L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-06-05)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
