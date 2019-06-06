@@ -54,7 +54,7 @@ function main() {
     echo "💧 Vapor docs generator"
     ROOT=`pwd`
     declare -a arr=(
-        "async-kit"
+        # "async-kit"
         # "auth"
         # "console-kit"
         # "core"
@@ -63,7 +63,7 @@ function main() {
         # "fluent"
         # "fluent-kit"
         # "fluent-postgresql"
-        # "fluent-sqlite"
+        "fluent-sqlite-driver"
         # "http"
         # "jwt"
         # "leaf"
