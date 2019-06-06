@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PostgresDataType Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/PostgresDataType" class="dashAnchor"></a>
+
+    <a title="PostgresDataType Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          PostgresNIO Docs
+        </a>
+         (37% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/postgres-nio">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fpostgres%2Dnio%2F1%2E0%2E0%2Dalpha%2E1%2FPostgresNIO%2Fdocsets%2FPostgresNIO%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">PostgresNIO Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      PostgresDataType Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgresConnection.html">PostgresConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgresMessageDecoder.html">PostgresMessageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgresMessageEncoder.html">PostgresMessageEncoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgresError.html">PostgresError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgresError/Code.html">– Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgresFormatCode.html">PostgresFormatCode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decimal.html">Decimal</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgresClient.html">PostgresClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgresDataConvertible.html">PostgresDataConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgresMessageType.html">PostgresMessageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgresRequest.html">PostgresRequest</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresData.html">PostgresData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresDataType.html">PostgresDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage.html">PostgresMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Authentication.html">– Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/BackendKeyData.html">– BackendKeyData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Bind.html">– Bind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/CommandComplete.html">– CommandComplete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/DataRow.html">– DataRow</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Describe.html">– Describe</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Execute.html">– Execute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Identifier.html">– Identifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/ParameterDescription.html">– ParameterDescription</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/ParameterStatus.html">– ParameterStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Parse.html">– Parse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Password.html">– Password</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/ReadyForQuery.html">– ReadyForQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/RowDescription.html">– RowDescription</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/SSLRequest.html">– SSLRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/SimpleQuery.html">– SimpleQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Startup.html">– Startup</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresMessage/Sync.html">– Sync</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresNumeric.html">PostgresNumeric</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgresRow.html">PostgresRow</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>PostgresDataType</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PostgresDataType</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">ExpressibleByIntegerLiteral</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">RawRepresentable</span></code></pre>
+
+                </div>
+              </div>
+            <p>The data type&rsquo;s raw object ID.
+Use <code>select * from pg_type where oid = &lt;idhere&gt;;</code> to lookup more information.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4nullACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/null" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4nullACvpZ">null</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>0</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">null</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4boolACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bool" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4boolACvpZ">bool</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>16</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">bool</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV5byteaACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bytea" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV5byteaACvpZ">bytea</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>17</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">bytea</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4charACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/char" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4charACvpZ">char</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>18</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">char</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4nameACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4nameACvpZ">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>19</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L29">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4int8ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4int8ACvpZ">int8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>20</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">int8</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4int2ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4int2ACvpZ">int2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>21</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">int2</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L33">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4int4ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4int4ACvpZ">int4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>23</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">int4</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV7regprocACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/regproc" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV7regprocACvpZ">regproc</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>24</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">regproc</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4textACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/text" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4textACvpZ">text</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>25</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV3oidACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/oid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV3oidACvpZ">oid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>26</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">oid</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4jsonACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/json" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4jsonACvpZ">json</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>114</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">json</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV10pgNodeTreeACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/pgNodeTree" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV10pgNodeTreeACvpZ">pgNodeTree</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>194</code> pg_node_tree</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">pgNodeTree</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV5pointACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/point" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV5pointACvpZ">point</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>600</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">point</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV6float4ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/float4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV6float4ACvpZ">float4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>700</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">float4</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV6float8ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/float8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV6float8ACvpZ">float8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>701</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">float8</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV5moneyACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/money" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV5moneyACvpZ">money</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>790</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">money</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV9boolArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/boolArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV9boolArrayACvpZ">boolArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1000</code> _bool</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">boolArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV10byteaArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/byteaArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV10byteaArrayACvpZ">byteaArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1001</code> _bytea</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">byteaArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV9charArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/charArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV9charArrayACvpZ">charArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1002</code> _char</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">charArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV9nameArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/nameArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV9nameArrayACvpZ">nameArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1003</code> _name</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">nameArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV9int2ArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int2Array" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV9int2ArrayACvpZ">int2Array</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1005</code> _int2</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">int2Array</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV9int4ArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int4Array" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV9int4ArrayACvpZ">int4Array</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1007</code> _int4</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">int4Array</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV9textArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/textArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV9textArrayACvpZ">textArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1009</code> _text</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">textArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L67">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV9int8ArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int8Array" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV9int8ArrayACvpZ">int8Array</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1016</code> _int8</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">int8Array</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L69">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV10pointArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/pointArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV10pointArrayACvpZ">pointArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1017</code> _point</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">pointArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV11float4ArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/float4Array" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV11float4ArrayACvpZ">float4Array</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1021</code> _float4</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">float4Array</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L73">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV11float8ArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/float8Array" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV11float8ArrayACvpZ">float8Array</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1022</code> _float8</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">float8Array</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV12aclitemArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/aclitemArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV12aclitemArrayACvpZ">aclitemArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1034</code> _aclitem</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">aclitemArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L77">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV6bpcharACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bpchar" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV6bpcharACvpZ">bpchar</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1042</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">bpchar</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L79">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV7varcharACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/varchar" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV7varcharACvpZ">varchar</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1043</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">varchar</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L81">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4dateACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/date" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4dateACvpZ">date</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1082</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4timeACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/time" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4timeACvpZ">time</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1083</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">time</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L85">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV9timestampACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/timestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV9timestampACvpZ">timestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1114</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L87">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV14timestampArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/timestampArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV14timestampArrayACvpZ">timestampArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1115</code> _timestamp</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">timestampArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV11timestamptzACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/timestamptz" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV11timestamptzACvpZ">timestamptz</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1184</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">timestamptz</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L91">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV6timetzACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/timetz" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV6timetzACvpZ">timetz</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1266</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">timetz</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L93">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV7numericACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/numeric" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV7numericACvpZ">numeric</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>1700</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">numeric</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L95">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4voidACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/void" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4voidACvpZ">void</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>2278</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">void</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV4uuidACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/uuid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV4uuidACvpZ">uuid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>2950</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">uuid</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L99">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV9uuidArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/uuidArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV9uuidArrayACvpZ">uuidArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>2951</code> _uuid</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">uuidArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L101">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV5jsonbACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/jsonb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV5jsonbACvpZ">jsonb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>3802</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">jsonb</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L103">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV10jsonbArrayACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/jsonbArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV10jsonbArrayACvpZ">jsonbArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>3807</code> _jsonb</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">jsonbArray</span><span class="p">:</span> <span class="kt">PostgresDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L105">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV8rawValues6UInt32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/rawValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV8rawValues6UInt32Vvp">rawValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The raw data type code recognized by PostgreSQL.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rawValue</span><span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV14integerLiteralACs6UInt32V_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(integerLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV14integerLiteralACs6UInt32V_tcfc">init(integerLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>ExpressibleByIntegerLiteral.init(integerLiteral:)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">integerLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L111-L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeVyACs6UInt32Vcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeVyACs6UInt32Vcfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">rawValue</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L115-L117">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SY8rawValuexSg03RawB0Qz_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(rawValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SY8rawValuexSg03RawB0Qz_tcfc">init(rawValue:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L119-L121">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV12knownSQLNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/knownSQLName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV12knownSQLNameSSSgvp">knownSQLName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the known SQL name, if one exists.
+Note: This only supports a limited subset of all PSQL types and is meant for convenience only.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">knownSQLName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L125-L170">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11PostgresNIO0A8DataTypeV11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11PostgresNIO0A8DataTypeV11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>CustomStringConvertible</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgres-nio/tree/1.0.0-alpha.1/Sources/PostgresNIO/Data/PostgresDataType.swift#L214-L216">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-06-06)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
