@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ConnectionPool Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/ConnectionPool" class="dashAnchor"></a>
+
+    <a title="ConnectionPool Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          AsyncKit Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/async-kit">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fasync%2Dkit%2Fmaster%2FAsyncKit%2Fdocsets%2FAsyncKit%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">AsyncKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      ConnectionPool Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ConnectionPool.html">ConnectionPool</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ConnectionPoolError.html">ConnectionPoolError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/EventLoop.html">EventLoop</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/EventLoopFuture.html">EventLoopFuture</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/EventLoopGroup.html">EventLoopGroup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1roiy3NIO15EventLoopFutureCyxGAF_AFtSzRzlF">%(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2reoiyy3NIO15EventLoopFutureCyxGz_AFtSzRzlF">%=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1aoiy3NIO15EventLoopFutureCyxGAF_AFtSzRzlF">&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2aeoiyy3NIO15EventLoopFutureCyxGz_AFtSzRzlF">&amp;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1moiy3NIO15EventLoopFutureCyxGAF_AFtSjRzlF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2meoiyy3NIO15EventLoopFutureCyxGz_AFtSjRzlF">*=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1poiy3NIO15EventLoopFutureCySayxGGAG_AGtlF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1poiy3NIO15EventLoopFutureCyxGAF_AFtSjRzlF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2peoiyy3NIO15EventLoopFutureCySayxGGz_AGtlF">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2peoiyy3NIO15EventLoopFutureCyxGz_AFtSjRzlF">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1soiy3NIO15EventLoopFutureCySayxGGAG_AGtSQRzlF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1soiy3NIO15EventLoopFutureCyxGAF_AFtSjRzlF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2seoiyy3NIO15EventLoopFutureCySayxGGz_AGtSQRzlF">-=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2seoiyy3NIO15EventLoopFutureCyxGz_AFtSjRzlF">-=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1doiy3NIO15EventLoopFutureCyxGAF_AFtSzRzlF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2deoiyy3NIO15EventLoopFutureCyxGz_AFtSzRzlF">/=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1loiy3NIO15EventLoopFutureCySbGAEyxG_AEyq_GtSzRzSzR_r0_lF">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2lloiy3NIO15EventLoopFutureCyxGAF_AEyq_GtSzRzSzR_r0_lF">&lt;&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit3lleoiyy3NIO15EventLoopFutureCyxGz_AEyq_GtSzRzSzR_r0_lF">&lt;&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2leoiy3NIO15EventLoopFutureCySbGAEyxG_AEyq_GtSzRzSzR_r0_lF">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2leoiy3NIO15EventLoopFutureCySbGAEyxG_AGtSzRzlF">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1goiy3NIO15EventLoopFutureCySbGAEyxG_AEyq_GtSzRzSzR_r0_lF">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1goiy3NIO15EventLoopFutureCySbGAEyxG_AGtSzRzlF">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2geoiy3NIO15EventLoopFutureCySbGAEyxG_AEyq_GtSzRzSzR_r0_lF">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2geoiy3NIO15EventLoopFutureCySbGAEyxG_AGtSzRzlF">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2ggoiy3NIO15EventLoopFutureCyxGAF_AEyq_GtSzRzSzR_r0_lF">&gt;&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit3ggeoiyy3NIO15EventLoopFutureCyxGz_AEyq_GtSzRzSzR_r0_lF">&gt;&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1xoiy3NIO15EventLoopFutureCyxGAF_AFtSzRzlF">^(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2xeoiyy3NIO15EventLoopFutureCyxGz_AFtSzRzlF">^=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit1ooiy3NIO15EventLoopFutureCyxGAF_AFtSzRzlF">|(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:8AsyncKit2oeoiyy3NIO15EventLoopFutureCyxGz_AFtSzRzlF">|=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ConnectionPoolItem.html">ConnectionPoolItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ConnectionPoolSource.html">ConnectionPoolSource</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConnectionPoolConfig.html">ConnectionPoolConfig</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>ConnectionPool</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ConnectionPool</span><span class="o">&lt;</span><span class="kt">Source</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Source</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ConnectionPoolSource.html">ConnectionPoolSource</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Holds a collection of active connections that can be requested and later released
+back into the pool.</p>
+
+<p>Connection pools are used to offset the overhead of creating new connections. Newly
+opened connections are returned back to the pool and can be re-used until they
+close.</p>
+
+<p>New connections are created as needed until the maximum configured connection limit
+is reached. After the maximum is reached, no new connections will be created unless
+existing connections are closed.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">pool</span> <span class="o">=</span> <span class="kt">ConnectionPool</span><span class="p">(</span><span class="nv">config</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span> <span class="nv">source</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">pool</span><span class="o">.</span><span class="n">withConnection</span> <span class="p">{</span> <span class="n">conn</span> <span class="k">in</span>
+    <span class="c1">// use conn</span>
+<span class="p">}</span>
+</code></pre>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AsyncKit14ConnectionPoolC6configAA0cD6ConfigVvp"></a>
+                    <a name="//apple_ref/swift/Property/config" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AsyncKit14ConnectionPoolC6configAA0cD6ConfigVvp">config</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Config options for this pool.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/ConnectionPoolConfig.html">ConnectionPoolConfig</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/async-kit/tree/master/Sources/AsyncKit/ConnectionPool.swift#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AsyncKit14ConnectionPoolC6sourcexvp"></a>
+                    <a name="//apple_ref/swift/Property/source" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AsyncKit14ConnectionPoolC6sourcexvp">source</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new connections when needed. See <code><a href="../Protocols/ConnectionPoolSource.html">ConnectionPoolSource</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">Source</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/async-kit/tree/master/Sources/AsyncKit/ConnectionPool.swift#L68">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AsyncKit14ConnectionPoolC9eventLoop3NIO05EventF0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AsyncKit14ConnectionPoolC9eventLoop3NIO05EventF0_pvp">eventLoop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This connection pool&rsquo;s event loop.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/async-kit/tree/master/Sources/AsyncKit/ConnectionPool.swift#L71-L73">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AsyncKit14ConnectionPoolC8isClosedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AsyncKit14ConnectionPoolC8isClosedSbvp">isClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, this connection pool has been closed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">isClosed</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/async-kit/tree/master/Sources/AsyncKit/ConnectionPool.swift#L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Private"></a>
+                <a name="//apple_ref/swift/Section/Private" class="dashAnchor"></a>
+                <a href="#/Private">
+                  <h3 class="section-name">Private</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AsyncKit14ConnectionPoolC6config6sourceACyxGAA0cD6ConfigV_xtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(config:source:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AsyncKit14ConnectionPoolC6config6sourceACyxGAA0cD6ConfigV_xtcfc">init(config:source:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>ConnectionPool</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">pool</span> <span class="o">=</span> <span class="kt">ConnectionPool</span><span class="p">(</span><span class="nv">config</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span> <span class="nv">source</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">pool</span><span class="o">.</span><span class="n">withConnection</span> <span class="p">{</span> <span class="n">conn</span> <span class="k">in</span>
+    <span class="c1">// use conn</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/ConnectionPoolConfig.html">ConnectionPoolConfig</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(),</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">Source</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Config options for this pool.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Creates new connections when needed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/async-kit/tree/master/Sources/AsyncKit/ConnectionPool.swift#L101-L109">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AsyncKit14ConnectionPoolC04withC0y3NIO15EventLoopFutureCyqd__GAH0C0QzclF"></a>
+                    <a name="//apple_ref/swift/Method/withConnection(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AsyncKit14ConnectionPoolC04withC0y3NIO15EventLoopFutureCyqd__GAH0C0QzclF">withConnection(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetches a pooled connection for the lifetime of the closure.</p>
+
+<p>The connection is provided to the supplied callback and will be automatically released when the
+future returned by the callback is completed.</p>
+<pre class="highlight swift"><code><span class="n">pool</span><span class="o">.</span><span class="n">withPooledConnection</span> <span class="p">{</span> <span class="n">conn</span> <span class="k">in</span>
+    <span class="c1">// use the connection</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>See <code><a href="../Classes/ConnectionPool.html#/s:8AsyncKit14ConnectionPoolC07requestC03NIO15EventLoopFutureCy0C0QzGyF">requestConnection()</a></code> to request a pooled connection without using a callback.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withConnection</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Source</span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback that accepts the pooled connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future containing the result of the closure.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/async-kit/tree/master/Sources/AsyncKit/ConnectionPool.swift#L125-L135">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AsyncKit14ConnectionPoolC07requestC03NIO15EventLoopFutureCy0C0QzGyF"></a>
+                    <a name="//apple_ref/swift/Method/requestConnection()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AsyncKit14ConnectionPoolC07requestC03NIO15EventLoopFutureCy0C0QzGyF">requestConnection()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Requests a pooled connection.</p>
+
+<p>The connection returned by this method should be released when you are finished using it.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">conn</span> <span class="o">=</span> <span class="k">try</span> <span class="n">pool</span><span class="o">.</span><span class="nf">requestConnection</span><span class="p">()</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+<span class="k">defer</span> <span class="p">{</span> <span class="n">pool</span><span class="o">.</span><span class="nf">releaseConnection</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span> <span class="p">}</span>
+<span class="c1">// use the connection</span>
+</code></pre>
+
+<p>See <code><a href="../Classes/ConnectionPool.html#/s:8AsyncKit14ConnectionPoolC04withC0y3NIO15EventLoopFutureCyqd__GAH0C0QzclF">withConnection(_:)</a></code> for a callback-based method that automatically releases the connection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">requestConnection</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Source</span><span class="o">.</span><span class="kt">Connection</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future containing the requested connection.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/async-kit/tree/master/Sources/AsyncKit/ConnectionPool.swift#L148-L180">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AsyncKit14ConnectionPoolC07releaseC0yy0C0QzF"></a>
+                    <a name="//apple_ref/swift/Method/releaseConnection(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AsyncKit14ConnectionPoolC07releaseC0yy0C0QzF">releaseConnection(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Releases a connection back to the pool. Use with <code><a href="../Classes/ConnectionPool.html#/s:8AsyncKit14ConnectionPoolC07requestC03NIO15EventLoopFutureCy0C0QzGyF">requestConnection()</a></code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">conn</span> <span class="o">=</span> <span class="k">try</span> <span class="n">pool</span><span class="o">.</span><span class="nf">requestConnection</span><span class="p">()</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+<span class="k">defer</span> <span class="p">{</span> <span class="n">pool</span><span class="o">.</span><span class="nf">releaseConnection</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span> <span class="p">}</span>
+<span class="c1">// use the connection</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">releaseConnection</span><span class="p">(</span><span class="n">_</span> <span class="nv">conn</span><span class="p">:</span> <span class="kt">Source</span><span class="o">.</span><span class="kt">Connection</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Connection to release back to the pool.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/async-kit/tree/master/Sources/AsyncKit/ConnectionPool.swift#L190-L207">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AsyncKit14ConnectionPoolC5close3NIO15EventLoopFutureCyytGyF"></a>
+                    <a name="//apple_ref/swift/Method/close()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AsyncKit14ConnectionPoolC5close3NIO15EventLoopFutureCyytGyF">close()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closes the connection pool.</p>
+
+<p>All available connections will be closed immediately.
+Any connections currently in use will be closed when they are returned to the pool.</p>
+
+<p>Once closed, the connection pool cannot be used to create new connections.</p>
+
+<p>Connection pools must be closed before they deinitialize.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">close</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A future indicating close completion.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/async-kit/tree/master/Sources/AsyncKit/ConnectionPool.swift#L219-L231">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-06-06)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
