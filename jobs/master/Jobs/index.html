@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jobs  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Jobs  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Jobs Docs
+        </a>
+         (98% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/jobs">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fjobs%2Fmaster%2FJobs%2Fdocsets%2FJobs%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Jobs Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Jobs  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/JobsCommand.html">JobsCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/JobsCommand.html#/s:4Jobs0A7CommandC9SignatureV">– Signature</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AnyJob.html">AnyJob</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Job.html">Job</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/JobData.html">JobData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/JobsPersistenceLayer.html">JobsPersistenceLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/JobContext.html">JobContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/JobStorage.html">JobStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/JobsConfig.html">JobsConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/JobsProvider.html">JobsProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/QueueName.html">QueueName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/QueueService.html">QueueService</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='jobs' class='heading'>Jobs</h1>
+
+<p>A library that allows for scheduling tasks to be executed at some point in the future. </p>
+<h1 id='goals' class='heading'>Goals</h1>
+
+<p>The goal of this library is twofold: </p>
+
+<ol>
+<li>Allow users to schedule tasks that will be executed at some point in the future.</li>
+<li>Transparently handle errors, success, and retries.</li>
+</ol>
+
+<p>In addition, this library should be able to handle various persistence stores. It ships with Redis by default (the implementation can be found at <a href="https://github.com/vapor-community/jobs-redis-driver">https://github.com/vapor-community/jobs-redis-driver</a>). Eventually, it would be fantastic to get this added to the core Vapor org. </p>
+<h1 id='installation' class='heading'>Installation</h1>
+
+<p>To use the Redis implementation of this package, add this to your <code>Package.swift</code>:</p>
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/vapor-community/jobs-redis-driver.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.1.0"</span><span class="p">)</span>
+</code></pre>
+
+<p>You should not use this package alone unless you plan to reimplement the persistence layer. </p>
+<h1 id='usage' class='heading'>Usage</h1>
+
+<p>There&rsquo;s a full example of this implementation at <a href="https://github.com/mcdappdev/jobs-example">https://github.com/mcdappdev/jobs-example</a>.</p>
+
+<p>Start by creating a job: </p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">EmailJob</span><span class="p">:</span> <span class="kt">Job</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="kd">func</span> <span class="nf">dequeue</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">JobContext</span><span class="p">,</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">EventLoopGroup</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">to</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">from</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">worker</span><span class="o">.</span><span class="nf">future</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">JobContext</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">,</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">EventLoopGroup</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">worker</span><span class="o">.</span><span class="nf">future</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Next, configure the <code>Jobs</code> package in your <code>configure.swift</code>:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Jobs</span>
+<span class="kd">import</span> <span class="kt">JobsRedisDriver</span>
+
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="n">_</span> <span class="nv">config</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Config</span><span class="p">,</span> <span class="n">_</span> <span class="nv">env</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Environment</span><span class="p">,</span> <span class="n">_</span> <span class="nv">services</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Services</span><span class="p">)</span> <span class="k">throws</span> <span class="p">{</span>
+    <span class="c1">/// Redis</span>
+    <span class="c1">//MARK: - Redis</span>
+    <span class="k">try</span> <span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="kt">RedisProvider</span><span class="p">())</span>
+
+    <span class="k">let</span> <span class="nv">redisUrlString</span> <span class="o">=</span> <span class="s">"redis://localhost:6379"</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">redisUrl</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">redisUrlString</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span> <span class="k">throw</span> <span class="kt">Abort</span><span class="p">(</span><span class="o">.</span><span class="n">internalServerError</span><span class="p">)</span> <span class="p">}</span>
+    <span class="k">let</span> <span class="nv">redisConfig</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">RedisDatabase</span><span class="p">(</span><span class="nv">config</span><span class="p">:</span> <span class="kt">RedisClientConfig</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">redisUrl</span><span class="p">))</span>
+
+    <span class="k">var</span> <span class="nv">databaseConfig</span> <span class="o">=</span> <span class="kt">DatabasesConfig</span><span class="p">()</span>
+    <span class="n">databaseConfig</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">database</span><span class="p">:</span> <span class="n">redisConfig</span><span class="p">,</span> <span class="nv">as</span><span class="p">:</span> <span class="o">.</span><span class="n">redis</span><span class="p">)</span>
+    <span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="n">databaseConfig</span><span class="p">)</span>
+
+    <span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="kt">JobsPersistenceLayer</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">container</span> <span class="o">-&gt;</span> <span class="kt">JobsRedisDriver</span> <span class="k">in</span>
+        <span class="k">return</span> <span class="kt">JobsRedisDriver</span><span class="p">(</span><span class="nv">database</span><span class="p">:</span> <span class="n">redisConfig</span><span class="p">,</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="n">container</span><span class="o">.</span><span class="nf">next</span><span class="p">())</span>
+    <span class="p">}</span>
+
+    <span class="k">try</span> <span class="nf">jobs</span><span class="p">(</span><span class="o">&amp;</span><span class="n">services</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">jobs</span><span class="p">(</span><span class="n">_</span> <span class="nv">services</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Services</span><span class="p">,</span> <span class="nv">persistenceLayer</span><span class="p">:</span> <span class="kt">JobsPersistenceLayer</span><span class="p">)</span> <span class="k">throws</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">jobsProvider</span> <span class="o">=</span> <span class="kt">JobsProvider</span><span class="p">(</span><span class="nv">refreshInterval</span><span class="p">:</span> <span class="o">.</span><span class="nf">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+    <span class="k">try</span> <span class="n">services</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="n">jobsProvider</span><span class="p">)</span>
+
+    <span class="c1">//Register jobs</span>
+    <span class="n">services</span><span class="o">.</span><span class="n">register</span> <span class="p">{</span> <span class="n">_</span> <span class="o">-&gt;</span> <span class="kt">JobsConfig</span> <span class="k">in</span>
+        <span class="k">var</span> <span class="nv">jobsConfig</span> <span class="o">=</span> <span class="kt">JobsConfig</span><span class="p">()</span>
+        <span class="n">jobsConfig</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="kt">EmailJob</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">jobsConfig</span>
+    <span class="p">}</span>
+
+    <span class="n">services</span><span class="o">.</span><span class="n">register</span> <span class="p">{</span> <span class="n">_</span> <span class="o">-&gt;</span> <span class="kt">CommandConfig</span> <span class="k">in</span>
+        <span class="k">var</span> <span class="nv">commandConfig</span> <span class="o">=</span> <span class="kt">CommandConfig</span><span class="o">.</span><span class="nf">default</span><span class="p">()</span>
+        <span class="n">commandConfig</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="kt">JobsCommand</span><span class="p">(),</span> <span class="nv">as</span><span class="p">:</span> <span class="s">"jobs"</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">commandConfig</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>To add some data to the queue, add a controller like this:</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">JobsController</span><span class="p">:</span> <span class="kt">RouteCollection</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">QueueService</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">queue</span><span class="p">:</span> <span class="kt">QueueService</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">boot</span><span class="p">(</span><span class="nv">router</span><span class="p">:</span> <span class="kt">Router</span><span class="p">)</span> <span class="k">throws</span> <span class="p">{</span>
+        <span class="n">router</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"/queue"</span><span class="p">,</span> <span class="nv">use</span><span class="p">:</span> <span class="n">addToQueue</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">addToQueue</span><span class="p">(</span><span class="nv">req</span><span class="p">:</span> <span class="kt">Request</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">HTTPStatus</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">job</span> <span class="o">=</span> <span class="kt">EmailJob</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="s">"to@to.com"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"from@from.com"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"message"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">queue</span><span class="o">.</span><span class="nf">dispatch</span><span class="p">(</span><span class="nv">job</span><span class="p">:</span> <span class="n">job</span><span class="p">,</span> <span class="nv">maxRetryCount</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="nf">transform</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="o">.</span><span class="n">ok</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Finally, spin up a queue worker like this:</p>
+
+<p><code>vapor build &amp;&amp; vapor run jobs</code></p>
+<h2 id='adding-a-job-to-a-specific-queue' class='heading'>Adding a job to a specific queue:</h2>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">QueueType</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">emails</span> <span class="o">=</span> <span class="kt">QueueType</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"emails"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addToQueue</span><span class="p">(</span><span class="nv">req</span><span class="p">:</span> <span class="kt">Request</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">HTTPStatus</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">job</span> <span class="o">=</span> <span class="kt">EmailJob</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="s">"to@to.com"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"from@from.com"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"message"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">queue</span><span class="o">.</span><span class="nf">dispatch</span><span class="p">(</span><span class="nv">job</span><span class="p">:</span> <span class="n">job</span><span class="p">,</span> <span class="nv">maxRetryCount</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="n">queue</span> <span class="o">=</span> <span class="o">.</span><span class="n">emails</span><span class="p">)</span><span class="o">.</span><span class="nf">transform</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="o">.</span><span class="n">ok</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><code>vapor run jobs --queue emails</code></p>
+<h2 id='handling-errors' class='heading'>Handling errors</h2>
+
+<p>There are no public-facing methods that are marked as throwing in this library. To return an error from the dequeue function, for example, do this:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">dequeue</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">JobContext</span><span class="p">,</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">EventLoopGroup</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="p">{</span>   
+    <span class="k">return</span> <span class="n">worker</span><span class="o">.</span><span class="nf">future</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">Abort</span><span class="p">(</span><span class="o">.</span><span class="n">badRequest</span><span class="p">,</span> <span class="nv">reason</span><span class="p">:</span> <span class="s">"My error here."</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>You can use the <code>error</code> method on <code><a href="Protocols/Job.html">Job</a></code> to catch any errors thrown in the process and send an email, perform database cleanup, etc. </p>
+<h1 id='to-do' class='heading'>To-Do</h1>
+
+<ul>
+<li>Full documentation in the Vapor docs style</li>
+<li>Potentially ship with a Fluent integration as well</li>
+<li>Look into what it would take to pull this into the main Vapor org</li>
+<li>Tag versions</li>
+</ul>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-06-12)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
