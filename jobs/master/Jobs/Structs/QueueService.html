@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Jobs Docs
         </a>
-         (98% documented)
+         (79% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -65,6 +65,48 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/JobsCommand.html#/s:4Jobs0A7CommandC9SignatureV">– Signature</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder.html">ScheduleBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Month.html">– Month</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Day.html">– Day</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/DayOfWeek.html">– DayOfWeek</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Time.html">– Time</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Hour12.html">– Hour12</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Hour24.html">– Hour24</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/HourPeriod.html">– HourPeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Minute.html">– Minute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Yearly.html">– Yearly</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Monthly.html">– Monthly</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Weekly.html">– Weekly</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Daily.html">– Daily</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScheduleBuilder/Hourly.html">– Hourly</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -82,6 +124,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/JobsPersistenceLayer.html">JobsPersistenceLayer</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScheduledJob.html">ScheduledJob</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -94,7 +139,7 @@
                 <a class="nav-group-task-link" href="../Structs/JobStorage.html">JobStorage</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/JobsConfig.html">JobsConfig</a>
+                <a class="nav-group-task-link" href="../Structs/JobsConfiguration.html">JobsConfiguration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/JobsProvider.html">JobsProvider</a>
@@ -132,9 +177,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Jobs12QueueServiceV8dispatch7jobData13maxRetryCount5queue3NIO15EventLoopFutureCyytGx_SiAA0B4NameVtKAA03JobF0RzlF"></a>
-                    <a name="//apple_ref/swift/Method/dispatch(jobData:maxRetryCount:queue:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Jobs12QueueServiceV8dispatch7jobData13maxRetryCount5queue3NIO15EventLoopFutureCyytGx_SiAA0B4NameVtKAA03JobF0RzlF">dispatch(jobData:maxRetryCount:queue:)</a>
+                    <a name="/s:4Jobs12QueueServiceV8dispatch7jobData13maxRetryCount5queue10delayUntil3NIO15EventLoopFutureCyytGx_SiAA0B4NameV10Foundation4DateVSgtKAA03JobF0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/dispatch(jobData:maxRetryCount:queue:delayUntil:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Jobs12QueueServiceV8dispatch7jobData13maxRetryCount5queue10delayUntil3NIO15EventLoopFutureCyytGx_SiAA0B4NameV10Foundation4DateVSgtKAA03JobF0RzlF">dispatch(jobData:maxRetryCount:queue:delayUntil:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -149,7 +194,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dispatch</span><span class="o">&lt;</span><span class="kt">J</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">jobData</span><span class="p">:</span> <span class="kt">J</span><span class="p">,</span> <span class="nv">maxRetryCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt"><a href="../Structs/QueueName.html">QueueName</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">J</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/JobData.html">JobData</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dispatch</span><span class="o">&lt;</span><span class="kt">J</span><span class="p">:</span> <span class="kt"><a href="../Protocols/JobData.html">JobData</a></span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="nv">jobData</span><span class="p">:</span> <span class="kt">J</span><span class="p">,</span>
+    <span class="nv">maxRetryCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nv">queue</span><span class="p">:</span> <span class="kt"><a href="../Structs/QueueName.html">QueueName</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span>
+    <span class="nv">delayUntil</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">EventLoopFuture</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -193,6 +243,18 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A date to execute the job after</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -201,7 +263,7 @@
                         <p>A future <code>Void</code> value used to signify completion</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/vapor/jobs/tree/master/Sources/Jobs/QueueService.swift#L24-L33">Show on GitHub</a>
+                        <a href="https://github.com/vapor/jobs/tree/master/Sources/Jobs/QueueService.swift#L25-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -214,7 +276,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-06-12)</p>
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-06-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
