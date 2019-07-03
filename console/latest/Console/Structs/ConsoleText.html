@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ConsoleText Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/ConsoleText" class="dashAnchor"></a>
+
+    <a title="ConsoleText Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Console Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/console">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2F3%2E1%2E1%2FConsole%2Fdocsets%2FConsole%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Console Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      ConsoleText Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ActivityIndicator.html">ActivityIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ConsoleLogger.html">ConsoleLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Terminal.html">Terminal</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ActivityIndicatorState.html">ActivityIndicatorState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ConsoleClear.html">ConsoleClear</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ConsoleColor.html">ConsoleColor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:7Console1poiyAA0A4TextVAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:7Console2peoiyyAA0A4TextVz_ADtF">+=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ActivityBar.html">ActivityBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ActivityIndicatorType.html">ActivityIndicatorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Console.html">Console</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConsoleError.html">ConsoleError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConsoleStyle.html">ConsoleStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConsoleText.html">ConsoleText</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConsoleTextFragment.html">ConsoleTextFragment</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CustomActivity.html">CustomActivity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LoadingBar.html">LoadingBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ProgressBar.html">ProgressBar</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>ConsoleText</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ConsoleText</span> <span class="p">:</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">ExpressibleByArrayLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>A collection of <code><a href="../Structs/ConsoleTextFragment.html">ConsoleTextFragment</a></code>s. Represents stylized text that can be outputted
+to a <code><a href="../Protocols/Console.html">Console</a></code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">ConsoleText</span> <span class="o">=</span> <span class="s">"Hello, "</span> <span class="o">+</span> <span class="s">"world"</span><span class="o">.</span><span class="nf">consoleText</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">green</span><span class="p">)</span>
+</code></pre>
+
+<p>See <code><a href="../Protocols/Console.html#/s:7ConsoleAAP6output_7newLineyAA0A4TextV_SbtF">Console.output(_:newLine:)</a></code> for more information.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextV10startIndexSivp"></a>
+                    <a name="//apple_ref/swift/Property/startIndex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextV10startIndexSivp">startIndex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Collection</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">startIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L30-L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextV8endIndexSivp"></a>
+                    <a name="//apple_ref/swift/Property/endIndex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextV8endIndexSivp">endIndex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Collection</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L35-L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextV5index5afterS2i_tF"></a>
+                    <a name="//apple_ref/swift/Method/index(after:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextV5index5afterS2i_tF">index(after:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Collection</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">after</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L40-L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextV11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextV11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>CustomStringConvertible</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L45-L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextV12arrayLiteralAcA0aB8FragmentVd_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(arrayLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextV12arrayLiteralAcA0aB8FragmentVd_tcfc">init(arrayLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>ExpressibleByArrayLiteral</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">arrayLiteral</span> <span class="nv">elements</span><span class="p">:</span> <span class="kt"><a href="../Structs/ConsoleTextFragment.html">ConsoleTextFragment</a></span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L50-L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextV13stringLiteralACSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextV13stringLiteralACSS_tcfc">init(stringLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>ExpressibleByStringLiteral</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">stringLiteral</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L56-L62">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextV9fragmentsSayAA0aB8FragmentVGvp"></a>
+                    <a name="//apple_ref/swift/Property/fragments" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextV9fragmentsSayAA0aB8FragmentVGvp">fragments</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>One or more <code><a href="../Structs/ConsoleTextFragment.html">ConsoleTextFragment</a></code>s making up this `ConsoleText.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fragments</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/ConsoleTextFragment.html">ConsoleTextFragment</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextV9fragmentsACSayAA0aB8FragmentVG_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(fragments:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextV9fragmentsACSayAA0aB8FragmentVG_tcfc">init(fragments:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>ConsoleText</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">fragments</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/ConsoleTextFragment.html">ConsoleTextFragment</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L68-L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextVyAA0aB8FragmentVSicip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextVyAA0aB8FragmentVSicip">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Collection</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">position</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ConsoleTextFragment.html">ConsoleTextFragment</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L73-L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Console0A4TextV7newLineACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/newLine" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Console0A4TextV7newLineACvpZ">newLine</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>\n</code> character with plain styling.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">newLine</span><span class="p">:</span> <span class="kt">ConsoleText</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Console/Output/ConsoleText.swift#L78">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

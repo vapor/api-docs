@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTTPChunkedStream Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/HTTPChunkedStream" class="dashAnchor"></a>
+
+    <a title="HTTPChunkedStream Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          HTTP Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/http">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E1%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">HTTP Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      HTTPChunkedStream Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPChunkedStream.html">HTTPChunkedStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPServer.html">HTTPServer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPSameSitePolicy.html">HTTPSameSitePolicy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ByteBuffer.html">ByteBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/HTTPHeaders.html">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONDecoder.html">JSONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONEncoder.html">JSONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/StaticString.html">StaticString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPClientProtocolUpgrader.html">HTTPClientProtocolUpgrader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPMessage.html">HTTPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPMessageDecoder.html">HTTPMessageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPMessageEncoder.html">HTTPMessageEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPServerResponder.html">HTTPServerResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LosslessHTTPBodyRepresentable.html">LosslessHTTPBodyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/URLRepresentable.html">URLRepresentable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BasicAuthorization.html">BasicAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BearerAuthorization.html">BearerAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPBody.html">HTTPBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPCookieValue.html">HTTPCookieValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPCookies.html">HTTPCookies</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPHeaderName.html">HTTPHeaderName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPPeer.html">HTTPPeer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPScheme.html">HTTPScheme</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaTypePreference.html">MediaTypePreference</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>HTTPChunkedStream</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">HTTPChunkedStream</span> <span class="p">:</span> <span class="kt">BasicWorker</span><span class="p">,</span> <span class="kt"><a href="../Protocols/LosslessHTTPBodyRepresentable.html">LosslessHTTPBodyRepresentable</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>&quot;Transfer-Encoding: chunked&quot;</code> stream of data used by <code><a href="../Structs/HTTPBody.html">HTTPBody</a></code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">chunkedStream</span> <span class="o">=</span> <span class="kt">HTTPChunkedStream</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">req</span><span class="p">)</span>
+<span class="n">background</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="kc">true</span> <span class="p">{</span>
+        <span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">try!</span> <span class="n">chunkedStream</span><span class="o">.</span><span class="nf">write</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="k">try</span> <span class="kt">HTTPResponse</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="o">.</span><span class="n">ok</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="n">chunkedStream</span><span class="p">)</span>
+</code></pre>
+
+<p><code>HTTPChunkedStream</code> allows you to send data asynchronously without a predefined length.
+The <code><a href="../Protocols/HTTPMessage.html">HTTPMessage</a></code> will be considered complete when the end chunk is sent.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP17HTTPChunkedStreamC0B7Handlera"></a>
+                    <a name="//apple_ref/swift/Alias/HTTPChunkedHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP17HTTPChunkedStreamC0B7Handlera">HTTPChunkedHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handles an incoming <code><a href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">HTTPChunkedHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a></span><span class="p">,</span> <span class="kt">HTTPChunkedStream</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPChunkedStream.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP17HTTPChunkedStreamC9eventLoop3NIO05EventE0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/eventLoop" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP17HTTPChunkedStreamC9eventLoop3NIO05EventE0_pvp">eventLoop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>BasicWorker</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">eventLoop</span><span class="p">:</span> <span class="kt">EventLoop</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPChunkedStream.swift#L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP17HTTPChunkedStreamC8isClosedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP17HTTPChunkedStreamC8isClosedSbvp">isClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, this <code>HTTPChunkedStream</code> has already sent an <code>end</code> chunk.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">isClosed</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPChunkedStream.swift#L29">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP17HTTPChunkedStreamCAC3NIO14EventLoopGroup_p2on_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP17HTTPChunkedStreamCAC3NIO14EventLoopGroup_p2on_tcfc">init(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>HTTPChunkedStream</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>worker</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Worker</code> to complete futures on.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPChunkedStream.swift#L35-L38">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP17HTTPChunkedStreamC4ready3NIO15EventLoopFutureCyytGAA0bC6ResultO_ACtcF"></a>
+                    <a name="//apple_ref/swift/Method/read(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP17HTTPChunkedStreamC4ready3NIO15EventLoopFutureCyytGAA0bC6ResultO_ACtcF">read(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets a handler for reading <code><a href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a></code>s from the stream.</p>
+<pre class="highlight swift"><code><span class="n">chunkedStream</span><span class="o">.</span><span class="n">read</span> <span class="p">{</span> <span class="n">res</span><span class="p">,</span> <span class="n">stream</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="c1">// prints the chunk</span>
+    <span class="k">return</span> <span class="o">.</span><span class="nf">done</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="n">stream</span><span class="p">)</span> <span class="c1">// you can do async work or just return done</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">read</span><span class="p">(</span><span class="n">_</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/HTTPChunkedStream.html#/s:4HTTP17HTTPChunkedStreamC0B7Handlera">HTTPChunkedHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/HTTPChunkedStream.html#/s:4HTTP17HTTPChunkedStreamC0B7Handlera">HTTPChunkedHandler</a></code> to use for receiving chunks from this stream.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPChunkedStream.swift#L49-L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP17HTTPChunkedStreamC5write3NIO15EventLoopFutureCyytGAA0bC6ResultOF"></a>
+                    <a name="//apple_ref/swift/Method/write(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP17HTTPChunkedStreamC5write3NIO15EventLoopFutureCyytGAA0bC6ResultOF">write(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes a <code><a href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a></code> to the stream.</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="n">chunkedStream</span><span class="o">.</span><span class="nf">write</span><span class="p">(</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+</code></pre>
+
+<p>You must wait for the returned <code>Future</code> to complete before writing additional data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">chunk</span><span class="p">:</span> <span class="kt"><a href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chunk</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a></code> to write to the stream.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Future</code> that will be completed when the write was successful.
+       You must wait for this future to complete before calling <code>write(_:)</code> again.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPChunkedStream.swift#L66-L79">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP17HTTPChunkedStreamC5drain3NIO15EventLoopFutureCy10Foundation4DataVGSi3max_tF"></a>
+                    <a name="//apple_ref/swift/Method/drain(max:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP17HTTPChunkedStreamC5drain3NIO15EventLoopFutureCy10Foundation4DataVGSi3max_tF">drain(max:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads all <code><a href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a></code>s from this stream until <code>end</code> is received.
+The output is combined into a single <code>Data</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try</span> <span class="n">stream</span><span class="o">.</span><span class="nf">drain</span><span class="p">(</span><span class="nv">max</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">// Data</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">drain</span><span class="p">(</span><span class="nv">max</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>max</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum number of bytes to allow before throwing an error.
+   Use this to prevent using excessive memory on your server.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>Future</code> containing the collected <code>Data</code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPChunkedStream.swift#L91-L109">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP17HTTPChunkedStreamC17convertToHTTPBodyAA0F0VyF"></a>
+                    <a name="//apple_ref/swift/Method/convertToHTTPBody()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP17HTTPChunkedStreamC17convertToHTTPBodyAA0F0VyF">convertToHTTPBody()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>HTTPBodyRepresentable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">convertToHTTPBody</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/HTTPBody.html">HTTPBody</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPChunkedStream.swift#L112-L114">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Data Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Extension/Data" class="dashAnchor"></a>
+
+    <a title="Data Extension Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Core Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/core">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fcore%2F3%2E4%2E0%2FCore%2Fdocsets%2FCore%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Core Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      Data Extension Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ProcessOutput.html">ProcessOutput</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decimal.html">Decimal</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decodable.html">Decodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Future.html">Future</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Process.html">Process</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Thread.html">Thread</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:4Core2qqoiy3NIO15EventLoopFutureCyxGAEyxSgG_xtlF">??(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyOptionalType.html">AnyOptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyReflectable.html">AnyReflectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyReflectionDecodable.html">AnyReflectionDecodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BasicKeyRepresentable.html">BasicKeyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataDecoder.html">DataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataEncoder.html">DataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FutureEncoder.html">FutureEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NestedData.html">NestedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/OptionalType.html">OptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Reflectable.html">Reflectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ReflectionDecodable.html">ReflectionDecodable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BasicKey.html">BasicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CaseInsensitiveString.html">CaseInsensitiveString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CoreError.html">CoreError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DirectoryConfig.html">DirectoryConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/File.html">File</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HeaderValue.html">HeaderValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaType.html">MediaType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NotFound.html">NotFound</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ProcessExecuteError.html">ProcessExecuteError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ReflectedProperty.html">ReflectedProperty</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Data</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Data</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span><span class="p">,</span> <span class="kt">RangeReplaceableCollection</span></code></pre>
+
+                </div>
+              </div>
+            
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE14reflectDecodedAC_ACtyFZ"></a>
+                    <a name="//apple_ref/swift/Method/reflectDecoded()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE14reflectDecodedAC_ACtyFZ">reflectDecoded()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ReflectionDecodable.html#/s:4Core19ReflectionDecodableP14reflectDecodedx_xtyKFZ">ReflectionDecodable.reflectDecoded()</a></code> for more information.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reflectDecoded</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/CodableReflection/ReflectionDecodable.swift#L121-L125">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE16base64URLEncoded7optionsACSgSS_So27NSDataBase64DecodingOptionsVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(base64URLEncoded:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE16base64URLEncoded7optionsACSgSS_So27NSDataBase64DecodingOptionsVtcfc">init(base64URLEncoded:options:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes a base64-url encoded string to data.</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4648#page-7">https://tools.ietf.org/html/rfc4648#page-7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">base64URLEncoded</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Data</span><span class="o">.</span><span class="kt">Base64DecodingOptions</span> <span class="o">=</span> <span class="p">[])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Base64URL.swift#L7-L9">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE16base64URLEncoded7optionsACSgAC_So27NSDataBase64DecodingOptionsVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(base64URLEncoded:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE16base64URLEncoded7optionsACSgAC_So27NSDataBase64DecodingOptionsVtcfc">init(base64URLEncoded:options:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes base64-url encoded data.</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4648#page-7">https://tools.ietf.org/html/rfc4648#page-7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">base64URLEncoded</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Data</span><span class="o">.</span><span class="kt">Base64DecodingOptions</span> <span class="o">=</span> <span class="p">[])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Base64URL.swift#L14-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE22base64URLEncodedString7optionsSSSo27NSDataBase64EncodingOptionsV_tF"></a>
+                    <a name="//apple_ref/swift/Method/base64URLEncodedString(options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE22base64URLEncodedString7optionsSSSo27NSDataBase64EncodingOptionsV_tF">base64URLEncodedString(options:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes data to a base64-url encoded string.</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4648#page-7">https://tools.ietf.org/html/rfc4648#page-7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">base64URLEncodedString</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="kt">Data</span><span class="o">.</span><span class="kt">Base64EncodingOptions</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options to use for the encoding. Default value is <code>[]</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The base64-url encoded string.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Base64URL.swift#L24-L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE016base64URLEncodedB07optionsACSo27NSDataBase64EncodingOptionsV_tF"></a>
+                    <a name="//apple_ref/swift/Method/base64URLEncodedData(options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE016base64URLEncodedB07optionsACSo27NSDataBase64EncodingOptionsV_tF">base64URLEncodedData(options:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes data to base64-url encoded data.</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4648#page-7">https://tools.ietf.org/html/rfc4648#page-7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">base64URLEncodedData</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="kt">Data</span><span class="o">.</span><span class="kt">Base64EncodingOptions</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options to use for the encoding. Default value is <code>[]</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The base64-url encoded data.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Base64URL.swift#L34-L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE17base64URLUnescapeyyF"></a>
+                    <a name="//apple_ref/swift/Method/base64URLUnescape()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE17base64URLUnescapeyyF">base64URLUnescape()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts base64-url encoded data to a base64 encoded data.</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4648#page-7">https://tools.ietf.org/html/rfc4648#page-7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">base64URLUnescape</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Base64URL.swift#L87-L100">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE15base64URLEscapeyyF"></a>
+                    <a name="//apple_ref/swift/Method/base64URLEscape()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE15base64URLEscapeyyF">base64URLEscape()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts base64 encoded data to a base64-url encoded data.</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4648#page-7">https://tools.ietf.org/html/rfc4648#page-7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">base64URLEscape</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Base64URL.swift#L105-L114">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE18base64URLUnescapedACyF"></a>
+                    <a name="//apple_ref/swift/Method/base64URLUnescaped()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE18base64URLUnescapedACyF">base64URLUnescaped()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts base64-url encoded data to a base64 encoded data.</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4648#page-7">https://tools.ietf.org/html/rfc4648#page-7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">base64URLUnescaped</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Base64URL.swift#L119-L123">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE16base64URLEscapedACyF"></a>
+                    <a name="//apple_ref/swift/Method/base64URLEscaped()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE16base64URLEscapedACyF">base64URLEscaped()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts base64 encoded data to a base64-url encoded data.</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4648#page-7">https://tools.ietf.org/html/rfc4648#page-7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">base64URLEscaped</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Base64URL.swift#L128-L132">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE16hexEncodedString9uppercaseSSSb_tF"></a>
+                    <a name="//apple_ref/swift/Method/hexEncodedString(uppercase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE16hexEncodedString9uppercaseSSSb_tF">hexEncodedString(uppercase:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts <code>Data</code> to a hex-encoded <code>String</code>.</p>
+<pre class="highlight swift"><code><span class="kt">Data</span><span class="p">(</span><span class="s">"hello"</span><span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">.</span><span class="nf">hexEncodedString</span><span class="p">()</span> <span class="c1">// 68656c6c6f</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hexEncodedString</span><span class="p">(</span><span class="nv">uppercase</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uppercase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code>, uppercase letters will be used when encoding.
+         Default value is <code>false</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Hex.swift#L11-L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE010hexEncodedB09uppercaseACSb_tF"></a>
+                    <a name="//apple_ref/swift/Method/hexEncodedData(uppercase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE010hexEncodedB09uppercaseACSb_tF">hexEncodedData(uppercase:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies hex-encoding to <code>Data</code>.</p>
+<pre class="highlight swift"><code><span class="kt">Data</span><span class="p">(</span><span class="s">"hello"</span><span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">.</span><span class="nf">hexEncodedData</span><span class="p">()</span> <span class="c1">// 68656c6c6f</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hexEncodedData</span><span class="p">(</span><span class="nv">uppercase</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uppercase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code>, uppercase letters will be used when encoding.
+         Default value is <code>false</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/Data+Hex.swift#L23-L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE7convert2toxxm_tAD08LosslessB11ConvertibleRzlF"></a>
+                    <a name="//apple_ref/swift/Method/convert(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE7convert2toxxm_tAD08LosslessB11ConvertibleRzlF">convert(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts this <code>Data</code> to a <code><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></code> type.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="kt">Data</span><span class="p">([</span><span class="mh">0x68</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">])</span><span class="o">.</span><span class="nf">convert</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="c1">// "hi"</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">convert</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">T</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></code> to convert to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Instance of the <code><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></code> type.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/LosslessDataConvertible.swift#L19-L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE09convertToB0ACyF"></a>
+                    <a name="//apple_ref/swift/Method/convertToData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE09convertToB0ACyF">convertToData()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></code> conformance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">convertToData</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/LosslessDataConvertible.swift#L57-L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4CoreE011convertFromB0yA2CFZ"></a>
+                    <a name="//apple_ref/swift/Method/convertFromData(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4CoreE011convertFromB0yA2CFZ">convertFromData(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Protocols/LosslessDataConvertible.html">LosslessDataConvertible</a></code> conformance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">convertFromData</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/core/tree/3.4.0/Sources/Core/LosslessDataConvertible.swift#L62-L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-06-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

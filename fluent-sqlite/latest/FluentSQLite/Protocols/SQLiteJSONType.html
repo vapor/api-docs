@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SQLiteJSONType Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/SQLiteJSONType" class="dashAnchor"></a>
+
+    <a title="SQLiteJSONType Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          FluentSQLite Docs
+        </a>
+         (58% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/fluent-sqlite">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Ffluent%2Dsqlite%2F3%2E0%2E0%2FFluentSQLite%2Fdocsets%2FFluentSQLite%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">FluentSQLite Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SQLiteJSONType Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FluentSQLiteProvider.html">FluentSQLiteProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FluentSQLiteQueryStatement.html">FluentSQLiteQueryStatement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FluentSQLiteSchemaStatement.html">FluentSQLiteSchemaStatement</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLiteDataConvertible.html">SQLiteDataConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLiteDataTypeStaticRepresentable.html">SQLiteDataTypeStaticRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLiteDatabase.html">SQLiteDatabase</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteJSONType.html">SQLiteJSONType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B9MigrationP">SQLiteMigration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteModel.html">SQLiteModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B5PivotP">SQLitePivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteStringModel.html">SQLiteStringModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B11StringPivotP">SQLiteStringPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B5TableP">SQLiteTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SQLiteUUIDModel.html">SQLiteUUIDModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite0B9UUIDPivotP">SQLiteUUIDPivot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12FluentSQLite01_B5ModelP">_SQLiteModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentSQLiteError.html">FluentSQLiteError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentSQLiteQuery.html">FluentSQLiteQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FluentSQLiteSchema.html">FluentSQLiteSchema</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:12FluentSQLite0B5Cachea">SQLiteCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:12FluentSQLite0B8EnumTypea">SQLiteEnumType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:12FluentSQLite0B4Typea">SQLiteType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>SQLiteJSONType</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SQLiteJSONType</span> <span class="p">:</span> <span class="kt">SQLiteDataConvertible</span><span class="p">,</span> <span class="kt">SQLiteDataTypeStaticRepresentable</span><span class="p">,</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">Encodable</span></code></pre>
+
+                </div>
+              </div>
+            <p>This protocol makes it easy to declare nested structs on <code><a href="../Protocols/SQLiteModel.html">SQLiteModel</a></code>&lsquo;s that will be stored as JSON-encoded data.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Pet</span><span class="p">:</span> <span class="kt">SQLiteJSONType</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">SQLiteModel</span><span class="p">,</span> <span class="kt">Migration</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span>
+    <span class="k">var</span> <span class="nv">pet</span><span class="p">:</span> <span class="kt">Pet</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The above models will result in the following schema:</p>
+<pre class="highlight swift"><code><span class="kt">CREATE</span> <span class="kt">TABLE</span> <span class="p">`</span><span class="nv">users</span><span class="p">`</span> <span class="p">(`</span><span class="nv">id</span><span class="p">`</span> <span class="kt">INTEGER</span> <span class="kt">PRIMARY</span> <span class="kt">KEY</span><span class="p">,</span> <span class="p">`</span><span class="nv">pet</span><span class="p">`</span> <span class="kt">BLOB</span> <span class="kt">NOT</span> <span class="kt">NULL</span><span class="p">)</span>
+</code></pre>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/JSON"></a>
+                <a name="//apple_ref/swift/Section/JSON" class="dashAnchor"></a>
+                <a href="#/JSON">
+                  <h3 class="section-name">JSON</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12FluentSQLite0B8JSONTypePAAE14sqliteDataType0B00beF0OvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/sqliteDataType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12FluentSQLite0B8JSONTypePAAE14sqliteDataType0B00beF0OvpZ">sqliteDataType</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use the <code>Data</code>&lsquo;s <code>SQLiteFieldType</code> to store the JSON-encoded data.</p>
+
+<p>See <code>SQLiteFieldTypeStaticRepresentable.sqliteFieldType</code> for more information.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">sqliteDataType</span><span class="p">:</span> <span class="kt">SQLiteDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteTypes.swift#L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12FluentSQLite0B8JSONTypePAAE09convertToB4Data0B00bF0OyKF"></a>
+                    <a name="//apple_ref/swift/Method/convertToSQLiteData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12FluentSQLite0B8JSONTypePAAE09convertToB4Data0B00bF0OyKF">convertToSQLiteData()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>JSON-encode <code>Self</code> to <code>Data</code>.</p>
+
+<p>See <code><a href="../Extensions/SQLiteDataConvertible.html#/s:6SQLite0A15DataConvertibleP06FluentA0SYRzAaB8RawValueSYRpzrlE09convertToaB0AA0aB0OyKF">SQLiteDataConvertible.convertToSQLiteData()</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">convertToSQLiteData</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">SQLiteData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteTypes.swift#L37-L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12FluentSQLite0B8JSONTypePAAE011convertFromB4Datayx0B00bF0OKFZ"></a>
+                    <a name="//apple_ref/swift/Method/convertFromSQLiteData(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12FluentSQLite0B8JSONTypePAAE011convertFromB4Datayx0B00bF0OKFZ">convertFromSQLiteData(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>JSON-decode <code>Data</code> to <code>Self</code>.</p>
+
+<p>See <code><a href="../Extensions/SQLiteDataConvertible.html#/s:6SQLite0A15DataConvertibleP06FluentA0SYRzAaB8RawValueSYRpzrlE011convertFromaB0yxAA0aB0OKFZ">SQLiteDataConvertible.convertFromSQLiteData(_:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">convertFromSQLiteData</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">SQLiteData</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/fluent-sqlite/tree/3.0.0/Sources/FluentSQLite/SQLiteTypes.swift#L44-L46">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-07-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

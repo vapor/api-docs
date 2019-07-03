@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTTPBody Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/HTTPBody" class="dashAnchor"></a>
+
+    <a title="HTTPBody Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          HTTP Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/http">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E1%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">HTTP Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      HTTPBody Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPChunkedStream.html">HTTPChunkedStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPServer.html">HTTPServer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPSameSitePolicy.html">HTTPSameSitePolicy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ByteBuffer.html">ByteBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/HTTPHeaders.html">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONDecoder.html">JSONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONEncoder.html">JSONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/StaticString.html">StaticString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPClientProtocolUpgrader.html">HTTPClientProtocolUpgrader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPMessage.html">HTTPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPMessageDecoder.html">HTTPMessageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPMessageEncoder.html">HTTPMessageEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPServerResponder.html">HTTPServerResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LosslessHTTPBodyRepresentable.html">LosslessHTTPBodyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/URLRepresentable.html">URLRepresentable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BasicAuthorization.html">BasicAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BearerAuthorization.html">BearerAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPBody.html">HTTPBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPCookieValue.html">HTTPCookieValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPCookies.html">HTTPCookies</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPHeaderName.html">HTTPHeaderName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPPeer.html">HTTPPeer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPScheme.html">HTTPScheme</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaTypePreference.html">MediaTypePreference</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>HTTPBody</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HTTPBody</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/LosslessHTTPBodyRepresentable.html">LosslessHTTPBodyRepresentable</a></span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents an <code><a href="../Protocols/HTTPMessage.html">HTTPMessage</a></code>&lsquo;s body.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">body</span> <span class="o">=</span> <span class="kt">HTTPBody</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"Hello, world!"</span><span class="p">)</span>
+</code></pre>
+
+<p>This can contain any data (streaming or static) and should match the message&rsquo;s <code>&quot;Content-Type&quot;</code> header.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyV5emptyACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/empty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyV5emptyACvpZ">empty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An empty <code>HTTPBody</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">empty</span><span class="p">:</span> <span class="kt">HTTPBody</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L8">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyV4data10Foundation4DataVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyV4data10Foundation4DataVSgvp">data</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the body&rsquo;s contents as <code>Data</code>. <code>nil</code> if the body is streaming.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L11-L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyV5countSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/count" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyV5countSiSgvp">count</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The size of the body&rsquo;s contents. <code>nil</code> if the body is streaming.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L16-L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyV11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyV11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>CustomStringConvertible</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L21-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyV16debugDescriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/debugDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyV16debugDescriptionSSvp">debugDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>CustomDebugStringConvertible</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L33-L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyVACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyVACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an empty body. Useful for <code>GET</code> requests where HTTP bodies are forbidden.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L58-L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyVAC10Foundation4DataV4data_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyVAC10Foundation4DataV4data_tcfc">init(data:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new body wrapping <code>Data</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L63-L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyVAC8Dispatch0C4DataV08dispatchD0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dispatchData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyVAC8Dispatch0C4DataV08dispatchD0_tcfc">init(dispatchData:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new body wrapping <code>DispatchData</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">dispatchData</span><span class="p">:</span> <span class="kt">DispatchData</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L68-L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyVACs12StaticStringV06staticD0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(staticString:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyVACs12StaticStringV06staticD0_tcfc">init(staticString:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new body from the UTF8 representation of a <code>StaticString</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">staticString</span><span class="p">:</span> <span class="kt">StaticString</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L73-L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyVACSS6string_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(string:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyVACSS6string_tcfc">init(string:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new body from the UTF8 representation of a <code>String</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L78-L80">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyVAcA17HTTPChunkedStreamC7chunked_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(chunked:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyVAcA17HTTPChunkedStreamC7chunked_tcfc">init(chunked:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new body from an <code><a href="../Classes/HTTPChunkedStream.html">HTTPChunkedStream</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">chunked</span><span class="p">:</span> <span class="kt"><a href="../Classes/HTTPChunkedStream.html">HTTPChunkedStream</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L83-L85">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyVAC3NIO10ByteBufferV6buffer_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(buffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyVAC3NIO10ByteBufferV6buffer_tcfc">init(buffer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new body from a Swift NIO <code>ByteBuffer</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">buffer</span><span class="p">:</span> <span class="kt">ByteBuffer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L88-L90">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyV11consumeData3NIO15EventLoopFutureCy10Foundation0D0VGSi3max_AE0fG5Group_p2ontF"></a>
+                    <a name="//apple_ref/swift/Method/consumeData(max:on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyV11consumeData3NIO15EventLoopFutureCy10Foundation0D0VGSi3max_AE0fG5Group_p2ontF">consumeData(max:on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Consumes the body if it is a stream. Otherwise, returns the same value as the <code><a href="../Structs/HTTPBody.html#/s:4HTTP8HTTPBodyV4data10Foundation4DataVSgvp">data</a></code> property.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try</span> <span class="n">httpRes</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="nf">consumeData</span><span class="p">(</span><span class="nv">max</span><span class="p">:</span> <span class="mi">1_000_000</span><span class="p">,</span> <span class="nv">on</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">consumeData</span><span class="p">(</span><span class="nv">max</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1_000_000</span><span class="p">,</span> <span class="n">on</span> <span class="nv">worker</span><span class="p">:</span> <span class="kt">Worker</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>max</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum streaming body size to allow.
+   This only applies to streaming bodies, like chunked streams.
+   Defaults to 1MB.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>worker</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The event loop to perform this async work on.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L106-L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP8HTTPBodyV09convertToB0ACyF"></a>
+                    <a name="//apple_ref/swift/Method/convertToHTTPBody()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP8HTTPBodyV09convertToB0ACyF">convertToHTTPBody()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/LosslessHTTPBodyRepresentable.html">LosslessHTTPBodyRepresentable</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">convertToHTTPBody</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">HTTPBody</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Body/HTTPBody.swift#L111-L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTTPClientProtocolUpgrader Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/HTTPClientProtocolUpgrader" class="dashAnchor"></a>
+
+    <a title="HTTPClientProtocolUpgrader Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          HTTP Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/http">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fhttp%2F3%2E1%2E0%2FHTTP%2Fdocsets%2FHTTP%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">HTTP Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      HTTPClientProtocolUpgrader Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPChunkedStream.html">HTTPChunkedStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPServer.html">HTTPServer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPChunkedStreamResult.html">HTTPChunkedStreamResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPSameSitePolicy.html">HTTPSameSitePolicy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ByteBuffer.html">ByteBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/HTTPHeaders.html">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONDecoder.html">JSONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONEncoder.html">JSONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/StaticString.html">StaticString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPClientProtocolUpgrader.html">HTTPClientProtocolUpgrader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPMessage.html">HTTPMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPMessageDecoder.html">HTTPMessageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPMessageEncoder.html">HTTPMessageEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HTTPServerResponder.html">HTTPServerResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LosslessHTTPBodyRepresentable.html">LosslessHTTPBodyRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/URLRepresentable.html">URLRepresentable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BasicAuthorization.html">BasicAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BearerAuthorization.html">BearerAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPBody.html">HTTPBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPCookieValue.html">HTTPCookieValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPCookies.html">HTTPCookies</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPHeaderName.html">HTTPHeaderName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPPeer.html">HTTPPeer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HTTPScheme.html">HTTPScheme</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaTypePreference.html">MediaTypePreference</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>HTTPClientProtocolUpgrader</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPClientProtocolUpgrader</span></code></pre>
+
+                </div>
+              </div>
+            <p>Can be used to upgrade <code><a href="../Classes/HTTPClient.html">HTTPClient</a></code> requests using the static <code><a href="../Classes/HTTPClient.html#/s:4HTTP10HTTPClientC7upgrade3NIO15EventLoopFutureCy13UpgradeResultQzGAA10HTTPSchemeV6scheme_SS8hostnameSiSg4portx8upgraderAE0eF5Group_p2ontAA0B16ProtocolUpgraderRzlFZ">HTTPClient.upgrade(...)</a></code> method.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP26HTTPClientProtocolUpgraderP13UpgradeResult"></a>
+                    <a name="//apple_ref/swift/Alias/UpgradeResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP26HTTPClientProtocolUpgraderP13UpgradeResult">UpgradeResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Associated upgrade type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">UpgradeResult</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClientProtocolUpgrader.swift#L46">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP26HTTPClientProtocolUpgraderP19buildUpgradeRequest8NIOHTTP115HTTPRequestHeadVyF"></a>
+                    <a name="//apple_ref/swift/Method/buildUpgradeRequest()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP26HTTPClientProtocolUpgraderP19buildUpgradeRequest8NIOHTTP115HTTPRequestHeadVyF">buildUpgradeRequest()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Builds the <code>HTTPRequestHead</code> that will be sent when the <code><a href="../Classes/HTTPClient.html">HTTPClient</a></code> connects.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">buildUpgradeRequest</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">HTTPRequestHead</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClientProtocolUpgrader.swift#L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP26HTTPClientProtocolUpgraderP22isValidUpgradeResponseSb8NIOHTTP116HTTPResponseHeadVF"></a>
+                    <a name="//apple_ref/swift/Method/isValidUpgradeResponse(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP26HTTPClientProtocolUpgraderP22isValidUpgradeResponseSb8NIOHTTP116HTTPResponseHeadVF">isValidUpgradeResponse(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the <code>HTTPResponseHead</code> is valid. If <code>false</code>,
+the upgrade will be aborted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isValidUpgradeResponse</span><span class="p">(</span><span class="n">_</span> <span class="nv">upgradeResponse</span><span class="p">:</span> <span class="kt">HTTPResponseHead</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClientProtocolUpgrader.swift#L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4HTTP26HTTPClientProtocolUpgraderP7upgrade3NIO15EventLoopFutureCy13UpgradeResultQzGAE21ChannelHandlerContextC3ctx_8NIOHTTP116HTTPResponseHeadV0E8ResponsetF"></a>
+                    <a name="//apple_ref/swift/Method/upgrade(ctx:upgradeResponse:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4HTTP26HTTPClientProtocolUpgraderP7upgrade3NIO15EventLoopFutureCy13UpgradeResultQzGAE21ChannelHandlerContextC3ctx_8NIOHTTP116HTTPResponseHeadV0E8ResponsetF">upgrade(ctx:upgradeResponse:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if <code>isValidUpgradeResponse</code> returns <code>true</code>. This should return the <code><a href="../Protocols/HTTPClientProtocolUpgrader.html#/s:4HTTP26HTTPClientProtocolUpgraderP13UpgradeResult">UpgradeResult</a></code>
+that will ultimately be returned by <code><a href="../Classes/HTTPClient.html#/s:4HTTP10HTTPClientC7upgrade3NIO15EventLoopFutureCy13UpgradeResultQzGAA10HTTPSchemeV6scheme_SS8hostnameSiSg4portx8upgraderAE0eF5Group_p2ontAA0B16ProtocolUpgraderRzlFZ">HTTPClient.upgrade(...)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">upgrade</span><span class="p">(</span><span class="nv">ctx</span><span class="p">:</span> <span class="kt">ChannelHandlerContext</span><span class="p">,</span> <span class="nv">upgradeResponse</span><span class="p">:</span> <span class="kt">HTTPResponseHead</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/HTTPClientProtocolUpgrader.html#/s:4HTTP26HTTPClientProtocolUpgraderP13UpgradeResult">UpgradeResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/http/tree/3.1.0/Sources/HTTP/Responder/HTTPClientProtocolUpgrader.swift#L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2018-08-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

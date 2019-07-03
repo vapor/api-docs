@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Logger Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/Logger" class="dashAnchor"></a>
+
+    <a title="Logger Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Logging Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/console">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2F3%2E1%2E1%2FLogging%2Fdocsets%2FLogging%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Logging Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      Logger Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PrintLogger.html">PrintLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Logger.html">Logger</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Logger</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Logger</span></code></pre>
+
+                </div>
+              </div>
+            <p>Capable of logging messages.</p>
+<pre class="highlight swift"><code><span class="n">logger</span><span class="o">.</span><span class="nf">info</span><span class="p">(</span><span class="s">"This is an informational log"</span><span class="p">)</span>
+</code></pre>
+
+<p>The above code yields:</p>
+<pre class="highlight swift"><code><span class="p">[</span> <span class="kt">INFO</span> <span class="p">]</span> <span class="kt">This</span> <span class="k">is</span> <span class="n">an</span> <span class="n">informational</span> <span class="nf">log</span> <span class="p">(</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">file</span><span class="o">.</span><span class="nv">swift</span><span class="p">:</span><span class="mi">42</span><span class="p">)</span>
+</code></pre>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging6LoggerP3log_2at4file8function4line6columnySS_AA8LogLevelOS2SS2utF"></a>
+                    <a name="//apple_ref/swift/Method/log(_:at:file:function:line:column:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging6LoggerP3log_2at4file8function4line6columnySS_AA8LogLevelOS2SS2utF">log(_:at:file:function:line:column:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logs an encodable at the provided log level The encodable can be encoded to the required format.
+The log level indicates the type of log and/or severity</p>
+
+<p>Normally, you will use one of the convenience methods (i.e., <code><a href="../Protocols/Logger.html#/s:7Logging6LoggerPAAE7verbose_4file8function4line6columnySS_S2SS2utF">verbose(...)</a></code>, <code><a href="../Protocols/Logger.html#/s:7Logging6LoggerPAAE4info_4file8function4line6columnySS_S2SS2utF">info(...)</a></code>).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">log</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">at</span> <span class="nv">level</span><span class="p">:</span> <span class="kt"><a href="../Enums/LogLevel.html">LogLevel</a></span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/Logger.swift#L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging6LoggerPAAE7verbose_4file8function4line6columnySS_S2SS2utF"></a>
+                    <a name="//apple_ref/swift/Method/verbose(_:file:function:line:column:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging6LoggerPAAE7verbose_4file8function4line6columnySS_S2SS2utF">verbose(_:file:function:line:column:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Verbose logs are used to log tiny, usually irrelevant information.
+They are helpful when tracing specific lines of code and their results</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">verbose</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/Logger.swift#L20-L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging6LoggerPAAE5debug_4file8function4line6columnySS_S2SS2utF"></a>
+                    <a name="//apple_ref/swift/Method/debug(_:file:function:line:column:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging6LoggerPAAE5debug_4file8function4line6columnySS_S2SS2utF">debug(_:file:function:line:column:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Debug logs are used to debug problems</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">debug</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/Logger.swift#L25-L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging6LoggerPAAE4info_4file8function4line6columnySS_S2SS2utF"></a>
+                    <a name="//apple_ref/swift/Method/info(_:file:function:line:column:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging6LoggerPAAE4info_4file8function4line6columnySS_S2SS2utF">info(_:file:function:line:column:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Info logs are used to indicate a specific infrequent event occurring.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">info</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/Logger.swift#L30-L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging6LoggerPAAE7warning_4file8function4line6columnySS_S2SS2utF"></a>
+                    <a name="//apple_ref/swift/Method/warning(_:file:function:line:column:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging6LoggerPAAE7warning_4file8function4line6columnySS_S2SS2utF">warning(_:file:function:line:column:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Warnings are used to indicate something should be fixed but may not have to be solved yet</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">warning</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/Logger.swift#L35-L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging6LoggerPAAE5error_4file8function4line6columnySS_S2SS2utF"></a>
+                    <a name="//apple_ref/swift/Method/error(_:file:function:line:column:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging6LoggerPAAE5error_4file8function4line6columnySS_S2SS2utF">error(_:file:function:line:column:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error, indicates something went wrong and a part of the execution was failed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/Logger.swift#L40-L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging6LoggerPAAE5fatal_4file8function4line6columnySS_S2SS2utF"></a>
+                    <a name="//apple_ref/swift/Method/fatal(_:file:function:line:column:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging6LoggerPAAE5fatal_4file8function4line6columnySS_S2SS2utF">fatal(_:file:function:line:column:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fatal errors/crashes, execution should/must be cancelled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fatal</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/Logger.swift#L45-L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

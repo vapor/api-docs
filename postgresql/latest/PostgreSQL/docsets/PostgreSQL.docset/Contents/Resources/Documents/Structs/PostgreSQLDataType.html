@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PostgreSQLDataType Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/PostgreSQLDataType" class="dashAnchor"></a>
+
+    <a title="PostgreSQLDataType Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          PostgreSQL Docs
+        </a>
+         (99% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/postgresql">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fpostgresql%2F1%2E4%2E1%2FPostgreSQL%2Fdocsets%2FPostgreSQL%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">PostgreSQL Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      PostgreSQLDataType Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection.html">PostgreSQLConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection/ServerAddress.html">– ServerAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection/TableNameCache.html">– TableNameCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLConnection/TransportConfig.html">– TransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLDatabase.html">PostgreSQLDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLDropIndexBuilder.html">PostgreSQLDropIndexBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostgreSQLProvider.html">PostgreSQLProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLBoolLiteral.html">PostgreSQLBoolLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLPrimaryKeyDefault.html">PostgreSQLPrimaryKeyDefault</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLPrimaryKeyDefault/Generated.html">– Generated</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PostgreSQLQuery.html">PostgreSQLQuery</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/BinaryFloatingPoint.html">BinaryFloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ChannelPipeline.html">ChannelPipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/DatabaseIdentifier.html">DatabaseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FixedWidthInteger.html">FixedWidthInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int16.html">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int8.html">Int8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLConnectable.html">SQLConnectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SQLInsertBuilder.html">SQLInsertBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt.html">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLDataConvertible.html">PostgreSQLDataConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLDataTypeStaticRepresentable.html">PostgreSQLDataTypeStaticRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLExpressionRepresentable.html">PostgreSQLExpressionRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PostgreSQLLogger.html">PostgreSQLLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:10PostgreSQL0A8SQLTableP">PostgreSQLTable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLAlterTable.html">PostgreSQLAlterTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLAlterTable/DropAction.html">– DropAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLBinaryOperator.html">PostgreSQLBinaryOperator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLBind.html">PostgreSQLBind</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLBind/Value.html">– Value</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLCollation.html">PostgreSQLCollation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLColumn.html">PostgreSQLColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLData.html">PostgreSQLData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDataFormat.html">PostgreSQLDataFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDataType.html">PostgreSQLDataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDatabaseConfig.html">PostgreSQLDatabaseConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDefaultLiteral.html">PostgreSQLDefaultLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLDropIndex.html">PostgreSQLDropIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLError.html">PostgreSQLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLFunction.html">PostgreSQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLInsert.html">PostgreSQLInsert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLPoint.html">PostgreSQLPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLPolygon.html">PostgreSQLPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLResultFormat.html">PostgreSQLResultFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PostgreSQLUpsert.html">PostgreSQLUpsert</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLColumnConstrainta">PostgreSQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A28SQLColumnConstraintAlgorithma">PostgreSQLColumnConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLColumnDefinitiona">PostgreSQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLColumnIdentifiera">PostgreSQLColumnIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A14SQLCreateIndexa">PostgreSQLCreateIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A14SQLCreateTablea">PostgreSQLCreateTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A9SQLDeletea">PostgreSQLDelete</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A12SQLDirectiona">PostgreSQLDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A11SQLDistincta">PostgreSQLDistinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A12SQLDropTablea">PostgreSQLDropTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLExpressiona">PostgreSQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLForeignKeya">PostgreSQLForeignKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLForeignKeyActiona">PostgreSQLForeignKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A10SQLGroupBya">PostgreSQLGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLIdentifiera">PostgreSQLIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A16SQLIndexModifiera">PostgreSQLIndexModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A7SQLJoina">PostgreSQLJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A13SQLJoinMethoda">PostgreSQLJoinMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A10SQLLiterala">PostgreSQLLiteral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A10SQLOrderBya">PostgreSQLOrderBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A9SQLSelecta">PostgreSQLSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A19SQLSelectExpressiona">PostgreSQLSelectExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A18SQLTableConstrainta">PostgreSQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A27SQLTableConstraintAlgorithma">PostgreSQLTableConstraintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A18SQLTableIdentifiera">PostgreSQLTableIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:10PostgreSQL0A9SQLUpdatea">PostgreSQLUpdate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>PostgreSQLDataType</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PostgreSQLDataType</span> <span class="p">:</span> <span class="kt">SQLDataType</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
+
+                </div>
+              </div>
+            <p>PostgreSQL specific <code>SQLDataType</code>.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV2eeoiySbAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV2eeoiySbAC_ACtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>Equatable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L4-L8">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV04dataD014appropriateForACSgypXp_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/dataType(appropriateFor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV04dataD014appropriateForACSgypXp_tFZ">dataType(appropriateFor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLDataType</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">dataType</span><span class="p">(</span><span class="n">appropriateFor</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Any</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L11-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4int8ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4int8ACvpZ">int8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>signed eight-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">int8</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L19-L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6bigintACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bigint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6bigintACvpZ">bigint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>signed eight-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bigint</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L24-L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7serial8ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/serial8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7serial8ACvpZ">serial8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>autoincrementing eight-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">serial8</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L29-L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV9bigserialACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bigserial" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV9bigserialACvpZ">bigserial</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>autoincrementing eight-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bigserial</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L34-L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV3bitACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV3bitACvpZ">bit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>fixed-length bit string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bit</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L39-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV3bityACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/bit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV3bityACSiFZ">bit(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>fixed-length bit string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">bit</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L44-L46">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6varbitACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/varbit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6varbitACvpZ">varbit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>variable-length bit string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">varbit</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L49-L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6varbityACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/varbit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6varbityACSiFZ">varbit(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>variable-length bit string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">varbit</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L54-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4boolACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bool" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4boolACvpZ">bool</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>logical Boolean (true/false)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bool</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L59-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7booleanACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/boolean" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7booleanACvpZ">boolean</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>logical Boolean (true/false)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">boolean</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L64-L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV3boxACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/box" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV3boxACvpZ">box</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>rectangular box on a plane</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">box</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L69-L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV5byteaACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/bytea" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV5byteaACvpZ">bytea</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>binary data (“byte array”)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bytea</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L74-L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4charACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/char" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4charACvpZ">char</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>fixed-length character string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">char</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L79-L81">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4charyACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/char(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4charyACSiFZ">char(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>fixed-length character string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">char</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L84-L86">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7varcharACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/varchar" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7varcharACvpZ">varchar</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>variable-length character string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">varchar</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L89-L91">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7varcharyACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/varchar(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7varcharyACSiFZ">varchar(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>variable-length character string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">varchar</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L94-L96">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4cidrACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/cidr" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4cidrACvpZ">cidr</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>IPv4 or IPv6 network address</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">cidr</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L99-L101">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6circleACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/circle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6circleACvpZ">circle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>circle on a plane</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">circle</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L104-L106">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4dateACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/date" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4dateACvpZ">date</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>calendar date (year, month, day)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L109-L111">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6float8ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/float8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6float8ACvpZ">float8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>floating-point number (8 bytes)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">float8</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L114-L116">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV15doublePrecisionACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/doublePrecision" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV15doublePrecisionACvpZ">doublePrecision</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>floating-point number (8 bytes)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">doublePrecision</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L119-L121">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4inetACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/inet" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4inetACvpZ">inet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>IPv4 or IPv6 host address</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">inet</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L124-L126">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV3intACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV3intACvpZ">int</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>signed four-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">int</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L129-L131">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4int4ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4int4ACvpZ">int4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>signed four-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">int4</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L134-L136">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7integerACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/integer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7integerACvpZ">integer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>signed four-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">integer</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L139-L141">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV8intervalACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/interval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV8intervalACvpZ">interval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>time span</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L144-L146">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4jsonACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/json" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4jsonACvpZ">json</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>textual JSON data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">json</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L149-L151">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV5jsonbACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/jsonb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV5jsonbACvpZ">jsonb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>binary JSON data, decomposed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">jsonb</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L154-L156">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4lineACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/line" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4lineACvpZ">line</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>infinite line on a plane</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L159-L161">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4lsegACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/lseg" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4lsegACvpZ">lseg</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>line segment on a plane</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">lseg</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L164-L166">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7macaddrACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/macaddr" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7macaddrACvpZ">macaddr</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MAC (Media Access Control) address</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">macaddr</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L169-L171">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV8macaddr8ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/macaddr8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV8macaddr8ACvpZ">macaddr8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MAC (Media Access Control) address (EUI-64 format)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">macaddr8</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L174-L176">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV5moneyACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/money" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV5moneyACvpZ">money</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>currency amount</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">money</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L179-L181">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7decimalACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/decimal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7decimalACvpZ">decimal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>exact numeric of selectable precision</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">decimal</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L184-L186">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7decimalyACSi_SitFZ"></a>
+                    <a name="//apple_ref/swift/Method/decimal(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7decimalyACSi_SitFZ">decimal(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>exact numeric of selectable precision</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">decimal</span><span class="p">(</span><span class="n">_</span> <span class="nv">p</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L189-L191">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7numericyACSi_SitFZ"></a>
+                    <a name="//apple_ref/swift/Method/numeric(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7numericyACSi_SitFZ">numeric(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>exact numeric of selectable precision</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">numeric</span><span class="p">(</span><span class="n">_</span> <span class="nv">p</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L194-L196">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7numericACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/numeric" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7numericACvpZ">numeric</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>exact numeric of selectable precision</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">numeric</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L199-L201">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4pathACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/path" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4pathACvpZ">path</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>geometric path on a plane</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L204-L206">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV5pgLSNACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/pgLSN" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV5pgLSNACvpZ">pgLSN</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>PostgreSQL Log Sequence Number</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">pgLSN</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L209-L211">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV5pointACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/point" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV5pointACvpZ">point</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>geometric point on a plane</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">point</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L214-L216">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7polygonACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/polygon" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7polygonACvpZ">polygon</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>closed geometric path on a plane</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">polygon</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L219-L221">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6float4ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/float4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6float4ACvpZ">float4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>single precision floating-point number (4 bytes)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">float4</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L224-L226">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4realACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/real" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4realACvpZ">real</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>single precision floating-point number (4 bytes)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">real</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L229-L231">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4int2ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/int2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4int2ACvpZ">int2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>signed two-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">int2</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L234-L236">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV8smallintACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/smallint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV8smallintACvpZ">smallint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>signed two-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">smallint</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L239-L241">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7serial2ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/serial2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7serial2ACvpZ">serial2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>autoincrementing two-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">serial2</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L244-L246">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV11smallserialACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/smallserial" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV11smallserialACvpZ">smallserial</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>autoincrementing two-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">smallserial</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L249-L251">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7serial4ACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/serial4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7serial4ACvpZ">serial4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>autoincrementing four-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">serial4</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L254-L256">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6serialACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/serial" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6serialACvpZ">serial</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>autoincrementing four-byte integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">serial</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L259-L261">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4textACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/text" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4textACvpZ">text</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>variable-length character string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L264-L266">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4timeACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/time" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4timeACvpZ">time</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>time of day (no time zone)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">time</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L269-L271">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4timeyACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/time(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4timeyACSiFZ">time(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>time of day (no time zone)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">time</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L274-L276">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6timetzACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/timetz" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6timetzACvpZ">timetz</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>time of day, including time zone</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">timetz</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L279-L281">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6timetzyACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/timetz(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6timetzyACSiFZ">timetz(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>time of day, including time zone</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">timetz</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L284-L286">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV9timestampACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/timestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV9timestampACvpZ">timestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>date and time (no time zone)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L289-L291">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV9timestampyACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/timestamp(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV9timestampyACSiFZ">timestamp(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>date and time (no time zone)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">timestamp</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L294-L296">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV11timestamptzACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/timestamptz" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV11timestamptzACvpZ">timestamptz</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>date and time, including time zone</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">timestamptz</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L299-L301">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV11timestamptzyACSiFZ"></a>
+                    <a name="//apple_ref/swift/Method/timestamptz(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV11timestamptzyACSiFZ">timestamptz(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>date and time, including time zone</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">timestamptz</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L304-L306">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV7tsqueryACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/tsquery" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV7tsqueryACvpZ">tsquery</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>text search query</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">tsquery</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L309-L311">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV8tsvectorACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/tsvector" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV8tsvectorACvpZ">tsvector</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>text search document</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">tsvector</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L314-L316">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV12txidSnapshotACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/txidSnapshot" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV12txidSnapshotACvpZ">txidSnapshot</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>user-level transaction ID snapshot</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">txidSnapshot</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L319-L321">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV4uuidACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/uuid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV4uuidACvpZ">uuid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>universally unique identifier</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">uuid</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L324-L326">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV3xmlACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/xml" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV3xmlACvpZ">xml</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>XML data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">xml</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L329-L331">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV6customyACSSFZ"></a>
+                    <a name="//apple_ref/swift/Method/custom(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV6customyACSSFZ">custom(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>User-defined type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">custom</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L334-L336">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV5arrayyA2CFZ"></a>
+                    <a name="//apple_ref/swift/Method/array(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV5arrayyA2CFZ">array(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an array type from a <code>PostgreSQLDataType</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">array</span><span class="p">(</span><span class="n">_</span> <span class="nv">dataType</span><span class="p">:</span> <span class="kt">PostgreSQLDataType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PostgreSQLDataType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L339-L341">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PostgreSQL0A11SQLDataTypeV9serializeySSSaySE_pGzF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PostgreSQL0A11SQLDataTypeV9serializeySSSaySE_pGzF">serialize(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>SQLSerializable</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">_</span> <span class="nv">binds</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Encodable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/postgresql/tree/1.4.1/Sources/PostgreSQL/SQL/PostgreSQLQuery+DataType.swift#L577-L583">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

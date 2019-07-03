@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LogLevel Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Enum/LogLevel" class="dashAnchor"></a>
+
+    <a title="LogLevel Enumeration Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Logging Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vapor/console">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fapi%2Evapor%2Ecodes%2Fconsole%2F3%2E1%2E1%2FLogging%2Fdocsets%2FLogging%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Logging Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      LogLevel Enumeration Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PrintLogger.html">PrintLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Logger.html">Logger</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>LogLevel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LogLevel</span> <span class="p">:</span> <span class="kt">ExpressibleByStringLiteral</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>All log levels</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging8LogLevelO7verboseyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/verbose" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging8LogLevelO7verboseyA2CmF">verbose</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Verbose logs are used to log tiny, usually irrelevant information.
+They are helpful when tracing specific lines of code and their results</p>
+
+<p>Example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="n">logger</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">b</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">3</span>
+<span class="n">logger</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="n">logger</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">verbose</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/LogLevel.swift#L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging8LogLevelO5debugyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/debug" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging8LogLevelO5debugyA2CmF">debug</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Debug logs are used to debug problems</p>
+
+<p>Example:</p>
+
+<p>The password hash verification for user <a href="mailto:XYZ@example.com">XYZ@example.com</a> has failed/succeeded</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">debug</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/LogLevel.swift#L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging8LogLevelO4infoyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/info" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging8LogLevelO4infoyA2CmF">info</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Info logs are used to indicate a specific infrequent event occurring.</p>
+
+<p>Example:</p>
+
+<p>The daily database sanity check will start executing now.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">info</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/LogLevel.swift#L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging8LogLevelO7warningyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/warning" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging8LogLevelO7warningyA2CmF">warning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Warnings are used to indicate something should be fixed but may not have to be solved yet</p>
+
+<p>Example:</p>
+
+<p>Loading a template from the filesystem failed, resulting in a 404</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">warning</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/LogLevel.swift#L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging8LogLevelO5erroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging8LogLevelO5erroryA2CmF">error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error, indicates something went wrong and a part of the execution was failed.</p>
+
+<p>Example:</p>
+
+<p>When a database query fails, socket drops, etc..</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">error</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/LogLevel.swift#L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging8LogLevelO5fatalyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/fatal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging8LogLevelO5fatalyA2CmF">fatal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fatal errors/crashes, execution should/must be cancelled</p>
+
+<p>Example:</p>
+
+<p>On initialization failure</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fatal</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/LogLevel.swift#L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging8LogLevelO6customyACSScACmF"></a>
+                    <a name="//apple_ref/swift/Element/custom(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging8LogLevelO6customyACSScACmF">custom(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A custom log level, if the default ones aren&rsquo;t enough</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">custom</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/LogLevel.swift#L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging8LogLevelO13stringLiteralACSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging8LogLevelO13stringLiteralACSS_tcfc">init(stringLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a custom log level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">stringLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/LogLevel.swift#L55-L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Logging8LogLevelO11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Logging8LogLevelO11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>CustomStringConvertible</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/vapor/console/tree/3.1.1/Sources/Logging/LogLevel.swift#L60-L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://vapor.codes" target="_blank" rel="external">Vapor</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
