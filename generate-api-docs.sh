@@ -1,5 +1,3 @@
-#!/bin/sh
-
 function generate-docs {
   # remove the old documentation
   rm -rf /var/www/api-docs/$1/$2
@@ -19,7 +17,7 @@ function update-doc {
 }
 
 #update swift doc
-(cd swift-doc && git pull && make install)
+(cd ~/swift-doc && git pull && make install)
 
 # generate api-docs for all packages in ~/packages
 for d in ~/packages/*
