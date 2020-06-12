@@ -4,7 +4,7 @@ function generate-docs {
   # remove the old documentation
   rm -rf /var/www/api-docs/$1/$2
   # generate the new documentation for the given package
-  swift doc generate ./packages/$1/Sources --module-name $1 --output /var/www/api-docs/$1/$2
+  swift doc generate ~/packages/$1/Sources --module-name $1 --output /var/www/api-docs/$1/$2
   # allow nginx to serve generated files
   chmod +x /var/www/api-docs/$1
   chmod +x /var/www/api-docs/$1/$2
@@ -21,8 +21,8 @@ function update-doc {
 #update swift doc
 (cd swift-doc && git pull && make install)
 
-# generate api-docs for all packages in ./packages
-for d in ./packages/*
+# generate api-docs for all packages in ~/packages
+for d in ~/packages/*
 do
   # check if d is a directory
   if [ -d "$d" ]
