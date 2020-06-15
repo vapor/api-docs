@@ -58,17 +58,10 @@ func updateSwiftDoc() throws {
     }
 }
 
-func chmodX(path: String) throws {
-    try shell("chmod", "+x", "\(path)")
-}
-
 func generateDocs(package: String, module: String) throws {
     do {
         try shell("rm", "-rf", "/var/www/api-docs/\(package)/master/\(module)")
         try shell("swift", "run", "--package-path", "/root/api-docs/swift-doc", "swift-doc", "generate", "/root/api-docs/packages/\(package)/Sources/\(module)", "--module-name", "\(module)", "--output", "/var/www/api-docs/\(package)/master/\(module)")
-        try chmodX(path: "/var/www/api-docs/\(package)")
-        try chmodX(path: "/var/www/api-docs/\(package)/master")
-        try chmodX(path: "/var/www/api-docs/\(package)/master/\(module)")
     } catch let error as ShellError {
         throw error
     }
