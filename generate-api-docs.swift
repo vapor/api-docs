@@ -4,7 +4,39 @@ import Foundation
 
 let packages: [String: [String]] = [
     "vapor": ["Vapor", "XCTVapor"],
-    "fluent-kit": ["FluentKit", "FluentSQL"]
+
+    "async-kit": ["AsyncKit"],
+    "routing-kit": ["RoutingKit"],
+    "console-kit": ["ConsoleKit"],
+    "websocket-kit": ["WebSocketKit"],
+
+    "postgres-nio": ["PostgresNIO"],
+    "mysql-nio": ["MySQLNIO"],
+    "sqlite-nio": ["SQLiteNIO"],
+
+    "sql-kit": ["SQLKit"],
+    "postgres-kit": ["PostgresKit"],
+    "mysql-kit": ["MySQLKit"],
+    "sqlite-kit": ["SQLiteKit"],
+
+    "fluent-kit": ["FluentKit", "FluentSQL", "XCTFluent"],
+    "fluent": ["Fluent"],
+    "fluent-postgres-driver": ["FluentPostgresDriver"],
+    "fluent-mongo-driver": ["FluentMongoDriver"],
+    "fluent-mysql-driver": ["FluentMySQLDriver"],
+    "fluent-sqlite-driver": [FluentSQLiteDriver]
+
+    "redis": ["Redis"],
+    "redis-kit": ["RedisKit"],
+    "queues-redis-driver": ["QueuesRedisDriver"],
+    "queues": ["Queues", "XCTQueues"],
+
+    "leaf-kit": ["LeafKit"],
+    "leaf": ["Leaf"],
+
+    "jwt-kit": ["JWTKit"],
+    "jwt": ["JWT"],
+    "apns": ["APNS"],
 ]
 
 func shell(_ args: String...) throws {
@@ -22,12 +54,12 @@ struct ShellError: Error {
 }
 
 func gitClone(_ package: String) throws {
-    try shell("git", "clone", "https://github.com/vapor/\(package).git", "/root/api-docs/packages/\(package)")
+    try shell("git", "clone", "https://github.com/vapor/\(package).git", "packages/\(package)")
 }
 
 func gitPullMaster(_ package: String) throws {
-    try shell("git", "-C", "/root/api-docs/packages/\(package)", "checkout", "master")
-    try shell("git", "-C", "/root/api-docs/packages/\(package)", "pull")
+    try shell("git", "-C", "packages/\(package)", "checkout", "master")
+    try shell("git", "-C", "packages/\(package)", "pull")
 }
 
 func getNewestRepoVersion(_ package: String) throws {
@@ -46,12 +78,12 @@ func getNewestRepoVersion(_ package: String) throws {
 func updateSwiftDoc() throws {
     do {
         try shell("git", "clone", "https://github.com/SwiftDocOrg/swift-doc.git",
-                  "/root/api-docs/swift-doc")
+                  "swift-doc")
     } catch let error as ShellError {
         if error.terminationStatus == 128 {
             // repo already exists, get newest version
-            try shell("git", "-C", "/root/api-docs/swift-doc/", "checkout", "master")
-            try shell("git", "-C", "/root/api-docs/swift-doc", "pull")
+            try shell("git", "-C", "swift-doc/", "checkout", "master")
+            try shell("git", "-C", "swift-doc/", "pull")
         } else {
             throw error
         }
@@ -64,11 +96,11 @@ func chmodX(path: String) throws {
 
 func generateDocs(package: String, module: String) throws {
     do {
-        try shell("rm", "-rf", "/var/www/api-docs/\(package)/master/\(module)")
-        try shell("swift", "run", "--package-path", "/root/api-docs/swift-doc", "swift-doc", "generate", "/root/api-docs/packages/\(package)/Sources/\(module)", "--module-name", "\(module)", "--output", "/var/www/api-docs/\(package)/master/\(module)")
-        try chmodX(path: "/var/www/api-docs/\(package)")
-        try chmodX(path: "/var/www/api-docs/\(package)/master")
-        try chmodX(path: "/var/www/api-docs/\(package)/master/\(module)")
+        try shell("rm", "-rf", "public/\(package)/master/\(module)")
+        try shell("swift", "run", "--package-path", "swift-doc", "swift-doc", "generate", "packages/\(package)/Sources/\(module)", "--module-name", "\(module)", "--output", "public/\(package)/master/\(module)")
+        try chmodX(path: "public/\(package)")
+        try chmodX(path: "public/\(package)/master")
+        try chmodX(path: "public/\(package)/master/\(module)")
     } catch let error as ShellError {
         throw error
     }
@@ -76,7 +108,7 @@ func generateDocs(package: String, module: String) throws {
 
 // update swift doc
 try updateSwiftDoc()
-try shell("swift", "build", "--package-path", "/root/api-docs/swift-doc")
+try shell("swift", "build", "--package-path", "swift-doc")
 
 for (package, modules) in packages {
     try getNewestRepoVersion(package)
