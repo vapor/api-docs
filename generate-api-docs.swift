@@ -24,7 +24,7 @@ let packages: [String: [String]] = [
     "fluent-postgres-driver": ["FluentPostgresDriver"],
     "fluent-mongo-driver": ["FluentMongoDriver"],
     "fluent-mysql-driver": ["FluentMySQLDriver"],
-    "fluent-sqlite-driver": [FluentSQLiteDriver]
+    "fluent-sqlite-driver": [FluentSQLiteDriver],
 
     "redis": ["Redis"],
     "redis-kit": ["RedisKit"],
