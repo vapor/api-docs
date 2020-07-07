@@ -91,7 +91,7 @@ func updateSwiftDoc() throws {
 }
 
 func recursiveChmod(path: String) throws {
-    try shell("chmod", "-R" "u+rwX,go+rX,go-w", "\(path)")
+    try shell("chmod", "-R", "u+rwX,go+rX,go-w", "\(path)")
 }
 
 func generateDocs(package: String, module: String) throws {
