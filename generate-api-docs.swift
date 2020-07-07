@@ -90,17 +90,14 @@ func updateSwiftDoc() throws {
     }
 }
 
-func chmodX(path: String) throws {
-    try shell("chmod", "+x", "\(path)")
+func recursiveChmod(path: String) throws {
+    try shell("chmod", "-R" "u+rwX,go+rX,go-w", "\(path)")
 }
 
 func generateDocs(package: String, module: String) throws {
     do {
         try shell("rm", "-rf", "public/\(package)/master/\(module)")
         try shell("swift", "run", "--package-path", "swift-doc", "swift-doc", "generate", "packages/\(package)/Sources/\(module)", "--module-name", "\(module)", "--output", "public/\(package)/master/\(module)", "--base-url", "\(package)/master/\(module)/", "--format", "html")
-        try chmodX(path: "public/\(package)")
-        try chmodX(path: "public/\(package)/master")
-        try chmodX(path: "public/\(package)/master/\(module)")
     } catch let error as ShellError {
         throw error
     }
@@ -116,4 +113,6 @@ for (package, modules) in packages {
         print("Generating api-docs for package: \(package), module: \(module)")
         try generateDocs(package: package, module: module)
     }
+    try recursiveChmod(path: "public/\(package)")
+    print("Finished generating all api-docs for package: \(package)")
 }
