@@ -97,7 +97,7 @@ func chmodX(path: String) throws {
 func generateDocs(package: String, module: String) throws {
     do {
         try shell("rm", "-rf", "public/\(package)/master/\(module)")
-        try shell("swift", "run", "--package-path", "swift-doc", "swift-doc", "generate", "packages/\(package)/Sources/\(module)", "--module-name", "\(module)", "--output", "public/\(package)/master/\(module)")
+        try shell("swift", "run", "--package-path", "swift-doc", "swift-doc", "generate", "packages/\(package)/Sources/\(module)", "--module-name", "\(module)", "--output", "public/\(package)/master/\(module)", "--base-url", "\(package)/master/\(module)/", "--format", "html")
         try chmodX(path: "public/\(package)")
         try chmodX(path: "public/\(package)/master")
         try chmodX(path: "public/\(package)/master/\(module)")
