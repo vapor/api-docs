@@ -107,12 +107,23 @@ func generateDocs(package: String, module: String) throws {
 try updateSwiftDoc()
 try shell("swift", "build", "--package-path", "swift-doc")
 
+let url = URL(fileURLWithPath: "index.html")
+var htmlString = try String(contentsOf: url)
+var optionsString = ""
+
 for (package, modules) in packages {
     try getNewestRepoVersion(package)
     for module in modules {
         print("Generating api-docs for package: \(package), module: \(module)")
         try generateDocs(package: package, module: module)
+        optionsString += "<option value=\"/\(package)/master/\(module)\">\(module)</option>\n"
     }
     try recursiveChmod(path: "public/\(package)")
+
     print("Finished generating all api-docs for package: \(package)")
 }
+
+htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsString)
+
+try htmlString.write(toFile: "public/index.html", atomically: true, encoding: .utf8)
+try shell("chmod", "644", "public/index.html")
