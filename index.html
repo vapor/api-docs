@@ -39,7 +39,7 @@
         <div class="main">
             <h1 class="title">Vapor API Docs</h1>
             <br>
-            <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+            <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value); this.selectedIndex = 0;">
                 <option value="">Choose package...</option>
                 {{Options}}
             </select>
