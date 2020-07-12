@@ -125,7 +125,9 @@ for (package, modules) in packages {
 }
 
 let sortedModules = allModules.sorted { $0.module < $1.module }
-for module in sortedModules {
+for object in sortedModules {
+    let package = object.package
+    let module = object.module
     optionsString += "<option value=\"/\(package)/master/\(module)\">\(module)</option>\n"
 }
 
