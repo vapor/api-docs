@@ -90,14 +90,10 @@ func updateSwiftDoc() throws {
     }
 }
 
-func recursiveChmod(path: String) throws {
-    try shell("chmod", "-R", "u+rwX,go+rX,go-w", "\(path)")
-}
-
 func generateDocs(package: String, module: String) throws {
     do {
         try shell("rm", "-rf", "public/\(package)/master/\(module)")
-        try shell("swift", "run", "--package-path", "swift-doc", "swift-doc", "generate", "packages/\(package)/Sources/\(module)", "--module-name", "\(module)", "--output", "public/\(package)/master/\(module)", "--base-url", "\(package)/master/\(module)/", "--format", "html")
+        try shell("swift", "run", "--package-path", "swift-doc", "swift-doc", "generate", "packages/\(package)/Sources/\(module)", "--module-name", "\(module)", "--output", "public/\(package)/master/\(module)", "--base-url", "/\(package)/master/\(module)/", "--format", "html")
     } catch let error as ShellError {
         throw error
     }
@@ -119,7 +115,6 @@ for (package, modules) in packages {
         try generateDocs(package: package, module: module)
         allModules.append((package: package, module: module))
     }
-    try recursiveChmod(path: "public/\(package)")
 
     print("Finished generating all api-docs for package: \(package)")
 }
@@ -135,7 +130,6 @@ htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsStr
 
 try htmlString.write(toFile: "public/index.html", atomically: true, encoding: .utf8)
 try shell("cp", "api-docs.png", "public/api-docs.png")
-try shell("chmod", "644", "public/index.html")
-try shell("chmod", "644", "public/api-docs.png")
+try shell("chmod", "755", "-R", "public")
 
 
