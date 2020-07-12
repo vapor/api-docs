@@ -110,21 +110,21 @@ try shell("swift", "build", "--package-path", "swift-doc")
 let url = URL(fileURLWithPath: "index.html")
 var htmlString = try String(contentsOf: url)
 var optionsString = ""
-var allModules: [String] = []
+var allModules: [(package: String, module: String)] = []
 
 for (package, modules) in packages {
     try getNewestRepoVersion(package)
     for module in modules {
         print("Generating api-docs for package: \(package), module: \(module)")
         try generateDocs(package: package, module: module)
+        allModules.append((package: package, module: module))
     }
     try recursiveChmod(path: "public/\(package)")
-    allModules.append(contentsOf: modules)
 
     print("Finished generating all api-docs for package: \(package)")
 }
 
-let sortedModules = allModules.sorted()
+let sortedModules = allModules.sorted { $0.module < $1.module }
 for module in sortedModules {
     optionsString += "<option value=\"/\(package)/master/\(module)\">\(module)</option>\n"
 }
