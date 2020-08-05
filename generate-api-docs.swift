@@ -41,7 +41,7 @@ let packages: [String: [String]] = [
 
 
 try updateSwiftDoc()
-try shell("swift", "build", "--package-path", "swift-doc")
+try shell("swift", "build", "--package-path", "swift-doc", "-c", "release")
 
 let url = URL(fileURLWithPath: "index.html")
 var htmlString = try String(contentsOf: url)
@@ -92,9 +92,8 @@ func generateDocs(package: String, module: String) throws {
     do {
         try shell("rm", "-rf", "public/\(package)/master/\(module)")
         try shell(
-            "swift", "run",
-            "--package-path", "swift-doc",
-            "swift-doc", "generate", "packages/\(package)/Sources/\(module)",
+            "./swift-doc/.build/release/swift-doc",
+            "generate", "packages/\(package)/Sources/\(module)",
             "--module-name", "\(module)",
             "--output", "public/\(package)/master/\(module)",
             "--base-url", "/\(package)/master/\(module)/",
