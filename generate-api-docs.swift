@@ -39,67 +39,7 @@ let packages: [String: [String]] = [
     "apns": ["APNS"],
 ]
 
-func shell(_ args: String...) throws {
-    let task = Process()
-    task.launchPath = "/usr/bin/env"
-    task.arguments = args
-    task.launch()
-    task.waitUntilExit()
-    guard task.terminationStatus == 0 else {
-        throw ShellError(terminationStatus: task.terminationStatus)
-    }
-}
-struct ShellError: Error {
-    var terminationStatus: Int32
-}
 
-func gitClone(_ package: String) throws {
-    try shell("git", "clone", "https://github.com/vapor/\(package).git", "packages/\(package)")
-}
-
-func gitPullMaster(_ package: String) throws {
-    try shell("git", "-C", "packages/\(package)", "checkout", "master")
-    try shell("git", "-C", "packages/\(package)", "pull")
-}
-
-func getNewestRepoVersion(_ package: String) throws {
-    do {
-        try gitClone(package)
-    } catch let error as ShellError {
-        if error.terminationStatus == 128 {
-            // repo already exists, get newest version
-            try gitPullMaster(package)
-        } else {
-            throw error
-        }
-    }
-}
-
-func updateSwiftDoc() throws {
-    do {
-        try shell("git", "clone", "https://github.com/SwiftDocOrg/swift-doc.git",
-                  "swift-doc")
-    } catch let error as ShellError {
-        if error.terminationStatus == 128 {
-            // repo already exists, get newest version
-            try shell("git", "-C", "swift-doc/", "checkout", "master")
-            try shell("git", "-C", "swift-doc/", "pull")
-        } else {
-            throw error
-        }
-    }
-}
-
-func generateDocs(package: String, module: String) throws {
-    do {
-        try shell("rm", "-rf", "public/\(package)/master/\(module)")
-        try shell("swift", "run", "--package-path", "swift-doc", "swift-doc", "generate", "packages/\(package)/Sources/\(module)", "--module-name", "\(module)", "--output", "public/\(package)/master/\(module)", "--base-url", "/\(package)/master/\(module)/", "--format", "html")
-    } catch let error as ShellError {
-        throw error
-    }
-}
-
-// update swift doc
 try updateSwiftDoc()
 try shell("swift", "build", "--package-path", "swift-doc")
 
@@ -132,4 +72,74 @@ try htmlString.write(toFile: "public/index.html", atomically: true, encoding: .u
 try shell("cp", "api-docs.png", "public/api-docs.png")
 try shell("chmod", "755", "-R", "public")
 
+// MARK: Functions
 
+func updateSwiftDoc() throws {
+    do {
+        try shell("git", "clone", "https://github.com/SwiftDocOrg/swift-doc.git", "swift-doc")
+    } catch let error as ShellError {
+        if error.terminationStatus == 128 {
+            // repo already exists, get newest version
+            try shell("git", "-C", "swift-doc/", "checkout", "master")
+            try shell("git", "-C", "swift-doc/", "pull")
+        } else {
+            throw error
+        }
+    }
+}
+
+func generateDocs(package: String, module: String) throws {
+    do {
+        try shell("rm", "-rf", "public/\(package)/master/\(module)")
+        try shell(
+            "swift", "run",
+            "--package-path", "swift-doc",
+            "swift-doc", "generate", "packages/\(package)/Sources/\(module)",
+            "--module-name", "\(module)",
+            "--output", "public/\(package)/master/\(module)",
+            "--base-url", "/\(package)/master/\(module)/",
+            "--format", "html"
+        )
+        try shell("chmod", "755", "-R", "public/\(package)/master/\(module)")
+    } catch let error as ShellError {
+        throw error
+    }
+}
+
+func gitClone(_ package: String) throws {
+    try shell("git", "clone", "https://github.com/vapor/\(package).git", "packages/\(package)")
+}
+
+func getNewestRepoVersion(_ package: String) throws {
+    do {
+        try gitClone(package)
+    } catch let error as ShellError {
+        if error.terminationStatus == 128 {
+            // repo already exists, get newest version
+            try gitPullMaster(package)
+        } else {
+            throw error
+        }
+    }
+}
+
+func gitPullMaster(_ package: String) throws {
+    try shell("git", "-C", "packages/\(package)", "checkout", "master")
+    try shell("git", "-C", "packages/\(package)", "pull")
+}
+
+func shell(_ args: String...) throws {
+    let task = Process()
+    task.launchPath = "/usr/bin/env"
+    task.arguments = args
+    task.launch()
+    task.waitUntilExit()
+
+    guard task.terminationStatus == 0 else {
+        throw ShellError(terminationStatus: task.terminationStatus)
+    }
+}
+
+struct ShellError: Error {
+    var terminationStatus: Int32
+}
