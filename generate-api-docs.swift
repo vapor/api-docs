@@ -9,6 +9,7 @@ let packages: [String: [String]] = [
     "routing-kit": ["RoutingKit"],
     "console-kit": ["ConsoleKit"],
     "websocket-kit": ["WebSocketKit"],
+    "multipart-kit": ["MultipartKit"],
 
     "postgres-nio": ["PostgresNIO"],
     "mysql-nio": ["MySQLNIO"],
