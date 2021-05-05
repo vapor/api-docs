@@ -28,7 +28,6 @@ let packages: [String: [String]] = [
     "fluent-sqlite-driver": ["FluentSQLiteDriver"],
 
     "redis": ["Redis"],
-    "redis-kit": ["RedisKit"],
     "queues-redis-driver": ["QueuesRedisDriver"],
     "queues": ["Queues", "XCTQueues"],
 
