@@ -63,7 +63,7 @@ let sortedModules = allModules.sorted { $0.module < $1.module }
 for object in sortedModules {
     let package = object.package
     let module = object.module
-    optionsString += "<option value=\"/\(package)/master/\(module)\">\(module)</option>\n"
+    optionsString += "<option value=\"/\(package)/main/\(module)\">\(module)</option>\n"
 }
 
 htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsString)
@@ -90,16 +90,16 @@ func updateSwiftDoc() throws {
 
 func generateDocs(package: String, module: String) throws {
     do {
-        try shell("rm", "-rf", "public/\(package)/master/\(module)")
+        try shell("rm", "-rf", "public/\(package)/main/\(module)")
         try shell(
             "./swift-doc/.build/release/swift-doc",
             "generate", "packages/\(package)/Sources/\(module)",
             "--module-name", "\(module)",
-            "--output", "public/\(package)/master/\(module)",
-            "--base-url", "/\(package)/master/\(module)/",
+            "--output", "public/\(package)/main/\(module)",
+            "--base-url", "/\(package)/main/\(module)/",
             "--format", "html"
         )
-        try shell("chmod", "755", "-R", "public/\(package)/master/\(module)")
+        try shell("chmod", "755", "-R", "public/\(package)/main/\(module)")
     } catch let error as ShellError {
         throw error
     }
@@ -115,15 +115,15 @@ func getNewestRepoVersion(_ package: String) throws {
     } catch let error as ShellError {
         if error.terminationStatus == 128 {
             // repo already exists, get newest version
-            try gitPullMaster(package)
+            try gitPullMain(package)
         } else {
             throw error
         }
     }
 }
 
-func gitPullMaster(_ package: String) throws {
-    try shell("git", "-C", "packages/\(package)", "checkout", "master")
+func gitPullMain(_ package: String) throws {
+    try shell("git", "-C", "packages/\(package)", "checkout", "main")
     try shell("git", "-C", "packages/\(package)", "pull")
 }
 
