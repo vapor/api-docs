@@ -123,6 +123,7 @@ func getNewestRepoVersion(_ package: String) throws {
 }
 
 func gitPullMain(_ package: String) throws {
+    try shell("git", "-C", "packages/\(package)", "fetch")
     try shell("git", "-C", "packages/\(package)", "checkout", "main")
     try shell("git", "-C", "packages/\(package)", "pull")
 }
