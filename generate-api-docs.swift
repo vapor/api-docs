@@ -81,6 +81,7 @@ func updateSwiftDoc() throws {
         if error.terminationStatus == 128 {
             // repo already exists, get newest version
             try shell("git", "-C", "swift-doc/", "checkout", "master")
+            try shell("git", "-C", "swift-doc/", "reset", "--hard")
             try shell("git", "-C", "swift-doc/", "pull")
         } else {
             throw error
