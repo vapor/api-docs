@@ -18,7 +18,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
         aws-region: 'eu-west-2'
     - name: Depoly to AWS CloudFormation
       id: clouddeploy
@@ -41,7 +41,7 @@ jobs:
       env:
         AWS_S3_BUCKET: 'vapor-api-docs-site'
         AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'eu-west-2'
         SOURCE_DIR: 'public'
       if: steps.clouddeploy.outcome == 'success'
@@ -50,6 +50,6 @@ jobs:
       env:
         SOURCE_PATH: '/*'
         AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'eu-west-2'
         DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
