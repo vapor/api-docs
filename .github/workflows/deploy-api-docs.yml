@@ -30,7 +30,7 @@ jobs:
         parameter-overrides: >-
           BucketName=vapor-api-docs-site,
           SubDomainName=api,
-          HostedZoneName=vapor.codes
+          HostedZoneName=vapor.codes,
           AcmCertificateArn=${{ secrets.API_DOCS_CERTIFICATE_ARN }}
       if: steps.cred.outcome == 'success'
     - name: Deploy to S3
