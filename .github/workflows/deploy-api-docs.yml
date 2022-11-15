@@ -24,7 +24,7 @@ jobs:
       id: clouddeploy
       uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
       with:
-        name: vapor-blog-stack
+        name: vapor-api-docs-stack
         template: stack.yaml
         no-fail-on-empty-changeset: '1'
         parameter-overrides: >-
@@ -43,13 +43,13 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY_ID }}
         AWS_REGION: 'eu-west-2'
-        SOURCE_DIR: 'Output'
+        SOURCE_DIR: 'public'
       if: steps.clouddeploy.outcome == 'success'
     - name: Invalidate CloudFront
       uses: awact/cloudfront-action@master
       env:
         SOURCE_PATH: '/*'
-        AWS_ACCESS_KEY_ID: ${{ secrets.BLOG_DEPLOYER_AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.BLOG_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY_ID }}
         AWS_REGION: 'eu-west-2'
-        DISTRIBUTION_ID: ${{ secrets.VAPOR_BLOG_DISTRIBUTION_ID }}
+        DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
