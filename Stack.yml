@@ -1,0 +1,132 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: 'Create Create a static website on S3 served by CloudFront'
+Parameters:
+  BucketName:
+    Type: String
+    Description: The S3 bucket name
+  SubDomainName:
+    Type: String
+    Description: The sub domain name for the site
+    AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
+  HostedZoneName:
+    Type: String
+    Description: The domain name for the site
+    AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
+    ConstraintDescription: must be a valid DNS zone name.
+  AcmCertificateArn:
+    Type: String
+
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref 'BucketName'
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error/404/index.html
+        RoutingRules:
+          - RoutingRuleCondition:
+              HttpErrorCodeReturnedEquals: '404'
+              KeyPrefixEquals: /
+            RedirectRule:
+              HostName: !Sub
+                - '${SubDomainName}.${HostedZoneName}.'
+                - SubDomainName: !Ref SubDomainName
+                  HostedZoneName: !Ref HostedZoneName
+              ReplaceKeyPrefixWith: error/404/
+  WebsiteCloudFront:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: CloudFront Distribution pointing to S3 Bucket
+        Origins: 
+        - DomainName: !Join [ '', !Split [ 'http://', !GetAtt 'Bucket.WebsiteURL' ] ]
+          Id: S3Origin
+          CustomOriginConfig:
+            OriginProtocolPolicy: 'http-only'
+        HttpVersion: 'http2'
+        Aliases: 
+          - !Sub 
+            - '${SubDomainName}.${HostedZoneName}'
+            - SubDomainName: !Ref SubDomainName
+              HostedZoneName: !Ref HostedZoneName 
+        CustomErrorResponses:
+          - ErrorCode: 403
+            ResponseCode: 404
+            ResponsePagePath: '/error/404/index.html'
+        DefaultCacheBehavior:
+          TargetOriginId: S3Origin
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          Compress: true
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+          ResponseHeadersPolicyId: !Ref WebsiteCloudFrontPolicy
+        PriceClass: PriceClass_All
+        ViewerCertificate:
+          AcmCertificateArn: !Ref 'AcmCertificateArn'
+          SslSupportMethod: sni-only
+  WebsiteCloudFrontPolicy:
+    Type: AWS::CloudFront::ResponseHeadersPolicy
+    Properties:
+      ResponseHeadersPolicyConfig:
+        Name: API-Docs-Security-Header-Policy
+        Comment: Vapor API Docs security header policy
+        CustomHeadersConfig:
+          Items:
+            - Header: Permission-Policy
+              Override: false
+              Value: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
+            - Header: server
+              Override: true
+              Value: 'Vapor API Docs'
+        SecurityHeadersConfig:
+          ContentSecurityPolicy:
+            ContentSecurityPolicy: default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'
+            Override: false
+          ContentTypeOptions:
+            Override: false
+          FrameOptions:
+            FrameOption: DENY
+            Override: false
+          ReferrerPolicy:
+            Override: false
+            ReferrerPolicy: strict-origin-when-cross-origin
+          StrictTransportSecurity:
+            AccessControlMaxAgeSec: 63072000
+            IncludeSubdomains: true
+            Preload: false
+            Override: false
+          XSSProtection:
+            ModeBlock: true
+            Protection: true
+            Override: false
+  DNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneName: !Sub
+        - '${HostedZoneName}.'
+        - { HostedZoneName: !Ref HostedZoneName}
+      # Combine the environment and subdomain to create the DNS record. If the environment is prod then leave it out
+      Name: !Sub 
+        - '${SubDomainName}.${HostedZoneName}.'
+        - SubDomainName: !Ref SubDomainName
+          HostedZoneName: !Ref HostedZoneName 
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt WebsiteCloudFront.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2
+Outputs: 
+  CloudFrontURL:
+    Description: CloudFront URL
+    Value: !GetAtt WebsiteCloudFront.DomainName
+  Bucket:
+    Description: Bucket name to hold website content
+    Value: !Ref Bucket
