@@ -39,13 +39,13 @@ import Foundation
 //     "apns": ["APNS"],
 // ]
 
-let packages: [String: [String]] = [
-    "postgres-nio": ["PostgresNIO"]
-]
+ let packages: [String: [String]] = [
+    "postgres-nio": ["PostgresNIO"],
+ ]
 
 try updateSwiftDocC()
 try updateSwiftDocCRenderer()
-try shell("swift", "build", "--package-path", "swift-docc", "-c", "release")
+let swiftDocCExecutablePath = try buildSwiftDocC()
 setenv("DOCC_HTML_DIR", "swift-docc-render-artifact/dist", 1)
 
 let url = URL(fileURLWithPath: "index.html")
@@ -57,11 +57,15 @@ for (package, modules) in packages {
     try getNewestRepoVersion(package)
     for module in modules {
         print("Generating api-docs for package: \(package), module: \(module)")
-        try generateDocs(package: package, module: module)
+        try generateDocs(
+            package: package, 
+            module: module, 
+            with: swiftDocCExecutablePath
+        )
         allModules.append((package: package, module: module))
-        try copyHTMLData(package: package, module: module)
+        try copyHTMLItems(package: package, module: module)
     }
-    print("Finished generating all api-docs for package: \(package)")
+    print("✅ Finished generating all api-docs for package: \(package)")
 }
 
 let sortedModules = allModules.sorted { $0.module < $1.module }
@@ -79,6 +83,7 @@ try shell("cp", "api-docs.png", "public/api-docs.png")
 // MARK: Functions
 
 func updateSwiftDocC() throws {
+    print("📦 Updating swift-docc")
     do {
         try shell("git", "clone", "https://github.com/apple/swift-docc.git", "swift-docc")
     } catch let error as ShellError {
@@ -94,6 +99,7 @@ func updateSwiftDocC() throws {
 }
 
 func updateSwiftDocCRenderer() throws {
+    print("📦 Updating swift-docc-renderer")
     do {
         try shell("git", "clone", "https://github.com/apple/swift-docc-render-artifact.git", "swift-docc-render-artifact")
     } catch let error as ShellError {
@@ -107,14 +113,31 @@ func updateSwiftDocCRenderer() throws {
     }
 }
 
-func generateDocs(package: String, module: String) throws {
+func buildSwiftDocC() throws -> String {
+    print("🔨 Building swift-docc")
+    try shell(
+        "swift", "build", "--package-path", "swift-docc", 
+        "-c", "release"
+    )
+    let outputPipe = try shell(
+        "swift", "build", "--package-path", "swift-docc", 
+        "-c", "release", "--show-bin-path",
+        returnStdOut: true
+    )
+    guard let output = try outputPipe.string()?.replacingOccurrences(of: "\n", with: "") else {
+        print("❌ ERROR: Failed to build package swift-docc")
+        exit(1)
+    }
+    print(output)
+    return "\(output)/docc"
+}
+
+func generateDocs(package: String, module: String, with docCExecutable: String) throws {
     do {
-        // try shell("rm", "-rf", "public/\(package)/main/\(module)")
-        // Create symbol-graphs directory for package
-        try shell(
-            "mkdir", "-p", "packages/\(package)/.build/symbol-graphs"
-        )
+        try shell("rm", "-rf", "public/\(package)/main/\(module)")
+        try shell("mkdir", "-p", "packages/\(package)/.build/symbol-graphs")
         // Build package
+        print("🔨 Building package \(package)")
         try shell(
             "swift", "build", "--package-path", "packages/\(package)",
             "--target", module, 
@@ -144,9 +167,9 @@ func generateDocs(package: String, module: String) throws {
                 toPath: "packages/\(package)/.build/\(package)-symbol-graphs/\(file)"
             )
         }
-        // Preview docs
+        print("📝 Generating docs")
         try shell(
-            "swift-docc/.build/arm64-apple-macosx/release/docc",
+            swiftDocCExecutablePath,
             "convert", "packages/\(package)/Sources/\(module)/Docs.docc",
             "--fallback-display-name", module,
             "--fallback-bundle-identifier", "nio.postgres",
@@ -158,7 +181,7 @@ func generateDocs(package: String, module: String) throws {
     }
 }
 
-func copyHTMLData(package: String, module: String) throws {
+func copyHTMLItems(package: String, module: String) throws {
     let sourceDir = "packages/\(package)/Sources/\(module)/Docs.docc/.docc-build"
     let destinationDir = "public/\(package)/"
     try shell("rm", "-rf", destinationDir)
@@ -175,6 +198,7 @@ func copyHTMLData(package: String, module: String) throws {
 }
 
 func gitClone(_ package: String) throws {
+    print("📦 Updating \(package)")
     try shell("git", "clone", "https://github.com/vapor/\(package).git", "packages/\(package)")
 }
 
@@ -197,18 +221,42 @@ func gitPullMain(_ package: String) throws {
     try shell("git", "-C", "packages/\(package)", "pull")
 }
 
-func shell(_ args: String...) throws {
+@discardableResult
+func shell(_ args: String..., returnStdOut: Bool = false, stdIn: Pipe? = nil) throws -> Pipe {
     let task = Process()
     task.launchPath = "/usr/bin/env"
     task.arguments = args
-    task.launch()
+    let pipe = Pipe()
+    if returnStdOut {
+        task.standardOutput = pipe
+    }
+    if let stdIn = stdIn {
+        task.standardInput = stdIn
+    }
+    try task.run()
     task.waitUntilExit()
-
     guard task.terminationStatus == 0 else {
         throw ShellError(terminationStatus: task.terminationStatus)
     }
+    return pipe
 }
 
 struct ShellError: Error {
     var terminationStatus: Int32
 }
+
+extension Pipe {
+    func string() throws -> String? {
+        let data = try self.fileHandleForReading.readToEnd()!
+        let result: String?
+        if let string = String(
+            data: data, 
+            encoding: String.Encoding.utf8
+        ) {
+            result = string
+        } else {
+            result = nil
+        }
+        return result
+    }
+}   
