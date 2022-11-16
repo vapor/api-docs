@@ -167,22 +167,25 @@ func generateDocs(package: String, module: String, with docCExecutable: String) 
             )
         }
         print("📝 Generating docs")
+        try shell("mkdir", "-p", "public/\(package)")
         try shell(
             swiftDocCExecutablePath,
             "convert", "packages/\(package)/Sources/\(module)/Docs.docc",
             "--fallback-display-name", module,
             "--fallback-bundle-identifier", "nio.postgres",
             "--fallback-bundle-version", "1.0.0",
-            "--additional-symbol-graph-dir", "packages/\(package)/.build/\(package)-symbol-graphs"
-        )
-        try shell("mkdir", "-p", "public/\(package)")
-        try shell(
-            swiftDocCExecutablePath,
-            "process-archive", "transform-for-static-hosting",
-            "packages/\(package)/Sources/\(module)/Docs.docc/.docc-build",
+            "--additional-symbol-graph-dir", "packages/\(package)/.build/\(package)-symbol-graphs",
+            "--transform-for-static-hosting",
             "--output-path", "public/\(package)",
-            "--hosting-base-path", "\(package)"
+            "--hosting-base-path", "/\(package)"
         )
+        // try shell(
+        //     swiftDocCExecutablePath,
+        //     "process-archive", "transform-for-static-hosting",
+        //     "packages/\(package)/Sources/\(module)/Docs.docc/.docc-build",
+        //     "--output-path", "public/\(package)",
+        //     "--static-hosting-base-path", "/\(package)"
+        // )
     } catch let error as ShellError {
         throw error
     }
