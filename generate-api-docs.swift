@@ -179,7 +179,7 @@ func generateDocs(package: String, module: String, with docCExecutable: String) 
             "--output-path", "public/\(package)",
             "--hosting-base-path", "/\(package)"
         )
-        try FileManager.default.moveItem(
+        try FileManager.default.copyItem(
             atPath: "theme-settings.json", 
             toPath: "public/\(package)/theme-settings.json"
         )
