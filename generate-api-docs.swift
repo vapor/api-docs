@@ -63,7 +63,6 @@ for (package, modules) in packages {
             with: swiftDocCExecutablePath
         )
         allModules.append((package: package, module: module))
-        try copyHTMLItems(package: package, module: module)
     }
     print("✅ Finished generating all api-docs for package: \(package)")
 }
@@ -72,7 +71,7 @@ let sortedModules = allModules.sorted { $0.module < $1.module }
 for object in sortedModules {
     let package = object.package
     let module = object.module
-    optionsString += "<option value=\"/\(package)/main/\(module)\">\(module)</option>\n"
+    optionsString += "<option value=\"/\(package)\">\(module)</option>\n"
 }
 
 htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsString)
@@ -176,24 +175,16 @@ func generateDocs(package: String, module: String, with docCExecutable: String) 
             "--fallback-bundle-version", "1.0.0",
             "--additional-symbol-graph-dir", "packages/\(package)/.build/\(package)-symbol-graphs"
         )
+        try shell("mkdir", "-p", "public/\(package)")
+        try shell(
+            swiftDocCExecutablePath,
+            "process-archive", "transform-for-static-hosting",
+            "packages/\(package)/Sources/\(module)/Docs.docc/.docc-build",
+            "--output-path", "public/\(package)",
+            "--hosting-base-path", "\(package)"
+        )
     } catch let error as ShellError {
         throw error
-    }
-}
-
-func copyHTMLItems(package: String, module: String) throws {
-    let sourceDir = "packages/\(package)/Sources/\(module)/Docs.docc/.docc-build"
-    let destinationDir = "public/\(package)/"
-    try shell("rm", "-rf", destinationDir)
-    try shell("mkdir", "-p", destinationDir)
-    let items = try FileManager.default.contentsOfDirectory(
-        atPath: sourceDir
-    )
-    for item in items {
-        try FileManager.default.copyItem(
-            atPath: "\(sourceDir)/\(item)", 
-            toPath: "\(destinationDir)/\(item)"
-        )
     }
 }
 
