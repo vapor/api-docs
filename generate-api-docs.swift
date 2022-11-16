@@ -71,7 +71,7 @@ let sortedModules = allModules.sorted { $0.module < $1.module }
 for object in sortedModules {
     let package = object.package
     let module = object.module
-    optionsString += "<option value=\"/\(package)\">\(module)</option>\n"
+    optionsString += "<option value=\"/\(package)/documentation/\(package.replacingOccurrences(of: "-", with: ""))\">\(module)</option>\n"
 }
 
 htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsString)
@@ -179,13 +179,10 @@ func generateDocs(package: String, module: String, with docCExecutable: String) 
             "--output-path", "public/\(package)",
             "--hosting-base-path", "/\(package)"
         )
-        // try shell(
-        //     swiftDocCExecutablePath,
-        //     "process-archive", "transform-for-static-hosting",
-        //     "packages/\(package)/Sources/\(module)/Docs.docc/.docc-build",
-        //     "--output-path", "public/\(package)",
-        //     "--static-hosting-base-path", "/\(package)"
-        // )
+        try FileManager.default.moveItem(
+            atPath: "theme-settings.json", 
+            toPath: "public/\(package)/theme-settings.json"
+        )
     } catch let error as ShellError {
         throw error
     }
