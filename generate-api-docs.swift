@@ -209,7 +209,7 @@ extension FileManager {
     func copyItemIfPossible(atPath: String, toPath: String) throws {
         var isDirectory: ObjCBool = false
         guard self.fileExists(
-                atPath: atPath,
+                atPath: toPath,
                 isDirectory: &isDirectory
             ) == false else {
                 return
