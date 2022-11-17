@@ -61,6 +61,16 @@ for (package, modules) in packages {
     print("✅ Finished generating api-docs for package: \(package)")
 }
 
+print("Checking output")
+
+let publicDirOutput = try shell("ls", "-l", "public/postgres-nio/", returnStdOut: true)
+guard let publicDirOutputLines = try publicDirOutput.string() else {
+    fatalError("Could not get public dir output")
+}
+print(publicDirOutputLines)
+
+print("✅ Finished checking output")
+
 let sortedModules = allModules.sorted { $0.module < $1.module }
 for object in sortedModules {
     let package = object.package
@@ -110,6 +120,10 @@ func generateDocs(package: String, module: String) throws {
         #else
         docCExecutablePath = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/docc"
         #endif
+        try FileManager.default.copyItemIfPossible(
+            atPath: "theme-settings.json",
+            toPath: "packages/\(package)/Sources/PostgresNIO/Docs.docc/theme-settings.json"
+        )
         try shell("mkdir", "-p", "public/\(package)")
         try shell(
             docCExecutablePath,
@@ -121,10 +135,6 @@ func generateDocs(package: String, module: String) throws {
             "--transform-for-static-hosting",
             "--output-path", "public/\(package)",
             "--hosting-base-path", "/\(package)"
-        )
-        try FileManager.default.copyItemIfPossible(
-            atPath: "theme-settings.json",
-            toPath: "packages/\(package)/Sources/PostgresNIO/Docs.docc/theme-settings.json"
         )
     } catch let error as ShellError {
         throw error
