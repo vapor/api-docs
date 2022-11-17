@@ -43,11 +43,6 @@ import Foundation
     "postgres-nio": ["PostgresNIO"],
  ]
 
-try updateSwiftDocC()
-try updateSwiftDocCRenderer()
-let swiftDocCExecutablePath = try buildSwiftDocC()
-setenv("DOCC_HTML_DIR", "swift-docc-render-artifact/dist", 1)
-
 let url = URL(fileURLWithPath: "index.html")
 var htmlString = try String(contentsOf: url)
 var optionsString = ""
@@ -59,19 +54,18 @@ for (package, modules) in packages {
         print("Generating api-docs for package: \(package), module: \(module)")
         try generateDocs(
             package: package, 
-            module: module, 
-            with: swiftDocCExecutablePath
+            module: module
         )
         allModules.append((package: package, module: module))
     }
-    print("✅ Finished generating all api-docs for package: \(package)")
+    print("✅ Finished generating api-docs for package: \(package)")
 }
 
 let sortedModules = allModules.sorted { $0.module < $1.module }
 for object in sortedModules {
     let package = object.package
     let module = object.module
-    optionsString += "<option value=\"/\(package)/documentation/\(package.replacingOccurrences(of: "-", with: ""))\">\(module)</option>\n"
+    optionsString += "<option value=\"/\(package)/documentation/\(module.lowercased())\">\(module)</option>\n"
 }
 
 htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsString)
@@ -81,57 +75,7 @@ try shell("cp", "api-docs.png", "public/api-docs.png")
 
 // MARK: Functions
 
-func updateSwiftDocC() throws {
-    print("📦 Updating swift-docc")
-    do {
-        try shell("git", "clone", "https://github.com/apple/swift-docc.git", "swift-docc")
-    } catch let error as ShellError {
-        if error.terminationStatus == 128 {
-            // repo already exists, get newest version
-            try shell("git", "-C", "swift-docc/", "checkout", "main")
-            try shell("git", "-C", "swift-docc/", "reset", "--hard")
-            try shell("git", "-C", "swift-docc/", "pull")
-        } else {
-            throw error
-        }
-    }
-}
-
-func updateSwiftDocCRenderer() throws {
-    print("📦 Updating swift-docc-renderer")
-    do {
-        try shell("git", "clone", "https://github.com/apple/swift-docc-render-artifact.git", "swift-docc-render-artifact")
-    } catch let error as ShellError {
-        if error.terminationStatus == 128 {
-            try shell("git", "-C", "swift-docc-render-artifact/", "checkout", "main")
-            try shell("git", "-C", "swift-docc-render-artifact/", "reset", "--hard")
-            try shell("git", "-C", "swift-docc-render-artifact/", "pull")
-        } else {
-            throw error
-        }
-    }
-}
-
-func buildSwiftDocC() throws -> String {
-    print("🔨 Building swift-docc")
-    try shell(
-        "swift", "build", "--package-path", "swift-docc", 
-        "-c", "release"
-    )
-    let outputPipe = try shell(
-        "swift", "build", "--package-path", "swift-docc", 
-        "-c", "release", "--show-bin-path",
-        returnStdOut: true
-    )
-    guard let output = try outputPipe.string()?.replacingOccurrences(of: "\n", with: "") else {
-        print("❌ ERROR: Failed to build package swift-docc")
-        exit(1)
-    }
-    print(output)
-    return "\(output)/docc"
-}
-
-func generateDocs(package: String, module: String, with docCExecutable: String) throws {
+func generateDocs(package: String, module: String) throws {
     do {
         try shell("rm", "-rf", "public/\(package)/main/\(module)")
         try shell("mkdir", "-p", "packages/\(package)/.build/symbol-graphs")
@@ -153,23 +97,22 @@ func generateDocs(package: String, module: String, with docCExecutable: String) 
             atPath: "packages/\(package)/.build/symbol-graphs"
         )
         let files = (enumerator?.allObjects as! [String]).filter{ $0.starts(with: module) }
-        var isDirectory: ObjCBool = false
         for file in files {
-            guard FileManager.default.fileExists(
-                atPath: "packages/\(package)/.build/\(package)-symbol-graphs/\(file)",
-                isDirectory: &isDirectory
-            ) == false else {
-                continue
-            }
-            try FileManager.default.copyItem(
+            try FileManager.default.copyItemIfPossible(
                 atPath: "packages/\(package)/.build/symbol-graphs/\(file)", 
                 toPath: "packages/\(package)/.build/\(package)-symbol-graphs/\(file)"
             )
         }
         print("📝 Generating docs")
+        let docCExecutablePath: String 
+        #if os(Linux)
+        docCExecutablePath = "/usr/bin/docc"
+        #else
+        docCExecutablePath = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/docc"
+        #endif
         try shell("mkdir", "-p", "public/\(package)")
         try shell(
-            swiftDocCExecutablePath,
+            docCExecutablePath,
             "convert", "packages/\(package)/Sources/\(module)/Docs.docc",
             "--fallback-display-name", module,
             "--fallback-bundle-identifier", "nio.postgres",
@@ -179,9 +122,9 @@ func generateDocs(package: String, module: String, with docCExecutable: String) 
             "--output-path", "public/\(package)",
             "--hosting-base-path", "/\(package)"
         )
-        try FileManager.default.copyItem(
-            atPath: "theme-settings.json", 
-            toPath: "public/\(package)/theme-settings.json"
+        try FileManager.default.copyItemIfPossible(
+            atPath: "theme-settings.json",
+            toPath: "packages/\(package)/Sources/PostgresNIO/Docs.docc/theme-settings.json"
         )
     } catch let error as ShellError {
         throw error
@@ -250,4 +193,20 @@ extension Pipe {
         }
         return result
     }
-}   
+} 
+
+extension FileManager {
+    func copyItemIfPossible(atPath: String, toPath: String) throws {
+        var isDirectory: ObjCBool = false
+        guard self.fileExists(
+                atPath: atPath,
+                isDirectory: &isDirectory
+            ) == false else {
+                return
+            }
+        return try self.copyItem(
+            atPath: atPath,
+            toPath: toPath
+        )
+    }
+}
