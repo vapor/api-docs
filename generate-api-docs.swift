@@ -265,3 +265,19 @@ extension Pipe {
         return result
     }
 }   
+
+extension FileManager {
+    func copyItemIfPossible(atPath: String, toPath: String) throws {
+        var isDirectory: ObjCBool = false
+        guard self.fileExists(
+                atPath: atPath,
+                isDirectory: &isDirectory
+            ) == false else {
+                return
+            }
+        return try self.copyItem(
+            atPath: atPath,
+            toPath: toPath
+        )
+    }
+}
