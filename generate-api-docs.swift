@@ -158,7 +158,7 @@ func gitPullMain(_ package: String) throws {
 @discardableResult
 func shell(_ args: String..., returnStdOut: Bool = false, stdIn: Pipe? = nil) throws -> Pipe {
     let task = Process()
-    task.launchPath = "/usr/bin/env"
+    task.executableURL = URL(filePath: "/usr/bin/env")
     task.arguments = args
     let pipe = Pipe()
     if returnStdOut {
