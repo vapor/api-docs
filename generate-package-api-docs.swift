@@ -2,8 +2,6 @@
 
 import Foundation
 
-print("Command Line ags \(CommandLine.arguments)")
-
 guard CommandLine.argc == 3 else {
     print("❌ ERROR: You must provide the package name and modules as a comma separated string.")
     exit(1)
@@ -13,6 +11,11 @@ let packageName = CommandLine.arguments[1]
 let moduleList = CommandLine.arguments[2]
 
 let modules = moduleList.components(separatedBy: ",")
+
+// Set up
+try shell("rm", "-rf", "public/")
+try shell("mkdir", "-p", ".build/symbol-graphs")
+try shell("mkdir", "-p", "public/\(package)")
 
 for module in modules {
     print("Generating api-docs for package: \(packageName), module: \(module)")
@@ -28,7 +31,6 @@ print("✅ Finished generating api-docs for package: \(packageName)")
 
 func generateDocs(package: String, module: String) throws {
     do {
-        try shell("rm", "-rf", "public/\(package)/main/\(module)")
         // Build package
         print("🔨 Building \(package):\(module)")
         try shell(
@@ -45,7 +47,6 @@ func generateDocs(package: String, module: String) throws {
         #else
         docCExecutablePath = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/docc"
         #endif
-        try shell("mkdir", "-p", "public/\(package)")
         try shell(
             docCExecutablePath,
             "convert", "Sources/\(module)/Docs.docc",
