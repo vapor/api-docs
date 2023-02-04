@@ -15,7 +15,7 @@ let modules = moduleList.components(separatedBy: ",")
 // Set up
 try shell("rm", "-rf", "public/")
 try shell("mkdir", "-p", ".build/symbol-graphs")
-try shell("mkdir", "-p", "public/\(package)")
+try shell("mkdir", "-p", "public/\(packageName)")
 
 for module in modules {
     print("Generating api-docs for package: \(packageName), module: \(module)")
