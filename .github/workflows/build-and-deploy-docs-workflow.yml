@@ -1,0 +1,55 @@
+name: Shared Build DocC docs and Deploy
+
+on:
+  workflow_call:
+    inputs:
+      package_name:
+        type: string
+        required: true
+        description: "The name of the package to build docs for."
+      modules:
+        type: string
+        required: true
+        description: "The modules in the package to build docs for."
+
+jobs:
+
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Download Files
+        run: | 
+          curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/generate-api-docs.swift > generate-api-docs.swift
+          curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json > theme-settings.json
+      - name: Builds Docs
+        run: swift generate-api-docs.swift ${{ inputs.package_name }} ${{ inputs.modules }}
+      - name: Configure AWS Credentials
+        id: cred
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'eu-west-2'
+      - name: Deploy to S3
+        id: s3deploy
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: 'vapor-api-docs-site'
+          AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'eu-west-2'
+          SOURCE_DIR: 'public'
+      - name: Invalidate CloudFront
+        uses: awact/cloudfront-action@master
+        env:
+          SOURCE_PATH: public/${{ inputs.package_name }}/*
+          AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'eu-west-2'
+          DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
