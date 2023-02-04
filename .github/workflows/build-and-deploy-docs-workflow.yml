@@ -16,7 +16,7 @@ jobs:
 
   build-docs:
     runs-on: ubuntu-latest
-    container: swift:5.7
+    container: swift:5.7-jammy
     steps:
       - name: Check out code
         uses: actions/checkout@v3
@@ -26,6 +26,9 @@ jobs:
         run: | 
           curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/generate-package-api-docs.swift > generate-package-api-docs.swift
           curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json > theme-settings.json
+      - name: Debug Test
+        run: | 
+          echo "Is this thing on"
       - name: Builds Docs
         run: swift generate-package-api-docs.swift ${{ inputs.package_name }} ${{ inputs.modules }}
       - name: Configure AWS Credentials
