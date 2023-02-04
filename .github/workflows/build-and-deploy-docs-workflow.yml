@@ -16,6 +16,8 @@ jobs:
 
   build-docs:
     runs-on: ubuntu-latest
+    container:
+      image: swift:5.7
     steps:
       - name: Check out code
         uses: actions/checkout@v3
