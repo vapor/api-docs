@@ -64,6 +64,7 @@ for object in sortedModules {
 
 htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsString)
 
+try shell("mkdir", "public")
 try htmlString.write(toFile: "public/index.html", atomically: true, encoding: .utf8)
 try shell("cp", "api-docs.png", "public/api-docs.png")
 
