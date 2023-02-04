@@ -23,10 +23,10 @@ jobs:
           fetch-depth: 0
       - name: Download Files
         run: | 
-          curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/generate-api-docs.swift > generate-api-docs.swift
+          curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/generate-package-api-docs.swift > generate-package-api-docs.swift
           curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json > theme-settings.json
       - name: Builds Docs
-        run: swift generate-api-docs.swift ${{ inputs.package_name }} ${{ inputs.modules }}
+        run: swift generate-package-api-docs.swift ${{ inputs.package_name }} ${{ inputs.modules }}
       - name: Configure AWS Credentials
         id: cred
         uses: aws-actions/configure-aws-credentials@v1
