@@ -39,7 +39,7 @@ jobs:
       id: s3deploy
       uses: jakejarvis/s3-sync-action@master
       with:
-        args: --acl public-read --follow-symlinks --delete
+        args: --acl public-read --follow-symlinks
       env:
         AWS_S3_BUCKET: 'vapor-api-docs-site'
         AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}

@@ -49,10 +49,11 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'eu-west-2'
           SOURCE_DIR: 'public'
+          DEST_DIR: ${{ inputs.package_name }}
       - name: Invalidate CloudFront
         uses: awact/cloudfront-action@master
         env:
-          SOURCE_PATH: public/${{ inputs.package_name }}/*
+          SOURCE_PATH: /${{ inputs.package_name }}/*
           AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'eu-west-2'
