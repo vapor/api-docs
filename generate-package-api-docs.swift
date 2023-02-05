@@ -51,13 +51,14 @@ func generateDocs(package: String, module: String) throws {
             docCExecutablePath,
             "convert", "Sources/\(module)/Docs.docc",
             "--fallback-display-name", module,
-            "--fallback-bundle-identifier", "codes.vapor.\(package).\(module)",
+            "--fallback-bundle-identifier", "codes.vapor.\(package).\(module.lowercased())",
             "--fallback-bundle-version", "1.0.0",
-            "--additional-symbol-graph-dir", ".build/\(package)-symbol-graphs",
+            "--additional-symbol-graph-dir", ".build/symbol-graphs",
             "--transform-for-static-hosting",
-            "--output-path", "public/\(package)/\(module)",
-            "--hosting-base-path", "/\(package)/\(module)"
+            "--output-path", "public/\(package)/\(module.lowercased())",
+            "--hosting-base-path", "/\(package)/\(module.lowercased())"
         )
+        print("🖨️ Copying files")
         try FileManager.default.copyItemIfPossible(
             atPath: "theme-settings.json",
             toPath: "public/\(package)/\(module)/theme-settings.json"
