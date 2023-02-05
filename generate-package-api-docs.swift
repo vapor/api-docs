@@ -55,8 +55,8 @@ func generateDocs(package: String, module: String) throws {
             "--fallback-bundle-version", "1.0.0",
             "--additional-symbol-graph-dir", ".build/symbol-graphs",
             "--transform-for-static-hosting",
-            "--output-path", "public/\(package)/\(module.lowercased())",
-            "--hosting-base-path", "/\(package)/\(module.lowercased())"
+            "--output-path", "public/\(package)",
+            "--hosting-base-path", "/\(package)"
         )
         print("🖨️ Copying files")
         try FileManager.default.copyItemIfPossible(
