@@ -32,6 +32,11 @@ print("✅ Finished generating api-docs for package: \(packageName)")
 func generateDocs(package: String, module: String) throws {
     do {
         // Build package
+        print("🖨️ Copying files")
+        try FileManager.default.copyItemIfPossible(
+            atPath: "theme-settings.json",
+            toPath: "Sources/\(package)/Docs.docc/theme-settings.json"
+        )
         print("🔨 Building \(package):\(module)")
         try shell(
             "swift", "build",
@@ -57,11 +62,6 @@ func generateDocs(package: String, module: String) throws {
             "--transform-for-static-hosting",
             "--output-path", "public/\(package)",
             "--hosting-base-path", "/\(package)"
-        )
-        print("🖨️ Copying files")
-        try FileManager.default.copyItemIfPossible(
-            atPath: "theme-settings.json",
-            toPath: "public/\(package)/\(module)/theme-settings.json"
         )
     } catch let error as ShellError {
         throw error
