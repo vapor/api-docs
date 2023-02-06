@@ -36,12 +36,12 @@ func generateDocs(package: String, module: String) throws {
         do {
             try FileManager.default.copyItemIfPossible(
                 atPath: "theme-settings.json",
-                toPath: "Sources/\(package)/Docs.docc/theme-settings.json"
+                toPath: "Sources/\(module)/Docs.docc/theme-settings.json"
             )
         } catch {
             print("❌ ERROR: Could not copy theme-settings.json to Sources/\(package)/Docs.docc/theme-settings.json")
             let pipe = try shell("ls", "-l", returnStdOut: true)
-            print(try? pipe.string() ?? "No output")
+            print(try pipe.string() ?? "No output")
         }
         print("🔨 Building \(package):\(module)")
         try shell(
