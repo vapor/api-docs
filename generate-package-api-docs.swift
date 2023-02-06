@@ -32,18 +32,12 @@ print("✅ Finished generating api-docs for package: \(packageName)")
 func generateDocs(package: String, module: String) throws {
     do {
         // Build package
-        print("🖨️ Copying files")
-        do {
-            try FileManager.default.copyItemIfPossible(
-                atPath: "theme-settings.json",
-                toPath: "Sources/\(module)/Docs.docc/theme-settings.json"
-            )
-        } catch {
-            print("❌ ERROR: Could not copy theme-settings.json to Sources/\(package)/Docs.docc/theme-settings.json")
-            let pipe = try shell("ls", "-l", returnStdOut: true)
-            print(try pipe.string() ?? "No output")
-        }
-        print("🔨 Building \(package):\(module)")
+        print("🖨️  Copying files")
+        try FileManager.default.copyItemIfPossible(
+            atPath: "theme-settings.json",
+            toPath: "Sources/\(module)/Docs.docc/theme-settings.json"
+        )
+        print("🔨  Building \(package):\(module)")
         try shell(
             "swift", "build",
             "--target", module, 
@@ -51,7 +45,11 @@ func generateDocs(package: String, module: String) throws {
             "-Xswiftc", "-emit-symbol-graph-dir",
             "-Xswiftc", ".build/symbol-graphs"
         )
-        print("📝 Generating docs")
+        print("🖨️  Copying symbol files")
+        try shell("mkdir", "-p", ".build/\(module)-symbol-graphs")
+        try shell("mv", ".build/symbol-graphs/\(module)* .build/\(module)-symbol-graphs")
+
+        print("📝  Generating docs")
         let docCExecutablePath: String 
         #if os(Linux)
         docCExecutablePath = "/usr/bin/docc"
@@ -64,7 +62,7 @@ func generateDocs(package: String, module: String) throws {
             "--fallback-display-name", module,
             "--fallback-bundle-identifier", "codes.vapor.\(package).\(module.lowercased())",
             "--fallback-bundle-version", "1.0.0",
-            "--additional-symbol-graph-dir", ".build/symbol-graphs",
+            "--additional-symbol-graph-dir", ".build/\(module)-symbol-graphs",
             "--transform-for-static-hosting",
             "--output-path", "public/\(package)",
             "--hosting-base-path", "/\(package)"
