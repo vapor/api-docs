@@ -40,7 +40,7 @@ func generateDocs(package: String, module: String) throws {
             )
         } catch {
             print("❌ ERROR: Could not copy theme-settings.json to Sources/\(package)/Docs.docc/theme-settings.json")
-            let pipe = try shell("ls -l", returnStdOut: true)
+            let pipe = try shell("ls", "-l", returnStdOut: true)
             print(try? pipe.string() ?? "No output")
         }
         print("🔨 Building \(package):\(module)")
