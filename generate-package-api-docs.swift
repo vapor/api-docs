@@ -47,7 +47,17 @@ func generateDocs(package: String, module: String) throws {
         )
         print("🖨️  Copying symbol files")
         try shell("mkdir", "-p", ".build/\(module)-symbol-graphs")
-        try shell("mv", ".build/symbol-graphs/\(module)* .build/\(module)-symbol-graphs")
+        // Copy package-specific symbol-graphs to custom directory
+        let enumerator = FileManager.default.enumerator(
+            atPath: ".build/symbol-graphs"
+        )
+        let files = (enumerator?.allObjects as! [String]).filter{ $0.starts(with: module) }
+        for file in files {
+            try FileManager.default.copyItemIfPossible(
+                atPath: ".build/symbol-graphs/\(file)", 
+                toPath: ".build/\(module)-symbol-graphs/\(file)"
+            )
+        }
 
         print("📝  Generating docs")
         let docCExecutablePath: String 
