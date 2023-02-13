@@ -74,8 +74,8 @@ func generateDocs(package: String, module: String) throws {
             "--fallback-bundle-version", "1.0.0",
             "--additional-symbol-graph-dir", ".build/\(module)-symbol-graphs",
             "--transform-for-static-hosting",
-            "--output-path", "public/\(package)",
-            "--hosting-base-path", "/\(package)"
+            "--output-path", "public/\(module)",
+            "--hosting-base-path", "/\(module)"
         )
     } catch let error as ShellError {
         throw error
