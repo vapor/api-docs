@@ -6,10 +6,10 @@ let packages: [String: [String]] = [
     "vapor": ["Vapor", "XCTVapor"],
 
     "async-kit": ["AsyncKit"],
-//     "routing-kit": ["RoutingKit"],
-//     "console-kit": ["ConsoleKit"],
-//     "websocket-kit": ["WebSocketKit"],
-//     "multipart-kit": ["MultipartKit"],
+    "routing-kit": ["RoutingKit"],
+    "console-kit": ["ConsoleKit"],
+    "websocket-kit": ["WebSocketKit"],
+    "multipart-kit": ["MultipartKit"],
 
     "postgres-nio": ["PostgresNIO"],
 //     "mysql-nio": ["MySQLNIO"],
@@ -28,15 +28,15 @@ let packages: [String: [String]] = [
 //     "fluent-sqlite-driver": ["FluentSQLiteDriver"],
 
     "redis": ["Redis"],
-//     "queues-redis-driver": ["QueuesRedisDriver"],
-//     "queues": ["Queues", "XCTQueues"],
+    "queues-redis-driver": ["QueuesRedisDriver"],
+    "queues": ["Queues", "XCTQueues"],
 
     "leaf-kit": ["LeafKit"],
-//     "leaf": ["Leaf"],
+    "leaf": ["Leaf"],
 
-//     "jwt-kit": ["JWTKit"],
-//     "jwt": ["JWT"],
-//     "apns": ["APNS"],
+    "jwt-kit": ["JWTKit"],
+    "jwt": ["JWT"],
+    // "apns": ["APNS"],
 ]
 
 try shell("rm", "-rf", "public/")
