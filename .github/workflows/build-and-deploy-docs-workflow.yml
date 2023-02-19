@@ -28,7 +28,7 @@ jobs:
           fetch-depth: 0
       - name: Install curl
         run: | 
-          apt-get update && apt-get install -y curl
+          apt-get update && apt-get install -y curl wget
       - name: Download Files
         run: | 
           curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/generate-package-api-docs.swift > generate-package-api-docs.swift
