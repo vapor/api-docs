@@ -16,7 +16,7 @@ jobs:
 
   build-docs:
     runs-on: ubuntu-latest
-    container: swift:5.6
+    container: swift:5.7
     steps:
       - name: Check out code
         uses: actions/checkout@v3
@@ -42,18 +42,23 @@ jobs:
         id: s3deploy
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --follow-symlinks --delete
+          args: --acl public-read --follow-symlinks
         env:
           AWS_S3_BUCKET: 'vapor-api-docs-site'
           AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'eu-west-2'
-          SOURCE_DIR: 'public/${{ inputs.package_name }}'
-          DEST_DIR: ${{ inputs.package_name }}
+          SOURCE_DIR: 'public'
+      - name: Get Paths to Invalidate
+        id: get_paths
+        run: |
+          export MODULES_TO_USE="${${{ inputs.modules }}//,/" "}"
+          export PATHS_TO_INVALIDATE="$(sed 's|\<|/&|g' <<< $MODULES_TO_USE)"
+          echo "::set-output name=paths::/$PATHS_TO_INVALIDATE/*"
       - name: Invalidate CloudFront
-        uses: awact/cloudfront-action@master
+        uses: chetan/invalidate-cloudfront-action@v2
         env:
-          SOURCE_PATH: /${{ inputs.package_name }}/*
+          PATHS: ${{ steps.get_paths.outputs.paths }}
           AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'eu-west-2'
