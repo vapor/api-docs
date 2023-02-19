@@ -43,7 +43,8 @@ func generateDocs(package: String, module: String) throws {
             "--target", module, 
             "-Xswiftc", "-emit-symbol-graph",
             "-Xswiftc", "-emit-symbol-graph-dir",
-            "-Xswiftc", ".build/symbol-graphs"
+            "-Xswiftc", ".build/symbol-graphs",
+            "-Xswiftc", "-DBUILDING_DOCC"
         )
         print("🖨️  Copying symbol files")
         try shell("mkdir", "-p", ".build/\(module)-symbol-graphs")
@@ -74,8 +75,8 @@ func generateDocs(package: String, module: String) throws {
             "--fallback-bundle-version", "1.0.0",
             "--additional-symbol-graph-dir", ".build/\(module)-symbol-graphs",
             "--transform-for-static-hosting",
-            "--output-path", "public/\(module)",
-            "--hosting-base-path", "/\(module)"
+            "--output-path", "public/\(module.lowercased())",
+            "--hosting-base-path", "/\(module.lowercased())"
         )
     } catch let error as ShellError {
         throw error
