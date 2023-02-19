@@ -11,6 +11,10 @@ on:
         type: string
         required: true
         description: "The modules in the package to build docs for."
+      pathsToInvalidate:
+        type: string
+        required: true
+        description: "The paths to invalidate in CloudFront, e.g. '/vapor /xctvapor'."
 
 jobs:
 
@@ -49,16 +53,10 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'eu-west-2'
           SOURCE_DIR: 'public'
-      - name: Get Paths to Invalidate
-        id: get_paths
-        run: |
-          export MODULES_TO_USE="${${{ inputs.modules }}//,/" "}"
-          export PATHS_TO_INVALIDATE="$(sed 's|\<|/&|g' <<< $MODULES_TO_USE)"
-          echo "::set-output name=paths::/$PATHS_TO_INVALIDATE/*"
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
         env:
-          PATHS: ${{ steps.get_paths.outputs.paths }}
+          PATHS: ${{ inputs.pathsToInvalidate }}
           AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'eu-west-2'
