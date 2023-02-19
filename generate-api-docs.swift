@@ -41,10 +41,11 @@ import Foundation
 
  let packages: [String: [String]] = [
     "postgres-nio": ["PostgresNIO"],
-    "vapor": ["vapor", "xctvapor"],
-    "leaf-kit": ["leafkit"],
+    "vapor": ["Vapor", "XCTVapor"],
+    "leaf-kit": ["LeafKit"],
  ]
 
+try shell("rm", "-rf", "public/")
 let url = URL(fileURLWithPath: "index.html")
 var htmlString = try String(contentsOf: url)
 var optionsString = ""
@@ -58,9 +59,8 @@ for (package, modules) in packages {
 
 let sortedModules = allModules.sorted { $0.module < $1.module }
 for object in sortedModules {
-    let package = object.package
     let module = object.module
-    optionsString += "<option value=\"/\(package)/documentation/\(module.lowercased())\">\(module)</option>\n"
+    optionsString += "<option value=\"/\(module.lowercased())/documentation/\(module.lowercased())\">\(module)</option>\n"
 }
 
 htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsString)
