@@ -41,7 +41,8 @@ import Foundation
 
  let packages: [String: [String]] = [
     "postgres-nio": ["PostgresNIO"],
-    "vapor": ["Vapor", "XCTVapor"],
+    "vapor": ["vapor", "xctvapor"],
+    "leaf-kit": ["leafkit"],
  ]
 
 let url = URL(fileURLWithPath: "index.html")
