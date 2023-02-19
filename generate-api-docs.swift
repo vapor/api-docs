@@ -36,7 +36,7 @@ let packages: [String: [String]] = [
 
     "jwt-kit": ["JWTKit"],
     "jwt": ["JWT"],
-    // "apns": ["APNS"],
+    "apns": ["APNS"],
 ]
 
 try shell("rm", "-rf", "public/")
