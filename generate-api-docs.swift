@@ -2,16 +2,16 @@
 
 import Foundation
 
-// let packages: [String: [String]] = [
-//     "vapor": ["Vapor", "XCTVapor"],
+let packages: [String: [String]] = [
+    "vapor": ["Vapor", "XCTVapor"],
 
-//     "async-kit": ["AsyncKit"],
+    "async-kit": ["AsyncKit"],
 //     "routing-kit": ["RoutingKit"],
 //     "console-kit": ["ConsoleKit"],
 //     "websocket-kit": ["WebSocketKit"],
 //     "multipart-kit": ["MultipartKit"],
 
-//     "postgres-nio": ["PostgresNIO"],
+    "postgres-nio": ["PostgresNIO"],
 //     "mysql-nio": ["MySQLNIO"],
 //     "sqlite-nio": ["SQLiteNIO"],
 
@@ -27,23 +27,17 @@ import Foundation
 //     "fluent-mysql-driver": ["FluentMySQLDriver"],
 //     "fluent-sqlite-driver": ["FluentSQLiteDriver"],
 
-//     "redis": ["Redis"],
+    "redis": ["Redis"],
 //     "queues-redis-driver": ["QueuesRedisDriver"],
 //     "queues": ["Queues", "XCTQueues"],
 
-//     "leaf-kit": ["LeafKit"],
+    "leaf-kit": ["LeafKit"],
 //     "leaf": ["Leaf"],
 
 //     "jwt-kit": ["JWTKit"],
 //     "jwt": ["JWT"],
 //     "apns": ["APNS"],
-// ]
-
- let packages: [String: [String]] = [
-    "postgres-nio": ["PostgresNIO"],
-    "vapor": ["Vapor", "XCTVapor"],
-    "leaf-kit": ["LeafKit"],
- ]
+]
 
 try shell("rm", "-rf", "public/")
 let url = URL(fileURLWithPath: "index.html")
