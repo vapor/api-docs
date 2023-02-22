@@ -12,8 +12,8 @@ let packages: [String: [String]] = [
     "multipart-kit": ["MultipartKit"],
 
     "postgres-nio": ["PostgresNIO"],
-//     "mysql-nio": ["MySQLNIO"],
-//     "sqlite-nio": ["SQLiteNIO"],
+    "mysql-nio": ["MySQLNIO"],
+    "sqlite-nio": ["SQLiteNIO"],
 
 //     "sql-kit": ["SQLKit"],
 //     "postgres-kit": ["PostgresKit"],
