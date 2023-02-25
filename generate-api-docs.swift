@@ -22,9 +22,9 @@ let packages: [String: [String]] = [
 
      "fluent-kit": ["FluentKit", "FluentSQL", "XCTFluent"],
      "fluent": ["Fluent"],
-//     "fluent-postgres-driver": ["FluentPostgresDriver"],
-//     "fluent-mongo-driver": ["FluentMongoDriver"],
-//     "fluent-mysql-driver": ["FluentMySQLDriver"],
+     "fluent-postgres-driver": ["FluentPostgresDriver"],
+     "fluent-mongo-driver": ["FluentMongoDriver"],
+     "fluent-mysql-driver": ["FluentMySQLDriver"],
 //     "fluent-sqlite-driver": ["FluentSQLiteDriver"],
 
     "redis": ["Redis"],
