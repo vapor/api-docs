@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vapor API Docs</title>
+    <title>Error Page | Vapor API Docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <style>
         html, body {
@@ -37,12 +37,11 @@
 <body>
     <div class="wrapper">
         <div class="main">
-            <h1 class="title">Vapor API Docs</h1>
+            <h1 class="title">Oops! Something went wrong</h1>
             <br>
-            <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value); this.selectedIndex = 0;">
-                <option value="">Choose package...</option>
-                {{Options}}
-            </select>
+            <p>
+                We couldn't find what you were looking for. Try heading back to the <a href="/index.html">home page</a>.
+            </p>
         </div>
     </div>
 </body>
