@@ -24,7 +24,7 @@ Resources:
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
-        ErrorDocument: error/404/index.html
+        ErrorDocument: error.html
         RoutingRules:
           - RoutingRuleCondition:
               HttpErrorCodeReturnedEquals: '404'
@@ -55,7 +55,7 @@ Resources:
         CustomErrorResponses:
           - ErrorCode: 403
             ResponseCode: 404
-            ResponsePagePath: '/error/404/index.html'
+            ResponsePagePath: '/error.html'
         DefaultCacheBehavior:
           TargetOriginId: S3Origin
           ViewerProtocolPolicy: redirect-to-https
