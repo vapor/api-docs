@@ -24,17 +24,6 @@ Resources:
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
-        ErrorDocument: error/404/index.html
-        RoutingRules:
-          - RoutingRuleCondition:
-              HttpErrorCodeReturnedEquals: '404'
-              KeyPrefixEquals: /
-            RedirectRule:
-              HostName: !Sub
-                - '${SubDomainName}.${HostedZoneName}.'
-                - SubDomainName: !Ref SubDomainName
-                  HostedZoneName: !Ref HostedZoneName
-              ReplaceKeyPrefixWith: error/404/
   WebsiteCloudFront:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -52,10 +41,6 @@ Resources:
             - '${SubDomainName}.${HostedZoneName}'
             - SubDomainName: !Ref SubDomainName
               HostedZoneName: !Ref HostedZoneName 
-        CustomErrorResponses:
-          - ErrorCode: 403
-            ResponseCode: 404
-            ResponsePagePath: '/error/404/index.html'
         DefaultCacheBehavior:
           TargetOriginId: S3Origin
           ViewerProtocolPolicy: redirect-to-https
