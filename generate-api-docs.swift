@@ -62,6 +62,7 @@ htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsStr
 try shell("mkdir", "public")
 try htmlString.write(toFile: "public/index.html", atomically: true, encoding: .utf8)
 try shell("cp", "api-docs.png", "public/api-docs.png")
+try shell("cp", "error.html", "public/error.html")
 
 // MARK: Functions
 @discardableResult
