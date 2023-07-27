@@ -53,10 +53,10 @@ jobs:
           DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
           INVALIDATE_PATHS: ${{ inputs.pathsToInvalidate }}
         run: |
-          aws s3 sync \
+          aws --no-cli-pager s3 sync \
             ./public s3://vapor-api-docs-site \
             --no-progress \
             --acl public-read
-          aws cloudfront create-invalidation \
+          aws --no-cli-pager cloudfront create-invalidation \
             --distribution-id ${DISTRIBUTION_ID} \
             --paths ${INVALIDATE_PATHS}
