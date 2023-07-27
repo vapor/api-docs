@@ -20,44 +20,43 @@ jobs:
 
   build-docs:
     runs-on: ubuntu-latest
-    container: swift:5.8
+    container: swiftlang/swift:nightly-5.9-jammy@sha256:a3c3ec5e4436c14e44759e38416bb0d46813dc6dd050e787ef3a80b2c3051a36
     steps:
       - name: Check out code
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Install curl
+      - name: Install curl and awscliv2
         run: | 
-          apt-get update && apt-get install -y curl wget awscli
+          apt-get update && apt-get install -y curl
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          ./aws/install
       - name: Download Files
         run: | 
-          curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/generate-package-api-docs.swift > generate-package-api-docs.swift
-          curl -sL https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json > theme-settings.json
+          curl -sL \
+            https://raw.githubusercontent.com/vapor/api-docs/main/generate-package-api-docs.swift -o generate-package-api-docs.swift \
+            https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json -o theme-settings.json
       - name: Builds Docs
-        run: swift generate-package-api-docs.swift ${{ inputs.package_name }} ${{ inputs.modules }}
+        env:
+          PACKAGE: ${{ inputs.package_name }}
+          MODULES: ${{ inputs.modules }}
+        run: swift generate-package-api-docs.swift ${PACKAGE} ${MODULES}
       - name: Configure AWS Credentials
-        id: cred
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
           aws-region: 'eu-west-2'
-      - name: Deploy to S3
-        id: s3deploy
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read --follow-symlinks
+      - name: Deploy to S3 and invalidate CloudFront
         env:
-          AWS_S3_BUCKET: 'vapor-api-docs-site'
-          AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'eu-west-2'
-          SOURCE_DIR: 'public'
-      - name: Invalidate CloudFront
-        uses: chetan/invalidate-cloudfront-action@v2
-        env:
-          PATHS: ${{ inputs.pathsToInvalidate }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'eu-west-2'
-          DISTRIBUTION: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
+          DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
+          INVALIDATE_PATHS: ${{ inputs.pathsToInvalidate }}
+        run: |
+          aws --no-cli-pager s3 sync \
+            ./public s3://vapor-api-docs-site \
+            --no-progress \
+            --acl public-read
+          aws --no-cli-pager cloudfront create-invalidation \
+            --distribution-id ${DISTRIBUTION_ID} \
+            --paths ${INVALIDATE_PATHS}
