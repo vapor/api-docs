@@ -37,7 +37,7 @@ jobs:
         run: swift generate-package-api-docs.swift ${{ inputs.package_name }} ${{ inputs.modules }}
       - name: Configure AWS Credentials
         id: cred
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
