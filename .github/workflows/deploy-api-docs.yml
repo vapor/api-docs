@@ -10,43 +10,41 @@ jobs:
     runs-on: ubuntu-latest
     container: swift:5.8
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Build site
-      run: swift generate-api-docs.swift
-    - name: Install curl and awscliv2
-      run: | 
-        apt-get update && apt-get install -y curl
-        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-        unzip awscliv2.zip
-        ./aws/install
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2
-      with:
-        aws-access-key-id: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
-        aws-region: 'eu-west-2'
-    - name: Deploy to AWS CloudFormation
-      id: clouddeploy
-      uses: aws-actions/aws-cloudformation-github-deploy@v1
-      with:
-        name: vapor-api-docs
-        template: stack.yaml
-        no-fail-on-empty-changeset: '1'
-        parameter-overrides: >-
-          BucketName=vapor-api-docs-site,
-          SubDomainName=api,
-          HostedZoneName=vapor.codes,
-          AcmCertificateArn=${{ secrets.API_DOCS_CERTIFICATE_ARN }}
-      if: steps.cred.outcome == 'success'
-    - name: Deploy to S3 and invalidate CloudFront
-      env:
-        DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
-      run: |
-        aws --no-cli-pager s3 sync \
-          ./public s3://vapor-api-docs-site \
-          --no-progress \
-          --acl public-read
-        aws --no-cli-pager cloudfront create-invalidation \
-          --distribution-id ${DISTRIBUTION_ID} \
-          --paths '/*'
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build site
+        run: swift generate-api-docs.swift
+      - name: Install curl and awscliv2
+        run: | 
+          apt-get update && apt-get install -y curl
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          ./aws/install
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'eu-west-2'
+      - name: Deploy to AWS CloudFormation
+        uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: vapor-api-docs
+          template: stack.yaml
+          no-fail-on-empty-changeset: '1'
+          parameter-overrides: >-
+            BucketName=vapor-api-docs-site,
+            SubDomainName=api,
+            HostedZoneName=vapor.codes,
+            AcmCertificateArn=${{ secrets.API_DOCS_CERTIFICATE_ARN }}
+      - name: Deploy to S3 and invalidate CloudFront
+        env:
+          DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
+        run: |
+          aws --no-cli-pager s3 sync \
+            ./public s3://vapor-api-docs-site \
+            --no-progress \
+            --acl public-read
+          aws --no-cli-pager cloudfront create-invalidation \
+            --distribution-id ${DISTRIBUTION_ID} \
+            --paths '/*'
