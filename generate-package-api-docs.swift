@@ -1,9 +1,7 @@
-#!/usr/bin/env swift
-
 import Foundation
 
 guard CommandLine.argc == 3 else {
-    print("❌ ERROR: You must provide the package name and modules as a comma separated string.")
+    print("❌  ERROR: You must provide the package name and modules as a comma separated string.")
     exit(1)
 }
 
@@ -12,129 +10,134 @@ let moduleList = CommandLine.arguments[2]
 
 let modules = moduleList.components(separatedBy: ",")
 
-// Set up
-try shell("rm", "-rf", "public/")
-try shell("mkdir", "-p", ".build/symbol-graphs")
-try shell("mkdir", "-p", "public/\(packageName)")
+let currentDirectoryUrl = URL(fileURLWithPath: FileManager.default.currentDirectoryPath, isDirectory: true)
+let publicDirectoryUrl = currentDirectoryUrl.appendingPathComponent("public", isDirectory: true)
 
-for module in modules {
-    print("Generating api-docs for package: \(packageName), module: \(module)")
-    try generateDocs(
-        package: packageName, 
-        module: module
-    )
-}
-
-print("✅ Finished generating api-docs for package: \(packageName)")
+try run()
 
 // MARK: Functions
 
-func generateDocs(package: String, module: String) throws {
-    do {
-        // Build package
-        print("🖨️  Copying files")
-        try FileManager.default.copyItemIfPossible(
-            atPath: "theme-settings.json",
-            toPath: "Sources/\(module)/Docs.docc/theme-settings.json"
-        )
-        print("🔨  Building \(package):\(module)")
-        try shell(
-            "swift", "build",
-            "--target", module, 
-            "-Xswiftc", "-emit-symbol-graph",
-            "-Xswiftc", "-emit-symbol-graph-dir",
-            "-Xswiftc", ".build/symbol-graphs",
-            "-Xswiftc", "-DBUILDING_DOCC"
-        )
-        print("🖨️  Copying symbol files")
-        try shell("mkdir", "-p", ".build/\(module)-symbol-graphs")
-        // Copy package-specific symbol-graphs to custom directory
-        let enumerator = FileManager.default.enumerator(
-            atPath: ".build/symbol-graphs"
-        )
-        let files = (enumerator?.allObjects as! [String]).filter{ $0.starts(with: module) }
-        for file in files {
-            try FileManager.default.copyItemIfPossible(
-                atPath: ".build/symbol-graphs/\(file)", 
-                toPath: ".build/\(module)-symbol-graphs/\(file)"
-            )
-        }
+func run() throws {
+    // Set up
+    try FileManager.default.removeItemIfExists(at: publicDirectoryUrl)
+    try FileManager.default.createDirectory(at: publicDirectoryUrl, withIntermediateDirectories: true)
 
-        print("📝  Generating docs")
-        let docCExecutablePath: String 
-        #if os(Linux)
-        docCExecutablePath = "/usr/bin/docc"
-        #else
-        docCExecutablePath = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/docc"
-        #endif
-        try shell(
-            docCExecutablePath,
-            "convert", "Sources/\(module)/Docs.docc",
-            "--fallback-display-name", module,
-            "--fallback-bundle-identifier", "codes.vapor.\(package).\(module.lowercased())",
-            "--fallback-bundle-version", "1.0.0",
-            "--additional-symbol-graph-dir", ".build/\(module)-symbol-graphs",
-            "--transform-for-static-hosting",
-            "--output-path", "public/\(module.lowercased())",
-            "--hosting-base-path", "/\(module.lowercased())"
+    try ensurePluginAvailable()
+
+    // Run
+    for module in modules {
+        print("⚙️  Generating api-docs for package: \(packageName), module: \(module)")
+        try generateDocs(module: module)
+    }
+
+    print("✅  Finished generating api-docs for package: \(packageName)")
+}
+
+func ensurePluginAvailable() throws {
+    let manifestUrl = currentDirectoryUrl.appendingPathComponent("Package.swift", isDirectory: false)
+    var manifestContents = try String(contentsOf: manifestUrl, encoding: .utf8)
+    if !manifestContents.contains(".package(url: \"https://github.com/apple/swift-docc-plugin") {
+        // This is freely admitted to be quick and dirty. When SE-0301 gets into a release, we can use that.
+        print("🧬  Injecting missing DocC plugin dependency")
+        guard let depsArrayRange = manifestContents.firstRange(of: "dependencies: [") else {
+            print("❌  ERROR: Can't inject swift-docc-plugin dependency (can't find deps array).")
+            exit(1)
+        }
+        manifestContents.insert(
+            contentsOf: "\n.package(url: \"https://github.com/apple/swift-docc-plugin.git\", from: \"1.3.0\"),\n",
+            at: depsArrayRange.upperBound
         )
-    } catch let error as ShellError {
-        throw error
+        try manifestContents.write(to: manifestUrl, atomically: true, encoding: .utf8)
     }
 }
 
-@discardableResult
-func shell(_ args: String..., returnStdOut: Bool = false, stdIn: Pipe? = nil) throws -> Pipe {
-    let task = Process()
-    task.launchPath = "/usr/bin/env"
-    task.arguments = args
-    let pipe = Pipe()
-    if returnStdOut {
-        task.standardOutput = pipe
+func generateDocs(module: String) throws {
+    print("🔎  Finding DocC catalog")
+    let doccCatalogs = try FileManager.default.contentsOfDirectory(
+        at: currentDirectoryUrl.appendingPathComponent("Sources", isDirectory: true).appendingPathComponent(module, isDirectory: true),
+        includingPropertiesForKeys: nil,
+        options: [.skipsSubdirectoryDescendants]
+    ).filter { $0.hasDirectoryPath && $0.pathExtension == "docc" }
+    guard !doccCatalogs.isEmpty else {
+        print("❌  ERROR: No DocC catalog found for \(module)")
+        exit(1)
     }
-    if let stdIn = stdIn {
-        task.standardInput = stdIn
+    guard doccCatalogs.count == 1 else {
+        print("❌  ERROR: More than one DocC catalog found for \(module):\n\(doccCatalogs.map(\.lastPathComponent))")
+        exit(1)
     }
-    try task.run()
+    let doccCatalogUrl = doccCatalogs[0]
+    print("🗂️  Using DocC catalog \(doccCatalogUrl.lastPathComponent)")
+
+    print("📐  Copying theme")
+    do {
+        try FileManager.default.copyItemIfExistsWithoutOverwrite(
+            at: currentDirectoryUrl.appendingPathComponent("theme-settings.json", isDirectory: false),
+            to: doccCatalogUrl.appendingPathComponent("theme-settings.json", isDirectory: false)
+        )
+    } catch CocoaError.fileReadNoSuchFile, CocoaError.fileWriteFileExists {
+		// ignore
+    }
+    
+    print("📝  Generating docs")
+    try shell([
+        "swift", "package",
+        "--allow-writing-to-directory", publicDirectoryUrl.path,
+        "generate-documentation",
+        "--target", module,
+        "--disable-indexing",
+        "--experimental-skip-synthesized-symbols",
+        "--fallback-display-name", module,
+        "--fallback-bundle-identifier", "codes.vapor.\(packageName.lowercased()).\(module.lowercased())",
+        "--fallback-bundle-version", "1.0.0",
+        "--transform-for-static-hosting",
+        "--hosting-base-path", "/\(module.lowercased())",
+        "--output-path", publicDirectoryUrl.appendingPathComponent(module.lowercased(), isDirectory: true).path,
+    ])
+}
+
+func shell(_ args: String...) throws { try shell(args) }
+func shell(_ args: [String]) throws {
+    // For fun, echo the command:
+    var sawXOpt = false, seenOpt = false, lastWasOpt = false
+    print("+ /usr/bin/env \\\n     ", terminator: "")
+    for arg in (args.dropLast() + [args.last! + "\n"]) {
+        if (seenOpt && !lastWasOpt) || ((!seenOpt || (lastWasOpt && !sawXOpt)) && arg.starts(with: "-")) {
+            print(" \\\n     ", terminator: "")
+        }
+        print(" \(arg)", terminator: "")
+        lastWasOpt = arg.starts(with: "-")
+        (seenOpt, sawXOpt) = (seenOpt || lastWasOpt, arg.starts(with: "-X"))
+    }
+
+    // Run the command:
+    let task = try Process.run(URL(fileURLWithPath: "/usr/bin/env", isDirectory: false), arguments: args)
     task.waitUntilExit()
     guard task.terminationStatus == 0 else {
         throw ShellError(terminationStatus: task.terminationStatus)
     }
-    return pipe
 }
 
 struct ShellError: Error {
     var terminationStatus: Int32
 }
 
-extension Pipe {
-    func string() throws -> String? {
-        let data = try self.fileHandleForReading.readToEnd()!
-        let result: String?
-        if let string = String(
-            data: data, 
-            encoding: String.Encoding.utf8
-        ) {
-            result = string
-        } else {
-            result = nil
-        }
-        return result
-    }
-} 
-
 extension FileManager {
-    func copyItemIfPossible(atPath: String, toPath: String) throws {
-        var isDirectory: ObjCBool = false
-        guard self.fileExists(
-                atPath: toPath,
-                isDirectory: &isDirectory
-            ) == false else {
-                return
-            }
-        return try self.copyItem(
-            atPath: atPath,
-            toPath: toPath
-        )
+    func removeItemIfExists(at url: URL) throws {
+        do {
+            try self.removeItem(at: url)
+        } catch let error as NSError where error.domain == CocoaError.errorDomain && error.code == CocoaError.fileNoSuchFile.rawValue {
+            // ignore
+        }
+    }
+    
+    func copyItemIfExistsWithoutOverwrite(at src: URL, to dst: URL) throws {
+        do {
+            try self.copyItem(at: src, to: dst)
+        } catch let error as NSError where error.domain == CocoaError.errorDomain && error.code == CocoaError.fileReadNoSuchFile.rawValue {
+            // ignore
+        } catch let error as NSError where error.domain == CocoaError.errorDomain && error.code == CocoaError.fileWriteFileExists.rawValue {
+            // ignore
+        }
     }
 }
