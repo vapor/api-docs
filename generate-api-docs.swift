@@ -39,84 +39,27 @@ let packages: [String: [String]] = [
     "apns": ["VaporAPNS"],
 ]
 
-try shell("rm", "-rf", "public/")
-let url = URL(fileURLWithPath: "index.html")
-var htmlString = try String(contentsOf: url)
-var optionsString = ""
-var allModules: [(package: String, module: String)] = []
+let htmlMenu = packages.values.flatMap { $0 }
+    .sorted()
+    .map { "<option value=\"\($0.lowercased())/documentation/\($0.lowercased())\">\($0)</option>" }
+    .joined(separator: "\n")
 
-for (package, modules) in packages {
-    for module in modules {
-        allModules.append((package: package, module: module))
-    }
-}
+let publicDirUrl = URL(fileURLWithPath: "./public", isDirectory: true)
+try FileManager.default.removeItem(at: publicDirUrl)
+try FileManager.default.createDirectory(at: publicDirUrl, withIntermediateDirectories: true)
 
-let sortedModules = allModules.sorted { $0.module < $1.module }
-for object in sortedModules {
-    let module = object.module
-    optionsString += "<option value=\"/\(module.lowercased())/documentation/\(module.lowercased())\">\(module)</option>\n"
-}
+var htmlIndex = try String(contentsOf: URL(fileURLWithPath: "./index.html", isDirectory: false), encoding: .utf8)
+htmlIndex.replace("{{Options}}", with: "\(htmlMenu)\n", maxReplacements: 1)
 
-htmlString = htmlString.replacingOccurrences(of: "{{Options}}", with: optionsString)
-
-try shell("mkdir", "public")
-try htmlString.write(toFile: "public/index.html", atomically: true, encoding: .utf8)
-try shell("cp", "api-docs.png", "public/api-docs.png")
-try shell("cp", "error.html", "public/error.html")
-
-// MARK: Functions
-@discardableResult
-func shell(_ args: String..., returnStdOut: Bool = false, stdIn: Pipe? = nil) throws -> Pipe {
-    let task = Process()
-    task.launchPath = "/usr/bin/env"
-    task.arguments = args
-    let pipe = Pipe()
-    if returnStdOut {
-        task.standardOutput = pipe
-    }
-    if let stdIn = stdIn {
-        task.standardInput = stdIn
-    }
-    try task.run()
-    task.waitUntilExit()
-    guard task.terminationStatus == 0 else {
-        throw ShellError(terminationStatus: task.terminationStatus)
-    }
-    return pipe
-}
-
-struct ShellError: Error {
-    var terminationStatus: Int32
-}
-
-extension Pipe {
-    func string() throws -> String? {
-        let data = try self.fileHandleForReading.readToEnd()!
-        let result: String?
-        if let string = String(
-            data: data, 
-            encoding: String.Encoding.utf8
-        ) {
-            result = string
-        } else {
-            result = nil
-        }
-        return result
-    }
-} 
+try htmlIndex.write(to: publicDirUrl.appendingPathComponent("index.html", isDirectory: false), atomically: true, encoding: .utf8)
+try FileManager.copyItem(at: URL(fileURLWithPath: "./api-docs.png", isDirectory: false), into: publicDirUrl)
+try FileManager.copyItem(at: URL(fileURLWithPath: "./error.html", isDirectory: false), into: publicDirUrl)
 
 extension FileManager {
-    func copyItemIfPossible(atPath: String, toPath: String) throws {
-        var isDirectory: ObjCBool = false
-        guard self.fileExists(
-                atPath: toPath,
-                isDirectory: &isDirectory
-            ) == false else {
-                return
-            }
-        return try self.copyItem(
-            atPath: atPath,
-            toPath: toPath
-        )
+    func copyItem(at src: URL, into dst: URL) throws {
+        assert(dst.hasDirectoryPath)
+
+        let dstItem = dst.appendingPathComponent(src.lastPathComponent, isDirectory: src.hasDirectoryPath)
+        try self.copyItem(at: src, to: dstItem)
     }
 }
