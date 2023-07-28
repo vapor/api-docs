@@ -15,6 +15,24 @@ on:
         type: string
         required: true
         description: "The paths to invalidate in CloudFront, e.g. '/vapor /xctvapor'."
+  workflow_dispatch:
+    inputs:
+      repository:
+        type: string
+        required: true
+        description: "The repository of the package to build docs for."
+      package_name:
+        type: string
+        required: true
+        description: "The name of the package to build docs for."
+      modules:
+        type: string
+        required: true
+        description: "The modules in the package to build docs for."
+      pathsToInvalidate:
+        type: string
+        required: true
+        description: "The paths to invalidate in CloudFront, e.g. '/vapor /xctvapor'."
 
 jobs:
 
@@ -25,6 +43,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
         with:
+          repository: ${{ inputs.repository || github.repository }}
           fetch-depth: 0
       - name: Install curl and awscliv2
         run: | 
