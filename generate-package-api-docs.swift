@@ -10,8 +10,7 @@ let moduleList = CommandLine.arguments[2]
 
 let modules = moduleList.components(separatedBy: ",")
 
-let currentDirectoryUrl = URL(fileURLWithPath: FileManager.default.currentDirectoryPath, isDirectory: true)
-let publicDirectoryUrl = currentDirectoryUrl.appendingPathComponent("public", isDirectory: true)
+let publicDirectoryUrl = URL.currentDirectory().appending(component: "public/")
 
 try run()
 
@@ -34,7 +33,7 @@ func run() throws {
 }
 
 func ensurePluginAvailable() throws {
-    let manifestUrl = currentDirectoryUrl.appendingPathComponent("Package.swift", isDirectory: false)
+    let manifestUrl = URL.currentDirectory().appending(component: "Package.swift")
     var manifestContents = try String(contentsOf: manifestUrl, encoding: .utf8)
     if !manifestContents.contains(".package(url: \"https://github.com/apple/swift-docc-plugin") {
         // This is freely admitted to be quick and dirty. When SE-0301 gets into a release, we can use that.
@@ -54,7 +53,7 @@ func ensurePluginAvailable() throws {
 func generateDocs(module: String) throws {
     print("🔎  Finding DocC catalog")
     let doccCatalogs = try FileManager.default.contentsOfDirectory(
-        at: currentDirectoryUrl.appendingPathComponent("Sources", isDirectory: true).appendingPathComponent(module, isDirectory: true),
+        at: URL.currentDirectory().appending(components: "Sources", "\(module)/"),
         includingPropertiesForKeys: nil,
         options: [.skipsSubdirectoryDescendants]
     ).filter { $0.hasDirectoryPath && $0.pathExtension == "docc" }
@@ -72,8 +71,8 @@ func generateDocs(module: String) throws {
     print("📐  Copying theme")
     do {
         try FileManager.default.copyItemIfExistsWithoutOverwrite(
-            at: currentDirectoryUrl.appendingPathComponent("theme-settings.json", isDirectory: false),
-            to: doccCatalogUrl.appendingPathComponent("theme-settings.json", isDirectory: false)
+            at: URL.currentDirectory().appending(component: "theme-settings.json"),
+            to: doccCatalogUrl.appending(component: "theme-settings.json")
         )
     } catch CocoaError.fileReadNoSuchFile, CocoaError.fileWriteFileExists {
 		// ignore
@@ -92,7 +91,7 @@ func generateDocs(module: String) throws {
         "--fallback-bundle-version", "1.0.0",
         "--transform-for-static-hosting",
         "--hosting-base-path", "/\(module.lowercased())",
-        "--output-path", publicDirectoryUrl.appendingPathComponent(module.lowercased(), isDirectory: true).path,
+        "--output-path", publicDirectoryUrl.appending(component: "\(module.lowercased())/").path,
     ])
 }
 
@@ -111,7 +110,7 @@ func shell(_ args: [String]) throws {
     }
 
     // Run the command:
-    let task = try Process.run(URL(fileURLWithPath: "/usr/bin/env", isDirectory: false), arguments: args)
+    let task = try Process.run(URL(filePath: "/usr/bin/env"), arguments: args)
     task.waitUntilExit()
     guard task.terminationStatus == 0 else {
         throw ShellError(terminationStatus: task.terminationStatus)
@@ -141,3 +140,23 @@ extension FileManager {
         }
     }
 }
+
+#if !canImport(Darwin)
+extension URL {
+    public enum DirectoryHint: Equatable { case isDirectory, notDirectory, inferFromPath }
+    static func isDirFlag(_ path: some StringProtocol, _ hint: DirectoryHint) -> Bool {
+        hint == .inferFromPath ? path.last == "/" : hint == .isDirectory
+    }
+    public init(filePath: String, directoryHint hint: DirectoryHint = .inferFromPath, relativeTo base: URL? = nil) {
+        self = URL(fileURLWithPath: filePath, isDirectory: Self.isDirFlag(path, hint), relativeTo: base)
+    }
+    public func appending(component: some StringProtocol, directoryHint hint: DirectoryHint = .inferFromPath) -> URL {
+        self.appendingPathComponent(component, isDirectory: Self.isDirFlag(component, hint))
+    }
+    public func appending(components: (some StringProtocol)..., directoryHint hint: DirectoryHint = .inferFromPath) -> URL {
+        components.dropLast().reduce(self) { $0.appending(component: $1, directoryHint: .isDirectory) }
+            .appending(component: components.last!, directoryHint: hint)
+    }
+    public static func currentDirectory() -> URL { .init(filePath: FileManager.default.currentDirectoryPath, directoryHint: .isDirectory) }
+}
+#endif
