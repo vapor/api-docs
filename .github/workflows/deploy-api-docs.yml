@@ -3,13 +3,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-    inputs:
-      regenerate_all:
-        description: "Force regeneration of every single package's API docs."
-        required: false
-        type: boolean
-        default: false
 
 jobs:
   deploy:
@@ -23,37 +16,10 @@ jobs:
         run: swift generate-api-docs.swift
       - name: Install curl and awscliv2
         run: | 
-          apt-get update && apt-get install -y curl
+          apt-get update && apt-get upgrade -y && apt-get install -y curl
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip awscliv2.zip
           ./aws/install
-      - name: Regenerate all API docs if requested
-        if: inputs.regenerate_all
-        shell: bash
-        run: |
-          curl -sL \
-            https://raw.githubusercontent.com/vapor/api-docs/main/generate-package-api-docs.swift -o generate-package-api-docs.swift \
-            https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json -o theme-settings.json            
-          for item in \
-            vapor:Vapor vapor:XCTVapor \
-            async-kit:AsyncKit routing-kit:RoutingKit console-kit:ConsoleKit \
-            websocket-kit:WebSocketKit multipart-kit:MultipartKit \
-            postgres-nio:PostgresNIO mysql-nio:MySQLNIO sqlite-nio:SQLiteNIO sql-kit:SQLKit \
-            postgres-kit:PostgresKit mysql-kit:MySQLKit sqlite-kit:SQLiteKit fluent-kit:FluentKit \
-            fluent-kit:FluentSQL fluent-kit:XCTFluent fluent:Fluent fluent-postgres-driver:FluentPostgresDriver \
-            fluent-mongo-driver:FluentMongoDriver fluent-mysql-driver:FluentMySQLDriver fluent-sqlite-driver:FluentSQLiteDriver \
-            redis:Redis queues-redis-driver:QueuesRedisDriver queues:Queues queues:XCTQueues \
-            leaf-kit:LeafKit leaf:Leaf \
-            jwt-kit:JWTKit jwt:JWT apns:APNS \
-          do
-            repo=${item%:*} module=${item#*:}
-            if [[ ! -d ${repo} ]]; then
-                git clone https://github.com/vapor/${repo}.git ${repo}
-            fi
-            cp theme-settings.json ${repo}
-            (cd ${repo} && swift ../generate-package-api-docs.swift ${repo} ${module})
-            cp -r ${repo}/public/* ./public
-          done
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
