@@ -69,14 +69,10 @@ func generateDocs(module: String) throws {
     print("🗂️  Using DocC catalog \(doccCatalogUrl.lastPathComponent)")
 
     print("📐  Copying theme")
-    do {
-        try FileManager.default.copyItemIfExistsWithoutOverwrite(
-            at: URL.currentDirectory().appending(component: "theme-settings.json"),
-            to: doccCatalogUrl.appending(component: "theme-settings.json")
-        )
-    } catch CocoaError.fileReadNoSuchFile, CocoaError.fileWriteFileExists {
-		// ignore
-    }
+    try FileManager.default.copyItemIfExistsWithoutOverwrite(
+        at: URL.currentDirectory().appending(component: "theme-settings.json"),
+        to: doccCatalogUrl.appending(component: "theme-settings.json")
+    )
     
     print("📝  Generating docs")
     try shell([
@@ -125,19 +121,32 @@ extension FileManager {
     func removeItemIfExists(at url: URL) throws {
         do {
             try self.removeItem(at: url)
-        } catch let error as NSError where error.domain == CocoaError.errorDomain && error.code == CocoaError.fileNoSuchFile.rawValue {
+        } catch let error as NSError where error.isCocoaError(.fileNoSuchFile) {
             // ignore
         }
     }
     
     func copyItemIfExistsWithoutOverwrite(at src: URL, to dst: URL) throws {
         do {
+            // https://github.com/apple/swift-corelibs-foundation/pull/4808
+            #if !canImport(Darwin)
+            do {
+                _ = try dst.checkResourceIsReachable()
+                throw NSError(domain: CocoaError.errorDomain, code: CocoaError.fileWriteFileExists.rawValue)
+            } catch let error as NSError where error.isCocoaError(.fileReadNoSuchFile) {}
+            #endif
             try self.copyItem(at: src, to: dst)
-        } catch let error as NSError where error.domain == CocoaError.errorDomain && error.code == CocoaError.fileReadNoSuchFile.rawValue {
+        } catch let error as NSError where error.isCocoaError(.fileReadNoSuchFile) {
             // ignore
-        } catch let error as NSError where error.domain == CocoaError.errorDomain && error.code == CocoaError.fileWriteFileExists.rawValue {
+        } catch let error as NSError where error.isCocoaError(.fileWriteFileExists) {
             // ignore
         }
+    }
+}
+
+extension NSError {
+    func isCocoaError(_ code: CocoaError.Code) -> Bool {
+        self.domain == CocoaError.errorDomain && self.code == code.rawValue
     }
 }
 
