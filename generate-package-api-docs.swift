@@ -157,12 +157,12 @@ extension URL {
         hint == .inferFromPath ? path.last == "/" : hint == .isDirectory
     }
     public init(filePath: String, directoryHint hint: DirectoryHint = .inferFromPath, relativeTo base: URL? = nil) {
-        self = URL(fileURLWithPath: filePath, isDirectory: Self.isDirFlag(path, hint), relativeTo: base)
+        self = URL(fileURLWithPath: filePath, isDirectory: Self.isDirFlag(filePath, hint), relativeTo: base)
     }
     public func appending(component: some StringProtocol, directoryHint hint: DirectoryHint = .inferFromPath) -> URL {
-        self.appendingPathComponent(component, isDirectory: Self.isDirFlag(component, hint))
+        self.appendingPathComponent(String(component), isDirectory: Self.isDirFlag(component, hint))
     }
-    public func appending(components: (some StringProtocol)..., directoryHint hint: DirectoryHint = .inferFromPath) -> URL {
+    public func appending<S: StringProtocol>(components: S..., directoryHint hint: DirectoryHint = .inferFromPath) -> URL {
         components.dropLast().reduce(self) { $0.appending(component: $1, directoryHint: .isDirectory) }
             .appending(component: components.last!, directoryHint: hint)
     }
