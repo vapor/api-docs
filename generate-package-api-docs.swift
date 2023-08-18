@@ -33,21 +33,29 @@ func run() throws {
 }
 
 func ensurePluginAvailable() throws {
-    let manifestUrl = URL.currentDirectory().appending(component: "Package.swift")
-    var manifestContents = try String(contentsOf: manifestUrl, encoding: .utf8)
-    if !manifestContents.contains(".package(url: \"https://github.com/apple/swift-docc-plugin") {
-        // This is freely admitted to be quick and dirty. When SE-0301 gets into a release, we can use that.
-        print("🧬  Injecting missing DocC plugin dependency")
-        guard let depsArrayRange = manifestContents.firstRange(of: "dependencies: [") else {
-            print("❌  ERROR: Can't inject swift-docc-plugin dependency (can't find deps array).")
-            exit(1)
+    for manifestName in ["Package@swift-5.9.swift", "Package@swift-5.8.swift", "Package@swift-5.7.swift", "Package.swift"] {
+        let manifestUrl = URL.currentDirectory().appending(component: manifestName)
+        var manifestContents: String
+        do { manifestContents = try String(contentsOf: manifestUrl, encoding: .utf8) }
+        catch let error as NSError where error.isCocoaError(.fileReadNoSuchFile) { continue }
+
+        if !manifestContents.contains(".package(url: \"https://github.com/apple/swift-docc-plugin") {
+            // This is freely admitted to be quick and dirty. When SE-0301 gets into a release, we can use that.
+            print("🧬  Injecting missing DocC plugin dependency")
+            guard let depsArrayRange = manifestContents.firstRange(of: "dependencies: [") else {
+                print("❌  ERROR: Can't inject swift-docc-plugin dependency (can't find deps array).")
+                exit(1)
+            }
+            manifestContents.insert(
+                contentsOf: "\n.package(url: \"https://github.com/apple/swift-docc-plugin.git\", from: \"1.3.0\"),\n",
+                at: depsArrayRange.upperBound
+            )
+            try manifestContents.write(to: manifestUrl, atomically: true, encoding: .utf8)
         }
-        manifestContents.insert(
-            contentsOf: "\n.package(url: \"https://github.com/apple/swift-docc-plugin.git\", from: \"1.3.0\"),\n",
-            at: depsArrayRange.upperBound
-        )
-        try manifestContents.write(to: manifestUrl, atomically: true, encoding: .utf8)
+        return
     }
+    print("❌  ERROR: Can't inject swift-docc-plugin dependency (no usable manifest found).")
+    exit(1)
 }
 
 func generateDocs(module: String) throws {
