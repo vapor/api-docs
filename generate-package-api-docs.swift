@@ -38,6 +38,7 @@ func ensurePluginAvailable() throws {
         var manifestContents: String
         do { manifestContents = try String(contentsOf: manifestUrl, encoding: .utf8) }
         catch let error as NSError where error.isCocoaError(.fileReadNoSuchFile) { continue }
+        catch let error as NSError where error.isPOSIXError(.ENOENT) { continue }
 
         if !manifestContents.contains(".package(url: \"https://github.com/apple/swift-docc-plugin") {
             // This is freely admitted to be quick and dirty. When SE-0301 gets into a release, we can use that.
@@ -155,6 +156,9 @@ extension FileManager {
 extension NSError {
     func isCocoaError(_ code: CocoaError.Code) -> Bool {
         self.domain == CocoaError.errorDomain && self.code == code.rawValue
+    }
+    func isPOSIXError(_ code: POSIXError.Code) -> Bool {
+        self.domain == POSIXError.errorDomain && self.code == code.rawValue
     }
 }
 
