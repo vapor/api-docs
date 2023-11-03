@@ -1,4 +1,7 @@
-name: deploy-api-docs
+name: API Docs website deploy
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 on:
   push:
     branches:
@@ -8,23 +11,20 @@ jobs:
   deploy:
     name: Build and deploy
     runs-on: ubuntu-latest
-    container: swiftlang/swift:nightly-5.9-jammy@sha256:2a862801753871b00f7fd424f2b47d75338e7a50d819cd34a425aef6a1bce56d
+    permissions: { id-token: write, contents: read }
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Install latest Swift
+        uses: vapor/swiftly-action@v0.1
+        with:
+          toolchain: latest
       - name: Build site
         run: swift generate-api-docs.swift
-      - name: Install curl and awscliv2
-        run: | 
-          apt-get update && apt-get upgrade -y && apt-get install -y curl
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
-          ./aws/install
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::177420307256:role/GithubOIdP-Role-zJ3kkJbhrNkr
           aws-region: 'eu-west-2'
       - name: Deploy to AWS CloudFormation
         uses: aws-actions/aws-cloudformation-github-deploy@v1
@@ -39,12 +39,13 @@ jobs:
             AcmCertificateArn=${{ secrets.API_DOCS_CERTIFICATE_ARN }}
       - name: Deploy to S3 and invalidate CloudFront
         env:
+          S3_BUCKET_URL: ${{ secrets.VAPOR_API_DOCS_S3_BUCKET_URL }}
           DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
         run: |
           aws --no-cli-pager s3 sync \
-            ./public s3://vapor-api-docs-site \
+            ./public "${S3_BUCKET_URL}" \
             --no-progress \
             --acl public-read
           aws --no-cli-pager cloudfront create-invalidation \
-            --distribution-id ${DISTRIBUTION_ID} \
+            --distribution-id "${DISTRIBUTION_ID}" \
             --paths '/*'
