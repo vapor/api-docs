@@ -38,10 +38,11 @@ jobs:
 
   build-docs:
     runs-on: ubuntu-latest
-    container: swiftlang/swift:nightly-5.9-jammy@sha256:2a862801753871b00f7fd424f2b47d75338e7a50d819cd34a425aef6a1bce56d
+    permissions: { id-token: write, contents: read }
+    container: swift:5.9-jammy
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{ inputs.repository || github.repository }}
           fetch-depth: 0
@@ -51,31 +52,30 @@ jobs:
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip awscliv2.zip
           ./aws/install
-      - name: Download Files
+      - name: Download files
         run: | 
           curl -sL \
-            https://raw.githubusercontent.com/vapor/api-docs/main/generate-package-api-docs.swift -o generate-package-api-docs.swift \
-            https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json -o theme-settings.json
-      - name: Builds Docs
-        env:
-          PACKAGE: ${{ inputs.package_name }}
-          MODULES: ${{ inputs.modules }}
-        run: swift generate-package-api-docs.swift ${PACKAGE} ${MODULES}
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+            "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}/generate-package-api-docs.swift" \
+              -o generate-package-api-docs.swift \
+            "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}/theme-settings.json" \
+              -o theme-settings.json
+      - name: Build docs
+        run: |
+          swift generate-package-api-docs.swift "${INPUT_PACKAGE_NAME}" ${INPUT_MODULES}
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.API_DOCS_DEPLOYER_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.API_DOCS_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::177420307256:role/GithubOIdP-Role-zJ3kkJbhrNkr
           aws-region: 'eu-west-2'
       - name: Deploy to S3 and invalidate CloudFront
         env:
+          S3_BUCKET_URL: ${{ secrets.VAPOR_API_DOCS_S3_BUCKET_URL }}
           DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
-          INVALIDATE_PATHS: ${{ inputs.pathsToInvalidate }}
         run: |
           aws --no-cli-pager s3 sync \
-            ./public s3://vapor-api-docs-site \
+            ./public "${S3_BUCKET_URL}" \
             --no-progress \
             --acl public-read
           aws --no-cli-pager cloudfront create-invalidation \
-            --distribution-id ${DISTRIBUTION_ID} \
-            --paths ${INVALIDATE_PATHS}
+            --distribution-id "${DISTRIBUTION_ID}" \
+            --paths "${INPUT_PATHSTOINVALIDATE}"
