@@ -1,5 +1,7 @@
 name: Shared Build DocC docs and Deploy
-
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 on:
   workflow_call:
     inputs:
@@ -35,29 +37,25 @@ on:
         description: "The paths to invalidate in CloudFront, e.g. '/vapor /xctvapor'."
 
 jobs:
-
   build-docs:
     runs-on: ubuntu-latest
     permissions: { id-token: write, contents: read }
-    container: swift:5.9-jammy
     steps:
       - name: Check out code
         uses: actions/checkout@v4
         with:
           repository: ${{ inputs.repository || github.repository }}
           fetch-depth: 0
-      - name: Install curl and awscliv2
-        run: | 
-          apt-get update && apt-get install -y curl
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
-          ./aws/install
+      - name: Install latest Swift
+        uses: vapor/swiftly-action@v0.1
+        with:
+          toolchain: latest
       - name: Download files
         run: | 
           curl -sL \
-            "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}/generate-package-api-docs.swift" \
+            "https://raw.githubusercontent.com/vapor/api-docs/main/generate-package-api-docs.swift" \
               -o generate-package-api-docs.swift \
-            "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}/theme-settings.json" \
+            "https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json" \
               -o theme-settings.json
       - name: Build docs
         run: |
