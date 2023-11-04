@@ -7,23 +7,33 @@ on:
     inputs:
       package_name:
         type: string
-        required: true
+        required: false
+        description: "(Deprecated, use package-name instead) The name of the package to build docs for."
+      package-name:
+        type: string
+        required: false
         description: "The name of the package to build docs for."
+        default: ${{ inputs.package_name }}
       modules:
         type: string
         required: true
         description: "The modules in the package to build docs for."
       pathsToInvalidate:
         type: string
-        required: true
-        description: "The paths to invalidate in CloudFront, e.g. '/vapor /xctvapor'."
+        required: false
+        description: "(Deprecated, use invalidate-paths instead) The paths to invalidate in CloudFront, e.g. '/vapor /xctvapor'."
+      invalidate-paths:
+        type: string
+        required: false
+        description: "The paths to invalidate in CloudFront, e.g. '/vapor/* /xctvapor/*'."
+        default: ${{ inputs.pathsToInvalidate }}
   workflow_dispatch:
     inputs:
       repository:
         type: string
         required: true
         description: "The repository of the package to build docs for."
-      package_name:
+      package-name:
         type: string
         required: true
         description: "The name of the package to build docs for."
@@ -31,15 +41,21 @@ on:
         type: string
         required: true
         description: "The modules in the package to build docs for."
-      pathsToInvalidate:
+      invalidate-paths:
         type: string
         required: true
-        description: "The paths to invalidate in CloudFront, e.g. '/vapor /xctvapor'."
+        description: "The paths to invalidate in CloudFront, e.g. '/vapor/* /xctvapor/*'."
+env:
+  INPUT_REPOSITORY: ${{ inputs.repository || github.repository }}
+  INPUT_PACKAGE_NAME: ${{ inputs.package-name }}
+  INPUT_MODULES: ${{ inputs.modules }}
+  INPUT_INVALIDATE_PATHS: ${{ inputs.invalidate-paths }}
 
 jobs:
   build-docs:
     runs-on: ubuntu-latest
     permissions: { id-token: write, contents: read }
+    env: { AWS_PAGER: '' }
     steps:
       - name: Check out code
         uses: actions/checkout@v4
@@ -48,8 +64,7 @@ jobs:
           fetch-depth: 0
       - name: Install latest Swift
         uses: vapor/swiftly-action@v0.1
-        with:
-          toolchain: latest
+        with: { toolchain: latest }
       - name: Download files
         run: | 
           curl -sL \
@@ -58,22 +73,17 @@ jobs:
             "https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json" \
               -o theme-settings.json
       - name: Build docs
-        run: |
-          swift generate-package-api-docs.swift "${INPUT_PACKAGE_NAME}" ${INPUT_MODULES}
+        run: 'swift generate-package-api-docs.swift "${INPUT_PACKAGE_NAME}" ${INPUT_MODULES}'
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::177420307256:role/GithubOIdP-Role-zJ3kkJbhrNkr
-          aws-region: 'eu-west-2'
-      - name: Deploy to S3 and invalidate CloudFront
+          role-to-assume: ${{ vars.OIDC_ROLE_ARN }}
+          aws-region: ${{ vars.OIDC_ROLE_REGION }}
+      - name: Deploy to S3
         env:
           S3_BUCKET_URL: ${{ secrets.VAPOR_API_DOCS_S3_BUCKET_URL }}
+        run: 'aws s3 sync ./public "${S3_BUCKET_URL}" --no-progress --acl public-read'
+      - name: Invalidate CloudFront
+        env:
           DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
-        run: |
-          aws --no-cli-pager s3 sync \
-            ./public "${S3_BUCKET_URL}" \
-            --no-progress \
-            --acl public-read
-          aws --no-cli-pager cloudfront create-invalidation \
-            --distribution-id "${DISTRIBUTION_ID}" \
-            --paths "${INPUT_PATHSTOINVALIDATE}"
+        run: 'aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths "${INPUT_INVALIDATE_PATHS}"'
