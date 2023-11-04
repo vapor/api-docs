@@ -26,7 +26,6 @@ on:
         type: string
         required: false
         description: "The paths to invalidate in CloudFront, e.g. '/vapor/* /xctvapor/*'."
-        default: ${{ inputs.pathsToInvalidate }}
   workflow_dispatch:
     inputs:
       repository:
@@ -47,9 +46,9 @@ on:
         description: "The paths to invalidate in CloudFront, e.g. '/vapor/* /xctvapor/*'."
 env:
   INPUT_REPOSITORY: ${{ inputs.repository || github.repository }}
-  INPUT_PACKAGE_NAME: ${{ inputs.package-name }}
+  INPUT_PACKAGE_NAME: ${{ inputs.package-name || inputs.package_name }}
   INPUT_MODULES: ${{ inputs.modules }}
-  INPUT_INVALIDATE_PATHS: ${{ inputs.invalidate-paths }}
+  INPUT_INVALIDATE_PATHS: ${{ inputs.invalidate-paths || inputs.pathsToInvalidate }}
 
 jobs:
   build-docs:
