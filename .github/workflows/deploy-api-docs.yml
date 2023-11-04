@@ -3,30 +3,27 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 on:
-  push:
-    branches:
-      - main
+  push: { branches: [ main ] }
 
 jobs:
-  deploy:
-    name: Build and deploy
+  deploy-site:
     runs-on: ubuntu-latest
     permissions: { id-token: write, contents: read }
+    env: { AWS_PAGER: '' }
     steps:
-      - name: Checkout
+      - name: Check out code
         uses: actions/checkout@v4
       - name: Install latest Swift
         uses: vapor/swiftly-action@v0.1
-        with:
-          toolchain: latest
+        with: { toolchain: latest }
       - name: Build site
         run: swift generate-api-docs.swift
-      - name: Configure AWS Credentials
+      - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::177420307256:role/GithubOIdP-Role-zJ3kkJbhrNkr
-          aws-region: 'eu-west-2'
-      - name: Deploy to AWS CloudFormation
+          role-to-assume: ${{ vars.OIDC_ROLE_ARN }}
+          aws-region: ${{ vars.OIDC_ROLE_REGION }}
+      - name: Deploy to CloudFormation
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: vapor-api-docs
@@ -37,15 +34,11 @@ jobs:
             SubDomainName=api,
             HostedZoneName=vapor.codes,
             AcmCertificateArn=${{ secrets.API_DOCS_CERTIFICATE_ARN }}
-      - name: Deploy to S3 and invalidate CloudFront
+      - name: Deploy to S3
         env:
           S3_BUCKET_URL: ${{ secrets.VAPOR_API_DOCS_S3_BUCKET_URL }}
+        run: 'aws s3 sync ./public "${S3_BUCKET_URL}" --no-progress --acl public-read'
+      - name: Invalidate CloudFront
+        env:
           DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
-        run: |
-          aws --no-cli-pager s3 sync \
-            ./public "${S3_BUCKET_URL}" \
-            --no-progress \
-            --acl public-read
-          aws --no-cli-pager cloudfront create-invalidation \
-            --distribution-id "${DISTRIBUTION_ID}" \
-            --paths '/*'
+        run: 'aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths "/*"'
