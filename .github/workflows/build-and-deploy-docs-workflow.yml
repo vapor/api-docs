@@ -78,4 +78,4 @@ jobs:
         env:
           DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
         run: |
-          aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths "${INPUT_INVALIDATE_PATHS}"
+          aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths ${INPUT_INVALIDATE_PATHS}
