@@ -8,21 +8,12 @@ on:
       package_name:
         type: string
         required: false
-        description: "(Deprecated, use package-name instead) The name of the package to build docs for."
-      package-name:
-        type: string
-        required: false
         description: "The name of the package to build docs for."
-        default: ${{ inputs.package_name }}
       modules:
         type: string
         required: true
         description: "The modules in the package to build docs for."
       pathsToInvalidate:
-        type: string
-        required: false
-        description: "(Deprecated, use invalidate-paths instead) The paths to invalidate in CloudFront, e.g. '/vapor /xctvapor'."
-      invalidate-paths:
         type: string
         required: false
         description: "The paths to invalidate in CloudFront, e.g. '/vapor/* /xctvapor/*'."
@@ -32,7 +23,7 @@ on:
         type: string
         required: true
         description: "The repository of the package to build docs for."
-      package-name:
+      package_name:
         type: string
         required: true
         description: "The name of the package to build docs for."
@@ -40,15 +31,15 @@ on:
         type: string
         required: true
         description: "The modules in the package to build docs for."
-      invalidate-paths:
+      pathsToInvalidate:
         type: string
         required: true
         description: "The paths to invalidate in CloudFront, e.g. '/vapor/* /xctvapor/*'."
 env:
   INPUT_REPOSITORY: ${{ inputs.repository || github.repository }}
-  INPUT_PACKAGE_NAME: ${{ inputs.package-name || inputs.package_name }}
+  INPUT_PACKAGE_NAME: ${{ inputs.package_name }}
   INPUT_MODULES: ${{ inputs.modules }}
-  INPUT_INVALIDATE_PATHS: ${{ inputs.invalidate-paths || inputs.pathsToInvalidate }}
+  INPUT_INVALIDATE_PATHS: ${{ inputs.pathsToInvalidate }}
 
 jobs:
   build-docs:
@@ -81,8 +72,10 @@ jobs:
       - name: Deploy to S3
         env:
           S3_BUCKET_URL: ${{ secrets.VAPOR_API_DOCS_S3_BUCKET_URL }}
-        run: 'aws s3 sync ./public "${S3_BUCKET_URL}" --no-progress --acl public-read'
+        run: |
+          aws s3 sync ./public "${S3_BUCKET_URL}" --no-progress --acl public-read
       - name: Invalidate CloudFront
         env:
           DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
-        run: 'aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths "${INPUT_INVALIDATE_PATHS}"'
+        run: |
+          aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths "${INPUT_INVALIDATE_PATHS}"
