@@ -7,7 +7,7 @@ let packages: [String: [String]] = [
 
     "async-kit": ["AsyncKit"],
     "routing-kit": ["RoutingKit"],
-    "console-kit": ["ConsoleKit"],
+    "console-kit": ["ConsoleKit", "ConsoleKitCommands", "ConsoleKitTerminal"],
     "websocket-kit": ["WebSocketKit"],
     "multipart-kit": ["MultipartKit"],
 
