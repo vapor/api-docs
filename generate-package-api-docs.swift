@@ -33,7 +33,7 @@ func run() throws {
 }
 
 func ensurePluginAvailable() throws {
-    for manifestName in ["Package@swift-5.9.swift", "Package@swift-5.8.swift", "Package@swift-5.7.swift", "Package.swift"] {
+    for manifestName in ["Package@swift-5.9.swift", "Package@swift-5.8.swift", "Package@swift-5.7.swift", "Package@swift-5.10.swift", "Package@swift-6.0.swift", "Package.swift"] {
         let manifestUrl = URL.currentDirectory().appending(component: manifestName)
         var manifestContents: String
         do { manifestContents = try String(contentsOf: manifestUrl, encoding: .utf8) }
