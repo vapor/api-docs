@@ -161,23 +161,3 @@ extension NSError {
         self.domain == POSIXError.errorDomain && self.code == code.rawValue
     }
 }
-
-#if !canImport(Darwin)
-extension URL {
-    public enum DirectoryHint: Equatable { case isDirectory, notDirectory, inferFromPath }
-    static func isDirFlag(_ path: some StringProtocol, _ hint: DirectoryHint) -> Bool {
-        hint == .inferFromPath ? path.last == "/" : hint == .isDirectory
-    }
-    public init(filePath: String, directoryHint hint: DirectoryHint = .inferFromPath, relativeTo base: URL? = nil) {
-        self = URL(fileURLWithPath: filePath, isDirectory: Self.isDirFlag(filePath, hint), relativeTo: base)
-    }
-    public func appending(component: some StringProtocol, directoryHint hint: DirectoryHint = .inferFromPath) -> URL {
-        self.appendingPathComponent(String(component), isDirectory: Self.isDirFlag(component, hint))
-    }
-    public func appending<S: StringProtocol>(components: S..., directoryHint hint: DirectoryHint = .inferFromPath) -> URL {
-        components.dropLast().reduce(self) { $0.appending(component: $1, directoryHint: .isDirectory) }
-            .appending(component: components.last!, directoryHint: hint)
-    }
-    public static func currentDirectory() -> URL { .init(filePath: FileManager.default.currentDirectoryPath, directoryHint: .isDirectory) }
-}
-#endif
