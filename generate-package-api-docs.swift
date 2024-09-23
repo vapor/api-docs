@@ -12,15 +12,22 @@ let modules = moduleList.components(separatedBy: ",")
 
 let publicDirectoryUrl = URL.currentDirectory().appending(component: "public/")
 
-try run()
+do {
+    try run()
+} catch {
+    print("❌  ERROR: \(error).")
+    exit(1)
+}
 
 // MARK: Functions
 
 func run() throws {
     // Set up
+    print("⚙️  Ensuring public directory...")
     try FileManager.default.removeItemIfExists(at: publicDirectoryUrl)
     try FileManager.default.createDirectory(at: publicDirectoryUrl, withIntermediateDirectories: true)
 
+    print("⚙️  Ensuring plugin...")
     try ensurePluginAvailable()
 
     // Run
@@ -33,7 +40,8 @@ func run() throws {
 }
 
 func ensurePluginAvailable() throws {
-    for manifestName in ["Package@swift-5.9.swift", "Package@swift-5.8.swift", "Package@swift-5.7.swift", "Package@swift-5.10.swift", "Package@swift-6.0.swift", "Package.swift"] {
+    for manifestName in ["Package@swift-6.0.swift", "Package@swift-5.10.swift", "Package@swift-5.9.swift", "Package@swift-5.8.swift", "Package@swift-5.7.swift", "Package.swift"] {
+        print("⚙️  Checking for manifest \(manifestName)")
         let manifestUrl = URL.currentDirectory().appending(component: manifestName)
         var manifestContents: String
         do { manifestContents = try String(contentsOf: manifestUrl, encoding: .utf8) }
