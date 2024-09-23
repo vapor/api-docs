@@ -10,7 +10,7 @@ let moduleList = CommandLine.arguments[2]
 
 let modules = moduleList.components(separatedBy: ",")
 
-let publicDirectoryUrl = URL.currentDirectory().appending(component: "public/")
+let publicDirectoryUrl = URL.currentDirectory().appending(component: "public")
 
 do {
     try run()
@@ -104,7 +104,7 @@ func generateDocs(module: String) throws {
         "--fallback-bundle-version", "1.0.0",
         "--transform-for-static-hosting",
         "--hosting-base-path", "/\(module.lowercased())",
-        "--output-path", publicDirectoryUrl.appending(component: "\(module.lowercased())/").path,
+        "--output-path", publicDirectoryUrl.appending(component: "\(module.lowercased())").path,
     ])
 }
 
