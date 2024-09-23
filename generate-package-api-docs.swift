@@ -70,7 +70,7 @@ func ensurePluginAvailable() throws {
 func generateDocs(module: String) throws {
     print("🔎  Finding DocC catalog")
     let doccCatalogs = try FileManager.default.contentsOfDirectory(
-        at: URL.currentDirectory().appending(components: "Sources", "\(module)/"),
+        at: URL.currentDirectory().appending(components: "Sources", "\(module)"),
         includingPropertiesForKeys: nil,
         options: [.skipsSubdirectoryDescendants]
     ).filter { $0.hasDirectoryPath && $0.pathExtension == "docc" }
