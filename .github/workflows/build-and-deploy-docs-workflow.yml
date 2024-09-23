@@ -54,7 +54,7 @@ jobs:
           fetch-depth: 0
       - name: Install latest Swift
         uses: vapor/swiftly-action@v0.1
-        with: { toolchain: latest }
+        with: { toolchain: '5.10' }
       - name: Download files
         run: | 
           curl -sL \
