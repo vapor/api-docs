@@ -3,7 +3,7 @@
 import Foundation
 
 let packages: [String: [String]] = [
-    "vapor": ["Vapor", "XCTVapor"],
+    "vapor": ["Vapor", "XCTVapor", "VaporTesting"],
 
     "async-kit": ["AsyncKit"],
     "routing-kit": ["RoutingKit"],
