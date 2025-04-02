@@ -14,7 +14,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
       - name: Install latest Swift
-        uses: vapor/swiftly-action@v0.1
+        uses: vapor/swiftly-action@v0.2
         with: { toolchain: latest }
       - name: Build site
         run: swift generate-api-docs.swift
