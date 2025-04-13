@@ -40,7 +40,8 @@ func run() throws {
 }
 
 func ensurePluginAvailable() throws {
-    for manifestName in ["Package@swift-6.0.swift", "Package@swift-5.10.swift", "Package@swift-5.9.swift", "Package@swift-5.8.swift", "Package@swift-5.7.swift", "Package.swift"] {
+    var foundAtLeastOne = false
+    for manifestName in ["6.2", "6.1", "6.0", "5.10", "5.9", "5.8", "5.7"].map({ "Package@swift-\($0).swift" }) + ["Package.swift"] {
         print("⚙️  Checking for manifest \(manifestName)")
         let manifestUrl = URL.currentDirectory().appending(component: manifestName)
         var manifestContents: String
@@ -49,22 +50,24 @@ func ensurePluginAvailable() throws {
         catch let error as NSError where error.isPOSIXError(.ENOENT) { continue }
 
         if !manifestContents.contains(".package(url: \"https://github.com/apple/swift-docc-plugin") {
-            // This is freely admitted to be quick and dirty. When SE-0301 gets into a release, we can use that.
-            print("🧬  Injecting missing DocC plugin dependency")
+            // This is freely admitted to be quick and dirty. Unfortunately, swift package add-dependency doesn't understand version-tagged manifests.
+            print("🧬  Injecting DocC plugin dependency into \(manifestName)")
             guard let depsArrayRange = manifestContents.firstRange(of: "dependencies: [") else {
                 print("❌  ERROR: Can't inject swift-docc-plugin dependency (can't find deps array).")
                 exit(1)
             }
             manifestContents.insert(
-                contentsOf: "\n.package(url: \"https://github.com/apple/swift-docc-plugin.git\", from: \"1.3.0\"),\n",
+                contentsOf: "\n.package(url: \"https://github.com/apple/swift-docc-plugin.git\", from: \"1.4.0\"),\n",
                 at: depsArrayRange.upperBound
             )
             try manifestContents.write(to: manifestUrl, atomically: true, encoding: .utf8)
         }
-        return
+        foundAtLeastOne = true
     }
-    print("❌  ERROR: Can't inject swift-docc-plugin dependency (no usable manifest found).")
-    exit(1)
+    guard foundAtLeastOne else {
+        print("❌  ERROR: Can't inject swift-docc-plugin dependency (no usable manifest found).")
+        exit(1)
+    }
 }
 
 func generateDocs(module: String) throws {
@@ -99,10 +102,9 @@ func generateDocs(module: String) throws {
         "--target", module,
         "--disable-indexing",
         "--experimental-skip-synthesized-symbols",
-        "--fallback-display-name", module,
-        "--fallback-bundle-identifier", "codes.vapor.\(packageName.lowercased()).\(module.lowercased())",
-        "--fallback-bundle-version", "1.0.0",
-        "--transform-for-static-hosting",
+        "--enable-inherited-docs",
+        "--enable-experimental-overloaded-symbol-presentation",
+        "--enable-experimental-mentioned-in",
         "--hosting-base-path", "/\(module.lowercased())",
         "--output-path", publicDirectoryUrl.appending(component: "\(module.lowercased())").path,
     ])
