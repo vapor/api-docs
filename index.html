@@ -4,46 +4,202 @@
     <title>Vapor API Docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <style>
-        html, body {
-            height: 100%;
-            background: #0d0d0d;
-            color: #ffffff;
-            padding: 0;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
 
-        .wrapper {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        html, body {
+            min-height: 100%;
+            background: #0a0a0a;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
             text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .main {
-            margin-top: -50px;
-        }
-
-        .title {
+        .logo {
             background-image: url(api-docs.png);
             width: 300px;
             height: 78px;
-            background-size: 300px auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             text-indent: -9999px;
-            margin-bottom: 0;
+            margin: 0 auto 1rem;
         }
+
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #7c3aed 0%, #3b82f6 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+        }
+
+        .package-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .package-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .package-description {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #7c3aed;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .package-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .logo {
+                width: 250px;
+                height: 65px;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .package-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        .package-card:focus {
+            outline: 2px solid #7c3aed;
+            outline-offset: 2px;
+        }
+
+        /* Loading animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .package-card {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .package-card:nth-child(1) { animation-delay: 0.05s; }
+        .package-card:nth-child(2) { animation-delay: 0.1s; }
+        .package-card:nth-child(3) { animation-delay: 0.15s; }
+        .package-card:nth-child(4) { animation-delay: 0.2s; }
+        .package-card:nth-child(5) { animation-delay: 0.25s; }
+        .package-card:nth-child(6) { animation-delay: 0.3s; }
+        .package-card:nth-child(7) { animation-delay: 0.35s; }
+        .package-card:nth-child(8) { animation-delay: 0.4s; }
+        .package-card:nth-child(n+9) { animation-delay: 0.45s; }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="main">
-            <h1 class="title">Vapor API Docs</h1>
-            <br>
-            <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value); this.selectedIndex = 0;">
-                <option value="">Choose package...</option>
-                {{Options}}
-            </select>
-        </div>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">Vapor API Docs</h1>
+            <p class="subtitle">Explore the complete API documentation for Vapor and its ecosystem</p>
+        </header>
+
+        <main class="package-grid">
+            {{PackageCards}}
+        </main>
+
+        <footer class="footer">
+            <p>Built with <a href="https://vapor.codes" target="_blank" rel="noopener">Vapor</a> • <a href="https://github.com/vapor/api-docs" target="_blank" rel="noopener">View on GitHub</a></p>
+        </footer>
     </div>
 </body>
 </html>
