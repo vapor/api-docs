@@ -87,10 +87,10 @@ Resources:
             - Header: server
               Override: true
               Value: 'Vapor API Docs'
+            - Header: Content-Security-Policy-Report-Only
+              Override: false
+              Value: "default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'"
         SecurityHeadersConfig:
-          # ContentSecurityPolicy:
-          #   ContentSecurityPolicy: default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'
-          #   Override: false
           ContentTypeOptions:
             Override: false
           FrameOptions:
