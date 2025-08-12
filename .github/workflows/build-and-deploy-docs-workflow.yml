@@ -48,7 +48,7 @@ jobs:
     env: { AWS_PAGER: '' }
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           fetch-depth: 0
