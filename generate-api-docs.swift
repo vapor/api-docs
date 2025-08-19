@@ -102,6 +102,7 @@ do {
     try htmlIndex.write(to: publicDirUrl.appendingPathComponent("index.html", isDirectory: false), atomically: true, encoding: .utf8)
     try FileManager.default.copyItem(at: URL(fileURLWithPath: "./api-docs.png", isDirectory: false), into: publicDirUrl)
     try FileManager.default.copyItem(at: URL(fileURLWithPath: "./error.html", isDirectory: false), into: publicDirUrl)
+    try FileManager.default.copyItem(at: URL(fileURLWithPath: "./styles.css", isDirectory: false), into: publicDirUrl)
 } catch let error as NSError {
     print("❌  ERROR: \(String(reflecting: error)): \(error.userInfo)")
     exit(1)
