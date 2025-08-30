@@ -43,14 +43,27 @@ env:
 
 jobs:
   build-docs:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     permissions: { id-token: write, contents: read }
     env: { AWS_PAGER: '' }
     steps:
-      - name: Check out code
+      - name: Check out docc-render fork
+        uses: actions/checkout@v5
+        with:
+          repository: vapor/swift-docc-render
+          path: swift-docc-render
+      - name: Setup node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build swift-docc-render
+        working-directory: swift-docc-render
+        run: npm ci && npm run build
+      - name: Check out repo to build docs for
         uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
+          path: build-repo
           fetch-depth: 0
       - name: Install latest Swift
         uses: vapor/swiftly-action@v0.2
@@ -59,10 +72,13 @@ jobs:
         run: | 
           curl -sL \
             "https://raw.githubusercontent.com/vapor/api-docs/main/generate-package-api-docs.swift" \
-              -o generate-package-api-docs.swift \
+              -o build-repo/generate-package-api-docs.swift \
             "https://raw.githubusercontent.com/vapor/api-docs/main/theme-settings.json" \
-              -o theme-settings.json
+              -o build-repo/theme-settings.json
       - name: Build docs
+        working-directory: build-repo
+        env:
+          DOCC_HTML_DIR: '../swift-docc-render/dist'
         run: 'swift generate-package-api-docs.swift "${INPUT_PACKAGE_NAME}" ${INPUT_MODULES}'
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -73,7 +89,7 @@ jobs:
         env:
           S3_BUCKET_URL: ${{ secrets.VAPOR_API_DOCS_S3_BUCKET_URL }}
         run: |
-          aws s3 sync ./public "${S3_BUCKET_URL}" --no-progress --acl public-read
+          aws s3 sync ./build-repo/public "${S3_BUCKET_URL}" --no-progress --acl public-read
       - name: Invalidate CloudFront
         env:
           DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
