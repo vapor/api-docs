@@ -48,7 +48,7 @@ jobs:
     env: { AWS_PAGER: '' }
     steps:
       - name: Check out docc-render fork
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: vapor/swift-docc-render
           path: swift-docc-render
@@ -60,7 +60,7 @@ jobs:
         working-directory: swift-docc-render
         run: npm ci && npm run build
       - name: Check out repo to build docs for
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ inputs.repository || github.repository }}
           path: build-repo
