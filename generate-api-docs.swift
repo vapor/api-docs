@@ -37,6 +37,7 @@ let packages: [String: [String]] = [
     "jwt-kit": ["JWTKit"],
     "jwt": ["JWT"],
     "apns": ["VaporAPNS"],
+    "authentication": ["Authentication"]
 ]
 
 // Package descriptions
@@ -74,7 +75,8 @@ let packageDescriptions: [String: String] = [
     "Leaf": "Vapor integration for LeafKit",
     "JWTKit": "JSON Web Token signing and verification framework",
     "JWT": "JWT integration for Vapor authentication",
-    "VaporAPNS": "Apple Push Notification Service integration"
+    "VaporAPNS": "Apple Push Notification Service integration",
+    "Authentication": "Authentication framework for Swift applications",
 ]
 
 // Generate package cards HTML
@@ -82,7 +84,7 @@ let allModules = packages.values.flatMap { $0 }.sorted()
 let packageCards = allModules.map { module in
     let description = packageDescriptions[module] ?? "API documentation for \(module)"
     let href = "\(module.lowercased())/documentation/\(module.lowercased())"
-    
+
     return """
             <a href="\(href)" class="package-card" tabindex="0">
                 <h2 class="package-name">\(module)</h2>
