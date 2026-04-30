@@ -7,7 +7,7 @@ let packages: [String: [String]] = [
 
     "async-kit": ["AsyncKit"],
     "routing-kit": ["RoutingKit"],
-    "console-kit": ["ConsoleKit", "ConsoleKitCommands", "ConsoleKitTerminal"],
+    "console-kit": ["ConsoleKit", "ConsoleLogger"],
     "websocket-kit": ["WebSocketKit"],
     "multipart-kit": ["MultipartKit"],
 
@@ -47,9 +47,8 @@ let packageDescriptions: [String: String] = [
     "VaporTesting": "Modern testing framework for Vapor apps when using Swift Testing",
     "AsyncKit": "Async/await utilities and helpers for concurrent programming",
     "RoutingKit": "High-performance routing engine for HTTP requests",
-    "ConsoleKit": "Terminal UI and command-line tools framework",
-    "ConsoleKitCommands": "Command parsing and execution for CLI apps",
-    "ConsoleKitTerminal": "Terminal formatting and interaction utilities",
+    "ConsoleKit": "APIs for creating interactive CLI tools",
+    "ConsoleLogger": "A SwiftLog LogHandler implementation for customizable logging to a console",
     "WebSocketKit": "WebSocket client and server implementation",
     "MultipartKit": "Multipart form data parsing and encoding",
     "PostgresNIO": "Non-blocking PostgreSQL client built on SwiftNIO",
