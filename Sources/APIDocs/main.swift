@@ -51,8 +51,10 @@ let site = KilnSite(
 )
 
 let contentDirectory = "Content"
-let outputDirectory = "public"
+// `site` is the `kiln` CLI's default output directory, so `kiln serve` builds and
+// previews this project with no extra flags.
+let outputDirectory = "site"
 
 print("Building Vapor API docs into ./\(outputDirectory) …")
 try await Kiln.build(site, contentDirectory: contentDirectory, outputDirectory: outputDirectory)
-print("Done. Serve it with:  kiln serve --directory \(outputDirectory)")
+print("Done. Serve it with:  kiln serve")
