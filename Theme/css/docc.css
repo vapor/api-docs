@@ -1,0 +1,246 @@
+/*
+ * Vapor API docs — DocC-reference styles.
+ *
+ * Loaded after the shared design system and the docs layout layer (theme.css),
+ * so it reuses the same brand tokens (--vp-*). This file styles only what's
+ * unique to API reference pages: the symbol header, declarations, parameters,
+ * curated Topics/Relationships, and the DocC symbol sidebar.
+ *
+ * NOTE: much of this reuses patterns duplicated from the docs theme. It is
+ * intended to be extracted into the shared Vapor design system in Milestone 2.
+ */
+
+:root {
+    --docc-decl-bg: var(--vp-grey-100);
+    --docc-keyword: #ad3da4;
+    --docc-type: #3900a0;
+    --docc-param: var(--vp-grey-800);
+}
+
+html.dark {
+    --docc-decl-bg: #1c1c1f;
+    --docc-keyword: #ff7ab2;
+    --docc-type: #6bdfff;
+    --docc-param: var(--vp-grey-300);
+}
+
+/* ---- Symbol header (eyebrow role + title) ---- */
+
+.docc-header {
+    margin-bottom: 1rem;
+}
+
+.docc-eyebrow {
+    margin: 0 0 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--vp-text-muted);
+}
+
+.kiln-article .docc-header h1 {
+    margin-top: 0;
+    /* Long Swift symbol names (dispatch(_:_:maxRetryCount:…)) must wrap. */
+    overflow-wrap: anywhere;
+}
+
+.docc-abstract {
+    font-size: 1.05rem;
+    color: var(--vp-text);
+    margin-bottom: 1.5rem;
+}
+
+/* ---- Declaration ---- */
+
+.docc-declaration {
+    margin: 1.25rem 0 2rem;
+}
+
+pre.declaration {
+    background: var(--docc-decl-bg);
+    border: 1px solid var(--vp-border);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+pre.declaration code {
+    background: none;
+    padding: 0;
+    font-family: var(--vp-font-code, "Roboto Mono", monospace);
+    white-space: pre;
+}
+
+.token-keyword { color: var(--docc-keyword); }
+.token-typeIdentifier,
+a.token-typeIdentifier { color: var(--docc-type); text-decoration: none; }
+a.token-typeIdentifier:hover { text-decoration: underline; }
+.token-identifier { color: var(--vp-heading); }
+.token-externalParam { color: var(--vp-text); font-weight: 600; }
+.token-internalParam,
+.token-genericParameter { color: var(--vp-text-muted); }
+.token-text,
+.token-number,
+.token-string { color: var(--vp-text); }
+
+/* ---- Parameters / possible values ---- */
+
+.docc-parameters,
+.docc-possible-values {
+    margin: 2rem 0;
+}
+
+.docc-parameter-list {
+    display: grid;
+    grid-template-columns: minmax(8rem, max-content) 1fr;
+    gap: 0.5rem 1.5rem;
+    margin: 0;
+}
+
+.docc-parameter-name {
+    margin: 0;
+    padding-top: 0.1rem;
+}
+
+.docc-parameter-name code {
+    color: var(--docc-param);
+    font-weight: 600;
+}
+
+.docc-parameter-description {
+    margin: 0;
+}
+
+.docc-parameter-description > :first-child { margin-top: 0; }
+.docc-parameter-description > :last-child { margin-bottom: 0; }
+
+/* ---- Symbol references in prose ---- */
+
+a.docc-symbol-link {
+    text-decoration: none;
+    color: var(--vp-link);
+}
+
+a.docc-symbol-link:hover { text-decoration: underline; }
+a.docc-symbol-link code { color: inherit; }
+
+/* ---- Topics / Default Implementations / See Also ---- */
+
+.docc-topics h2,
+.docc-relationships h2,
+.docc-default-implementations h2,
+.docc-see-also h2 {
+    border-bottom: 1px solid var(--vp-border);
+    padding-bottom: 0.35rem;
+    margin-top: 2.5rem;
+}
+
+.docc-topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.docc-topic {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--vp-border);
+}
+
+.docc-topic:last-child { border-bottom: none; }
+
+a.docc-topic-link {
+    font-family: var(--vp-font-code, "Roboto Mono", monospace);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--vp-link);
+}
+
+a.docc-topic-link:hover { text-decoration: underline; }
+
+.docc-topic-abstract {
+    margin-top: 0.25rem;
+    color: var(--vp-text-muted);
+    font-size: 0.92rem;
+}
+
+.docc-topic-abstract p { margin: 0; }
+
+/* ---- Relationships ---- */
+
+.docc-relationship-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+}
+
+.docc-relationship-list li code {
+    background: var(--vp-code-bg);
+    border: 1px solid var(--vp-border);
+    border-radius: 6px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.85rem;
+}
+
+/* ---- Sidebar: DocC symbol tree ---- */
+
+.docc-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.docc-nav-list .docc-nav-list {
+    margin-left: 0.75rem;
+    padding-left: 0.6rem;
+    border-left: 1px solid var(--vp-border);
+}
+
+.docc-nav-item { margin: 0.05rem 0; }
+
+.docc-nav-link {
+    display: block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    color: var(--vp-text);
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.docc-nav-link:hover { background: var(--vp-surface); color: var(--vp-heading); }
+
+.docc-nav-link.docc-current {
+    background: color-mix(in srgb, var(--vp-link) 14%, transparent);
+    color: var(--vp-link);
+    font-weight: 600;
+}
+
+.docc-nav-group > summary,
+.docc-nav-branch > summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+}
+
+.docc-nav-group > summary {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--vp-text-muted);
+    margin-top: 0.6rem;
+}
+
+.docc-nav-branch > summary { padding: 0; }
+.docc-nav-branch > summary::-webkit-details-marker { display: none; }
+.docc-nav-group > summary::-webkit-details-marker { display: none; }
+.docc-nav-branch > summary::marker,
+.docc-nav-group > summary::marker { content: ""; }
