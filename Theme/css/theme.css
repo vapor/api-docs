@@ -841,6 +841,9 @@ body > footer {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    /* DocC breadcrumb crumbs are code identifiers (module › type › member); the
+       nav-derived crumbs on prose pages don't get this class, so stay sans. */
+    .kiln-crumb-code { font-family: var(--vp-font-code, "Roboto Mono", monospace); font-size: 0.85rem; }
 
     /* Off-canvas drawer: sits atop the navbar (z 9999), with a top margin and a
      * rounded right edge, sliding in from the left. */

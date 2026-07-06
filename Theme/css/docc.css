@@ -426,7 +426,10 @@ a.docc-catalog-card:hover {
     display: block;
     padding: 0.2rem 0.5rem;
     border-radius: 6px;
-    font-size: 0.88rem;
+    /* Sidebar entries are code identifiers → code font. The uppercase category
+       group headings (.docc-nav-group > summary) are not links, so stay sans. */
+    font-family: var(--vp-font-code, "Roboto Mono", monospace);
+    font-size: 0.82rem;
     color: var(--vp-text);
     text-decoration: none;
     line-height: 1.4;

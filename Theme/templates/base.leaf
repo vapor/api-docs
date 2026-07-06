@@ -34,7 +34,7 @@
             <!-- DocC pages carry an explicit breadcrumb trail (module > type > member);
                  render it as the crumb row. Other pages derive the trail from the
                  active navigation section plus the page title. -->
-            #if(page.breadcrumb):#for(crumb in page.breadcrumb):<span class="vapor-icon icon-chevron-right kiln-crumb-sep" aria-hidden="true"></span>#if(crumb.url):<span class="kiln-crumb-section">#(crumb.name)</span>#else:<span class="kiln-crumb-page">#(crumb.name)</span>#endif#endfor#else:#for(item in nav.items):#if(item.kind == "section"):#if(item.isActive):<span class="vapor-icon icon-chevron-right kiln-crumb-sep" aria-hidden="true"></span><span class="kiln-crumb-section">#(item.title)</span>#endif#endif#endfor<span class="vapor-icon icon-chevron-right kiln-crumb-sep" aria-hidden="true"></span><span class="kiln-crumb-page">#(page.title)</span>#endif
+            #if(page.breadcrumb):#for(crumb in page.breadcrumb):<span class="vapor-icon icon-chevron-right kiln-crumb-sep" aria-hidden="true"></span>#if(crumb.url):<span class="kiln-crumb-section kiln-crumb-code">#(crumb.name)</span>#else:<span class="kiln-crumb-page kiln-crumb-code">#(crumb.name)</span>#endif#endfor#else:#for(item in nav.items):#if(item.kind == "section"):#if(item.isActive):<span class="vapor-icon icon-chevron-right kiln-crumb-sep" aria-hidden="true"></span><span class="kiln-crumb-section">#(item.title)</span>#endif#endif#endfor<span class="vapor-icon icon-chevron-right kiln-crumb-sep" aria-hidden="true"></span><span class="kiln-crumb-page">#(page.title)</span>#endif
         </button>
 
         <main class="kiln-main" id="kiln-main" tabindex="-1">
