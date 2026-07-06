@@ -127,6 +127,40 @@ a.docc-symbol-link {
 a.docc-symbol-link:hover { text-decoration: underline; }
 a.docc-symbol-link code { color: inherit; }
 
+/* ---- Thematic break (horizontal rule in prose) ---- */
+.kiln-article hr {
+    border: 0;
+    border-top: 1px solid var(--vp-border);
+    margin: 2rem 0;
+}
+
+/* ---- Mentioned in ---- */
+.docc-mentions {
+    margin: 1.5rem 0;
+}
+/* Override the article h2 chrome (border-top + large margins) for the small,
+   eyebrow-style "Mentioned in" heading. */
+.docc-mentions .docc-mentions-title {
+    border: 0;
+    padding: 0;
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--vp-text-muted);
+}
+.docc-mentions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+}
+.docc-mentions a { color: var(--vp-link); text-decoration: none; }
+.docc-mentions a:hover { text-decoration: underline; }
+
 /* ---- Topics / Default Implementations / See Also ---- */
 
 .docc-topics h2,
