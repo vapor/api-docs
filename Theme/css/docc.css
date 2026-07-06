@@ -26,33 +26,6 @@ html.dark {
 
 /* ---- Symbol header (eyebrow role + title) ---- */
 
-/* Breadcrumb trail above a symbol page (module › type › member). Kiln emits the
-   markup in the shared page template; styled here to match the Vapor design. */
-.kiln-breadcrumb {
-    margin: 0 0 1rem;
-    font-size: 0.85rem;
-}
-.kiln-breadcrumb ol {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4em;
-    margin: 0;
-    padding: 0;
-}
-.kiln-breadcrumb li + li::before {
-    content: "/";
-    margin-inline-end: 0.4em;
-    color: var(--vp-text-muted);
-}
-.kiln-breadcrumb a {
-    color: var(--vp-text-muted);
-    text-decoration: none;
-}
-.kiln-breadcrumb a:hover { color: var(--vp-link); text-decoration: underline; }
-.kiln-breadcrumb [aria-current="page"] { color: var(--vp-text); }
-
 .docc-header {
     margin-bottom: 1rem;
 }
