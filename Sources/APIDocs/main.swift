@@ -15,7 +15,7 @@ let site = KilnSite(
     url: "https://api.vapor.codes",
     author: "Vapor Community",
     description: "API reference documentation for Vapor and its ecosystem (web framework for Swift).",
-    image: "assets/social-card.png",
+    image: "assets/api-og-2x.png",
     twitterSite: "@codevapor",
     repository: .init(
         name: "Vapor GitHub",

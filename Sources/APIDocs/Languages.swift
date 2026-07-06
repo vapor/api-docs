@@ -32,6 +32,6 @@ let languages: [Language] = [
             "closeMenu": "Close menu",
             "skipToContent": "Skip to content",
         ],
-        image: "assets/social-card.png"
+        image: "assets/api-og-2x.png"
     )
 ]
