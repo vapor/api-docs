@@ -258,7 +258,7 @@ a.docc-catalog-card:hover {
 
 .docc-select {
     position: relative;
-    margin: 0 0 0.6rem;
+    margin: 0 10px 0.6rem;
 }
 
 .docc-select--module { margin-bottom: 0.5rem; }
@@ -283,10 +283,10 @@ a.docc-catalog-card:hover {
     transition: border-color 0.15s ease;
 }
 
-/* The version select reads as secondary to the module select: smaller, muted. */
+/* The version select reads as secondary to the module select — same box shape
+ * (so the radius reads identically), differentiated by muted, lighter text. */
 .docc-select--version .docc-select-toggle {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: var(--vp-text-muted);
 }
