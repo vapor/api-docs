@@ -45,6 +45,16 @@ html.dark {
     overflow-wrap: anywhere;
 }
 
+/* Symbol pages (types, methods, properties) title a code identifier, so render
+   it in the code font — matching swift-docc. Module landings and articles keep
+   the prose heading font (no .docc-symbol-title class). */
+.kiln-article .docc-header h1.docc-symbol-title {
+    font-family: var(--vp-font-code, "Roboto Mono", monospace);
+    font-weight: 600;
+    font-size: 1.9rem;
+    letter-spacing: -0.01em;
+}
+
 .docc-abstract {
     font-size: 1.05rem;
     color: var(--vp-text);
