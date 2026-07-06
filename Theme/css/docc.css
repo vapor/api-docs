@@ -252,6 +252,78 @@ a.docc-catalog-card:hover {
     line-height: 1.5;
 }
 
+/* ---- Sidebar module switcher ---- */
+
+.docc-module-switcher {
+    position: relative;
+    margin: 0 0 1.25rem;
+}
+
+.docc-module-current {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--vp-border);
+    border-radius: 10px;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+    color: var(--vp-heading);
+    background: var(--vp-content-bg);
+}
+
+.docc-module-current::-webkit-details-marker { display: none; }
+.docc-module-current::marker { content: ""; }
+.docc-module-current:hover { border-color: var(--vp-link); }
+
+.docc-module-chevron {
+    color: var(--vp-text-muted);
+    font-size: 0.8rem;
+    transition: transform 0.15s ease;
+}
+
+.docc-module-switcher[open] .docc-module-chevron { transform: rotate(180deg); }
+
+.docc-module-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    z-index: 20;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 0.4rem;
+    background: var(--vp-content-bg);
+    border: 1px solid var(--vp-border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.docc-module-group {
+    margin: 0.6rem 0.5rem 0.2rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--vp-text-muted);
+}
+
+.docc-module-group:first-child { margin-top: 0.2rem; }
+
+.docc-module-link {
+    display: block;
+    padding: 0.35rem 0.55rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--vp-text);
+    text-decoration: none;
+}
+
+.docc-module-link:hover { background: var(--vp-surface); color: var(--vp-heading); }
+.docc-module-link.docc-current { color: var(--vp-link); font-weight: 600; }
+
 /* ---- Sidebar: DocC symbol tree ---- */
 
 .docc-nav-list {
