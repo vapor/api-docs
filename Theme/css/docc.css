@@ -252,41 +252,65 @@ a.docc-catalog-card:hover {
     line-height: 1.5;
 }
 
-/* ---- Sidebar module switcher ---- */
+/* ---- Shared select (module + version switchers) ----
+ * A reusable pill dropdown. Sizes via .docc-select--module / --version.
+ * Intended to move into the shared design-system component library. */
 
-.docc-module-switcher {
+.docc-select {
     position: relative;
-    margin: 0 0 1.25rem;
+    margin: 0 0 0.6rem;
 }
 
-.docc-module-current {
+.docc-select--module { margin-bottom: 0.5rem; }
+.docc-select--version { margin-bottom: 1.25rem; }
+
+/* Rounded-rectangle toggle: value on the left, chevron on the right. */
+.docc-select-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
-    padding: 0.6rem 0.9rem;
+    padding: 0.6rem 0.85rem;
     border: 1px solid var(--vp-border);
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     list-style: none;
+    font-size: 0.95rem;
     font-weight: 600;
+    line-height: 1.2;
     color: var(--vp-heading);
     background: var(--vp-content-bg);
+    transition: border-color 0.15s ease;
 }
 
-.docc-module-current::-webkit-details-marker { display: none; }
-.docc-module-current::marker { content: ""; }
-.docc-module-current:hover { border-color: var(--vp-link); }
-
-.docc-module-chevron {
+/* The version select reads as secondary to the module select: smaller, muted. */
+.docc-select--version .docc-select-toggle {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.85rem;
+    font-weight: 500;
     color: var(--vp-text-muted);
-    font-size: 0.8rem;
+}
+
+.docc-select-toggle::-webkit-details-marker { display: none; }
+.docc-select-toggle::marker { content: ""; }
+.docc-select-toggle:hover { border-color: var(--vp-link); }
+
+.docc-select-chevron {
+    display: inline-flex;
+    flex-shrink: 0;
+    color: var(--vp-text-muted);
     transition: transform 0.15s ease;
 }
 
-.docc-module-switcher[open] .docc-module-chevron { transform: rotate(180deg); }
+.docc-select-chevron svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
 
-.docc-module-menu {
+.docc-select[open] .docc-select-chevron { transform: rotate(180deg); }
+
+.docc-select-menu {
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
@@ -301,7 +325,7 @@ a.docc-catalog-card:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.docc-module-group {
+.docc-select-group {
     margin: 0.6rem 0.5rem 0.2rem;
     font-size: 0.68rem;
     font-weight: 700;
@@ -310,9 +334,9 @@ a.docc-catalog-card:hover {
     color: var(--vp-text-muted);
 }
 
-.docc-module-group:first-child { margin-top: 0.2rem; }
+.docc-select-group:first-child { margin-top: 0.2rem; }
 
-.docc-module-link {
+.docc-select-option {
     display: block;
     padding: 0.35rem 0.55rem;
     border-radius: 6px;
@@ -321,8 +345,22 @@ a.docc-catalog-card:hover {
     text-decoration: none;
 }
 
-.docc-module-link:hover { background: var(--vp-surface); color: var(--vp-heading); }
-.docc-module-link.docc-current { color: var(--vp-link); font-weight: 600; }
+.docc-select-option:hover { background: var(--vp-surface); color: var(--vp-heading); }
+.docc-select-option.is-current { color: var(--vp-link); font-weight: 600; }
+
+.docc-select-badge {
+    display: inline-block;
+    margin-inline-start: 0.35rem;
+    padding: 0.05rem 0.4rem;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--vp-content-bg);
+    background: var(--vp-link);
+    vertical-align: middle;
+}
 
 /* ---- Sidebar: DocC symbol tree ---- */
 

@@ -18,6 +18,7 @@
             <span class="kiln-sidebar-brand-text">Vapor API Docs</span>
         </a>
         #if(nav.moduleSwitcher):#unsafeHTML(nav.moduleSwitcher)#endif
+        #if(nav.versionSwitcher):#unsafeHTML(nav.versionSwitcher)#endif
         <nav class="kiln-nav" aria-label="Documentation navigation">
             #if(nav.doccHTML):#unsafeHTML(nav.doccHTML)#else:#extend("partials/nav-tree", nav)#endif
         </nav>

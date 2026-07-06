@@ -62,6 +62,14 @@ let site = KilnSite(
             APIPackage("vapor/postgres-nio", group: "Database",
                        modules: [Module("PostgresNIO", description: "Non-blocking PostgreSQL client built on SwiftNIO.")],
                        versions: [PackageVersion("default", name: "1.23.0", ref: "main", isDefault: true)]),
+            // Two versions, to exercise the version switcher: v4 (stable, the
+            // default served at the module root) and v5 beta (from main).
+            APIPackage("vapor/routing-kit", group: "Core",
+                       modules: [Module("RoutingKit", description: "High-performance routing engine for HTTP requests.")],
+                       versions: [
+                           PackageVersion("4", name: "4.x", ref: "v4", isDefault: true),
+                           PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true),
+                       ]),
             APIPackage("vapor/queues", group: "Queues",
                        modules: [
                            Module("Queues", description: "A queuing system for Vapor that offloads work to background workers."),
