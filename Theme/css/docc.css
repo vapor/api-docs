@@ -188,6 +188,70 @@ a.docc-topic-link:hover { text-decoration: underline; }
     font-size: 0.85rem;
 }
 
+/* ---- Catalog landing page ---- */
+
+.docc-catalog-header {
+    margin-bottom: 2.5rem;
+}
+
+.docc-catalog-lead {
+    font-size: 1.1rem;
+    color: var(--vp-text-muted);
+    max-width: 42rem;
+}
+
+.docc-catalog-group {
+    margin-bottom: 2.5rem;
+}
+
+.docc-catalog-group-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--vp-text-muted);
+    border-bottom: 1px solid var(--vp-border);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.docc-catalog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
+}
+
+a.docc-catalog-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--vp-border);
+    border-radius: 12px;
+    background: var(--vp-content-bg);
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.docc-catalog-card:hover {
+    border-color: var(--vp-link);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.docc-catalog-card-title {
+    font-family: var(--vp-font-code, "Roboto Mono", monospace);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--vp-heading);
+}
+
+.docc-catalog-card-desc {
+    font-size: 0.9rem;
+    color: var(--vp-text-muted);
+    line-height: 1.5;
+}
+
 /* ---- Sidebar: DocC symbol tree ---- */
 
 .docc-nav-list {
