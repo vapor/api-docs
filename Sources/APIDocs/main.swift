@@ -88,5 +88,7 @@ let contentDirectory = "Content"
 let outputDirectory = "site"
 
 print("Building Vapor API docs into ./\(outputDirectory) …")
-try await Kiln.build(site, contentDirectory: contentDirectory, outputDirectory: outputDirectory)
+// Incremental: reuse the previous output for modules whose archives are
+// unchanged (a fresh checkout has no manifest, so CI still does a full build).
+try await Kiln.build(site, contentDirectory: contentDirectory, outputDirectory: outputDirectory, incremental: true)
 print("Done. Serve it with:  kiln serve")
