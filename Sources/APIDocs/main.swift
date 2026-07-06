@@ -42,11 +42,16 @@ let site = KilnSite(
     languages: languages,
     docc: DocCSite(
         packages: [
+            // The package default group ("Queues") applies to its API module;
+            // the test-helper module overrides to "Testing" so the catalog
+            // separates them.
             APIPackage("vapor/queues", ref: "main", group: "Queues", modules: [
                 Module("Queues", description: "A queuing system for Vapor that offloads work to background workers."),
-                Module("XCTQueues", description: "Testing helpers for Vapor's Queues."),
+                Module("XCTQueues", group: "Testing", description: "Testing helpers for Vapor's Queues."),
             ]),
-        ]
+        ],
+        // Catalog section order (concern-based; testing helpers last).
+        groupOrder: ["Core", "Queues", "Database", "Templating", "Testing"]
     )
 )
 
