@@ -50,11 +50,11 @@ struct APIDocs: AsyncParsableCommand {
     @Option(
         name: .customLong("rebuild"),
         help: ArgumentHelp(
-            "Force-rebuild the DocC archive for this module, reusing the rest.",
-            discussion: "Repeatable, e.g. --rebuild JWTKit --rebuild Fluent."
+            "Force-rebuild a package's DocC archives, reusing the rest.",
+            discussion: "A repo (jwt-kit or vapor/jwt-kit) rebuilds all its versions; pin one with repo@ref, e.g. routing-kit@main. Repeatable."
         )
     )
-    var rebuildModules: [String] = []
+    var rebuildPackages: [String] = []
 
     @Flag(name: .customLong("rebuild-all"), help: "Rebuild every DocC archive from scratch.")
     var rebuildAll = false
@@ -69,8 +69,8 @@ struct APIDocs: AsyncParsableCommand {
         let rebuild: DocCArchiveBuilder.Rebuild
         if rebuildAll {
             rebuild = .all
-        } else if !rebuildModules.isEmpty {
-            rebuild = .modules(Set(rebuildModules.map { $0.lowercased() }))
+        } else if !rebuildPackages.isEmpty {
+            rebuild = .rebuilding(rebuildPackages)
         } else {
             rebuild = .missing
         }
