@@ -30,7 +30,7 @@ let site = KilnSite(
     languages: languages,
     docc: DocCSite(
         packages: packages,
-        groupOrder: ["Core", "Authentication", "Database", "Queues", "Push Notifications", "Templating", "Testing"]
+        groupOrder: ["Core", "Authentication", "Templating", "Database", "Queues", "Push Notifications", "Testing"]
     )
 )
 
