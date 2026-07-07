@@ -66,23 +66,19 @@ jobs:
 
       - name: Restore DocC archive cache
         run: aws s3 sync "$ARCHIVE_BUCKET" ./Content/archives --no-progress
-
       - name: Build site
         env:
-          EVENT: ${{ github.event_name }}
           PACKAGE: ${{ inputs.package }}
           REF: ${{ inputs.ref }}
           REBUILD_ALL: ${{ inputs.rebuild-all }}
         run: |
           args=()
-          if [ "$EVENT" != "push" ]; then
-            if [ "$REBUILD_ALL" = "true" ]; then
-              args+=(--rebuild-all)
-            elif [ -n "$PACKAGE" ] && [ -n "$REF" ]; then
-              args+=(--rebuild "${PACKAGE}@${REF}")
-            elif [ -n "$PACKAGE" ]; then
-              args+=(--rebuild "$PACKAGE")
-            fi
+          if [ "$REBUILD_ALL" = "true" ]; then
+            args+=(--rebuild-all)
+          elif [ -n "$PACKAGE" ] && [ -n "$REF" ]; then
+            args+=(--rebuild "${PACKAGE}@${REF}")
+          elif [ -n "$PACKAGE" ]; then
+            args+=(--rebuild "$PACKAGE")
           fi
           swift run APIDocs "${args[@]}"
 
