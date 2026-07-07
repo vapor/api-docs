@@ -1,15 +1,6 @@
 import Kiln
 import VaporDesignTheme
 
-// api.vapor.codes — the Vapor ecosystem's API reference, rendered from DocC
-// archives by Kiln's DocC support. This first cut hosts the Queues package
-// (its `Queues` and `XCTQueues` modules); more packages are added to
-// `DocCSite.packages` as their archives are produced.
-//
-// The look mirrors docs.vapor.codes: the shared Vapor design system provides the
-// header/footer chrome and brand CSS, a thin local Theme/ layer adds the docs
-// layout (sidebar/TOC/article), and Theme/css/docc.css styles the API-reference
-// specifics (declarations, symbol cards, relationships).
 let site = KilnSite(
     name: "Vapor API Docs",
     url: "https://api.vapor.codes",
@@ -22,9 +13,6 @@ let site = KilnSite(
         url: "https://github.com/vapor/vapor"
     ),
     copyright: "API Documentation © 2026 Vapor.",
-    // The whole docs layout (base.leaf, theme.css, docc.css, docs.js) now lives in
-    // the shared VaporDesignTheme package, so there's no local Theme/ override —
-    // just the bundled Kiln default plus the shared design layer.
     theme: .default(
         sharedLayers: [VaporDesignTheme.directory],
         palette: .autoLightDark(primary: .black, accent: .blue),
@@ -38,12 +26,8 @@ let site = KilnSite(
         .init(icon: .twitter, link: "https://twitter.com/codevapor"),
         .init(icon: .mastodon, link: "https://hachyderm.io/@codevapor"),
     ],
-    // The docs layout + DocC-reference styles now ship from the CDN
-    // (design.vapor.codes/docs.css), emitted after main.css by the shared <head>.
     languages: languages,
     docc: DocCSite(
-        // Every package builds from `main`; the version name is its latest GitHub
-        // release, ready for the (upcoming) version switcher.
         packages: [
             APIPackage("vapor/jwt", group: "Authentication",
                        modules: [Module("JWT", description: "JWT signing and verification for Vapor.")],
@@ -63,8 +47,6 @@ let site = KilnSite(
             APIPackage("vapor/postgres-nio", group: "Database",
                        modules: [Module("PostgresNIO", description: "Non-blocking PostgreSQL client built on SwiftNIO.")],
                        versions: [PackageVersion("default", name: "1.23.0", ref: "main", isDefault: true)]),
-            // Two versions, to exercise the version switcher: v4 (stable, the
-            // default served at the module root) and v5 beta (from main).
             APIPackage("vapor/routing-kit", group: "Core",
                        modules: [Module("RoutingKit", description: "High-performance routing engine for HTTP requests.")],
                        versions: [
@@ -78,18 +60,35 @@ let site = KilnSite(
                        ],
                        versions: [PackageVersion("default", name: "1.18.0", ref: "main", isDefault: true)]),
         ],
-        // Catalog + switcher section order (concern-based; testing helpers last).
         groupOrder: ["Core", "Authentication", "Database", "Queues", "Push Notifications", "Templating", "Testing"]
     )
 )
 
 let contentDirectory = "Content"
-// `site` is the `kiln` CLI's default output directory, so `kiln serve` builds and
-// previews this project with no extra flags.
 let outputDirectory = "site"
 
+// Which DocC archives to (re)generate this run:
+//   (no flag)              → build only missing archives (fast once populated)
+//   --rebuild <Module> …   → force-rebuild the named module(s), reuse the rest
+//   --rebuild-all          → rebuild every archive from scratch
+// CI restores cached archives (from S3) before the run, then passes the flag for
+// whichever package changed; everything else is served from the restored cache.
+let arguments = Array(CommandLine.arguments.dropFirst())
+let rebuild: DocCArchiveBuilder.Rebuild
+if arguments.contains("--rebuild-all") {
+    rebuild = .all
+} else {
+    var modules = Set<String>()
+    var iterator = arguments.makeIterator()
+    while let argument = iterator.next() {
+        if argument == "--rebuild", let module = iterator.next() { modules.insert(module.lowercased()) }
+    }
+    rebuild = modules.isEmpty ? .missing : .modules(modules)
+}
+
+print("Ensuring DocC archives …")
+try Kiln.buildDocCArchives(site, contentDirectory: contentDirectory, rebuild: rebuild)
+
 print("Building Vapor API docs into ./\(outputDirectory) …")
-// Incremental: reuse the previous output for modules whose archives are
-// unchanged (a fresh checkout has no manifest, so CI still does a full build).
 try await Kiln.build(site, contentDirectory: contentDirectory, outputDirectory: outputDirectory, incremental: true)
 print("Done. Serve it with:  kiln serve")
