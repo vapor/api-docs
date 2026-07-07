@@ -9,7 +9,7 @@ let languages: [Language] = [
         isDefault: true,
         customStrings: [
             // Shared design-partial config.
-            "siteId": "api-docs",             // footer link-target branching
+            "siteId": "apiDocs",              // footer/header link-target branching (matches VaporDesignTheme)
             "head.defaultOgType": "article",  // og:type for reference pages
             "head.homeSuffix": "",
             "head.titleSeparator": " · ",

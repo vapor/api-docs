@@ -10,9 +10,12 @@ let package = Package(
         // Local Kiln checkout on the `docc-support` branch, for the new DocC
         // API-reference rendering. Switch to a released version once these land.
         .package(path: "../../BrokenHands/kiln"),
-        // Shared Vapor design system (header/footer chrome, brand CSS), the same
+        // Shared Vapor design system (header/footer chrome, brand CSS, and now the
+        // shared docs layout: base.leaf, theme.css, docc.css, docs.js), the same
         // layer docs.vapor.codes uses — so the API docs match visually.
-        .package(url: "https://github.com/vapor/design.git", branch: "main"),
+        // TEMPORARY local override for the shared-theme migration; revert to the
+        // github/main dependency once the design package is published.
+        .package(path: "../design"),
     ],
     targets: [
         .executableTarget(

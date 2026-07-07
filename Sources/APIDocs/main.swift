@@ -22,8 +22,10 @@ let site = KilnSite(
         url: "https://github.com/vapor/vapor"
     ),
     copyright: "API Documentation © 2026 Vapor.",
-    theme: .custom(
-        directory: "Theme",
+    // The whole docs layout (base.leaf, theme.css, docc.css, docs.js) now lives in
+    // the shared VaporDesignTheme package, so there's no local Theme/ override —
+    // just the bundled Kiln default plus the shared design layer.
+    theme: .default(
         sharedLayers: [VaporDesignTheme.directory],
         palette: .autoLightDark(primary: .black, accent: .blue),
         logo: "assets/logo.png",
