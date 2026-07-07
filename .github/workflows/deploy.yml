@@ -1,0 +1,111 @@
+name: Deploy API Docs
+
+on:
+  push:
+    branches: [main]
+  workflow_call:
+    inputs:
+      package:
+        description: "Package repo to rebuild e.g. vapor/jwt-kit"
+        type: string
+        required: true
+      ref:
+        description: "Branch to use"
+        type: string
+        required: false
+        default: ""
+  workflow_dispatch:
+    inputs:
+      package:
+        description: "Package repo to rebuild (leave blank to build all packages)"
+        type: string
+        required: false
+        default: ""
+      ref:
+        description: "Branch of the package to rebuild"
+        type: string
+        required: false
+        default: ""
+      rebuild-all:
+        description: "Regenerate every DocC archive from scratch."
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: deploy-api-docs
+  cancel-in-progress: false
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_PAGER: ""
+  ARCHIVE_BUCKET: s3://vapor-api-docs-archives
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          repository: vapor/api-docs
+          ref: main
+
+      - name: Install Swift
+        uses: vapor/swiftly-action@v0.2
+        with:
+          toolchain: latest
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.OIDC_ROLE_ARN }}
+          aws-region: ${{ vars.OIDC_ROLE_REGION }}
+
+      - name: Restore DocC archive cache
+        run: aws s3 sync "$ARCHIVE_BUCKET" ./Content/archives --no-progress
+
+      - name: Build site
+        env:
+          EVENT: ${{ github.event_name }}
+          PACKAGE: ${{ inputs.package }}
+          REF: ${{ inputs.ref }}
+          REBUILD_ALL: ${{ inputs.rebuild-all }}
+        run: |
+          args=()
+          if [ "$EVENT" != "push" ]; then
+            if [ "$REBUILD_ALL" = "true" ]; then
+              args+=(--rebuild-all)
+            elif [ -n "$PACKAGE" ] && [ -n "$REF" ]; then
+              args+=(--rebuild "${PACKAGE}@${REF}")
+            elif [ -n "$PACKAGE" ]; then
+              args+=(--rebuild "$PACKAGE")
+            fi
+          fi
+          swift run APIDocs "${args[@]}"
+
+      - name: Save DocC archive cache
+        run: aws s3 sync ./Content/archives "$ARCHIVE_BUCKET" --no-progress --delete
+
+      - name: Deploy CloudFormation stack
+        uses: aws-actions/aws-cloudformation-github-deploy@v2
+        with:
+          name: vapor-api-docs
+          template: stack.yaml
+          parameter-overrides: >-
+            BucketName=vapor-api-docs-site,
+            SubDomainName=api,
+            HostedZoneName=vapor.codes,
+            AcmCertificateArn=${{ secrets.API_DOCS_CERTIFICATE_ARN }}
+
+      - name: Deploy site to S3
+        env:
+          S3_BUCKET_URL: ${{ secrets.VAPOR_API_DOCS_S3_BUCKET_URL }}
+        run: aws s3 sync ./site "$S3_BUCKET_URL" --no-progress --acl public-read --delete
+
+      - name: Invalidate CloudFront
+        env:
+          DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
+        run: aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*"
