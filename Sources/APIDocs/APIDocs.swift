@@ -1,3 +1,4 @@
+import ArgumentParser
 import Kiln
 import VaporDesignTheme
 
@@ -64,31 +65,52 @@ let site = KilnSite(
     )
 )
 
-let contentDirectory = "Content"
-let outputDirectory = "site"
+@main
+struct APIDocs: AsyncParsableCommand {
+    static let configuration = CommandConfiguration(
+        commandName: "api-docs",
+        abstract: "Build the Vapor API reference site (api.vapor.codes) from DocC archives.",
+        discussion: """
+        Generates any DocC archives that aren't already present (checking each \
+        package out at its ref and running `swift package generate-documentation`), \
+        then renders the whole site. In CI, restore the archive cache first, pass \
+        --rebuild for the package that changed, and the rest is served from cache.
+        """
+    )
 
-// Which DocC archives to (re)generate this run:
-//   (no flag)              → build only missing archives (fast once populated)
-//   --rebuild <Module> …   → force-rebuild the named module(s), reuse the rest
-//   --rebuild-all          → rebuild every archive from scratch
-// CI restores cached archives (from S3) before the run, then passes the flag for
-// whichever package changed; everything else is served from the restored cache.
-let arguments = Array(CommandLine.arguments.dropFirst())
-let rebuild: DocCArchiveBuilder.Rebuild
-if arguments.contains("--rebuild-all") {
-    rebuild = .all
-} else {
-    var modules = Set<String>()
-    var iterator = arguments.makeIterator()
-    while let argument = iterator.next() {
-        if argument == "--rebuild", let module = iterator.next() { modules.insert(module.lowercased()) }
+    @Option(
+        name: .customLong("rebuild"),
+        help: ArgumentHelp(
+            "Force-rebuild the DocC archive for this module, reusing the rest.",
+            discussion: "Repeatable, e.g. --rebuild JWTKit --rebuild Fluent."
+        )
+    )
+    var rebuildModules: [String] = []
+
+    @Flag(name: .customLong("rebuild-all"), help: "Rebuild every DocC archive from scratch.")
+    var rebuildAll = false
+
+    @Option(help: "The content directory (DocC archives live under <content>/archives).")
+    var content = "Content"
+
+    @Option(help: "The output directory (the `kiln serve` default).")
+    var output = "site"
+
+    func run() async throws {
+        let rebuild: DocCArchiveBuilder.Rebuild
+        if rebuildAll {
+            rebuild = .all
+        } else if !rebuildModules.isEmpty {
+            rebuild = .modules(Set(rebuildModules.map { $0.lowercased() }))
+        } else {
+            rebuild = .missing
+        }
+
+        print("Ensuring DocC archives …")
+        try Kiln.buildDocCArchives(site, contentDirectory: content, rebuild: rebuild)
+
+        print("Building Vapor API docs into ./\(output) …")
+        try await Kiln.build(site, contentDirectory: content, outputDirectory: output, incremental: true)
+        print("Done. Serve it with:  kiln serve")
     }
-    rebuild = modules.isEmpty ? .missing : .modules(modules)
 }
-
-print("Ensuring DocC archives …")
-try Kiln.buildDocCArchives(site, contentDirectory: contentDirectory, rebuild: rebuild)
-
-print("Building Vapor API docs into ./\(outputDirectory) …")
-try await Kiln.build(site, contentDirectory: contentDirectory, outputDirectory: outputDirectory, incremental: true)
-print("Done. Serve it with:  kiln serve")

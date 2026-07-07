@@ -1,4 +1,4 @@
-// swift-tools-version:6.2
+// swift-tools-version:6.3
 import PackageDescription
 
 let package = Package(
@@ -16,6 +16,7 @@ let package = Package(
         // TEMPORARY local override for the shared-theme migration; revert to the
         // github/main dependency once the design package is published.
         .package(path: "../design"),
+        .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.3.0"),
     ],
     targets: [
         .executableTarget(
@@ -23,6 +24,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Kiln", package: "kiln"),
                 .product(name: "VaporDesignTheme", package: "design"),
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
         ),
     ]
