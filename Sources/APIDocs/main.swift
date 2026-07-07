@@ -38,9 +38,8 @@ let site = KilnSite(
         .init(icon: .twitter, link: "https://twitter.com/codevapor"),
         .init(icon: .mastodon, link: "https://hachyderm.io/@codevapor"),
     ],
-    // The docs layout layer (`/_kiln/css/theme.css`) then the DocC-reference
-    // styles (`/_kiln/css/docc.css`), both loaded after the shared design CSS.
-    extraCSS: ["_kiln/css/theme.css", "_kiln/css/docc.css"],
+    // The docs layout + DocC-reference styles now ship from the CDN
+    // (design.vapor.codes/docs.css), emitted after main.css by the shared <head>.
     languages: languages,
     docc: DocCSite(
         // Every package builds from `main`; the version name is its latest GitHub
