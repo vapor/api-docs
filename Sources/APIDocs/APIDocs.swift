@@ -79,7 +79,8 @@ struct APIDocs: AsyncParsableCommand {
         try Kiln.buildDocCArchives(site, contentDirectory: content, rebuild: rebuild)
 
         print("Building Vapor API docs into ./\(output) …")
-        try await Kiln.build(site, contentDirectory: content, outputDirectory: output, incremental: true)
+        try await Kiln.build(site, contentDirectory: content, outputDirectory: output, incremental: true,
+                             leafTags: VaporDesignTheme.leafTags)
         print("Done. Serve it with:  kiln serve")
     }
 }
