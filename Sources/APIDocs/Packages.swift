@@ -1,8 +1,5 @@
 import Kiln
 
-// Modules shared across a package's versions are declared once and reused, so a
-// version that changes its target set (e.g. console-kit's 5.0 line adding
-// ConsoleLogger) is the only place the difference appears.
 private let routingKit = Module("RoutingKit", description: "High-performance routing engine for HTTP requests.")
 private let consoleKit = Module("ConsoleKit", description: "APIs for creating interactive CLI tools.")
 private let consoleLogger = Module("ConsoleLogger", description: "A SwiftLog LogHandler implementation for customizable logging to a console.")
@@ -99,7 +96,6 @@ let packages: [APIPackage] = [
         .single(ref: "main", modules: [Module("Redis", description: "Vapor wrapper for using Redis.")]),
     ]),
 
-    // MARK: Queues
     APIPackage("vapor/queues", group: "Queues", versions: [
         .single(ref: "main", modules: [
             Module("Queues", description: "Job queue system for background processing."),
@@ -110,7 +106,6 @@ let packages: [APIPackage] = [
         .single(ref: "main", modules: [Module("QueuesRedisDriver", description: "Redis driver for job queue system.")]),
     ]),
 
-    // MARK: Push Notifications
     APIPackage("vapor/apns", group: "Push Notifications", versions: [
         .single(ref: "main", modules: [Module("VaporAPNS", title: "APNS", description: "Apple Push Notification Service integration.")]),
     ]),

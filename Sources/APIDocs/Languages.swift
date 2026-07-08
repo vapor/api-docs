@@ -1,16 +1,12 @@
 import Kiln
 
-// The API docs are single-language (English) for now. These custom strings feed
-// the shared Vapor design partials (head/header/footer) via `#localise("key")` —
-// the same keys docs.vapor.codes defines, so the shared chrome renders correctly.
 let languages: [Language] = [
     Language(
         .english,
         isDefault: true,
         customStrings: [
-            // Shared design-partial config.
-            "siteId": "apiDocs",              // footer/header link-target branching (matches VaporDesignTheme)
-            "head.defaultOgType": "article",  // og:type for reference pages
+            "siteId": "apiDocs",
+            "head.defaultOgType": "article",
             "head.homeSuffix": "",
             "head.titleSeparator": " · ",
             "tagline": "Reference documentation for Vapor and its ecosystem.",
@@ -19,7 +15,6 @@ let languages: [Language] = [
             "footer.joinDiscord": "Join our Discord",
             "supporters": "Supporters",
             "footer.supporters": "Supporters",
-            // Framework/API documentation switcher (in the shared navbar).
             "frameworkDocs": "Framework Docs",
             "footer.frameworkDocs": "Framework Docs",
             "apiDocs": "API Docs",
