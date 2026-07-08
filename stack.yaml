@@ -24,8 +24,6 @@ Resources:
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
-        # Kiln emits site/404.html; deploy syncs it to the bucket root, and the S3
-        # website endpoint serves it (with a 404 status) for any missing key.
         ErrorDocument: 404.html
   WebsiteCloudFront:
     Type: AWS::CloudFront::Distribution
@@ -81,7 +79,7 @@ Resources:
               Value: 'Vapor API Docs'
             - Header: Content-Security-Policy-Report-Only
               Override: false
-              Value: "default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'"
+              Value: "default-src 'none'; script-src 'self' https://design.vapor.codes; style-src 'self' https://design.vapor.codes; img-src 'self' https://design.vapor.codes; font-src https://design.vapor.codes; connect-src 'self'; manifest-src 'self' https://design.vapor.codes; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
         SecurityHeadersConfig:
           ContentTypeOptions:
             Override: false
