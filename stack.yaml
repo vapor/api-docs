@@ -24,17 +24,9 @@ Resources:
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
-        ErrorDocument: error.html
-        RoutingRules:
-          - RoutingRuleCondition:
-              HttpErrorCodeReturnedEquals: '404'
-              KeyPrefixEquals: /
-            RedirectRule:
-              HostName: !Sub
-                - '${SubDomainName}.${HostedZoneName}.'
-                - SubDomainName: !Ref SubDomainName
-                  HostedZoneName: !Ref HostedZoneName
-              ReplaceKeyPrefixWith: error/404/
+        # Kiln emits site/404.html; deploy syncs it to the bucket root, and the S3
+        # website endpoint serves it (with a 404 status) for any missing key.
+        ErrorDocument: 404.html
   WebsiteCloudFront:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -55,7 +47,7 @@ Resources:
         CustomErrorResponses:
           - ErrorCode: 403
             ResponseCode: 404
-            ResponsePagePath: '/error.html'
+            ResponsePagePath: '/404.html'
         DefaultCacheBehavior:
           TargetOriginId: S3Origin
           ViewerProtocolPolicy: redirect-to-https
