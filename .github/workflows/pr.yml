@@ -43,6 +43,12 @@ jobs:
         run: aws s3 sync "$ARCHIVE_BUCKET" ./Content/archives --no-progress
       - name: Build site
         run: swift run APIDocs
+      # Re-assume: a cold-cache build can outrun the 1h assume-role session.
+      - name: Refresh AWS credentials
+        uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
+        with:
+          role-to-assume: ${{ vars.OIDC_ROLE_ARN }}
+          aws-region: ${{ vars.OIDC_ROLE_REGION }}
       - name: Save DocC archive cache
         run: aws s3 sync ./Content/archives "$ARCHIVE_BUCKET" --no-progress
       - name: Deploy S3 Website
