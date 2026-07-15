@@ -72,7 +72,7 @@ let packages: [APIPackage] = [
         .single(ref: "main", modules: [Module("FluentSQLiteDriver", description: "SQLite driver for Fluent ORM.")]),
     ]),
     APIPackage("vapor/sql-kit", group: "Database", versions: [
-        .single(ref: "main", modules: [Module("SQLKit", description: "SQL query building and execution framework.")]),
+        .single(ref: "main", modules: [Module("SQLKit", description: "SQL query building and execution framework.", image: "assets/logos/sqlkit.svg")]),
     ]),
     APIPackage("vapor/postgres-kit", group: "Database", versions: [
         .single(ref: "main", modules: [Module("PostgresKit", description: "PostgreSQL integration for SQLKit.")]),
