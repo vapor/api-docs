@@ -1,0 +1,114 @@
+name: Deploy API Docs
+
+on:
+  push:
+    branches: [main]
+  workflow_call:
+    inputs:
+      package:
+        description: "Package repo to rebuild e.g. vapor/jwt-kit"
+        type: string
+        required: true
+      ref:
+        description: "Branch to use"
+        type: string
+        required: false
+        default: ""
+  workflow_dispatch:
+    inputs:
+      package:
+        description: "Package repo to rebuild (leave blank to build all packages)"
+        type: string
+        required: false
+        default: ""
+      ref:
+        description: "Branch of the package to rebuild"
+        type: string
+        required: false
+        default: ""
+      rebuild-all:
+        description: "Regenerate every DocC archive from scratch."
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: deploy-api-docs
+  cancel-in-progress: false
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_PAGER: ""
+  ARCHIVE_BUCKET: s3://vapor-api-docs-archives
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          repository: vapor/api-docs
+          ref: main
+
+      - name: Install Swift
+        uses: vapor/swiftly-action@bedb227456c5f495afbef80baebee17a8a02cef4 # v0.2.1
+        with:
+          toolchain: latest
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
+        with:
+          role-to-assume: ${{ vars.OIDC_ROLE_ARN }}
+          aws-region: ${{ vars.OIDC_ROLE_REGION }}
+
+      - name: Restore DocC archive cache
+        run: aws s3 sync "$ARCHIVE_BUCKET" ./Content/archives --no-progress
+      - name: Build site
+        env:
+          PACKAGE: ${{ inputs.package }}
+          REF: ${{ inputs.ref }}
+          REBUILD_ALL: ${{ inputs.rebuild-all }}
+        run: |
+          args=()
+          if [ "$REBUILD_ALL" = "true" ]; then
+            args+=(--rebuild-all)
+          elif [ -n "$PACKAGE" ] && [ -n "$REF" ]; then
+            args+=(--rebuild "${PACKAGE}@${REF}")
+          elif [ -n "$PACKAGE" ]; then
+            args+=(--rebuild "$PACKAGE")
+          fi
+          swift run APIDocs "${args[@]}"
+
+      # Re-assume: a cold-cache build can outrun the 1h assume-role session.
+      - name: Refresh AWS credentials
+        uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
+        with:
+          role-to-assume: ${{ vars.OIDC_ROLE_ARN }}
+          aws-region: ${{ vars.OIDC_ROLE_REGION }}
+
+      - name: Save DocC archive cache
+        run: aws s3 sync ./Content/archives "$ARCHIVE_BUCKET" --no-progress --delete
+
+      - name: Deploy CloudFormation stack
+        uses: aws-actions/aws-cloudformation-github-deploy@81e3b03d2266bcb76c4bcc37a7d71d9cb67838bb # v2.2.0
+        with:
+          name: vapor-api-docs
+          template: stack.yaml
+          parameter-overrides: >-
+            BucketName=vapor-api-docs-site,
+            SubDomainName=api,
+            HostedZoneName=vapor.codes,
+            AcmCertificateArn=${{ secrets.API_DOCS_CERTIFICATE_ARN }}
+
+      - name: Deploy site to S3
+        env:
+          S3_BUCKET_URL: ${{ secrets.VAPOR_API_DOCS_S3_BUCKET_URL }}
+        run: aws s3 sync ./site "$S3_BUCKET_URL" --no-progress --acl public-read --delete
+
+      - name: Invalidate CloudFront
+        env:
+          DISTRIBUTION_ID: ${{ secrets.VAPOR_API_DOCS_DISTRIBUTION_ID }}
+        run: aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*"

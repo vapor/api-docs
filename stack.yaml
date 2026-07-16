@@ -21,20 +21,9 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Ref 'BucketName'
-      AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
-        ErrorDocument: error.html
-        RoutingRules:
-          - RoutingRuleCondition:
-              HttpErrorCodeReturnedEquals: '404'
-              KeyPrefixEquals: /
-            RedirectRule:
-              HostName: !Sub
-                - '${SubDomainName}.${HostedZoneName}.'
-                - SubDomainName: !Ref SubDomainName
-                  HostedZoneName: !Ref HostedZoneName
-              ReplaceKeyPrefixWith: error/404/
+        ErrorDocument: 404.html
   WebsiteCloudFront:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -55,7 +44,7 @@ Resources:
         CustomErrorResponses:
           - ErrorCode: 403
             ResponseCode: 404
-            ResponsePagePath: '/error.html'
+            ResponsePagePath: '/404.html'
         DefaultCacheBehavior:
           TargetOriginId: S3Origin
           ViewerProtocolPolicy: redirect-to-https
@@ -89,7 +78,7 @@ Resources:
               Value: 'Vapor API Docs'
             - Header: Content-Security-Policy-Report-Only
               Override: false
-              Value: "default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'"
+              Value: "default-src 'none'; script-src 'self' https://design.vapor.codes; style-src 'self' https://design.vapor.codes; img-src 'self' https://design.vapor.codes; font-src https://design.vapor.codes; connect-src 'self'; manifest-src 'self' https://design.vapor.codes; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
         SecurityHeadersConfig:
           ContentTypeOptions:
             Override: false
