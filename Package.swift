@@ -8,7 +8,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.8.4"),
-        .package(url: "https://github.com/vapor/design.git", from: "1.0.0-rc.1"),
+        .package(url: "https://github.com/vapor/design.git", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.3.0"),
     ],
     targets: [
