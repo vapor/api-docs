@@ -89,8 +89,20 @@ jobs:
           role-to-assume: ${{ vars.OIDC_ROLE_ARN }}
           aws-region: ${{ vars.OIDC_ROLE_REGION }}
 
+      # Per-package runs save additively: a concurrent deploy from another repo
+      # restored an older snapshot, and a --delete sync from it would remove
+      # archives this run never rebuilt. Only whole-set runs (main push /
+      # rebuild-all) prune with --delete.
       - name: Save DocC archive cache
-        run: aws s3 sync ./Content/archives "$ARCHIVE_BUCKET" --no-progress --delete
+        env:
+          PACKAGE: ${{ inputs.package }}
+          REBUILD_ALL: ${{ inputs.rebuild-all }}
+        run: |
+          args=(--no-progress)
+          if [ "$REBUILD_ALL" = "true" ] || [ -z "$PACKAGE" ]; then
+            args+=(--delete)
+          fi
+          aws s3 sync ./Content/archives "$ARCHIVE_BUCKET" "${args[@]}"
 
       - name: Deploy CloudFormation stack
         uses: aws-actions/aws-cloudformation-github-deploy@81e3b03d2266bcb76c4bcc37a7d71d9cb67838bb # v2.2.0
