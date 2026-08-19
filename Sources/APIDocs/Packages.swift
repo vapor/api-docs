@@ -11,6 +11,10 @@ private let xctVapor = Module("XCTVapor", group: "Testing", description: "Testin
 private let vaporTesting = Module("VaporTesting", group: "Testing", description: "Modern testing framework for Vapor apps when using Swift Testing.")
 private let vaporMacros = Module("VaporMacros", description: "Macros used by Vapor.")
 
+// JWT ships a v4 line (with Vapor 4) and a 5 line on `main` (with Vapor 5).
+private let jwt = Module("JWT", description: "JWT integration for Vapor authentication.")
+private let jwtKit = Module("JWTKit", description: "JSON Web Token signing and verification framework.")
+
 let packages: [APIPackage] = [
     APIPackage("vapor/vapor", group: "Core", versions: [
         PackageVersion("4", name: "4.x", ref: "vapor4", isDefault: true, dependencies: [
@@ -48,10 +52,18 @@ let packages: [APIPackage] = [
     ]),
 
     APIPackage("vapor/jwt", group: "Authentication", versions: [
-        .single(ref: "main", modules: [Module("JWT", description: "JWT integration for Vapor authentication.")]),
+        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, dependencies: [
+            DependencyPin("vapor/vapor", "4"),
+            DependencyPin("vapor/jwt-kit", "4"),
+        ], modules: [jwt]),
+        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
+            DependencyPin("vapor/vapor", "5-beta"),
+            DependencyPin("vapor/jwt-kit", "5-beta"),
+        ], modules: [jwt]),
     ]),
     APIPackage("vapor/jwt-kit", group: "Authentication", versions: [
-        .single(ref: "main", modules: [Module("JWTKit", description: "JSON Web Token signing and verification framework.")]),
+        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, modules: [jwtKit]),
+        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, modules: [jwtKit]),
     ]),
     APIPackage("vapor/authentication", group: "Authentication", versions: [
         .single(ref: "main", modules: [Module("Authentication", description: "Authentication framework for Swift applications.")]),
