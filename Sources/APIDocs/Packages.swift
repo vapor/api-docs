@@ -5,13 +5,28 @@ private let consoleKit = Module("ConsoleKit", description: "APIs for creating in
 private let consoleLogger = Module("ConsoleLogger", description: "A SwiftLog LogHandler implementation for customizable logging to a console.")
 private let multipartKit = Module("MultipartKit", description: "Multipart form data parsing and encoding.")
 
+// Vapor modules shared across its version lines (v5 drops XCTVapor and adds VaporMacros).
+private let vapor = Module("Vapor", description: "Core web framework for building server-side Swift applications.")
+private let xctVapor = Module("XCTVapor", group: "Testing", description: "Testing utilities for Vapor applications when using XCTest.")
+private let vaporTesting = Module("VaporTesting", group: "Testing", description: "Modern testing framework for Vapor apps when using Swift Testing.")
+private let vaporMacros = Module("VaporMacros", description: "Macros used by Vapor.")
+
 let packages: [APIPackage] = [
     APIPackage("vapor/vapor", group: "Core", versions: [
-        .single(ref: "vapor4", modules: [
-            Module("Vapor", description: "Core web framework for building server-side Swift applications."),
-            Module("XCTVapor", group: "Testing", description: "Testing utilities for Vapor applications when using XCTest."),
-            Module("VaporTesting", group: "Testing", description: "Modern testing framework for Vapor apps when using Swift Testing."),
-        ]),
+        PackageVersion("4", name: "4.x", ref: "vapor4", isDefault: true, dependencies: [
+            DependencyPin("vapor/routing-kit", "4"),
+            DependencyPin("vapor/console-kit", "4"),
+            DependencyPin("vapor/multipart-kit", "4"),
+            DependencyPin("vapor/websocket-kit"),
+            DependencyPin("vapor/async-kit"),
+        ], modules: [vapor, xctVapor, vaporTesting]),
+        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
+            // Vapor 5 uses the 5.x lines of these and no longer depends on
+            // websocket-kit or async-kit.
+            DependencyPin("vapor/routing-kit", "5-beta"),
+            DependencyPin("vapor/console-kit", "5-beta"),
+            DependencyPin("vapor/multipart-kit", "5-alpha"),
+        ], modules: [vapor, vaporTesting, vaporMacros]),
     ]),
     APIPackage("vapor/async-kit", group: "Core", versions: [
         .single(ref: "main", modules: [Module("AsyncKit", description: "Async/await utilities and helpers for concurrent programming.")]),
