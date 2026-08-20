@@ -2,6 +2,9 @@ import Kiln
 
 private let routingKit = Module("RoutingKit", description: "High-performance routing engine for HTTP requests.")
 private let consoleKit = Module("ConsoleKit", description: "APIs for creating interactive CLI tools.")
+// ConsoleKit 4 splits its API across three products; 5 merges them back into ConsoleKit.
+private let consoleKitCommands = Module("ConsoleKitCommands", description: "Command definitions, argument parsing, and command routing.")
+private let consoleKitTerminal = Module("ConsoleKitTerminal", description: "Terminal I/O, output styling, and activity indicators.")
 private let consoleLogger = Module("ConsoleLogger", description: "A SwiftLog LogHandler implementation for customizable logging to a console.")
 private let multipartKit = Module("MultipartKit", description: "Multipart form data parsing and encoding.")
 
@@ -44,7 +47,7 @@ let packages: [APIPackage] = [
         PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, modules: [routingKit]),
     ]),
     APIPackage("vapor/console-kit", group: "Core", versions: [
-        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, modules: [consoleKit]),
+        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, modules: [consoleKit, consoleKitCommands, consoleKitTerminal]),
         PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, modules: [consoleKit, consoleLogger]),
     ]),
     APIPackage("vapor/websocket-kit", group: "Core", versions: [
