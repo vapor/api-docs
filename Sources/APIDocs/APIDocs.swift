@@ -76,7 +76,7 @@ struct APIDocs: AsyncParsableCommand {
         }
 
         print("Ensuring DocC archives …")
-        try Kiln.buildDocCArchives(site, contentDirectory: content, rebuild: rebuild)
+        try Kiln.buildDocCArchives(site, contentDirectory: content, rebuild: rebuild, crossModuleLinks: true)
 
         print("Building Vapor API docs into ./\(output) …")
         try await Kiln.build(site, contentDirectory: content, outputDirectory: output, incremental: true,

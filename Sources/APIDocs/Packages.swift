@@ -2,16 +2,42 @@ import Kiln
 
 private let routingKit = Module("RoutingKit", description: "High-performance routing engine for HTTP requests.")
 private let consoleKit = Module("ConsoleKit", description: "APIs for creating interactive CLI tools.")
+// ConsoleKit 4 splits its API across three products; 5 merges them back into ConsoleKit.
+private let consoleKitCommands = Module("ConsoleKitCommands", description: "Command definitions, argument parsing, and command routing.")
+private let consoleKitTerminal = Module("ConsoleKitTerminal", description: "Terminal I/O, output styling, and activity indicators.")
 private let consoleLogger = Module("ConsoleLogger", description: "A SwiftLog LogHandler implementation for customizable logging to a console.")
 private let multipartKit = Module("MultipartKit", description: "Multipart form data parsing and encoding.")
 
+// Vapor modules shared across its version lines (v5 drops XCTVapor and adds VaporMacros).
+private let vapor = Module("Vapor", description: "Core web framework for building server-side Swift applications.")
+private let xctVapor = Module("XCTVapor", group: "Testing", description: "Testing utilities for Vapor applications when using XCTest.")
+private let vaporTesting = Module("VaporTesting", group: "Testing", description: "Modern testing framework for Vapor apps when using Swift Testing.")
+private let vaporMacros = Module("VaporMacros", description: "Macros used by Vapor.")
+
+// JWT ships a v4 line (with Vapor 4) and a 5 line on `main` (with Vapor 5).
+private let jwt = Module("JWT", description: "JWT integration for Vapor authentication.")
+private let jwtKit = Module("JWTKit", description: "JSON Web Token signing and verification framework.")
+
 let packages: [APIPackage] = [
     APIPackage("vapor/vapor", group: "Core", versions: [
-        .single(ref: "vapor4", modules: [
-            Module("Vapor", description: "Core web framework for building server-side Swift applications."),
-            Module("XCTVapor", group: "Testing", description: "Testing utilities for Vapor applications when using XCTest."),
-            Module("VaporTesting", group: "Testing", description: "Modern testing framework for Vapor apps when using Swift Testing."),
-        ]),
+        PackageVersion("4", name: "4.x", ref: "vapor4", isDefault: true, dependencies: [
+            DependencyPin("vapor/routing-kit", "4"),
+            DependencyPin("vapor/console-kit", "4"),
+            DependencyPin("vapor/multipart-kit", "4"),
+            DependencyPin("vapor/websocket-kit"),
+            DependencyPin("vapor/async-kit"),
+        ], modules: [vapor, xctVapor, vaporTesting]),
+        // Vapor 5 (main) requires a 6.4 Swift dev-snapshot that CI doesn't have yet,
+        // so it's disabled until CI is on that toolchain. Every other pre-release
+        // below builds on the current stable Swift release. Re-enable this together
+        // with the jwt → vapor "5-beta" pin further down.
+        // Vapor 5 uses the 5.x lines of these and no longer depends on
+        // websocket-kit or async-kit.
+        // PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
+        //     DependencyPin("vapor/routing-kit", "5-beta"),
+        //     DependencyPin("vapor/console-kit", "5-beta"),
+        //     DependencyPin("vapor/multipart-kit", "5-alpha"),
+        // ], modules: [vapor, vaporTesting, vaporMacros]),
     ]),
     APIPackage("vapor/async-kit", group: "Core", versions: [
         .single(ref: "main", modules: [Module("AsyncKit", description: "Async/await utilities and helpers for concurrent programming.")]),
@@ -21,7 +47,7 @@ let packages: [APIPackage] = [
         PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, modules: [routingKit]),
     ]),
     APIPackage("vapor/console-kit", group: "Core", versions: [
-        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, modules: [consoleKit]),
+        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, modules: [consoleKit, consoleKitCommands, consoleKitTerminal]),
         PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, modules: [consoleKit, consoleLogger]),
     ]),
     APIPackage("vapor/websocket-kit", group: "Core", versions: [
@@ -33,10 +59,21 @@ let packages: [APIPackage] = [
     ]),
 
     APIPackage("vapor/jwt", group: "Authentication", versions: [
-        .single(ref: "main", modules: [Module("JWT", description: "JWT integration for Vapor authentication.")]),
+        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, dependencies: [
+            DependencyPin("vapor/vapor", "4"),
+            DependencyPin("vapor/jwt-kit", "4"),
+        ], modules: [jwt]),
+        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
+            // Re-enable alongside vapor/vapor "5-beta" above. jwt@main currently
+            // builds against Vapor 4 (from: 4.110.2), so until then its Vapor links
+            // fall back to the vapor default (4.x), which matches what it compiles.
+            // DependencyPin("vapor/vapor", "5-beta"),
+            DependencyPin("vapor/jwt-kit", "5-beta"),
+        ], modules: [jwt]),
     ]),
     APIPackage("vapor/jwt-kit", group: "Authentication", versions: [
-        .single(ref: "main", modules: [Module("JWTKit", description: "JSON Web Token signing and verification framework.")]),
+        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, modules: [jwtKit]),
+        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, modules: [jwtKit]),
     ]),
     APIPackage("vapor/authentication", group: "Authentication", versions: [
         .single(ref: "main", modules: [Module("Authentication", description: "Authentication framework for Swift applications.")]),
