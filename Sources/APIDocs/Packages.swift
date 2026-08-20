@@ -24,13 +24,17 @@ let packages: [APIPackage] = [
             DependencyPin("vapor/websocket-kit"),
             DependencyPin("vapor/async-kit"),
         ], modules: [vapor, xctVapor, vaporTesting]),
-        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
-            // Vapor 5 uses the 5.x lines of these and no longer depends on
-            // websocket-kit or async-kit.
-            DependencyPin("vapor/routing-kit", "5-beta"),
-            DependencyPin("vapor/console-kit", "5-beta"),
-            DependencyPin("vapor/multipart-kit", "5-alpha"),
-        ], modules: [vapor, vaporTesting, vaporMacros]),
+        // Vapor 5 (main) requires a 6.4 Swift dev-snapshot that CI doesn't have yet,
+        // so it's disabled until CI is on that toolchain. Every other pre-release
+        // below builds on the current stable Swift release. Re-enable this together
+        // with the jwt → vapor "5-beta" pin further down.
+        // Vapor 5 uses the 5.x lines of these and no longer depends on
+        // websocket-kit or async-kit.
+        // PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
+        //     DependencyPin("vapor/routing-kit", "5-beta"),
+        //     DependencyPin("vapor/console-kit", "5-beta"),
+        //     DependencyPin("vapor/multipart-kit", "5-alpha"),
+        // ], modules: [vapor, vaporTesting, vaporMacros]),
     ]),
     APIPackage("vapor/async-kit", group: "Core", versions: [
         .single(ref: "main", modules: [Module("AsyncKit", description: "Async/await utilities and helpers for concurrent programming.")]),
@@ -57,7 +61,10 @@ let packages: [APIPackage] = [
             DependencyPin("vapor/jwt-kit", "4"),
         ], modules: [jwt]),
         PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
-            DependencyPin("vapor/vapor", "5-beta"),
+            // Re-enable alongside vapor/vapor "5-beta" above. jwt@main currently
+            // builds against Vapor 4 (from: 4.110.2), so until then its Vapor links
+            // fall back to the vapor default (4.x), which matches what it compiles.
+            // DependencyPin("vapor/vapor", "5-beta"),
             DependencyPin("vapor/jwt-kit", "5-beta"),
         ], modules: [jwt]),
     ]),
