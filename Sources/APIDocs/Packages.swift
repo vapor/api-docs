@@ -14,7 +14,7 @@ private let xctVapor = Module("XCTVapor", group: "Testing", description: "Testin
 private let vaporTesting = Module("VaporTesting", group: "Testing", description: "Modern testing framework for Vapor apps when using Swift Testing.")
 private let vaporMacros = Module("VaporMacros", description: "Macros used by Vapor.")
 
-// JWT ships a v4 line (with Vapor 4) and a 5 line on `main` (with Vapor 5).
+// JWT's v4 and v5 (`main`) lines both currently depend on Vapor 4.
 private let jwt = Module("JWT", description: "JWT integration for Vapor authentication.")
 private let jwtKit = Module("JWTKit", description: "JSON Web Token signing and verification framework.")
 
@@ -27,17 +27,13 @@ let packages: [APIPackage] = [
             DependencyPin("vapor/websocket-kit"),
             DependencyPin("vapor/async-kit"),
         ], modules: [vapor, xctVapor, vaporTesting]),
-        // Vapor 5 (main) requires a 6.4 Swift dev-snapshot that CI doesn't have yet,
-        // so it's disabled until CI is on that toolchain. Every other pre-release
-        // below builds on the current stable Swift release. Re-enable this together
-        // with the jwt → vapor "5-beta" pin further down.
         // Vapor 5 uses the 5.x lines of these and no longer depends on
         // websocket-kit or async-kit.
-        // PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
-        //     DependencyPin("vapor/routing-kit", "5-beta"),
-        //     DependencyPin("vapor/console-kit", "5-beta"),
-        //     DependencyPin("vapor/multipart-kit", "5-alpha"),
-        // ], modules: [vapor, vaporTesting, vaporMacros]),
+        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
+            DependencyPin("vapor/routing-kit", "5-beta"),
+            DependencyPin("vapor/console-kit", "5-beta"),
+            DependencyPin("vapor/multipart-kit", "5-alpha"),
+        ], modules: [vapor, vaporTesting, vaporMacros]),
     ]),
     APIPackage("vapor/async-kit", group: "Core", versions: [
         .single(ref: "main", modules: [Module("AsyncKit", description: "Async/await utilities and helpers for concurrent programming.")]),
@@ -64,10 +60,7 @@ let packages: [APIPackage] = [
             DependencyPin("vapor/jwt-kit", "4"),
         ], modules: [jwt]),
         PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
-            // Re-enable alongside vapor/vapor "5-beta" above. jwt@main currently
-            // builds against Vapor 4 (from: 4.110.2), so until then its Vapor links
-            // fall back to the vapor default (4.x), which matches what it compiles.
-            // DependencyPin("vapor/vapor", "5-beta"),
+            DependencyPin("vapor/vapor", "4"),
             DependencyPin("vapor/jwt-kit", "5-beta"),
         ], modules: [jwt]),
     ]),
