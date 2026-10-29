@@ -58,18 +58,18 @@ let packages: [APIPackage] = [
     ]),
 
     APIPackage("vapor/jwt", group: "Authentication", versions: [
-        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, dependencies: [
+        PackageVersion("4", name: "4.x", ref: "v4", dependencies: [
             DependencyPin("vapor/vapor", "4"),
             DependencyPin("vapor/jwt-kit", "4"),
         ], modules: [jwt]),
-        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
+        PackageVersion("5", name: "5.x", ref: "main", isDefault: true, dependencies: [
             DependencyPin("vapor/vapor", "4"),
-            DependencyPin("vapor/jwt-kit", "5-beta"),
+            DependencyPin("vapor/jwt-kit", "5"),
         ], modules: [jwt]),
     ]),
     APIPackage("vapor/jwt-kit", group: "Authentication", versions: [
-        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, modules: [jwtKit]),
-        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, modules: [jwtKit]),
+        PackageVersion("4", name: "4.x", ref: "v4", modules: [jwtKit]),
+        PackageVersion("5", name: "5.x", ref: "main", isDefault: true, modules: [jwtKit]),
     ]),
     APIPackage("vapor/authentication", group: "Authentication", versions: [
         .single(ref: "main", modules: [Module("Authentication", description: "Authentication framework for Swift applications.")]),
