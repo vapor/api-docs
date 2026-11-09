@@ -8,3 +8,13 @@ updates:
       dependencies:
         patterns:
           - "*"
+  # Kiln and VaporDesignTheme releases often land together (a design release can
+  # raise its Kiln minimum), so group them into one PR that resolves cleanly.
+  - package-ecosystem: "swift"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      swift-dependencies:
+        patterns:
+          - "*"
