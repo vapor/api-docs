@@ -7,8 +7,8 @@ let package = Package(
         .macOS(.v13)
     ],
     dependencies: [
-        .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.9.1"),
-        .package(url: "https://github.com/vapor/design.git", from: "1.1.0"),
+        .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.11.0"),
+        .package(url: "https://github.com/vapor/design.git", from: "1.2.0"),
         .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.3.0"),
     ],
     targets: [
