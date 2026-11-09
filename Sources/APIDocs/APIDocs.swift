@@ -27,6 +27,9 @@ let site = KilnSite(
         .init(icon: .twitter, link: "https://twitter.com/codevapor"),
         .init(icon: .mastodon, link: "https://hachyderm.io/@codevapor"),
     ],
+    // VaporDesignTheme replaces Kiln's base template, so load the DocC layout
+    // (module landing-page logos from an archive's theme-settings.json) explicitly.
+    extraCSS: ["_kiln/css/docc-theme.css"],
     languages: languages,
     docc: DocCSite(
         packages: packages,
