@@ -47,11 +47,17 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # Check out into a new subdirectory to workaround a SwiftPM 'feature' that uses the directory
+    # name as the package identity. This is causing LeafKit runs to fail
+    defaults:
+      run:
+        working-directory: api-docs
     steps:
       - uses: actions/checkout@v7
         with:
           repository: vapor/api-docs
           ref: main
+          path: api-docs
 
       - name: Install Swift
         uses: vapor/swiftly-action@bedb227456c5f495afbef80baebee17a8a02cef4 # v0.2.1
@@ -108,7 +114,7 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@81e3b03d2266bcb76c4bcc37a7d71d9cb67838bb # v2.2.0
         with:
           name: vapor-api-docs
-          template: stack.yaml
+          template: api-docs/stack.yaml
           parameter-overrides: >-
             BucketName=vapor-api-docs-site,
             SubDomainName=api,
