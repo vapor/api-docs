@@ -18,6 +18,9 @@ private let vaporMacros = Module("VaporMacros", description: "Macros used by Vap
 private let jwt = Module("JWT", description: "JWT integration for Vapor authentication.")
 private let jwtKit = Module("JWTKit", description: "JSON Web Token signing and verification framework.")
 
+// The Valkey drivers are available for both Vapor 5 (`main`) and Vapor 4 (`vapor4`).
+private let valkey = Module("VaporValkey", title: "Valkey", description: "Vapor wrapper for using Valkey.")
+
 let packages: [APIPackage] = [
     APIPackage("vapor/vapor", group: "Core", versions: [
         PackageVersion("4", name: "4.x", ref: "vapor4", isDefault: true, dependencies: [
@@ -55,18 +58,18 @@ let packages: [APIPackage] = [
     ]),
 
     APIPackage("vapor/jwt", group: "Authentication", versions: [
-        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, dependencies: [
+        PackageVersion("4", name: "4.x", ref: "v4", dependencies: [
             DependencyPin("vapor/vapor", "4"),
             DependencyPin("vapor/jwt-kit", "4"),
         ], modules: [jwt]),
-        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
+        PackageVersion("5", name: "5.x", ref: "main", isDefault: true, dependencies: [
             DependencyPin("vapor/vapor", "4"),
-            DependencyPin("vapor/jwt-kit", "5-beta"),
+            DependencyPin("vapor/jwt-kit", "5"),
         ], modules: [jwt]),
     ]),
     APIPackage("vapor/jwt-kit", group: "Authentication", versions: [
-        PackageVersion("4", name: "4.x", ref: "v4", isDefault: true, modules: [jwtKit]),
-        PackageVersion("5-beta", name: "5.0 (beta)", ref: "main", isPrerelease: true, modules: [jwtKit]),
+        PackageVersion("4", name: "4.x", ref: "v4", modules: [jwtKit]),
+        PackageVersion("5", name: "5.x", ref: "main", isDefault: true, modules: [jwtKit]),
     ]),
     APIPackage("vapor/authentication", group: "Authentication", versions: [
         .single(ref: "main", modules: [Module("Authentication", description: "Authentication framework for Swift applications.")]),
@@ -122,8 +125,18 @@ let packages: [APIPackage] = [
     APIPackage("vapor/sqlite-nio", group: "Database", versions: [
         .single(ref: "main", modules: [Module("SQLiteNIO", description: "Non-blocking SQLite client built on SwiftNIO.")]),
     ]),
+    APIPackage("vapor/valkey", group: "Database", versions: [
+        PackageVersion("1", name: "1.x", ref: "vapor4", isDefault: true, dependencies: [
+            DependencyPin("vapor/vapor", "4")
+        ], modules: [valkey]),
+        PackageVersion("2-beta", name: "2.0 (beta)", ref: "main", isPrerelease: true, dependencies: [
+            DependencyPin("vapor/vapor", "5-beta")
+        ], modules: [valkey]),
+    ]),
     APIPackage("vapor/redis", group: "Database", versions: [
-        .single(ref: "main", modules: [Module("Redis", description: "Vapor wrapper for using Redis.")]),
+        PackageVersion("default", ref: "main", isDefault: true, deprecated: true, dependencies: [
+            DependencyPin("vapor/vapor", "4")
+        ], modules: [Module("Redis", description: "Vapor wrapper for using Redis.")])
     ]),
 
     APIPackage("vapor/queues", group: "Queues", versions: [
